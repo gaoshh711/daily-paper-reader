@@ -25,3 +25,44 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: HAI
+      description: 关于HAI（人机交互/人类中心AI）的检索
+      enabled: true
+      paper_sources:
+        - arxiv
+      keywords:
+        - keyword: human ai interaction
+          keyword_cn: 人机交互
+          query: human AI interaction concepts and applications
+        - keyword: human-centered artificial intelligence
+          keyword_cn: 以人为中心的人工智能
+          query: human-centered AI principles and design
+        - keyword: human AI collaboration
+          keyword_cn: 人机协作
+          query: human AI collaboration methods and benefits
+        - keyword: explainable AI interaction
+          keyword_cn: 可解释人工智能交互
+          query: explainable AI interaction interfaces
+      intent_queries:
+        - query: how to design human centered AI systems
+          query_cn: 如何设计以人为中心的人工智能系统
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-06-10T01:56:44.359Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
