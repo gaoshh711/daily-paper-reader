@@ -1,0 +1,916 @@
+{
+  "mode": "skims",
+  "generated_at": "2026-06-10T02:02:37.249444+00:00",
+  "stats": {
+    "mode": "skims",
+    "forced_all_quick": true,
+    "min_score": 8.0,
+    "deep_divecandidates": 24,
+    "deep_cap": null,
+    "deep_selected": 0,
+    "quick_candidates": 24,
+    "quick_skim_target": null,
+    "quick_selected": 24
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2605.15064v1",
+      "source": "arxiv",
+      "title": "After the Interface: Relocating Human Agency in the Age of Conversational AI",
+      "abstract": "As AI systems take on greater autonomy, a quiet anxiety has settled over the HCI community: human agency is eroding. Users no longer control execution, interfaces recede, and machines decide. We argue that this anxiety, while understandable, reflects a framing problem rather than an empirical finding. Agency has not diminished but has relocated. As interaction has shifted from command- and feature-based paradigms toward conversational, generative, and agentic AI, human agency migrates from interface affordances to interaction itself: articulating goals, evaluating outputs, and negotiating outcomes. To make this relocation visible, we revisit control as a diagnostic lens, distinguish process control and outcome control, and map different systems across this space to show that what looks like agency's disappearance is actually its redistribution. We take seriously the objection that outcome-based agency may be illusory in systems that produce plausible but unverifiable outputs, and argue that this concern reveals what agency in human-AI interaction truly requires. This paper invites the CUI community to reconsider what agency means, where it lives, and what it demands, including who gets to have it and who holds responsibility when it fails, before the consequences become impossible to overlook.",
+      "authors": [
+        "Mengke Wu",
+        "Mike Yao"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-14T16:54:57+00:00",
+      "link": "https://arxiv.org/pdf/2605.15064v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "discusses human agency relocation in conversational AI interaction",
+      "llm_evidence_cn": "讨论对话式AI交互中人类能动性迁移",
+      "llm_evidence": "讨论对话式AI交互中人类能动性迁移",
+      "canonical_evidence": "讨论对话式AI交互中人类能动性迁移",
+      "llm_tldr_en": "Argues that human agency is not eroding but relocating from interface to interaction itself as AI becomes conversational, proposing control as a lens.",
+      "llm_tldr_cn": "本文指出，随着对话式AI的普及，人类能动性并未减少而是发生了迁移：从界面功能转移至交互过程本身。作者重新审视控制概念，区分过程控制和结果控制，并映射不同系统类型，为理解人机交互中人类角色的演变提供了新框架。",
+      "llm_tldr": "本文指出，随着对话式AI的普及，人类能动性并未减少而是发生了迁移：从界面功能转移至交互过程本身。作者重新审视控制概念，区分过程控制和结果控制，并映射不同系统类型，为理解人机交互中人类角色的演变提供了新框架。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.15556v1",
+      "source": "arxiv",
+      "title": "TopoClaw: A Human-Centric and Topology-Aware Agent Operating System",
+      "abstract": "Large language models (LLMs) have evolved AI assistants into autonomous reasoning engines that maintain context, invoke tools, and pursue long-horizon tasks. This has spurred Agent Operating Systems (Agent OS) as kernel-like layers for lifecycle management, memory, scheduling, and access control. Yet most designs remain agent-centric, treating the OS as a single-host runtime for internal reasoning and tool use, leaving open how autonomous actions integrate with distributed, collaborative, permission-sensitive workflows.   TopoClaw is an open-source, human-centric, topology-aware Agent OS modeling the user's ecosystem as two coupled structures: a physical device topology of heterogeneous surfaces and a social relationship topology of shared spaces, teams, and delegated roles. It unifies device operation, messaging, and skills around accountable cross-boundary execution, with three core contributions: (1) cross-device action placement, decoupling intent from actuation and routing distributed actions across the device cluster based on hardware affordances and user context; (2) cross-user identity attribution, treating agents as socially situated \"Digital Twins\" that coordinate in multi-user spaces while preserving provenance, role-aware permissions, and human accountability; (3) cross-context authority governance, pairing broad capability with distributed, context-aware policy enforcement across physical and social trust boundaries to bound proactive autonomy at the OS layer.   This report presents TopoClaw as an engineering-oriented reference architecture, covering its design principles, runtime, cross-device execution, collaboration mechanisms, security model, and deployment outlook.",
+      "authors": [
+        "Heyuan Huang",
+        "Yeyi Guan",
+        "Jihong Wang",
+        "Mingzhi Wang",
+        "Jiamu Zhou",
+        "Xiangmou Qu",
+        "Jiaxin Yin",
+        "Xin Liao",
+        "Xingyu Lou",
+        "Jun Wang"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-15T02:49:36+00:00",
+      "link": "https://arxiv.org/pdf/2605.15556v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-centric agent OS design",
+      "llm_evidence_cn": "人类中心的智能体操作系统设计",
+      "llm_evidence": "人类中心的智能体操作系统设计",
+      "canonical_evidence": "人类中心的智能体操作系统设计",
+      "llm_tldr_en": "TopoClaw proposes a human-centric and topology-aware Agent OS that models user's physical and social ecosystems, addressing the gap in distributed collaborative workflows.",
+      "llm_tldr_cn": "现有智能体操作系统大多以智能体为中心，忽视了人类用户的生态系统。TopoClaw提出一种以人为中心、拓扑感知的智能体操作系统，将用户的物理设备拓扑和社会关系拓扑建模为耦合结构，支持分布式协作和权限敏感的工作流。该系统开源，旨在提升人机协作的灵活性和安全性。",
+      "llm_tldr": "现有智能体操作系统大多以智能体为中心，忽视了人类用户的生态系统。TopoClaw提出一种以人为中心、拓扑感知的智能体操作系统，将用户的物理设备拓扑和社会关系拓扑建模为耦合结构，支持分布式协作和权限敏感的工作流。该系统开源，旨在提升人机协作的灵活性和安全性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.21635v1",
+      "source": "arxiv",
+      "title": "Addressing the Synergy Gap: The Six Elements of the Design Space",
+      "abstract": "AI is now embedded in healthcare, finance, policy, and many other domains, yet genuine human-AI synergy - combined performance that exceeds what either party achieves alone - is uncommon. Meta-analyses show that AI assistance tends to improve human performance compared to working alone, but studies finding true synergy are scarce. We call this persistent shortfall the synergy gap. Most current work treats human-AI combination as an engineering problem and concentrates on interpretability, trust calibration, or interface design. These matter, but they cover only part of what determines whether combination works. Closing the synergy gap, we argue, requires explicit engagement with a wider design space. We map that space through six interconnected elements: sociotechnical context, decision-making frameworks, human decision participants, AI capabilities, interaction, and holistic evaluation. For each element, we describe what it covers, how it shapes the others in practice, and what it implies for design. The result is a shared vocabulary for practitioners building hybrid systems, an analytical lens for researchers studying combination patterns, and a starting point for evaluators interested in the full quality of human-AI decision-making rather than accuracy alone.",
+      "authors": [
+        "Tommaso Turchi",
+        "Ben Wilson",
+        "Matt Roach",
+        "Alan Dix",
+        "Alessio Malizia"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-05-20T18:46:48+00:00",
+      "link": "https://arxiv.org/pdf/2605.21635v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI synergy gap and design space",
+      "llm_evidence_cn": "人机协同差距与设计空间",
+      "llm_evidence": "人机协同差距与设计空间",
+      "canonical_evidence": "人机协同差距与设计空间",
+      "llm_tldr_en": "Addressing the synergy gap, the paper maps a design space of six interconnected elements for achieving true human-AI synergy.",
+      "llm_tldr_cn": "尽管AI辅助提升人类表现，但真正的人机协同（超越各自单独表现）很少见。本文识别出持续存在的协同差距，并认为需要更广泛的设计空间。作者通过六个相互关联的元素（社会、任务、交互等）映射该空间，为设计和研究人机协同提供指导。",
+      "llm_tldr": "尽管AI辅助提升人类表现，但真正的人机协同（超越各自单独表现）很少见。本文识别出持续存在的协同差距，并认为需要更广泛的设计空间。作者通过六个相互关联的元素（社会、任务、交互等）映射该空间，为设计和研究人机协同提供指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.23023v1",
+      "source": "arxiv",
+      "title": "How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning",
+      "abstract": "In orchestrated multi-agent systems, humans often struggle to manage plans due to their complexity and limited transparency. Existing approaches rely on outcome-level supervision, where users verify only final outputs without visibility into intermediate reasoning. We formalize a design space for human-LLM co-planning interactions along three axes: mode (semantic vs. structural), scope (global vs. targeted), and level (low vs. high-level edits). We realize it in AMBIPOM, a prototype supporting process-level supervision through both semantic and structural interactions. Through a user study, we characterize how users navigate this space, revealing hybrid workflows and effort-control-risk trade-offs; through a controlled benchmark, we analyze how LLMs revise plans under varying scope and revision strategies. Our findings yield design insights for more transparent, controllable, and effective human-AI co-planning. We release code and data at https://github.com/megagonlabs/ambipom.",
+      "authors": [
+        "Zeyu He",
+        "Hannah Kim",
+        "Dan Zhang",
+        "Estevam Hruschka"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.HC"
+      ],
+      "published": "2026-05-21T20:47:18+00:00",
+      "link": "https://arxiv.org/pdf/2605.23023v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-LLM collaborative planning design space and prototype",
+      "llm_evidence_cn": "人机协作规划的设计空间与原型",
+      "llm_evidence": "人机协作规划的设计空间与原型",
+      "canonical_evidence": "人机协作规划的设计空间与原型",
+      "llm_tldr_en": "Formalizes design space for human-LLM co-planning with three axes, implements AMBIPOM prototype for process-level supervision, and characterizes user workflows.",
+      "llm_tldr_cn": "本文针对多智能体系统中人类难以管理复杂计划的问题，形式化了人机协作规划的设计空间（模式、范围、层次三个轴），并实现AMBIPOM原型支持过程级监督。用户研究发现混合工作流及权衡，为提升人机协作规划效果提供了实证指导。",
+      "llm_tldr": "本文针对多智能体系统中人类难以管理复杂计划的问题，形式化了人机协作规划的设计空间（模式、范围、层次三个轴），并实现AMBIPOM原型支持过程级监督。用户研究发现混合工作流及权衡，为提升人机协作规划效果提供了实证指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.27666v1",
+      "source": "arxiv",
+      "title": "Explanations as Dialogues: Toward Human-Centered Conversational Explainable AI",
+      "abstract": "As AI systems become increasingly conversational, a gap emerges wherein explanations are studied as static artifacts, yet in practice, are experienced as dialogue. In this provocation, we argue that the conversational layer around an explanation is not incidental to its effectiveness, but a critical constituent. Drawing on three illustrative scenarios, we invite the CUI community to study explanations as interactive, conversational exchanges shaped by timing, tone, persona and conversational history, and introduce our vision for Human-Centered Conversational XAI (HC2XAI).",
+      "authors": [
+        "Niharika Mathur",
+        "Smit Desai"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-26T20:33:51+00:00",
+      "link": "https://arxiv.org/pdf/2605.27666v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes human-centered conversational explainable AI",
+      "llm_evidence_cn": "提出以人为中心的对话式可解释AI",
+      "llm_evidence": "提出以人为中心的对话式可解释AI",
+      "canonical_evidence": "提出以人为中心的对话式可解释AI",
+      "llm_tldr_en": "Argues explanations should be studied as dialogues rather than static artifacts, introducing vision for Human-Centered Conversational XAI (HC2XAI).",
+      "llm_tldr_cn": "本文指出当前可解释AI将解释视为静态产物，但实际交互中解释是对话过程。通过三个场景论证对话层的重要性，提出以人为中心的对话式可解释AI（HC2XAI）愿景，强调时机、语气、人设和历史的影响。",
+      "llm_tldr": "本文指出当前可解释AI将解释视为静态产物，但实际交互中解释是对话过程。通过三个场景论证对话层的重要性，提出以人为中心的对话式可解释AI（HC2XAI）愿景，强调时机、语气、人设和历史的影响。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.30632v1",
+      "source": "arxiv",
+      "title": "Rationalize: Shared Semantic Reasoning for Human-AI Alignment",
+      "abstract": "We introduce Rationalize, a role-pair framework for shared semantic reasoning between humans and AI models in data-driven sensemaking. Building on ideas in human-machine teaming and critical thinking, we conceptualize human-AI interaction as a series of complementary role pairs (Explorer-Guide, Investigator-Informant, Teacher-Student, Judge-Advocate) operating in a shared reasoning space. In this space, human analysts and AI models (such as LLMs) make purposes, questions, assumptions, evidence, inferences, and implications explicit, facilitating alignment not only at the output level but at the level of rationalization of intent and action by each side. We relate these role pairs to the bidirectional human-AI alignment framework, illustrating how \"aligning AI to humans\" and \"aligning humans to AI\" differ by role, and sketch a collaborative research agenda for alignment design and assessment using element-level and role-specific approaches.",
+      "authors": [
+        "Aritra Dasgupta",
+        "Naga Datha Saikiran Battula",
+        "Avina Nakarmi",
+        "Sohom Sen",
+        "Subhodeep Ghosh",
+        "Xun Song"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-05-28T22:34:28+00:00",
+      "link": "https://arxiv.org/pdf/2605.30632v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "role-pair framework for shared semantic reasoning in human-AI collaboration",
+      "llm_evidence_cn": "人机协作中共享语义推理的角色对框架",
+      "llm_evidence": "人机协作中共享语义推理的角色对框架",
+      "canonical_evidence": "人机协作中共享语义推理的角色对框架",
+      "llm_tldr_en": "Introduces Rationalize, a role-pair framework (Explorer-Guide, etc.) for shared semantic reasoning between humans and AI, enabling alignment at intent and action level.",
+      "llm_tldr_cn": "该论文提出Rationalize框架，通过定义互补角色对（探索者-引导者、调查者-信息提供者等），在共享推理空间中实现人类与AI在意图和行动上的对齐。框架强调将目的、假设、证据等显式化，促进双向对齐。",
+      "llm_tldr": "该论文提出Rationalize框架，通过定义互补角色对（探索者-引导者、调查者-信息提供者等），在共享推理空间中实现人类与AI在意图和行动上的对齐。框架强调将目的、假设、证据等显式化，促进双向对齐。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.31264v1",
+      "source": "arxiv",
+      "title": "COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation",
+      "abstract": "LLM agents are increasingly expected not only to complete isolated tasks, but also to carry bounded representations of human expertise, judgment, and interaction style. Building such person-grounded agents remains difficult because actionable knowledge associated with a person or role is usually embedded in heterogeneous traces rather than written as clean instructions. Existing memory and persona systems capture fragments of this evidence, while skill frameworks provide portable packaging formats; however, there is no end-to-end workflow for distilling these traces into inspectable, correctable, and agent-usable skills. We present an automated trace-to-skill distillation system for generating person-grounded AI skills via expert knowledge distillation. Given materials from a target person or role, COLLEAGUE.SKILL produces a versioned skill package with two coordinated tracks: a capability track for practices, mental models, and decision heuristics, and a bounded behavior track for communication style, interaction rules, and correction history. The package can be inspected, invoked, updated through natural-language feedback, rolled back, installed across agent hosts, and optionally prepared for controlled distribution. We describe the artifact contract, generation workflow, correction lifecycle, deployment surface, and domain presets implemented in the open-source system. At the time of writing, the public repository has approximately 18.5k GitHub stars; the gallery lists 215 skills from 165 contributors and more than 100k cumulative stars across listed skill cards. The system illustrates how person-grounded skills can be represented as portable, correctable packages rather than opaque prompts or hidden memories.",
+      "authors": [
+        "Tianyi Zhou",
+        "Dongrui Liu",
+        "Leitao Yuan",
+        "Jing Shao",
+        "Xia Hu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-05-29T12:59:08+00:00",
+      "link": "https://arxiv.org/pdf/2605.31264v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "automated AI skill generation from expert knowledge for human-AI collaboration",
+      "llm_evidence_cn": "从专家知识自动生成AI技能以增强人机协作",
+      "llm_evidence": "从专家知识自动生成AI技能以增强人机协作",
+      "canonical_evidence": "从专家知识自动生成AI技能以增强人机协作",
+      "llm_tldr_en": "Proposes an automated trace-to-skill distillation system that converts heterogeneous expert knowledge traces into inspectable, correctable AI skills for building person-grounded agents that carry human expertise and interaction style.",
+      "llm_tldr_cn": "现有方法或捕获记忆片段或提供技能框架，但缺乏从专家知识痕迹到AI技能的端到端蒸馏流程。本文提出自动化trace-to-skill蒸馏系统，将异构的专家痕迹转化为可检查、可纠正的AI技能，使智能体能够承载人类专业知识和交互风格。实验表明该系统能有效生成可用的技能，为人机协作提供新范式。",
+      "llm_tldr": "现有方法或捕获记忆片段或提供技能框架，但缺乏从专家知识痕迹到AI技能的端到端蒸馏流程。本文提出自动化trace-to-skill蒸馏系统，将异构的专家痕迹转化为可检查、可纠正的AI技能，使智能体能够承载人类专业知识和交互风格。实验表明该系统能有效生成可用的技能，为人机协作提供新范式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.00807v1",
+      "source": "arxiv",
+      "title": "Interaction-Centered Intelligence: Toward Interaction as the Primary Unit of Analysis in Co-Creative AI and Human-AI Systems",
+      "abstract": "Traditional artificial intelligence has largely conceptualized intelligence as isolated computation occurring within bounded agents. Across classical AI, machine learning, and many generative systems, the dominant unit of analysis remains the individual model or autonomous system evaluated through outputs, benchmarks, prediction accuracy, or optimization performance. While these approaches have produced major advances, they often under-theorize the role of interaction in the emergence of intelligence, creativity, meaning, and adaptive behavior. This paper proposes interaction as the primary unit of analysis for co-creative AI and interaction-centered intelligence more broadly. Drawing from distributed cognition, embodied cognition, enaction, participatory sense-making, human-computer interaction, and computational creativity, the paper traces a historical progression toward increasingly relational accounts of intelligence. Building upon prior work in Creative Sense-Making, quantified co-creation, and co-creative systems such as the Drawing Apprentice and AI Drawing Partner, it argues that intelligence emerges through evolving interaction dynamics among agents, environments, and socio-technical systems rather than solely through internal computation. The paper introduces Interaction-Centered Intelligence as a framework for understanding human-AI co-creation, collaborative emergence, adaptive participation, and interactional dynamics. Rather than evaluating intelligence solely through generated outputs, the framework emphasizes interaction trajectories, coordination patterns, participatory engagement, adaptive regulation, and interactional drift unfolding through time. Implications for explainable co-creative AI, hybrid intelligence, enactive AI, and future human-AI systems are discussed.",
+      "authors": [
+        "Nicholas Davis"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-05-30T16:47:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.00807v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "interaction-centered intelligence for human-AI systems",
+      "llm_evidence_cn": "以交互为中心的智能用于人机系统",
+      "llm_evidence": "以交互为中心的智能用于人机系统",
+      "canonical_evidence": "以交互为中心的智能用于人机系统",
+      "llm_tldr_en": "Proposing interaction as the primary unit of analysis for co-creative AI and human-AI systems, drawing from distributed and embodied cognition.",
+      "llm_tldr_cn": "传统AI将智能视为个体计算，忽略交互的作用。本文提出以交互为中心的分析单元，用于共创作AI和人机系统。借鉴分布式认知和具身认知，论证交互如何促进智能、创造力和适应性行为。",
+      "llm_tldr": "传统AI将智能视为个体计算，忽略交互的作用。本文提出以交互为中心的分析单元，用于共创作AI和人机系统。借鉴分布式认知和具身认知，论证交互如何促进智能、创造力和适应性行为。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.05222v1",
+      "source": "arxiv",
+      "title": "Where's the Structure? A Systematic Literature Review of Empirical Research on Human-AI Collaboration and Hybrid Intelligence for Learning",
+      "abstract": "Artificial intelligence (AI) has been applied across educational contexts to support learning. One approach to such support is \"human-AI collaboration\" (also termed \"hybrid intelligence\"), where human(s) and AI components interact to promote human learning. However, as in human-to-human computer-supported collaborative learning (CSCL), unstructured interaction does not necessarily produce an effective learning experience. This paper reports a systematic literature review of empirical studies (N=62) on human-AI collaboration and hybrid intelligence for learning support. The review characterizes collaboration processes, their structures, and contexts of application. It also extracts emerging design knowledge and research gaps. Researchers and technology designers can use these findings as a starting point for structuring more effective AI-enhanced technologies for collaboration, in educational practice and future research.",
+      "authors": [
+        "Luis P. Prieto",
+        "Juan I. Asensio-Pérez",
+        "María Jesús Rodríguez-Triana",
+        "Mohamed Saban",
+        "Yannis Dimitriadis"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-05-30T07:54:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.05222v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "systematic review of human-AI collaboration and hybrid intelligence for learning",
+      "llm_evidence_cn": "人机协作与混合智能学习的系统文献综述",
+      "llm_evidence": "人机协作与混合智能学习的系统文献综述",
+      "canonical_evidence": "人机协作与混合智能学习的系统文献综述",
+      "llm_tldr_en": "This systematic review of 62 empirical studies characterizes collaboration processes, structures, and contexts in human-AI collaboration for learning, revealing that unstructured interaction hinders effectiveness.",
+      "llm_tldr_cn": "针对人机协作和混合智能学习，该论文对62项实证研究进行了系统文献综述，刻画了协作过程、结构及应用场景。研究表明，缺乏结构化的交互会降低学习效果，为设计有效的人机协作学习系统提供了重要参考。",
+      "llm_tldr": "针对人机协作和混合智能学习，该论文对62项实证研究进行了系统文献综述，刻画了协作过程、结构及应用场景。研究表明，缺乏结构化的交互会降低学习效果，为设计有效的人机协作学习系统提供了重要参考。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.07283v1",
+      "source": "arxiv",
+      "title": "A Model of Integrated Information Processing in Human-AI Interaction",
+      "abstract": "For Human-AI Interaction (HAII) research to move forward, theoretical work linking psychological mechanisms to interface design is needed. Such work should extend rather than replace established HCI and automation research, adapting to the increasing autonomy and agency of AI systems. Building on prior frameworks focused on roles and levels in human interaction with automation, a gap remains from a psychological view: a task-centered, process-oriented account that links mechanisms of action regulation to concrete design and evaluation levers for human-AI coupling, expressed in a unified vocabulary for human and machine. Moreover, existing models may describe how a system is designed (e.g., function allocation in automation) but fall short in showing how this design affects human behavior. We present the Integrated Information Processing (IIP) model, a task-centered, cybernetic model that conceptualizes humans, machines, and their joint activity as coupled control loops. The IIP model uses a unified modeling language for human and artificial agents, making psychological models of action regulation accessible for AI system design. As a core feature, we argue that efficacy within a shared task is characterized by three integration qualities, input adequacy, reference consonance, and output operativity, which critically influence benchmarks of human-centeredness such as transparency and controllability. The model maps interface choices (e.g., XAI techniques) to theory-driven expectations of user behavior, guiding interface design and evaluation. To this end, we present (1) a continuity-preserving theoretical discourse that extends HAII to agency in AI; (2) the IIP model with three information-processing qualities; and (3) applications of the IIP model to exemplary use cases demonstrating implications for interface design.",
+      "authors": [
+        "Tim Schrills. Thomas Franke"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-05T13:57:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.07283v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "theoretical model for human-AI interaction",
+      "llm_evidence_cn": "人机交互理论模型",
+      "llm_evidence": "人机交互理论模型",
+      "canonical_evidence": "人机交互理论模型",
+      "llm_tldr_en": "A model of integrated information processing links psychological mechanisms to interface design, providing a unified vocabulary for human-AI coupling.",
+      "llm_tldr_cn": "针对人机交互研究缺乏心理机制与界面设计的理论联系，本文提出一个集成信息处理模型，将动作调节机制与具体的设计和评估杠杆相连，并为人与机器提供统一词汇。该模型扩展了已有的HCI和自动化研究，适应AI日益增长的自主性。",
+      "llm_tldr": "针对人机交互研究缺乏心理机制与界面设计的理论联系，本文提出一个集成信息处理模型，将动作调节机制与具体的设计和评估杠杆相连，并为人与机器提供统一词汇。该模型扩展了已有的HCI和自动化研究，适应AI日益增长的自主性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.08274v1",
+      "source": "arxiv",
+      "title": "Toward Human-Centered Multi-Agent Systems: Integrating Cognition, Culture, Values, and Cooperation in AI Agents",
+      "abstract": "The emergence of large language model (LLM)-based agents and multi-agent systems has enabled a shift from narrow task automation to more autonomous decision-making. Despite progress in language generation, planning, tool use, and coordination, most agents still treat intelligence as prediction, optimization, and task completion. Human environments are social and normative, where people reason under bounded rationality, communicate in culturally situated language, and make decisions guided by values, beliefs, trust, and social norms. This survey argues that future AI agents, especially those acting on behalf of humans, must move beyond task competence toward human-centered capabilities.   We review research across six areas: (1) evolution of intelligent agents, (2) human cognition and decision-making, (3) language, culture, and social context, (4) human values and belief systems, (5) human-agent collaboration, and (6) multi-agent coordination and modeling of human characteristics. We synthesize work from cognitive science, sociolinguistics, computational social science, and AI alignment, along with recent advances in LLM agents, cultural alignment benchmarks, preference learning, explainability, and agent societies. We identify a key gap: existing systems do not provide a unified framework integrating cognition, culture, values, and social behavior into autonomous agents. We conclude with directions for building culturally aware, value-aligned, cognitively grounded, and cooperative multi-agent systems.",
+      "authors": [
+        "Safia Baloch",
+        "Rahemeen Khan"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA"
+      ],
+      "published": "2026-06-06T17:40:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.08274v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "survey on integrating human-centered capabilities in multi-agent systems",
+      "llm_evidence_cn": "综述如何将人类中心能力融入多智能体系统",
+      "llm_evidence": "综述如何将人类中心能力融入多智能体系统",
+      "canonical_evidence": "综述如何将人类中心能力融入多智能体系统",
+      "llm_tldr_en": "Survey argues future AI agents must incorporate human-centered capabilities like cognition, culture, values, and cooperation beyond task competence.",
+      "llm_tldr_cn": "本文综述指出，当前LLM智能体将智能视为预测和优化，但人类环境是社会性和规范性的。未来代表人类行动的智能体必须超越任务能力，具备认知、文化、价值观和合作等人本能力。系统梳理了相关研究，为设计以人为中心的多智能体系统提供了蓝图。",
+      "llm_tldr": "本文综述指出，当前LLM智能体将智能视为预测和优化，但人类环境是社会性和规范性的。未来代表人类行动的智能体必须超越任务能力，具备认知、文化、价值观和合作等人本能力。系统梳理了相关研究，为设计以人为中心的多智能体系统提供了蓝图。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.08596v1",
+      "source": "arxiv",
+      "title": "Distilling LLM Reasoning into an Interpretable Policy Tree for Human-AI Collaboration",
+      "abstract": "Constructing efficient and reliable policies to assist humans is indispensable for human-AI collaboration. Existing methods mainly follow two lines of work. Most prior work relies on multi-agent reinforcement learning (MARL) to learn black-box policies, which limits interpretability and raises safety concerns. Recent methods query large language models (LLMs) at each decision step, causing slow responses and high inference costs. We propose Collaboration Policy Tree (Co-pi-tree), a closed-loop method that learns an executable policy tree consisting of a partner-behavior prediction tree and an agent-action selection tree. Co-pi-tree constructs a policy by distilling LLM reasoning into policy tree code. It then evaluates the policy through partner interaction, obtains feedback, and uses natural language to summarize the interaction feedback to improve problematic branches. Experiments in Overcooked-AI show that Co-pi-tree improves average reward by 35.4% over the baseline average, while reducing the number of LLM queries by 77.7% and test-time latency by 97.1%. Project page: https://beiwenzhang.github.io/Co-pi-tree/",
+      "authors": [
+        "Beiwen Zhang",
+        "Yongheng Liang",
+        "Guowei Zou",
+        "Haitao Wang",
+        "Hejun Wu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-07T12:20:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.08596v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "interpretable policy tree distilled from LLM reasoning for human-AI collaboration",
+      "llm_evidence_cn": "从LLM推理中提炼的可解释策略树用于人机协作",
+      "llm_evidence": "从LLM推理中提炼的可解释策略树用于人机协作",
+      "canonical_evidence": "从LLM推理中提炼的可解释策略树用于人机协作",
+      "llm_tldr_en": "Proposes Co-pi-tree, a closed-loop method distilling LLM reasoning into an interpretable policy tree for human-AI collaboration.",
+      "llm_tldr_cn": "针对现有人机协作策略缺乏可解释性和推理成本高的问题，该论文提出协作策略树Co-pi-tree。该方法将LLM推理提炼为可执行的策略树代码，包含伙伴行为预测和智能体动作选择。评估表明该方法在效率和可解释性上优于现有方法。",
+      "llm_tldr": "针对现有人机协作策略缺乏可解释性和推理成本高的问题，该论文提出协作策略树Co-pi-tree。该方法将LLM推理提炼为可执行的策略树代码，包含伙伴行为预测和智能体动作选择。评估表明该方法在效率和可解释性上优于现有方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.18660v1",
+      "source": "arxiv",
+      "title": "Evaluating Multi-turn Human-AI Interaction",
+      "abstract": "Large language models (LLMs) are increasingly used as collaborative assistants, yet dominant NLP evaluation practices remain centered on aggregate metrics such as accuracy and fluency. These approaches often overlook behaviors that are critical in human-facing settings (e.g., consistency across multiple turns and iterative refinement). In this paper, we examine limitations of current NLP evaluation practices and introduce TCR, a structured framework for evaluating human--AI interaction using educational LLM assistants as an illustrative example. TCR emphasizes dimensions such as transparency, consistency, and refinement. We further present structured evaluation prompts and illustrative interaction examples demonstrating how structured evaluation can complement aggregate metrics and LLM-as-a-judge approaches. Our work highlights the need for more human-centered evaluation practices for interactive LLM systems.",
+      "authors": [
+        "Shi Ding",
+        "Sijian Tan"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-18T17:08:10+00:00",
+      "link": "https://arxiv.org/pdf/2605.18660v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "structured evaluation framework for human-AI interaction emphasizing transparency and consistency",
+      "llm_evidence_cn": "强调透明度和一致性的结构化人机交互评估框架",
+      "llm_evidence": "强调透明度和一致性的结构化人机交互评估框架",
+      "canonical_evidence": "强调透明度和一致性的结构化人机交互评估框架",
+      "llm_tldr_en": "Introduces TCR framework for evaluating multi-turn human-AI interaction, emphasizing transparency, consistency, and refinement, with illustrative examples.",
+      "llm_tldr_cn": "该论文指出当前NLP评估忽视多轮交互中的关键行为，提出TCR评估框架，涵盖透明度、一致性和迭代精炼三个维度。以教育型LLM助手为例，展示了结构化评估如何补充聚合指标，更全面反映人机交互质量。",
+      "llm_tldr": "该论文指出当前NLP评估忽视多轮交互中的关键行为，提出TCR评估框架，涵盖透明度、一致性和迭代精炼三个维度。以教育型LLM助手为例，展示了结构化评估如何补充聚合指标，更全面反映人机交互质量。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.19832v1",
+      "source": "arxiv",
+      "title": "Material for Thought: Generative AI as an Active Creative Medium",
+      "abstract": "Human-AI collaboration research has largely positioned the human as a judge of AI output, centering effort on evaluating whether rec- ommendations are reliable enough to accept. This decision-support framing leaves little room for the human as creator. We argue that for creative work, this framing misdirects human effort toward eval- uating correctness rather than exploring and shaping the creative space. Drawing on Schön's theory of reflective practice, we propose an alternative: treating generative AI as an active creative medium. As a potter works with clay, humans Shape, Observe, Stir, and Se- lect (SOSS) their medium through ongoing conversation. Where generative AI actively tends toward convergence and resolution, the human role of disruption and curation becomes essential for sustaining creative quality. We present a creative writing probe, Loom, in which users orchestrate simulated narrative agents. We also introduce the SOSS framework for this mode of engagement, and discuss design implications.",
+      "authors": [
+        "Hugo Andersson",
+        "Niklas Elmqvist"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-19T13:25:16+00:00",
+      "link": "https://arxiv.org/pdf/2605.19832v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "treats generative AI as active creative medium for human-AI collaboration",
+      "llm_evidence_cn": "将生成式AI视为人机协作的主动创意媒介",
+      "llm_evidence": "将生成式AI视为人机协作的主动创意媒介",
+      "canonical_evidence": "将生成式AI视为人机协作的主动创意媒介",
+      "llm_tldr_en": "Proposes treating generative AI as an active creative medium using SOSS (Shape, Observe, Stir, Select) framework, shifting focus from evaluation to exploration in creative work.",
+      "llm_tldr_cn": "该论文反思了现有以评估为导向的人机协作框架，提出将生成式AI视为主动创意媒介。基于反思实践理论，引入SOSS方法：塑造、观察、搅拌、选择，强调人类在创造过程中应扮演探索与形塑角色，而非仅作为输出评判者。",
+      "llm_tldr": "该论文反思了现有以评估为导向的人机协作框架，提出将生成式AI视为主动创意媒介。基于反思实践理论，引入SOSS方法：塑造、观察、搅拌、选择，强调人类在创造过程中应扮演探索与形塑角色，而非仅作为输出评判者。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.21351v1",
+      "source": "arxiv",
+      "title": "The Human-AI Delegation Dilemma: Individual Strategies, Collective Equilibria and Sociotechnical Lock-in",
+      "abstract": "This paper takes an ecological approach toward large-scale models of hybrid human-AI intelligence. Emerging models of human-AI interaction predominantly advance the complementarity thesis variously dubbed human-AI collaboration and human-AI hybrid intelligence. However, this constitutes an over-simplification of the modalities of human-AI interaction and possibility-space for both individual and collective action that human-AI interaction potentiates. To fill these gaps, this paper develops a decision and game-theoretic approach to the human-AI delegation-verification dilemma. First, we map out canonical decision-theoretic strategies that account for adaptive user trajectories, modeling how agents transition between strategies based on interaction feedback to reach stable equilibria. Second, we scale individually stable strategies to collective equilibria using three extrapolation principles: (a) non-communicative aggregation (b) local social signaling and (c) institutional norms setting. The analysis identifies the emergence of sociotechnical lock-in, a macro-behavioral state where individually adaptive delegation, in the absence of communicative and institutional safeguards, aggregates into a systemic collective action problem modeled as a prisoner's dilemma that degrades shared epistemic standards. We argue that adoption under higher communicative standards and institutional norms can mitigate suboptimal collective equilibria by imposing social commitments on individual users.",
+      "authors": [
+        "Angjelin Hila"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-20T16:15:52+00:00",
+      "link": "https://arxiv.org/pdf/2605.21351v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "game-theoretic model of human-AI delegation dilemma for collaboration",
+      "llm_evidence_cn": "博弈论模型解决人机委托困境以改进协作",
+      "llm_evidence": "博弈论模型解决人机委托困境以改进协作",
+      "canonical_evidence": "博弈论模型解决人机委托困境以改进协作",
+      "llm_tldr_en": "Develops decision and game-theoretic approach to human-AI delegation-verification dilemma, revealing adaptive user strategies and collective equilibria.",
+      "llm_tldr_cn": "本文采取生态学视角，批判现有“互补论”简化，提出决策与博弈论方法分析人机委托-验证困境。刻画了自适应用户轨迹和集体均衡，为人机协作策略提供了理论基础。",
+      "llm_tldr": "本文采取生态学视角，批判现有“互补论”简化，提出决策与博弈论方法分析人机委托-验证困境。刻画了自适应用户轨迹和集体均衡，为人机协作策略提供了理论基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.24343v1",
+      "source": "arxiv",
+      "title": "Adaptive Human-AI Coordination via Hierarchical Action Disentanglement",
+      "abstract": "Human-AI collaboration requires agents that can adapt to diverse partner behaviors and skill levels while remaining robust to unseen partners. Existing methods often collapse to a single dominant behavior or learn poorly aligned skills, limiting effective coordination. We propose Intrinsic Action Disentanglement (IAD), a deep hierarchical reinforcement learning (DHRL) framework that learns distinct, partner-aware low-level action sequences conditioned on high-level latent skills. IAD introduces an intrinsic reward that explicitly encourages disentangled action distributions of the agent's low-level policy across skills, yielding an interpretable mapping between high-level decisions and partner-specific behavioral responses. By capturing temporally extended interaction patterns, IAD enables flexible adaptation to heterogeneous partner dynamics under distributional shift. We evaluate IAD in the Overcooked-AI domain across multiple layouts and diverse partner settings, including unseen simulated partners, a human-proxy model trained on human-human gameplay, and real human partners. Results show that IAD consistently outperforms strong baselines and achieves more reliable, adaptive coordination across all settings.",
+      "authors": [
+        "Adnan Ahmad",
+        "Bahareh Nakisa",
+        "Mohammad Naim Rastgoo"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-05-23T01:59:41+00:00",
+      "link": "https://arxiv.org/pdf/2605.24343v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Human-AI coordination via hierarchical reinforcement learning with partner-aware skills",
+      "llm_evidence_cn": "通过分层强化学习实现人机协作，学习伙伴感知的技能",
+      "llm_evidence": "通过分层强化学习实现人机协作，学习伙伴感知的技能",
+      "canonical_evidence": "通过分层强化学习实现人机协作，学习伙伴感知的技能",
+      "llm_tldr_en": "Proposes IAD, a deep hierarchical RL framework that learns disentangled, partner-aware action sequences for adaptive human-AI coordination, validated in collaborative tasks.",
+      "llm_tldr_cn": "针对人机协作中智能体难以适应多样伙伴行为的问题，提出内在动作解耦（IAD）框架，利用深度分层强化学习学习解耦的、伙伴感知的低层动作序列。内在奖励鼓励不同技能下的动作分布分离，实现可解释的高层决策与伙伴响应映射。实验表明该方法显著提升协作鲁棒性和适应性。",
+      "llm_tldr": "针对人机协作中智能体难以适应多样伙伴行为的问题，提出内在动作解耦（IAD）框架，利用深度分层强化学习学习解耦的、伙伴感知的低层动作序列。内在奖励鼓励不同技能下的动作分布分离，实现可解释的高层决策与伙伴响应映射。实验表明该方法显著提升协作鲁棒性和适应性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.24729v1",
+      "source": "arxiv",
+      "title": "\"It Felt a Bit Eerie\": Exploring Humanlike Interactions During Collaborative Writing with an Artificial Agent",
+      "abstract": "While human-AI collaboration systems have increasingly been built to increase efficiency or support creativity, little work has examined how the design of interactions shapes the social connection between human and artificial agent. We examine how the temporal and visual dimensions of collaboration shape the experience of a writing task. Specifically, we built three variants of an AI-assisted text editor along a spectrum of simulated humanlike interaction (synchronous and with a cursor) to machinelike interaction (asynchronous and without a cursor), and conducted a comparative user study (n=48). Our exploratory findings suggest that synchronous suggestions increased efficiency but led to contextual misalignment, while a visual cursor increased intent understanding but evoked feelings of surveillance. Taken together, humanlike design of artificial agents can create positive social expectations but also elicit social costs, especially without the alignment present in human-human collaboration. We extend our findings into design implications and ethical considerations when building human-AI collaboration systems.",
+      "authors": [
+        "Michael Yin",
+        "Angela Chiang",
+        "Samuel Rhys Cox",
+        "Robert Xiao"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-23T20:48:34+00:00",
+      "link": "https://arxiv.org/pdf/2605.24729v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "User study on temporal and visual dimensions of human-AI collaborative writing interaction",
+      "llm_evidence_cn": "关于人机协作写作中时间与视觉维度交互的用户研究",
+      "llm_evidence": "关于人机协作写作中时间与视觉维度交互的用户研究",
+      "canonical_evidence": "关于人机协作写作中时间与视觉维度交互的用户研究",
+      "llm_tldr_en": "Examines how design of interaction (synchronous vs asynchronous, with/without cursor) shapes social connection in AI-assisted writing through a comparative user study (n=48).",
+      "llm_tldr_cn": "人机协作系统设计常忽略交互设计对社交连接的影响。本文构建三种AI辅助文本编辑器（从类人同步到机器异步），通过48人用户研究发现，同步建议虽提高效率却导致上下文错配和诡异感。揭示了时间与视觉维度对协作体验的关键作用。",
+      "llm_tldr": "人机协作系统设计常忽略交互设计对社交连接的影响。本文构建三种AI辅助文本编辑器（从类人同步到机器异步），通过48人用户研究发现，同步建议虽提高效率却导致上下文错配和诡异感。揭示了时间与视觉维度对协作体验的关键作用。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.27622v1",
+      "source": "arxiv",
+      "title": "Reasoning and Planning with Dynamically Changing Norms",
+      "abstract": "To safely interact with humans, AI agents must both know our norms and consider them during planning. However, such norm-guided planning has been less explored, only within communities of artificial agents, and has ignored the dynamic nature of norms. This paper instead presents an approach to guiding planning with dynamically changing norms in a human-AI setting. We contribute a defeasible calculus for resolving normative conflicts and an approach to using such dynamically changing norms as guard rails on plans. We theoretically demonstrate our approach with formal proofs and empirically with an AI agent, SocialBot, on a natural language dialogue task.",
+      "authors": [
+        "Taylor Olson",
+        "Roberto Salas-Damian",
+        "Kenneth D. Forbus"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.SC"
+      ],
+      "published": "2026-05-26T19:39:43+00:00",
+      "link": "https://arxiv.org/pdf/2605.27622v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "reasoning and planning with dynamically changing norms for safe human-AI interaction",
+      "llm_evidence_cn": "动态变化规范下的推理与规划，确保人机交互安全",
+      "llm_evidence": "动态变化规范下的推理与规划，确保人机交互安全",
+      "canonical_evidence": "动态变化规范下的推理与规划，确保人机交互安全",
+      "llm_tldr_en": "Presents a defeasible calculus for resolving normative conflicts and using dynamic norms as guardrails for AI planning, demonstrated on a dialogue task.",
+      "llm_tldr_cn": "该论文聚焦于人机交互中AI代理需遵守社会规范的问题，提出一种可废止演算来处理规范冲突，并将动态变化的规范作为规划护栏。通过社交机器人对话任务验证了方法有效性，确保AI行为符合不断变化的人类规范。",
+      "llm_tldr": "该论文聚焦于人机交互中AI代理需遵守社会规范的问题，提出一种可废止演算来处理规范冲突，并将动态变化的规范作为规划护栏。通过社交机器人对话任务验证了方法有效性，确保AI行为符合不断变化的人类规范。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.27634v1",
+      "source": "arxiv",
+      "title": "Structuring Human-AI Productive Interdependence by Strategic Level of Automation Selection for Qualitative Inquiry",
+      "abstract": "While Large Language Models (LLMs) offer a solution to the scale-versus-depth dilemma in qualitative analysis, the paradigm of maximizing automation is fundamentally at odds with the interpretive nature of qualitative inquiry. We argue that effective Human-AI collaboration is not an automation problem, but an interdependence problem. This paper reframes the design of \"co-data\" systems through the lens of Interdependence Theory, proposing a formal framework to structure human-AI productive interdependence. The framework guides the selection of an appropriate Level of Automation (LoA) for different stages of the qualitative analysis process by assessing task risk and the cost of validation. We present a case study where this framework led to a deliberately interdependent workflow, fostering the calibrated trust necessary for rigorous analysis. We conclude by presenting three design principles that instantiate this framework, demonstrating how to leverage AI as a powerful partner while preserving the human researcher's irreplaceable role in the transformation process of meaning-making.",
+      "authors": [
+        "Feng Zhou",
+        "Jacqueline Meijer-Irons",
+        "Ambar Murillo"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-05-26T19:54:26+00:00",
+      "link": "https://arxiv.org/pdf/2605.27634v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Framework for structuring human-AI productive interdependence via level of automation selection",
+      "llm_evidence_cn": "通过自动化等级选择构建人机生产性相互依赖的框架",
+      "llm_evidence": "通过自动化等级选择构建人机生产性相互依赖的框架",
+      "canonical_evidence": "通过自动化等级选择构建人机生产性相互依赖的框架",
+      "llm_tldr_en": "Reframes human-AI collaboration as interdependence, proposing a framework to select level of automation for qualitative analysis stages to achieve productive interdependence.",
+      "llm_tldr_cn": "大型语言模型为定性分析提供规模与深度的解决方案，但最大化自动化与解释性本质冲突。本文提出人机生产性相互依赖框架，基于相互依赖理论，通过评估任务风险和验证成本为不同阶段选择合适的自动化等级（LoA）。案例研究展示了如何设计“共同数据”系统。",
+      "llm_tldr": "大型语言模型为定性分析提供规模与深度的解决方案，但最大化自动化与解释性本质冲突。本文提出人机生产性相互依赖框架，基于相互依赖理论，通过评估任务风险和验证成本为不同阶段选择合适的自动化等级（LoA）。案例研究展示了如何设计“共同数据”系统。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.28255v1",
+      "source": "arxiv",
+      "title": "AI, Take the Wheel: What Drives Delegation and Trust in Human-Computer Cooperative Question Answering?",
+      "abstract": "AI systems are fallible, and humans can make mistakes in deciding whether to trust AI over their own judgment. Thus, improving human-AI collaboration requires understanding when, why, and how humans decide to rely on AI. We study two distinct reliance decisions: the delegation choice -- deciding when to let AI act autonomously without knowing its output, and the adoption choice -- evaluating AI suggestions and deciding how to use them. Both of these decoupled reliance patterns shape collaboration, but prior work rarely studies them together in realistic settings with the same users. We address this gap by studying collaborative human--AI teams competing in a question-answering game in which humans can choose when and how to work with AI agents to win. Our 24 matches pair 23 expert humans with 16 AI agents, capturing 387 delegation and 1440 adoption decisions. While human--AI collaboration performs better than either AI or humans alone, humans make suboptimal collaboration decisions, both under-relying on correct AI suggestions (3.9% of opportunities missed) and over-relying when AI misleads them (1.7%). Both parties contribute wrong answers: reported model confidence is near chance when humans and AI disagree, while confirmation bias drives higher under-reliance (64.5%) when an AI suggestion agrees with humans' initial incorrect answer. To close this gap, we recommend calibrated confidence, evidence-grounded explanations, and mechanisms that help users refine trust.",
+      "authors": [
+        "Maharshi Gor",
+        "Yoo Yeon Sung",
+        "Yu Hou",
+        "Eve Fleisig",
+        "Irene Ying",
+        "Tianyi Zhou",
+        "Jordan Boyd-Graber"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.HC"
+      ],
+      "published": "2026-05-27T10:05:16+00:00",
+      "link": "https://arxiv.org/pdf/2605.28255v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "studies delegation and trust in human-AI collaborative question answering",
+      "llm_evidence_cn": "研究人机协作问答中的委托与信任决策",
+      "llm_evidence": "研究人机协作问答中的委托与信任决策",
+      "canonical_evidence": "研究人机协作问答中的委托与信任决策",
+      "llm_tldr_en": "Empirically studies delegation choice and adoption choice in human-AI collaborative QA game, revealing reliance patterns.",
+      "llm_tldr_cn": "本文通过问答游戏实验，同时研究人机协作中的两种依赖决策：委托选择（让AI自主）和采纳选择（评估AI建议）。发现用户在这两种决策上表现出不同模式，为理解人机协作中的信任机制提供了实证基础。",
+      "llm_tldr": "本文通过问答游戏实验，同时研究人机协作中的两种依赖决策：委托选择（让AI自主）和采纳选择（评估AI建议）。发现用户在这两种决策上表现出不同模式，为理解人机协作中的信任机制提供了实证基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.30930v1",
+      "source": "arxiv",
+      "title": "TUX: Measuring Human--AI Tacit Understanding",
+      "abstract": "As large language models (LLMs) increasingly act as collaborative partners, human--AI alignment is often evaluated through explicit task success, accuracy, or reward optimization. Yet many collaborative settings depend on tacit understanding: whether an agent can align with a human's evaluative stance or representational priors without clear objectives, communication, or feedback. To study this capacity, we develop a spectrum-placement task inspired by the social party game Wavelength, in which humans and agents independently place concepts along subjective spectra. We operationalize the Tacit Understanding Index (TUX) as a pairwise measure of similarity between human and agent judgments, and evaluate it with 241 human participants and 200 profile-conditioned LLM agents across four models. We find that nearest human--agent pairs in trait space achieve significantly higher TUX, suggesting that tacit alignment is structured by person-level characteristics rather than random similarity. Regression analyses show that TUX becomes more explainable as predictor sets become richer, with individual traits, decision-making styles, and confidence improving over aggregate trait-distance baselines. These findings suggest that tacit understanding between humans and LLMs is measurable, while revealing the limits of profile-based conditioning for capturing deeper representational alignment.",
+      "authors": [
+        "Yueshen Li",
+        "Hanyi Min",
+        "Vedant Das Swain",
+        "Koustuv Saha"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "published": "2026-05-29T07:19:58+00:00",
+      "link": "https://arxiv.org/pdf/2605.30930v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "measuring human-AI tacit understanding in collaboration",
+      "llm_evidence_cn": "测量人机协作中的默契理解",
+      "llm_evidence": "测量人机协作中的默契理解",
+      "canonical_evidence": "测量人机协作中的默契理解",
+      "llm_tldr_en": "TUX measures tacit understanding between humans and LLMs via a spectrum-placement task, revealing alignment beyond explicit objectives.",
+      "llm_tldr_cn": "现有评估只关注显式任务成功，忽略协作中的默契。本文设计了一个基于光谱放置的任务，让人类和智能体对概念进行主观排序，提出TUX指数衡量判断相似性。在241名参与者和200个LLM智能体上评估，展示了衡量隐含对齐的能力。",
+      "llm_tldr": "现有评估只关注显式任务成功，忽略协作中的默契。本文设计了一个基于光谱放置的任务，让人类和智能体对概念进行主观排序，提出TUX指数衡量判断相似性。在241名参与者和200个LLM智能体上评估，展示了衡量隐含对齐的能力。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.03189v1",
+      "source": "arxiv",
+      "title": "SenseJudge: Human-Centric Preference-Driven Judgment Framework",
+      "abstract": "Large Language Models (LLMs) as judges across various scenarios such as assessing model responses is becoming an increasingly accepted paradigm. However, existing judgment approaches often rely on trained judgers using fixed preference data, which tend to overlook diverse user preferences and struggle to adapt to real-world human-AI dialogue scenarios. To address these limitations, we propose SenseJudge, a customizable judgment framework driven by human preferences and SenseBench, a diverse and challenging instruction-following benchmark derived from real-world multi-turn interactions. We applied the automatic judgment framework and benchmark to two tasks: (1) LLMs as personalized judges, and (2) model ranking. We conducted extensive experiments, and the results demonstrate that the SenseJudge framework surpasses other judgment methods and models in the LLMs-as-personalized-judges task and achieves model ranking that aligns with real human sense. Additionally, we conducted analyses on position bias and consistency, alongside ablation studies, which affirmed the robustness of SenseJudge.",
+      "authors": [
+        "Rui Li",
+        "Junfeng Liu",
+        "Xiangwen Kong",
+        "Linhai Xu",
+        "Zhifang Sui"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-02T05:48:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.03189v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-centric preference-driven judgment framework for LLMs",
+      "llm_evidence_cn": "人中心偏好驱动的LLM判断框架",
+      "llm_evidence": "人中心偏好驱动的LLM判断框架",
+      "canonical_evidence": "人中心偏好驱动的LLM判断框架",
+      "llm_tldr_en": "Proposes SenseJudge, a customizable judgment framework driven by human preferences, and SenseBench benchmark for multi-turn dialogue evaluation.",
+      "llm_tldr_cn": "该论文针对现有LLM判断方法忽视用户偏好多样性的问题，提出SenseJudge框架，通过人工偏好驱动实现可定制的判断。同时构建SenseBench基准，来源于真实多轮交互。实验证明框架在个性化判断和模型排序任务上有效。",
+      "llm_tldr": "该论文针对现有LLM判断方法忽视用户偏好多样性的问题，提出SenseJudge框架，通过人工偏好驱动实现可定制的判断。同时构建SenseBench基准，来源于真实多轮交互。实验证明框架在个性化判断和模型排序任务上有效。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.03189v2",
+      "source": "arxiv",
+      "title": "SenseJudge: Human-Centric Preference-Driven Judgment Framework",
+      "abstract": "Large Language Models (LLMs) as judges across various scenarios such as assessing model responses is becoming an increasingly accepted paradigm. However, existing judgment approaches often rely on trained judgers using fixed preference data, which tend to overlook diverse user preferences and struggle to adapt to real-world human-AI dialogue scenarios. To address these limitations, we propose SenseJudge, a customizable judgment framework driven by human preferences and SenseBench, a diverse and challenging instruction-following benchmark derived from real-world multi-turn interactions. We applied the automatic judgment framework and benchmark to two tasks: (1) LLMs as personalized judges, and (2) model ranking. We conducted extensive experiments, and the results demonstrate that the SenseJudge framework surpasses other judgment methods and models in the LLMs-as-personalized-judges task and achieves model ranking that aligns with real human sense. Additionally, we conducted analyses on position bias and consistency, alongside ablation studies, which affirmed the robustness of SenseJudge.",
+      "authors": [
+        "Rui Li",
+        "Junfeng Liu",
+        "Xiangwen Kong",
+        "Linhai Xu",
+        "Zhifang Sui"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-02T05:48:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.03189v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-centric preference-driven judgment framework",
+      "llm_evidence_cn": "以人为中心的偏好驱动判断框架",
+      "llm_evidence": "以人为中心的偏好驱动判断框架",
+      "canonical_evidence": "以人为中心的偏好驱动判断框架",
+      "llm_tldr_en": "SenseJudge is a customizable LLM-as-judge framework driven by human preferences, tested on real-world multi-turn dialogue scenarios.",
+      "llm_tldr_cn": "现有LLM评判者使用固定偏好数据，忽视用户多样性。本文提出SenseJudge框架，由人类偏好驱动，并构建SenseBench基准来自真实多轮交互。实验表明该框架能实现个性化评判和模型排名，适应真实人机对话场景。",
+      "llm_tldr": "现有LLM评判者使用固定偏好数据，忽视用户多样性。本文提出SenseJudge框架，由人类偏好驱动，并构建SenseBench基准来自真实多轮交互。实验表明该框架能实现个性化评判和模型排名，适应真实人机对话场景。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.04321v1",
+      "source": "arxiv",
+      "title": "The Digital Apprentice: A Framework for Human-Directed Agentic AI Development",
+      "abstract": "Agentic AI deployments face a recurring design tension: heavy human oversight limits scale, while broad autonomy outruns accountability. Neither posture provides the governance infrastructure required for responsible delegation. We present the Digital Apprentice, a framework for scalable, safe AI agency in which autonomy is earned, not assumed. The Digital Apprentice is a developmental learner that internalizes the tacit methodology of a directing human, graduating through per-skill autonomy tiers only when empirical evidence justifies it. The result is an agent that becomes genuinely useful over time while remaining aligned to a specific human's standards. Three architectural components make this possible. (1) Methodology capture, distilling a directing professional's tacit approach into structured assets. (2) Authorization, with autonomy escalation gated by explicit human approval. (3) Continuous alignment, correcting drift at runtime and converting each correction into owned preference data. We instantiate this framework as an inference-time control plane. We mathematically model the quality framework and discuss policies and techniques designed to raise quality. We apply the framework to an open professional corpus, and we show how catching data drift and applying a different technique at runtime recovers degraded quality dimensions under traffic shift. The implication extends beyond any single application. We believe these three pillars, stitched together as a system, form a safer and more viable path to agentic systems that can scale without sacrificing trust.",
+      "authors": [
+        "Travis Weber",
+        "Rohit Taneja"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-03T00:49:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.04321v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "framework for human-directed agentic AI development with earned autonomy",
+      "llm_evidence_cn": "人类指导的代理AI开发框架，自主权通过经验积累获得",
+      "llm_evidence": "人类指导的代理AI开发框架，自主权通过经验积累获得",
+      "canonical_evidence": "人类指导的代理AI开发框架，自主权通过经验积累获得",
+      "llm_tldr_en": "Presents Digital Apprentice framework for scalable, safe AI agency where autonomy is earned through methodology capture and per-skill autonomy tiers.",
+      "llm_tldr_cn": "针对代理AI部署中人类监督与自主权的矛盾，该论文提出数字学徒框架。AI通过捕获人类方法论并逐技能积累经验证据来获得自主权，实现可扩展且安全的委托。框架包含方法捕获、自主等级渐进等组件。",
+      "llm_tldr": "针对代理AI部署中人类监督与自主权的矛盾，该论文提出数字学徒框架。AI通过捕获人类方法论并逐技能积累经验证据来获得自主权，实现可扩展且安全的委托。框架包含方法捕获、自主等级渐进等组件。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ]
+}
