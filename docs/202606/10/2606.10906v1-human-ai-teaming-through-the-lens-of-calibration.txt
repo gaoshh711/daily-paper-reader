@@ -1,0 +1,591 @@
+Title: Human-AI Teaming Through the Lens of Calibration
+
+URL Source: https://arxiv.org/pdf/2606.10906v1
+
+Published Time: Wed, 10 Jun 2026 01:20:47 GMT
+
+Number of Pages: 19
+
+Markdown Content:
+# Human-AI Teaming Through the Lens of Calibration 
+
+Eric Nalisnick 
+
+Department of Computer Science Johns Hopkins University 
+
+nalisnick@jhu.edu 
+
+Chi Zhang ∗
+
+Department of Computer Science Johns Hopkins University 
+
+czhan168@jhu.edu 
+
+Sophia Qian ∗
+
+Department of Computer Science Johns Hopkins University 
+
+cqian17@jh.edu 
+
+Yixin Wang 
+
+Department of Statistics University of Michigan 
+
+yixinw@umich.edu 
+
+# Abstract 
+
+We study models for human-AI teaming through the lens of statistical calibration. We assume the team consists of an AI model and human—both of which are calibrated with respect to some partitioning of the feature space—and expose how the calibration assumptions propagate into the teaming framework. In particular, we consider frameworks that either (i) combine human and model predictions or (ii) delegate prediction responsibility to either a human or model. We show via theoretical and empirical results that existing methods for combination do not preserve the human’s degree of calibration. Methods for delegation (by the very act of delegation) preserve calibration of the downstream predictors but shift the burden onto the rejector meta-model that decides who predicts. The rejector must be calibrated finely enough to locate where each member is superior, a demand that grows with the human’s expertise and becomes unattainable when the human relies on information the system cannot observe. 
+
+# 1 Introduction 
+
+Modern AI systems can now extract insights from large scale data sources in ways that far surpass human abilities. However, humans still can contribute meaningful contextual information [ 1 , 40 , 57 ]. For instance, a medical AI system can inform its diagnosis from millions of scientific publications and patient health records. Yet this AI system cannot know a particular patient as well as a doctor who has been caring for this patient for years. This complementarity in information—population-level trends vs nuanced, specific insights—motivates the use of hybrid intelligent systems [ 30 ]. Ideally, these systems leverage human and machine decision-making such that the human-AI team’s performance is better than either could achieve alone. This essential property is called complementarity [17, 61]. Human-AI teams have been observed to have complex dynamics, and a full characterization of when teaming succeeds and fails is still an open problem [ 60 ]. For example, Bansal et al. [2] reported a user study in which improving the AI model actually decreased team performance. Thus one would hope for the team to exhibit certain robustness properties [ 53 ]: for instance, the team’s predictions should never be worse than its best member’s. Or in frameworks that delegate responsibility [ 43 ], we would never want the act of delegation to depend on having a full characterization of the behavior of all team members. If it did, then we could just use the delegation system to make predictions and disband the team. While work has attempted to address these questions empirically [ 38 ] or theoretically in specific settings [ 12 , 17 , 23 , 49 ], no prior work has addressed these questions across multiple teaming settings from a unified theoretical perspective. 
+
+> ∗Equal contribution. Preprint.
+> arXiv:2606.10906v1 [stat.ML] 9 Jun 2026
+
+In this work, we use statistical calibration as a unified theoretical lens through which to study human-AI teaming. We consider two teaming frameworks: combining human and model predictions [ 33 ]and delegating prediction tasks to one team member [ 43 ]. We assume that the team is comprised of one model and one human—both of which are calibrated for some partitioning of the feature space. Calibration is a powerful tool for studying teaming as it allows for a general representation of the human and model’s prediction quality. As the partitioning becomes increasingly fine-grained, the human / model approaches the Bayes predictor. As the partitioning becomes increasingly coarse, the human / model approaches marginal calibration (i.e. uniform confidence of 1/K for balanced K-class classification). Through a series of theoretical results, simulations, and experiments with authentically human-made predictions, we expose how the calibration assumptions propagate into the team’s predic-tive behavior. In particular, we arrive at mostly negative results that show common teaming procedures do not preserve the underlying calibration of the team members. To summarize our contributions, we: • Prove that model-based combination preserves calibration w.r.t. the model (Proposition 3.1) but not w.r.t. the human (Theorem 3.2). We verify this result via simulation (Figure 2). • Prove that the combination approach of Kerrigan et al. [33] preserves calibration w.r.t. the model (Theorem 3.3) but not w.r.t. the human (Proposition 3.4). Yet this preservation is only under independent partitioning, and as the model approaches the Bayes classifier, independence is violated and the team predictor becomes increasingly miscalibrated (Proposition 3.5). Experiments on human predictions via ImageNet-16H agree with our theoretical finding (Figure 3). • Prove that delegation-based teaming [ 48 ] requires the meta-classifier (a.k.a. rejector) be sufficiently calibrated as to characterize where the human and model are the superior predictors (Theorem 4.1). When the human has access to hidden features, the rejector will likely have irreducible excess risk. 
+
+# 2 Background & Related Work 
+
+Notation & Setting We consider a K-class classification task with labels y ∈ Y = {1, . . . , K },
+
+known features x ∈ X. We will consider two settings: shared and independent feature spaces. For the former, the labels are drawn from an unknown distribution P(y|x), and for the latter, the labels are drawn from P(y|x, z), with z ∈ Z being features that are known only to the human. The human makes predictions h ∈ H = Y by sampling from an internal predictive model of the form P(h|x),
+
+P(h|z), or P(h|x, z)—depending on if the human has access to the same ( x), a different ( z), or a strictly richer ( x, z) feature space than the model. We observe the known features and labels only through i.i.d. samples (x, y ), and thus if z contains essential predictive information, a model trained only on (x, y ) cannot recover the ground-truth distribution P(y|x, z). Predictive models are considered to be a map f : X 7 → ∆K−1, where ∆K−1 is the (K-1)-dimensional simplex. The model’s distribution over class labels is then y ∼ Categorical (f (x)) , where fy (x) denotes the classifier’s confidence assigned to label y and is usually parameterized with the softmax function. 
+
+2.1 Statistical Calibration 
+
+We now introduce statistical calibration [ 14 , 50 ] for an abstract classifier f : X 7 → ∆K−1. Let 
+
+Φ : X 7 → U be a grouping function that partitions the feature space X into reference classes by assigning each point to a group indexed by u ∈ U .
+
+Definition 2.1. Calibration. A predictor f is (first-order) calibrated w.r.t. a choice of Φ if 
+
+fy (x) = E [P(y = y|x) | x ∈ [x]Φ] = P (y = y|Φ( x)) , ∀x ∈ X, ∀y ∈ Y .
+
+where [x]Φ = {x′|Φ( x) = Φ( x′)} ⊆ X denotes the equivalence class of x. Therefore f is calibrated if the confidence it assigns to every (x, y ) pair equals the average probability of that label within the group to which x is assigned. Appropriately choosing Φ is known as the reference class problem 
+
+[ 24 ] as the choice of Φ naturally gives rise to stronger and weaker forms of calibration [ 28 , 66 ]. The strongest form is ideal calibration , which means the predictor is the Bayes predictor, having matched all underlying conditional probabilities: fy (x) = P (y = y|x) . Ideal calibration is ‘strong’ because the grouping function is ‘fine grained,’ having Φ( x) = x. On the other hand, a model is weakly calibrated if calibration only holds for a ‘coarse grained’ grouping function. The weakest form is marginal calibration, which occurs when Φ( x) partitions the feature space into a single group: 
+
+fy (x) = P(y = y). In the machine learning literature, confidence calibration is typically of interest, 2(a) Prediction with AI Assistance (b) Combining Predictions (c) Delegating Predictions 
+
+Figure 1: Workflows for Human-AI Teaming . ˆy denotes the prediction. Subfigure (a) shows AI assistance : the human’s decision is informed by the model’s output. Subfigure (b) shows combination :the human and model’s predictions are combined using some ensembling procedure. Subfigure (c) shows delegation : each prediction is delegated to the human or model. which uses the maximum class confidence as the grouping function: Φ( x) = max y fy (x) [ 22 ]. If a predictor is calibrated for multiple grouping functions, then it is called multi-calibrated [26]. Definition 2.1 presumes that the predictor is itself measurable w.r.t. Φ (i.e. f is a function of Φ( x)). Yet we will also want to know if a predictor that is built from features that are not a function of 
+
+Φ is still calibrated w.r.t. Φ. For such predictors, we can use the following conditional notion of calibration, which coincides with Definition 2.1 whenever the predictor is Φ-measurable. 
+
+Definition 2.2. Generalized Calibration. Let g be a predictor that is a measurable function of inputs generating a σ-algebra S (so that σ(g) ⊆ S ), and let Φ be a grouping function. We say g is calibrated w.r.t. Φ if conditioning on Φ leaves the prediction unchanged: 
+
+g = P(y | g, Φ( x)) = P(y | g) .
+
+This statement means that Φ carries no label information beyond what g already encodes. 
+
+2.2 Frameworks for Human-AI Teaming 
+
+While there are many ways to form human-AI teams and design hybrid intelligent systems, there are three fundamental workflows from which the vast majority of approaches can be derived [ 55 ]. See Figure 1 for a diagram of each. The first, shown in Subfigure (a), is (human) prediction with AI assistance, and this is by far the most popular workflow [ 3 , 4, 35 , 38 , 74 ]. For example, a radiologist using computer vision to inform their analysis of a medical image would fit into this paradigm [ 73 ]. Receiving help via discussions with a chatbot would be another example. The second, shown in Subfigure (b), is less commonly found in the literature but rather obvious: combine the machine and human predictions using some voting or other ensembling rule (or even an additional model) [11 , 31 –33 , 59 ]. This workflow was exploited by Wright et al. [72] to identify images of supernovae by combining classifications from volunteers and a ConvNet. The last, shown in Subfigure (c), is also popular: delegate prediction-making to either the human or machine [ 43 , 48 , 52 , 70 ]. This workflow allows for semi-automation as hopefully the model can make the majority of predictions, and the human only needs to be queried sparingly. This framework is now commonly employed for online content moderation: content that is obviously prohibited is usually detected by a model, and the ambiguous cases are deferred to a human, who can leverage cultural context and common sense to make the final determination [37]. 
+
+2.2.1 AI Assistance and Prior Work on Calibration 
+
+Returning to the assistance framework in Subfigure 1a, this formulation of teaming has already been well-studied from the perspective of calibration. Several user studies have been performed during which users were shown confidence scores along with the AI’s predictions [ 4 , 38 , 39 , 74 ], with the belief that confidence scores that are better calibrated should improve the quality of assistance [ 63 ]. However both Vodrahalli et al. [68] and Cao et al. [8] observed that this is not the case in practice. Vodrahalli et al. [68] found that humans tended to perform better when confidences are skewed toward under/over confidence. Cao et al. [8] observed benefits from using confidence scores but these benefits were agnostic to if the score was calibrated. Corvelo Benz and Gomez-Rodriguez [13] provide a theoretical framing of this phenomenon that explains why traditional confidence calibration did not improve the team’s performance. If the human has access to additional information ( z, in our 3notation), then calibrating the assistance model only with respect to Φ( X) is insufficient. Rather, a model with good assistance properties should be multi-calibrated w.r.t. the human’s own confidence scores, thereby accounting for the hidden features. This work is our primary inspiration for examining other teaming workflows through the lens of calibration and shared vs independent feature spaces. Lastly, Peng et al. [53] characterized a no-free-lunch result for AI assistance, showing that when given calibrated confidences from two or more predictors, there does not exist a (non-trivial) deterministic aggregation mechanism that can never perform worse than the worse predictor. 
+
+2.2.2 Combining AI and Human Predictions 
+
+We next turn to frameworks that combine human and model predictions. These will be the first target of our analysis. We will examine two specific combination methods from the literature: model-based combination [72] and Bayes combination of classifiers and confusion matrices [33]. 
+
+Model-Based Combination We start with the obvious approach to combination. Given a dataset 
+
+D = {xn, y n, h n}Nn=1 , first fit a model f (x) to x-y pairs and then combine its predictions with a human’s via a second model. We define this second model as g : ∆ K−1 × H 7 → ∆K−1. Wright et al. [72] used a simple combination rule and a support vector machine to implement g(x, h). This setting is attractive for its simplicity and will serve as a useful ‘warm up’ for our line of analysis. 
+
+Bayes Combination of Classifiers and Confusion Matrices Kerrigan et al. [33] proposed a more elegant approach to combination. Assume access to two datasets: one of feature-label pairs 
+
+Df = {(xn, y n)}Nn=1 and another of prediction-label pairs Dh = {(hm, y m)}Mm=1 . They first fit a classifier f (x) to Df . Then they use Dh to estimate a row-normalized confusion matrix C:
+
+ci,j = P
+
+> m
+
+(I[ym = i] · I[hm = j]) / P 
+
+> m
+
+I[ym = i]. Kerrigan et al. [33] lastly combine the two models via Bayes rule as follows: 
+
+p(y|h, f (x)) = p(h|y, f (x)) · p(y|f (x)) 
+
+p(h|f (x)) 
+
+(assuming f (x) ⊥ h | y) = p(h|y) · p(y|f (x)) 
+
+P 
+
+> y′∈Y
+
+p(h|y = y′) · p(y = y′|f (x)) = cy,h · fy(x)
+
+P 
+
+> y′∈Y
+
+cy′,h · fy′ (x)
+
+(1) where the second equality assumes that the human’s predictions are independent of f (x). This assumption is then what allows for a standard confusion matrix to encode p(h|y).
+
+2.2.3 Delegating Predictions: Learning to Defer 
+
+The third workflow for teaming consists of delegating each prediction task to either the human or model via a routing policy [ 6 , 15 , 16 , 56 ]. This paradigm is known as learning to defer (L2D) [ 43 ], as the system must learn when to use which downstream predictor. This allows for semi-automation, with the human only needing to make a (usually small) fraction of the decisions. We can derive the Bayes optimal deferral rule as follows [ 48 ]. Consider the following cost function for a decision rule δ : X → Y ⊥, where ⊥ represents the decision to defer to the human and Y⊥ = Y ∪ {⊥} :
+
+cL2D (δ(x), y, h) ≜ {ℓ(δ(x), y) if δ(x)̸ = ⊥; ℓ(h, y) if δ(x) = ⊥} . If the decision rule returns a label y ∈ Y , then we apply ℓ(δ(x), y), a loss between the classifier’s prediction and the true label y. When the decision is to defer, δ(x) = ⊥, then we apply the same loss to the human’s prediction: 
+
+ℓ(h, y). Assuming a 0-1 loss, the decision function that minimizes the conditional risk is then: 
+
+δ∗ 
+
+> 0−1
+
+(x) ≜
+
+⊥ if r∗(x) = 1 arg max y P(y = y|x) o/w r∗(x) ≜ I
+
+
+
+P(h = y|x) > max  
+
+> y∈Y
+
+P(y = y|x)
+
+
+
+(2) where r∗(x) is a meta-classifier termed the rejector and P(h = y|x) = P 
+
+> y∈Y
+
+P(y = y|x) · P(h =
+
+y|x)—the human’s (binary) probability of being correct. If this probability is greater than the modal confidence of the Bayes predictor P(y|x), deferring to the human is the best decision. Yet one may wonder how the human can outperform P(y|x). This is where additional information plays a role: the human can beat the Bayes predictor because of her access to a richer feature space [x, z]. Much of the prior work on L2D has developed surrogate loss functions for the above learning problem [ 48 ]. The most closely related work is by Verma and Nalisnick [67] and Cao et al. [9] , who developed parameterizations that resulted in better confidence-calibrated estimates of P(h = y|x). We, on the other hand, will analyze L2D’s calibration properties from a more general, theoretical perspective. 42.3 Assumptions on Human and Model 
+
+To finalize our setting of interest, we state the calibration assumption that will be the foundation of our analysis. Following prior work in human-AI teaming [ 33 , 48 ], we assume we do not have access to the human’s (conditional) predictive distribution P(h|x) nor can we model it well . If we could, the human could simply be replaced by a model. Rather, we observe only samples, ˆh ∼ P(h|x). Next we assume that both the human and model are calibrated for some arbitrary grouping function: 
+
+Assumption 2.3. Calibration of Human and Model. Assume the model f is calibrated and measurable w.r.t. grouping function Φf : f (x) = P(y|Φf (x)) . Likewise, assume the human’s internal predictive model is calibrated and measurable w.r.t. grouping function Φh: P(h|· ) = P(y|Φh(·)) ,where Φh could partition X, Z, or their combined feature space. Assuming the human provides only a sample ˆh allows our analysis to proceed without the human pro-viding calibrated confidence statements—which humans are typically not good at [ 41 , 64 ]. However, despite their dubious confidence statements, humans do often make good decisions and predictions for domains in which they have experience [ 29 ], and these decisions can be characterized by a well-formed probabilistic model [ 21 , 71 ]. We stress that our Assumption 2.3 does not assume the human or model are optimal predictors. Rather, they are simply ‘unbiased with respect to each cell of the partition,’ with Bayes optimality happening only when the cells become infinitesimal. 
+
+# 3 Combination Through the Lens of Calibration 
+
+We first study perhaps the simplest instantiation of teaming: pure model-based combination. We then move on to the combination approach proposed by Kerrigan et al. [33] . For both methods, we are interested if the combined human-AI predictor preserves calibration w.r.t Φf (x) and Φh(x).
+
+3.1 Model-Based Combination 
+
+Given the combination function g from Section 2.2.2, can g be calibrated against Φh and / or Φf ? If it is calibrated against both, then the human-AI team forms a calibrated predictor that successfully captures all ‘knowledge’ encoded by Φh and Φf . Let the Bayes-optimal combination function be denoted g∗(ˆ h, f (x)) ≜ P(y | ˆh, f (x)) . Restricting our attention to g∗ produces the cleanest possible upper bound on what a calibrated g can inherit. Our result will show that g∗ cannot be calibrated w.r.t. Φh, as long as P(h|Φh(x)) is not deterministic and f (x) does not ‘leak’ information about Φh.
+
+Shared Feature Space We first consider the case of shared features: when the human and model operate on X. Consider the sampling step ˆh ∼ Categorical (P(h|Φh(x))) . This step replaces a real-valued probability vector P(h|Φh(x)) with a single categorical representation ˆh ∈ Y . Of course, many independent draws would converge back to P(h|Φh(x)) , but the composite predictor has access to exactly one sample. On the other hand, g is allowed full access to f ’s per-class confidences, so any partition Φf that is at least as coarse as f ’s output (e.g. confidence calibration) is visible to g.
+
+Proposition 3.1. Calibration of g∗ w.r.t. Φf . Assume Φf is a coarsening of f ’s level sets, i.e. 
+
+σ(Φ f ) ⊆ σ(f ). Then g∗ is calibrated w.r.t. Φf .Proof. g∗ = P(y | ˆh, f (x)) has input σ-algebra S = σ(ˆ h, f (x)) , and σ(Φ f ) ⊆ σ(f ) ⊆ S . Since g∗
+
+and Φf are both S-measurable, the tower property gives P(y | g∗, Φf ) = E[ P(y | S ) | g∗, Φf ] = 
+
+g∗ = P(y | g∗). Therefore g∗ is calibrated w.r.t. Φf (Definition 2.2). This asymmetry between ˆh and f is the central limitation of this composition framework: while calibration w.r.t. the model’s partitions is possible, calibration w.r.t the human’s is not. 
+
+Theorem 3.2. g∗ is not calibrated w.r.t. Φh. Assume that g∗ is injective on the support of (ˆ h, f (x)) .Suppose there exist two cells S1̸ = S2 of Φh and a value v in the range of f such that: 1. P(h|Φh(x)) is non-degenerate: P(h = y′ | Φh(x) = Si) > 0 for i ∈ { 1, 2}, for some label y′.2. f does not separate S1 and S2: P(f (x) = v, Φh(x) = Si) > 0 for i ∈ { 1, 2}.
+
+53. S1 and S2 have different label information: P(y = y′′ | f (x) = v, Φh(x) = S1)̸ = P(y = y′′ |
+
+f (x) = v, Φh(x) = S2), for some label y′′ .Then g∗(ˆ h, f (x)) is not calibrated with respect to Φh.
+
+See Appendix A for the proof. Theorem 3.2 reduces the question of when g∗ inherits calibration to: when do ˆh and f (x) together encode the partition? Two structurally distinct conditions suffice. 
+
+(a) Coarse partitions : If Φh is so coarse that each grouping maps to a unique value of ˆh (making the sample a one-hot indicator of Φh), then g can be calibrated. This was prevented by the non-degeneracy supposition. (b) Multi-calibrated model : If f is multi-calibrated w.r.t. σ(Φ f , Φh), then g
+
+can be calibrated w.r.t. both. This was prevented in Theorem 3.2 by supposition (2). While condition (b) is not interesting in the limit of true multi-calibration—since g effectively collapses to f —it suggests that f (x) can ‘leak’ information about the human’s predictions to g. This result is in the same spirit as Corvelo Benz and Gomez-Rodriguez [13] ’s solution of human-aligned calibration: improve the team via multi-calibrating the model to make it ‘human-aware.’ Condition (b) also can be recast in the formalism of omnipredictors [19 ]. An (L, C)-omnipredictor is a predictor whose output, after loss-specific post-processing, is competitive with the best hypothesis in C for every loss ℓ ∈ L . Multi-calibration w.r.t. C is sufficient for this guarantee [ 19 ]. In our setting, f is the candidate omnipredictor and g is the post-processor. Multi-calibration of f w.r.t. σ(Φ f , Φh) is precisely the condition making f an (L, {Φf , Φh})-omnipredictor. Hence combination can preserve 
+
+Φh-calibration only when the model is already an omnipredictor for the human’s partition. 
+
+Independent Features Now turning to setting in which the human observes features z and the model observes x, notice that Theorem 3.2 immediately still applies. Moreover, it can be strengthened by removing supposition (2), since it is impossible for f to separate the cells since f never even has access to z. Yet, ultimately, this is a good scenario and poses no additional complications to combination-based teaming. Having access to additional information z—if only by way of samples— still allows for g to demonstrate complementarity when P(y|x, z) is the true data generating process. 
+
+Simulation Study We test these intuitions and empirically support our results via a simulation that compares the settings of shared and independent features. The data generating distribution is set to: 
+
+P(y = 1 | x, z) = logistic  −2 + 35 Φf (x) + 35 Φh(z) + 16 Φf (x) Φ h(z) ,
+
+with the partitions being Φf (x), Φh(z) ∈ { 0, 1, 2, 3}. In the shared-feature setting, (z = x1, x = x2)
+
+such that x1 = x2 with probability 0.55 and is drawn uniformly at random otherwise. The partitions then evaluate to Φh(z) = x1 and Φf (x) = x2. In the independent setting, x and z are independent and drawn uniformly on {0, 1, 2, 3}, with Φf (x) = x and Φh(z) = z . In both settings, the upstream predictors P(h|z) and f (x) are calibrated against their respective partitions by construction. The downstream model g∗ is the Bayes-optimal predictor by setting it to the empirical mean of y within each  ˆh, f (x) bucket. Figure 2 reports reliability diagrams of g∗ within Φf - and Φh-partitions; marker area encodes cell count and color indexes the partition cell. The left plot of both subfigures shows that g∗ inherits Φf -calibration in both regimes. However, g∗ is miscalibrated against Φh, with an ECE of 0.090 in the shared-feature setting and an ECE of 0.144 in the independent-feature setting. 
+
+3.2 Bayesian Combination via Confusion Matrix Representation of Human 
+
+We now turn to the Bayesian combination method of Kerrigan et al. [33] . Unlike the previous sub-section, where the combination was limited to a single sample from the human, this combination sees a (normalized) confusion matrix that aggregates the human’s (sampled) predictions. 
+
+Shared Feature Space We return to the setting of no hidden features: the model and human both make predictions from x. Like in the previous combination setting, we are interested if the combined model is calibrated w.r.t Φf and / or Φh. For the former, we again have an affirmative result. 
+
+Theorem 3.3. Bayesian combination posterior is calibrated w.r.t. Φf . Assuming that Φh ⊥ Φf (x) | y,the posterior distribution is calibrated w.r.t. Φf :
+
+p (y|h, f (x)) = P (y | h, Φf (x)) = EΦh [P(h|Φh(x)) |y] · P (y|Φf (x)) 
+
+P(h|Φf (x)) 
+
+6(a) Shared Features (b) Independent Features 
+
+Figure 2: Calibration Failure of Model-Based Combination. The figures show simulations evaluating the calibration of g∗ in the case of a shared feature space (a) and independent feature spaces (b). In both cases, the combination model g∗ is calibrated w.r.t. Φf (ECE of 0) but not calibrated w.r.t. Φh
+
+(ECE of .09 for shared, .14 for independent), the partitioning for which the human is calibrated. See Appendix B for the proof. The result is made straightforward by the conditional independence assumption since it implies h ⊥ Φf (x) | y, which then allows for the confusion matrix representation of p(h|y). This assumption is crucial, and we will revisit it below. Turning to the human, again we have a negative result for Φh.
+
+Proposition 3.4. Bayesian combination posterior is not calibrated w.r.t. Φh. Assume the confusion-matrix posterior p(y | h, f (x)) is injective on the support of (h, f (x)) , and that Φh and f satisfy conditions (1)–(3) of Theorem 3.2. Then the posterior is not calibrated with respect to Φh.Proof. Like g∗, the confusion-matrix posterior is a measurable function of (h, f (x)) . Yet the human enters only through the confusion matrix cy,· = R P(h | Φh(x)) dP(x | y), which averages out the within-class variation of Φh. Under the injectivity assumption σ(p) = σ(h, f (x)) , and therefore the proof of Theorem 3.2 is applicable here as well: conditions (1)–(3) make Φh carry label information beyond (h, f (x)) , which is exactly the failure of generalized calibration (Definition 2.2). From these results, we see that the best case scenario is when Φf and Φh are conditionally independent (given y), thereby encoding unique aspects of the feature space. However, the model becomes quite sensitive to this property, to the point of being non-robust. The finer grained Φf becomes, the more likely the conditional independence assumption is to be broken, and the posterior is likely to over-sharpen via double-counting. The following results shows that the posterior will not be ideally calibrated, even when f (x) = P(y|x).
+
+Proposition 3.5. Posterior miscalibration when model is already Bayes predictor. Let Φf (x) = x.Suppose that Φh partitions X into multiple cells, and there exists a y′ such that P(y = y′|Φh =
+
+S1)̸ = P(y = y′|Φh = S2). Then the posterior is not ideally calibrated: p (y | h, f (x)) ̸ = P(y|x).
+
+See Appendix C for the proof. This non-robust behavior presents an interesting contrast to model-based combination, which can be ideally calibrated when the model is. 
+
+Independent Features In the case of independent features, the human and model are guaranteed to introduce complementary information: z ⊥ x | y implies Φh ⊥ Φf | y . In turn, while the posterior is still not calibrated w.r.t Φh, we no longer have to worry about f (x) being too calibrated and combination introducing over-sharpening. This suggests an experimental hypothesis: when the model and human share features, we should see the posterior become an increasingly worse predictor as f
+
+becomes more calibrated. However, with independent feature spaces, improvements in f ’s calibration should always translate to a better posterior predictor. 
+
+Experimental Validation on ImageNet-16H We evaluate the above hypothesis starting with the shared features setting. We use the same experimental setup as Kerrigan et al. [33] for the ImageNet-16H dataset, which contains 28 , 997 human classifications of ImageNet-16 images from a 7(a) ImageNet-16H: Accuracy (b) ImageNet-16H: ECE (c) ImageNet-16H: Neg. LL   
+
+> (d) HAM10000: Accuracy (e) HAM10000: ECE (f) HAM10000: Neg. LL
+
+Figure 3: Empirical Validation for Real and Simulated Humans. Top row : For ImageNet-16H, we vary the (confidence) calibration of a VGG-19 classifier via temperature scaling and combine each classifier with a sampled human label using the confusion-matrix update. The best calibrated model never results in the best posterior predictor. Bottom row : On HAM10000, we vary the calibration of an image-only ResNet-18 classifier and combine it with sampled predictions from simulated humans with a range of feature spaces. When ‘humans’ see only meta-data, better model calibration results in an improved posterior predictor, as our theory predicts. total of 145 participants. 2 For each image, the dataset provides approximately six human annotations. We aggregate these annotations and interpret the normalized count vector as a human’s predictive distribution for that image. To match our theoretical setting, we sample from this empirical distribution. See Appendix E for additional experimental details. We evaluate the performance of the resulting human-AI combination as the classifier’s individual confidence calibration varies. We do this via temperature scaling the VGG-19 softmax probabilities [ 22 ]. We sweep over a grid of temperatures and evaluate both the standalone classifier and the confusion-matrix-combined predictor using held-out samples. We report three quantities: accuracy, expected (confidence) calibration error (ECE), and negative log-likelihood (NLL). Results are reported in Subfigures 3a, 3b, and 3c. All experiments agree with our theory: for a shared feature space, better model calibration does not lead to a better combined predictor. The best posterior accuracy was achieved at an ECE of 0.22 ; the best posterior ECE was achieved at a model ECE of 0.1; and the best posterior NLL was achieved at a model ECE of 0.12 . In all three cases, there were at least three better calibrated models that resulted in worse predictive posteriors. We see similar trends for CIFAR-10H in Appendix Figure 5. 
+
+Experimental Validation on HAM10000 We next use the HAM10000 [ 65 ] to analyze the indepen-dent feature setting. In HAM10000, each example contains a 224 × 224 dermoscopic image along with patient- or lesion-level meta-data. We identify the image with the model-observed feature x and treat the meta-data as z—unavailable to the base classifier but available to the human. The model is a temperature-scaled ResNet-18. We simulate the human using an auxiliary classifier, allowing for a controlled comparison of several feature-access settings. The first, denoted Image , represents the human via the same ResNet-18 employed for the main classifier (i.e. perfectly redundant features). The second, denoted Weaker Image , uses a weaker ResNet-18 trained on 128 × 128 images for 4 epochs, which represents a human with a coarser feature space. The third, denoted Image and Meta-Data , is a multimodal expert that uses a ResNet-18 to encode the image before combining it with meta-data via an MLP. This represents a human with a strictly richer feature space. The fourth,  
+
+> 2While the human participants could be using hidden features to inform their predictions, the fact that computer vision systems have surpassed human performance on ImageNet [ 25 ] suggests any advantage from hidden information is negligible.
+
+8denoted Meta-Data Only , is a logistic-regression-based human trained on age, sex, and lesion localiza-tion. It has an independent feature space, unlike the previous three (simulated) humans. See Appendix E for additional details. Subfigures 3d, 3e, and 3f report accuracy, ECE under confidence calibration, and NLL, respectively. Just as for the ImageNet-16H results, the y-axis evaluates the predictive quality of the posterior as a function of f (x)’s confidence calibration by varying the temperature parameter. For the meta-data-only human (purple), we see that—as our theory predicts—the posterior achieves its best accuracy, ECE, and NLL for the best-calibrated classifier. For the image-only human, the posterior accuracy is best for the worst calibrated model , and the posterior ECE and NLL is best for the fifth-best calibrated model—again, as theory predicts. For the image-and-meta-data human (blue), the posterior is best for the third-best calibrated model. This result also aligns with theory as we should expect behavior that interpolates between the fully-shared (Image-only) and fully-independent (Meta-Data-only) experiments. 
+
+# 4 Delegation Through the Lens of Calibration 
+
+We now turn to the alternative setting of delegation: either the human or model predicts with the selection being determined by the rejector r(x). Since the model or human alone makes the prediction, predictions will always come from a predictor that is either Φf - or Φh-calibrated, by assumption. Thus the focus of our analysis turns to r(x): how must the rejector be calibrated in order to choose the superior downstream predictor? Assuming the downstream predictors are fixed, we can write the combined (system) risk as: 
+
+R0-1
+
+> f,h
+
+(r) ≜ Ex
+
+
+
+(1 − r(x)) 
+
+
+
+1 − max  
+
+> y
+
+fy (x)
+
+
+
++ r(x)(1 − P(h = y | x)) 
+
+
+
+. (3) Minimization of Equation 3 yields the oracle rule r∗(x) = I[P(h = y | x) > max y fy (x)] ,recovering the Bayes-optimal deferral rule of Mozannar and Sontag [48] . In practice, we assume the rejector is parameterized by a scalar score ρ : X × ∆K−1 7 → [0 , 1] such that 
+
+r(x; ρ) ≜ I
+
+
+
+ρ(x, f (x)) > max  
+
+> y
+
+fy (x)
+
+
+
+. (4) If ρ is ideally calibrated such that ρ(x, f (x)) = P(h = y | x), then the oracle rule r∗ is recovered. Notably, ρ takes both the original features x and the model’s output f (x) as inputs. This explicit de-pendence on f (x) is a key feature of this parameterization and differs from most L2D implementations [9, 48 , 52 , 67 ]—but not all [ 43 ]—where the probability that the expert is correct is typically estimated from x alone. This choice does not incur computational overhead since finding the maximum dimen-sion of f (x) is needed to evaluate r(x; ρ). We discuss the theoretical implications of this choice below. We now present our central result for delegation that characterizes the rejector’s calibration requirements in relation to the downstream predictors. 
+
+Theorem 4.1. Risk-minimizing rejector under calibration. Assume ties between the downstream predictors are negligible: P(h = y | x)̸ = max y fy (x) almost surely. Let Φr be a grouping function on X × ∆K−1, and let ˜Φr (x) ≜ Φr (x, f (x)) be the partition of X induced by the additional refinement w.r.t. f (x). Assume ρ is calibrated w.r.t. ˜Φr (x). Then the rejector r(x; ρ) (Equation 4) minimizes R0-1
+
+> f,h
+
+(r) (Equation 3) if and only if σ(1D∗ ) ⊆ σ( ˜Φr ), where D∗ ≜ {x ∈ X | r∗(x) = 1 },the points for which the human should make the prediction under the Bayes optimal rejector. 
+
+See Appendix D for the proof. As one would expect, the rejector’s induced partition ˜Φr must be fine-grained enough to identify the optimal-deferral set D∗. Thus one pressure on ˜Φr is to capture which side of the threshold max y fy the human’s correctness probability falls on. As the human’s partition Φh becomes finer-grained, ˜Φr must increase its granularity to track its threshold-crossings. As Φh’s partitions shrink in size, σ(1D∗ ) must approach the resolution of 
+
+σ(Φ f , Φh) at the boundaries of D∗. This would force ˜Φr to absorb Φh and may make the human’s involvement unnecessary (as her predictive power becomes increasingly captured by ρ alone). 
+
+f (x) as Input to the Rejector In Theorem 4.1, the model’s partition Φf does not appear explicitly, despite the comparison to max y fy (x) being Φf -measurable. This requirement is circumvented by giving ρ access to f (x) by assumption, which forces ˜Φr to refine Φf by construction. If ρ had x as 9its only input, then the sufficient condition would become σ(Φ f , 1D∗ ) ⊆ σ(Φ r ): Φr would need to explicitly refine Φf in addition to identifying D∗. As mentioned above, adding f (x) as a feature to the rejector is not common in L2D implementations but actually was done in Madras et al. [43] ’s seminal work, with the choice being justified through intuition rather than theory. The majority of subsequent implementations use a neural network to map x to K + 1 outputs [ 9, 48 , 67 ], with the classifier encoded by the first K dimensions and the rejector encoded by the (K + 1) th. When the classifier and rejector share a backbone architecture, we expect adding f (x) as a feature to matter less for these implementations than ones with independent parameterizations [43, 52]. 
+
+Human with Additional Information We next consider the case in which the human uses x
+
+and additional information z to make her prediction (calibrated w.r.t. Φh(x, z)). This is the setting assumed by L2D’s theoretical foundation, since z is necessary for the human to outperform the Bayes classifier on X. Yet, like the model, the rejector only has access to x, and it must decide which downstream predictor to use without knowing z or h. The risk in Equation 3 then becomes 
+
+eR0-1
+
+> f,h
+
+(r) = Ex,z
+
+
+
+(1 − r(x)) 
+
+
+
+1 − max  
+
+> y
+
+fy (x)
+
+
+
++ r(x)(1 − P(h = y | x, z)) 
+
+
+
+. (5) Without access to the additional information, Equation 5 can be minimized only up to marginalization over z: P(h = y | x) = Ez|x[P(h = y | x, z)] . Theorem 4.1 then immediately yields: 
+
+Corollary 4.2. Best X-measurable rejector under additional information. Let ˜D ≜
+
+{x ∈ X | P(h = y | x) > max y fy (x)} denote the z-marginalized optimal-deferral set. Among X-measurable rejectors, r(x; ρ) minimizes eR0-1
+
+> f,h
+
+(r) (Equation 5) if and only if σ(1 ˜D) ⊆ σ( ˜Φr ).
+
+Figure 4: Threshold crossings due to variation in z drive excess risk. 
+
+The best X-measurable rejector cannot in general match the or-acle r∗(x, z) = I[P(h = y | x, z) > max y fy (x)] . The excess risk eR0-1
+
+> f,h
+
+(r(x; ρ∗)) − eR0-1
+
+> f,h
+
+(r∗(x, z)) vanishes only when—for each x = x0—P(h = y | x0, z) and Ez|x0 [P(h = y | x0, z)] 
+
+always remain on the same side of the threshold max y fy (x0).An example of a setting with excess risk is shown in the fig-ure to the right. We see that P(h = y | x0, z) (black line) crosses the threshold max y fy (x0) (blue line) several times, yet Ez|x0 [P(h = y | x0, z)] (red line) always signals to not defer to the human. Of course, multi-calibrating the rejector w.r.t. Φh would remove the information asymmetry and the resulting excess risk. In summary, the presence of additional information is easy to incorporate via human-AI combination and presents no fundamental modeling challenge. For delegation, the story is not so simple: the deferral policy is fundamentally limited by the unobservable variation in z and its effect on whether the human is the superior downstream predictor. 
+
+# 5 Discussion, Limitations, Future Work 
+
+Assuming a human and model are calibrated predictors, we have analyzed how these calibration prop-erties propagate into the human-AI team’s construction. In particular, we studied two methods for com-bining human and model predictions and the standard approach to delegating predictions (i.e. learning to defer). For the combination-based approaches, calibration w.r.t. the model’s partition Φf is possible (3.1, 3.3), but calibration w.r.t. the human’s partition Φh is not (3.2, 3.4). This latter result was due to the human’s prediction either being sampled or aggregated in a confusion matrix—both of which unavoidably destroy the information in Φh. The possible strategies for regaining Φh-calibration are to multi-calibrate the model or draw multiple human predictions [ 69 ], which will recover P(h|Φh(x)) 
+
+asymptotically. The presence of additional features only available to the human poses no issue to the combination frameworks we studied. Specifically, Kerrigan et al. [33]’s combination method works better when there is information asymmetry, since stronger model calibration is guaranteed to result in a better posterior predictor. Figure 3 reports experimental verification of this result. In regards to delegation, Theorem 4.1 shows that the optimal rejector must be calibrated with a granularity determined by the optimal-deferral set— {x ∈ X | P(h = y | x) > max y fy (x)}—and 
+
+Φf . This latter requirement suggests that L2D implementations should always include f (x) as an 10 input feature to the rejector model, providing refinement w.r.t. Φf by construction. Unfortunately, the presence of hidden information makes delegation difficult: the deferral policy can at best make decisions considering only the z-marginalized expert correctness, Ez|x[P(h = y | x, z)] . Therefore Human-AI combination is a more natural solution in the presence of considerable feature asymmetry. 
+
+Multi-Calibration as a Solution? As mentioned earlier, the prior work of Corvelo Benz and Gomez-Rodriguez [13] showed that assistance benefits when the model is multi-calibrated w.r.t. the human’s confidences. Multi-calibration also solves many of the theoretical obstacles to well-specified teaming that we have uncovered. However, we do not think of it as a general solution: for combination, multi-calibrating w.r.t. Φh collapses the team’s predictive structure into f , diminishing the human’s role and the very motivation for forming a team. Similarly, for delegation, multi-calibrating the rejector would provide the much needed access to the hidden information that allows for better deferral decisions. However, if the rejector has access to the additional information, why doesn’t the model also have access? And if the model does have access to the (previously) hidden features, the motivation for the human’s inclusion in the team is now compromised. Hence real-world solutions will likely often require collecting the hidden features gradually, as needed. For example, in a delegation setting, if the rejector is performing poorly due to the degree of hidden information, collecting z not everywhere but just at the boundary of the deferral regions could considerably improve the team’s performance. 
+
+Limitations The primary limitation of this work is that the model and human are assumed to be calibrated, when, in practice, calibration can be hard to verify for even modestly fine-grained partitions (e.g. confidence calibration) [ 36 , 58 ]. Yet, since our results mostly highlight limitations in teaming frameworks, assuming the good-case scenario of calibration increases their generality. Furthermore, learning has been avoided entirely, and as the considerable work on learning theory for delegation has shown, issues surrounding parameterization, consistency and realizability matter in practice [ 10 , 45 – 47 , 49 , 52 ]. Lastly, while experiments on ImageNet-16H and HAM10000 supported our results in Section 3.2, our other results were empirically validated only via small-scale simulations. 
+
+Future Work It would be natural to extend our results to teams with multiple humans and AI(s) [ 27 , 34 , 44 , 62 , 67 ]. We suspect that additional humans makes combination straightforwardly more powerful (at the cost of collecting human queries) but increases the difficulty of delegation. Adapting our results to support approximate calibration [ 7, 18 , 20 , 75 ] might allow for analysis of combination methods that take as input a human’s miscalibrated confidences. Lastly, studying human-AI teaming over time (possibly supported by a priority queue [ 42 ]), such that the human and model can interact and adapt [ 2 , 5 , 51 ], introduces complexity that is outside the scope of static calibration assumptions and is highly relevant to modern human-AI teaming systems. 
+
+# Acknowledgments 
+
+We acknowledge the use of computational resources from the Johns Hopkins DSAI cluster. Yixin Wang was supported in part by funding from the Office of Naval Research under grant N00014-23-1-2590, the National Science Foundation under grants No. 2310831, No. 2428059, No. 2435696, No. 2440954, the Michigan Institute for Data Science’s Propelling Original Data Science (PODS) grant, Two Sigma Investments LP, and LG Management Development Institute AI Research. 
+
+# References 
+
+[1] Rohan Alur, Manish Raghavan, and Devavrat Shah. Human Expertise in Algorithmic Prediction. 
+
+Advances in Neural Information Processing Systems , 2024. [2] Gagan Bansal, Besmira Nushi, Ece Kamar, Daniel S. Weld, Walter S. Lasecki, and Eric Horvitz. Updates in Human-AI Teams: Understanding and Addressing the Performance / Compatibility Tradeoff. Proceedings of the AAAI Conference on Artificial Intelligence , 2019. [3] Gagan Bansal, Besmira Nushi, Ece Kamar, Eric Horvitz, and Daniel S Weld. Is the Most Accurate AI the Best Teammate? Optimizing AI for Teamwork. In Proceedings of the AAAI Conference on Artificial Intelligence , 2021. 11 [4] Gagan Bansal, Tongshuang Wu, Joyce Zhou, Raymond Fok, Besmira Nushi, Ece Kamar, Marco Tulio Ribeiro, and Daniel Weld. Does the Whole Exceed its Parts? The Effect of AI Explanations on Complementary Team Performance. In Proceedings of the CHI Conference on Human Factors in Computing Systems , 2021. [5] Nina Corvelo Benz, Eleni Straitouri, and Manuel Gomez-Rodriguez. Learning to Decide with AI Assistance under Human-Alignment. ArXiv Preprint , 2026. [6] Umang Bhatt and Holli Sargeant. When Should Algorithms Resign? A Proposal for AI Governance. Computer , 2024. [7] Jarosław Błasiok, Parikshit Gopalan, Lunjia Hu, and Preetum Nakkiran. A Unifying Theory of Distance from Calibration. In Proceedings of the 55th Annual ACM Symposium on Theory of Computing , 2023. [8] Shiye Cao, Anqi Liu, and Chien-Ming Huang. Designing for Appropriate Reliance: The Roles of AI Uncertainty Presentation, Initial User Decision, and User Demographics in AI-Assisted Decision-Making. Proceedings of the ACM on Human-Computer Interaction , 2024. [9] Yuzhou Cao, Hussein Mozannar, Lei Feng, Hongxin Wei, and Bo An. In Defense of Softmax Parametrization for Calibrated and Consistent Learning to Defer. In Advances in Neural Information Processing Systems , 2023. [10] Mohammad-Amin Charusaie, Hussein Mozannar, David Sontag, and Samira Samadi. Sam-ple Efficient Learning of Predictors that Complement Humans. In Proceedings of the 39th International Conference on Machine Learning , 2022. [11] Robert T. Clemen. Combining Forecasts: A Review and Annotated Bibliography. International Journal of Forecasting , 1989. [12] Natalie Collina, Ira Globus-Harris, Surbhi Goel, Varun Gupta, Aaron Roth, and Mirah Shi. Collaborative prediction: Tractable information aggregation via agreement. In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms , 2026. [13] Nina Corvelo Benz and Manuel Gomez-Rodriguez. Human-aligned calibration for ai-assisted decision making. In Advances in Neural Information Processing Systems , 2023. [14] Philip Dawid. The Well-Calibrated Bayesian. Journal of the American Statistical Association ,1982. [15] Abir De, Paramita Koley, Niloy Ganguly, and Manuel Gomez-Rodriguez. Regression Under Human Assistance. In Proceedings of the AAAI Conference on Artificial Intelligence , 2020. [16] Abir De, Nastaran Okati, Ali Zarezade, and Manuel Gomez-Rodriguez. Classification Under Human Assistance. In Proceedings of the AAAI Conference on Artificial Intelligence , 2021. [17] Kate Donahue, Alexandra Chouldechova, and Krishnaram Kenthapadi. Human-Algorithm Collaboration: Achieving Complementarity and Avoiding Unfairness. In Proceedings of the ACM Conference on Fairness, Accountability, and Transparency , 2022. [18] Dean P Foster and Rakesh V Vohra. Asymptotic Calibration. Biometrika , 1998. [19] Parikshit Gopalan, Adam Tauman Kalai, Omer Reingold, Vatsal Sharan, and Udi Wieder. Omnipredictors. In 13th Innovations in Theoretical Computer Science Conference , 2022. [20] Parikshit Gopalan, Konstantinos Stavropoulos, Kunal Talwar, and Pranay Tankala. Efficient Calibration for Decision Making. ArXiv Preprint , 2025. [21] Thomas L Griffiths and Joshua B Tenenbaum. Optimal Predictions in Everyday Cognition. 
+
+Psychological Science , 2006. [22] Chuan Guo, Geoff Pleiss, Yu Sun, and Kilian Q Weinberger. On Calibration of Modern Neural Networks. In International Conference on Machine Learning , 2017. 12 [23] Ziyang Guo, Yifan Wu, Jason D Hartline, and Jessica Hullman. A Decision Theoretic Frame-work for Measuring AI Reliance. In Proceedings of the ACM Conference on Fairness, Account-ability, and Transparency , 2024. [24] Alan Hájek. The Reference Class Problem is Your Problem Too. Synthese , 2007. [25] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification. In Proceedings of the IEEE International Conference on Computer Vision , 2015. [26] Ursula Hebert-Johnson, Michael Kim, Omer Reingold, and Guy Rothblum. Multicalibra-tion: Calibration for the (Computationally-Identifiable) Masses. In Proceedings of the 35th International Conference on Machine Learning , 2018. [27] Patrick Hemmer, Sebastian Schellhammer, Michael Vössing, Johannes Jakubik, and Gerhard Satzger. Forming Effective Human-AI Teams: Building Machine Learning Models that Com-plement the Capabilities of Multiple Experts. In International Joint Conference on Artificial Intelligence , 2022. [28] Benedikt Höltgen and Robert C Williamson. On the richness of calibration. In Proceedings of the ACM Conference on Fairness, Accountability, and Transparency , 2023. [29] Daniel Kahneman and Gary Klein. Conditions for Intuitive Expertise: A Failure to Disagree. 
+
+American Psychologist , 2009. [30] Ece Kamar. Directions in Hybrid Intelligence: Complementing AI Systems with Human Intelligence. In International Joint Conference on Artificial Intelligence , 2016. [31] Ece Kamar, Severin Hacker, and Eric Horvitz. Combining Human and Machine Intelligence in Large-Scale Crowdsourcing. In Proceedings of the 11th International Conference on Au-tonomous Agents and Multiagent Systems , 2012. [32] Markelle Kelly, Alex James Boyd, Sam Showalter, Mark Steyvers, and Padhraic Smyth. Bayesian Inference for Correlated Human Experts and Classifiers. In Proceedings of the 42nd International Conference on Machine Learning , 2025. [33] Gavin Kerrigan, Padhraic Smyth, and Mark Steyvers. Combining Human Predictions with Model Probabilities via Confusion Matrices and Calibration. In Advances in Neural Information Processing Systems , 2021. [34] Vijay Keswani, Matthew Lease, and Krishnaram Kenthapadi. Towards Unbiased and Accurate Deferral to Multiple Experts. In Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society , 2021. [35] Jon Kleinberg, Himabindu Lakkaraju, Jure Leskovec, Jens Ludwig, and Sendhil Mullainathan. Human Decisions and Machine Predictions. The Quarterly Journal of Economics , 2018. [36] Ananya Kumar, Percy S Liang, and Tengyu Ma. Verified Uncertainty Calibration. In Advances in Neural Information Processing Systems , 2019. [37] Vivian Lai, Samuel Carton, Rajat Bhatnagar, Q. Vera Liao, Yunfeng Zhang, and Chenhao Tan. Human-AI Collaboration via Conditional Delegation: A Case Study of Content Moderation. In 
+
+Proceedings of the CHI Conference on Human Factors in Computing Systems . Association for Computing Machinery, 2022. [38] Vivian Lai, Chacha Chen, Alison Smith-Renner, Q. Vera Liao, and Chenhao Tan. Towards a Science of Human-AI Decision Making: An Overview of Design Space in Empirical Human-Subject Studies. In Proceedings of the ACM Conference on Fairness, Accountability, and Transparency , 2023. [39] Jingshu Li, Yitian Yang, Q. Vera Liao, Junti Zhang, and Yi-Chieh Lee. As Confidence Aligns: Understanding the Effect of AI Confidence on Human Self-confidence in Human-AI Decision Making. In Proceedings of the CHI Conference on Human Factors in Computing Systems , 2025. 13 [40] Michelle M Li, Ben Y Reis, Adam Rodman, Tianxi Cai, Noa Dagan, Ran D Balicer, Joseph Loscalzo, Isaac S Kohane, and Marinka Zitnik. Scaling Medical AI Across Clinical Contexts. 
+
+Nature Medicine , 2026. [41] Sarah Lichtenstein, Baruch Fischhoff, and Lawrence D Phillips. Calibration of Probabilities: The State of the Art to 1980 . Cambridge University Press, 1982. [42] Thodoris Lykouris and Wentao Weng. Learning to Defer in Congested Systems: The AI-Human Interplay. ArXiv Preprint , 2024. [43] David Madras, Toniann Pitassi, and Richard Zemel. Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer. In Advances in Neural Information Processing Systems ,2018. [44] Anqi Mao, Christopher Mohri, Mehryar Mohri, and Yutao Zhong. Two-Stage Learning to Defer with Multiple Experts. In Advances in Neural Information Processing Systems , 2023. [45] Anqi Mao, Mehryar Mohri, and Yutao Zhong. Realizable H-Consistent and Bayes-Consistent Loss Functions for Learning to Defer. In The Thirty-eighth Annual Conference on Neural Information Processing Systems , 2024. [46] Anqi Mao, Mehryar Mohri, and Yutao Zhong. Mastering Multiple-Expert Routing: Realiz-able H-Consistency and Strong Guarantees for Learning to Defer. In Proceedings of 42nd International Conference on Machine Learning , 2025. [47] Christopher Mohri, Daniel Andor, Eunsol Choi, Michael Collins, Anqi Mao, and Yutao Zhong. Learning to Reject with a Fixed Predictor: Application to Decontextualization. In The Twelfth International Conference on Learning Representations , 2024. [48] Hussein Mozannar and David A. Sontag. Consistent Estimators for Learning to Defer to an Expert. In Proceedings of the 37th International Conference on Machine Learning , 2020. [49] Hussein Mozannar, Hunter Lang, Dennis Wei, Prasanna Sattigeri, Subhro Das, and David Sontag. Who Should Predict? Exact Algorithms For Learning to Defer to Humans. In Proceedings of the 26th International Conference on Artificial Intelligence and Statistics , 2023. [50] Allan H Murphy and Edward S Epstein. Verification of Probabilistic Predictions: A Brief Review. Journal of Applied Meteorology , 1967. [51] Gali Noti, Kate Donahue, Jon Kleinberg, and Sigal Oren. AI-Assisted Decision Making with Human Learning. In Proceedings of the 26th ACM Conference on Economics and Computation ,2025. [52] Nastaran Okati, Abir De, and Manuel Gomez-Rodriguez. Differentiable Learning Under Triage. In Advances in Neural Information Processing Systems , 2021. [53] Kenny Peng, Nikhil Garg, and Jon Kleinberg. A No Free Lunch Theorem for Human-AI Collaboration. In Proceedings of the AAAI Conference on Artificial Intelligence , 2025. [54] Joshua C. Peterson, Ruairidh M. Battleday, Thomas L. Griffiths, and Olga Russakovsky. Human Uncertainty Makes Classification More Robust. In Proceedings of the IEEE/CVF International Conference on Computer Vision , 2019. [55] Clara Punzi, Roberto Pellungrini, Mattia Setzu, Fosca Giannotti, and Dino Pedreschi. Learning Paradigms for Hybrid Decision-Making Systems. ACM Computing Surveys , 2026. [56] Maithra Raghu, Katy Blumer, Greg Corrado, Jon Kleinberg, Ziad Obermeyer, and Sendhil Mullainathan. The Algorithmic Automation Problem: Prediction, Triage, and Human Effort. 
+
+ArXiv Preprint , 2019. [57] Benjamin Recht. The Actuary’s Final Word on Algorithmic Decision Making. ArXiv Preprint ,2025. 14 [58] Raphael Rossellini, Jake A. Soloff, Rina Foygel Barber, Zhimei Ren, and Rebecca Willett. Can a Calibration Metric be Both Testable and Actionable? In Proceedings of Thirty Eighth Conference on Learning Theory , 2025. [59] Samuel Showalter, Alex J Boyd, Padhraic Smyth, and Mark Steyvers. Bayesian Online Learning for Consensus Prediction. In Proceedings of The 27th International Conference on Artificial Intelligence and Statistics , 2024. [60] Mark Steyvers and Aakriti Kumar. Three Challenges for AI-Assisted Decision-Making. Per-spectives on Psychological Science , 2024. [61] Mark Steyvers, Heliodoro Tejeda, Gavin Kerrigan, and Padhraic Smyth. Bayesian Modeling of Human–AI Complementarity. Proceedings of the National Academy of Sciences , 2022. [62] Dharmesh Tailor, Aditya Patra, Rajeev Verma, Putra Manggala, and Eric Nalisnick. Learning to Defer to a Population: A Meta-Learning Approach. In Proceedings of the 27th International Conference on Artificial Intelligence and Statistics , 2024. [63] Heliodoro Tejeda Lemus, Aakriti Kumar, and Mark Steyvers. How Displaying AI Confidence Affects Reliance and Hybrid Human-AI Performance. HHAI 2023: Augmenting Human Intellect ,2023. [64] Philip E Tetlock and Dan Gardner. Superforecasting: The Art and Science of Prediction .Random House, 2016. [65] Philipp Tschandl, Cliff Rosendahl, and Harald Kittler. The HAM10000 Dataset, a Large Collec-tion of Multi-Source Dermatoscopic Images of Common Pigmented Skin Lesions. Scientific Data , 2018. [66] Juozas Vaicenavicius, David Widmann, Carl Andersson, Fredrik Lindsten, Jacob Roll, and Thomas Schön. Evaluating Model Calibration in Classification. In Conference on Artificial Intelligence and Statistics , 2019. [67] Rajeev Verma and Eric Nalisnick. Calibrated Learning to Defer with One-vs-All Classifiers. In 
+
+Proceedings of the 39th International Conference on Machine Learning , 2022. [68] Kailas Vodrahalli, Tobias Gerstenberg, and James Y Zou. Uncalibrated Models can Improve Human-AI Collaboration. Advances in Neural Information Processing Systems , 2022. [69] Edward Vul and Harold Pashler. Measuring the Crowd Within: Probabilistic Representations within Individuals. Psychological Science , 2008. [70] Bryan Wilder, Eric Horvitz, and Ece Kamar. Learning to Complement Humans. In International Joint Conference on Artificial Intelligence , 2020. [71] Justin Wolfers and Eric Zitzewitz. Prediction Markets. Journal of Economic Perspectives , 2004. [72] Darryl E. Wright, Chris J. Lintott, Stephen J. Smartt, Ken W. Smith, Lucy Fortson, Laura Trouille, Campbell R. Allen, Melanie Beck, Mark C. Bouslog, Amy Boyer, K. C. Chambers, Heather Flewelling, Will Granger, Eugene A. Magnier, Adam McMaster, Grant R. M. Miller, James E. O’Donnell, Brooke Simmons, Helen Spiers, John L. Tonry, Marten Veldthuis, Richard J. Wainscoat, Chris Waters, Mark Willman, Zach Wolfenbarger, and Dave R. Young. A Transient Search Using Combined Human and Machine Classifications. Monthly Notices of the Royal Astronomical Society , 2017. [73] Feiyang Yu, Alex Moehring, Oishi Banerjee, Tobias Salz, Nikhil Agarwal, and Pranav Rajpurkar. Heterogeneity and Predictors of the Effects of AI Assistance on Radiologists. Nature Medicine ,2024. [74] Yunfeng Zhang, Q Vera Liao, and Rachel KE Bellamy. Effect of Confidence and Explanation on Accuracy and Trust Calibration in AI-Assisted Decision Making. In Proceedings of the Conference on Fairness, Accountability, and Transparency , 2020. [75] Shengjia Zhao, Michael Kim, Roshni Sahoo, Tengyu Ma, and Stefano Ermon. Calibrating Predictions to Decisions: A Novel Approach to Multi-Class Calibration. In Advances in Neural Information Processing Systems , 2021. 15 A Proof of Theorem 3.2 
+
+Proof. The human’s sample satisfies ˆh ⊥ (y, f (x)) | Φh(x). By this independence together with conditions (1) and (2), the shared evidence value (ˆ h, f (x)) = ( y′, v) has positive probability under both cells: 
+
+P
+
+ˆh = y′, f (x) = v, Φh(x) = Si
+
+
+
+= P
+
+ˆh = y′ | Φh(x) = Si
+
+| {z } 
+
+> >0by (1)
+
+P(f (x) = v, Φh(x) = Si)
+
+| {z } 
+
+> >0by (2)
+
+> 0.
+
+On this set we have, for i = 1 , 2,
+
+P
+
+
+
+y = y | ˆh = y′, f (x) = v, Φh(x) = Si
+
+
+
+= P(y = y | f (x) = v, Φh(x) = Si) , (6) since conditioning further on ˆh = y′ adds no information about y given (Φ h, f ). The two sides of equation 6 differ for i = 1 , 2 by the differing-content requirement of (3). Therefore conditioning additionally on Φh(x) changes the label probability beyond (ˆ h, f (x)) , i.e. 
+
+P
+
+
+
+y | f (x), ˆh, Φh(x)
+
+̸
+
+= P
+
+
+
+y | f (x), ˆh
+
+
+
+on this positive-probability set. Finally, injectivity of g∗ gives σ(g∗) = σ(ˆ h, f (x)) , so the displayed inequality is exactly the failure of generalized calibration, P(y | g∗, Φh)̸ = P(y | g∗) (Definition 2.2). Hence g∗ is not calibrated w.r.t. Φh.
+
+# B Proof of Theorem 3.3 
+
+Proof. Fix a label value y = y and a realized human prediction h = h. By Bayes’ rule, 
+
+P (y = y | h = h, Φf (x)) = P (h = h | y = y, Φf (x)) P (y = y | Φf (x)) 
+
+P (h = h | Φf (x)) .
+
+It remains to simplify the likelihood term P (h = h | y = y, Φf (x)) . Since the human is calibrated with respect to Φh, the human prediction depends on x through Φh(x), so 
+
+P (h = h | y = y, Φf (x), Φh(x)) = P (h = h | Φh(x)) .
+
+Therefore, by the tower rule, 
+
+P (h = h | y = y, Φf (x)) = EΦh [P (h = h | Φh(x)) | y = y, Φf (x)] .
+
+Using the assumption 
+
+Φh ⊥ Φf (x) | y,
+
+we can remove the conditioning on Φf (x):
+
+P (h = h | y = y, Φf (x)) = EΦh [P (h = h | Φh(x)) | y = y] .
+
+Substituting this into Bayes’ rule gives 
+
+P (y = y | h = h, Φf (x)) = EΦh [P (h = h | Φh(x)) | y = y] · P (y = y | Φf (x)) 
+
+P (h = h | Φf (x)) .
+
+Since the model is calibrated with respect to Φf ,
+
+fy (x) = P (y = y | Φf (x)) .
+
+Thus the Bayes combination posterior computed from f (x) and the human confusion probabilities equals the true conditional posterior: 
+
+p (y = y | h = h, f (x)) = P (y = y | h = h, Φf (x)) .
+
+Since this holds for every y and every realized value h, we obtain 
+
+p (y|h, f (x)) = P (y | h, Φf (x)) = EΦh [P(h|Φh(x)) | y] · P (y|Φf (x)) 
+
+P(h|Φf (x)) .
+
+Therefore the combination posterior is calibrated with respect to Φf .16 C Proof of Proposition 3.5 
+
+Proof. Since ˆh is sampled from P(h|Φh(x)) with sampling noise independent of y, we have ˆh ⊥ y | x,and therefore P(y = y | h, x) = P(y = y | x) = fy (x), which is σ(x)-measurable. Ideal calibration of the posterior requires p(y = y | h, x) = fy (x), which forces the posterior to be 
+
+σ(x)-measurable. However, by construction of the Bayes combination, p(y = y | h, f (x)) =
+
+fy (x) · (cy, h/ P 
+
+> j
+
+cj, h fj (x)) , which depends on h unless cj, h is constant in j (which would contradict the supposition of non-uniform label probability across Φh). 
+
+# D Proof of Theorem 4.1 
+
+Proof. The conditional 0–1 risk at x in Equation 3 is 
+
+(1 − r(x)) 
+
+
+
+1 − max  
+
+> y
+
+fy (x)
+
+
+
++ r(x)(1 − P(h = y | x)) ,
+
+which is minimized pointwise by r∗(x) = 1[P(h = y | x) > max y fy (x)] = 1D∗ (x). Subtracting the pointwise optimum yields the excess risk 
+
+R0-1
+
+> f,h
+
+(r) − R 0-1
+
+> f,h
+
+(r∗) = Ex
+
+
+
+P(h = y | x) − max  
+
+> y
+
+fy (x) · 1{r(x)̸ = 1D∗ (x)}
+
+
+
+≥ 0, (7) since whenever r(x) takes the suboptimal value it incurs the margin |P(h = y | x) − max y fy (x)|.As ties have probability zero, Equation 7 vanishes if and only if r(x) = 1D∗ (x) almost everywhere. Fix a ˜Φr -cell A. By assumption Φr refines the model-output coordinate, so f is ˜Φr -measurable and 
+
+max y fy is constant on A; write cA ≜ max y fy (x) for x ∈ A. By the assumed calibration of ρ
+
+w.r.t. ˜Φr , the score is likewise constant on A, with value 
+
+ρA = P(h = y | ˜Φr (x) = A) = E[P(h = y | x) | x ∈ A].
+
+Since both ρ and max y fy are constant on A, the rejector r(x; ρ) = 1[ρA > c A] is constant on A as well. 
+
+(⇐) Assume σ(1D∗ ) ⊆ σ( ˜Φr ). Then each ˜Φr -cell A lies entirely in D∗ or in (D∗)c. If A ⊆ D∗,then P(h = y | x) > c A on A (with cA constant on A), so ρA = E[P(h = y | x) | A] > c A and 
+
+r(x; ρ) = 1 = 1D∗ (x) on A. If A ⊆ (D∗)c, then P(h = y | x) < c A on A, so ρA < c A and 
+
+r(x; ρ) = 0 = 1D∗ (x) on A. Hence r(x; ρ) = 1D∗ , and by Equation 7 the excess risk is zero. 
+
+(⇒) Suppose r(x; ρ) is risk-minimizing. The score ρ(x, f (x)) is ˜Φr -measurable by the assumed calibration, and f (x) is ˜Φr -measurable by the refinement hypothesis; hence r(x; ρ) = 1[ρ >
+
+max y fy ] is ˜Φr -measurable. By Equation 7 and the no-tie assumption, r(x; ρ) = 1D∗ (x) almost everywhere. Therefore 1D∗ agrees with a ˜Φr -measurable function, giving σ(1D∗ ) ⊆ σ( ˜Φr ).
+
+# E Experimental Details for Bayes Combination Experiments 
+
+E.1 ImageNet-16H 
+
+We use ImageNet-16H from the public OSF release of Kerrigan et al. [33] , which contains hu-man classifications and precomputed CNN softmax outputs on a 16-class subset of ImageNet: 
+
+https://osf.io/2ntrf/overview . We focus on the VGG-19 predictions at image noise level 80 
+
+and evaluate the performance of the resulting human-AI combination as the classifier’s standalone calibration changed. For each image x, the dataset provides approximately six human class anno-tations. We aggregate these annotations into a count vector over the K = 16 classes and interpret the normalized count vector as the empirical human response distribution for that image. To match the theoretical setting in which we observe a sampled human prediction rather than the human’s full internal distribution, we draw a single hard human label for each image. We split the examples into a calibration subset and a held-out evaluation subset. For each random run, we use a stratified 70 /30 split. The calibration subset is used only to estimate the human 17 confusion matrix C, while the held-out subset is used to evaluate the standalone classifier and the combined predictor. In all ImageNet-16H experiments reported here, we use all calibration examples to estimate C. We repeat the procedure over multiple random seeds, where each run re-samples the calibration/evaluation split and independently samples the hard human labels on both subsets. To vary the calibration of the classifier without changing its learned representation, we apply fixed temperature scaling to the VGG-19 softmax probabilities. Smaller temperatures sharpen the probabil-ity vector, whereas larger temperatures flatten it. We sweep prespecified grids of temperatures and evaluate both the standalone classifier and the confusion-matrix combined predictor using the same held-out examples. We report three quantities: mass-binned expected calibration error, negative log-likelihood, and accuracy. For ECE, we use 15 equal-mass confidence bins. The main plots place standalone model ECE on the horizontal axis and a combined-predictor metric on the vertical axis. Each point corresponds to one fixed temperature T , and the plotted value is averaged across random runs. 
+
+E.2 HAM10000 
+
+We use the HAM10000 skin-lesion classification dataset to construct a controlled setting in which the simulated expert prediction can depend on different information sources. The training set is used to train the image classifier and expert predictors, the calibration set is used to estimate expert confusion matrices, and the test set is used for final evaluation. Each example contains a dermoscopic image and patient- or lesion-level meta-data. We identify the image with the model-observed feature x and treat the meta-data as privileged information z that is unavailable to the base classifier but may be available to an expert. We simulate the expert prediction using trained auxiliary predictors. This allows us to compare several feature-access regimes while keeping the same confusion-matrix update framework. The model is a temperature-scaled ResNet-18 trained on 224 × 224 dermoscopic images for 8 epochs. We compare four expert settings. The first, labeled Image , uses the same ResNet-18 output as the main classifier, representing an identical-image, duplicated-evidence expert. The second, labeled 
+
+Weaker Image , is a separate weaker ResNet-18 trained on 128 ×128 images for 4 epochs, representing a shared-feature setting with a different image predictor. The third, labeled Image and Meta-Data , is a multimodal expert consisting of a ResNet-18 image encoder and a meta-data MLP, representing a partial-overlap setting because it uses both the image and patient meta-data. The fourth, labeled 
+
+Meta-Data Only , is a logistic regression expert trained on age, sex, and lesion localization. In contrast to the previous three experts, it depends only on z and not on the image feature x, making it the most independent expert relative to the image classifier. For each expert, we treat its softmax output as the expert’s internal predictive distribution and sample hard labels from it. Thus, as in the ImageNet-16H experiment, the combination method observes only a sampled categorical expert prediction rather than the full expert distribution. On the calibration split, we sample four hard expert labels per example to estimate C more stably. On the test split, we sample one hard expert label per example and combine it with the temperature-scaled image classifier. As before, we vary only the temperature of the base image classifier and keep the expert distributions fixed. This isolates how the calibration of model affects the resulting combined predictor under different expert information structures. In all plots, the horizontal axis is the mass-binned ECE of the standalone image classifier, and the vertical axis is the metric of the combined predictor. For all experiments, we average over 5 random sampling runs. 
+
+E.3 CIFAR-10H 
+
+We additionally evaluate the confusion-matrix combination method on CIFAR-10H [ 54 ], a human uncertainty dataset built on the CIFAR-10 test set. CIFAR-10H provides human label distributions for each image, which allows us to sample hard human predictions while preserving real human perceptual uncertainty. We use resnet80_mid_e30 as the base image classifier. For each image, we sample one hard human label from the empirical CIFAR-10H human label distribution. To study a weaker-human setting, we flatten the empirical human distribution using a human temperature of Th = 2 .0 before sampling. 18 (a) CIFAR-10H: Accuracy (b) CIFAR-10H: ECE (c) CIFAR-10H: Neg. LL 
+
+Figure 5: Additional Validation on CIFAR-10H. We vary the calibration of a ResNet-18 classifier by temperature scaling and combine each temperature-scaled classifier with a sampled human label using the confusion-matrix update. The human label is sampled from the CIFAR-10H empirical human distribution after flattening with human temperature Th = 2 .0. The horizontal axis reports the standalone model’s mass-binned ECE, while the vertical axes report the combined predictor’s accuracy, ECE, and NLL. We do not add extra random label corruption. Thus, the sampled human labels remain tied to the real per-image human uncertainty in CIFAR-10H, but with reduced confidence. For each run, we split the data into a calibration subset and a held-out evaluation subset using a stratified 70 /30 split. The calibration subset is used to estimate the human confusion matrix C,and the held-out subset is used to evaluate both the standalone temperature-scaled classifier and the combined predictor. We use 5,000 calibration examples to estimate C and average results over five random runs. In each run, the train-test split and the sampled human labels are regenerated. We vary only the classifier temperature while keeping the human sampling procedure fixed. We report combined accuracy, combined ECE, and combined NLL as functions of the standalone model’s mass-binned ECE. The results in Figure 5 provide an additional real-human-label validation that the best standalone model calibration need not correspond to the best combined predictor. 19

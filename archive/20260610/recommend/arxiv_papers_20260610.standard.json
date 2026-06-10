@@ -1,0 +1,681 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-10T21:54:00.885434+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 13,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 15,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2606.04779v1",
+      "source": "arxiv",
+      "title": "Tree-Based Formalization of Multi-Agent Complementarity in Human-AI Interactions",
+      "abstract": "Complementarity is the case in which a human--AI interaction (HAI) outperforms the best prediction benchmark available among its members. Although this idea is central in HAI research, formal work on complementarity remains limited. Existing frameworks do not model how agents' predictions compose into workflow-sensitive multi-agent protocols. We close this gap by introducing a tree-based formalization of complementarity in multi-agent HAI. An HAI protocol is represented by an ordered agent-role configuration together with a rooted planar binary tree whose leaves are decorated by prediction vectors. A local binary composition rule is evaluated recursively along the tree, yielding a tree-relative complementarity functional relative to a pointwise-min oracle benchmark. We prove four results. First, selector-based HAIs, including self- or AI-reliance, cannot achieve complementarity regardless of task, loss, or prediction quality. Second, in regression under squared loss, complementarity is equivalent to Euclidean distance minimization from the ground-truth vector; for $N=2$, the optimal linear-pooling weight has a closed form and a residual-correction interpretation. Third, under linear local composition, every protocol tree defines a barycentric coordinate chart on the simplex of leaf weights; Tamari-cover reparameterizations of protocol trees preserve complementarity, and for $N=4$, they satisfy the pentagon identity. Fourth, in binary classification, no internal local composition can achieve complementarity under endpoint-monotone losses, including standard Bregman and many finite Bernoulli $f$-divergence losses; an analogous obstruction holds for multiclass aggregation under cross-entropy. In summary, our framework shows that complementarity is attainable in multi-agent regression, but obstructed in classification under natural conditions on local aggregation and loss functions.",
+      "authors": [
+        "Andrea Ferrario"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "math.CO"
+      ],
+      "published": "2026-06-03T12:02:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.04779v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "formalization of complementarity in multi-agent human-AI interactions",
+      "llm_evidence_cn": "多智能体人机交互中互补性的形式化",
+      "llm_evidence": "多智能体人机交互中互补性的形式化",
+      "canonical_evidence": "多智能体人机交互中互补性的形式化",
+      "llm_tldr_en": "Introduces a tree-based formalization of complementarity in multi-agent human-AI interactions, modeling how predictions compose into protocols with ordered agent roles, providing a formal framework for HAI research.",
+      "llm_tldr_cn": "互补性是人机交互（HAI）的核心概念，但缺乏形式化建模。本文提出基于树的互补性形式化方法，用有序智能体角色配置和二叉树表示协议，叶子节点对应预测向量，递归评估局部组合规则。该框架为分析多智能体HAI的互补性提供了理论基础，填补了现有工作的空白。",
+      "llm_tldr": "互补性是人机交互（HAI）的核心概念，但缺乏形式化建模。本文提出基于树的互补性形式化方法，用有序智能体角色配置和二叉树表示协议，叶子节点对应预测向量，递归评估局部组合规则。该框架为分析多智能体HAI的互补性提供了理论基础，填补了现有工作的空白。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06114v1",
+      "source": "arxiv",
+      "title": "Towards Healthy Evolution: Exploring the Role and Mechanisms of Human-Agent Interaction in Self-Evolving Systems",
+      "abstract": "Self-evolving agents improve through continual self-play and self-generated learning signals, but autonomous evolution can also cause capability degradation and safety drift. Although human feedback has proven effective for static and post-trained agents, its role in self-evolving systems remains underexplored. We introduce Agent Norm Correction through Human-like Oversight and Review (ANCHOR), an LLM-based framework that simulates human supervision and delivers feedback at various phases of self-evolution. With ANCHOR, we evaluate two representative open-source self-evolving agent systems across coding, mathematical reasoning, and safety. Our results show that even limited supervision substantially mitigates safety degradation while preserving stable performance on core evolutionary objectives. Further analysis shows that supervision over the output verification phase is the most effective for intervention, whereas increasing supervision frequency yields diminishing returns. These findings provide empirical evidence and practical guidance for designing more stable, controllable, and human-aligned self-evolving agent systems.",
+      "authors": [
+        "Dianxing Shi",
+        "Junqi He",
+        "Junhao Chen",
+        "Bowen Wang",
+        "Yuta Nakashima"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-04T13:03:16+00:00",
+      "link": "https://arxiv.org/pdf/2606.06114v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "role and mechanisms of human-agent interaction in self-evolving systems",
+      "llm_evidence_cn": "自进化系统中人类-代理交互的角色与机制",
+      "llm_evidence": "自进化系统中人类-代理交互的角色与机制",
+      "canonical_evidence": "自进化系统中人类-代理交互的角色与机制",
+      "llm_tldr_en": "ANCHOR framework explores human supervision in self-evolving agent systems, mitigating capability degradation and safety drift.",
+      "llm_tldr_cn": "自进化代理通过自我对弈持续改进，但可能带来能力下降和安全漂移。本文提出ANCHOR框架，模拟人类监督在自进化各阶段提供反馈。实验表明即使有限监督也能显著缓解以上问题，证实了人机交互在系统进化中的关键作用。",
+      "llm_tldr": "自进化代理通过自我对弈持续改进，但可能带来能力下降和安全漂移。本文提出ANCHOR框架，模拟人类监督在自进化各阶段提供反馈。实验表明即使有限监督也能显著缓解以上问题，证实了人机交互在系统进化中的关键作用。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06388v1",
+      "source": "arxiv",
+      "title": "Humans' ALMANAC: A Human Collaboration Dataset of Action-Level Mental Model Annotations for Agent Collaboration",
+      "abstract": "Recent advances in LLM agents have enabled complex cognitive capabilities, such as multi-step reasoning, planning, and tool use, that increasingly position these agents as human collaborators. Effective collaboration, however, requires collaborators to continuously maintain and align mental models of their own reasoning,partners' intentions, and shared goals during the collaborative process. Today's agents rarely develop such capabilities since they are primarily optimized for task completion, and the community lacks authentic human collaboration data with action-level mental model annotations that could guide agents toward process-level collaborative competence. To bridge this gap, we present ALMANAC, a dataset of Action-Level Mental model ANnotations for Agent Collaboration built from the Map Task, a classic dyadic routing task from social science. ALMANAC contains 2,987 collaboration actions, each paired with theory-informed mental model annotations that record the participants' self-reasoning, perceived partner intent, and perceived team goal. We benchmark six LLMs on predicting humans' next-turn behavior and mental models. Our results demonstrate ALMANAC's utility in evaluating models' ability to simulate human collaborative behaviors and infer their underlying mental models.",
+      "authors": [
+        "Jiaju Chen",
+        "Yuxuan Lu",
+        "Jiayi Su",
+        "Chaoran Chen",
+        "Songlin Xiao",
+        "Zheng Zhang",
+        "Yun Wang",
+        "Yunyao Li",
+        "Jian Zhao",
+        "Tongshuang Wu",
+        "Toby Jia-Jun Li",
+        "Dakuo Wang",
+        "Bingsheng Yao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-04T16:56:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.06388v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human AI collaboration dataset with mental model annotations",
+      "llm_evidence_cn": "人类AI协作数据集，包含行为级心智模型标注",
+      "llm_evidence": "人类AI协作数据集，包含行为级心智模型标注",
+      "canonical_evidence": "人类AI协作数据集，包含行为级心智模型标注",
+      "llm_tldr_en": "ALMANAC dataset provides action-level mental model annotations for human collaboration, enabling agents to develop process-level collaborative competence.",
+      "llm_tldr_cn": "当前AI代理主要优化任务完成，缺乏持续维护和调整心智模型的能力。ALMANAC数据集提供了人类协作过程中的行为级心智模型标注，弥补了真实人类协作数据的缺失。该数据集可用于指导代理发展过程级协作能力，促进更有效的合作。",
+      "llm_tldr": "当前AI代理主要优化任务完成，缺乏持续维护和调整心智模型的能力。ALMANAC数据集提供了人类协作过程中的行为级心智模型标注，弥补了真实人类协作数据的缺失。该数据集可用于指导代理发展过程级协作能力，促进更有效的合作。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.08442v1",
+      "source": "arxiv",
+      "title": "Clinical Reasoning in the Age of AI: Longitudinal Cognition and Human-AI Collaboration",
+      "abstract": "As physicians turn to AI-powered systems to help meet the dual demands of speed and care quality, they are met with hallucinations and sycophancy. Understanding how doctors reason through clinical problems in real-world settings is critical for design of effective AI reasoning systems. While recent advances in medical AI have emphasized performance benchmarks and diagnostic accuracy, comparatively little attention has been paid to the structure of clinicians' reasoning processes as they unfold over time, e.g., how they interact with electronic health records and operate under conditions of uncertainty and constraint. This study provides a comprehensive, empirically-grounded account of clinical reasoning and its relationship to current AI-mediated workflows through a mixed-methods design that combines qualitative interviews with structured survey data.   Findings indicate that current AI systems are primarily deployed for encounter-level tasks such as documentation and summarization, and only partially align with physicians' underlying reasoning processes. In particular, AI-generated representations often omit temporal or interpretive structures central to clinical decision-making, while core aspects of reasoning, especially those spanning multiple encounters, remain largely implicit and physician-driven. By integrating fine-grained qualitative insights with broader quantitative patterns, this study offers a unified framework for understanding clinical reasoning as a context-sensitive, temporally extended process and identifies key mismatches between clinician cognition and current AI design. These results provide concrete directions for the development of AI systems that more effectively align with and augment real-world clinical reasoning.",
+      "authors": [
+        "Irene Yi",
+        "Grace Brown",
+        "Sufian Aldogom",
+        "Nathan Roll",
+        "Eric J. Basile",
+        "Pamela M. Resnikoff",
+        "Bianca Sanchez",
+        "Chirag Lodha",
+        "Isaac Gutterman",
+        "Oscar Schiff",
+        "Keira Salata",
+        "Benjamin Mujkic",
+        "Ammar Ahmed"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-06-07T03:51:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.08442v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "study of clinical reasoning and human-AI collaboration in healthcare",
+      "llm_evidence_cn": "临床推理与人机协作在医疗中的研究",
+      "llm_evidence": "临床推理与人机协作在医疗中的研究",
+      "canonical_evidence": "临床推理与人机协作在医疗中的研究",
+      "llm_tldr_en": "Empirically-grounded account of clinical reasoning processes to inform design of human-AI collaboration in healthcare.",
+      "llm_tldr_cn": "医生在使用AI系统时面临幻觉和谄媚问题，但临床推理过程未被充分关注。本研究提供了临床推理的实证基础描述，分析了医生如何与电子病历交互并在不确定条件下决策。研究结果对设计更有效的医疗AI推理系统具有指导意义，促进人机协作在医疗中的应用。",
+      "llm_tldr": "医生在使用AI系统时面临幻觉和谄媚问题，但临床推理过程未被充分关注。本研究提供了临床推理的实证基础描述，分析了医生如何与电子病历交互并在不确定条件下决策。研究结果对设计更有效的医疗AI推理系统具有指导意义，促进人机协作在医疗中的应用。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.09242v1",
+      "source": "arxiv",
+      "title": "Conceptualising Reflective Use: Toward A Process Perspective On Human-AI Interaction",
+      "abstract": "The rapid diffusion of generative artificial intelligence (genAI) systems reshapes how individuals engage with information systems, requiring users to monitor, assess, and adapt their interaction with non-deterministic systems. Existing constructs capture elements of this engagement but do not account for the situated dynamics of the entire evaluative process in genAI use. This research-in-progress, situated in a larger endeavour towards a scale development, derives an initial conceptualisation of reflective use: a behavioural-knowledge capability that unfolds across pre-use, in-use, and post-use phases, reinforced through situated reflective knowledge gained in practice. Drawing on expert interviews and a focus group, we identify four core components of reflective use and show how they form an iterative capability cycle anchored within the motivational needs outlined in self-determination theory. Understanding reflective use is essential to ensure appropriate reliance and high decision quality, and thus provides a foundation for promoting responsible and effective human-AI interaction.",
+      "authors": [
+        "Thimo Schulz",
+        "Christina Speck"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-08T09:16:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.09242v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "conceptualises reflective use in human-AI interaction",
+      "llm_evidence_cn": "概念化人机交互中的反思性使用",
+      "llm_evidence": "概念化人机交互中的反思性使用",
+      "canonical_evidence": "概念化人机交互中的反思性使用",
+      "llm_tldr_en": "Proposes reflective use as a behavioural-knowledge capability unfolding across pre-use, in-use, and post-use phases in human-genAI interaction.",
+      "llm_tldr_cn": "生成式AI系统要求用户不断监控和调整交互，但现有概念未能涵盖完整的评估过程。本文通过专家访谈和焦点小组，初步概念化了反思性使用：一种跨使用前、使用中和使用后阶段的认知-行为能力。该概念为后续量表开发奠定基础，有助于理解人类与生成式AI的交互动态。",
+      "llm_tldr": "生成式AI系统要求用户不断监控和调整交互，但现有概念未能涵盖完整的评估过程。本文通过专家访谈和焦点小组，初步概念化了反思性使用：一种跨使用前、使用中和使用后阶段的认知-行为能力。该概念为后续量表开发奠定基础，有助于理解人类与生成式AI的交互动态。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.10906v1",
+      "source": "arxiv",
+      "title": "Human-AI Teaming Through the Lens of Calibration",
+      "abstract": "We study models for human-AI teaming through the lens of statistical calibration. We assume the team consists of an AI model and human -- both of which are calibrated with respect to some partitioning of the feature space -- and expose how the calibration assumptions propagate into the teaming framework. In particular, we consider frameworks that either (i) combine human and model predictions or (ii) delegate prediction responsibility to either a human or model. We show via theoretical and empirical results that existing methods for combination do not preserve the human's degree of calibration. Methods for delegation (by the very act of delegation) preserve calibration of the downstream predictors but shift the burden onto the rejector meta-model that decides who predicts. The rejector must be calibrated finely enough to locate where each member is superior, a demand that grows with the human's expertise and becomes unattainable when the human relies on information the system cannot observe.",
+      "authors": [
+        "Eric Nalisnick",
+        "Chi Zhang",
+        "Sophia Qian",
+        "Yixin Wang"
+      ],
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-09T14:14:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.10906v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI teaming through calibration",
+      "llm_evidence_cn": "通过校准研究人机协作",
+      "llm_evidence": "通过校准研究人机协作",
+      "canonical_evidence": "通过校准研究人机协作",
+      "llm_tldr_en": "This paper studies human-AI teaming via statistical calibration, analyzing combination and delegation methods for preserving calibration.",
+      "llm_tldr_cn": "本文从统计校准角度研究人机协作框架。假设人类和AI模型各自校准，分析了组合预测和委派预测两种框架。理论和实验表明组合方法会破坏人类校准度，委派方法虽保持预测者校准但将负担转移给拒绝元模型。为设计高效人机协作提供了理论见解。",
+      "llm_tldr": "本文从统计校准角度研究人机协作框架。假设人类和AI模型各自校准，分析了组合预测和委派预测两种框架。理论和实验表明组合方法会破坏人类校准度，委派方法虽保持预测者校准但将负担转移给拒绝元模型。为设计高效人机协作提供了理论见解。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.05602v1",
+      "source": "arxiv",
+      "title": "Fix the Mind, Not the Move: Interpretable AI Assistance via Knowledge-Gap Localization",
+      "abstract": "AI assistants in human-AI collaboration often correct suboptimal human actions through behavioral feedback (e.g., alerts or steering-wheel nudges in assistive driving). Such interventions can mitigate immediate errors, but long-term improvement requires addressing the underlying misconceptions that cause repeated mistakes. We introduce SENSEI, a framework that infers user misconceptions from interaction behavior and provides targeted, minimal yet sufficient suggestions to correct them. Our approach departs from action- or trajectory-level interventions by operating over a structured knowledge representation to localize and correct the sources of erroneous behavior. Across three long-horizon tasks with diverse misconceptions and corresponding behaviors, SENSEI demonstrates zero-shot compositional generalization, disentangling multiple overlapping misconceptions despite training only on single-misconception cases. A user study further shows that our method identifies real human misconceptions and provides effective guidance that improves long-horizon task performance, successfully correcting $90\\%$ of student misconceptions. Code and project page are available at https://misoshiruseijin.github.io/SENSEI/.",
+      "authors": [
+        "Ayano Hiranaka",
+        "Ya-Chuan Hsu",
+        "Stefanos Nikolaidis",
+        "Erdem Bıyık",
+        "Daniel Seita"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "published": "2026-06-04T02:25:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.05602v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "interpretable AI assistance via knowledge-gap localization to correct misconceptions",
+      "llm_evidence_cn": "通过知识差距定位提供可解释的AI辅助，纠正用户误解",
+      "llm_evidence": "通过知识差距定位提供可解释的AI辅助，纠正用户误解",
+      "canonical_evidence": "通过知识差距定位提供可解释的AI辅助，纠正用户误解",
+      "llm_tldr_en": "SENSEI infers user misconceptions from interaction and provides minimal sufficient explanations, enabling interpretable and effective human-AI collaboration.",
+      "llm_tldr_cn": "本文针对AI辅助中仅修正行为而忽略根本误解的问题，提出SENSEI框架。该框架从交互行为推断用户知识缺口，并基于结构化知识表示提供靶向性的最小充分建议。在三个长期任务中，SENSEI比传统动作级干预更有效地提升了用户长期表现，为人机协作中的可解释辅助提供了新思路。",
+      "llm_tldr": "本文针对AI辅助中仅修正行为而忽略根本误解的问题，提出SENSEI框架。该框架从交互行为推断用户知识缺口，并基于结构化知识表示提供靶向性的最小充分建议。在三个长期任务中，SENSEI比传统动作级干预更有效地提升了用户长期表现，为人机协作中的可解释辅助提供了新思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.03110v2",
+      "source": "arxiv",
+      "title": "Coherence Maximization Improves Pluralistic Alignment",
+      "abstract": "Aligning AI systems with diverse human values requires value specifications grounded in concrete examples, but generating such examples without extensive human supervision remains an open challenge. We investigate what makes these examples effective, using Internal Coherence Maximization (ICM) -- which infers labels by maximizing their mutual predictability -- to generate persona-specific examples that steer a model toward a target group's values, without human supervision. Across four benchmarks spanning classification, preference, and open-ended generation, ICM-inferred in-context examples match the performance of gold labels. Crucially, coherence matters beyond individual label accuracy: with accuracy held constant, more coherent examples generalize substantially better than incoherent ones. For personas underrepresented in pretraining data, targeted human feedback on the questions where the model is least certain about a persona's values yields better generalization than the same number of labels on arbitrary questions. These results identify coherence as a key design principle for scalable value specification, leveraging the diverse human perspectives already encoded in pretrained language models.",
+      "authors": [
+        "Taslim Mahbub",
+        "Yiding Pei",
+        "Shi Feng"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-02T03:56:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.03110v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "pluralistic alignment with diverse human values using coherence maximization",
+      "llm_evidence_cn": "通过内部连贯性最大化实现多元对齐，尊重多样人类价值观",
+      "llm_evidence": "通过内部连贯性最大化实现多元对齐，尊重多样人类价值观",
+      "canonical_evidence": "通过内部连贯性最大化实现多元对齐，尊重多样人类价值观",
+      "llm_tldr_en": "This paper uses Internal Coherence Maximization to generate persona-specific examples for aligning AI with diverse human values without human supervision.",
+      "llm_tldr_cn": "AI系统需要与多元人类价值观对齐，但生成具体示例需要大量人工监督。本文提出内部连贯性最大化（ICM）方法，通过最大化示例间的互预测性自动生成符合目标群体价值观的示例。在多个基准上，ICM生成的示例性能与真实标签相当，且连贯性带来更好的泛化，为人机对齐提供了高效方法。",
+      "llm_tldr": "AI系统需要与多元人类价值观对齐，但生成具体示例需要大量人工监督。本文提出内部连贯性最大化（ICM）方法，通过最大化示例间的互预测性自动生成符合目标群体价值观的示例。在多个基准上，ICM生成的示例性能与真实标签相当，且连贯性带来更好的泛化，为人机对齐提供了高效方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.04543v1",
+      "source": "arxiv",
+      "title": "Agentic AI and Pedagogical Best Practice: The Tension Between Automation and Learning",
+      "abstract": "Artificial intelligence in education is evolving from passive chatbots to proactive AI agents capable of initiation and goal-directed interactions. While offering opportunities for personalised learning, this shift risks undermining learner agency and cognitive effort. This paper reviews six pedagogical principles-prior knowledge activation, collaborative learning, problem-based learning, formative assessment, scaffolding, and metacognition-through the lens of agentic AI. We discuss the tension between automation and learning, proposing design recommendations that prioritise intentional friction, dynamic scaffolding, human-in-the-loop oversight, and considered AI utilisation to ensure AI supports rather than supplants human learning.",
+      "authors": [
+        "Steve Woollaston",
+        "Brendan Flanagan",
+        "Isanka Wijerathne",
+        "Hiroaki Ogata"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-06-03T07:26:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.04543v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "design recommendations for human-centered AI in education",
+      "llm_evidence_cn": "教育领域人类中心AI的设计建议",
+      "llm_evidence": "教育领域人类中心AI的设计建议",
+      "canonical_evidence": "教育领域人类中心AI的设计建议",
+      "llm_tldr_en": "Reviews pedagogical principles through agentic AI lens, proposing design recommendations to balance automation and learning, ensuring AI supports human learning.",
+      "llm_tldr_cn": "AI教育从聊天机器人转向主动智能体，可能削弱学生主体性。本文结合六项教学原则，分析自动化与学习的张力，提出设计建议：引入有益摩擦、动态脚手架、人在回路监督等。这些原则为设计支持而非替代人类学习的AI系统提供了指导。",
+      "llm_tldr": "AI教育从聊天机器人转向主动智能体，可能削弱学生主体性。本文结合六项教学原则，分析自动化与学习的张力，提出设计建议：引入有益摩擦、动态脚手架、人在回路监督等。这些原则为设计支持而非替代人类学习的AI系统提供了指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.06061v1",
+      "source": "arxiv",
+      "title": "A Conversational Framework for Human-Robot Collaborative Manipulation with Distributed Generative AI models",
+      "abstract": "This paper presents a distributed conversational framework for human-robot collaborative manipulation that integrates local language and vision-language models (VLMs) with a Robot Operating System 2 (ROS 2)-based execution stack. Language understanding, visual grounding, orchestration, and motion execution run as separate ROS 2 nodes, enabling flexible deployment across distributed hardware while maintaining a responsive control loop. From free-form user commands, the system generates structured action requests for pick, place, and handover. It uses a VLM to return image-space targets, which are converted into metric robot-frame goals using depth and calibration. A web dashboard exposes intermediate intent and grounding overlays (pixel, depth, and robot-frame) and requires explicit operator confirmation before any motion is executed. Experiments on a Franka FR3 platform evaluate end-to-end task reliability and latency under increasing working table scene ambiguity and compare alternative LLM/VLM configurations in the same pipeline. Code and full documentation are available at [github.com/cogrob-tuni/franka-llm](https://github.com/cogrob-tuni/franka-llm).",
+      "authors": [
+        "Arash Ghasemzadeh Kakroudi",
+        "Roel Pieters"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-04T12:00:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.06061v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "conversational framework for designing human-robot collaborative manipulation",
+      "llm_evidence_cn": "用于设计人机协作操作的人机对话框架",
+      "llm_evidence": "用于设计人机协作操作的人机对话框架",
+      "canonical_evidence": "用于设计人机协作操作的人机对话框架",
+      "llm_tldr_en": "A distributed conversational framework integrating local VLMs with ROS 2 for free-form human-robot collaborative manipulation tasks.",
+      "llm_tldr_cn": "现有协作系统难以处理自由形式的用户命令并灵活部署。本文提出了一种分布式的对话框架，集成本地语言和视觉语言模型与ROS 2执行栈。系统能根据自由形式命令生成结构化动作请求，并通过可视化仪表板暴露中间意图。该框架支持在分布式硬件上灵活部署，实现了高效的人机协作操作。",
+      "llm_tldr": "现有协作系统难以处理自由形式的用户命令并灵活部署。本文提出了一种分布式的对话框架，集成本地语言和视觉语言模型与ROS 2执行栈。系统能根据自由形式命令生成结构化动作请求，并通过可视化仪表板暴露中间意图。该框架支持在分布式硬件上灵活部署，实现了高效的人机协作操作。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.05828v1",
+      "source": "arxiv",
+      "title": "Statistical Priors for Implicit Preferences: Decoupling Skill Selection as a Local Harness in Personal Agents",
+      "abstract": "As Large Language Model (LLM) capabilities advance, locally deployed personal agents relying on API-based remote models and external skills have emerged as a novel paradigm. With the rapid expansion of available skills, enabling personal agents to learn and adapt to implicit user preferences becomes a critical challenge. However, local deployment constraints preclude complex centralized selection algorithms, creating an urgent need for a lightweight local preference harness. This paper explores the implementation of such a harness through a novel architecture that strictly decouples statistical preference learning from semantic intent parsing. Specifically, we leverage localized statistical results to influence and modulate the selection decisions of the remote LLM. Extensive evaluations demonstrate that our decoupled approach achieves the lowest cumulative regret and highest test accuracy, significantly outperforming traditional memory-augmented agents.",
+      "authors": [
+        "Zeyu Gan",
+        "Huayi Tang",
+        "Yong Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-04T08:07:10+00:00",
+      "link": "https://arxiv.org/pdf/2606.05828v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "learning implicit user preferences in personal agents",
+      "llm_evidence_cn": "个人智能体中的隐式用户偏好学习",
+      "llm_evidence": "个人智能体中的隐式用户偏好学习",
+      "canonical_evidence": "个人智能体中的隐式用户偏好学习",
+      "llm_tldr_en": "Proposes a lightweight local preference harness for personal agents that decouples statistical preference learning from semantic intent parsing, enabling adaptation to implicit user preferences under local deployment constraints.",
+      "llm_tldr_cn": "本地部署的个人智能体面临学习隐式用户偏好的挑战，且无法用复杂算法。本文提出一种轻量级偏好控制架构，严格解耦统计偏好学习与语义意图解析。通过本地统计结果影响远程模型选择，实现偏好适应。实验证明该方法在低资源下有效提升个性化体验。",
+      "llm_tldr": "本地部署的个人智能体面临学习隐式用户偏好的挑战，且无法用复杂算法。本文提出一种轻量级偏好控制架构，严格解耦统计偏好学习与语义意图解析。通过本地统计结果影响远程模型选择，实现偏好适应。实验证明该方法在低资源下有效提升个性化体验。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.05411v1",
+      "source": "arxiv",
+      "title": "A Motivational Architecture for Conversational AGI",
+      "abstract": "Motivational architectures in cognitive AI have largely been designed for physical agents regulating bodily needs. Conversational agents operate in a different regime: their sensorimotor loop is linguistic, their environment is a user's evolving mental state, and their consequential actions are speech acts, tool invocations, and strategic silences. This paper proposes a conversational reinterpretation of the OpenPsi motivational lineage, coupled to MetaMo's higher-level motivational scaffold, for agents built on a modular execution substrate. Homeostasis is recast in dialogue-native terms: the agent regulates competence, uncertainty reduction, affiliation, affinity, legitimacy, nurturing, and aesthetic coherence rather than bodily deficits. We propose three contributions: a ten-stage motivational processing pipeline that architecturally separates cognitive modulation from situational appraisal; a dual decision strategy blending urgency-driven fast response with deliberative multi-goal optimization; and an architecturally useful distinction between pre-action feelings and post-action emotions as functionally different forms of affect. We specialize the framework to two example agents -- CompanionAgent and ResearchAgent -- and sketch its extension to social robotics and domain-generic human-level AGI.",
+      "authors": [
+        "Anna Mikeda",
+        "Ben Goertzel"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-03T20:25:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.05411v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "motivational architecture for conversational AGI that regulates dialogue-native homeostasis",
+      "llm_evidence_cn": "对话式通用人工智能的动机架构，调节对话原生稳态",
+      "llm_evidence": "对话式通用人工智能的动机架构，调节对话原生稳态",
+      "canonical_evidence": "对话式通用人工智能的动机架构，调节对话原生稳态",
+      "llm_tldr_en": "A motivational architecture for conversational agents that reinterprets homeostasis as regulation of competence, uncertainty, and affiliation.",
+      "llm_tldr_cn": "本文针对对话智能体缺乏动机架构的问题，提出基于OpenPsi的对话动机框架。该框架将稳态重新定义为对话原生维度（能力、不确定性、亲和力等），并集成到模块化执行基底。这一设计为构建更具人类特性的对话AGI提供了理论支持。",
+      "llm_tldr": "本文针对对话智能体缺乏动机架构的问题，提出基于OpenPsi的对话动机框架。该框架将稳态重新定义为对话原生维度（能力、不确定性、亲和力等），并集成到模块化执行基底。这一设计为构建更具人类特性的对话AGI提供了理论支持。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.06081v1",
+      "source": "arxiv",
+      "title": "A Framework for Measuring Appropriate Reliance on Set-Valued AI Advice",
+      "abstract": "Appropriate reliance on AI advice has become a central research theme in human-AI collaboration. Existing frameworks have focused exclusively on point predictions as AI advice. However, set-valued AI advice (e.g., discrete sets or continuous intervals) is increasingly being used to communicate uncertainty and improve human decision making. In this paper, we develop the first formal framework for measuring appropriate reliance on set-valued AI advice within the sequential judge-advisor paradigm, spanning both classification and regression tasks. For classification, we first introduce the dimensions that are necessary for evaluating set-valued AI advice. We then define two metrics: correct reliance rate on AI and correct reliance rate on self, which jointly characterize appropriate reliance in this setting. For regression, we introduce quantity of AI reliance and quality of AI reliance, which respectively measure whether a decision maker utilized the AI advice and whether their reliance helped them get closer to the ground truth relative to their initial estimate. Through the application of our framework, we demonstrate how these metrics capture important nuances in human-AI collaboration that existing measures overlook.",
+      "authors": [
+        "Ranjan Mishra",
+        "Jakob Schoeffer"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-04T12:17:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.06081v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "framework for measuring appropriate reliance on set-valued AI advice",
+      "llm_evidence_cn": "衡量对集合值AI建议适当依赖的框架",
+      "llm_evidence": "衡量对集合值AI建议适当依赖的框架",
+      "canonical_evidence": "衡量对集合值AI建议适当依赖的框架",
+      "llm_tldr_en": "First formal framework to measure appropriate reliance on set-valued AI advice in sequential judge-advisor paradigm.",
+      "llm_tldr_cn": "现有适当依赖框架仅关注点预测建议，而集合值建议（如区间）日益普遍。本文开发了首个正式框架，用于在序列化判断-顾问范式中衡量对集合值AI建议的适当依赖。框架定义了正确依赖AI率和正确依赖自我率两个指标，涵盖分类和回归任务。这有助于设计更可信的人机协作系统。",
+      "llm_tldr": "现有适当依赖框架仅关注点预测建议，而集合值建议（如区间）日益普遍。本文开发了首个正式框架，用于在序列化判断-顾问范式中衡量对集合值AI建议的适当依赖。框架定义了正确依赖AI率和正确依赖自我率两个指标，涵盖分类和回归任务。这有助于设计更可信的人机协作系统。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.05896v1",
+      "source": "arxiv",
+      "title": "Resonant Minds: Closed-Loop Social Avatars with Theory of Mind",
+      "abstract": "Creating lifelike digital humans with genuine social intelligence requires unifying cognitive reasoning and multimodal generation within a coherent framework. Current approaches treat these as separate tasks: Large Language Models excel at dialogue but lack embodied expression, while diffusion-based talking head models achieve visual fidelity but ignore social cognition. To bridge this gap, we propose a closed-loop dual-agent framework integrating perception, social reasoning, and expression into a continuous interaction cycle. The perception module analyzes partners' multimodal behaviors from video, while the social reasoning module infers hidden mental states through Theory of Mind and selects responses via an ensemble mechanism. The expression module then generates emotion-controllable dual-agent videos synthesizing both speaker speech and expression alongside listener reactive behaviors, capturing bidirectional dynamics absent in prior work. We construct a hierarchical Persona-Scenario dataset with psychologically grounded personas and private social goals to support evaluation under information asymmetry. Experiments on this dataset demonstrate competitive or superior performance on both dialogue quality and video generation metrics. Notably, our method surpasses even the full-information Script mode on key dialogue quality dimensions, suggesting that explicit mental state inference under uncertainty can elicit more thoughtful dialogue than unrestricted information access.",
+      "authors": [
+        "Jianxu Shangguan",
+        "Jing Xu",
+        "Hang Ye",
+        "Xiaoxuan Ma",
+        "Yizhou Wang",
+        "Wentao Zhu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-04T09:03:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.05896v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "closed-loop social avatars with theory of mind for human-AI interaction",
+      "llm_evidence_cn": "具有心智理论的闭环社交化身，用于人机交互",
+      "llm_evidence": "具有心智理论的闭环社交化身，用于人机交互",
+      "canonical_evidence": "具有心智理论的闭环社交化身，用于人机交互",
+      "llm_tldr_en": "Resonant Minds integrates perception, social reasoning, and multimodal expression into a closed-loop avatar framework for lifelike human-AI social interaction.",
+      "llm_tldr_cn": "本文针对现有数字人缺乏社会智能的问题，提出闭环双智能体框架。该框架整合多模态感知、心智推理和表情生成，实现连续的社交交互。感知模块分析对方行为，推理模块推断心理状态，表达模块生成协调的响应。实验表明该框架提升了数字人的社会互动真实性。",
+      "llm_tldr": "本文针对现有数字人缺乏社会智能的问题，提出闭环双智能体框架。该框架整合多模态感知、心智推理和表情生成，实现连续的社交交互。感知模块分析对方行为，推理模块推断心理状态，表达模块生成协调的响应。实验表明该框架提升了数字人的社会互动真实性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.06114v2",
+      "source": "arxiv",
+      "title": "Towards Healthy Evolution: Exploring the Role and Mechanisms of Human-Agent Interaction in Self-Evolving Systems",
+      "abstract": "Self-evolving agents improve through continual self-play and self-generated learning signals, but autonomous evolution can also cause capability degradation and safety drift. Although human feedback has proven effective for static and post-trained agents, its role in self-evolving systems remains underexplored. We introduce Agent Norm Correction through Human-like Oversight and Review (ANCHOR), an LLM-based framework that simulates human supervision and delivers feedback at various phases of self-evolution. With ANCHOR, we evaluate two representative open-source self-evolving agent systems across coding, mathematical reasoning, and safety. Our results show that even limited supervision substantially mitigates safety degradation while preserving stable performance on core evolutionary objectives. Further analysis shows that supervision over the output verification phase is the most effective for intervention, whereas increasing supervision frequency yields diminishing returns. These findings provide empirical evidence and practical guidance for designing more stable, controllable, and human-aligned self-evolving agent systems.",
+      "authors": [
+        "Dianxing Shi",
+        "Bowen Wang",
+        "Junqi He",
+        "Junhao Chen",
+        "Yuta Nakashima"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-04T13:03:16+00:00",
+      "link": "https://arxiv.org/pdf/2606.06114v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-agent interaction in self-evolving systems",
+      "llm_evidence_cn": "自我进化系统中的人机交互",
+      "llm_evidence": "自我进化系统中的人机交互",
+      "canonical_evidence": "自我进化系统中的人机交互",
+      "llm_tldr_en": "ANCHOR framework simulates human supervision to correct agent norms in self-evolving systems, mitigating capability degradation.",
+      "llm_tldr_cn": "自我进化代理可能退化和漂移，人类反馈在其中的作用未被充分探索。ANCHOR框架通过LLM模拟人类监督，在多个进化阶段提供反馈。在编码和数学推理等任务上，即使有限监督也能显著缓解退化。这揭示了人机交互在自我进化系统中的关键作用。",
+      "llm_tldr": "自我进化代理可能退化和漂移，人类反馈在其中的作用未被充分探索。ANCHOR框架通过LLM模拟人类监督，在多个进化阶段提供反馈。在编码和数学推理等任务上，即使有限监督也能显著缓解退化。这揭示了人机交互在自我进化系统中的关键作用。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.07489v1",
+      "source": "arxiv",
+      "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope",
+      "abstract": "Frontier AI systems are bridging the gap between intelligence and utility by shifting from conversational assistants to autonomous agents that execute tasks end to end. Using production data from Perplexity's Search and Computer products, we study this transition by examining how AI agents accelerate and reshape knowledge work. Three key empirical findings emerge. First, using sessions with near-identical initial query pairs as natural experiments for the same underlying task attempted with both products, Computer performs 26 minutes of autonomous work per user session, versus 33 seconds for Search. Computer automates task decomposition and execution that Search users might otherwise manually orchestrate and implement. As a result, Computer shifts follow-up query distribution toward higher-order work such as verification and extension. Autonomy also increases execution quality, with per-query dissatisfaction rates 55% lower on Computer than on Search. Second, due to its autonomy advantage, Computer reduces completion time from 269 to 36 minutes on matched tasks, lowering estimated time and cost by 87% and 94%, respectively, compared to humans equipped with Search alone. Third, Computer changes the scope of work that users attempt: Computer queries more often cross occupational boundaries, require higher-order cognition, draw on broader expertise, take the form of composite tasks that bundle interdependent subtasks into a single query, and unlock work activities that are essentially absent from Search usage among the same users. Together, the evidence indicates that AI agents accelerate workflows, enhance output quality, reduce costs, and expand the breadth and depth of automated work.",
+      "authors": [
+        "Jeremy Yang",
+        "Kate Zyskowski",
+        "Noah Yonack",
+        "Jerry Ma"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "econ.GN"
+      ],
+      "published": "2026-06-05T17:45:39+00:00",
+      "link": "https://arxiv.org/pdf/2606.07489v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "empirical study of AI agents reshaping knowledge work",
+      "llm_evidence_cn": "AI智能体重塑知识工作的实证研究",
+      "llm_evidence": "AI智能体重塑知识工作的实证研究",
+      "canonical_evidence": "AI智能体重塑知识工作的实证研究",
+      "llm_tldr_en": "Empirically examines how autonomous AI agents accelerate knowledge work, using production data from Perplexity's products; finds agents perform 26 minutes of autonomous work per session vs 33 seconds for search.",
+      "llm_tldr_cn": "AI从对话助手转向自主智能体，但对其如何影响知识工作缺乏实证。本文使用Perplexity的搜索和计算机产品数据，发现计算机智能体每个会话执行26分钟自主工作，而搜索仅33秒。智能体自动化任务分解与执行，显著提高效率，但也改变用户行为模式。研究为人机协作的效率与分工提供了定量依据。",
+      "llm_tldr": "AI从对话助手转向自主智能体，但对其如何影响知识工作缺乏实证。本文使用Perplexity的搜索和计算机产品数据，发现计算机智能体每个会话执行26分钟自主工作，而搜索仅33秒。智能体自动化任务分解与执行，显著提高效率，但也改变用户行为模式。研究为人机协作的效率与分工提供了定量依据。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.07812v1",
+      "source": "arxiv",
+      "title": "Scaling Participation in Modular AI Systems",
+      "abstract": "Humanity is a mosaic of multifaceted talents and needs, and any truly intelligent AI must reflect that richness. Yet the LLMs used by all are built by the few -- a centralized market of monolithic AI models structurally ill-suited to capture the diversity of human knowledge, reasoning, and values. Here we introduce scaling participation, a new paradigm in which modular AI systems are built from the bottom up through the contributions of diverse stakeholders. Participants contribute small models trained on their own interests and priorities; these models then collaborate in modular frameworks as compositional AI systems. Participatory AI systems outperform monolithic LLMs by up to 15.4% across 15 tasks, such as reasoning and factuality, surpassing models larger than all contributed components combined. Further experiments show that participatory AI systems benefit from contributor diversity, substantially improve on each contributor's original priorities, and exhibit emergent capabilities that allow them to solve over 15% of problems where all individual models fail. Scaling participation provides a technical foundation for transitioning from the monolithic status quo toward an open, bottom-up, and collaborative AI future.",
+      "authors": [
+        "Shangbin Feng",
+        "Yike Wang",
+        "Weijia Shi",
+        "Luke Zettlemoyer",
+        "Yejin Choi",
+        "Yulia Tsvetkov"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-05T19:39:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.07812v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "participatory AI, modular collaboration among human-contributed models",
+      "llm_evidence_cn": "参与式AI，人类贡献模块的协作",
+      "llm_evidence": "参与式AI，人类贡献模块的协作",
+      "canonical_evidence": "参与式AI，人类贡献模块的协作",
+      "llm_tldr_en": "This paper proposes scaling participation where modular AI systems are built from bottom-up contributions of diverse stakeholders, enabling collaborative models that outperform monolithic LLMs by 15.4% across reasoning and factuality tasks.",
+      "llm_tldr_cn": "现有的大语言模型由少数人构建，无法反映人类多样性的丰富需求。本文提出“扩展参与”新范式，通过多方贡献的小模型在模块化框架中协作组成AI系统。实验表明，参与式AI系统在15项推理和事实性任务上平均性能提升15.4%，超越比所有贡献模型更大的单一模型。该方法为人类-AI协作提供了一种新的底层架构思路。",
+      "llm_tldr": "现有的大语言模型由少数人构建，无法反映人类多样性的丰富需求。本文提出“扩展参与”新范式，通过多方贡献的小模型在模块化框架中协作组成AI系统。实验表明，参与式AI系统在15项推理和事实性任务上平均性能提升15.4%，超越比所有贡献模型更大的单一模型。该方法为人类-AI协作提供了一种新的底层架构思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}
