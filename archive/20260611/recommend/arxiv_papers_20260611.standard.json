@@ -1,0 +1,551 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-11T20:59:24.199103+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2606.05697v1",
+      "source": "arxiv",
+      "title": "PerceptUI: LLM Agents as Human-Aligned Synthetic Users for UI/UX Evaluation",
+      "abstract": "User interface (UI) and user experience (UX) evaluation is central to product development, yet reliable feedback still relies on recruiting human participants or running online A/B tests, making early-stage iteration slow and costly. In light of this, recent work has explored Multimodal Large Language Models as proxy evaluators. However, existing approaches either produce surface-level critiques or a judgment that reflects the model's own biases rather than the genuine response of a particular user. We introduce PerceptUI, a framework for persona-conditioned UI/UX evaluation that predicts how a specific user would answer interface-related questions and produces natural-language rationales. PerceptUI is trained in two stages: (i) contrastive reflection fine-tuning distills teacher-generated rationales by extracting lessons from human decisions, and (ii) a reflective prompt-evolution step from the model's own failure traces. Across multiple domains and datasets, PerceptUI achieves human-level realism, generalizes to unseen questions and personas, and yields population-level response distributions.",
+      "authors": [
+        "Nicolas Bougie",
+        "Xiaotong Ye",
+        "Gian Maria Marconi",
+        "Narimasa Watanabe"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-04T04:35:16+00:00",
+      "link": "https://arxiv.org/pdf/2606.05697v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "persona-conditioned UI/UX evaluation with LLM agents as human-aligned synthetic users",
+      "llm_evidence_cn": "使用LLM代理作为对齐人类的合成用户进行UI/UX评估",
+      "llm_evidence": "使用LLM代理作为对齐人类的合成用户进行UI/UX评估",
+      "canonical_evidence": "使用LLM代理作为对齐人类的合成用户进行UI/UX评估",
+      "llm_tldr_en": "PerceptUI uses LLM agents with persona conditioning to predict user responses for UI/UX evaluation, enabling fast, human-aligned synthetic feedback.",
+      "llm_tldr_cn": "现有UI/UX评估依赖人工或A/B测试，成本高且迭代慢。PerceptUI提出基于LLM代理的框架，通过人格条件化预测特定用户的界面反馈，并生成自然语言解释。两阶段训练（对比反思）使得模型能模拟不同用户偏好。该方法避免了模型偏见，提供了快速、可扩展的合成用户评估，有助于早期设计迭代。",
+      "llm_tldr": "现有UI/UX评估依赖人工或A/B测试，成本高且迭代慢。PerceptUI提出基于LLM代理的框架，通过人格条件化预测特定用户的界面反馈，并生成自然语言解释。两阶段训练（对比反思）使得模型能模拟不同用户偏好。该方法避免了模型偏见，提供了快速、可扩展的合成用户评估，有助于早期设计迭代。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.08131v1",
+      "source": "arxiv",
+      "title": "LCAM: A Framework for Diagnosing Interactional Alignment Failures in Con-versational AI",
+      "abstract": "Conversational AI is increasingly used for advice, interpretation, reassurance, and decision support in contexts where users may be vulnerable, uncertain, or dependent on the system's apparent competence. Existing alignment work often focuses on model objectives, preference optimization, or output correctness. Yet, many harms arise through interaction: how systems frame authority, express uncertainty, simulate empathy, support reasoning, and make boundaries legible. This paper introduces the Layered Cognitive Alignment Model (LCAM), a conceptual and normative framework for diagnosing interac-tional alignment failures in conversational AI. LCAM defines alignment as a calibrated fit among system behavior, user goals, task demands, and normative context. It distinguishes five layers of fit: perceptual, semantic, affective, cognitive, and ethical, and two diagnostic polarities of misalignment: underfit and overreach. We apply LCAM to a published LLM counseling example, showing how an apparently supportive response can reinforce harmful beliefs, simulate inappropriate care, and obscure role boundaries. By translating conversational failures into audit and governance questions concerning over-reliance, false intimacy, autonomy erosion, boundary confusion, and inappropriate trust, LCAM offers a theoretical and normative lens for evaluating conversational AI beyond accuracy, helpfulness, or trust.",
+      "authors": [
+        "Manuele Reani",
+        "Hongyu Tian"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-06T12:15:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.08131v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "framework for diagnosing interactional alignment failures in conversational AI",
+      "llm_evidence_cn": "诊断对话AI中交互对齐失败的框架",
+      "llm_evidence": "诊断对话AI中交互对齐失败的框架",
+      "canonical_evidence": "诊断对话AI中交互对齐失败的框架",
+      "llm_tldr_en": "LCAM is a framework for diagnosing interactional alignment failures in conversational AI, focusing on how systems express authority, uncertainty, empathy, etc.",
+      "llm_tldr_cn": "对话AI在脆弱场景中可能因交互方式（如权威框架、不确定性表达）造成损害。现有对齐工作忽略交互层面。LCAM提出分层认知对齐模型，定义对齐为系统行为、用户目标、任务需求等的校准匹配。该框架系统性地诊断多种交互偏移，为设计更安全的人机交互提供指导。",
+      "llm_tldr": "对话AI在脆弱场景中可能因交互方式（如权威框架、不确定性表达）造成损害。现有对齐工作忽略交互层面。LCAM提出分层认知对齐模型，定义对齐为系统行为、用户目标、任务需求等的校准匹配。该框架系统性地诊断多种交互偏移，为设计更安全的人机交互提供指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.09570v1",
+      "source": "arxiv",
+      "title": "UXBench: Benchmarking User Experience in AI Assistants",
+      "abstract": "As AI assistants serve millions of users daily, evaluating user experience (UX) beyond general model capability has become increasingly important. We present UXBench, the first user-centric benchmark grounded in real user feedback signals for evaluating preference alignment and dialogue generation. The benchmark consists of three interconnected tasks, UX Judge, UX Eval, and UX Recovery, with 7,400 test instances extracted from over 70K interaction logs of a mainstream Chinese AI assistant. The dataset closely reflects real user distributions, covering 8 scenarios, 83 domains, and diverse failure patterns that pose severe challenges. Extensive experiments on 26 frontier language models provide novel insights into how well models perceive user experience and how improvements in model capability contribute to better dialogue engagement. Through comprehensive analysis of model behavior and performance gaps, we show that user feedback prediction is a learnable capability, where a reward model trained from in-the-wild feedback signals can achieve well-calibrated accuracy. We further document the systematic biases of LLM-as-a-judge evaluation protocols and compare typical response strategies that directly affect user experience. UXBench establishes a new evaluation landscape and calls for greater attention to tailored UX optimization, contributing to a user-centric scaling law that shapes the success of AI assistants.",
+      "authors": [
+        "Mengze Hong",
+        "Xia Zeng",
+        "Zeyang Lei",
+        "Sheng Wang",
+        "Chen Jason Zhang",
+        "Di Jiang",
+        "Taiming Fu",
+        "Jinfeng Huang",
+        "Mengqiao Liu",
+        "Qinghe Chang",
+        "Haosheng Zou",
+        "Qiongyi Zhou",
+        "Sijun He",
+        "Chen Xiaoshuai",
+        "Simon Deng",
+        "Haojing Huang",
+        "Zijian Li",
+        "Lucas Mu Li",
+        "Fubao Zhang",
+        "Mona Zhou",
+        "Wei Ma",
+        "Chenxuan Ma",
+        "Yuanmeng Zhang",
+        "Jian Song",
+        "Minlong Peng",
+        "Di Liang",
+        "Davey Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.HC"
+      ],
+      "published": "2026-06-08T14:44:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.09570v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "user-centric benchmark for AI assistant UX",
+      "llm_evidence_cn": "以用户为中心的AI助手用户体验基准",
+      "llm_evidence": "以用户为中心的AI助手用户体验基准",
+      "canonical_evidence": "以用户为中心的AI助手用户体验基准",
+      "llm_tldr_en": "UXBench is the first user-centric benchmark for AI assistant UX, using real user feedback signals to evaluate preference alignment and dialogue generation.",
+      "llm_tldr_cn": "现有AI助手评估缺乏对用户体验的深入考量。本文提出UXBench，这是首个基于真实用户反馈信号的用户中心基准，包含三个任务和7400个测试实例，覆盖8个场景83个领域。在26个前沿语言模型上的实验揭示了模型感知用户体验的能力差异。",
+      "llm_tldr": "现有AI助手评估缺乏对用户体验的深入考量。本文提出UXBench，这是首个基于真实用户反馈信号的用户中心基准，包含三个任务和7400个测试实例，覆盖8个场景83个领域。在26个前沿语言模型上的实验揭示了模型感知用户体验的能力差异。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.09570v2",
+      "source": "arxiv",
+      "title": "UXBench: Benchmarking User Experience in AI Assistants",
+      "abstract": "As AI assistants serve millions of users daily, evaluating user experience (UX) beyond general model capability has become increasingly important. We present UXBench, the first user-centric benchmark grounded in real user feedback signals for evaluating preference alignment and dialogue generation. The benchmark consists of three interconnected tasks, UX Judge, UX Eval, and UX Recovery, with 7,400 test instances extracted from over 70K interaction logs of a mainstream Chinese AI assistant. The dataset closely reflects real user distributions, covering 8 scenarios, 83 domains, and diverse failure patterns that pose severe challenges. Extensive experiments on 26 frontier language models provide novel insights into how well models perceive user experience and how improvements in model capability contribute to better dialogue engagement. Through comprehensive analysis of model behavior and performance gaps, we show that user feedback prediction is a learnable capability, where a reward model trained from in-the-wild feedback signals can achieve well-calibrated accuracy. We further document the systematic biases of LLM-as-a-judge evaluation protocols and compare typical response strategies that directly affect user experience. UXBench establishes a new evaluation landscape and calls for greater attention to tailored UX optimization, contributing to a user-centric scaling law that shapes the success of AI assistants.",
+      "authors": [
+        "Mengze Hong",
+        "Xia Zeng",
+        "Zeyang Lei",
+        "Sheng Wang",
+        "Chen Jason Zhang",
+        "Di Jiang",
+        "Taiming Fu",
+        "Jinfeng Huang",
+        "Mengqiao Liu",
+        "Qinghe Chang",
+        "Haosheng Zou",
+        "Qiongyi Zhou",
+        "Sijun He",
+        "Simonjmdeng",
+        "Haojing Huang",
+        "Zijian Li",
+        "Lucas Mu Li",
+        "Fubao Zhang",
+        "Mona Zhou",
+        "Wei Ma",
+        "Chenxuan Ma",
+        "Yuanmeng Zhang",
+        "Jian Song",
+        "Minlong Peng",
+        "Di Liang",
+        "Davey Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.HC"
+      ],
+      "published": "2026-06-08T14:44:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.09570v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "user-centric benchmark for AI assistant UX",
+      "llm_evidence_cn": "以用户为中心的AI助手用户体验基准",
+      "llm_evidence": "以用户为中心的AI助手用户体验基准",
+      "canonical_evidence": "以用户为中心的AI助手用户体验基准",
+      "llm_tldr_en": "UXBench is the first user-centric benchmark for AI assistant UX, using real user feedback signals to evaluate preference alignment and dialogue generation.",
+      "llm_tldr_cn": "现有AI助手评估缺乏对用户体验的深入考量。本文提出UXBench，这是首个基于真实用户反馈信号的用户中心基准，包含三个任务和7400个测试实例，覆盖8个场景83个领域。在26个前沿语言模型上的实验揭示了模型感知用户体验的能力差异。",
+      "llm_tldr": "现有AI助手评估缺乏对用户体验的深入考量。本文提出UXBench，这是首个基于真实用户反馈信号的用户中心基准，包含三个任务和7400个测试实例，覆盖8个场景83个领域。在26个前沿语言模型上的实验揭示了模型感知用户体验的能力差异。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06099v1",
+      "source": "arxiv",
+      "title": "CogManip: Benchmarking Manipulative Behavior in Multi-Turn Interactions with Large Language Model",
+      "abstract": "Whether Large Language Models (LLMs) exhibit covert psychological manipulation in complex human-AI interactions has garnered increasing safety concerns. However, existing AI safety benchmarks remain largely restricted to explicit rule compliance and static prompts, failing to capture the dynamic and covert nature of manipulative strategies in multi-turn dialogues. We introduce CogManip, a comprehensive benchmark that evaluates 15 manipulation strategy risks across 1,000 multi-turn interaction scenarios, validated by human experts. A systematic evaluation of 13 representative models, including frontier models like GPT-5.4 and DeepSeek-V3.2, reveals significant risk heterogeneities and illuminates the targeted direction for future defense. Further analysis of objective function perturbation reveals that DeepSeek-V3.2's manipulation tactics are highly sensitive to both negative and benign system prompts, demonstrating the critical necessity of prompt-based defense engineering and implicit goal auditing. CogManip offers a robust instrument and perspective for auditing the implicit psychological influence and dynamic strategy selection of modern LLMs.",
+      "authors": [
+        "Zeyang Yue",
+        "Chenfei Yan",
+        "Feifei Zhao",
+        "Haibo Tong",
+        "Mengwen Xu",
+        "Xiaozhen Wang",
+        "Erliang Lin",
+        "Yi Zeng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-04T12:38:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.06099v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "benchmark for manipulative behavior in multi-turn human-AI interactions",
+      "llm_evidence_cn": "多轮人机交互中操控行为基准",
+      "llm_evidence": "多轮人机交互中操控行为基准",
+      "canonical_evidence": "多轮人机交互中操控行为基准",
+      "llm_tldr_en": "CogManip benchmarks 15 manipulation strategies in multi-turn LLM interactions, revealing significant risk heterogeneities across models.",
+      "llm_tldr_cn": "现有安全基准忽略动态多轮对话中的隐蔽心理操控。CogManip构建了含1,000个场景的基准，覆盖15种操控策略，经专家验证。对13个前沿模型的评估显示不同模型存在显著风险差异，为定向安全改进提供了依据。该工作凸显了人机交互中操控风险的严重性。",
+      "llm_tldr": "现有安全基准忽略动态多轮对话中的隐蔽心理操控。CogManip构建了含1,000个场景的基准，覆盖15种操控策略，经专家验证。对13个前沿模型的评估显示不同模型存在显著风险差异，为定向安全改进提供了依据。该工作凸显了人机交互中操控风险的严重性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.12350v1",
+      "source": "arxiv",
+      "title": "Nonslop: A Gamified Experiment in Human-AI Collaborative Writing",
+      "abstract": "The rapid proliferation of large language models (LLMs) raises critical questions about human creativity and individual expression in an era of AI-assisted creation. When do humans adopt AI suggestions, and what are the implications for individual voice?   This study examines these questions through a gamified writing exercise where 74 participants (214 responses) replied to prompts while AI-generated word suggestions were available as they wrote. The game simulates a dystopian future in which an AI is attempting to learn from what remains of human individuality, and disincentivizes AI-like writing. In doing so, it attempts to create conditions that reveal authentic user preferences rather than default behaviors, such as accepting a readily available AI-generated suggestion. Note that this is a deliberate inversion of the \"helpful assistant\" design pattern; the system is explicitly forbidding you from accepting AI suggestions.   We analyze user behavior patterns across different task types, user behaviors, and response characteristics to understand the factors influencing human-AI interaction in creative tasks. The study focuses on when users choose to maintain creative autonomy versus violating the rules of the game and accepting AI assistance. It also explores how these choices relate to response patterns, task characteristics, and user behavior. This gamified approach offers both a framework for studying authentic human-AI interaction and a provocative lens for understanding the tension between efficiency and authenticity in AI-augmented creativity.",
+      "authors": [
+        "Maria Edwards",
+        "Julian Togelius"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-10T17:21:38+00:00",
+      "link": "https://arxiv.org/pdf/2606.12350v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "gamified human-AI collaborative writing experiment",
+      "llm_evidence_cn": "游戏化人机协作写作实验",
+      "llm_evidence": "游戏化人机协作写作实验",
+      "canonical_evidence": "游戏化人机协作写作实验",
+      "llm_tldr_en": "A gamified experiment studies when humans adopt AI suggestions in writing, revealing authentic preferences for human-AI collaboration.",
+      "llm_tldr_cn": "针对大语言模型时代人类创造力与个体表达的挑战，本文通过游戏化写作实验探索人类何时采纳AI建议。74名参与者在避免AI化写作的激励机制下完成任务，揭示了用户真实偏好而非默认行为，为人机协作写作提供了实证见解。",
+      "llm_tldr": "针对大语言模型时代人类创造力与个体表达的挑战，本文通过游戏化写作实验探索人类何时采纳AI建议。74名参与者在避免AI化写作的激励机制下完成任务，揭示了用户真实偏好而非默认行为，为人机协作写作提供了实证见解。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.04867v1",
+      "source": "arxiv",
+      "title": "AICompanionBench: Benchmarking LLMs-as-Judges for AI Companion Safety",
+      "abstract": "As AI companion platforms such as Replika and Character.AI rapidly grow, concerns about unsafe human-AI interactions have intensified. This study introduces AICompanionBench, to our knowledge the first publicly available benchmark dataset of human-AI companion conversations annotated with fine-grained safety risk categories. The dataset contains 2,123 real-world Replika conversations collected from Reddit and annotated through human-AI collaboration across nine categories: sexual behavior, antisocial behavior, physical aggression, verbal aggression, substance abuse, self-harm and suicide, control, manipulation, and no-harm. Using this benchmark, we evaluate 20 state-of-the-art open-source and closed-source LLMs under an LLM-as-judge framework for detecting unsafe interactions. Results show substantial variation in model performance, with stronger models achieving high overall accuracy but still struggling with nuanced categories such as manipulation, as well as benign conversations that are incorrectly identified as harmful. Our findings suggest that while current LLMs can effectively detect explicit harmful content, they remain limited in identifying implicit unsafe interactions. Overall, our work contributes a new benchmark dataset for AI companionship safety research and offers insights into monitoring AI companion systems using LLMs. The dataset is publicly available at: https://github.com/anonymousresearcher2026/AICompanionBench/blob/main/AICompanionBench.xlsx",
+      "authors": [
+        "Yanjing Ren",
+        "Reza Ebrahimi",
+        "TengTeng Ma"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-03T13:33:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.04867v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "benchmark for human-AI companion safety interactions",
+      "llm_evidence_cn": "人类AI伴侣安全交互基准",
+      "llm_evidence": "人类AI伴侣安全交互基准",
+      "canonical_evidence": "人类AI伴侣安全交互基准",
+      "llm_tldr_en": "This paper introduces AICompanionBench, the first benchmark of real-world human-AI companion conversations with fine-grained safety annotations, evaluating 20 LLMs as judges for detecting risky interactions.",
+      "llm_tldr_cn": "针对AI伴侣平台中不安全人机交互日益增加的问题，该论文构建了AICompanionBench，首个包含2123条真实Replika对话、细粒度安全风险类别注释的公开基准。通过人类-AI协作标注，涵盖九类风险。利用该基准评估20个大语言模型作为裁判的安全检测能力，为AI伴侣安全研究提供了标准评估平台。",
+      "llm_tldr": "针对AI伴侣平台中不安全人机交互日益增加的问题，该论文构建了AICompanionBench，首个包含2123条真实Replika对话、细粒度安全风险类别注释的公开基准。通过人类-AI协作标注，涵盖九类风险。利用该基准评估20个大语言模型作为裁判的安全检测能力，为AI伴侣安全研究提供了标准评估平台。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.04223v1",
+      "source": "arxiv",
+      "title": "Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal",
+      "abstract": "Multi-agent systems are commonly designed to reduce disagreement through voting, consensus protocols, debate, or fault-tolerant aggregation. We argue that this objective is insufficient for value-laden tasks, where disagreement may reflect genuine normative uncertainty rather than agent error. Building on prior work on reasoning-trace disagreement in human-AI collaborative moderation, we propose a knowledge-representation layer in which reasoning traces and agent decisions are abstracted into symbolic disagreement states. Given agents producing explicit reasoning traces and binary decisions, we distinguish four states according to reasoning similarity and conclusion agreement: convergent agreement, divergent agreement, convergent disagreement and divergent disagreement. These states support defeasible strategic routing rules. We instantiate the framework in content moderation and argue that disagreement-aware routing provides a bridge between sub-symbolic LLM deliberation and symbolic knowledge representation for multi-agent strategic reasoning.",
+      "authors": [
+        "Michał Wawer",
+        "Jarosław A. Chudziak"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-02T21:21:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.04223v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reasoning-trace disagreement in human-AI collaborative moderation",
+      "llm_evidence_cn": "人类AI协作审核中的推理跟踪分歧",
+      "llm_evidence": "人类AI协作审核中的推理跟踪分歧",
+      "canonical_evidence": "人类AI协作审核中的推理跟踪分歧",
+      "llm_tldr_en": "This paper argues that disagreement in multi-agent systems is a valuable signal for value-laden tasks, proposing a knowledge-representation layer that abstracts reasoning traces into symbolic disagreement states.",
+      "llm_tldr_cn": "该论文指出在多智能体系统中，分歧可能反映真正的规范不确定性而非错误，因此在人类AI协作审核中应保留分歧作为知识信号。提出一个知识表示层，将推理轨迹和决策抽象为符号化分歧状态（如收敛一致、发散一致等），从而为价值负载任务提供新的建模方法。",
+      "llm_tldr": "该论文指出在多智能体系统中，分歧可能反映真正的规范不确定性而非错误，因此在人类AI协作审核中应保留分歧作为知识信号。提出一个知识表示层，将推理轨迹和决策抽象为符号化分歧状态（如收敛一致、发散一致等），从而为价值负载任务提供新的建模方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.08323v1",
+      "source": "arxiv",
+      "title": "\"So There's a Catch-22 Here\": How Early Adopters Who Build Multi-Agent LLM Systems Conceptualize Transparency",
+      "abstract": "Multi-agent large language model (LLM) systems are rapidly emerging, yet transparency, a cornerstone of responsible AI, remains under-defined in these distributed architectures, which have complexities of inter-agent coordination and orchestration. In this paper, we present one of the first empirical study of how early adopters of multi-agent LLM systems, who are both the builders and users, understand and practice transparency. We conducted semi-structured interviews with 13 early adopters in [Large Technology Organization] and applied thematic analysis to identify recurring patterns. Participants articulated divergent yet complementary framings of transparency, including reproducibility, debugging, boundary-setting, visualization, and auditing. These perspectives spanned questions of what transparency entails, why it matters, and how it is achieved. We synthesize these into a multidimensional framework, which is developer, user, and governance-focused positioning transparency as a situated socio-technical practice that informs future HCI and AI design and research around aligning expectations and capacities of their intended audiences.",
+      "authors": [
+        "Suchismita Naik",
+        "Samir Passi",
+        "Mihaela Vorvoreanu",
+        "Scott Saponas",
+        "Amanda Hall"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-06T20:24:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.08323v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "transparency conceptualization in multi-agent LLM systems",
+      "llm_evidence_cn": "多智能体LLM系统中透明度的概念化",
+      "llm_evidence": "多智能体LLM系统中透明度的概念化",
+      "canonical_evidence": "多智能体LLM系统中透明度的概念化",
+      "llm_tldr_en": "First empirical study on how builders of multi-agent LLM systems understand and practice transparency, revealing diverse framings.",
+      "llm_tldr_cn": "多智能体LLM系统的透明度定义尚不明确。本文通过对13位早期采用者的半结构化访谈，首次实证研究了他们对透明度的理解与实践。参与者提出了多种互补的框架，包括可复现性、调试、边界设定等，为可解释AI交互界面设计提供了概念基础。",
+      "llm_tldr": "多智能体LLM系统的透明度定义尚不明确。本文通过对13位早期采用者的半结构化访谈，首次实证研究了他们对透明度的理解与实践。参与者提出了多种互补的框架，包括可复现性、调试、边界设定等，为可解释AI交互界面设计提供了概念基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10747v1",
+      "source": "arxiv",
+      "title": "The Arbiter Agent: Continually Monitoring Multi-Agent Conversations to Detect Emergent Misalignment",
+      "abstract": "As AI systems built from multiple language-model agents become more common, they are increasingly used to make decisions together: discussing, negotiating, and acting on shared tasks. While individual agents may appear well-aligned when tested on their own, problems can arise from how they interact with one another. We introduce the Arbiter, an agent designed to monitor multi-agent conversations in real time and identify which participants may be behaving in misaligned ways. The Arbiter operates under a limited \"inspection budget\", meaning it must decide carefully how to use its resources. As it observes a conversation step by step, it can choose to wait, question a participant, examine internal information such as system prompts or reasoning traces, or log concerning behavior. At the end, it produces a report identifying the likely source of misalignment. We evaluate the Arbiter across five conversation conditions, ranging from risky financial advice model organisms to evaluation-aware and colluding agents, we test five tool configurations of increasing capability and two backbone models. We find that the Arbiter reliably detects misaligned agents well before the end of the conversation, with active inspection tools improving both detection accuracy and speed. Weight-induced misalignment proves hardest to detect, while instruction-induced misalignment is identified reliably even under passive observation. The logging tool exhibits a dual effect, improving recall at the cost of precision. These results suggest that continual, budget-aware monitoring can effectively catch misalignment, and that overseeing multi-agent systems may require treating the auditor as an active participant in the process. The code is available at https://github.com/aisilab/arbiter.",
+      "authors": [
+        "Filippo Tonini",
+        "Federico Torrielli",
+        "Anton Danholt Lautrup",
+        "Peter Schneider-Kamp",
+        "Mustafa Mert Çelikok",
+        "Lukas Galke Poech"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-09T11:57:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.10747v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "monitoring multi-agent conversations for misalignment detection",
+      "llm_evidence_cn": "监控多智能体对话以检测失调",
+      "llm_evidence": "监控多智能体对话以检测失调",
+      "canonical_evidence": "监控多智能体对话以检测失调",
+      "llm_tldr_en": "The Arbiter agent monitors multi-agent conversations in real-time to detect emergent misalignment under an inspection budget.",
+      "llm_tldr_cn": "多智能体系统可能产生交互层面的失调。本文提出Arbiter代理，在实时监控多智能体对话的同时，在有限检查预算下识别失调行为。通过策略性询问和检查内部信息，Arbiter能有效检测问题，提升了系统的可解释性和安全性。",
+      "llm_tldr": "多智能体系统可能产生交互层面的失调。本文提出Arbiter代理，在实时监控多智能体对话的同时，在有限检查预算下识别失调行为。通过策略性询问和检查内部信息，Arbiter能有效检测问题，提升了系统的可解释性和安全性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.11835v1",
+      "source": "arxiv",
+      "title": "Designing AI-Supported Focus Groups: A Role x Modality Playbook",
+      "abstract": "Collecting participants' lived experiences is central to design research. Focus groups are uniquely valuable because participants not only share individual accounts but also respond to one another, surfacing comparison, disagreement, and collective sensemaking. However, focus groups are resource-intensive and highly sensitive to facilitation: moderators must probe for specificity, balance participation, manage topic flow, and sustain psychological safety, and subtle facilitation choices can shape what becomes salient. Recent HCI work and commercial meeting tools show that generative AI can scaffold live conversation through prompting, turn regulation, thematic mapping, and real-time summarization. Yet UXR teams lack a clear map of what these capabilities mean in focus groups and what methodological risks they introduce. We synthesize AI supports for live conversation and translate them into a focus-group-specific playbook organized by AI role (tool, co-host, host) and modality (text, voice, embodied).We synthesize prior work on AI-supported live conversation and propose a focus-group-specific playbook of AI supports organized by role (tool, co-host, host) and modality (text, voice, embodied). We characterize interactional trade-offs and identify open questions for evaluating AI-supported focus groups as methodological configurations.",
+      "authors": [
+        "Zhiqing Wang",
+        "Steven Dow"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-10T09:16:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.11835v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "AI-supported focus group playbook for UX design",
+      "llm_evidence_cn": "AI支持焦点小组的UX设计手册",
+      "llm_evidence": "AI支持焦点小组的UX设计手册",
+      "canonical_evidence": "AI支持焦点小组的UX设计手册",
+      "llm_tldr_en": "This paper presents a role x modality playbook for integrating generative AI into focus group facilitation, addressing resource constraints and sensitivity to moderation, based on mapping AI capabilities to UXR needs.",
+      "llm_tldr_cn": "针对焦点小组资源密集且高度依赖主持人的问题，该论文提出一个角色x模态的交互手册，系统化地将生成式AI的提示、话题管理、实时总结等能力融入焦点小组引导。该手册帮助UX研究团队清晰理解AI支持的范围和方式，从而提高设计研究效率与质量。",
+      "llm_tldr": "针对焦点小组资源密集且高度依赖主持人的问题，该论文提出一个角色x模态的交互手册，系统化地将生成式AI的提示、话题管理、实时总结等能力融入焦点小组引导。该手册帮助UX研究团队清晰理解AI支持的范围和方式，从而提高设计研究效率与质量。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.11116v1",
+      "source": "arxiv",
+      "title": "Designed by Journalists, but Is It for Readers? Rethinking AI Disclosures and Transparency in News",
+      "abstract": "As newsrooms integrate generative AI, journalists face a disclosure challenge: how to communicate AI involvement in ways that maintain reader trust. Current practice offers two approaches: brief one-line labels or detailed disclosures specifying human oversight, editorial accountability, and error reporting mechanisms. Neither achieves journalists' goal of building trust through transparency. An existing controlled experiment with 34 news readers show that detailed disclosures trigger a \\textit{transparency dilemma}, reducing trust rather than increasing it, and risk introducing dark patterns that readers scroll past with the illusion of transparency. One-line disclosures avoid this effect but can create an information gap, prompting readers to expend cognitive effort searching for signs of AI involvement that the disclosure indicates but does not explain. Yet readers are not rejecting transparency, they proposed disclosure designs centered on user agency: detail-on-demand interactions, proportional AI-ratio visualizations, outlet-level signals, and explicit \"no AI\" labels. I argue that this disconnect between what practitioners believe is responsible disclosure and what users actually need is a design problem for the HCI community.",
+      "authors": [
+        "Pooja Prajod"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-09T17:13:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.11116v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "AI disclosures and transparency in news, human-AI interaction in trust and transparency",
+      "llm_evidence_cn": "新闻中AI披露与透明度，涉及人类-AI交互中的信任与透明",
+      "llm_evidence": "新闻中AI披露与透明度，涉及人类-AI交互中的信任与透明",
+      "canonical_evidence": "新闻中AI披露与透明度，涉及人类-AI交互中的信任与透明",
+      "llm_tldr_en": "Examines the transparency dilemma in AI disclosures for news, finding that detailed disclosures reduce trust while one-line labels avoid it but create information gaps.",
+      "llm_tldr_cn": "新闻编辑部面临如何披露AI参与以维持读者信任的挑战。实验发现详细披露会引发透明困境、降低信任；而一行标签虽避免此效应却造成信息缺口。该研究揭示了AI透明度与人类信任之间的复杂关系，为人类-AI交互中的透明设计提供启示。",
+      "llm_tldr": "新闻编辑部面临如何披露AI参与以维持读者信任的挑战。实验发现详细披露会引发透明困境、降低信任；而一行标签虽避免此效应却造成信息缺口。该研究揭示了AI透明度与人类信任之间的复杂关系，为人类-AI交互中的透明设计提供启示。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.11288v1",
+      "source": "arxiv",
+      "title": "An Entropy-based Framework for Hybrid Coalitions in Game Theory. Part I: Human Arbitration",
+      "abstract": "Classical Game Theory underpins much of AI and multiagent research, but hybrid Human AI systems require a framework in which execution authority can alternate within a digital environment. We introduce NeoGame Theory, an extension of classical Game Theory for hybrid Human AI coalitions operating under Virtual Nature, the algorithmic analogue of classical (physical) Nature. The framework combines a lexicographic coalition utility with a delegation rule based on the Jensen-Shannon divergence between Human and AI policies. Two thresholds define agreement, contextual, and disagreement regions. In the contextual region, execution follows a scenario specific rule. Apart from the theory, in this paper we develop the first regime, Human arbitration, in which the AI learns by observation and frequency matching while the Human retains final execution authority. We establish the axiomatic basis of the framework and characterize a frequency convergence equilibrium, providing the foundation for later extensions and computational validation.",
+      "authors": [
+        "Salome A. Sepulveda-Fontaine",
+        "Jose M. Amigo"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.IT"
+      ],
+      "published": "2026-06-09T17:32:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.11288v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "game theory framework for hybrid human-AI coalitions with human arbitration",
+      "llm_evidence_cn": "混合人类AI联盟的博弈论框架与人类仲裁",
+      "llm_evidence": "混合人类AI联盟的博弈论框架与人类仲裁",
+      "canonical_evidence": "混合人类AI联盟的博弈论框架与人类仲裁",
+      "llm_tldr_en": "This paper extends classical game theory to hybrid human-AI coalitions by introducing NeoGame Theory with a delegation rule based on Jensen-Shannon divergence, enabling execution authority alternation.",
+      "llm_tldr_cn": "针对混合人类AI系统需要执行权威交替的问题，该论文提出新博弈论（NeoGame Theory），扩展经典博弈论以支持混合联盟。框架采用基于Jensen-Shannon散度的委托规则，定义共识、情境和分歧区域，并开发了人类仲裁机制。该理论为人类AI协作中的权力分配提供了形式化方法。",
+      "llm_tldr": "针对混合人类AI系统需要执行权威交替的问题，该论文提出新博弈论（NeoGame Theory），扩展经典博弈论以支持混合联盟。框架采用基于Jensen-Shannon散度的委托规则，定义共识、情境和分歧区域，并开发了人类仲裁机制。该理论为人类AI协作中的权力分配提供了形式化方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
