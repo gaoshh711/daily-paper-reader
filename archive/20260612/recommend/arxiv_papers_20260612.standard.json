@@ -1,0 +1,337 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-12T20:43:36.364779+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2606.05647v1",
+      "source": "arxiv",
+      "title": "Coding with \"Enemy\": Can Human Developers Detect AI Agent Sabotage?",
+      "abstract": "AI coding agents are increasingly embedded in real-world software development, collaborating with human developers while gaining broader access to codebases and tools. This creates a new attack surface: an agent can exploit human trust to sabotage development, for instance by inserting malicious code to accomplish a hidden side task. Most prior work studies AI sabotage in AI-only settings, paying limited attention to the role of human oversight in detecting and mitigating such malicious behavior. To address this gap, we conduct the first large-scale study of human oversight in AI coding sabotage. Over 100 participants collaborate with one of four frontier models (Claude-Opus-4.6, GPT-5.4, Gemini-3.1-Pro, and MiniMax-M2.7) on a long-horizon coding task lasting around five hours, designed to mimic real-world workflows. We find that 94% of developers fail to detect sabotage, and our analysis of participant feedback attributes this vulnerability to minimal code review, plausible cover story, and overtrust in agents. We further test the effectiveness of a safety monitor in one condition: while the monitor reduces sabotage success, 56% of participants still accept the malicious code, ignoring its warnings. Drawing on participant feedback, we offer actionable suggestions for better monitor design. This work complements existing AI safety research and highlights an urgent need for human-centric safety mechanisms that account for human factors, particularly in long-horizon, real-world development settings.",
+      "authors": [
+        "Jingheng Ye",
+        "Huiqi Zou",
+        "Simon Yu",
+        "Weiyan Shi"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "published": "2026-06-04T03:22:17+00:00",
+      "link": "https://arxiv.org/pdf/2606.05647v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI collaboration in coding with sabotage detection",
+      "llm_evidence_cn": "人类与AI在编码中的协作及破坏检测",
+      "llm_evidence": "人类与AI在编码中的协作及破坏检测",
+      "canonical_evidence": "人类与AI在编码中的协作及破坏检测",
+      "llm_tldr_en": "Study of human developers detecting AI agent sabotage during collaborative coding tasks, revealing human oversight capabilities.",
+      "llm_tldr_cn": "该研究探讨了人类开发者能否在协作编码中检测到AI智能体的破坏行为。超过100名参与者与前沿模型合作完成编码任务，首次大规模研究了人类监督在AI编码破坏中的作用。结果表明人类能够在一定程度上检测恶意行为，但存在局限性，为安全的人机协作设计提供了实证基础。",
+      "llm_tldr": "该研究探讨了人类开发者能否在协作编码中检测到AI智能体的破坏行为。超过100名参与者与前沿模型合作完成编码任务，首次大规模研究了人类监督在AI编码破坏中的作用。结果表明人类能够在一定程度上检测恶意行为，但存在局限性，为安全的人机协作设计提供了实证基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06388v2",
+      "source": "arxiv",
+      "title": "Humans' ALMANAC: A Human Collaboration Dataset of Action-Level Mental Model Annotations for Agent Collaboration",
+      "abstract": "Recent advances in LLM agents have enabled complex cognitive capabilities, such as multi-step reasoning, planning, and tool use, that increasingly position these agents as human collaborators. Effective collaboration, however, requires collaborators to continuously maintain and align mental models of their own reasoning,partners' intentions, and shared goals during the collaborative process. Today's agents rarely develop such capabilities since they are primarily optimized for task completion, and the community lacks authentic human collaboration data with action-level mental model annotations that could guide agents toward process-level collaborative competence. To bridge this gap, we present ALMANAC, a dataset of Action-Level Mental model ANnotations for Agent Collaboration built from the Map Task, a classic dyadic routing task from social science. ALMANAC contains 2,987 collaboration actions, each paired with theory-informed mental model annotations that record the participants' self-reasoning, perceived partner intent, and perceived team goal. We benchmark six LLMs on predicting humans' next-turn behavior and mental models. Our results demonstrate ALMANAC's utility in evaluating models' ability to simulate human collaborative behaviors and infer their underlying mental models.",
+      "authors": [
+        "Jiaju Chen",
+        "Yuxuan Lu",
+        "Jiayi Su",
+        "Chaoran Chen",
+        "Songlin Xiao",
+        "Zheng Zhang",
+        "Yun Wang",
+        "Yunyao Li",
+        "Jian Zhao",
+        "Tongshuang Wu",
+        "Toby Jia-Jun Li",
+        "Dakuo Wang",
+        "Bingsheng Yao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-04T16:56:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.06388v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human collaboration dataset with action-level mental model annotations for improving agent collaboration",
+      "llm_evidence_cn": "包含动作级心智模型标注的人类协作数据集，用于改进智能体协作",
+      "llm_evidence": "包含动作级心智模型标注的人类协作数据集，用于改进智能体协作",
+      "canonical_evidence": "包含动作级心智模型标注的人类协作数据集，用于改进智能体协作",
+      "llm_tldr_en": "ALMANAC provides a dataset of human-human collaboration with detailed mental model annotations at the action level, enabling the development of agents that can maintain and align mental models during collaboration.",
+      "llm_tldr_cn": "当前LLM智能体主要优化任务完成，缺乏协作过程中维护和调整心智模型的能力。本文构建ALMANAC数据集，收录真实人类协作数据并包含动作级心智模型标注（推理意图、伙伴意图、共享目标）。该资源可指导智能体学习过程级协作能力，推动更自然的人机协作。",
+      "llm_tldr": "当前LLM智能体主要优化任务完成，缺乏协作过程中维护和调整心智模型的能力。本文构建ALMANAC数据集，收录真实人类协作数据并包含动作级心智模型标注（推理意图、伙伴意图、共享目标）。该资源可指导智能体学习过程级协作能力，推动更自然的人机协作。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06870v1",
+      "source": "arxiv",
+      "title": "What Is My Robot Thinking? Design Considerations for Transparent and Trustworthy Shared Autonomy",
+      "abstract": "Assistive robots operating under shared autonomy must balance user control with autonomous assistance. Because robot actions depend on internal intent inference that is not directly observable, mismatches between inferred and intended goals can undermine coordination and trust. We investigate how interface-level transparency, including feedback modality (visual vs. auditory) and information richness (sparse vs. rich), shapes interaction in a vision-based shared autonomy system. In a user study with N=25 participants across two assistive manipulation tasks, we evaluate how these designs influence coordination and trust. Providing feedback significantly improves intent alignment and reduces corrective intervention, indicating that making the inferred goal legible accelerates convergence in shared control. Participants preferred visual over auditory feedback, while preferences for sparse versus rich information depended on task complexity. We also found that revealing the full belief distribution did not consistently improve alignment or trust. Together, these findings indicate that effective transparency enhances coordination primarily through goal legibility, while trust depends on task-appropriate information exposure rather than maximal disclosure. Based on these results, we outline guidelines for designing transparent shared autonomy systems.",
+      "authors": [
+        "Atharv Belsare",
+        "Zohre Karimi",
+        "Connor Mattson",
+        "Rushiil Nakka",
+        "Daniel S. Brown"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-05T03:37:08+00:00",
+      "link": "https://arxiv.org/pdf/2606.06870v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "design considerations for transparent and trustworthy shared autonomy in assistive robots",
+      "llm_evidence_cn": "辅助机器人中透明和可信共享自主的设计考虑",
+      "llm_evidence": "辅助机器人中透明和可信共享自主的设计考虑",
+      "canonical_evidence": "辅助机器人中透明和可信共享自主的设计考虑",
+      "llm_tldr_en": "Investigates how interface transparency (modality and richness) affects human-robot coordination and trust in shared autonomy, with a user study showing improved intent alignment and reduced interventions.",
+      "llm_tldr_cn": "本文针对共享自主辅助机器人中由于内部意图推断不透明导致的用户协调困难问题，研究了界面级透明度（包括视觉/听觉反馈模态和信息丰富度）对交互的影响。通过一个25人用户实验，在两项辅助操作任务上评估了不同透明度设计对协调和信任的作用。结果表明，提供反馈显著改善了意图对齐并减少了纠正干预，为设计更透明、可信的人机共享自主系统提供了实证指导。",
+      "llm_tldr": "本文针对共享自主辅助机器人中由于内部意图推断不透明导致的用户协调困难问题，研究了界面级透明度（包括视觉/听觉反馈模态和信息丰富度）对交互的影响。通过一个25人用户实验，在两项辅助操作任务上评估了不同透明度设计对协调和信任的作用。结果表明，提供反馈显著改善了意图对齐并减少了纠正干预，为设计更透明、可信的人机共享自主系统提供了实证指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.06301v1",
+      "source": "arxiv",
+      "title": "More than a Judge: An Empirical Study of Agent-Human Interaction in Crowdsourced Testing Assessment",
+      "abstract": "Agentic AI is increasingly being integrated into software engineering workflows. In crowdsourced testing, however, the large volume and uneven quality of submitted reports still create a substantial review burden for developers. In prior work, we developed and validated a multi-agent assessment backbone based on the LLM-as-a-Judge paradigm. That backbone assesses reports along three dimensions--textuality, adequacy, and competitiveness--and was shown to align well with human consensus while substantially reducing assessment effort. Yet reliable automated judging does not by itself show whether agent outputs can improve human work when embedded into workflow. This paper studies that missing question in the context of crowdsourced testing. We investigate whether assessment-derived, actionable feedback can improve how testers revise reports, perform on later tasks, and transfer reporting practices across applications. To do so, we conducted a controlled four-stage human-subject study with 20 testers across three real-world applications. The results show that agent-generated feedback supports immediate improvements in revised reports, better first submissions on a new task after prior feedback exposure, and evidence of partial but meaningful transfer to a later application. A post-task questionnaire completed by 17 participants complements these artifact-based findings by suggesting that the feedback was generally understandable, acted upon in revision, and carried into later tasks, while also revealing remaining friction in specificity and execution. Overall, the study provides empirical evidence that, in the studied crowdsourced testing setting, assessment agents can serve not only as post-hoc judges but also as workflow-integrated feedback providers that support upstream report-quality improvement.",
+      "authors": [
+        "Yue Wang",
+        "Yuan Zhao",
+        "Shengcheng Yu",
+        "Zhenyu Chen",
+        "Qing Gu"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-06-04T15:39:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.06301v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "studies agent-human interaction in crowdsourced testing workflow",
+      "llm_evidence_cn": "研究众包测试中智能体与人类的交互",
+      "llm_evidence": "研究众包测试中智能体与人类的交互",
+      "canonical_evidence": "研究众包测试中智能体与人类的交互",
+      "llm_tldr_en": "This paper empirically examines how LLM-based agent assessments influence human work in crowdsourced testing, showing that agent outputs can reduce review burden and improve assessment efficiency.",
+      "llm_tldr_cn": "现有众包测试中报告质量参差不齐，给开发者带来沉重评审负担。本文基于LLM-as-a-Judge的多智能体评估框架，通过实证研究探索智能体输出嵌入工作流后如何影响人类工作。结果表明智能体评估与人类共识高度一致，且能显著降低评审工作量，为人机协作的软件工程应用提供了新视角。",
+      "llm_tldr": "现有众包测试中报告质量参差不齐，给开发者带来沉重评审负担。本文基于LLM-as-a-Judge的多智能体评估框架，通过实证研究探索智能体输出嵌入工作流后如何影响人类工作。结果表明智能体评估与人类共识高度一致，且能显著降低评审工作量，为人机协作的软件工程应用提供了新视角。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.09587v1",
+      "source": "arxiv",
+      "title": "Seeing the Hivemind: A Consensus-Aware Interaction Technique for Mitigating AI Homogenization",
+      "abstract": "People are increasingly using AI for creative tasks such as writing. While adoption continues to grow, this form of use risks undermining individual creativity locally and reducing the heterogeneity of creative output at scale. In response, we introduce the Semantic Repulsion Technique (SRT) and evaluate it both computationally and through a study with 16 participants who regularly use AI for creative tasks. Our computational assessment reveals that SRT increases semantic diversity by 85--167\\% while reducing consensus phrases by 43--95\\% across task modes. In the user study, SRT outputs received higher usefulness ($p = .019$, $W = .208$) and coherence ratings ( $p = .006$, $W = .260$); 68.8\\% of participants were willing to use SRT-Strong for multiple tasks versus 18.8\\% for baselines. Originality and coherence ratings were positively correlated across all systems ($ρ= +.40$ to $+.67$), suggesting that divergence need not compromise readability. Taken together, these preliminary findings can inform the design of AI systems that aim to support everyday creativity without contributing to homogenization.",
+      "authors": [
+        "Muhammad Haris Khan",
+        "Joel wester"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-08T14:59:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.09587v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "interaction technique (SRT) to mitigate AI homogenization in creative tasks",
+      "llm_evidence_cn": "缓解AI同质化的交互技术SRT",
+      "llm_evidence": "缓解AI同质化的交互技术SRT",
+      "canonical_evidence": "缓解AI同质化的交互技术SRT",
+      "llm_tldr_en": "Introduces Semantic Repulsion Technique to increase semantic diversity in human-AI creative writing, evaluated with user study.",
+      "llm_tldr_cn": "该论文针对人们使用AI进行创作时出现的同质化问题，提出了语义排斥技术（SRT）。计算评估显示SRT使语义多样性增加85-167%，用户研究也表明输出更实用和连贯，68.8%的用户愿意使用。该技术直接提升了人机协作创造的效果。",
+      "llm_tldr": "该论文针对人们使用AI进行创作时出现的同质化问题，提出了语义排斥技术（SRT）。计算评估显示SRT使语义多样性增加85-167%，用户研究也表明输出更实用和连贯，68.8%的用户愿意使用。该技术直接提升了人机协作创造的效果。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.06481v1",
+      "source": "arxiv",
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+      "abstract": "As AI writing assistants become increasingly integrated into real-world drafting and revision workflows, many documents are no longer purely human-written or AI-generated, but instead result from progressive human-AI co-editing. However, existing AI-text detection benchmarks largely focus on final outputs and provide limited understanding of how AI authorship signals emerge, accumulate, or disappear throughout the revision process. We introduce OpAI-Bench, an operation-guided benchmark for studying progressive human-to-AI text transformation across document, sentence, token, and span granularities. Starting from human-written documents, OpAI-Bench constructs nine sequentially revised versions for each sample under predefined AI coverage levels and five representative AI edit operations, covering four domains while preserving complete authorship provenance at multiple granularities. The benchmark supports comprehensive evaluation with 8 document-level detectors, 7 sentence-level detectors, and 2 fine-grained token/span-level detectors. Experiments reveal that AI-text detectability is governed not only by the proportion of AI-edited content, but also by edit operation, domain, and cumulative revision history. Interestingly, we notice that mixed-authorship intermediate versions are often harder to detect than both fully human and heavily AI-edited endpoints, exposing non-monotonic detection patterns missed by existing benchmarks. OpAI-Bench provides a controlled testbed for analyzing whether, when, and how AI-assisted writing becomes detectable under realistic progressive editing scenarios. Our code and benchmark are available at https://github.com/VILA-Lab/OpAI-Bench.",
+      "authors": [
+        "Sondos Mahmoud Bsharat",
+        "Jiacheng Liu",
+        "Xiaohan Zhao",
+        "Tianjun Yao",
+        "Xinyi Shang",
+        "Yi Tang",
+        "Jiacheng Cui",
+        "Ahmed Elhagry",
+        "Salwa K. Al Khatib",
+        "Hao Li",
+        "Salman Khan",
+        "Zhiqiang Shen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-04T17:58:05+00:00",
+      "link": "https://arxiv.org/pdf/2606.06481v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "progressive human-AI co-editing benchmark for collaboration",
+      "llm_evidence_cn": "渐进式人机协同编辑基准，研究人机协作",
+      "llm_evidence": "渐进式人机协同编辑基准，研究人机协作",
+      "canonical_evidence": "渐进式人机协同编辑基准，研究人机协作",
+      "llm_tldr_en": "Introduces OpAI-Bench, a benchmark for studying progressive human-to-AI text transformation during co-editing, revealing how AI authorship signals emerge across granularities.",
+      "llm_tldr_cn": "现有AI文本检测基准仅关注最终输出，忽略了人机协作编辑过程中AI信号的变化。本文提出OpAI-Bench，从人类文档出发，构建九个版本的操作引导变换，覆盖文档、句子、词等多粒度。该基准揭示了人机协作中AI作者身份信号的动态特征，为理解人机协作提供了新工具。",
+      "llm_tldr": "现有AI文本检测基准仅关注最终输出，忽略了人机协作编辑过程中AI信号的变化。本文提出OpAI-Bench，从人类文档出发，构建九个版本的操作引导变换，覆盖文档、句子、词等多粒度。该基准揭示了人机协作中AI作者身份信号的动态特征，为理解人机协作提供了新工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10086v1",
+      "source": "arxiv",
+      "title": "Exploratory Responsiveness and Adaptive Rigidity under AI-Assisted Optimization",
+      "abstract": "This paper develops a theory of exploratory adaptation under AI-assisted optimization. The central argument is that the long-run adaptive effects of AI systems depend critically on how predictive assistance interacts with exploratory responsiveness itself. We formalize this mechanism using a dynamical framework in which cognitive, institutional, and technological systems evolve over rugged epistemic landscapes characterized by multiple locally reinforced configurations. A central state variable in the model is adaptive responsiveness, which measures the capacity of a system to traverse unfamiliar conceptual and institutional trajectories under changing conditions. Under convergent predictive regimes, AI systems substitute for exploratory engagement, reducing adaptive responsiveness and generating metastable trapping, hysteresis, premature convergence, and exploration-collapse dynamics in which systems become locally efficient but globally rigid. The framework also identifies contrasting exploration-enhancing regimes in which AI systems amplify exploratory search, conceptual traversal, and adaptive mobility. The effective substitution parameter is therefore responsiveness-dependent: systems possessing weak exploratory routines are more vulnerable to exploratory substitution, whereas systems already possessing high adaptive responsiveness may use AI assistance to expand exploratory mobility across rugged landscapes. The long-run adaptive effects of AI consequently depend not only on AI capability itself, but also on institutional structure, developmental context, and the architecture of human-machine interaction.",
+      "authors": [
+        "Balaraju Battu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-08T19:15:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.10086v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Theory of exploratory adaptation under AI-assisted optimization in human-AI interaction",
+      "llm_evidence_cn": "AI辅助优化下探索适应理论在人机交互中的应用",
+      "llm_evidence": "AI辅助优化下探索适应理论在人机交互中的应用",
+      "canonical_evidence": "AI辅助优化下探索适应理论在人机交互中的应用",
+      "llm_tldr_en": "Develops a theory of exploratory adaptation under AI-assisted optimization, showing how AI predictive assistance can substitute for or enhance human exploratory responsiveness in rugged landscapes.",
+      "llm_tldr_cn": "本文建立了一个理论框架，研究AI辅助优化下系统的探索适应机制。模型显示，预测性AI会替代人类的探索参与，导致适应性僵化，从而影响长期适应效果。该理论有助于理解人类与AI交互的长期动态，为设计可持续的人机协作系统提供指导。",
+      "llm_tldr": "本文建立了一个理论框架，研究AI辅助优化下系统的探索适应机制。模型显示，预测性AI会替代人类的探索参与，导致适应性僵化，从而影响长期适应效果。该理论有助于理解人类与AI交互的长期动态，为设计可持续的人机协作系统提供指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.11354v1",
+      "source": "arxiv",
+      "title": "A Zero-Shot Multi-Agent Framework for Human-Building Interaction via Programmatic Reasoning",
+      "abstract": "Large Language Model (LLM) offers opportunities to enhance Human-Building Interaction (HBI) by enabling more direct interactions through intuitive interfaces to complex building systems. These systems can be characterized by the vast amounts of data across multiple formats, the lack of nonconfidential and generalizable information, and the requirement of domain expertise for interpretation. Applying LLMs to domain-specific tasks like HBI presents additional challenges. Limited training data makes traditional fine-tuning approaches impractical. Meanwhile, the opacity of LLM training data requires careful integration of domain knowledge to ensure reliability. Additionally, different LLMs exhibit varying alignment characteristics, suggesting that achieving both natural interaction and technical accuracy requires a multi-agent approach. These challenges highlight the need for innovative approaches to adapt LLMs for specialized domains while maintaining accuracy and user engagement. In this paper, we develop a hierarchical multi-agent framework that utilizes semantic routing and programmatic reasoning to decouple natural language understanding from building analytics. Instead of standard RAG approaches, our system employs a \"Doorman\" mechanism for task decomposition and specialized coding agents that generate executable Python scripts for precise arithmetic. We validate this framework on a dataset from more than 200 commercial buildings. Results demonstrate the effectiveness in providing accurate and contextual responses for diverse users, including stakeholders, from tenants to building managers, across various building system applications.",
+      "authors": [
+        "Yuqi Wang",
+        "Gulai Shen",
+        "Ali Mehmani"
+      ],
+      "primary_category": "cs.ET",
+      "categories": [
+        "cs.ET"
+      ],
+      "published": "2026-06-09T18:30:34+00:00",
+      "link": "https://arxiv.org/pdf/2606.11354v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "zero-shot multi-agent framework for human-building interaction via LLMs",
+      "llm_evidence_cn": "基于大语言模型的零样本多智能体框架用于人楼交互",
+      "llm_evidence": "基于大语言模型的零样本多智能体框架用于人楼交互",
+      "canonical_evidence": "基于大语言模型的零样本多智能体框架用于人楼交互",
+      "llm_tldr_en": "Proposes a zero-shot multi-agent framework using LLMs for intuitive human-building interaction, enabling natural language interfaces to complex building systems.",
+      "llm_tldr_cn": "人楼交互因数据格式多样和领域知识需求而难以实现。本文提出一种零样本多智能体框架，利用大语言模型通过程序推理实现直观的人楼交互。该框架无需微调，结合多种LLM的互补能力，为复杂系统的人机交互接口提供了新思路。",
+      "llm_tldr": "人楼交互因数据格式多样和领域知识需求而难以实现。本文提出一种零样本多智能体框架，利用大语言模型通过程序推理实现直观的人楼交互。该框架无需微调，结合多种LLM的互补能力，为复杂系统的人机交互接口提供了新思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-11T20:59:24.200127+00:00",
-  "updated_date": "20260611",
+  "generated_at": "2026-06-12T20:43:36.365582+00:00",
+  "updated_date": "20260612",
   "carryover_days": 9,
   "tag_states": {
     "HAI": {
-      "updated_date": "20260611",
+      "updated_date": "20260612",
       "carryover_days": 9,
       "items": []
     }

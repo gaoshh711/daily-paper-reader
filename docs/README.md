@@ -6,59 +6,44 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-11
-- 运行时间：2026-06-11 21:06:25 UTC
+- 最新运行日期：2026-06-12
+- 运行时间：2026-06-12 20:50:08 UTC
 - 运行状态：成功
-- 本次总论文数：13
-- 精读区：6
-- 速读区：7
+- 本次总论文数：8
+- 精读区：5
+- 速读区：3
 
 ### 今日简报（AI）
-今日精选13篇论文，精读聚焦UI/UX评估与对话AI交互对齐两大方向。最值得精读的是《PerceptUI》（9.0分）与《LCAM》（9.0分），分别探讨合成用户模拟和交互失败诊断。建议普通读者优先关注AI与人类交互的对齐问题，如多智能体透明度和安全基准。
-- 详情：[/202606/11/README](/202606/11/README)
+今日推荐8篇论文，精选5篇精读，聚焦AI安全、人机协作与智能体行为。最值得关注的是两篇9.0分精读：AI智能体破坏行为的人机检测能力，以及人类协作中行动级心理模型数据集。建议优先精读这两篇，深入理解人类与AI智能体的安全交互及协作机制。
+- 详情：[/202606/12/README](/202606/12/README)
 
 ### 精读区论文标签
-1. [PerceptUI: LLM Agents as Human-Aligned Synthetic Users for UI/UX Evaluation](/202606/11/2606.05697v1-perceptui-llm-agents-as-human-aligned-synthetic-users-for-uiux-evaluation)  
+1. [Coding with "Enemy": Can Human Developers Detect AI Agent Sabotage?](/202606/12/2606.05647v1-coding-with-enemy-can-human-developers-detect-ai-agent-sabotage)  
    标签：评分：9.0/10、query:hai
-   evidence：使用LLM代理作为对齐人类的合成用户进行UI/UX评估
-2. [LCAM: A Framework for Diagnosing Interactional Alignment Failures in Con-versational AI](/202606/11/2606.08131v1-lcam-a-framework-for-diagnosing-interactional-alignment-failures-in-con-versational-ai)  
+   evidence：人类与AI在编码中的协作及破坏检测
+2. [Humans' ALMANAC: A Human Collaboration Dataset of Action-Level Mental Model Annotations for Agent Collaboration](/202606/12/2606.06388v2-humans-almanac-a-human-collaboration-dataset-of-action-level-mental-model-annotations-for-agent-collaboration)  
    标签：评分：9.0/10、query:hai
-   evidence：诊断对话AI中交互对齐失败的框架
-3. [UXBench: Benchmarking User Experience in AI Assistants](/202606/11/2606.09570v1-uxbench-benchmarking-user-experience-in-ai-assistants)  
+   evidence：包含动作级心智模型标注的人类协作数据集，用于改进智能体协作
+3. [What Is My Robot Thinking? Design Considerations for Transparent and Trustworthy Shared Autonomy](/202606/12/2606.06870v1-what-is-my-robot-thinking-design-considerations-for-transparent-and-trustworthy-shared-autonomy)  
    标签：评分：9.0/10、query:hai
-   evidence：以用户为中心的AI助手用户体验基准
-4. [UXBench: Benchmarking User Experience in AI Assistants](/202606/11/2606.09570v2-uxbench-benchmarking-user-experience-in-ai-assistants)  
-   标签：评分：9.0/10、query:hai
-   evidence：以用户为中心的AI助手用户体验基准
-5. [CogManip: Benchmarking Manipulative Behavior in Multi-Turn Interactions with Large Language Model](/202606/11/2606.06099v1-cogmanip-benchmarking-manipulative-behavior-in-multi-turn-interactions-with-large-language-model)  
+   evidence：辅助机器人中透明和可信共享自主的设计考虑
+4. [More than a Judge: An Empirical Study of Agent-Human Interaction in Crowdsourced Testing Assessment](/202606/12/2606.06301v1-more-than-a-judge-an-empirical-study-of-agent-human-interaction-in-crowdsourced-testing-assessment)  
    标签：评分：8.0/10、query:hai
-   evidence：多轮人机交互中操控行为基准
-6. [Nonslop: A Gamified Experiment in Human-AI Collaborative Writing](/202606/11/2606.12350v1-nonslop-a-gamified-experiment-in-human-ai-collaborative-writing)  
+   evidence：研究众包测试中智能体与人类的交互
+5. [Seeing the Hivemind: A Consensus-Aware Interaction Technique for Mitigating AI Homogenization](/202606/12/2606.09587v1-seeing-the-hivemind-a-consensus-aware-interaction-technique-for-mitigating-ai-homogenization)  
    标签：评分：8.0/10、query:hai
-   evidence：游戏化人机协作写作实验
+   evidence：缓解AI同质化的交互技术SRT
 
 ### 速读区论文标签
-1. [AICompanionBench: Benchmarking LLMs-as-Judges for AI Companion Safety](/202606/11/2606.04867v1-aicompanionbench-benchmarking-llms-as-judges-for-ai-companion-safety)  
+1. [Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection](/202606/12/2606.06481v1-operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection)  
    标签：评分：7.0/10、query:hai
-   evidence：人类AI伴侣安全交互基准
-2. ["So There's a Catch-22 Here": How Early Adopters Who Build Multi-Agent LLM Systems Conceptualize Transparency](/202606/11/2606.08323v1-so-theres-a-catch-22-here-how-early-adopters-who-build-multi-agent-llm-systems-conceptualize-transparency)  
+   evidence：渐进式人机协同编辑基准，研究人机协作
+2. [Exploratory Responsiveness and Adaptive Rigidity under AI-Assisted Optimization](/202606/12/2606.10086v1-exploratory-responsiveness-and-adaptive-rigidity-under-ai-assisted-optimization)  
    标签：评分：7.0/10、query:hai
-   evidence：多智能体LLM系统中透明度的概念化
-3. [Designing AI-Supported Focus Groups: A Role x Modality Playbook](/202606/11/2606.11835v1-designing-ai-supported-focus-groups-a-role-x-modality-playbook)  
+   evidence：AI辅助优化下探索适应理论在人机交互中的应用
+3. [A Zero-Shot Multi-Agent Framework for Human-Building Interaction via Programmatic Reasoning](/202606/12/2606.11354v1-a-zero-shot-multi-agent-framework-for-human-building-interaction-via-programmatic-reasoning)  
    标签：评分：7.0/10、query:hai
-   evidence：AI支持焦点小组的UX设计手册
-4. [Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal](/202606/11/2606.04223v1-consensus-is-strategically-insufficient-reasoning-trace-disagreement-as-a-knowledge-representation-signal)  
-   标签：评分：6.0/10、query:hai
-   evidence：人类AI协作审核中的推理跟踪分歧
-5. [The Arbiter Agent: Continually Monitoring Multi-Agent Conversations to Detect Emergent Misalignment](/202606/11/2606.10747v1-the-arbiter-agent-continually-monitoring-multi-agent-conversations-to-detect-emergent-misalignment)  
-   标签：评分：6.0/10、query:hai
-   evidence：监控多智能体对话以检测失调
-6. [Designed by Journalists, but Is It for Readers? Rethinking AI Disclosures and Transparency in News](/202606/11/2606.11116v1-designed-by-journalists-but-is-it-for-readers-rethinking-ai-disclosures-and-transparency-in-news)  
-   标签：评分：6.0/10、query:hai
-   evidence：新闻中AI披露与透明度，涉及人类-AI交互中的信任与透明
-7. [An Entropy-based Framework for Hybrid Coalitions in Game Theory. Part I: Human Arbitration](/202606/11/2606.11288v1-an-entropy-based-framework-for-hybrid-coalitions-in-game-theory-part-i-human-arbitration)  
-   标签：评分：6.0/10、query:hai
-   evidence：混合人类AI联盟的博弈论框架与人类仲裁
+   evidence：基于大语言模型的零样本多智能体框架用于人楼交互
 
 
 <div class="dpr-home-promo-card">
