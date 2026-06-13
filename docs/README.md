@@ -6,44 +6,52 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-12
-- 运行时间：2026-06-12 20:50:08 UTC
+- 最新运行日期：2026-06-13
+- 运行时间：2026-06-13 20:46:43 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：5
-- 速读区：3
+- 本次总论文数：10
+- 精读区：6
+- 速读区：4
 
 ### 今日简报（AI）
-今日推荐8篇论文，精选5篇精读，聚焦AI安全、人机协作与智能体行为。最值得关注的是两篇9.0分精读：AI智能体破坏行为的人机检测能力，以及人类协作中行动级心理模型数据集。建议优先精读这两篇，深入理解人类与AI智能体的安全交互及协作机制。
-- 详情：[/202606/12/README](/202606/12/README)
+今日聚焦AI安全治理与可解释性架构，精读6篇，速读4篇。  
+最值得关注两篇9分精读：局部架构提升AI安全与可解释性，以及人机交互中的安全门控与情感默认锁定机制。  
+建议普通读者优先阅读这两篇，了解当前AI风险控制的核心思路与落地方法。
+- 详情：[/202606/13/README](/202606/13/README)
 
 ### 精读区论文标签
-1. [Coding with "Enemy": Can Human Developers Detect AI Agent Sabotage?](/202606/12/2606.05647v1-coding-with-enemy-can-human-developers-detect-ai-agent-sabotage)  
+1. [Enhancing AI Interpretability and Safety through Localised Architectures](/202606/13/2606.07998v1-enhancing-ai-interpretability-and-safety-through-localised-architectures)  
    标签：评分：9.0/10、query:hai
-   evidence：人类与AI在编码中的协作及破坏检测
-2. [Humans' ALMANAC: A Human Collaboration Dataset of Action-Level Mental Model Annotations for Agent Collaboration](/202606/12/2606.06388v2-humans-almanac-a-human-collaboration-dataset-of-action-level-mental-model-annotations-for-agent-collaboration)  
+   evidence：提出局部化架构提升AI可解释性和安全性
+2. [The Governance of Human-LLM Interaction: Safety Gating, Civility Steering, and Affective Default Lock-In](/202606/13/2606.08172v1-the-governance-of-human-llm-interaction-safety-gating-civility-steering-and-affective-default-lock-in)  
    标签：评分：9.0/10、query:hai
-   evidence：包含动作级心智模型标注的人类协作数据集，用于改进智能体协作
-3. [What Is My Robot Thinking? Design Considerations for Transparent and Trustworthy Shared Autonomy](/202606/12/2606.06870v1-what-is-my-robot-thinking-design-considerations-for-transparent-and-trustworthy-shared-autonomy)  
-   标签：评分：9.0/10、query:hai
-   evidence：辅助机器人中透明和可信共享自主的设计考虑
-4. [More than a Judge: An Empirical Study of Agent-Human Interaction in Crowdsourced Testing Assessment](/202606/12/2606.06301v1-more-than-a-judge-an-empirical-study-of-agent-human-interaction-in-crowdsourced-testing-assessment)  
+   evidence：人类-LLM交互的治理框架，分析安全门控、文明引导和情感默认
+3. [M$^3$Exam: Benchmarking Multimodal Memory for Realistic User-Agent Interactions](/202606/13/2606.07402v1-m3exam-benchmarking-multimodal-memory-for-realistic-user-agent-interactions)  
    标签：评分：8.0/10、query:hai
-   evidence：研究众包测试中智能体与人类的交互
-5. [Seeing the Hivemind: A Consensus-Aware Interaction Technique for Mitigating AI Homogenization](/202606/12/2606.09587v1-seeing-the-hivemind-a-consensus-aware-interaction-technique-for-mitigating-ai-homogenization)  
+   evidence：用户-智能体交互基准
+4. [Enhancing AI Interpretability and Safety through Localised Architectures](/202606/13/2606.07998v2-enhancing-ai-interpretability-and-safety-through-localised-architectures)  
    标签：评分：8.0/10、query:hai
-   evidence：缓解AI同质化的交互技术SRT
+   evidence：用于可解释性的局部化架构
+5. [Agentic Neuro-Symbolic Planning and Commissioning for Human-in-the-Loop Industrial Robotics with Digital Twins](/202606/13/2606.08214v1-agentic-neuro-symbolic-planning-and-commissioning-for-human-in-the-loop-industrial-robotics-with-digital-twins)  
+   标签：评分：8.0/10、query:hai
+   evidence：带有神经符号规划的人机回环工业机器人框架
+6. [Forecasting Future Behavior as a Learning Task](/202606/13/2606.11445v1-forecasting-future-behavior-as-a-learning-task)  
+   标签：评分：8.0/10、query:hai
+   evidence：提出学习预测AI行为作为解释的替代方案以建立信任
 
 ### 速读区论文标签
-1. [Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection](/202606/12/2606.06481v1-operation-guided-progressive-human-to-ai-text-transformation-benchmark-for-multi-granularity-ai-text-detection)  
+1. [Learning by Chatting? Investigating the Impact of Generative AI on Information Seeking and Learning](/202606/13/2606.11669v1-learning-by-chatting-investigating-the-impact-of-generative-ai-on-information-seeking-and-learning)  
+   标签：评分：8.0/10、query:hai
+   evidence：实地实验研究生成AI对信息寻求和学习的影响
+2. [Culturally-Aware AI for Cross-Boundary Community Learning: Undergraduate Innovation at the Intersection of Computation and Design](/202606/13/2606.09041v1-culturally-aware-ai-for-cross-boundary-community-learning-undergraduate-innovation-at-the-intersection-of-computation-and-design)  
    标签：评分：7.0/10、query:hai
-   evidence：渐进式人机协同编辑基准，研究人机协作
-2. [Exploratory Responsiveness and Adaptive Rigidity under AI-Assisted Optimization](/202606/12/2606.10086v1-exploratory-responsiveness-and-adaptive-rigidity-under-ai-assisted-optimization)  
+   evidence：教育中的人类中心AI，融入文化意识
+3. [STAGE-Claw: Automated State-based Agent Benchmarking for Realistic Scenarios](/202606/13/2606.10394v1-stage-claw-automated-state-based-agent-benchmarking-for-realistic-scenarios)  
    标签：评分：7.0/10、query:hai
-   evidence：AI辅助优化下探索适应理论在人机交互中的应用
-3. [A Zero-Shot Multi-Agent Framework for Human-Building Interaction via Programmatic Reasoning](/202606/12/2606.11354v1-a-zero-shot-multi-agent-framework-for-human-building-interaction-via-programmatic-reasoning)  
+   evidence：自动化构建现实个人代理基准的框架以评估人类中心设计
+4. [WebChallenger: A Reliable and Efficient Generalist Web Agent](/202606/13/2606.10423v1-webchallenger-a-reliable-and-efficient-generalist-web-agent)  
    标签：评分：7.0/10、query:hai
-   evidence：基于大语言模型的零样本多智能体框架用于人楼交互
+   evidence：复制人类认知优势用于网页导航
 
 
 <div class="dpr-home-promo-card">

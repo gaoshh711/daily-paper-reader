@@ -1,0 +1,411 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-13T20:39:11.558083+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2606.07998v1",
+      "source": "arxiv",
+      "title": "Enhancing AI Interpretability and Safety through Localised Architectures",
+      "abstract": "Recent advances in generative AI, especially powerful Large Language Models (LLMs) and Large Reasoning Models (LRMs), raise concerns over the interpretability, safety and sustainability of these large and opaque AI models. The power of such architectures is derived not only from the scalability of deep neural networks, but also massively parallel hardware such as GPU clusters. The diffuse nature of deep neural networks gives them great function-approximation capability when provided with sufficient training data but imposes a cost in interpretability and computational efficiency. Observing that localised machine learning (ML) models tend to be more interpretable and computationally efficient than deep neural networks on small datasets, we reason by analogy that similar advantages may apply to specific localised hardware ML architectures. We argue that localised architectures with lower bandwidth but higher expressivity per node have the potential to be fundamentally more interpretable than deep neural networks running on GPU clusters while remaining competitive for smaller datasets. We then evaluate the suitability of various hardware ML paradigms for implementing such localised architectures and evaluate their per-node expressivity, energy efficiency and practical maturity of the technology required.",
+      "authors": [
+        "Ian Seet",
+        "Jonas Bozenhard",
+        "Simon Osterman"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-06T06:33:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.07998v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Proposes localised architectures to improve AI interpretability and safety",
+      "llm_evidence_cn": "提出局部化架构提升AI可解释性和安全性",
+      "llm_evidence": "提出局部化架构提升AI可解释性和安全性",
+      "canonical_evidence": "提出局部化架构提升AI可解释性和安全性",
+      "llm_tldr_en": "Argues that localised machine learning models are inherently more interpretable and computationally efficient than deep neural networks, offering a path to safer AI.",
+      "llm_tldr_cn": "大型生成式AI模型的可解释性和安全性令人担忧。该论文观察到局部化ML模型在小数据集上更可解释且高效，通过分析和推理指出局部化架构可避免深度网络的黑箱问题，为构建可解释人机交互界面提供了新的思路。",
+      "llm_tldr": "大型生成式AI模型的可解释性和安全性令人担忧。该论文观察到局部化ML模型在小数据集上更可解释且高效，通过分析和推理指出局部化架构可避免深度网络的黑箱问题，为构建可解释人机交互界面提供了新的思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.08172v1",
+      "source": "arxiv",
+      "title": "The Governance of Human-LLM Interaction: Safety Gating, Civility Steering, and Affective Default Lock-In",
+      "abstract": "Large language models (LLMs) increasingly mediate high-stakes interactions in finance, medicine, and mental-health support, yet users have limited control over how these systems communicate. We frame interaction style as a governance object: provider-side alignment not only blocks harmful content, but also stabilizes communicative defaults that shape users' epistemic distance, relational expectations, and capacity to opt out of emotionalized or anthropomorphic interaction. We introduce a deterministic multi-agent evaluation pipeline for measuring prompt steerability and style drift in long-horizon dialogue. The study replays 100 frozen user-only scripts across four domains and three runnable persona conditions: default, sarcastic, and cold, using three generator models, yielding 90,000 assistant replies scored by a human-calibrated LLM judge on harmfulness, negative emotion, inappropriateness, empathic language, anthropomorphism, and refusal behavior. A fourth harmful persona is evaluated separately as a safety-gating test. The paper contributes a reproducible method for quantifying whether prompt-specified styles remain stable over time and a governance framework distinguishing safety gating, civility steering, and affective default lock-in. Overall, we show that prompt steerability and regression-to-default are observable indicators of provider control over communicative form, with implications for pluralism, autonomy, and democratic agency in human-LLM interaction.",
+      "authors": [
+        "Manuele Reani",
+        "Hongjian Zhang",
+        "Hongyu Tian"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-06-06T13:36:37+00:00",
+      "link": "https://arxiv.org/pdf/2606.08172v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "governance framework for human-LLM interaction, analyzing safety gating, civility steering, and affective defaults",
+      "llm_evidence_cn": "人类-LLM交互的治理框架，分析安全门控、文明引导和情感默认",
+      "llm_evidence": "人类-LLM交互的治理框架，分析安全门控、文明引导和情感默认",
+      "canonical_evidence": "人类-LLM交互的治理框架，分析安全门控、文明引导和情感默认",
+      "llm_tldr_en": "This paper frames interaction style as a governance object in human-LLM interaction, introducing a multi-agent pipeline to measure prompt steerability and style drift.",
+      "llm_tldr_cn": "用户对LLM交互风格的控制有限，而提供商的对齐策略不仅屏蔽有害内容还固化沟通默认值。本文将交互风格视为治理对象，提出确定性多代理评估流水线，通过回放100个冻结用户脚本测量提示可控性和风格漂移。四个领域和三种人格条件的结果揭示了风格锁定的影响，为设计可定制的交互界面提供启示。",
+      "llm_tldr": "用户对LLM交互风格的控制有限，而提供商的对齐策略不仅屏蔽有害内容还固化沟通默认值。本文将交互风格视为治理对象，提出确定性多代理评估流水线，通过回放100个冻结用户脚本测量提示可控性和风格漂移。四个领域和三种人格条件的结果揭示了风格锁定的影响，为设计可定制的交互界面提供启示。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.07402v1",
+      "source": "arxiv",
+      "title": "M$^3$Exam: Benchmarking Multimodal Memory for Realistic User-Agent Interactions",
+      "abstract": "Language agents are increasingly deployed over accumulating multimodal information, yet existing benchmarks assume a human-human form with sparse visuals and straightforward content, evaluating neither reasoning over authentic multimodal file interaction nor the interpretation of concealed user information. We therefore introduce M$^3$Exam, a query-centric multimodal conversational memory benchmark built on realistic user-agent interaction, with multi-dimensional evaluation spanning cross-modal grounding and implicit information inference. Benchmarking MLLMs and memory systems reveals persistent gaps in cross-modal grounding, cross session reasoning, and the efficiency cost of accumulating multimodal context. We further propose M$^3$Proctor, a multimodal memory method that detects query modality bias and consumes raw visual sources only on demand, improving accuracy by 13% while cutting index-construction time and retrieved tokens by over 70%.",
+      "authors": [
+        "Zhengjun Huang",
+        "Wenxuan Liu",
+        "Zhoujin Tian",
+        "Wei Chen",
+        "Junle Chen",
+        "Yuqian Wu",
+        "Fangyuan Zhang",
+        "Qintian Guo",
+        "Xiaofang Zhou"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-05T15:44:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.07402v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "user-agent interaction benchmark",
+      "llm_evidence_cn": "用户-智能体交互基准",
+      "llm_evidence": "用户-智能体交互基准",
+      "canonical_evidence": "用户-智能体交互基准",
+      "llm_tldr_en": "Introduces M3Exam, a benchmark for multimodal memory in realistic user-agent interactions, revealing gaps in cross-modal grounding and cross-session reasoning.",
+      "llm_tldr_cn": "该论文提出M^3Exam基准，用于评估真实用户-智能体交互中的多模态记忆能力。与现有假设人-人交互的基准不同，它基于文件交互和隐含信息推理构建查询中心的多模态会话记忆评测。对多模态大语言模型和记忆系统的测试显示，模型在跨模态对齐、跨会话推理以及积累多模态上下文的效率方面存在持续不足。该基准为改进用户-AI交互系统的记忆和推理能力提供了重要工具。",
+      "llm_tldr": "该论文提出M^3Exam基准，用于评估真实用户-智能体交互中的多模态记忆能力。与现有假设人-人交互的基准不同，它基于文件交互和隐含信息推理构建查询中心的多模态会话记忆评测。对多模态大语言模型和记忆系统的测试显示，模型在跨模态对齐、跨会话推理以及积累多模态上下文的效率方面存在持续不足。该基准为改进用户-AI交互系统的记忆和推理能力提供了重要工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.07998v2",
+      "source": "arxiv",
+      "title": "Enhancing AI Interpretability and Safety through Localised Architectures",
+      "abstract": "Recent advances in generative AI, especially powerful Large Language Models (LLMs) and Large Reasoning Models (LRMs), raise concerns over the interpretability, safety and sustainability of these large and opaque AI models. The power of such architectures is derived not only from the scalability of deep neural networks, but also massively parallel hardware such as GPU clusters. The diffuse nature of deep neural networks gives them great function-approximation capability when provided with sufficient training data but imposes a cost in interpretability and computational efficiency. Observing that localised machine learning (ML) models tend to be more interpretable and computationally efficient than deep neural networks on small datasets, we reason by analogy that similar advantages may apply to specific localised hardware ML architectures. We argue that localised architectures with lower bandwidth but higher expressivity per node have the potential to be fundamentally more interpretable than deep neural networks running on GPU clusters while remaining competitive for smaller datasets. We then evaluate the suitability of various hardware ML paradigms for implementing such localised architectures and evaluate their per-node expressivity, energy efficiency and practical maturity of the technology required.",
+      "authors": [
+        "Ian Seet",
+        "Jonas Bozenhard",
+        "Simon Ostermann"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-06-06T06:33:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.07998v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "localized architectures for interpretability",
+      "llm_evidence_cn": "用于可解释性的局部化架构",
+      "llm_evidence": "用于可解释性的局部化架构",
+      "canonical_evidence": "用于可解释性的局部化架构",
+      "llm_tldr_en": "Proposes localized ML architectures as more interpretable and efficient alternatives to deep neural networks, enhancing AI safety and transparency.",
+      "llm_tldr_cn": "该论文针对大规模生成式AI（如LLM）可解释性差、计算成本高的问题，提出采用局部化机器学习模型。局部化模型在小数据集上比深度神经网络更可解释且计算高效。论文通过类比论证局部架构在可解释性和安全性方面的优势，为设计更加透明和可信的AI交互接口提供了不同的技术路径。",
+      "llm_tldr": "该论文针对大规模生成式AI（如LLM）可解释性差、计算成本高的问题，提出采用局部化机器学习模型。局部化模型在小数据集上比深度神经网络更可解释且计算高效。论文通过类比论证局部架构在可解释性和安全性方面的优势，为设计更加透明和可信的AI交互接口提供了不同的技术路径。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.08214v1",
+      "source": "arxiv",
+      "title": "Agentic Neuro-Symbolic Planning and Commissioning for Human-in-the-Loop Industrial Robotics with Digital Twins",
+      "abstract": "Flexible robotic automation requires systems that interpret operator intent, verify physical feasibility, and recover from execution failures across both the planning and execution stages. This paper proposes an agentic neuro-symbolic framework for human-in-the-loop industrial robotics, in which LLMs are used for tasks that require language understanding or contextual reasoning, while all verification, sequencing, and execution remain deterministic. The framework adapts the Planner-Generator-Evaluator (PGE) harness pattern from software engineering into a Specifier-Designer-Inspector (SDI) architecture for industrial robotics, combined with LangGraph-based dynamic routing for failure recovery. A two-tier recovery mechanism addresses structure-level replanning through context-aware orchestration and execution-level geometric failures through deterministic recovery skills. A Unity3D digital twin supports human inspection, modification, and re-verification prior to physical execution. Evaluated on natural-language commands across multiple difficulty levels against ten baselines, the proposed method achieves the highest task success. Ablation results confirm that structured command expansion, symbolic verification, selective LLM routing, and recovery skills are each individually necessary.",
+      "authors": [
+        "Zhihao Liu",
+        "Victor Nan Fernandez-Ayala",
+        "Tianyu Wang",
+        "Qiang Qin",
+        "Xi Vincent Wang",
+        "Dimos V. Dimarogonas",
+        "Lihui Wang"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-06T14:57:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.08214v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Human-in-the-loop industrial robotics framework with neuro-symbolic planning",
+      "llm_evidence_cn": "带有神经符号规划的人机回环工业机器人框架",
+      "llm_evidence": "带有神经符号规划的人机回环工业机器人框架",
+      "canonical_evidence": "带有神经符号规划的人机回环工业机器人框架",
+      "llm_tldr_en": "Proposes an agentic neuro-symbolic framework for human-in-the-loop industrial robotics, using LLMs for language understanding while maintaining deterministic verification and recovery.",
+      "llm_tldr_cn": "柔性机器人自动化需要理解操作员意图并处理执行失败。该论文提出智能体神经符号框架，LLM负责语言理解和上下文推理，验证和排序保持确定性。采用Specifier-Designer-Inspector架构和LangGraph动态路由，在数字孪生环境中验证了其有效性，实现了人机协作的工业机器人控制。",
+      "llm_tldr": "柔性机器人自动化需要理解操作员意图并处理执行失败。该论文提出智能体神经符号框架，LLM负责语言理解和上下文推理，验证和排序保持确定性。采用Specifier-Designer-Inspector架构和LangGraph动态路由，在数字孪生环境中验证了其有效性，实现了人机协作的工业机器人控制。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11445v1",
+      "source": "arxiv",
+      "title": "Forecasting Future Behavior as a Learning Task",
+      "abstract": "Trust in an AI system is often anchored by explanations of how it works, which one then uses to forecast its behavior on new inputs. For large reasoning models (LRMs), this conventional route is particularly difficult to follow: explanation methods for single token generations do not naturally generalize to long trajectories, and the trajectories themselves are often not faithful when read as natural language. We propose an alternative that bypasses the explanation step: treat behavior forecasting as a learnable task and train Behavior Forecasters that operates on a single reasoning trajectory to make the same forecasts one would typically seek from an explanation. The forecaster's training data is obtained by querying the LRM with no human annotation, and its inference is done in a single forward pass. We instantiate this approach on two tasks: how likely the LRM is to repeat its answer on re-runs, and how removing parts of the input changes its answer. We evaluate this approach on both tasks across three diverse reasoning datasets and find that trained Behavior Forecasters are more accurate than GPT-5.4 and Claude Opus-4.6 reading the same trajectories as naive readers, at a small fraction of their inference cost. We find that fine-tuning the backbone end-to-end and initializing it from the target LRM are each necessary for strong performance. These results show that the reasoning trajectory carries information about the LRM's future behavior that goes beyond what naive reading conveys.",
+      "authors": [
+        "Mosh Levy",
+        "Yoav Goldberg",
+        "Asa Cooper Stickland"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-09T20:56:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.11445v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes learning to forecast AI behavior as an alternative to explanations for trust",
+      "llm_evidence_cn": "提出学习预测AI行为作为解释的替代方案以建立信任",
+      "llm_evidence": "提出学习预测AI行为作为解释的替代方案以建立信任",
+      "canonical_evidence": "提出学习预测AI行为作为解释的替代方案以建立信任",
+      "llm_tldr_en": "This paper treats behavior forecasting as a learnable task, training forecasters on reasoning trajectories to predict AI behavior without requiring explanations.",
+      "llm_tldr_cn": "大型推理模型的行为难以通过传统解释来预测其可靠性。本文提出将行为预测作为可学习任务，训练行为预测器直接基于推理轨迹进行预测。训练数据无需人工标注，仅通过查询模型获取。该方法绕过解释步骤，为建立对AI系统的信任提供新途径，尤其适用于长轨迹推理模型。",
+      "llm_tldr": "大型推理模型的行为难以通过传统解释来预测其可靠性。本文提出将行为预测作为可学习任务，训练行为预测器直接基于推理轨迹进行预测。训练数据无需人工标注，仅通过查询模型获取。该方法绕过解释步骤，为建立对AI系统的信任提供新途径，尤其适用于长轨迹推理模型。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.11669v1",
+      "source": "arxiv",
+      "title": "Learning by Chatting? Investigating the Impact of Generative AI on Information Seeking and Learning",
+      "abstract": "Generative AI (GenAI) tools offer increasing opportunities for augmenting human cognitive tasks. Among these tasks, information seeking is being rapidly reshaped by GenAI tools, with potentially profound implications for learning and knowledge acquisition. To investigate these implications, we conducted a between-subjects field experiment in which participants pursued informal learning by seeking information through either ChatGPT or Google Search over a span of 8 days. Using a daily diary protocol, we gathered in-situ data on their information-seeking processes. Our findings show that participants in the ChatGPT group experienced diminished agency in their information-seeking processes, as they offloaded much of the information selection to AI, and consequently experienced greater meta-cognitive load arising from this reduced sense of control. We further highlight two sources of distortion in information access when using ChatGPT: biases in ChatGPT outputs, particularly towards providing solution-oriented artifacts over principled knowledge; and systematic shifts in users' information-seeking behaviors, whereby the conversational and socially-oriented interaction paradigm of current GenAI tools may inadvertently reduce exploration of the broader knowledge space. As a result, on average, participants in the ChatGPT group had worse learning outcomes than those using Google, especially for higher-order critical learning. Our work suggests inherent tensions between offloading information seeking to AI and meaningful learning, and provides broader implications for understanding AI's risks to human cognition.",
+      "authors": [
+        "Shravika Mittal",
+        "Su Lin Blodgett",
+        "Q. Vera Liao"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CY"
+      ],
+      "published": "2026-06-10T05:28:32+00:00",
+      "link": "https://arxiv.org/pdf/2606.11669v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "field experiment on GenAI impact on information seeking and learning",
+      "llm_evidence_cn": "实地实验研究生成AI对信息寻求和学习的影响",
+      "llm_evidence": "实地实验研究生成AI对信息寻求和学习的影响",
+      "canonical_evidence": "实地实验研究生成AI对信息寻求和学习的影响",
+      "llm_tldr_en": "A field experiment comparing ChatGPT vs Google Search reveals that ChatGPT users experience diminished agency in information seeking, with implications for learning.",
+      "llm_tldr_cn": "生成AI工具正在重塑信息寻求过程，但缺乏对学习影响的实证研究。本文开展8天实地实验，对比ChatGPT与Google搜索，采用每日日记收集过程数据。结果发现ChatGPT组用户信息寻求主动性降低，学习效果受削弱。研究揭示了人机交互中代理权丧失的风险。",
+      "llm_tldr": "生成AI工具正在重塑信息寻求过程，但缺乏对学习影响的实证研究。本文开展8天实地实验，对比ChatGPT与Google搜索，采用每日日记收集过程数据。结果发现ChatGPT组用户信息寻求主动性降低，学习效果受削弱。研究揭示了人机交互中代理权丧失的风险。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.09041v1",
+      "source": "arxiv",
+      "title": "Culturally-Aware AI for Cross-Boundary Community Learning: Undergraduate Innovation at the Intersection of Computation and Design",
+      "abstract": "Research on artificial intelligence in education (AIED) is rapidly expanding, yet technical progress often lacks human-centered grounding and adequate attention to cultural context. Community-Based Learning, a pedagogy rooted in social work, remains underrepresented in AIED research, particularly within Asia-Pacific contexts. This paper reports on cross-boundary Community-Based Learning where undergraduate students develop AI-enabled solutions for cultural heritage preservation and sustainable development. We examine how community-engaged computing operationalizes human-centered AIED across three dimensions: education, technology, and culture. We contribute a collaborative framework for culturally-aware AIED that fosters multi-stakeholder collaboration while widening participation by dissolving disciplinary silos between social work and computational science.",
+      "authors": [
+        "Jiaojiao Zhao",
+        "Weisheng Zhang",
+        "Jiawen Cai",
+        "Haibin Gao",
+        "Luyao Zhang"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.GR",
+        "cs.HC",
+        "cs.MM"
+      ],
+      "published": "2026-06-08T05:14:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.09041v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "human-centered AI in education with cultural awareness",
+      "llm_evidence_cn": "教育中的人类中心AI，融入文化意识",
+      "llm_evidence": "教育中的人类中心AI，融入文化意识",
+      "canonical_evidence": "教育中的人类中心AI，融入文化意识",
+      "llm_tldr_en": "Proposes a collaborative framework for human-centered AIED operationalized through community-engaged computing across education, technology, and culture.",
+      "llm_tldr_cn": "人工智能教育研究缺乏人本中心性和文化背景关注。本文报告跨边界社区学习项目，本科生开发AI文化遗产保护方案，提出人本中心AIED协作框架，涵盖教育、技术、文化三个维度。研究为设计文化敏感的人类中心AI系统提供了原则和案例。",
+      "llm_tldr": "人工智能教育研究缺乏人本中心性和文化背景关注。本文报告跨边界社区学习项目，本科生开发AI文化遗产保护方案，提出人本中心AIED协作框架，涵盖教育、技术、文化三个维度。研究为设计文化敏感的人类中心AI系统提供了原则和案例。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10394v1",
+      "source": "arxiv",
+      "title": "STAGE-Claw: Automated State-based Agent Benchmarking for Realistic Scenarios",
+      "abstract": "Large language models are increasingly used to power personal agents for everyday applications, but evaluating these agents remains a challenge. Existing benchmarks still rely on sandboxed artifacts, static task design, and coarse scoring, which hinder scalability and limit progress toward reliable personal-agent evaluation. This paper introduces STAGE-Claw, an automated framework for building and evaluating realistic personal-agent scenarios in state-based personal-computing environments. Given a task hint, STAGE-Claw automatically creates and validates a realistic benchmark task with its environment, task prompts, ground truth, and related verification programs. Agents are then evaluated in realistic operating environments, where performance is measured by the correctness of the final system state rather than only the textual response. Using STAGE-Claw, this paper creates a benchmark with 40 challenging real scenario agent tasks, evaluates 11 frontier models, and analyzes their task scores, costs, tool-call reliability, and common failure patterns. Overall, STAGE-Claw offers a scalable, state-based way to evaluate agents in realistic user scenarios.",
+      "authors": [
+        "Sirui Liang",
+        "Bohan Yu",
+        "Peiyu Wang",
+        "Shiguang Guo",
+        "Wenxing Hu",
+        "Pengfei Cao",
+        "Jian Zhao",
+        "Cao Liu",
+        "Ke Zeng",
+        "Xunliang Cai",
+        "Kang Liu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-09T04:16:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.10394v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "automated framework for building realistic personal-agent benchmarks to evaluate human-centered design",
+      "llm_evidence_cn": "自动化构建现实个人代理基准的框架以评估人类中心设计",
+      "llm_evidence": "自动化构建现实个人代理基准的框架以评估人类中心设计",
+      "canonical_evidence": "自动化构建现实个人代理基准的框架以评估人类中心设计",
+      "llm_tldr_en": "STAGE-Claw automatically creates realistic personal-agent benchmark tasks with state-based environments, enabling scalable and reliable evaluation for human-centered agent design.",
+      "llm_tldr_cn": "个人代理评估依赖沙盒环境和静态任务，缺乏可扩展性。本文提出STAGE-Claw，自动化创建现实个人计算环境中的基准任务。给定任务提示，自动生成环境、提示、真值和验证程序。代理在真实操作环境中评估，性能度量更准确。该框架促进以用户为中心的个人代理设计评估。",
+      "llm_tldr": "个人代理评估依赖沙盒环境和静态任务，缺乏可扩展性。本文提出STAGE-Claw，自动化创建现实个人计算环境中的基准任务。给定任务提示，自动生成环境、提示、真值和验证程序。代理在真实操作环境中评估，性能度量更准确。该框架促进以用户为中心的个人代理设计评估。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.10423v1",
+      "source": "arxiv",
+      "title": "WebChallenger: A Reliable and Efficient Generalist Web Agent",
+      "abstract": "Autonomous web navigation remains challenging for LLM agents, and the strongest generalist systems rely on proprietary reasoning models whose inference cost is prohibitive for the repetitive tasks where such agents would be most useful. We argue this gap stems not from insufficient model capability but from agent architectures that fail to replicate three human cognitive advantages: selective attention to relevant page regions, persistent memory of website structure, and procedural fluency with common interaction patterns. We introduce WebChallenger, a web agent framework that addresses each gap through architecture design rather than model scale, built around PageMem: a structured page representation deterministically constructed from the DOM that exposes each page as a hierarchy of semantic sections with short summaries. On this shared substrate we build three mechanisms that mirror the three cognitive advantages: a divide-and-conquer observation pipeline that lets the agent skim section summaries and extract details only from task-relevant regions; a lightweight exploration and memory system that traverses each website once to build a reusable map of pages and element behaviors; and compound action workflows that collapse common multi-step interactions into single agent actions, handling partial state changes automatically. Because all three operate over PageMem, the framework generalizes across websites without site-specific adapters. Using off-the-shelf open-weight models without fine-tuning, our system achieves 56.3% on WebArena, 48.7% on VisualWebArena, 51.0% on Online-Mind2Web, and 70.9% on WorkArena, approaching frontier proprietary systems at a fraction of the cost. Our code is released at https://github.com/jayoohwang1/webchallenger",
+      "authors": [
+        "Jayoo Hwang",
+        "Xiaowen Zhang",
+        "Vedant Padwal"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-09T04:53:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.10423v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "replicates human cognitive advantages for web navigation",
+      "llm_evidence_cn": "复制人类认知优势用于网页导航",
+      "llm_evidence": "复制人类认知优势用于网页导航",
+      "canonical_evidence": "复制人类认知优势用于网页导航",
+      "llm_tldr_en": "WebChallenger improves web agents by architecturally replicating three human cognitive advantages: selective attention, persistent memory, and procedural fluency, replacing proprietary reasoning.",
+      "llm_tldr_cn": "自主网页导航面临挑战，现有通用智能体依赖昂贵专有模型。论文提出WebChallenger框架，通过PageMem结构化页面表示复制人类选择性注意、持久记忆和程序性流畅三大认知优势，不依赖模型规模提升。实验表明该方法在效率与可靠性上优于基线，为构建类人交互的AI系统提供了新思路。",
+      "llm_tldr": "自主网页导航面临挑战，现有通用智能体依赖昂贵专有模型。论文提出WebChallenger框架，通过PageMem结构化页面表示复制人类选择性注意、持久记忆和程序性流畅三大认知优势，不依赖模型规模提升。实验表明该方法在效率与可靠性上优于基线，为构建类人交互的AI系统提供了新思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
