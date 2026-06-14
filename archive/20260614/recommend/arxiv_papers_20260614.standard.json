@@ -1,0 +1,326 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-14T20:17:05.300744+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2606.12086v1",
+      "source": "arxiv",
+      "title": "IntElicit: Eliciting and Assessing Contextualized Creativity via Dialogue Policy Optimization",
+      "abstract": "Contextualized assessment offers high ecological validity for evaluating creativity but introduces a critical challenge: observed performance may be confounded with cognitive proficiency (domain knowledge) and agency (willingness to engage). Meanwhile, in the age of generative AI, creative problem solving increasingly occurs in tool-mediated and human--AI interactive environments, making fully static assessment less aligned with contemporary creative practice. To address these issues, this paper proposes IntElicit, a framework for eliciting and assessing contextualized creativity via dialogue policy optimization. IntElicit functions as a constrained adaptive AI Interviewer: it provides non-directive knowledge and agency scaffolds in multi-turn interaction to reduce non-creative confounders, while preserving participants' responsibility for generating the creative content being evaluated. Specifically, to tackle sparse rewards and potential reward hacking (e.g., answer dictation) in open-ended educational dialogue, IntElicit introduces a decomposed process reward mechanism. This mechanism aligns the policy with pedagogical elicitation, rewarding prompts that draw out participant reasoning rather than producing optimal answers on their behalf. Extensive experiments, including participant simulation and a human subject study (N=64), show that IntElicit improves elicited creative outcomes over expert-designed baselines. Together, the results suggest that interactive elicitation can reveal creative potential that static FPSP-style assessment may miss, providing a formative and diagnostic lens for contextualized creativity assessment in AI-mediated learning contexts.",
+      "authors": [
+        "Mingjia Li",
+        "Jin Wu",
+        "Hong Qian",
+        "Wenhao Huang",
+        "Yiyang Huang",
+        "Yiwen Zhang",
+        "Chanjin Zheng",
+        "Xiangfeng Wang",
+        "Aimin Zhou",
+        "Jiajun Guo"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-10T13:47:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.12086v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "contextualized creativity assessment via dialogue policy optimization in human-AI interaction",
+      "llm_evidence_cn": "通过对话策略优化在人机交互环境中进行情境化创造力评估",
+      "llm_evidence": "通过对话策略优化在人机交互环境中进行情境化创造力评估",
+      "canonical_evidence": "通过对话策略优化在人机交互环境中进行情境化创造力评估",
+      "llm_tldr_en": "IntElicit proposes a dialogue policy optimization framework for eliciting and assessing creativity in human-AI interactive environments, addressing confounding factors like domain knowledge and agency.",
+      "llm_tldr_cn": "该论文针对静态创造力评估与当代人机协作创作实践脱节的问题，提出IntElicit框架。该框架通过对话策略优化训练一个自适应的AI面试官，在约束条件下提供非指导性的知识和能动性支架，从而有效地引发和评估情境化创造力。实验表明该方法能够分离认知能力和真实创造力的影响，为人机交互环境下的创造力评估提供了新范式。",
+      "llm_tldr": "该论文针对静态创造力评估与当代人机协作创作实践脱节的问题，提出IntElicit框架。该框架通过对话策略优化训练一个自适应的AI面试官，在约束条件下提供非指导性的知识和能动性支架，从而有效地引发和评估情境化创造力。实验表明该方法能够分离认知能力和真实创造力的影响，为人机交互环境下的创造力评估提供了新范式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.11058v1",
+      "source": "arxiv",
+      "title": "The social consequences of AI delegation",
+      "abstract": "A substantial body of recent work has debated whether large language models (LLMs) can serve as substitutes for human participants in behavioural research. This debate, however, captures only one direction of a rapidly changing relationship. The more consequential question is not simply whether researchers should use LLMs as human surrogates, but whether - and under what conditions - humans are beginning to use LLMs as surrogates for their own deliberation. Across domains including health, law, finance, education, and personal guidance, increasing numbers of people consult generative AI systems before, alongside, or instead of human experts, peers, or independent judgment. Although evidence for actual delegation remains uneven, this uncertainty makes the phenomenon an urgent social-scientific object of study. We argue for a research programme that treats LLMs as consequential social actors in a functional sense: systems whose outputs shape human decisions, social norms, and collective dynamics.",
+      "authors": [
+        "Henrique Ferraz de Arruda",
+        "Yamir Moreno"
+      ],
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph"
+      ],
+      "published": "2026-06-09T16:20:52+00:00",
+      "link": "https://arxiv.org/pdf/2606.11058v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "social consequences of humans delegating to AI",
+      "llm_evidence_cn": "人类将决策委托给AI的社会后果",
+      "llm_evidence": "人类将决策委托给AI的社会后果",
+      "canonical_evidence": "人类将决策委托给AI的社会后果",
+      "llm_tldr_en": "Examines when and why humans use LLMs as surrogates for their own deliberation across health, law, finance, etc., discussing urgent social consequences.",
+      "llm_tldr_cn": "大量研究讨论LLM能否替代人类参与者，但更紧迫的问题是人类开始使用LLM替代自身思考。本文跨领域（健康、法律、金融、教育）考察了人们咨询生成式AI替代人类专家或独立判断的条件与后果，指出虽然证据不一，但这一现象已成为紧迫的社会议题，对人机交互设计有着深远启示。",
+      "llm_tldr": "大量研究讨论LLM能否替代人类参与者，但更紧迫的问题是人类开始使用LLM替代自身思考。本文跨领域（健康、法律、金融、教育）考察了人们咨询生成式AI替代人类专家或独立判断的条件与后果，指出虽然证据不一，但这一现象已成为紧迫的社会议题，对人机交互设计有着深远启示。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.12848v1",
+      "source": "arxiv",
+      "title": "(Human) Attention Is (Still) All You Need: Human oversight makes AI-assisted social science reliable",
+      "abstract": "Large language models (LLMs) are increasingly used for tasks once reserved for trained researchers, including hypothesis generation, specification choice, and drafting conclusions. We argue that the reliability of AI-assisted research depends not only on model capability, but also on how cognitive labour is structured between humans and machines. We study this problem through Human-in-the-Loop Economic Research (HLER), a decision architecture based on pre-commitment, decision sequencing, accountability, and attention allocation. In a pre-specified 2*4 factorial experiment with 280 complete research runs across four datasets, an unconstrained multi-agent baseline produced critical failures in 72% of runs. Using the same underlying model, the same agent decomposition, and identical prompts for the shared reasoning agents, HLER reduced the failure rate to 16% by imposing three architectural commitments: LLMs reason but do not execute data work, data and estimation are handled deterministically, and three human decision gates bind the workflow. Fisher's exact test rejects equality of failure rates at p<0.001. Reliability gains were largest on the least publicly represented dataset, a Qing-dynasty population register, consistent with a task-based production model with Frechet-distributed output quality. An 80-run ablation suggests that deterministic computation and human gates contribute independently, with exploratory evidence of complementarity. We interpret HLER as a research harness rather than an autonomous AI scientist: it sharply reduces failures, makes residual weaknesses more visible, and prevents unreliable claims from being advanced as publication-ready outputs.",
+      "authors": [
+        "Chen Zhu",
+        "Xiaolu Wang",
+        "Weilong Zhang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "econ.GN"
+      ],
+      "published": "2026-06-11T03:22:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.12848v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "studies human-AI collaboration in research proposes human-in-the-loop architecture for reliability",
+      "llm_evidence_cn": "研究人类与AI协作进行社会科学研究，提出人在环路架构确保可靠性",
+      "llm_evidence": "研究人类与AI协作进行社会科学研究，提出人在环路架构确保可靠性",
+      "canonical_evidence": "研究人类与AI协作进行社会科学研究，提出人在环路架构确保可靠性",
+      "llm_tldr_en": "Argues that reliability of AI-assisted research depends on cognitive labor structure proposes Human-in-the-Loop Economic Research (HLER) architecture experiments show reduced critical failures.",
+      "llm_tldr_cn": "AI辅助社会科学研究的可靠性不仅取决于模型能力，还取决于人机认知劳动分配。本文提出人机协同决策架构HLER，基于预先承诺、决策顺序、问责制和注意力分配。在2*4析因实验中，无约束多智能体基线在72%的运行中出现严重失败，而HLER显著提升可靠性。该研究为人机协作提供了可操作的设计原则。",
+      "llm_tldr": "AI辅助社会科学研究的可靠性不仅取决于模型能力，还取决于人机认知劳动分配。本文提出人机协同决策架构HLER，基于预先承诺、决策顺序、问责制和注意力分配。在2*4析因实验中，无约束多智能体基线在72%的运行中出现严重失败，而HLER显著提升可靠性。该研究为人机协作提供了可操作的设计原则。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.09461v1",
+      "source": "arxiv",
+      "title": "H2HMem: A Multimodal Memory Benchmark for Agents in Human-Human Interactions",
+      "abstract": "Large language model agents are increasingly deployed in human-human interaction settings, such as meeting assistants and clinical documentation systems, where they must observe conversations and retain information for downstream queries. Unlike traditional human-assistant settings, these environments are inherently multimodal, involve complex discourse phenomena such as anaphora and deixis, and contain asynchronous or conflicting information from multiple participants. However, existing memory benchmarks largely focus on single-user, text-only interactions, failing to capture these challenges. To address this gap, we introduce H2HMem, a Human-to-Human Multimodal Memory Benchmark for evaluating memory capabilities in complex human-human interactions. H2HMem includes both dyadic and multi-party conversations with multimodal information streams, and evaluates agents along three dimensions: memory recall, reasoning, and application. Experiments with advanced agents reveal substantial limitations in constructing, retaining, and utilizing memories across modalities, participants, and sessions, highlighting substantial room for improvement in next-generation LLM agents.",
+      "authors": [
+        "Shiping Zhu",
+        "Yibo Yang",
+        "Zhengyang Wang",
+        "Tiancheng Shen",
+        "Dandan Guo",
+        "Ming-Hsuan Yang"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-08T13:17:16+00:00",
+      "link": "https://arxiv.org/pdf/2606.09461v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multimodal memory benchmark for agents in human-human interactions",
+      "llm_evidence_cn": "面向人机交互中智能体的多模态记忆基准",
+      "llm_evidence": "面向人机交互中智能体的多模态记忆基准",
+      "canonical_evidence": "面向人机交互中智能体的多模态记忆基准",
+      "llm_tldr_en": "Introduces H2HMem, a multimodal memory benchmark for agents in complex human-human interactions, covering anaphora, deixis, and conflicting info.",
+      "llm_tldr_cn": "该论文提出H2HMem，首个针对人机交互场景中多模态记忆能力的基准，包含复杂对话现象（如指代、异步信息）。现有基准仅关注单用户文本交互，而H2HMem填补了这一空白，为评估会议助手等场景中的AI代理提供了重要工具。",
+      "llm_tldr": "该论文提出H2HMem，首个针对人机交互场景中多模态记忆能力的基准，包含复杂对话现象（如指代、异步信息）。现有基准仅关注单用户文本交互，而H2HMem填补了这一空白，为评估会议助手等场景中的AI代理提供了重要工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.13196v1",
+      "source": "arxiv",
+      "title": "Under What Conditions Can a Machine Become Genuinely Creative?",
+      "abstract": "Recent AI systems can generate texts, software architectures, hypotheses, designs, and scientific workflows that appear creative. This paper asks under what conditions a machine can become genuinely creative, and how human agency can be preserved within shared cognitive and creative environments. It develops a requirement framework derived from Designics, the science of meaning-bearing intentional change. The paper argues that genuine machine creativity should not be defined by output novelty, current performance, or transient architecture alone. Instead, creativity is understood as the structural transformation of incomplete situations through recursive intervention dynamics. On this view, it depends on ten requirements: environment representation, scoped perception, conflict identification, intervention capability, consequence observation, knowledge and environment update, rescoping, local-to-global unfolding, value-based scoping, and human-AI co-living. These are organized through the three laws of Designics: perception, conflict, and capability. The paper illustrates the computational tractability of these requirements through selected cyber-physical and cyber-biological studies, including recursive element extraction, autonomous mesh generation, and neurophysiological and workload analysis. It then treats open-ended systems, automated discovery frameworks, self-modifying agents, foundation models, and agentic workflows as pressure cases: they demonstrate powerful generative means but do not by themselves establish genuine machine creativity. Finally, the paper argues that proactive AI ethics is internal to genuine machine creativity rather than an after-the-fact filter. Value-based scoping and human-AI co-living must shape how creative machines perceive environments, identify conflicts, select interventions, observe consequences, update knowledge, and rescope future action.",
+      "authors": [
+        "Yong Zeng"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-06-11T11:02:08+00:00",
+      "link": "https://arxiv.org/pdf/2606.13196v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "machine creativity human agency shared cognitive environments",
+      "llm_evidence_cn": "机器创造力与人类能动性在共享认知环境",
+      "llm_evidence": "机器创造力与人类能动性在共享认知环境",
+      "canonical_evidence": "机器创造力与人类能动性在共享认知环境",
+      "llm_tldr_en": "Develops a ten-requirement framework for genuine machine creativity based on Designics, emphasising preservation of human agency in shared creative environments.",
+      "llm_tldr_cn": "该论文探讨机器真正创造力的条件以及如何在共享认知和创意环境中保持人类能动性。从Designics理论出发，提出十个要求（如环境表示、范围限定等），将创造力理解为通过递归干预动力学对不完整情境的结构转变，而非仅输出新颖性。为人机创意交互的设计原则提供了理论框架。",
+      "llm_tldr": "该论文探讨机器真正创造力的条件以及如何在共享认知和创意环境中保持人类能动性。从Designics理论出发，提出十个要求（如环境表示、范围限定等），将创造力理解为通过递归干预动力学对不完整情境的结构转变，而非仅输出新颖性。为人机创意交互的设计原则提供了理论框架。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.12587v1",
+      "source": "arxiv",
+      "title": "Strategic Decision Support for AI Agents",
+      "abstract": "Traditionally, decision support studies how humans use machine learning models to make better decisions. In modern agentic systems, this division of roles is increasingly reversed: AI agents act on behalf of users, while humans and tools becomes support mechanisms around them. This role reversal brings reliability concerns to the forefront, since agentic errors can be consequential and agent behavior must remain aligned with human goals and constraints. Departing from the classical view of decision support, we revisit its two basic principles, the cost--value tradeoff of seeking support and the role of uncertainty quantification, in a setting where AI agents are the central actors. We propose a framework for strategic decision support for AI agents through an optimization problem that minimizes support usage subject to controlling a counterfactual missed-support error: the probability that the agent acts alone on instances where support would have materially improved its output. At the population level, we show that the optimal policy is a threshold rule on the value of support. Building on this structure, we develop an online algorithm that adaptively thresholds such a score and uses randomized exploration to control missed-support error without distributional assumptions. We further introduce a calibration-on-the-fly method that reduces unnecessary support calls online. We instantiate this framework across diverse scenarios, including information gathering, human--AI collaboration, and tool use, showing how each can be modeled through the same strategic decision-support lens. Experiments across these settings show that our method reliably controls the target error while substantially reducing support usage in practice.",
+      "authors": [
+        "Shayan Kiyani",
+        "Sima Noorani",
+        "George Pappas",
+        "Hamed Hassani"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-10T18:34:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.12587v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "strategic decision support for AI agents with human alignment",
+      "llm_evidence_cn": "面向AI智能体的战略决策支持，强调与人类目标对齐",
+      "llm_evidence": "面向AI智能体的战略决策支持，强调与人类目标对齐",
+      "canonical_evidence": "面向AI智能体的战略决策支持，强调与人类目标对齐",
+      "llm_tldr_en": "Revisits decision support principles for AI agents acting on behalf of humans, proposing an optimization framework to align agent behavior with human goals.",
+      "llm_tldr_cn": "传统决策支持研究人类如何利用机器学习，而现代智能体系统角色反转：AI代理代表用户行动。本文重新审视成本-价值权衡和不确定性量化原则，提出面向AI代理的战略决策支持框架，通过优化确保代理行为与人类目标一致，提高了智能体系统的可靠性。",
+      "llm_tldr": "传统决策支持研究人类如何利用机器学习，而现代智能体系统角色反转：AI代理代表用户行动。本文重新审视成本-价值权衡和不确定性量化原则，提出面向AI代理的战略决策支持框架，通过优化确保代理行为与人类目标一致，提高了智能体系统的可靠性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.13190v1",
+      "source": "arxiv",
+      "title": "Multi-Modal Multi-Agent Robotic Cognitive Alignment enabled by Non-Invasive Consumer Brain Computer Interfaces: A Proof of Concept Exploration",
+      "abstract": "While non-verbal behaviors and expressive movements are essential for natural human-robot interaction, existing methods often overlook a crucial element: the human's internal cognitive state. Frequently, proactive multi-agent systems can interrupt humans at inopportune moments, leading to cognitive overload and decreased task performance. This paper introduces a framework for generating \"cognitively aligned\" multi-agent interactions, enhancing the ability of robotic systems to contextually defer communications to the user of an agent system during moments of high human mental workload and engagement. We present the design and implementation of a closed-loop architecture that explores the interplay between autonomous task execution and real-time neurophysiological focus. Using a consumer-grade Brain-Computer Interface (BCI), our approach continuously monitors Electroencephalography (EEG) spectral band powers while a human performs an engagement-inducing task. We propose an engagement-driven pipeline where an HTTP-based signaling mechanism places a primary agent's sensory inputs and audio outputs into a holding state upon detecting high engagement. This allows secondary agents to seamlessly process complex, delegated tasks in the background. Once the human's cognitive state returns to a lower cognitive load baseline, the primary agent releases the queued agent message. Our preliminary results demonstrate the feasibility of leveraging real-time signal processing, Large Language Models (LLMs), and physical robotic embodiments to create cognitively-aware, non-intrusive multi-agent systems.",
+      "authors": [
+        "Nataliya Kosmyna",
+        "Liz Jenkins",
+        "Anoop K. Sinha"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "published": "2026-06-11T10:58:31+00:00",
+      "link": "https://arxiv.org/pdf/2606.13190v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses brain-computer interface to align robot communication with human cognitive state directly relevant to human-AI interaction",
+      "llm_evidence_cn": "利用脑机接口使机器人通信与人类认知状态对齐，直接相关于人机交互",
+      "llm_evidence": "利用脑机接口使机器人通信与人类认知状态对齐，直接相关于人机交互",
+      "canonical_evidence": "利用脑机接口使机器人通信与人类认知状态对齐，直接相关于人机交互",
+      "llm_tldr_en": "Proposes a framework for cognitively aligned multi-agent interactions using non-invasive BCI to detect human mental workload and defer interruptions.",
+      "llm_tldr_cn": "多智能体机器人常在不合适时机打断用户，导致认知超负荷。本文提出通过非侵入式消费级脑机接口感知人类认知负载与参与度，实现跨模态多智能体认知对齐。展示了闭环架构的概念验证，使机器人系统能在用户高认知负荷时延迟通信，提升了人机协作的自然性和效率。",
+      "llm_tldr": "多智能体机器人常在不合适时机打断用户，导致认知超负荷。本文提出通过非侵入式消费级脑机接口感知人类认知负载与参与度，实现跨模态多智能体认知对齐。展示了闭环架构的概念验证，使机器人系统能在用户高认知负荷时延迟通信，提升了人机协作的自然性和效率。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.13227v1",
+      "source": "arxiv",
+      "title": "PolyAlign: Conditional Human-Distribution Alignment",
+      "abstract": "Post-training methods such as supervised fine-tuning (SFT) and preference optimization typically align language models toward a single global assistant behavior. While effective for improving average helpfulness, this can suppress the natural variation of human responses across languages, tasks, and dialogue settings. We study this problem as conditional human-distribution alignment: models should match the human response distribution appropriate to the current interaction context, rather than a universal response style. We introduce PolyAlign, a distribution-aware alignment framework that organizes bilingual interaction data into bucket-specific human reference distributions defined by language, interaction track, response family, and length. PolyAlign combines Bucket-Aware SFT, which balances optimization across heterogeneous buckets, with Human-Distribution Preference Optimization (HDPO), which regularizes preference learning using critic-estimated distance to bucket-specific human support. Across a bilingual evaluation suite covering English and Chinese single- and multi-turn settings, PolyAlign improves conditional naturalness and distributional faithfulness while preserving competitive task utility. The results suggest that post-training should move beyond global alignment objectives toward interaction-aware alignment with human response distributions.",
+      "authors": [
+        "L. D. M. S. Sai Teja",
+        "Ufaq Khan",
+        "Sathira Silva",
+        "Xiao Wu",
+        "Muhammad Haris Khan"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-11T11:41:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.13227v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes conditional alignment to match human response distribution in interactions central to human-centered AI",
+      "llm_evidence_cn": "提出条件对齐以在交互中匹配人类响应分布，属于人本AI核心",
+      "llm_evidence": "提出条件对齐以在交互中匹配人类响应分布，属于人本AI核心",
+      "canonical_evidence": "提出条件对齐以在交互中匹配人类响应分布，属于人本AI核心",
+      "llm_tldr_en": "PolyAlign aligns language models to human response distributions conditioned on interaction context using bucket-specific reference distributions to preserve natural variation.",
+      "llm_tldr_cn": "当前对齐方法将模型推向单一全局行为，抑制了人类反应的多样性。本文提出PolyAlign，一种分布感知对齐框架，将双语交互数据按语言、交互轨道、响应族和长度分桶，学习条件人类参考分布。实验表明PolyAlign能更好地保留交互上下文中的自然变化，同时保持帮助性，为人本AI对齐提供了新范式。",
+      "llm_tldr": "当前对齐方法将模型推向单一全局行为，抑制了人类反应的多样性。本文提出PolyAlign，一种分布感知对齐框架，将双语交互数据按语言、交互轨道、响应族和长度分桶，学习条件人类参考分布。实验表明PolyAlign能更好地保留交互上下文中的自然变化，同时保持帮助性，为人本AI对齐提供了新范式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
