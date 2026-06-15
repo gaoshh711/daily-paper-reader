@@ -1,0 +1,264 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-15T22:42:47.050678+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2606.13962v1",
+      "source": "arxiv",
+      "title": "The Silent Cost of Artificial Intelligence Assistance: A Theory of Autonomy Surrender, the Recovery Mechanism, and the Restoration of Human Agency",
+      "abstract": "The integration of artificial intelligence into human decision-making environments has introduced a previously undertheorized cost: the gradual surrender of human autonomy in exchange for access to information and computational assistance. Building on the Human Identity and Autonomy Gap (HIAG) framework, this paper advances a theoretical model of autonomy surrender as a measurable, cumulative process driven by cognitive bandwidth depletion. The model proposes three interacting mechanisms: the silent cost of AI assistance, in which autonomy is transferred incrementally and without awareness; the surrender threshold, beyond which reclaiming autonomous function becomes cognitively and psychologically difficult; and the recovery mechanism, which establishes the design obligation and the ethical responsibility accompanying deliberate human re-assumption of control. The paper argues that human re-entry into the decision loop is not a passive option but an active cognitive event requiring intentional bandwidth restoration. The design of AI systems must incorporate structured re-entry pathways, here termed recovery mechanisms, that preserve human agency while appropriately distributing responsibility. The model further predicts a terminal state, here termed preference inversion, in which functional dependence on AI assistance is experienced not as a deficit but as a preference, transforming the restoration of autonomy from a design problem into a cultural and political one. Implications are drawn for AI system design, governance frameworks, and human factors research.",
+      "authors": [
+        "Ancuta Margondai",
+        "Julie Rader",
+        "Emma Rader",
+        "Sara Willox",
+        "Mustapha Mouloua"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-11T22:56:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.13962v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly addresses the cost of AI assistance on human autonomy, central to human-centered AI",
+      "llm_evidence_cn": "直接讨论AI辅助对人类自主性的影响，是人类中心AI的核心议题",
+      "llm_evidence": "直接讨论AI辅助对人类自主性的影响，是人类中心AI的核心议题",
+      "canonical_evidence": "直接讨论AI辅助对人类自主性的影响，是人类中心AI的核心议题",
+      "llm_tldr_en": "Theorizes the gradual surrender of human autonomy due to AI assistance, proposing a model with three mechanisms and a recovery mechanism.",
+      "llm_tldr_cn": "针对AI辅助可能削弱人类自主性的问题，基于人类身份与自主差距框架，提出自主性屈服理论模型。模型描述了认知带宽消耗导致的无声成本、屈服阈值和恢复机制。该理论为设计以人为中心的AI系统提供了重要的警示和设计指南，强调在追求效率的同时需保护人类能动性。",
+      "llm_tldr": "针对AI辅助可能削弱人类自主性的问题，基于人类身份与自主差距框架，提出自主性屈服理论模型。模型描述了认知带宽消耗导致的无声成本、屈服阈值和恢复机制。该理论为设计以人为中心的AI系统提供了重要的警示和设计指南，强调在追求效率的同时需保护人类能动性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.13995v1",
+      "source": "arxiv",
+      "title": "Dialogue SWE-Bench: A Benchmark for Dialogue-Driven Coding Agents",
+      "abstract": "AI coding agents have rapidly transformed software engineering, powering widely used interactive coding assistants. Despite their interactive real-world use, existing benchmarks evaluate them as fully-autonomous systems. In this work, we introduce Dialogue SWE-Bench, an automatic benchmark dataset for evaluating the ability of coding agents to resolve real-world software engineering problems through dialogue with a user. We design a novel, persona-grounded user simulator to support our task evaluation, and augment our task evaluation with automatic evaluations of dialogue quality. We also propose a new schema-guided agent, aimed at improving the dialogue capabilities of off-the-shelf coding agents, which improves over strong baselines by 3-14%. Our results indicate that better coding models do not always correspond to better dialogue models, suggesting that dialogue capability is a distinct and currently understudied dimension of coding agent performance.",
+      "authors": [
+        "Brendan King",
+        "Jeffrey Flanigan"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-12T00:30:33+00:00",
+      "link": "https://arxiv.org/pdf/2606.13995v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "dialogue-driven coding agents for human-AI collaboration",
+      "llm_evidence_cn": "对话驱动的编码代理用于人机协作",
+      "llm_evidence": "对话驱动的编码代理用于人机协作",
+      "canonical_evidence": "对话驱动的编码代理用于人机协作",
+      "llm_tldr_en": "Introduces Dialogue SWE-Bench to evaluate AI coding agents through dialogue with users, advancing human-AI collaborative software engineering.",
+      "llm_tldr_cn": "现有编码代理基准仅评估自主模式，忽略了与实际用户的对话交互。本文提出Dialogue SWE-Bench，包含用户模拟器可自动评估代理的对话能力，并设计了模式引导的代理提升对话效果。实验显示该代理在对话场景中比强基线提升3-14%。工作填补了人机协作编码评估的空白。",
+      "llm_tldr": "现有编码代理基准仅评估自主模式，忽略了与实际用户的对话交互。本文提出Dialogue SWE-Bench，包含用户模拟器可自动评估代理的对话能力，并设计了模式引导的代理提升对话效果。实验显示该代理在对话场景中比强基线提升3-14%。工作填补了人机协作编码评估的空白。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.14306v1",
+      "source": "arxiv",
+      "title": "Thinking Outside the [Chat]Box: Bridging Computer Science and Industrial Design for Cognitive-Inclusive Generative AI",
+      "abstract": "Current Generative AI (GenAI) interfaces remain largely constrained to chatbox interaction, which can impose high cognitive demands on users and create substantial barriers for people with intellectual disabilities (ID), including prompt formulation difficulties, response overload, and limited mechanisms to assess information reliability. To explore alternative interaction models for cognitive accessibility, we conducted a cross-disciplinary co-design challenge in which two student cohorts (Computer Science and Industrial Design) developed interface concepts from the same set of functional requirements (e.g., prompt scaffolding, structured output, GUI-based refinement, transparency, and personalization). Comparing the resulting proposals reveals both convergence on foundational requirements (notably initial calibration, proactive prompting, and direct manipulation of response fragments) and complementary contributions that outline a multi-layered support system. Computer Science teams primarily produced structural scaffolding, emphasizing predictability, navigability, and trust through mechanisms such as reliability indicators, explicit sources, and context management for long conversations. Industrial Design teams emphasized experiential scaffolding, focusing on pacing, attention guidance, multimodality, and proactive agency, including step-by-step response flows, focus modes, and assistant-like integrations. We synthesize these findings into a dual-layer scaffolding framework that expands the design space for cognitively accessible GenAI interaction beyond chat-centric models and motivates future work on expert refinement, technical feasibility, and empirical validation with users with ID.",
+      "authors": [
+        "Virginia Francisco",
+        "Daniel Guasch",
+        "Raquel Hervás"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-12T09:41:30+00:00",
+      "link": "https://arxiv.org/pdf/2606.14306v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "cognitive-inclusive GenAI interface design",
+      "llm_evidence_cn": "认知包容的生成式AI界面设计",
+      "llm_evidence": "认知包容的生成式AI界面设计",
+      "canonical_evidence": "认知包容的生成式AI界面设计",
+      "llm_tldr_en": "Explores alternative interaction models beyond chatbots for cognitive accessibility, combining CS and Industrial Design for inclusive GenAI interfaces.",
+      "llm_tldr_cn": "当前生成式AI的聊天界面给认知障碍用户带来高认知负担。本文通过跨学科合作设计挑战，让计算机科学和工业设计学生共同开发包含提示支架、结构化输出、透明化等功能的界面概念。结果表明，结合设计思维能显著提升交互的可访问性和用户自主性，为以人为中心的AI系统设计提供了新路径。",
+      "llm_tldr": "当前生成式AI的聊天界面给认知障碍用户带来高认知负担。本文通过跨学科合作设计挑战，让计算机科学和工业设计学生共同开发包含提示支架、结构化输出、透明化等功能的界面概念。结果表明，结合设计思维能显著提升交互的可访问性和用户自主性，为以人为中心的AI系统设计提供了新路径。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.13192v1",
+      "source": "arxiv",
+      "title": "Reasoning for Mobile User Experience with Multimodal LLMs: Task, Benchmark, and Approach",
+      "abstract": "User experience (UX) centered on usability, perceived consistency, and functional clarity is fundamental to real-world user interfaces (UI). The application of   multimodal large language models (MLLMs) in the field of user interfaces is evolving rapidly, such as visual element grounding, graphical user interface (GUI)   agents, and design-to-code generation. However, research efforts on evaluating UX based on UI screenshots are still immature. To address this, we propose UXBench,   a novel multimodal benchmark consisting of 2,000 VQA data samples designed to assess MLLMs' ability to perform UI-based reasoning. UXBench includes 8 tasks based   on real-world UI screenshots that require fine-grained diagnosis of UX issues across layout relationships, visual hierarchy, and content consistency. Our   extensive evaluation of mainstream MLLMs shows that they remain fundamentally limited in their capacity for UI-based reasoning. The results underscore the need   for further advancements in this area. To bridge this gap, we propose UI-UX, an MLLM based on Qwen3-VL-4B-Thinking foundation model and enhanced via reinforcement   learning with two key innovations: a reward routing mechanism that dynamically balances perceptual understanding and logical reasoning during inference, and an   asymmetric transition reward that suppresses redundant or insufficient reasoning steps. Experiments demonstrate that UI-UX achieves state-of-the-art (SOTA)   performance on UXBench, attaining an accuracy of 0.7963 -- surpassing Claude-4.5-Sonnet's 0.6550 -- while exhibiting strong generalization across diverse UI tasks   and maintaining low inference latency.",
+      "authors": [
+        "Ruichao Mao",
+        "Zhou Fang",
+        "Teng Guo",
+        "Hao Yang",
+        "Yaping Li",
+        "Shaohua Peng",
+        "Maji Huang",
+        "Xiaoyu Lin",
+        "Shuoyang Liu",
+        "Xuepeng Li",
+        "Yuyu Zhang",
+        "Hai Rao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-11T11:00:16+00:00",
+      "link": "https://arxiv.org/pdf/2606.13192v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "UX evaluation for UI design",
+      "llm_evidence_cn": "用户体验评估用于界面设计",
+      "llm_evidence": "用户体验评估用于界面设计",
+      "canonical_evidence": "用户体验评估用于界面设计",
+      "llm_tldr_en": "Proposes UXBench, a multimodal benchmark using UI screenshots to evaluate MLLMs' ability for UX reasoning, supporting human-centered design.",
+      "llm_tldr_cn": "当前基于UI截图的用户体验评估不成熟。本文提出UXBench基准，包含2000个VQA样本，覆盖8个任务，用于评估多模态大语言模型在UI推理中的能力，为人类中心的界面设计提供自动化评估工具。实验显示现有模型在细粒度UX诊断上仍存在显著差距。这项工作为构建更符合用户需求的AI系统奠定了基础。",
+      "llm_tldr": "当前基于UI截图的用户体验评估不成熟。本文提出UXBench基准，包含2000个VQA样本，覆盖8个任务，用于评估多模态大语言模型在UI推理中的能力，为人类中心的界面设计提供自动化评估工具。实验显示现有模型在细粒度UX诊断上仍存在显著差距。这项工作为构建更符合用户需求的AI系统奠定了基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.12972v1",
+      "source": "arxiv",
+      "title": "From Prompts to Preferences: An Open-Source Platform for Generative AI-Enhanced Conjoint Analysis",
+      "abstract": "Conjoint analysis is a widely used preference measurement method in marketing research, political science, healthcare, and human-computer interaction. Despite broad adoption, researchers without access to commercial platforms face significant barriers, as existing tools are either expensive or lack end-to-end survey infrastructure. This paper presents an open-source, self-hosted web application for designing, deploying, and analysing conjoint surveys. Beyond conventional tabular stimuli, the platform uses generative AI to produce integrated stimuli formats: textual scenario descriptions generated by a large language model, and visual stimuli by a text-to-image model. A researcher-defined base prompt is parameterised with the conjoint profile, and optional LLM-facing level annotations enrich the generation. A structured setup wizard, AI-assisted attribute suggestion, and live data analysis lower the technical barriers for researchers new to conjoint methodology. A full export bundle including all stimuli, their generating prompts, and response data facilitates transparency and reproducibility. The platform is demonstrated through a proof-of-concept study on care robot preferences for ambient assisted living (AAL, N=55) using AI-generated visual stimuli. The paper discusses the role of AI assistance in conjoint design, arguing that theoretical grounding must remain the researcher's responsibility, and outlining how genAI-generated stimuli can broaden the methodological repertoire for HCI and related fields.",
+      "authors": [
+        "Philipp Brauner"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-11T07:06:17+00:00",
+      "link": "https://arxiv.org/pdf/2606.12972v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "develops an open-source platform for conjoint analysis with generative AI, relevant to human-AI interaction in preference measurement",
+      "llm_evidence_cn": "开发了结合生成式AI的联合分析开源平台，涉及人机交互中的偏好测量",
+      "llm_evidence": "开发了结合生成式AI的联合分析开源平台，涉及人机交互中的偏好测量",
+      "canonical_evidence": "开发了结合生成式AI的联合分析开源平台，涉及人机交互中的偏好测量",
+      "llm_tldr_en": "Presents an open-source platform for conjoint analysis that uses generative AI to create integrated textual and visual stimuli, facilitating human-AI interaction in survey design.",
+      "llm_tldr_cn": "针对传统联合分析工具昂贵或缺乏端到端基础设施的问题，开发了一个开源自托管平台。该平台利用大语言模型和文本到图像模型生成集成刺激，支持参数化提示。平台降低了人机交互研究方法门槛，使研究人员能更便捷地设计偏好测量实验，促进了人机交互领域的应用研究。",
+      "llm_tldr": "针对传统联合分析工具昂贵或缺乏端到端基础设施的问题，开发了一个开源自托管平台。该平台利用大语言模型和文本到图像模型生成集成刺激，支持参数化提示。平台降低了人机交互研究方法门槛，使研究人员能更便捷地设计偏好测量实验，促进了人机交互领域的应用研究。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.14502v1",
+      "source": "arxiv",
+      "title": "From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI",
+      "abstract": "Large Language Models (LLMs) are undergoing a fundamental transformation from conversational generators into integrated AI systems capable of reasoning, action, memory, and self-improvement. We conceptualize this transition as a shift from Chatbot to Digital Colleague: from conversational answers to persistent work. We organize this transition along two tightly coupled dimensions. First, at the cognitive core level, LLMs are advancing from Chatbot-era \"fast thinking\" systems driven by next-token prediction toward Thinking LLMs that leverage inference-time computation, Chain-of-Thought reasoning, reflection, process supervision, and reinforcement learning to support more deliberate and reliable cognition. Second, at the tool-augmented task execution level, LLMs are progressing from tool-calling Agents that invoke external resources in an ad hoc manner toward OpenClaw-style workstation systems (OpenClaw) equipped with persistent Workspaces, skills, verification loops, and governance. The \"Workspace + Skill\" paradigm makes episodic tool use colleague-like via state persistence, reusable procedures, task closure, and experience reuse. We examine data construction shifts from instruction-response pairs to State-Action-Observation trajectories and evaluation from static benchmarks to sandboxed, auditable, self-evolving AI ecosystems.",
+      "authors": [
+        "Yongheng Zhang",
+        "Ziang Liu",
+        "Jiaxuan Zhu",
+        "Shuai Wang",
+        "Xiangqi Chen",
+        "Haojing Huang",
+        "Jiayi Kuang",
+        "Siyu Chen",
+        "Ao Shen",
+        "Hao Wu",
+        "Qiufeng Wang",
+        "Qian-Wen Zhang",
+        "Junnan Dong",
+        "Wenhao Jiang",
+        "Ying Shen",
+        "Hai-Tao Zheng",
+        "Yinghui Li",
+        "Di Yin",
+        "Xing Sun",
+        "Philip S. Yu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-12T14:33:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.14502v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "conceptualizes LLMs as digital colleagues for persistent human-AI collaboration",
+      "llm_evidence_cn": "将LLM概念化为数字同事，支持持久人机协作",
+      "llm_evidence": "将LLM概念化为数字同事，支持持久人机协作",
+      "canonical_evidence": "将LLM概念化为数字同事，支持持久人机协作",
+      "llm_tldr_en": "Conceptualizes the transition from conversational chatbots to persistent autonomous AI systems (Digital Colleagues) that work alongside humans.",
+      "llm_tldr_cn": "本文概念化了大语言模型从聊天机器人到数字同事的范式转变。数字同事具备推理、记忆、行动和自我改进能力，能够作为持久的工作伙伴与人类协作。论文从认知核心和工具增强两个维度分析了这一转变，为设计持久、可靠的人类-AI协作系统提供了理论框架。",
+      "llm_tldr": "本文概念化了大语言模型从聊天机器人到数字同事的范式转变。数字同事具备推理、记忆、行动和自我改进能力，能够作为持久的工作伙伴与人类协作。论文从认知核心和工具增强两个维度分析了这一转变，为设计持久、可靠的人类-AI协作系统提供了理论框架。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
