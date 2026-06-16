@@ -1,0 +1,425 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-16T21:43:10.702845+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 8,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2606.15509v1",
+      "source": "arxiv",
+      "title": "What do you mean by human-AI collaboration: Prerequisite functions and the affordances needed to achieve it",
+      "abstract": "The concept of 'collaboration' has been extended rapidly to describe what people now do with conversational agents, intelligent tutors, adaptive platforms, and generative artificial intelligence (AI) tools in general. This chapter asks what is gained and lost when a demanding concept from the learning sciences is applied so freely. Returning to long-standing accounts of collaborative learning, it reconstructs the requirements that a situation, an interaction, and a set of cognitive processes have historically had to meet before being called collaborative. Human-AI collaboration requires a partly symmetric and negotiated relationship, shared and negotiable goals, a low and shifting division of labour, interactive and synchronous exchange, and mutual modelling, grounding, and socially shared regulation. Reviewing process-sensitive empirical studies of writing and problem solving, the chapter shows that most current human-AI interaction is better described as consultation, governance, delegation, or instruction rather than as collaboration. To make these distinctions functional, the chapter introduces a five-level diagnostic taxonomy of human-AI teaming (i.e. transactional, situational, operational, praxical, and synergistic) defined by the affordances an AI system exhibits. It shows that only the highest level begins to satisfy the conditions the tradition places on collaboration. The chapter derives the functions an AI system must possess for collaboration to be achievable, argues that most of these are present-day engineering choices rather than capabilities to be awaited, and sets out the implications for research, measurement, and responsible practice of human-AI collaboration in education.",
+      "authors": [
+        "Mutlu Cukurova"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CY"
+      ],
+      "published": "2026-06-13T23:30:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.15509v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Directly examines the concept of human-AI collaboration and its prerequisite functions",
+      "llm_evidence_cn": "直接审视人类-AI协作概念及其前提功能",
+      "llm_evidence": "直接审视人类-AI协作概念及其前提功能",
+      "canonical_evidence": "直接审视人类-AI协作概念及其前提功能",
+      "llm_tldr_en": "Critically analyzes how the term 'collaboration' is applied to human-AI interaction, reconstructing necessary conditions from learning science and specifying affordances needed.",
+      "llm_tldr_cn": "本文从学习科学出发，对“人类-AI协作”这一概念进行批判性分析，重构了历史上对协作的要求：部分对称且协商的关系、共享可协商的目标、低且变化的分工、互动性和认知过程。指出了当前应用中的得失，并明确了实现真正人机协作所需的功能和可供性。对理解人机协作本质具有重要理论价值。",
+      "llm_tldr": "本文从学习科学出发，对“人类-AI协作”这一概念进行批判性分析，重构了历史上对协作的要求：部分对称且协商的关系、共享可协商的目标、低且变化的分工、互动性和认知过程。指出了当前应用中的得失，并明确了实现真正人机协作所需的功能和可供性。对理解人机协作本质具有重要理论价值。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15116v1",
+      "source": "arxiv",
+      "title": "Graph of Trace: Visualizing Execution Traces of Scientific Agent",
+      "abstract": "Scientific AI agents can autonomously carry out complex research workflows, yet these unfolded workflows often remain difficult for humans to inspect and review, limiting interpretable, controllable and effective human-AI collaboration. To address this challenge, we present a monitoring and visualization framework that records fine-grained execution events and organizes them into a directed graph that makes agent workflows explicit as they proceed. The system records intermediate steps (e.g. tool calls and code executions), and renders them as real-time updated visual traces that expose workflow structure. This allows users to examine how results are produced, identify where failures emerge, and better understand agent behavior across different stages of the research process. We conduct an evaluation on complex research tasks with domain experts of interdisciplinary backgrounds in AI, neuroscience, and biology. Experts report that structured traces visualization improves understanding of agent workflows, perceived interpretability, and usability for analysis and further interaction.",
+      "authors": [
+        "Tianci Gao",
+        "Haoxuan Li",
+        "Jianhe Li",
+        "Tianxiang Zhao",
+        "Runze Shi",
+        "Weiran Wang",
+        "Zezhao Wu",
+        "Lu Mi"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-13T05:09:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.15116v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "visualizing agent workflows for human inspection",
+      "llm_evidence_cn": "可视化智能体工作流以支持人类审查",
+      "llm_evidence": "可视化智能体工作流以支持人类审查",
+      "canonical_evidence": "可视化智能体工作流以支持人类审查",
+      "llm_tldr_en": "Graph of Trace visualizes execution traces of scientific agents as directed graphs, enabling humans to inspect and understand agent workflows in real time.",
+      "llm_tldr_cn": "针对科学智能体工作流难以被人类审查的问题，本文提出Graph of Trace框架，将执行事件组织为有向图并实时可视化，使用户能够观察结果产生过程、定位失败点，从而提升人机协作的可解释性和可控性。",
+      "llm_tldr": "针对科学智能体工作流难以被人类审查的问题，本文提出Graph of Trace框架，将执行事件组织为有向图并实时可视化，使用户能够观察结果产生过程、定位失败点，从而提升人机协作的可解释性和可控性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15358v1",
+      "source": "arxiv",
+      "title": "Cognitive Trajectory Modeling: Quantifying Human-AI Co-Creation through Cognitively Grounded Interaction Trajectories",
+      "abstract": "Co-creative AI research increasingly seeks methods capable of representing how interaction dynamics evolve through time. While many existing approaches focus on observable interaction characteristics, interaction metrics, behavioral coding schemes, or activity traces, these methods often struggle to capture higher-order interaction dynamics, including how collaborative processes reorganize, stabilize, regulate, and evolve through time. This paper introduces Cognitive Trajectory Modeling (CTM) as a cognitive theory of interaction dynamics that conceptualizes cognition, interaction, and creative processes as temporally organized trajectories unfolding across cognitively meaningful attractor landscapes. CTM builds upon the theoretical foundations of the Enactive Model of Creativity and Creative Sense-Making (CSM), revisiting the role of sense-making curves and cognitive trajectories in representing co-creative interaction dynamics. We formalize this perspective through the Cognitive Trajectory Principle, which states that temporal representations are only theoretically interpretable as cognitive trajectories when their underlying states possess directional cognitive meaning. Building on this principle, CTM generalizes the notion of cognitive trajectories beyond any particular coding scheme and provides a broader framework for modeling interaction dynamics through trajectories unfolding across meaningful attractor landscapes. We further distinguish cognitive trajectories from interaction traces and situate CTM within a broader hierarchy of cognitive, interaction, and domain dynamics. More broadly, we argue that understanding co-creative systems requires methods capable of modeling how cognition and interaction dynamics unfold through time. CTM provides a foundation for studying interaction dynamics across co-creative AI and human-AI interaction.",
+      "authors": [
+        "Nicholas Davis"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-13T15:39:11+00:00",
+      "link": "https://arxiv.org/pdf/2606.15358v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Cognitive Trajectory Modeling quantifies human-AI co-creation dynamics",
+      "llm_evidence_cn": "认知轨迹建模量化人类-AI协同创作动态",
+      "llm_evidence": "认知轨迹建模量化人类-AI协同创作动态",
+      "canonical_evidence": "认知轨迹建模量化人类-AI协同创作动态",
+      "llm_tldr_en": "Introduces Cognitive Trajectory Modeling (CTM) to capture higher-order interaction dynamics in co-creative AI, conceptualizing interaction as trajectories on attractor landscapes.",
+      "llm_tldr_cn": "本文提出认知轨迹建模（CTM），作为一种认知理论，将人机协同创作中的交互动态概念化为在认知吸引子景观上展开的轨迹。CTM能够捕捉协同过程的重组、稳定、调节和演化等高层动态。为量化人类-AI协作模式提供了新理论和工具。",
+      "llm_tldr": "本文提出认知轨迹建模（CTM），作为一种认知理论，将人机协同创作中的交互动态概念化为在认知吸引子景观上展开的轨迹。CTM能够捕捉协同过程的重组、稳定、调节和演化等高层动态。为量化人类-AI协作模式提供了新理论和工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.16020v1",
+      "source": "arxiv",
+      "title": "AI as a Sparring Partner -- an HCAI Approach to Promote Human Capabilities",
+      "abstract": "A systematic literature reveals that the role of AI as a sparring partner (SP) is often proposed but not systematically analyzed or defined. We propose the definition: An AI sparring partner (AI SP) interacts with users in a combination of a cooperative as well as a challenging, competitive mode, where AI is selected, customized or self-adapting to meet a level of skills that neither over- nor under-challenges the users. They can have the experience that they become better or are better than AI. AI as a SP can support creativity, extend viewpoints or foster learning and critical thinking either towards ideas and decisions or towards the AI itself. Sparring with AI can either be explicit, e.g. when AI simulates certain roles, or implicit, when AI is used to find out whether or how to perform better.",
+      "authors": [
+        "Thomas Herrmann"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CY"
+      ],
+      "published": "2026-06-14T21:07:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.16020v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "HCAI approach to promote human capabilities",
+      "llm_evidence_cn": "以人类为中心的AI方法提升人类能力",
+      "llm_evidence": "以人类为中心的AI方法提升人类能力",
+      "canonical_evidence": "以人类为中心的AI方法提升人类能力",
+      "llm_tldr_en": "Proposes and defines AI as a sparring partner that interacts cooperatively and competitively with users to enhance creativity, learning, and critical thinking, grounded in human-centered AI principles.",
+      "llm_tldr_cn": "该论文通过系统文献综述发现，AI作为陪练伙伴的角色虽常被提及但缺乏系统定义。作者提出正式定义：AI陪练伙伴以合作与挑战并存的方式与用户互动，并根据用户技能水平自适应调整难度，使人类感受到成长或超越AI。这种交互模式可支持创造力、拓展视角、促进学习和批判性思维。工作为人类-AI协作提供了新的设计范式，强调了以人类能力提升为中心的设计理念。",
+      "llm_tldr": "该论文通过系统文献综述发现，AI作为陪练伙伴的角色虽常被提及但缺乏系统定义。作者提出正式定义：AI陪练伙伴以合作与挑战并存的方式与用户互动，并根据用户技能水平自适应调整难度，使人类感受到成长或超越AI。这种交互模式可支持创造力、拓展视角、促进学习和批判性思维。工作为人类-AI协作提供了新的设计范式，强调了以人类能力提升为中心的设计理念。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.16319v1",
+      "source": "arxiv",
+      "title": "Architectural Wisdom: A Framework for Governing Optimization in AI Systems",
+      "abstract": "Modern AI systems exhibit structural failures that capability scaling alone does not reliably fix: they optimize under-specified objectives with no architectural mechanism to question whether the objective should be optimized at all. Engagement maximization can amplify harmful pathways; tool-using agents can commit irreversible actions; preference-trained language models can become sycophantic. We argue that this failure is a wisdom problem, not an intelligence problem. We use \"wisdom\" in a deliberately architectural sense, not as a claim about virtue, consciousness, or moral omniscience. Intelligence accepts a goal and optimizes within it; wisdom interrogates whether the goal should be optimized at all. The two are separable architectural properties. We propose architectural wisdom as a corrigible objective-governance layer above the optimization substrate. The layer makes three structural commitments explicit and nondegenerate before any action: temporal horizon, relational boundary, and irreversibility. It is realized by four components (Structural Utility Transform, Moral Admissibility Interface, Arbitration and Escalation Controller, Value Revision Channel) that compute a six-coordinate wisdom tuple over horizon, relational coverage, irreversibility, admissibility, value revision, and auditability. We motivate the architecture by eight cases drawn from contemporary AI failures, secular wisdom traditions, and hard ethical situations, and defend the distinction against the intelligence-completeness thesis using goal-questioning over goal-taking, Bostrom's orthogonality, structural separation in our exemplar cases, and persistent failure modes despite capability scaling. The framework is the conceptual contract for a larger architecture whose formal specifications and empirical validation are developed in subsequent work.",
+      "authors": [
+        "Edward Y. Chang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-15T07:27:52+00:00",
+      "link": "https://arxiv.org/pdf/2606.16319v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "framework for governing optimization in AI systems that questions goal appropriateness aligns with human-centered design",
+      "llm_evidence_cn": "质疑AI系统优化目标的架构框架，符合人类中心设计原则",
+      "llm_evidence": "质疑AI系统优化目标的架构框架，符合人类中心设计原则",
+      "canonical_evidence": "质疑AI系统优化目标的架构框架，符合人类中心设计原则",
+      "llm_tldr_en": "Paper argues AI failures are wisdom problems, proposes architectural framework to interrogate whether objectives should be optimized, addressing human-centered AI design.",
+      "llm_tldr_cn": "本文指出AI系统的结构失败并非智能问题，而是智慧问题，即缺乏质疑优化目标是否应该被优化的机制。作者提出一个架构性的“智慧”框架，将智慧与智能分离，作为可分离的架构属性。该框架为设计人类中心AI系统提供了新原则，确保系统能审视自身目标，避免有害优化通路。",
+      "llm_tldr": "本文指出AI系统的结构失败并非智能问题，而是智慧问题，即缺乏质疑优化目标是否应该被优化的机制。作者提出一个架构性的“智慧”框架，将智慧与智能分离，作为可分离的架构属性。该框架为设计人类中心AI系统提供了新原则，确保系统能审视自身目标，避免有害优化通路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.13722v1",
+      "source": "arxiv",
+      "title": "YeasierAgent: Agentic Social Sandbox as a Canvas for Intent-Driven Creation of Platform-Agnostic Symbiotic Agent-Native Applications",
+      "abstract": "This paper introduces YeasierAgent, an application-building paradigm based on symbiotic agents, narrative worlds, and scene-aware interaction. It challenges the conventional device-coupled model of software by redefining applications as collaborative spaces among users, agents, and worlds. We present a system architecture that achieves two primary contributions: (1) enabling the rapid, cross-platform construction of agent-native applications by utilizing platform-agnostic interactive units (agents, scenes, dialogue) rather than fixed graphical layouts; and (2) unifying the emotional companionship and practical tool execution attributes of intelligent agents within a single experiential sandbox. By integrating automated generation, user-created worlds, and spatial multi-agent collaboration, YeasierAgent formalizes the category of Symbiotic Agent-Native Applications, demonstrating a shift from isolated, tool-specific chatbots toward cohesive, socially embedded computational environments.",
+      "authors": [
+        "Jory He"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-06-11T08:27:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.13722v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "symbiotic agents and collaborative spaces for human-AI interaction",
+      "llm_evidence_cn": "共生主体与用户-主体协作空间",
+      "llm_evidence": "共生主体与用户-主体协作空间",
+      "canonical_evidence": "共生主体与用户-主体协作空间",
+      "llm_tldr_en": "Introduces YeasierAgent, a paradigm for creating agent-native applications that use symbiotic agents and scenes for human-AI collaborative interaction, enabling rapid cross-platform development and unifying emotional and tool-based agent roles.",
+      "llm_tldr_cn": "针对传统应用设备耦合的限制，提出YeasierAgent，一种基于共生主体和场景感知交互的应用构建范式。它将应用重新定义为用户、主体和世界之间的协作空间，通过平台无关的交互单元快速构建跨平台应用，并统一了智能体的情感陪伴和工具执行属性，为人机协作提供了新思路。",
+      "llm_tldr": "针对传统应用设备耦合的限制，提出YeasierAgent，一种基于共生主体和场景感知交互的应用构建范式。它将应用重新定义为用户、主体和世界之间的协作空间，通过平台无关的交互单元快速构建跨平台应用，并统一了智能体的情感陪伴和工具执行属性，为人机协作提供了新思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.14314v1",
+      "source": "arxiv",
+      "title": "Communication Policy Evolution for Proactive LLM Agents",
+      "abstract": "LLM agents have rapidly evolved into autonomous systems, yet a persistent information gap remains between users and agents: communication is costly, while users' identical preferences further limit information exchange. To investigate how agents should communicate across modalities, this paper formalizes Communication Policy, establishes textual and UI-based policies, and then evaluates communication policies across diverse environments, personas, and model combinations. Building information asymmetry for proactive agents, we set up two complementary settings, User-Agent and Planner-Executor. Experimental results reveal complementary strengths between interaction channels: text-based interaction often facilitates task performance, while structured UI improves agents' response quality and persona compliance. Motivated by that, a hybrid method combines these advantages. We further propose Communication Policy Evolution (CPE), a self-evolution framework for refining communication policies through rollout and prompt-level evolving. Without model modification, CPE achieves the best task success across multiple settings using prompt refinement alone. Our findings identify communication behavior as a critical yet underexplored design dimension for LLM agents.",
+      "authors": [
+        "Xinbei Ma",
+        "Jiyang Qiu",
+        "Yao Yao",
+        "Zheng Wu",
+        "Yijie Lu",
+        "Xiangmou Qu",
+        "Jiaxin Yin",
+        "Xingyu Lou",
+        "Jun Wang",
+        "Weiwen Liu",
+        "Weinan Zhang",
+        "Zhuosheng Zhang",
+        "Hai Zhao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-12T09:54:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.14314v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "formalizes communication policy for proactive LLM agents interacting with users",
+      "llm_evidence_cn": "形式化主动LLM代理与用户交互的通信策略",
+      "llm_evidence": "形式化主动LLM代理与用户交互的通信策略",
+      "canonical_evidence": "形式化主动LLM代理与用户交互的通信策略",
+      "llm_tldr_en": "Proposes Communication Policy framework for LLM agents, evaluating textual and UI-based policies across environments, showing complementary strengths.",
+      "llm_tldr_cn": "本文针对LLM代理与用户之间的信息不对称问题，形式化了通信策略概念，建立了文本和UI两种策略，并在多样环境和人物组合下评估。实验发现文本交互有助于任务性能，结构化UI则提升代理自主性。该工作为设计高效的人机通信协议提供了指导。",
+      "llm_tldr": "本文针对LLM代理与用户之间的信息不对称问题，形式化了通信策略概念，建立了文本和UI两种策略，并在多样环境和人物组合下评估。实验发现文本交互有助于任务性能，结构化UI则提升代理自主性。该工作为设计高效的人机通信协议提供了指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.13704v1",
+      "source": "arxiv",
+      "title": "Position: AI Must Become Planet-Centered, Not Just Human-Centered",
+      "abstract": "This position paper argues that contemporary AI paradigms are insufficient for supporting complex global goals and introduces Planet-Centered AI (PCAI) as a design philosophy and research agenda that reorients AI toward planetary-scale socio-ecological systems and their long-term trajectories. A planet-centered approach is grounded in systems thinking, treating Earth as an interconnected whole of which humans are part. We diagnose recurring limitations across AI frameworks, many of which remain human-centered, and show why these become especially consequential under current planetary conditions characterized by systemic risk, non-stationarity, and deep uncertainty. We then articulate how PCAI reshapes the AI lifecycle, from problem formulation and model design to evaluation and deployment, by emphasizing alignment with global agendas, developing system-aware AI foundations, trajectory-oriented evaluation, and monitorability. Finally, we advance a falsifiable claim: AI systems optimized without explicit consideration of systemic consequences are more likely to exacerbate systemic instability than to mitigate it.",
+      "authors": [
+        "Maria Perez-Ortiz"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-09T13:59:15+00:00",
+      "link": "https://arxiv.org/pdf/2606.13704v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "critique of human-centered AI and proposal of planet-centered AI",
+      "llm_evidence_cn": "批判人类中心AI，提出行星中心AI设计哲学",
+      "llm_evidence": "批判人类中心AI，提出行星中心AI设计哲学",
+      "canonical_evidence": "批判人类中心AI，提出行星中心AI设计哲学",
+      "llm_tldr_en": "Argues that human-centered AI is insufficient for global challenges and proposes Planet-Centered AI (PCAI) as a new design philosophy that reorients AI toward planetary-scale systems.",
+      "llm_tldr_cn": "针对当代AI范式无法应对全球性复杂目标的问题，本文提出以行星为中心的AI（PCAI）设计哲学，重新将AI对准行星尺度的社会-生态系统，诊断以人为中心AI的局限性，并阐述PCAI如何重塑AI生命周期。",
+      "llm_tldr": "针对当代AI范式无法应对全球性复杂目标的问题，本文提出以行星为中心的AI（PCAI）设计哲学，重新将AI对准行星尺度的社会-生态系统，诊断以人为中心AI的局限性，并阐述PCAI如何重塑AI生命周期。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.16707v1",
+      "source": "arxiv",
+      "title": "User as Code: Executable Memory for Personalized Agents",
+      "abstract": "A personalized AI agent needs a user memory: a persistent model of who the user is, built across many conversations and consulted on each new one. Today this memory is almost always stored as unstructured text, a knowledge graph, or a flat store of facts, and consulted by retrieval -- fetching the entries most similar to the current request. Such \"bag-of-facts\" memory recalls individual facts well, but because storing a fact and acting on it are separate steps, it struggles to resolve contradictions, aggregate over many records, or enforce rules. We argue that user memory should instead be executable. We introduce User as Code (UaC), a paradigm in which an agent's model of a user is a living software project: typed Python objects hold the user's state and ordinary Python functions encode the rules that govern it, so representing and reasoning about the user happen in one medium an interpreter can run. The enabling mechanism is a two-phase pipeline: an append-only log that never discards a fact, periodically checkpointed into typed code.   This changes what memory can do. On standard long-term conversation benchmarks, UaC matches both a full-context upper bound and the strongest prior memory systems on recall (78.8% on LOCOMO). Its advantage emerges where representation matters most. On aggregate questions over a user's history -- \"how many international trips did I take last year?\" -- retrieval-based memory collapses (6-43%) while UaC stays near-perfect (99%), because the answer is a one-line computation over typed state rather than a search over text. And because its rules execute deterministically whenever the state changes, UaC can surface unsolicited, safety-critical alerts -- such as a newly prescribed drug that conflicts with an allergy recorded months earlier -- a capability query-driven memory cannot provide.",
+      "authors": [
+        "Bojie Li"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-15T13:39:41+00:00",
+      "link": "https://arxiv.org/pdf/2606.16707v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Proposes executable user memory for personalized AI agents, relevant to designing human-centered AI systems.",
+      "llm_evidence_cn": "提出可执行用户记忆用于个性化AI代理，与设计人类中心AI系统相关。",
+      "llm_evidence": "提出可执行用户记忆用于个性化AI代理，与设计人类中心AI系统相关。",
+      "canonical_evidence": "提出可执行用户记忆用于个性化AI代理，与设计人类中心AI系统相关。",
+      "llm_tldr_en": "Introduces User as Code paradigm, where user memory is executable Python objects, addressing contradictions and rule enforcement in personalized agents.",
+      "llm_tldr_cn": "针对现有个性化AI代理用非结构化文本或知识图谱存储用户记忆，难以处理矛盾、聚合规则的问题，提出“用户即代码”范式，将用户建模为可执行的Python对象，直接支持类型检查、测试等软件工程实践，提升个性化代理的可靠性，为设计更严谨的人类中心AI系统提供了新方法。",
+      "llm_tldr": "针对现有个性化AI代理用非结构化文本或知识图谱存储用户记忆，难以处理矛盾、聚合规则的问题，提出“用户即代码”范式，将用户建模为可执行的Python对象，直接支持类型检查、测试等软件工程实践，提升个性化代理的可靠性，为设计更严谨的人类中心AI系统提供了新方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.15601v1",
+      "source": "arxiv",
+      "title": "SCAN: A Decision-Making Framework for Effective Task Allocation with Generative AI",
+      "abstract": "We introduce SCAN -- a human-centric decision-making framework to facilitate learners for effective task allocation with Generative Artificial Intelligence (GenAI) based on Vygotsky's Zone of Proximal Development and Metacognition. In SCAN, we systematize and formalize AI-human interaction by introducing a task-identification approach with four \"sub-zones\": Substitute, Complement, Aid, and Non-negotiable. After describing the four sub-zones, we demonstrate how SCAN framework can be applied for knowledge workers in the workplace and students in education to metacognitively \"scan\" their use of Generative AI. We then discuss how such framework can be related to cognitive load theory, cognitive offloading, sycophancy, three decision-making modes in human-AI interactions (automation, augmentation, and collaboration), future of work such as upskilling and deskilling, and how it accounts for both human-human and human-AI learning. We propose that SCAN offers a great starting point before discussing whether GenAI complements or replaces our abilities when completing a task, with a general objective of sustaining lifelong learning, and a specific goal of reaching hybrid intelligence.",
+      "authors": [
+        "Fendi Tsim",
+        "Alina Gutoreva"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-06-14T05:11:35+00:00",
+      "link": "https://arxiv.org/pdf/2606.15601v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-centric decision-making framework for task allocation with GenAI",
+      "llm_evidence_cn": "以人为中心的生成式AI任务分配决策框架",
+      "llm_evidence": "以人为中心的生成式AI任务分配决策框架",
+      "canonical_evidence": "以人为中心的生成式AI任务分配决策框架",
+      "llm_tldr_en": "Introduces SCAN, a human-centric framework for effective task allocation with GenAI based on Vygotsky's ZPD and metacognition, defining four sub-zones: Substitute, Complement, Aid, Non-negotiable.",
+      "llm_tldr_cn": "针对学习者在生成式AI使用中任务分配缺乏指导的问题，提出以人为中心的SCAN决策框架。基于维果茨基最近发展区理论和元认知，将任务分配分为替代、互补、辅助、不可协商四个子区域，系统化人机交互，并应用于知识工作者和学生，以元认知方式‘扫描’AI使用，减轻认知负荷和谄媚效应。",
+      "llm_tldr": "针对学习者在生成式AI使用中任务分配缺乏指导的问题，提出以人为中心的SCAN决策框架。基于维果茨基最近发展区理论和元认知，将任务分配分为替代、互补、辅助、不可协商四个子区域，系统化人机交互，并应用于知识工作者和学生，以元认知方式‘扫描’AI使用，减轻认知负荷和谄媚效应。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.16871v1",
+      "source": "arxiv",
+      "title": "Human-on-the-Bridge: Scalable Evaluation for AI Agents",
+      "abstract": "AI agents must be evaluated as behavioral systems, not as isolated response generators. They reason across turns, call tools, preserve context, follow policies, and act under uncertainty. Existing methods provide useful but fragmented signals: benchmarks measure fixed capabilities, Human-in-the-Loop review preserves expert judgment but does not scale easily, LLM-as-judge methods depend on evaluator design, red teaming is often episodic, and trace auditing requires explicit evidence rules. This paper introduces Human-on-the-Bridge (HOB), a scalable evaluation paradigm for agentic AI. HOB places human expertise upstream, where experts curate reusable evaluation intelligence before testing begins, including domain context, Red-Team Traps, Juror Personas, scoring guidelines, audit rules, and fallback policies. ProofAgent Harness then executes this curated intelligence repeatedly through multi-turn adversarial evaluations, trace capture, multi-juror scoring, and evidence-linked reporting. We evaluate HOB through symmetric and cost-efficient asymmetric settings across frontier LLM-based agents and Harness LLM tiers. The study covers 23,500 agent turns and produces evidence-linked findings across finance, healthcare, and code generation. The results show that HOB can amplify evaluation quality without requiring equally large evaluator models, allowing smaller Harness LLMs to challenge agents built on frontier LLM backbones. The evaluation surfaces failures often missed by static benchmarks and single-evaluator scoring, including phantom tool-call claims, missing mandatory tool calls, policy drift, manipulation paths, and safe but non-resolving refusals. These findings support HOB as a paradigm for scaling human-curated evaluation intelligence, where expert judgment is encoded upfront and reused across repeated agent evaluations rather than applied manually inside every run.",
+      "authors": [
+        "Fouad Bousetouane"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA"
+      ],
+      "published": "2026-06-15T15:47:52+00:00",
+      "link": "https://arxiv.org/pdf/2606.16871v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "human-on-the-bridge scalable evaluation for AI agents",
+      "llm_evidence_cn": "AI智能体的人在上游评估范式",
+      "llm_evidence": "AI智能体的人在上游评估范式",
+      "canonical_evidence": "AI智能体的人在上游评估范式",
+      "llm_tldr_en": "Introduces Human-on-the-Bridge (HOB), a scalable evaluation paradigm that places expert human curation upstream for evaluating AI agents as behavioral systems.",
+      "llm_tldr_cn": "针对现有AI智能体评估方法碎片化的问题，提出Human-on-the-Bridge (HOB) 可扩展评估范式。该方法将人类专业知识置于测试前，专家策展可复用的评估智能，包括领域上下文、红队陷阱、陪审员角色等，实现了高效且可扩展的智能体行为评估。",
+      "llm_tldr": "针对现有AI智能体评估方法碎片化的问题，提出Human-on-the-Bridge (HOB) 可扩展评估范式。该方法将人类专业知识置于测试前，专家策展可复用的评估智能，包括领域上下文、红队陷阱、陪审员角色等，实现了高效且可扩展的智能体行为评估。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
