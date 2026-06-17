@@ -1,0 +1,176 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-17T21:31:10.743329+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.18189v1",
+      "source": "arxiv",
+      "title": "Beyond Failure Recovery: An Engagement-Aware Human-in-the-loop Framework for Robotic Systems",
+      "abstract": "Conventional human-in-the-loop approaches typically involve users only when a robot encounters failure or uncertainty, treating humans primarily as tools for improving robot performance. However, in many human-centered robotics settings, interaction should support engagement by keeping users involved in decision-making rather than limiting them to failure-driven interventions. This is particularly compelling in physical caregiving, where mobility limitations can reduce users' ability to intervene or modulate the robot's behavior in the moment. As a result, failure-driven interaction policies may relegate users to passive observers for long stretches of the task. For example, a user with mobility limitations may feel less engaged when being continuously and passively fed by a robot. At the same time, overly frequent interaction can be tiring and increase the user's workload.   To address this trade-off, we propose Engagement-aware MPC (E-MPC), a user-engagement-aware method that plans interaction to maintain engagement while respecting a workload constraint. E-MPC leverages a user interaction dynamics model that captures how user engagement evolves as a function of both the frequency and type of interaction. Rather than requesting input only when difficulties arise during task execution, the robot proactively considers the user's preferred level of engagement throughout the task, balancing autonomy and interaction while ensuring task success. We evaluate E-MPC in simulation with several ablations and baseline comparisons. Results demonstrate the effectiveness of our approach across diverse user personas. In addition, we conduct a real-world user study with participants with emulated mobility limitations on a robot-assisted bite acquisition system, showing that E-MPC improves user experience while maintaining task success.",
+      "authors": [
+        "Jiaying Fang",
+        "Joyce Yang",
+        "Zhanxin Wu",
+        "Bohan Yang",
+        "Tapomayukh Bhattacharjee"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-06-16T17:21:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.18189v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "engagement-aware human-in-the-loop; human-centered robotics; supporting user involvement",
+      "llm_evidence_cn": "感知参与的人机交互；以人为本的机器人学；支持用户参与",
+      "llm_evidence": "感知参与的人机交互；以人为本的机器人学；支持用户参与",
+      "canonical_evidence": "感知参与的人机交互；以人为本的机器人学；支持用户参与",
+      "llm_tldr_en": "Proposes an engagement-aware human-in-the-loop framework for robotic systems that keeps users involved in decision-making, contrasting with failure-driven approaches.",
+      "llm_tldr_cn": "传统人机协作在机器人故障时才引入用户，导致用户被动观察，尤其在物理护理中降低了参与感。本文提出感知参与的人机交互框架，让用户持续参与决策而非仅在失败时介入。该框架通过保持用户参与来提升机器人任务中的人机协作体验，特别适用于行动受限场景。",
+      "llm_tldr": "传统人机协作在机器人故障时才引入用户，导致用户被动观察，尤其在物理护理中降低了参与感。本文提出感知参与的人机交互框架，让用户持续参与决策而非仅在失败时介入。该框架通过保持用户参与来提升机器人任务中的人机协作体验，特别适用于行动受限场景。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.17164v1",
+      "source": "arxiv",
+      "title": "PromptMN: Pseudo Prompting Language",
+      "abstract": "Prompting has become the primary interface between humans and generative AI, yet many natural language prompts remain fragile: roles, goals, constraints, and expected outputs are often buried in prose or left implicit. In agentic and software development workflows, a misread at the first handoff can propagate through every step, since a significant portion of agent failures stem from context ambiguities rather than model limitations. This paper introduces PromptMN, a pseudo-prompting domain-specific language that annotates natural language with compact, %-prefixed typed directives covering roles, goals, requirements, priorities, constraints, plans, inputs, and outputs. Semantic resolution lets authors write in any order while the model interprets directives by function. PromptMN sits between informal prompting and programming-style pseudocode: structured enough to be inspectable and reusable, yet lightweight enough for analysts, managers, developers, and stakeholders across the software development lifecycle (SDLC). PromptMN also pairs with reverse prompt engineering. Asking a model to restate a desired outcome as PromptMN lets users inspect the inferred roles, goals, constraints, and missing assumptions before acting, reducing repair cycles and yielding a reusable artifact for aligning people and AI tools. PromptMN's feasibility is evaluated across several frontier models, including Claude Fable 5, Claude Opus 4.8, Gemini 3.1 Pro, and GPT-5.5. The models correctly resolved PromptMN instructions, including complex structures such as repetition, conditionals, methods, and a prime-checking task, without fine-tuning. The same vocabulary applies across new codebases, maintenance, and redesign in the SDLC scenarios presented. While large-scale validation remains future work, these early results suggest PromptMN is a practical step toward clearer, more reviewable human-to-AI interaction.",
+      "authors": [
+        "Enkhzol Dovdon"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC",
+        "cs.PL",
+        "cs.SE"
+      ],
+      "published": "2026-06-15T18:04:50+00:00",
+      "link": "https://arxiv.org/pdf/2606.17164v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Pseudo-prompting language to improve human-AI interface with typed directives",
+      "llm_evidence_cn": "伪提示语言通过类型化指令改善人机接口",
+      "llm_evidence": "伪提示语言通过类型化指令改善人机接口",
+      "canonical_evidence": "伪提示语言通过类型化指令改善人机接口",
+      "llm_tldr_en": "Introduces PromptMN, a domain-specific language that annotates natural language prompts with typed directives to reduce ambiguity and improve human-AI communication in agentic workflows.",
+      "llm_tldr_cn": "本文提出了PromptMN，一种伪提示领域特定语言，通过%前缀类型化指令（角色、目标、约束等）注释自然语言提示，以解决提示歧义问题。语义解析允许任意顺序书写，模型按功能解释指令。PromptMN在保持自然语言灵活性的同时，为生成式AI交互提供了结构化接口，特别适用于智能体工作流，可减少因上下文歧义导致的失败。",
+      "llm_tldr": "本文提出了PromptMN，一种伪提示领域特定语言，通过%前缀类型化指令（角色、目标、约束等）注释自然语言提示，以解决提示歧义问题。语义解析允许任意顺序书写，模型按功能解释指令。PromptMN在保持自然语言灵活性的同时，为生成式AI交互提供了结构化接口，特别适用于智能体工作流，可减少因上下文歧义导致的失败。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.17793v1",
+      "source": "arxiv",
+      "title": "ARES: A Platform for Adaptive Role-Based Evaluation of Social Engineering Risks in Human--AI Games",
+      "abstract": "This work introduces ARES, a platform and open pilot dataset for auditing adaptive social engineering risks in LLM-mediated social decision-making through controlled social games. ARES supports human--human, human--AI, and AI--AI settings, combining configurable game templates, role-conditioned LLM agents, psychology-informed participant profiling, structured interaction trees, and synchronised behavioural and biometric acquisition, filtering, and deep-learning-based feature extraction. The pilot dataset was collected from 15 participants interacting with a role-conditioned GPT-5.4 agent in two concatenated games: an adapted Prisoner's Dilemma and an Ultimatum Game. It comprises 340 GB of raw and processed multimodal data across six streams: interaction logs, video, screen recordings, gaze logs, smartwatch signals, and game/questionnaire metadata. These data include interaction paths, written justifications, psychological profiles, subjective feedback, perceived counterpart identity, game outcomes, and derived behavioural, facial, and gaze features. Alongside the dataset, we provide descriptive analyses to characterise the pilot release. Rigorous risk evaluation is essential for the deployment of secure AI systems, as it enables the identification and mitigation of vulnerabilities, ensures the protection of sensitive data, and supports compliance with evolving regulatory and ethical standards in society.",
+      "authors": [
+        "Roberto Daza",
+        "Javier Irigoyen",
+        "Ivan Lopez",
+        "Raquel Rodriguez-Carvajal",
+        "Laura Gomez",
+        "Julian Fierrez",
+        "Ruben Tolosana",
+        "Aythami Morales"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.DB"
+      ],
+      "published": "2026-06-16T11:11:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.17793v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "platform for evaluating human-AI social interactions in games",
+      "llm_evidence_cn": "评估人机游戏中社交交互的平台",
+      "llm_evidence": "评估人机游戏中社交交互的平台",
+      "canonical_evidence": "评估人机游戏中社交交互的平台",
+      "llm_tldr_en": "ARES provides a platform with configurable games and LLM agents to audit adaptive social engineering risks in human-AI interactions.",
+      "llm_tldr_cn": "人机交互中的社交工程风险缺乏系统评估工具。本文提出ARES平台，支持人类-AI游戏设置，结合角色条件化LLM代理、心理学画像和结构化交互树。试点数据集包含15名参与者与GPT-5.4代理交互的多模态数据。该平台为人机交互安全研究提供了基础。",
+      "llm_tldr": "人机交互中的社交工程风险缺乏系统评估工具。本文提出ARES平台，支持人类-AI游戏设置，结合角色条件化LLM代理、心理学画像和结构化交互树。试点数据集包含15名参与者与GPT-5.4代理交互的多模态数据。该平台为人机交互安全研究提供了基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.17454v1",
+      "source": "arxiv",
+      "title": "Dissecting model behavior through agent trajectories",
+      "abstract": "AI agent performance is not just a modeling problem, it is fundamentally a systems problem. The advanced capabilities of models are realized through agent harnesses. Therefore, a gap between model assumptions and harness behavior can easily prevent the model's full capabilities from translating into agent performance. We formalize this as the `intent-execution' gap: the mismatch between what the model intends and what the harness executes, and vice versa. We argue that minimizing this intent-execution gap is as important as other aspects of harness design such as tools and execution loops. To illustrate the impact of this harness-model alignment, we develop a simple and customizable harness called `Simple Strands Agent' (SSA). SSA aims to find the bulk of common patterns which generalize across different model families (such as Claude, Gemini, GPT, Grok, Qwen), as well as a small number of model-specific preferences. We make two contributions: (i) we $\\textbf{reproduce or improve on the pass@1}$ performance reported by diverse model-provider families on popular agentic benchmarks (SWE-Pro, SWE-Verified and Terminal-Bench-2), and (ii) building on an $\\textbf{analysis of 138k trajectories generated by SSA}$, we look beyond the $\\texttt{pass@1}$ numbers which tend to be relatively even across frontier models. By representing agent trajectories in code state-spaces, we observe model-level differences in problem-solving behavior. Finer-grained metrics such as edit frequency, testing activity, and phase-transitions reveal how individual models allocate effort across different stages of autonomous problem solving.",
+      "authors": [
+        "Gaurav Gupta",
+        "Vatshank Chaturvedi",
+        "Jun Huan",
+        "Anoop Deoras"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-16T03:17:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.17454v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "minimizing intent-execution gap between model and harness; harness design for agent performance",
+      "llm_evidence_cn": "模型与框架之间的意图-执行鸿沟；智能体框架设计",
+      "llm_evidence": "模型与框架之间的意图-执行鸿沟；智能体框架设计",
+      "canonical_evidence": "模型与框架之间的意图-执行鸿沟；智能体框架设计",
+      "llm_tldr_en": "Formalizes the intent-execution gap in AI agent harnesses and proposes Simple Strands Agent (SSA) to improve harness-model alignment for better agent performance.",
+      "llm_tldr_cn": "针对AI智能体中模型意图与执行框架之间的不匹配问题，形式化定义了‘意图-执行鸿沟’。提出Simple Strands Agent (SSA) 可定制框架，通过优化框架-模型对齐来提升智能体性能。实验表明减少此鸿沟对智能体整体表现至关重要，为设计高效人机协作智能体提供了新视角。",
+      "llm_tldr": "针对AI智能体中模型意图与执行框架之间的不匹配问题，形式化定义了‘意图-执行鸿沟’。提出Simple Strands Agent (SSA) 可定制框架，通过优化框架-模型对齐来提升智能体性能。实验表明减少此鸿沟对智能体整体表现至关重要，为设计高效人机协作智能体提供了新视角。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

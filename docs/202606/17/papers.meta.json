@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-17",
+  "date": "2026-06-17",
+  "generated_at": "2026-06-17T21:37:14",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/17/2606.18189v1-beyond-failure-recovery-an-engagement-aware-human-in-the-loop-framework-for-robotic-systems",
+      "section": "deep",
+      "title_en": "Beyond Failure Recovery: An Engagement-Aware Human-in-the-loop Framework for Robotic Systems",
+      "authors": "Jiaying Fang, Joyce Yang, Zhanxin Wu, Bohan Yang, Tapomayukh Bhattacharjee",
+      "date": "2026-06-16",
+      "pdf": "https://arxiv.org/pdf/2606.18189v1",
+      "score": "9.0",
+      "evidence": "感知参与的人机交互；以人为本的机器人学；支持用户参与",
+      "tldr": "传统人机交互仅在机器人失败时才让用户介入，导致用户长期被动观察或负担过重。本文提出参与度感知的模型预测控制（E-MPC），通过用户交互动力学模型主动规划交互时机与类型，在维持用户参与度的同时控制工作量。仿真和真实用户实验均证明，E-MPC能够提升用户参与体验并保证任务成功率。该工作为以人为中心的机器人系统提供了平衡自主与交互的新范式。",
+      "tags": "query:hai",
+      "abstract_en": "Conventional human-in-the-loop approaches typically involve users only when a robot encounters failure or uncertainty, treating humans primarily as tools for improving robot performance. However, in many human-centered robotics settings, interaction should support engagement by keeping users involved in decision-making rather than limiting them to failure-driven interventions. This is particularly compelling in physical caregiving, where mobility limitations can reduce users' ability to intervene or modulate the robot's behavior in the moment. As a result, failure-driven interaction policies may relegate users to passive observers for long stretches of the task. For example, a user with mobility limitations may feel less engaged when being continuously and passively fed by a robot. At the same time, overly frequent interaction can be tiring and increase the user's workload.   To address this trade-off, we propose Engagement-aware MPC (E-MPC), a user-engagement-aware method that plans interaction to maintain engagement while respecting a workload constraint. E-MPC leverages a user interaction dynamics model that captures how user engagement evolves as a function of both the frequency and type of interaction. Rather than requesting input only when difficulties arise during task execution, the robot proactively considers the user's preferred level of engagement throughout the task, balancing autonomy and interaction while ensuring task success. We evaluate E-MPC in simulation with several ablations and baseline comparisons. Results demonstrate the effectiveness of our approach across diverse user personas. In addition, we conduct a real-world user study with participants with emulated mobility limitations on a robot-assisted bite acquisition system, showing that E-MPC improves user experience while maintaining task success.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/17/2606.17164v1-promptmn-pseudo-prompting-language",
+      "section": "deep",
+      "title_en": "PromptMN: Pseudo Prompting Language",
+      "authors": "Enkhzol Dovdon",
+      "date": "2026-06-15",
+      "pdf": "https://arxiv.org/pdf/2606.17164v1",
+      "score": "8.0",
+      "evidence": "伪提示语言通过类型化指令改善人机接口",
+      "tldr": "自然语言提示常因角色、目标等隐含导致歧义，成为Agent失败主因。本文提出PromptMN，一种%前缀指令的伪提示领域特定语言，结构化注释角色、目标等语义，支持任意顺序书写和逆向工程。在Claude、Gemini、GPT等多个前沿模型上无需微调即可解析重复、条件、方法和素数检查等复杂结构。PromptMN提供了可检查、可重用的提示形式，减少修复循环，提升人机交互清晰度。",
+      "tags": "query:hai",
+      "abstract_en": "Prompting has become the primary interface between humans and generative AI, yet many natural language prompts remain fragile: roles, goals, constraints, and expected outputs are often buried in prose or left implicit. In agentic and software development workflows, a misread at the first handoff can propagate through every step, since a significant portion of agent failures stem from context ambiguities rather than model limitations. This paper introduces PromptMN, a pseudo-prompting domain-specific language that annotates natural language with compact, %-prefixed typed directives covering roles, goals, requirements, priorities, constraints, plans, inputs, and outputs. Semantic resolution lets authors write in any order while the model interprets directives by function. PromptMN sits between informal prompting and programming-style pseudocode: structured enough to be inspectable and reusable, yet lightweight enough for analysts, managers, developers, and stakeholders across the software development lifecycle (SDLC). PromptMN also pairs with reverse prompt engineering. Asking a model to restate a desired outcome as PromptMN lets users inspect the inferred roles, goals, constraints, and missing assumptions before acting, reducing repair cycles and yielding a reusable artifact for aligning people and AI tools. PromptMN's feasibility is evaluated across several frontier models, including Claude Fable 5, Claude Opus 4.8, Gemini 3.1 Pro, and GPT-5.5. The models correctly resolved PromptMN instructions, including complex structures such as repetition, conditionals, methods, and a prime-checking task, without fine-tuning. The same vocabulary applies across new codebases, maintenance, and redesign in the SDLC scenarios presented. While large-scale validation remains future work, these early results suggest PromptMN is a practical step toward clearer, more reviewable human-to-AI interaction.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/17/2606.17793v1-ares-a-platform-for-adaptive-role-based-evaluation-of-social-engineering-risks-in-human--ai-games",
+      "section": "quick",
+      "title_en": "ARES: A Platform for Adaptive Role-Based Evaluation of Social Engineering Risks in Human--AI Games",
+      "authors": "Roberto Daza, Javier Irigoyen, Ivan Lopez, Raquel Rodriguez-Carvajal, Laura Gomez, Julian Fierrez, Ruben Tolosana, Aythami Morales",
+      "date": "2026-06-16",
+      "pdf": "https://arxiv.org/pdf/2606.17793v1",
+      "score": "7.0",
+      "evidence": "评估人机游戏中社交交互的平台",
+      "tldr": "大型语言模型在人机社交决策中可能引发社交工程风险。ARES平台通过可配置游戏、角色条件LLM智能体、心理画像及多模态数据采集（交互日志、视频、眼动、智能手表信号等），支持人-人、人-AI、AI-AI设置的风险审计。基于15名参与者与GPT-5.4在囚徒困境和最后通牒游戏中的交互，收集了340GB原始及处理数据。该平台和数据集为评估自适应社交工程风险、保障AI系统安全部署提供了关键工具和资源。",
+      "tags": "query:hai",
+      "abstract_en": "This work introduces ARES, a platform and open pilot dataset for auditing adaptive social engineering risks in LLM-mediated social decision-making through controlled social games. ARES supports human--human, human--AI, and AI--AI settings, combining configurable game templates, role-conditioned LLM agents, psychology-informed participant profiling, structured interaction trees, and synchronised behavioural and biometric acquisition, filtering, and deep-learning-based feature extraction. The pilot dataset was collected from 15 participants interacting with a role-conditioned GPT-5.4 agent in two concatenated games: an adapted Prisoner's Dilemma and an Ultimatum Game. It comprises 340 GB of raw and processed multimodal data across six streams: interaction logs, video, screen recordings, gaze logs, smartwatch signals, and game/questionnaire metadata. These data include interaction paths, written justifications, psychological profiles, subjective feedback, perceived counterpart identity, game outcomes, and derived behavioural, facial, and gaze features. Alongside the dataset, we provide descriptive analyses to characterise the pilot release. Rigorous risk evaluation is essential for the deployment of secure AI systems, as it enables the identification and mitigation of vulnerabilities, ensures the protection of sensitive data, and supports compliance with evolving regulatory and ethical standards in society.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/17/2606.17454v1-dissecting-model-behavior-through-agent-trajectories",
+      "section": "quick",
+      "title_en": "Dissecting model behavior through agent trajectories",
+      "authors": "Gaurav Gupta, Vatshank Chaturvedi, Jun Huan, Anoop Deoras",
+      "date": "2026-06-16",
+      "pdf": "https://arxiv.org/pdf/2606.17454v1",
+      "score": "6.0",
+      "evidence": "模型与框架之间的意图-执行鸿沟；智能体框架设计",
+      "tldr": "AI agent性能不仅取决于模型能力，还受执行框架与模型意图匹配的影响，存在“意图-执行”差距。为最小化这一差距，提出Simple Strands Agent (SSA) harness，可定制且跨模型通用。通过分析138k轨迹，在代码状态空间中建模行为，不仅复现或改进了SWE-Pro等基准上的pass@1性能，还揭示了不同模型在编辑频率、测试活动等细粒度指标上的行为差异。研究表明，缩小意图-执行差距与优化工具同样重要，SSA为理解模型行为提供了新视角。",
+      "tags": "query:hai",
+      "abstract_en": "AI agent performance is not just a modeling problem, it is fundamentally a systems problem. The advanced capabilities of models are realized through agent harnesses. Therefore, a gap between model assumptions and harness behavior can easily prevent the model's full capabilities from translating into agent performance. We formalize this as the `intent-execution' gap: the mismatch between what the model intends and what the harness executes, and vice versa. We argue that minimizing this intent-execution gap is as important as other aspects of harness design such as tools and execution loops. To illustrate the impact of this harness-model alignment, we develop a simple and customizable harness called `Simple Strands Agent' (SSA). SSA aims to find the bulk of common patterns which generalize across different model families (such as Claude, Gemini, GPT, Grok, Qwen), as well as a small number of model-specific preferences. We make two contributions: (i) we $\\textbf{reproduce or improve on the pass@1}$ performance reported by diverse model-provider families on popular agentic benchmarks (SWE-Pro, SWE-Verified and Terminal-Bench-2), and (ii) building on an $\\textbf{analysis of 138k trajectories generated by SSA}$, we look beyond the $\\texttt{pass@1}$ numbers which tend to be relatively even across frontier models. By representing agent trajectories in code state-spaces, we observe model-level differences in problem-solving behavior. Finer-grained metrics such as edit frequency, testing activity, and phase-transitions reveal how individual models allocate effort across different stages of autonomous problem solving.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
