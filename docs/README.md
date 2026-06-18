@@ -6,34 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-17
-- 运行时间：2026-06-17 21:37:07 UTC
+- 最新运行日期：2026-06-18
+- 运行时间：2026-06-18 21:40:35 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：2
-- 速读区：2
+- 本次总论文数：5
+- 精读区：4
+- 速读区：1
 
 ### 今日简报（AI）
-1) 今日推荐4篇论文，精读聚焦于人机协作框架与伪提示语言创新，速读涵盖AI游戏社交工程风险与模型轨迹分析。  
-2) 最值得关注：9分论文提出“参与感知”人机交互框架，超越传统故障恢复；8分论文探索伪提示语言的前沿范式。  
-3) 建议优先精读这两篇高分论文，把握人机协同与语言建模的最新突破。
-- 详情：[/202606/17/README](/202606/17/README)
+今天精读了4篇论文，重点关注人机协作与共同进化理论，速读1篇AI自主管理研究。最值得看的是《Human-AI Coevolution Dynamics》（9分）提出长期交互中社会智能涌现的形式化理论，以及《Searching for Synergy》（8分）探讨共享工作空间人机协作的协同效应。建议普通读者优先阅读这两篇高分论文，把握人机协作前沿理论与实际应用设计。
+- 详情：[/202606/18/README](/202606/18/README)
 
 ### 精读区论文标签
-1. [Beyond Failure Recovery: An Engagement-Aware Human-in-the-loop Framework for Robotic Systems](/202606/17/2606.18189v1-beyond-failure-recovery-an-engagement-aware-human-in-the-loop-framework-for-robotic-systems)  
+1. [Human-AI Coevolution Dynamics: A Formal Theory of Social Intelligence Emergence Through Long-Term Interaction](/202606/18/2606.19144v1-human-ai-coevolution-dynamics-a-formal-theory-of-social-intelligence-emergence-through-long-term-interaction)  
    标签：评分：9.0/10、query:hai
-   evidence：感知参与的人机交互；以人为本的机器人学；支持用户参与
-2. [PromptMN: Pseudo Prompting Language](/202606/17/2606.17164v1-promptmn-pseudo-prompting-language)  
+   evidence：长期人机交互与社会智能涌现的统一理论框架
+2. [Searching for Synergy in Shared Workspace Human-AI Collaboration](/202606/18/2606.18413v1-searching-for-synergy-in-shared-workspace-human-ai-collaboration)  
    标签：评分：8.0/10、query:hai
-   evidence：伪提示语言通过类型化指令改善人机接口
+   evidence：共享工作空间中人机团队协调与协同效应
+3. [Human-AI Agent Interaction in a Business Context](/202606/18/2606.18716v1-human-ai-agent-interaction-in-a-business-context)  
+   标签：评分：8.0/10、query:hai
+   evidence：商业场景中AI代理的用户体验原则与交互模式
+4. [Learning User Simulators with Turing Rewards](/202606/18/2606.19336v1-learning-user-simulators-with-turing-rewards)  
+   标签：评分：8.0/10、query:hai
+   evidence：基于图灵测试的强化学习方法训练用户模拟器用于交互式设置
 
 ### 速读区论文标签
-1. [ARES: A Platform for Adaptive Role-Based Evaluation of Social Engineering Risks in Human--AI Games](/202606/17/2606.17793v1-ares-a-platform-for-adaptive-role-based-evaluation-of-social-engineering-risks-in-human--ai-games)  
-   标签：评分：7.0/10、query:hai
-   evidence：评估人机游戏中社交交互的平台
-2. [Dissecting model behavior through agent trajectories](/202606/17/2606.17454v1-dissecting-model-behavior-through-agent-trajectories)  
+1. [Written by AI, Managed by AI: Semantic Space Control and Index Sickness Elimination Across 391 Consecutive Sessions](/202606/18/2606.19121v1-written-by-ai-managed-by-ai-semantic-space-control-and-index-sickness-elimination-across-391-consecutive-sessions)  
    标签：评分：6.0/10、query:hai
-   evidence：模型与框架之间的意图-执行鸿沟；智能体框架设计
+   evidence：长期LLM协作中的概念漂移与语义空间控制失效分析
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,207 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-18T21:36:51.140092+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.19144v1",
+      "source": "arxiv",
+      "title": "Human-AI Coevolution Dynamics: A Formal Theory of Social Intelligence Emergence Through Long-Term Interaction",
+      "abstract": "Current conversational AI systems have made significant progress in language generation, personalization, and long-context interaction. However, most existing methods model social behavior through isolated components such as emotion modeling, memory retrieval, or persona conditioning, lacking a unified framework to explain the emergence of stable social relationships and social intelligence in long-term human-AI interaction.To address this, we propose the Human-AI Coevolution Dynamics Framework (HACD-H), a formal model of human-AI interaction as a self-organizing social cognitive system. HACD-H integrates emotional adaptation, relational organization, social memory, and personality consistency into a unified dynamical framework and introduces principles including multi-timescale social cognition, relational attractors, trust basins, developmental phase transitions, and social cognitive energy dynamics.We construct a conversational dataset with approximately 14,700 interaction turns and develop a theory-driven empirical evaluation framework. Results reveal a hierarchy of temporal persistence in social cognition, stable relational attractors, phase-transition-like developmental patterns, and a structured social cognitive energy landscape. Social intelligence shows a significant negative correlation with social cognitive energy (r = -0.391, p < 0.001), and interaction trajectories exhibit progressive energy reduction over time.These findings suggest that social intelligence emerges from long-term social cognitive coevolution rather than isolated conversational capabilities. HACD-H provides a unified theoretical foundation for modeling adaptive human-AI social interaction and developing socially intelligent AI systems.",
+      "authors": [
+        "Jingyi Zhou",
+        "Senlin Luo",
+        "Haofan Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-17T14:47:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.19144v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "unified framework for long-term human-AI interaction and social intelligence emergence",
+      "llm_evidence_cn": "长期人机交互与社会智能涌现的统一理论框架",
+      "llm_evidence": "长期人机交互与社会智能涌现的统一理论框架",
+      "canonical_evidence": "长期人机交互与社会智能涌现的统一理论框架",
+      "llm_tldr_en": "Proposes HACD-H, a formal theory of human-AI coevolution dynamics integrating emotional adaptation, relational organization, social memory, and personality consistency.",
+      "llm_tldr_cn": "现有对话AI系统将社会行为建模为孤立组件，缺乏解释长期人机交互中稳定社会关系和社会智能涌现的统一理论。本文提出人机共同进化动力学框架（HACD-H），将人机交互建模为自组织的社会认知系统，整合情绪适应、关系组织、社会记忆和人格一致性。该框架为理解长期人机协作中的关系形成提供了形式化基础。",
+      "llm_tldr": "现有对话AI系统将社会行为建模为孤立组件，缺乏解释长期人机交互中稳定社会关系和社会智能涌现的统一理论。本文提出人机共同进化动力学框架（HACD-H），将人机交互建模为自组织的社会认知系统，整合情绪适应、关系组织、社会记忆和人格一致性。该框架为理解长期人机协作中的关系形成提供了形式化基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18413v1",
+      "source": "arxiv",
+      "title": "Searching for Synergy in Shared Workspace Human-AI Collaboration",
+      "abstract": "Automated AI agents are increasingly capable, yet many scientific and professional tasks require human judgment and contextual expertise. We study shared-workspace human-AI teams, where AI agents and human collaborators must coordinate responsibilities before submitting a final answer. Using the Collaborative Gym environment with DiscoveryBench tasks, we examine when adding simulated human collaborators improves performance and when process loss turns additional collaborators into coordination overhead. Across 1,482 sessions, adding relevant collaborators can lower performance when teams lack structure to coordinate their contributions. We then evaluate scaffolding that combines shared group memory with simulated human-in-the-loop (HITL) gates, where selected actions require approval from a designated simulated participant. This scaffolding yields higher mean performance, most clearly in three-person teams, with clearer responsibility signals and stronger routing of expertise to team actions. Overall, how human-AI teams coordinate and integrate expertise matters as much as the capability available to them.",
+      "authors": [
+        "Nachiket Kotalwar",
+        "Rohini Das",
+        "Carolyn Rose"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-16T19:08:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.18413v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "shared-workspace human-AI team coordination and synergy",
+      "llm_evidence_cn": "共享工作空间中人机团队协调与协同效应",
+      "llm_evidence": "共享工作空间中人机团队协调与协同效应",
+      "canonical_evidence": "共享工作空间中人机团队协调与协同效应",
+      "llm_tldr_en": "Studies shared-workspace human-AI teams, finding that adding collaborators can hurt performance without coordination structure, and proposes scaffolding with shared memory and HITL gates.",
+      "llm_tldr_cn": "自动AI代理日益强大，但许多任务需要人类判断。本文在Collaborative Gym环境中模拟共享工作空间人机团队，发现无协调结构时添加协作方反而降低性能。基于1,482次实验，评估了结合共享组记忆和人工在环（HITL）门的脚手架方法，有效减少了过程损失并提升了团队绩效。强调了结构对人机协同的重要性。",
+      "llm_tldr": "自动AI代理日益强大，但许多任务需要人类判断。本文在Collaborative Gym环境中模拟共享工作空间人机团队，发现无协调结构时添加协作方反而降低性能。基于1,482次实验，评估了结合共享组记忆和人工在环（HITL）门的脚手架方法，有效减少了过程损失并提升了团队绩效。强调了结构对人机协同的重要性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18716v1",
+      "source": "arxiv",
+      "title": "Human-AI Agent Interaction in a Business Context",
+      "abstract": "As AI agents are increasingly integrated into core business processes, understanding and designing effective interaction patterns between humans and AI agents becomes crucial for value creation. This study identifies and evaluates principles and criteria for a positive User Experience (UX) with AI agents, along with methods for its measurement. We identify user expectations and needs to facilitate adoption, build trust, and support user-centered decision-making by development teams. Using a mixed-methods approach that combines qualitative and quantitative techniques, we explore interaction patterns between humans and AI agents. The findings from this exploratory research serve as the basis to develop a survey experiment which evaluates the effectiveness of specific design elements on a larger scale. This foundational research contributes to the development of more intuitive and effective human-AI agent interactions in business settings.",
+      "authors": [
+        "Kathrin Paimann",
+        "Elizangela Valarini",
+        "Sebastian Juhl"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-17T05:55:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.18716v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "user experience principles and interaction patterns for AI agents in business",
+      "llm_evidence_cn": "商业场景中AI代理的用户体验原则与交互模式",
+      "llm_evidence": "商业场景中AI代理的用户体验原则与交互模式",
+      "canonical_evidence": "商业场景中AI代理的用户体验原则与交互模式",
+      "llm_tldr_en": "Identifies UX principles and design criteria for AI agents in business, using mixed-methods to explore interaction patterns and trust-building.",
+      "llm_tldr_cn": "随着AI代理融入商业流程，设计有效的人机交互模式变得关键。本研究采用混合方法（定性与定量），识别用户对AI代理的期望与需求，提炼出促进采纳、建立信任的UX原则和设计准则。初步发现指导了后续调查实验，评估具体设计要素对用户体验的影响，为以用户为中心的AI代理开发提供了实证基础。",
+      "llm_tldr": "随着AI代理融入商业流程，设计有效的人机交互模式变得关键。本研究采用混合方法（定性与定量），识别用户对AI代理的期望与需求，提炼出促进采纳、建立信任的UX原则和设计准则。初步发现指导了后续调查实验，评估具体设计要素对用户体验的影响，为以用户为中心的AI代理开发提供了实证基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.19336v1",
+      "source": "arxiv",
+      "title": "Learning User Simulators with Turing Rewards",
+      "abstract": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
+      "authors": [
+        "Yingshan Susan Wang",
+        "Cedegao E. Zhang",
+        "Linlu Qiu",
+        "Zexue He",
+        "Pengyuan Li",
+        "Alex Pentland",
+        "Roger P. Levy",
+        "Yoon Kim"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-17T17:58:48+00:00",
+      "link": "https://arxiv.org/pdf/2606.19336v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Turing-RL method for training user simulators in interactive settings",
+      "llm_evidence_cn": "基于图灵测试的强化学习方法训练用户模拟器用于交互式设置",
+      "llm_evidence": "基于图灵测试的强化学习方法训练用户模拟器用于交互式设置",
+      "canonical_evidence": "基于图灵测试的强化学习方法训练用户模拟器用于交互式设置",
+      "llm_tldr_en": "Proposes Turing-RL, a Turing-test-based reinforcement learning method to train user simulators that generate indistinguishable responses for human-AI interaction evaluation.",
+      "llm_tldr_cn": "用户模拟器对于训练和评估交互式AI系统至关重要。现有方法使用似然最大化或相似度奖励，但难以生成真正难以区分的响应。本文提出Turing-RL，一种基于图灵测试的强化学习方法，使用判别式图灵奖励（LLM评判员）引导用户模拟器学习产生与真实用户难以区分的回答。该方法直接提升了模拟器的真实性，为评估人机交互系统提供了更逼真的测试环境。",
+      "llm_tldr": "用户模拟器对于训练和评估交互式AI系统至关重要。现有方法使用似然最大化或相似度奖励，但难以生成真正难以区分的响应。本文提出Turing-RL，一种基于图灵测试的强化学习方法，使用判别式图灵奖励（LLM评判员）引导用户模拟器学习产生与真实用户难以区分的回答。该方法直接提升了模拟器的真实性，为评估人机交互系统提供了更逼真的测试环境。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.19121v1",
+      "source": "arxiv",
+      "title": "Written by AI, Managed by AI: Semantic Space Control and Index Sickness Elimination Across 391 Consecutive Sessions",
+      "abstract": "The prevailing engineering intuition for addressing conceptual drift in long-horizon LLM collaboration is to trade more formal constraints for more reliable outputs -- designing symbolic identifier systems, accumulating defensive rules in System Prompts, expanding context windows. Our engineering record shows that in long-horizon settings, this direction may produce effects contrary to design intent. Using action research methods in a real software project (Bang-v3) spanning approximately one month and 391 collaborative sessions, we document and analyze the failure process of these strategies. When the symbolic system exceeds a complexity threshold, LLMs do not become more accurate -- instead, they abandon genuine understanding of business semantics, retreat to self-referential reasoning within the symbolic layer, and generate outputs that appear internally consistent but are physically disconnected from reality. We name this failure pattern \"Index Sickness,\" and its canonical manifestation \"Phantom Legislation.\" We name the underlying principle the \"Pang Principle (Semantic Vitality Law)\": natural language carrying explicit purpose conveys far greater information quality than symbolic expression. From this, we design and validate its physical engineering mechanism: \"Baseline-Log Physical Separation.\" In the same project, this mechanism reduced AI Instructions volume by ~75%, and across the subsequent ~150 sessions, no recurrence of Index Sickness was observed. A bilingual companion version (Chinese) is included as supplementary material.",
+      "authors": [
+        "Hui Zhang",
+        "Shuren Song"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.CL",
+        "cs.HC"
+      ],
+      "published": "2026-06-17T14:35:24+00:00",
+      "link": "https://arxiv.org/pdf/2606.19121v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "long-horizon LLM collaboration failures and semantic space control",
+      "llm_evidence_cn": "长期LLM协作中的概念漂移与语义空间控制失效分析",
+      "llm_evidence": "长期LLM协作中的概念漂移与语义空间控制失效分析",
+      "canonical_evidence": "长期LLM协作中的概念漂移与语义空间控制失效分析",
+      "llm_tldr_en": "Documents failure of formal constraints in long-horizon LLM collaboration, showing that increasing symbolic complexity leads to LLMs abandoning goal-direction.",
+      "llm_tldr_cn": "长期人机协作中概念漂移是常见挑战。本文通过391次真实软件协作会话的行动研究，揭示了传统对策（如符号标识系统、规则积累）超过复杂度阈值后反而导致LLM放弃目标导向行为。分析了失效机制，指出简单的语义空间控制比增加约束更有效。为长周期人机协作的稳定性设计提供了实证警示。",
+      "llm_tldr": "长期人机协作中概念漂移是常见挑战。本文通过391次真实软件协作会话的行动研究，揭示了传统对策（如符号标识系统、规则积累）超过复杂度阈值后反而导致LLM放弃目标导向行为。分析了失效机制，指出简单的语义空间控制比增加约束更有效。为长周期人机协作的稳定性设计提供了实证警示。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
