@@ -1,0 +1,219 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-19T20:51:05.803273+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2606.18413v2",
+      "source": "arxiv",
+      "title": "Searching for Synergy in Shared Workspace Human-AI Collaboration",
+      "abstract": "Automated AI agents are increasingly capable, yet many scientific and professional tasks require human judgment and contextual expertise. We study shared-workspace human-AI teams, where AI agents and human collaborators must coordinate responsibilities before submitting a final answer. Using the Collaborative Gym environment with DiscoveryBench tasks, we examine when adding simulated human collaborators improves performance and when process loss turns additional collaborators into coordination overhead. Across 1,482 sessions, adding relevant collaborators can lower performance when teams lack structure to coordinate their contributions. We then evaluate scaffolding that combines shared group memory with simulated human-in-the-loop (HITL) gates, where selected actions require approval from a designated simulated participant. This scaffolding yields higher mean performance, most clearly in three-person teams, with clearer responsibility signals and stronger routing of expertise to team actions. Overall, how human-AI teams coordinate and integrate expertise matters as much as the capability available to them.",
+      "authors": [
+        "Nachiket Kotalwar",
+        "Rohini Das",
+        "Carolyn Rose"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-16T19:08:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.18413v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "studies shared-workspace human-AI teams and coordination methods",
+      "llm_evidence_cn": "研究共享工作空间中的人机协作团队与协调方法",
+      "llm_evidence": "研究共享工作空间中的人机协作团队与协调方法",
+      "canonical_evidence": "研究共享工作空间中的人机协作团队与协调方法",
+      "llm_tldr_en": "This paper investigates when adding simulated human collaborators to shared-workspace AI teams improves or hinders performance, and proposes scaffolding with shared memory and HITL gates to enhance synergy.",
+      "llm_tldr_cn": "该论文研究在共享工作空间中添加模拟人类协作者对AI团队性能的影响，发现缺乏结构协调时会导致过程损失。作者提出结合共享群组记忆和人在回路门控的支架方案，以提升人机协作的协同效应。实验基于Collaborative Gym环境，在1482次会话中验证了方法的有效性。",
+      "llm_tldr": "该论文研究在共享工作空间中添加模拟人类协作者对AI团队性能的影响，发现缺乏结构协调时会导致过程损失。作者提出结合共享群组记忆和人在回路门控的支架方案，以提升人机协作的协同效应。实验基于Collaborative Gym环境，在1482次会话中验证了方法的有效性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.19514v1",
+      "source": "arxiv",
+      "title": "LLM-Mediated Human-AI Interaction in Search and Rescue: Impact of Expertise on Attentional Allocation",
+      "abstract": "Human-AI teaming (HAT) increasingly involves AI systems that provide real-time, context-aware guidance in complex tasks. While such systems can improve performance, their effectiveness depends on how they shape human cognition and behavior. In particular, AI assistance can introduce cognitive demands and influence attention, planning, and interaction with the task environment, with effects that can vary across levels of expertise. This work investigates these mechanisms in a simulated search and rescue (SAR) environment. We compare human performance under two LLM (Large Language Model)-guided conditions and a no-LLM baseline, and analyze interaction at multiple levels, including task performance, eye-tracking measures, and planning behavior. Eye tracking provides fine-grained insight into attention allocation and interaction with AI guidance, while behavioral measures capture how users structure and adapt their decisions over time. Results indicate that LLM guidance enhanced task efficiency (higher rewards and victims-per-step) but did not increase total victims saved. Eye-tracking data revealed an attention-guidance trade-off, with visual resources shifting to the chat interface alongside increased pupil size variability. Expertise moderated this effect: novices exhibited passive AI reliance, whereas experts maintained a \"verification loop\" through persistent environmental scanning. These findings suggest that LLM-mediated teaming efficacy depends on the operator's ability to cross-reference AI guidance with ground truth to maintain situational awareness.",
+      "authors": [
+        "Elahe Oveisi",
+        "Hemanth Manjunatha"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-17T18:55:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.19514v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "investigates LLM-mediated human-AI interaction in search and rescue, focusing on expertise and attention",
+      "llm_evidence_cn": "研究大语言模型介导的人机交互在搜救场景中的影响，关注专家与注意力分配",
+      "llm_evidence": "研究大语言模型介导的人机交互在搜救场景中的影响，关注专家与注意力分配",
+      "canonical_evidence": "研究大语言模型介导的人机交互在搜救场景中的影响，关注专家与注意力分配",
+      "llm_tldr_en": "This paper studies how LLM-based AI assistance affects human attention and performance in search and rescue tasks, varying by expertise level, using eye-tracking and task metrics.",
+      "llm_tldr_cn": "本论文通过模拟搜救环境，研究基于大语言模型的AI辅助对操作员注意力分配和任务性能的影响，并分析专家与新手的差异。使用眼动追踪和多层次指标，发现AI辅助能提升性能但增加认知负荷，效果因经验而异。",
+      "llm_tldr": "本论文通过模拟搜救环境，研究基于大语言模型的AI辅助对操作员注意力分配和任务性能的影响，并分析专家与新手的差异。使用眼动追踪和多层次指标，发现AI辅助能提升性能但增加认知负荷，效果因经验而异。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.19116v1",
+      "source": "arxiv",
+      "title": "Towards an Agent-First Web: Redesigning the Web for AI Agents",
+      "abstract": "The World Wide Web was built on an assumption held for three decades: the primary consumer of web content is a human being. This permeates every layer; its access model presumes human visitors, its economics rest on human attention, and its content targets human perception. The rapid emergence of AI agents as intermediaries between humans and web content invalidates this assumption. Yet the web resists agents through blanket blocking, CAPTCHA-based exclusion, and economic models that treat agent access as extraction rather than legitimate interaction.   This paper proposes a principled redesign across three layers. At the access layer, agents acting for humans should inherit equivalent access rights, governed by rate limiting and agent identification metadata in HTTP requests, analogous to browser headers, alongside a dual-layer architecture serving human-readable and agent-optimized content from the same domain. At the economic layer, we propose an intent-based tier framework grounded in the agent-as-human-proxy principle: an agent's economic obligation mirrors that of the human it represents. A token-based subscription model meters content in tokens rather than pageviews, alongside a commissioned content economy anchoring AI content production in human intentionality. At the content layer, we identify epistemic recursion, the self-referential loop in which AI-generated content is consumed by agents to produce further content, progressively detaching web knowledge from human ground truth. We propose the Agent Text Markup Language (ATML), a four-level human supervision tier model, and a cryptographic provenance chain to counter this threat.   Together these constitute ten design principles for an agent-first internet, one in which agents are first-class citizens whose integration requires renegotiating the web's foundational social contract across access, economics, and content.",
+      "authors": [
+        "Eranga Bandara",
+        "Ross Gore",
+        "Ravi Mukkamala",
+        "Asanga Gunaratna",
+        "Safdar H. Bouk",
+        "Xueping Liang",
+        "Peter Foytik",
+        "Abdul Rahman",
+        "Sachini Rajapakse",
+        "Isurunima Kularathna",
+        "Pramoda Karunarathna",
+        "Chalani Rajapakse",
+        "Ng Wee Keong",
+        "Kasun De Zoysa",
+        "Tharaka Hewa",
+        "Amin Hass",
+        "Wathsala Herath",
+        "Aruna Withanage",
+        "Nilaan Loganathan",
+        "Atmaram Yarlagadda",
+        "Sachin Shetty"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-06-17T14:31:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.19116v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "redesigning web for AI agents acting on behalf of humans",
+      "llm_evidence_cn": "为代表人类行动的AI代理重新设计网络",
+      "llm_evidence": "为代表人类行动的AI代理重新设计网络",
+      "canonical_evidence": "为代表人类行动的AI代理重新设计网络",
+      "llm_tldr_en": "Proposes a principled redesign of the web across three layers to accommodate AI agents as intermediaries for humans, enabling legitimate agent access.",
+      "llm_tldr_cn": "当前网络设计以人类用户为中心，但AI代理作为人与内容的中介日益普遍。本文提出在网络访问层、经济层和内容层进行重新设计，使代理能合法地代表人类行动，并解决当前的封锁问题。该框架为人机协作的新范式提供了网络基础设施层面的思路，具有前瞻性。",
+      "llm_tldr": "当前网络设计以人类用户为中心，但AI代理作为人与内容的中介日益普遍。本文提出在网络访问层、经济层和内容层进行重新设计，使代理能合法地代表人类行动，并解决当前的封锁问题。该框架为人机协作的新范式提供了网络基础设施层面的思路，具有前瞻性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.13658v1",
+      "source": "arxiv",
+      "title": "Before You Think: System 0, AI-Mediated Cognition and Cognitive Colonization",
+      "abstract": "This paper examines three recent frameworks for understanding the cognitive and epistemic consequences of artificial intelligence: Tri-System Theory, Thinkframes, and System 0. It argues that while the first two capture important dimensions of AI's influence on individual reasoning and collective epistemic practices, System 0 occupies a theoretically distinctive position that neither can fully replicate. The paper introduces the concept of cognitive colonization, according to which AI systems can embed external interests within the architecture of the self in ways that are difficult for users to perceive. Because such systems are already widely deployed, understanding these invisible forms of influence is an urgent philosophical and practical task.",
+      "authors": [
+        "Marianna Bergamaschi Ganapini",
+        "Massimo Chiriatti",
+        "Enrico Panai",
+        "Giuseppe Riva"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-11T17:54:59+00:00",
+      "link": "https://arxiv.org/pdf/2606.13658v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "AI-mediated cognition and cognitive colonization concepts",
+      "llm_evidence_cn": "AI中介认知与认知殖民概念",
+      "llm_evidence": "AI中介认知与认知殖民概念",
+      "canonical_evidence": "AI中介认知与认知殖民概念",
+      "llm_tldr_en": "Examines System 0 and related frameworks for understanding AI's cognitive effects, introducing cognitive colonization where AI embeds external interests into user cognition, relevant to human-AI interaction concepts.",
+      "llm_tldr_cn": "论文分析Tri-System理论、Thinkframes和System 0三个框架，指出System 0具有独特理论地位，并引入“认知殖民”概念：AI系统将外部利益嵌入用户认知架构，难以察觉。这对理解人机交互中无形的认知影响具有重要哲学和实践意义。",
+      "llm_tldr": "论文分析Tri-System理论、Thinkframes和System 0三个框架，指出System 0具有独特理论地位，并引入“认知殖民”概念：AI系统将外部利益嵌入用户认知架构，难以察觉。这对理解人机交互中无形的认知影响具有重要哲学和实践意义。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.15084v1",
+      "source": "arxiv",
+      "title": "Specifications for Humans, Agents, and Tooling",
+      "abstract": "Specifications are the central mechanism for communicating intents, requirements, and constraints in software development. When they are explicit, clear, and reliable, they are an effective means for collaboration and cooperation. They allow for stakeholders to specify what they want, developers (or AI agents) to understand and implement the needed functionality, for clients to effectively use the system, and for automated tooling to validate the correctness for each of these steps.   This tool paper outlines the Bosque API (BAPI) ecosystem, a software ecosystem designed to support modern spec-centered development. The BAPI specification language works in a fully polyglot ecosystem and provides a suite of features, including unparalleled expressivity, test generation, validation, and sand-boxing to support the complete application development lifecycle. These are critical to supporting emerging security and coding (both API implementation & usage) challenges presented by agentic AI systems.",
+      "authors": [
+        "Mark Marron"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-06-13T03:32:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.15084v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "specifications for human-agent collaboration in software development",
+      "llm_evidence_cn": "面向人类与智能体协作的软件开发规范",
+      "llm_evidence": "面向人类与智能体协作的软件开发规范",
+      "canonical_evidence": "面向人类与智能体协作的软件开发规范",
+      "llm_tldr_en": "Proposes the Bosque API ecosystem for spec-centered development that facilitates communication between humans, AI agents, and tooling, supporting collaborative software creation.",
+      "llm_tldr_cn": "软件规格是沟通意图的关键，但在AI辅助开发中需要更好支持。本文提出BAPI生态系统，用统一规格语言连接人类、智能体和工具。其特点包括多语言支持、测试生成和验证。该方法有助于提升人类与AI代理的协作效率，推动人机协同开发实践。",
+      "llm_tldr": "软件规格是沟通意图的关键，但在AI辅助开发中需要更好支持。本文提出BAPI生态系统，用统一规格语言连接人类、智能体和工具。其特点包括多语言支持、测试生成和验证。该方法有助于提升人类与AI代理的协作效率，推动人机协同开发实践。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

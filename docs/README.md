@@ -6,35 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-18
-- 运行时间：2026-06-18 21:40:35 UTC
+- 最新运行日期：2026-06-19
+- 运行时间：2026-06-19 20:55:40 UTC
 - 运行状态：成功
 - 本次总论文数：5
-- 精读区：4
-- 速读区：1
+- 精读区：2
+- 速读区：3
 
 ### 今日简报（AI）
-今天精读了4篇论文，重点关注人机协作与共同进化理论，速读1篇AI自主管理研究。最值得看的是《Human-AI Coevolution Dynamics》（9分）提出长期交互中社会智能涌现的形式化理论，以及《Searching for Synergy》（8分）探讨共享工作空间人机协作的协同效应。建议普通读者优先阅读这两篇高分论文，把握人机协作前沿理论与实际应用设计。
-- 详情：[/202606/18/README](/202606/18/README)
+今日聚焦人机协作的协同效应与注意力机制，并探讨AI代理对网络及认知的重构。值得深读“共享空间人机协作”中的协同关键，以及“搜索救援”任务中专家与非专家注意力分配的差异。建议下一步关注如何设计更高效的人机协作策略，同时思考AI代理对网页交互模式的变革。
+- 详情：[/202606/19/README](/202606/19/README)
 
 ### 精读区论文标签
-1. [Human-AI Coevolution Dynamics: A Formal Theory of Social Intelligence Emergence Through Long-Term Interaction](/202606/18/2606.19144v1-human-ai-coevolution-dynamics-a-formal-theory-of-social-intelligence-emergence-through-long-term-interaction)  
+1. [Searching for Synergy in Shared Workspace Human-AI Collaboration](/202606/19/2606.18413v2-searching-for-synergy-in-shared-workspace-human-ai-collaboration)  
    标签：评分：9.0/10、query:hai
-   evidence：长期人机交互与社会智能涌现的统一理论框架
-2. [Searching for Synergy in Shared Workspace Human-AI Collaboration](/202606/18/2606.18413v1-searching-for-synergy-in-shared-workspace-human-ai-collaboration)  
+   evidence：研究共享工作空间中的人机协作团队与协调方法
+2. [LLM-Mediated Human-AI Interaction in Search and Rescue: Impact of Expertise on Attentional Allocation](/202606/19/2606.19514v1-llm-mediated-human-ai-interaction-in-search-and-rescue-impact-of-expertise-on-attentional-allocation)  
    标签：评分：8.0/10、query:hai
-   evidence：共享工作空间中人机团队协调与协同效应
-3. [Human-AI Agent Interaction in a Business Context](/202606/18/2606.18716v1-human-ai-agent-interaction-in-a-business-context)  
-   标签：评分：8.0/10、query:hai
-   evidence：商业场景中AI代理的用户体验原则与交互模式
-4. [Learning User Simulators with Turing Rewards](/202606/18/2606.19336v1-learning-user-simulators-with-turing-rewards)  
-   标签：评分：8.0/10、query:hai
-   evidence：基于图灵测试的强化学习方法训练用户模拟器用于交互式设置
+   evidence：研究大语言模型介导的人机交互在搜救场景中的影响，关注专家与注意力分配
 
 ### 速读区论文标签
-1. [Written by AI, Managed by AI: Semantic Space Control and Index Sickness Elimination Across 391 Consecutive Sessions](/202606/18/2606.19121v1-written-by-ai-managed-by-ai-semantic-space-control-and-index-sickness-elimination-across-391-consecutive-sessions)  
+1. [Towards an Agent-First Web: Redesigning the Web for AI Agents](/202606/19/2606.19116v1-towards-an-agent-first-web-redesigning-the-web-for-ai-agents)  
+   标签：评分：7.0/10、query:hai
+   evidence：为代表人类行动的AI代理重新设计网络
+2. [Before You Think: System 0, AI-Mediated Cognition and Cognitive Colonization](/202606/19/2606.13658v1-before-you-think-system-0-ai-mediated-cognition-and-cognitive-colonization)  
    标签：评分：6.0/10、query:hai
-   evidence：长期LLM协作中的概念漂移与语义空间控制失效分析
+   evidence：AI中介认知与认知殖民概念
+3. [Specifications for Humans, Agents, and Tooling](/202606/19/2606.15084v1-specifications-for-humans-agents-and-tooling)  
+   标签：评分：6.0/10、query:hai
+   evidence：面向人类与智能体协作的软件开发规范
 
 
 <div class="dpr-home-promo-card">
