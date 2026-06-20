@@ -1,0 +1,178 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-20T20:11:27.055496+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2606.19914v1",
+      "source": "arxiv",
+      "title": "Co-policy: Responsive Human-Robot Co-Creation for Musical Performances",
+      "abstract": "Art has long stood as a pivotal expression of human creativity. Embodied artificial intelligence offers a route for generative models to participate in that creativity through physical action rather than disembodied digital content. In robotic music co-creation, it is challenging to connect semantic musical understanding with real-time and physically executable performance. We present Co-policy, a framework for human-robot musical co-creation that separates semantic intent grounding, constrained musical variation, and visuomotor execution. To ground musical semantics, Co-policy uses pre-inference semantic anchors and a fine-tuned Qwen-vl planner (F-Qwen) to transform speech, live musical seeds, and visual observations into structured co-creation plans. To support low-latency execution, Co-policy introduces a Gaussian-Mixture Visuomotor Policy (GMP), implemented as a conditional mixture-density policy that maps target notes and visual context to multimodal robot actions in a single forward pass. Unlike robotic playback systems that merely reproduce user-specified notes, Co-policy generates complementary musical responses under both musical and physical constraints. Real-robot chime experiments, ablations, and expert evaluation show improved intent alignment, execution accuracy, and response frequency over diffusion-policy and ablated baselines, supporting physically grounded action generation as a key requirement for embodied human-AI co-creation.",
+      "authors": [
+        "Xuetao Li",
+        "Wenke Huang",
+        "Mang Ye",
+        "Zijian Liu",
+        "Jinhua Xie",
+        "Jifeng Xuan",
+        "Miao Li"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-06-18T08:08:16+00:00",
+      "link": "https://arxiv.org/pdf/2606.19914v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-robot musical co-creation framework with shared planning",
+      "llm_evidence_cn": "人机音乐共创框架，包含共享规划",
+      "llm_evidence": "人机音乐共创框架，包含共享规划",
+      "canonical_evidence": "人机音乐共创框架，包含共享规划",
+      "llm_tldr_en": "Proposes Co-policy framework for human-robot musical co-creation, separating semantic grounding, musical variation, and visuomotor execution to enable real-time collaborative performance.",
+      "llm_tldr_cn": "针对音乐表演中人机协作的挑战，本文提出Co-policy框架，通过分离语义理解、音乐变化和视觉运动执行，实现了人类与机器人在音乐创作中的实时响应式协作。该框架使用预语义锚点和微调视觉语言规划器，将语音和视觉输入转化为结构化共创计划，展示了人机协作在创造性任务中的潜力。",
+      "llm_tldr": "针对音乐表演中人机协作的挑战，本文提出Co-policy框架，通过分离语义理解、音乐变化和视觉运动执行，实现了人类与机器人在音乐创作中的实时响应式协作。该框架使用预语义锚点和微调视觉语言规划器，将语音和视觉输入转化为结构化共创计划，展示了人机协作在创造性任务中的潜力。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.16849v2",
+      "source": "arxiv",
+      "title": "Evolution & Foundation: AI Shares Creative Control",
+      "abstract": "This paper investigates the creative process of automated design and artistic evaluation using an evolutionary system. We consider how a multimodal artificial intelligence (AI) model can communicate and guide a combined generative and evolutionary computational system. This creates a framework for the evolution of aesthetically pleasing complex 3D organic forms by integrating genetic algorithms with the visual reasoning capabilities of large-scale AI foundation models.   The framework shifts the artist role from that of intensive direct selection to one of system design; transferring detailed step-by-step curation to an AI agent capable of multimodal aesthetic judgement. This framework enables the human artist/designer to rapidly traverse large areas of multi-dimensional evolutionary parameter space to find creative outcomes based on their semantic targets.   Detailed audit trails of the AI's aesthetic reasoning are generated for each experiment. Interactive visualisation tools, together with AI-generated summaries and evolutionary narratives, enable deep exploration into each evolutionary experiment and providing a transparent insight into the AI-guided process.",
+      "authors": [
+        "Dylan Banarse",
+        "Stephen Todd",
+        "William Latham",
+        "Frederic Fol Leymarie"
+      ],
+      "primary_category": "cs.NE",
+      "categories": [
+        "cs.NE",
+        "cs.GR",
+        "cs.HC"
+      ],
+      "published": "2026-06-15T15:25:26+00:00",
+      "link": "https://arxiv.org/pdf/2606.16849v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "AI and human creative collaboration using evolutionary system and multimodal model",
+      "llm_evidence_cn": "AI与人类使用进化系统和多模态模型的创意协作",
+      "llm_evidence": "AI与人类使用进化系统和多模态模型的创意协作",
+      "canonical_evidence": "AI与人类使用进化系统和多模态模型的创意协作",
+      "llm_tldr_en": "Presents a creative system where an AI foundation model guides evolutionary design, shifting the artist role to system designer, enabling human-AI collaboration in generating 3D forms.",
+      "llm_tldr_cn": "本文结合遗传算法与多模态AI基础模型，构建了一个创意设计系统，使人类艺术家从细节选择转变为系统设计者，AI代理负责审美判断，实现了人类与AI在三维形态生成中的协作，展示了人机共创的新范式。",
+      "llm_tldr": "本文结合遗传算法与多模态AI基础模型，构建了一个创意设计系统，使人类艺术家从细节选择转变为系统设计者，AI代理负责审美判断，实现了人类与AI在三维形态生成中的协作，展示了人机共创的新范式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.16432v1",
+      "source": "arxiv",
+      "title": "ACCORD: Action-Conditioned Contextual Grounding for Language Agents",
+      "abstract": "User instructions are often underspecified because humans rely on implicit assumptions about the surrounding environment. For large language model (LLM) agents operating in information-rich digital and physical environments, these assumptions cannot be inferred from the instruction alone; they must be recovered from the current state of tools, data, interfaces, and observations. Effective execution therefore requires agents to identify missing context, ground it in observed evidence, and carry it forward into subsequent actions. We show that current agents often fail to do so. They act from assumed rather than observed specifics, overlook information they could have gathered, and fail to incorporate evidence that has already been returned. Building on this insight, we propose ACCORD (Action-Conditioned Contextual Grounding), a simple and effective agent framework for adaptive grounding. Before each action, ACCORD actively probes the environment for missing information and integrates relevant context from the agent's trajectory that would otherwise be overlooked. Requiring no additional training or task-success signals, ACCORD improves task-goal completion on AppWorld by up to +20.6 points with GPT-5-mini, from 42.0% to 62.6%, compared to strong baselines. These gains persist with a substantially stronger base model (+10.8 with Claude-4.5-sonnet), an open-weight model (+10.1 with Qwen3.5-27B-FP8), and on the embodied AlfWorld benchmark (+7.4 success rate with GPT-5-mini).",
+      "authors": [
+        "Lai Jiang",
+        "Cheng Qian",
+        "Zhenhailong Wang",
+        "Pan Lu",
+        "Heng Ji",
+        "Hao Peng"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-06-15T09:05:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.16432v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "improves grounding of user instructions in context, enhancing human-AI interaction",
+      "llm_evidence_cn": "改进用户指令在上下文中的锚定，增强人机交互",
+      "llm_evidence": "改进用户指令在上下文中的锚定，增强人机交互",
+      "canonical_evidence": "改进用户指令在上下文中的锚定，增强人机交互",
+      "llm_tldr_en": "ACCORD grounds LLM agent actions in observed context, addressing underspecified human instructions, directly improving human-AI interaction effectiveness.",
+      "llm_tldr_cn": "本文针对用户指令常隐含环境假设的问题，提出ACCORD框架，使语言代理能够从工具、数据和观察中恢复缺失的上下文，并将其用于后续动作。实验表明当前代理常根据假设而非观察行动，导致失败。ACCORD通过动作条件上下文锚定显著提升了代理在信息丰富环境中的表现，促进了更自然的人机交互。",
+      "llm_tldr": "本文针对用户指令常隐含环境假设的问题，提出ACCORD框架，使语言代理能够从工具、数据和观察中恢复缺失的上下文，并将其用于后续动作。实验表明当前代理常根据假设而非观察行动，导致失败。ACCORD通过动作条件上下文锚定显著提升了代理在信息丰富环境中的表现，促进了更自然的人机交互。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.17454v2",
+      "source": "arxiv",
+      "title": "Dissecting model behavior through agent trajectories",
+      "abstract": "AI agent performance is not just a modeling problem, it is fundamentally a systems problem. The advanced capabilities of models are realized through agent harnesses. Therefore, a gap between model assumptions and harness behavior can easily prevent the model's full capabilities from translating into agent performance. We formalize this as the `intent-execution' gap: the mismatch between what the model intends and what the harness executes, and vice versa. We argue that minimizing this intent-execution gap is as important as other aspects of harness design such as tools and execution loops. To illustrate the impact of this harness-model alignment, we develop a simple and customizable harness called `Simple Strands Agent' (SSA). SSA aims to find the bulk of common patterns which generalize across different model families (such as Claude, Gemini, GPT, Grok, Qwen), as well as a small number of model-specific preferences. We make two contributions: (i) we reproduce or improve on the pass@1 performance reported by diverse model-provider families on popular agentic benchmarks (SWE-Pro, SWE-Verified and Terminal-Bench-2), and (ii) building on an analysis of 138k trajectories generated by SSA, we look beyond the pass@1 numbers which tend to be relatively even across frontier models. By representing agent trajectories in code state-spaces, we observe model-level differences in problem-solving behavior. Finer-grained metrics such as edit frequency, testing activity, and phase-transitions reveal how individual models allocate effort across different stages of autonomous problem solving.",
+      "authors": [
+        "Gaurav Gupta",
+        "Vatshank Chaturvedi",
+        "Jun Huan",
+        "Anoop Deoras"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-16T03:17:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.17454v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "discusses intent-execution gap in agent systems, relevant to human-centered AI design principles",
+      "llm_evidence_cn": "讨论代理系统中的意图-执行差距，与以人为中心的AI设计原则相关",
+      "llm_evidence": "讨论代理系统中的意图-执行差距，与以人为中心的AI设计原则相关",
+      "canonical_evidence": "讨论代理系统中的意图-执行差距，与以人为中心的AI设计原则相关",
+      "llm_tldr_en": "This paper identifies the intent-execution gap between model and harness, proposing a simple harness (SSA) to illustrate alignment issues, relevant for designing reliable human-AI systems.",
+      "llm_tldr_cn": "本文识别了模型与代理框架之间的意图-执行差距，即模型意图与框架执行之间的不匹配。作者开发了Simple Strands Agent (SSA)框架来展示对齐问题，强调减少这一差距对于构建可靠的人机系统至关重要。该工作为以人为中心的AI设计提供了系统层面的洞察。",
+      "llm_tldr": "本文识别了模型与代理框架之间的意图-执行差距，即模型意图与框架执行之间的不匹配。作者开发了Simple Strands Agent (SSA)框架来展示对齐问题，强调减少这一差距对于构建可靠的人机系统至关重要。该工作为以人为中心的AI设计提供了系统层面的洞察。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "label": "2026-06-20",
+  "date": "2026-06-20",
+  "generated_at": "2026-06-20T20:16:26",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202606/20/2606.19914v1-co-policy-responsive-human-robot-co-creation-for-musical-performances",
+      "section": "deep",
+      "title_en": "Co-policy: Responsive Human-Robot Co-Creation for Musical Performances",
+      "authors": "Xuetao Li, Wenke Huang, Mang Ye, Zijian Liu, Jinhua Xie, Jifeng Xuan, Miao Li",
+      "date": "2026-06-18",
+      "pdf": "https://arxiv.org/pdf/2606.19914v1",
+      "score": "9.0",
+      "evidence": "人机音乐共创框架，包含共享规划",
+      "tldr": "机器人音乐共创面临语义理解与实时物理执行的挑战。Co-policy框架分离语义意图、音乐变化和运动执行，通过微调Qwen-vl规划器（F-Qwen）和混合密度高斯视觉运动策略（GMP）实现低延迟响应。在真实钟琴实验中，该方法在意图对齐、执行准确性和响应频率上优于扩散策略基线。该工作为物理驱动的具身人机共创提供了有效思路。",
+      "tags": "query:hai",
+      "abstract_en": "Art has long stood as a pivotal expression of human creativity. Embodied artificial intelligence offers a route for generative models to participate in that creativity through physical action rather than disembodied digital content. In robotic music co-creation, it is challenging to connect semantic musical understanding with real-time and physically executable performance. We present Co-policy, a framework for human-robot musical co-creation that separates semantic intent grounding, constrained musical variation, and visuomotor execution. To ground musical semantics, Co-policy uses pre-inference semantic anchors and a fine-tuned Qwen-vl planner (F-Qwen) to transform speech, live musical seeds, and visual observations into structured co-creation plans. To support low-latency execution, Co-policy introduces a Gaussian-Mixture Visuomotor Policy (GMP), implemented as a conditional mixture-density policy that maps target notes and visual context to multimodal robot actions in a single forward pass. Unlike robotic playback systems that merely reproduce user-specified notes, Co-policy generates complementary musical responses under both musical and physical constraints. Real-robot chime experiments, ablations, and expert evaluation show improved intent alignment, execution accuracy, and response frequency over diffusion-policy and ablated baselines, supporting physically grounded action generation as a key requirement for embodied human-AI co-creation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/20/2606.16849v2-evolution--foundation-ai-shares-creative-control",
+      "section": "deep",
+      "title_en": "Evolution & Foundation: AI Shares Creative Control",
+      "authors": "Dylan Banarse, Stephen Todd, William Latham, Frederic Fol Leymarie",
+      "date": "2026-06-15",
+      "pdf": "https://arxiv.org/pdf/2606.16849v2",
+      "score": "8.0",
+      "evidence": "AI与人类使用进化系统和多模态模型的创意协作",
+      "tldr": "自动化设计和艺术评估需AI引导进化过程。本文将多模态AI模型与遗传算法结合，形成审美驱动进化框架。AI承担审美判断，人类设定语义目标，探索多维参数空间生成3D有机形态。通过透明审计轨迹和交互可视化揭示AI审美推理，实现人机协同创意控制。",
+      "tags": "query:hai",
+      "abstract_en": "This paper investigates the creative process of automated design and artistic evaluation using an evolutionary system. We consider how a multimodal artificial intelligence (AI) model can communicate and guide a combined generative and evolutionary computational system. This creates a framework for the evolution of aesthetically pleasing complex 3D organic forms by integrating genetic algorithms with the visual reasoning capabilities of large-scale AI foundation models.   The framework shifts the artist role from that of intensive direct selection to one of system design; transferring detailed step-by-step curation to an AI agent capable of multimodal aesthetic judgement. This framework enables the human artist/designer to rapidly traverse large areas of multi-dimensional evolutionary parameter space to find creative outcomes based on their semantic targets.   Detailed audit trails of the AI's aesthetic reasoning are generated for each experiment. Interactive visualisation tools, together with AI-generated summaries and evolutionary narratives, enable deep exploration into each evolutionary experiment and providing a transparent insight into the AI-guided process.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/20/2606.16432v1-accord-action-conditioned-contextual-grounding-for-language-agents",
+      "section": "quick",
+      "title_en": "ACCORD: Action-Conditioned Contextual Grounding for Language Agents",
+      "authors": "Lai Jiang, Cheng Qian, Zhenhailong Wang, Pan Lu, Heng Ji, Hao Peng",
+      "date": "2026-06-15",
+      "pdf": "https://arxiv.org/pdf/2606.16432v1",
+      "score": "7.0",
+      "evidence": "改进用户指令在上下文中的锚定，增强人机交互",
+      "tldr": "用户指令在信息丰富的环境中常因隐含假设而欠明确，当前LLM代理容易基于假设而非观察行动，忽略可获取信息，未能整合已返回证据。为此提出ACCORD框架，在每次动作前主动探测环境缺失信息并从轨迹中整合相关上下文。无需额外训练，在AppWorld上GPT-5-mini任务完成率从42.0%提升至62.6%，在更强模型Claude-4.5-sonnet（+10.8）、开放模型Qwen3.5-27B-FP8（+10.1）及具身AlfWorld（+7.4%）上均有显著提升。ACCORD为语言代理提供了简单有效的自适应环境接地方法。",
+      "tags": "query:hai",
+      "abstract_en": "User instructions are often underspecified because humans rely on implicit assumptions about the surrounding environment. For large language model (LLM) agents operating in information-rich digital and physical environments, these assumptions cannot be inferred from the instruction alone; they must be recovered from the current state of tools, data, interfaces, and observations. Effective execution therefore requires agents to identify missing context, ground it in observed evidence, and carry it forward into subsequent actions. We show that current agents often fail to do so. They act from assumed rather than observed specifics, overlook information they could have gathered, and fail to incorporate evidence that has already been returned. Building on this insight, we propose ACCORD (Action-Conditioned Contextual Grounding), a simple and effective agent framework for adaptive grounding. Before each action, ACCORD actively probes the environment for missing information and integrates relevant context from the agent's trajectory that would otherwise be overlooked. Requiring no additional training or task-success signals, ACCORD improves task-goal completion on AppWorld by up to +20.6 points with GPT-5-mini, from 42.0% to 62.6%, compared to strong baselines. These gains persist with a substantially stronger base model (+10.8 with Claude-4.5-sonnet), an open-weight model (+10.1 with Qwen3.5-27B-FP8), and on the embodied AlfWorld benchmark (+7.4 success rate with GPT-5-mini).",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/20/2606.17454v2-dissecting-model-behavior-through-agent-trajectories",
+      "section": "quick",
+      "title_en": "Dissecting model behavior through agent trajectories",
+      "authors": "Gaurav Gupta, Vatshank Chaturvedi, Jun Huan, Anoop Deoras",
+      "date": "2026-06-16",
+      "pdf": "https://arxiv.org/pdf/2606.17454v2",
+      "score": "6.0",
+      "evidence": "讨论代理系统中的意图-执行差距，与以人为中心的AI设计原则相关",
+      "tldr": "AI智能体性能不仅取决于模型能力，更受制于模型意图与执行架构之间的“意图-执行”差距。为最小化这一差距，作者开发了可定制的Simple Strands Agent (SSA)架构，在SWE-Pro等基准上复现或提升了pass@1性能。通过分析13.8万条轨迹，发现不同前沿模型在编辑频率、测试活动等细粒度指标上存在显著的行为差异。研究表明，优化架构-模型对齐与工具设计同样重要。",
+      "tags": "query:hai",
+      "abstract_en": "AI agent performance is not just a modeling problem, it is fundamentally a systems problem. The advanced capabilities of models are realized through agent harnesses. Therefore, a gap between model assumptions and harness behavior can easily prevent the model's full capabilities from translating into agent performance. We formalize this as the `intent-execution' gap: the mismatch between what the model intends and what the harness executes, and vice versa. We argue that minimizing this intent-execution gap is as important as other aspects of harness design such as tools and execution loops. To illustrate the impact of this harness-model alignment, we develop a simple and customizable harness called `Simple Strands Agent' (SSA). SSA aims to find the bulk of common patterns which generalize across different model families (such as Claude, Gemini, GPT, Grok, Qwen), as well as a small number of model-specific preferences. We make two contributions: (i) we reproduce or improve on the pass@1 performance reported by diverse model-provider families on popular agentic benchmarks (SWE-Pro, SWE-Verified and Terminal-Bench-2), and (ii) building on an analysis of 138k trajectories generated by SSA, we look beyond the pass@1 numbers which tend to be relatively even across frontier models. By representing agent trajectories in code state-spaces, we observe model-level differences in problem-solving behavior. Finer-grained metrics such as edit frequency, testing activity, and phase-transitions reveal how individual models allocate effort across different stages of autonomous problem solving.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
