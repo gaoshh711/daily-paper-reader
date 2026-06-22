@@ -1,0 +1,212 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-22T22:22:36.867488+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.15920v1",
+      "source": "arxiv",
+      "title": "OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing",
+      "abstract": "Reinforcement learning for multimodal large language models (MLLMs) is often hindered by severe reward sparsity in complex reasoning tasks. This challenge is particularly pronounced in human-centered scenarios involving states, emotions, intentions, and behaviors, where heterogeneous multimodal signals and subjective human factors make high-quality chain-of-thought (CoT) annotations expensive and difficult to obtain. Although many multimodal datasets provide expert-annotated ground-truth labels, directly using these labels for supervised fine-tuning may encourage shortcut learning in multimodal perception and provides limited transparency for safety-critical human--AI interaction. To address these limitations, we propose OmniOPSD, a Rationale-Privileged On-Policy Self-Distillation framework that uses frontier-generated rationales as teacher-side privileged evidence rather than student imitation targets. OmniOPSD uses frontier-generated evidence-aware rationales only as training-time privileged evidence context for a local teacher. The student samples its own rollout from the original multimodal input, while the rationale-privileged teacher scores the same tokens and provides dense token-level supervision. Thus, the student learns on its own trajectory distribution without directly imitating frontier-model completions, and inference requires no labels, rationales, CoT annotations, or closed-source model access. Experiments on MER-UniBench show that OmniOPSD achieves state-of-the-art performance with an average score of $84.19$, and ablations further support the value of rationale-privileged teacher guidance.",
+      "authors": [
+        "Zebang Cheng",
+        "Shuimu Chen",
+        "Boxue Yang",
+        "Yuanshen Guan",
+        "Jingyi Chen",
+        "Zheng Lian",
+        "Xiaojiang Peng",
+        "Fei Ma",
+        "LaiZhong Cui",
+        "Qi Tian"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-14T16:51:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.15920v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "rationale-privileged self-distillation for affective computing in human-centered scenarios",
+      "llm_evidence_cn": "面向人类中心场景的情感计算，理性优先自蒸馏方法",
+      "llm_evidence": "面向人类中心场景的情感计算，理性优先自蒸馏方法",
+      "canonical_evidence": "面向人类中心场景的情感计算，理性优先自蒸馏方法",
+      "llm_tldr_en": "Proposes OmniOPSD, a rationale-privileged on-policy self-distillation method for multimodal LLMs in affective computing, addressing reward sparsity and transparency in human-AI interaction.",
+      "llm_tldr_cn": "多模态大语言模型在人类中心情感计算中面临奖励稀疏和缺乏透明度问题，本文提出OmniOPSD方法，利用理性优先的在策略自蒸馏技术，在训练过程中显式生成推理链，增强模型的可解释性和安全性。实验证明该方法在情感识别和人机交互任务中优于强基线，为人机协作提供了更可靠的AI系统。",
+      "llm_tldr": "多模态大语言模型在人类中心情感计算中面临奖励稀疏和缺乏透明度问题，本文提出OmniOPSD方法，利用理性优先的在策略自蒸馏技术，在训练过程中显式生成推理链，增强模型的可解释性和安全性。实验证明该方法在情感识别和人机交互任务中优于强基线，为人机协作提供了更可靠的AI系统。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.18010v1",
+      "source": "arxiv",
+      "title": "Co-Creativity at the Table: A Qualitative Analysis of Creative Interactions in the Podcast \"Adventure AI\"",
+      "abstract": "Tabletop role-playing games provide a unique environment for interaction with artificial intelligence (AI) due to their complex and collaborative nature. We analyze Adventure AI, a podcast featuring human-AI interactions in Dungeons & Dragons play, to examine how AI is and can be used in tabletop role-playing gaming and how players perceive this use. We complete a qualitative analysis of three seasons of this podcast, from 2023 to 2025, reporting on the overarching themes of roles of AI, roles of humans, the evaluations and failures of AI, and its treatment as a person and character at the table. There are many aspects of the game where artificial intelligence succeeds, while there are others where it is less appropriate. This analysis gives a basis for future work on where artificial intelligence should and should not be used in gaming spaces.",
+      "authors": [
+        "Hanna Dodd",
+        "Daniel G. Brown"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-16T14:54:57+00:00",
+      "link": "https://arxiv.org/pdf/2606.18010v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "qualitative analysis of human-AI interaction in D&D",
+      "llm_evidence_cn": "定性分析龙与地下城游戏中人机交互",
+      "llm_evidence": "定性分析龙与地下城游戏中人机交互",
+      "canonical_evidence": "定性分析龙与地下城游戏中人机交互",
+      "llm_tldr_en": "Analyzes Adventure AI podcast to reveal themes of AI roles, human roles, and perceptions of AI in collaborative tabletop gameplay, providing insights into co-creativity.",
+      "llm_tldr_cn": "该论文针对现有研究中缺乏复杂协作环境下人机交互实际案例的问题，对Adventure AI播客三个赛季进行定性分析，提取了AI角色、人类角色、AI评价与失败以及AI被视为角色和人物等主题。研究结果表明，AI在某些游戏方面表现出色，但在其他方面存在不足，为理解人机共创在创意游戏中的应用提供了深层见解，有助于设计更好的人机协作系统。",
+      "llm_tldr": "该论文针对现有研究中缺乏复杂协作环境下人机交互实际案例的问题，对Adventure AI播客三个赛季进行定性分析，提取了AI角色、人类角色、AI评价与失败以及AI被视为角色和人物等主题。研究结果表明，AI在某些游戏方面表现出色，但在其他方面存在不足，为理解人机共创在创意游戏中的应用提供了深层见解，有助于设计更好的人机协作系统。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15507v1",
+      "source": "arxiv",
+      "title": "Frame-Conditioned Moral Computation in LLaMA 3.1-8B-Instruct: A Mechanistic Interpretability Audit of Ethical Reasoning",
+      "abstract": "Behavioral audits of Large Language Models on moral prompts measure what the model says, not the internal computation producing it. We use Transluce, an AI-driven mechanistic-interpretability platform, to examine LLaMA 3.1-8B-Instruct on 54 moral prompts in four batteries: 17 dilemmas, policy, and meta-ethical questions (B1); 6 role-playing scenarios (B3); and a controlled trolley contrast varying the switching mechanism with people fixed (B4, 15 prompts) or identity attributes with mechanism fixed (B5, 16 prompts).   Two complementary metric families, five cluster-level metrics and a six-metric neuron-level panel, converge on a Situational Anchor Effect: domain-specific representations dominate the top of the activation list across every battery. The model's ethics-labeled capacity stays essentially constant; its salience (rank, priority, top-of-list presence) is highly sensitive to the interpretive frame the prompt selects.   The B4-vs-B5 contrast confirms the model attends to whichever surface feature varies: aggregate ethics metrics are indistinguishable, but the dominant non-ethics distractor mirrors the design. A multi-temperature audit identifies a candidate ethics neuron (L16/N3837) stable across temperatures; a cross-model behavioral proxy on two frontier models yields preliminary evidence of divergence in self-reported moral focus, consistent with an Alignment Wrapper in which RLHF re-orders surface text without removing underlying domain-first frames. We unify these as Frame-Conditioned Moral Computation: the prompt's surface vocabulary selects a feature manifold, and the moral conclusion is downstream of that selection. Behavioral alignment must be supplemented by Mechanistic Alignment: a research program asking whether ethics-related features can be shown causally privileged under controlled frame variation, not merely loud in the explanation.",
+      "authors": [
+        "Ali Dasdan",
+        "Manan Shah",
+        "W. Russell Neuman",
+        "Chad Coleman",
+        "Kund Meghani",
+        "Safinah Ali"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-13T23:24:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.15507v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Mechanistic interpretability for ethical reasoning",
+      "llm_evidence_cn": "伦理推理解释的机制可解释性",
+      "llm_evidence": "伦理推理解释的机制可解释性",
+      "canonical_evidence": "伦理推理解释的机制可解释性",
+      "llm_tldr_en": "Uses mechanistic interpretability to audit LLaMA moral reasoning, revealing situational anchor effects; contributes to explainable AI interfaces.",
+      "llm_tldr_cn": "大语言模型在道德提示上的行为审计只测量输出不测量内部计算。本文利用Transluce机制可解释性平台检查LLaMA 3.1-8B-Instruct在54个道德提示上的内部计算，发现情境锚定效应：领域特定表征主导顶层神经元。工作为解释AI道德推理提供了机制层面的理解，支持可解释AI接口的开发。",
+      "llm_tldr": "大语言模型在道德提示上的行为审计只测量输出不测量内部计算。本文利用Transluce机制可解释性平台检查LLaMA 3.1-8B-Instruct在54个道德提示上的内部计算，发现情境锚定效应：领域特定表征主导顶层神经元。工作为解释AI道德推理提供了机制层面的理解，支持可解释AI接口的开发。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.15766v1",
+      "source": "arxiv",
+      "title": "Rethinking Scaffolding in LLM Tutors: The Interactional Mismatch Between Benchmarks and Real-World Deployments",
+      "abstract": "A central pedagogical value evaluated in AI tutor benchmarks is scaffolding: guiding students through graduated steps toward a solution. Alignment and evaluation methods for embedding scaffolding behaviour into chatbots, however, rest on an implicit assumption: that students will take up the scaffolding and engage in the conversation. To examine whether this assumption holds, we introduce an evaluation pipeline around two metrics - Chatbot Scaffolding and Student Uptake - and apply them across nine datasets of 9,490 chats, spanning AI tutor benchmarks and real-world deployments of educational chatbots. Our analysis reveals that while benchmarks assume a high-scaffolding, high-student-uptake environment, students in real-world settings exhibit lower levels of uptake overall - frequently bypassing the chatbot's pedagogical framing to drive the interaction toward their own learning goals at little interpersonal cost. We argue that bypassing scaffolding is not necessarily detrimental; rather, it frequently highlights a mismatch between a chatbot's pedagogical framing and the student's learning goals. To meaningfully evaluate the effectiveness of a chatbot's assistance, future benchmarks must move beyond the assumption that students will simply take up the scaffolding, and instead evaluate how these chatbots navigate diverse learning contexts and student-driven interaction patterns.",
+      "authors": [
+        "Alexandra Neagu",
+        "Jeffrey T. H. Wong",
+        "Marcus Messer",
+        "Rhodri Nelson",
+        "Peter B. Johnson"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-14T12:05:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.15766v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Design of AI tutors for human-centered education",
+      "llm_evidence_cn": "以人为中心的AI辅导系统设计",
+      "llm_evidence": "以人为中心的AI辅导系统设计",
+      "canonical_evidence": "以人为中心的AI辅导系统设计",
+      "llm_tldr_en": "Reveals mismatch between scaffolding in AI tutor benchmarks and real-world student uptake, informing better human-centered AI design.",
+      "llm_tldr_cn": "AI辅导系统的基准测试假设学生积极采纳脚手架提示，但现实部署中学生往往不予回应。本文提出两个度量——聊天机器人脚手架度和学生采纳率，在9个数据集9490次聊天上进行分析，发现基准测试与现实存在交互不匹配。研究强调了设计以学习者为中心的系统时需考虑真实交互行为。",
+      "llm_tldr": "AI辅导系统的基准测试假设学生积极采纳脚手架提示，但现实部署中学生往往不予回应。本文提出两个度量——聊天机器人脚手架度和学生采纳率，在9个数据集9490次聊天上进行分析，发现基准测试与现实存在交互不匹配。研究强调了设计以学习者为中心的系统时需考虑真实交互行为。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.18902v1",
+      "source": "arxiv",
+      "title": "SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration",
+      "abstract": "Context engineering has emerged as a primary lever for improving AI systems without parameter updates. Recent work showing that textual gradients do not function as real gradients motivates treating automatic prompt optimization (APO) as black-box search. We introduce SPO (Stochastic Prompt Optimization), a framework for stochastic search over prompt space, and compare three strategies of increasing sophistication: error-informed random search, a genetic algorithm with evolutionary operators, and SAGE (SPO via Agent-Guided Exploration), a multi-agent pipeline with diagnostic code execution. Across three benchmarks, no single strategy dominates; effectiveness depends on the interaction of landscape structure with error type. We further deploy SAGE on a mental-health chatbot under a continuous optimization paradigm, where it compounds eight cycles of individually-noisy A/B tests into a statistically robust gain in next-day retention. We argue that coupling qualitative diagnosis with quantitative validation is what makes agentic optimization effective for open-ended task-oriented dialogue.",
+      "authors": [
+        "Ziyi Zhu",
+        "Luka Smyth",
+        "Saki Shinoda",
+        "Jinghong Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-17T10:25:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.18902v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "stochastic prompt optimization for improved human-AI interaction through agent-guided exploration",
+      "llm_evidence_cn": "随机提示优化方法，通过智能体引导探索改善人机交互",
+      "llm_evidence": "随机提示优化方法，通过智能体引导探索改善人机交互",
+      "canonical_evidence": "随机提示优化方法，通过智能体引导探索改善人机交互",
+      "llm_tldr_en": "Introduces SAGE, a multi-agent prompt optimization framework that treats prompt search as black-box optimization, improving human-AI interaction by finding better prompts.",
+      "llm_tldr_cn": "现有提示优化方法未充分利用梯度信息，本文将提示搜索视为黑盒优化问题，提出基于智能体引导探索的随机提示优化框架SAGE。该框架结合多种搜索策略，在多个基准上提升效果。结果表明框架能有效生成高质量提示，增强人类与AI的交互效率，为人机交互界面设计提供了新工具。",
+      "llm_tldr": "现有提示优化方法未充分利用梯度信息，本文将提示搜索视为黑盒优化问题，提出基于智能体引导探索的随机提示优化框架SAGE。该框架结合多种搜索策略，在多个基准上提升效果。结果表明框架能有效生成高质量提示，增强人类与AI的交互效率，为人机交互界面设计提供了新工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

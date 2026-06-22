@@ -6,36 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-21
-- 运行时间：2026-06-21 20:46:07 UTC
+- 最新运行日期：2026-06-22
+- 运行时间：2026-06-22 22:26:06 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：2
-- 速读区：2
+- 本次总论文数：5
+- 精读区：4
+- 速读区：1
 
 ### 今日简报（AI）
-今日精读2篇高分论文，速读2篇强化学习应用。
-
-最值得关注的是心智理论因果模型（8/10）和AI辅助法律发现的人机协同框架（8/10）。
-
-建议优先了解AI如何模拟他人思维及如何在关键领域保持人类监督。
-- 详情：[/202606/21/README](/202606/21/README)
+今日精读2篇高分论文，速读1篇，聚焦情感计算自蒸馏与AI创意协作分析。最值得关注OmniOPSD的理性特权自蒸馏用于情感计算，以及Co-Creativity中AI与人类的创意互动模式。建议优先阅读OmniOPSD理解其蒸馏机制，再结合SAGE的随机提示优化方法拓展应用。
+- 详情：[/202606/22/README](/202606/22/README)
 
 ### 精读区论文标签
-1. [A Causal Model of Theory of Mind in Conflict for Artificial Intelligence](/202606/21/2606.16944v1-a-causal-model-of-theory-of-mind-in-conflict-for-artificial-intelligence)  
+1. [OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing](/202606/22/2606.15920v1-omniopsd-rationale-privileged-on-policy-self-distillation-for-affective-computing)  
+   标签：评分：9.0/10、query:hai
+   evidence：面向人类中心场景的情感计算，理性优先自蒸馏方法
+2. [Co-Creativity at the Table: A Qualitative Analysis of Creative Interactions in the Podcast "Adventure AI"](/202606/22/2606.18010v1-co-creativity-at-the-table-a-qualitative-analysis-of-creative-interactions-in-the-podcast-adventure-ai)  
+   标签：评分：9.0/10、query:hai
+   evidence：定性分析龙与地下城游戏中人机交互
+3. [Frame-Conditioned Moral Computation in LLaMA 3.1-8B-Instruct: A Mechanistic Interpretability Audit of Ethical Reasoning](/202606/22/2606.15507v1-frame-conditioned-moral-computation-in-llama-31-8b-instruct-a-mechanistic-interpretability-audit-of-ethical-reasoning)  
    标签：评分：8.0/10、query:hai
-   evidence：面向人机整合的冲突情境下心智理论的因果模型
-2. [Human-on-the-Loop Orchestration for AI-Assisted Legal Discovery](/202606/21/2606.19812v1-human-on-the-loop-orchestration-for-ai-assisted-legal-discovery)  
+   evidence：伦理推理解释的机制可解释性
+4. [Rethinking Scaffolding in LLM Tutors: The Interactional Mismatch Between Benchmarks and Real-World Deployments](/202606/22/2606.15766v1-rethinking-scaffolding-in-llm-tutors-the-interactional-mismatch-between-benchmarks-and-real-world-deployments)  
    标签：评分：8.0/10、query:hai
-   evidence：面向AI辅助电子发现的人类在环验证架构，通过四层人类监督拦截错误
+   evidence：以人为中心的AI辅导系统设计
 
 ### 速读区论文标签
-1. [Augmenting Game AI with Deep Reinforcement Learning](/202606/21/2606.20210v1-augmenting-game-ai-with-deep-reinforcement-learning)  
+1. [SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration](/202606/22/2606.18902v1-sage-stochastic-prompt-optimization-via-agent-guided-exploration)  
    标签：评分：7.0/10、query:hai
-   evidence：深度强化学习用于创造可信游戏AI角色，增强游戏中的人机交互
-2. [ROVE: Unlocking Human Interventions for Humanoid Manipulation via Reinforcement Learning](/202606/21/2606.17011v1-rove-unlocking-human-interventions-for-humanoid-manipulation-via-reinforcement-learning)  
-   标签：评分：6.0/10、query:hai
-   evidence：提出含人类在环的管线，支持人机交互以改进人形机器人操作
+   evidence：随机提示优化方法，通过智能体引导探索改善人机交互
 
 
 <div class="dpr-home-promo-card">
