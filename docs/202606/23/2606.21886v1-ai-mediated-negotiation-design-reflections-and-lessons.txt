@@ -1,0 +1,136 @@
+Title: AI-Mediated Negotiation: Design Reflections and Lessons
+
+URL Source: https://arxiv.org/pdf/2606.21886v1
+
+Published Time: Tue, 23 Jun 2026 01:29:40 GMT
+
+Number of Pages: 7
+
+Markdown Content:
+# AI-Mediated Negotiation: Design Reflections and Lessons 
+
+VEDA DUDDU, University of Illinois Urbana Champaign, USA 
+
+JASH RAJESH PAREKH, University of Illinois Urbana-Champaign, USA 
+
+ANDY MAO, University of Illinois Urbana-Champaign, USA 
+
+HANYI MIN, University of Illinois Urbana-Champaign, USA 
+
+ZIANG XIAO, Johns Hopkins University, USA 
+
+VEDANT DAS SWAIN, New York University, USA 
+
+KOUSTUV SAHA, University of Illinois Urbana-Champaign, USA Conversational AI promises a new kind of preparation for high-stakes workplace negotiations—personalized, interactive, and capable of simulating realistic resistance. That promise is intuitive. We built Trucey , a theory-driven coaching system to test it. The system encoded four assumptions: that articulation supports clarification, that personalization builds strategic competence, that chunked delivery reduces cognitive load, and that structured scaffolding removes metacognitive burden. A pre-registered experiment (N=267) and interviews (N=15) complicated each of them. Notably, the static handbook we included as a passive control outperformed both AI conditions on empowerment and usability. We reflect on why: each assumption encoded a specific model of how preparation unfolds, and the findings revealed that conversational AI imposes a linear execution model on a task that is fundamentally recursive. We identify an unexamined scope condition on established HAI design guidelines and close with a sequencing principle—map before path, path before simulation—for future AI coaching design. CCS Concepts: • Human-centered computing → Empirical studies in HCI .Additional Key Words and Phrases: workplace negotiation, conversational AI, design reflection, cognitive load, human-AI interaction, AI coaching 
+
+1 Introduction 
+
+Workplace negotiations—requesting a promotion, pushing back on a decision, asserting a boundary— are rarely just strategic challenges. For most workers, the barrier is psychological: fear of retaliation, uncertainty regarding the unfolding of the conversation, and a pervasive sense of power asymmetry that renders the act of initiating risky [ 3 , 4]. Conversational AI has emerged as a promising approach for addressing these barriers, offering personalized, interactive preparation that static resources cannot provide. Trucey is a theory-driven AI coaching system we built to lower these barriers, operationalizing negotiation frameworks through situational calibration, role-based rehearsal, and structured scaffolding. In this paper, we share our design reflections and lessons learned from building AI-mediated coaching tools for high-stakes, preparatory workplace tasks. We built Trucey around four assump-tions about how workers prepare under stress, each grounded in established theory. Our empirical study—a pre-registered between-subjects experiment (N = 267) and semi-structured interviews (N = 15)—complicated those assumptions in ways we did not anticipate. Crucially, the static handbook, 
+
+Control-NoAI , we included as a passive control, outperformed both AI conditions on psychological empowerment and usability. 
+
+Authors’ Contact Information: Veda Duddu, vduddu2@illinois.edu, University of Illinois Urbana Champaign, Urbana, Illinois, USA; Jash Rajesh Parekh, University of Illinois Urbana-Champaign, Urbana, IL, USA, jashrp2@illinois.edu; Andy Mao, University of Illinois Urbana-Champaign, Urbana, IL, USA, hanqim2@illinois.edu; Hanyi Min, University of Illinois Urbana-Champaign, Urbana, IL, USA, hanyimin@illinois.edu; Ziang Xiao, Johns Hopkins University, Baltimore, MD, USA, ziang.xiao@jhu.edu; Vedant Das Swain, New York University, New York City, NY, USA, v.das.swain@nyu.edu; Koustuv Saha, University of Illinois Urbana-Champaign, Urbana, IL, USA, ksaha2@illinois.edu.  
+
+> arXiv:2606.21886v1 [cs.HC] 20 Jun 2026 2Duddu et al.
+
+That result sent us back to our design assumptions. What we found was not that Trucey failed; rather, the conversational delivery mechanism was structurally mismatched with the cognitive demands of the task. Conversational AI encodes specific assumptions about how preparation should unfold. We highlight that those assumptions are not neutral—and when they misalign with the task’s cognitive demands, they do not just fail to help; they actively get in the way. We describe our design rationale and assumptions (Section 2), briefly overview the study and its findings (Sections 3.1–3.2), reflect on where those assumptions broke and why (Section 4), and close with scope conditions and forward-looking design directions (Sections 5.1–5.2). 
+
+2 Why We Designed Trucey This Way 
+
+Trucey was designed around four theoretically grounded assumptions about how workers pre-pare for high-stakes negotiations under stress. Each mechanism instantiates a specific model of preparation drawn from negotiation theory, cognitive science, and human–AI interaction. 
+
+Mechanism 1: Situational Calibration. We assumed that articulating one’s negotiation context supports preparation by structuring and externalizing understanding. Workplace negotiation strategies are shaped by relational history, power asymmetries, and institutional context [ 4 ]. 
+
+Trucey elicits descriptions of the user’s situation—including role, prior interactions, and supervisor characteristics—and conditions subsequent guidance on this context. This design reflects the view that users are active participants in constructing their understanding through articulation [11]. 
+
+Mechanism 2: Role-Based Simulation. Our second assumption held that exposure to realistic, context-specific pushback supports fear reduction and builds confidence. Avoidance of negotiation is often driven by anticipated resistance without opportunities for safe exposure. Prior work suggests that engaging with challenging, anxiety-inducing scenarios can support fear processing and self-efficacy [ 2 , 12 ]. Trucey simulates a supervisor whose responses reflect the user’s described context and communication style, creating a rehearsal environment that approximates workplace dynamics beyond generic, agreeable AI interactions [8, 15, 16]. 
+
+Mechanism 3: Contextual Layering. A third assumption guided this mechanism: that incremental, chunked delivery reduces cognitive load during preparation under stress. Preparation under stress constrains attention and information processing. Cognitive load theory suggests that managing information complexity supports learning [ 18 ], particularly in high-stress contexts [ 14 ]. Trucey 
+
+delivers guidance incrementally across conversational turns, aligning with human–AI interaction guidelines on staged and interpretable system behavior. 
+
+Mechanism 4: Iterative Response Alignment. Finally, we assumed that structured scaffolding reduces metacognitive burden by managing the progression of preparation. Users’ needs evolve during preparation, requiring ongoing adjustment of tone, strategy, and challenge level. Trucey 
+
+embeds structured feedback loops within the interaction, enabling real-time recalibration. This reflects models of adaptive conversation management [ 3 ] and prior work on reducing cognitive burden in AI-assisted tasks [ 5]. The mechanism also draws on perspectives that locate empowerment in perceived control over task progression [ 17 ]. Trucey provided no structured overview of the preparation space — while prior turns remained visible by scrolling, a linear transcript does not substitute for a navigable map of what has been covered and what remains. Across these mechanisms, Trucey assumes that preparation is supported through a combination of articulation, guided feedback, and rehearsal within a structured interaction. Rather than relying on static resources, the system positions preparation as an interactive process in which users engage with context-sensitive guidance and simulated experience. The expectation is that this combination supports both affective readiness and strategic competence. AI-Mediated Negotiation: Design Reflections and Lessons 3
+
+3 Study Overview and Findings 3.1 Study Overview 
+
+We conducted a pre-registered between-subjects experiment (N=267) comparing three conditions: 
+
+Trucey (AI with theory-driven scaffolding), a generic LLM baseline ( Control-AI ), and a static theory-grounded handbook ( Control-NoAI ). By separating theoretical scaffolding from conver-sational interactivity, this design allowed us to ask whether each ingredient was actually pulling its weight. We complemented quantitative outcomes—fear, empowerment, usability—with semi-structured interviews (N=15) to understand the experiences driving them. 
+
+3.2 Findings 
+
+The results did not go the way we expected. Trucey reduced fear more effectively than the 
+
+Control-AI (𝑑 = −0.27 , 𝑝 < .05 )—that part held. However, the Control-NoAI , our passive control, outperformed both AI conditions on psychological empowerment (𝑑 = −0.40 , 𝑝 < .01 ) and usability 
+
+(80 .47 𝑣𝑠. 74 .22 , 𝑑 = −0.32 , 𝑝 < .05 ). Interactivity did not translate into greater perceived competence. If anything, it got in the way. The interviews contextualized these results [ 9 ]. Participants sought a structural overview before engaging with specific guidance — a sequence Trucey ’s turn-by-turn delivery systematically inverted. That inversion, and what it revealed about our design assumptions, is what this poster is about. This paper focuses on design reflection rather than findings reporting; further methodological and empirical details can be found in prior work [9, 10]. 
+
+4 Where the Design Assumptions Broke 
+
+We built Trucey around assumptions we considered well-grounded. Each was theoretically justified. Each broke in ways that taught us something we could not have seen from the theory alone (Table 1). 
+
+Articulation elicited retrieval, not clarification. We assumed that prompting workers to describe their negotiation context would function as self-clarification—helping them structure and externalize their thinking. The interaction however elicited knowledge telling; users retrieved and expressed what they already knew rather than engaging in the recursive restructuring necessary for preparation [ 6]. We conflated articulation with clarification. While we successfully prompted users to describe their negotiation context, we failed to provide the recursive space needed for them to refine that thinking. The conversational model solicited description, but it offered no way to revisit, challenge, or evolve those initial thoughts. 
+
+Personalization shaped rehearsal affect, not strategic competence. We assumed that ground-ing coaching in supervisor-specific context would produce more targeted, actionable guidance than generic advice. On strategic outcomes, this did not hold—empowerment gains between Trucey and our control condition were negligible. However, we found that personalization did matter for affect: it made the simulated supervisor feel more realistic, which directly reduced user fear [ 2, 12 ]. We learned that we had built a single mechanism expecting it to do two things, though it could only serve an affective rather than a cognitive purpose. 
+
+Chunking without overview increased cognitive load. Following established HAI design guidelines [ 1 ] in good faith, we utilized incremental, chunked delivery. Our results surfaced an unexamined scope condition on these guidelines: chunking reduces cognitive load when each unit can be processed independently and the task unfolds sequentially. Negotiation preparation is fundamentally recursive—users move between concerns, revisit earlier decisions, and reassess their progress. Because Trucey chunked information without a persistent overview, users lacked positional awareness, unable to navigate back or gauge their completeness. While the guidelines 4 Duddu et al. 
+
+Table 1. Assumption/boundary matrix: four design mechanisms, what each assumes, and where each breaks. 
+
+Mechanism Assumption Encoded Holds When Breaks When 
+
+Situational Calibration 
+
+Articulating context struc-tures and externalizes un-derstanding — conversation functions as self-clarification. Users are elaborating on some-thing they partially under-stand and need to surface — articulation genuinely moves their thinking forward. Users already know what they know — the task requires re-cursive revision, not descrip-tion. Conversational AI solic-its but cannot scaffold itera-tive refinement. 
+
+Role-Based Simulation 
+
+Exposure to realistic, context-specific pushback reduces fear and builds confidence through rehearsal. Users accept the simulation as sufficiently realistic — the af-fective engagement is credible enough to approximate actual stakes. Users question whether AI can reproduce the embodied unpredictability of real work-place power dynamics — au-thenticity breaks down and fear processing does not trans-fer. 
+
+Contextual Layering 
+
+Incremental chunked delivery reduces cognitive load by pac-ing information across turns. Task is sequential — each chunk is complete without ref-erence to the whole, and users do not need to navigate back or assess coverage. Task is recursive — users need positional awareness, the abil-ity to revisit earlier content, and a persistent overview of what remains. Chunking with-out overview increases rather than reduces load. 
+
+Iterative Response Alignment 
+
+Structured scaffolding re-duces metacognitive burden by managing the progression of preparation. The interaction model matches the task’s cognitive structure — users just need to respond, not navigate. Preparation is recursive and users need to maintain conti-nuity across turns — the con-versation holds no persistent state, so tracking prior con-text shifts entirely onto the user. Invisible structure pro-duces anxiety rather than re-lief. 
+
+were derived from sequential task-completion contexts, they inadvertently increased load when applied to recursive, non-linear domains. 
+
+Scaffolding imposed a linear execution model on a recursive task. We assumed that theory-driven scaffolding would reduce metacognitive burden by managing the progression of preparation. Instead, under time pressure, the invisible structure produced uncertainty: because users could not see the “map” of the conversation, they could not anticipate what remained or assess if they had covered everything. Crucially, the interaction model forced a linear progression on a recursive task. Users were required to hold prior insights in working memory and reintroduce them manually—the conversation had no persistent state they could return to. This shifted the burden of maintaining cognitive continuity entirely onto the user, transforming the scaffolding from a support mechanism into a source of coordination effort. 
+
+Guided delivery hindered psychological ownership. Our competence-building model assumed that receiving personalized, expert-calibrated feedback would build applicable understanding. How-ever, we underestimated the role of ownership in this system. Psychological ownership of knowledge develops through control over it and intimate familiarity with it [ 13 ]. Trucey ’s guided delivery AI-Mediated Negotiation: Design Reflections and Lessons 5
+
+denied both; users followed the system’s progression and saw only what the system surfaced. In contrast, the Control-NoAI allowed users to navigate, skim, and return to content—granting them the control necessary to “own” the knowledge. We now believe that control over the organization of information is not incidental to empowerment; it is constitutive of it. These break points converge on two principles that extend beyond Trucey . First, conversational AI systems without persistent state or navigable overview are poorly suited to tasks where under-standing is recursive rather than sequential; the medium externalizes navigation but internalizes state, forcing users to maintain cognitive continuity that the interaction model cannot preserve. Second, chunked incremental delivery reduces cognitive load when task structure is sequential, but it increases cognitive load when task structure is recursive and users require persistent positional awareness. Together, these findings identify an unexamined scope condition on established HAI design guidelines: they are largely derived from sequential task-completion paradigms. These limitations were invisible until we introduced a control condition that made the contrast legible, demonstrating that the failure of current scaffolding is not just an implementation detail but a fundamental mismatch between interaction design and task structure. We did not measure cognitive load or navigation effort directly; these claims are inferred from empowerment outcomes and interview accounts. 
+
+5 Reflection and Design Directions 5.1 Reflections on Generalizability and Scope 
+
+Our evaluation suggests that the efficacy of conversational AI in this domain is highly dependent on task structure. Trucey ’s rehearsal mechanism proved effective; it reduced negotiation-related fear more consistently than the unstructured baseline. This success likely stems from the fact that simulation is inherently sequential—a workplace negotiation unfolds turn-by-turn, making a conversational medium well-suited to the task. When the medium’s interaction model aligns with the task’s temporal structure, the design succeeds. However, we are cautious about the generalizability of these findings. Our qualitative sample (N=15) was disproportionately comprised of early-career professionals in technology. The “map-before-path” preference we observed may reflect the systematic, structured preparation styles common in these cohorts as much as it reflects a universal cognitive requirement. Furthermore, our theoretical framing relies on cognitive and educational frameworks—such as knowledge transfor-mation and global-before-local learning—which are not direct empirical equivalents to high-stakes workplace preparation. We treat these theories as interpretative lenses that illuminate the observed patterns rather than as fixed empirical claims regarding negotiation behavior. The general principle we posit is this: conversational AI is effective when the medium’s linear interaction model matches the task’s cognitive structure. Where that match breaks down, the system imposes a hidden cogni-tive tax on the user—one that current interaction models are not designed to mitigate. We cannot fully disentangle interactivity from navigability as drivers of the empowerment gap—a limitation future work should aim to address through matched-format designs. Beyond the specific findings, this study offers a cautionary lesson for the HCI and CSCW community. Conversational AI is increasingly substituting for structured static resources across domains [ 7 , 8 ]. Our findings suggest the costs of that substitution are not obvious. In fact, even a well-designed static resource can outperform a theory-driven AI system on the outcomes that matter most. Researchers and designers building AI for high-stakes preparatory contexts should expect the same tension: the medium encodes assumptions about how preparation unfolds, and those assumptions may not match how users actually prepare under stress. 6 Duddu et al. 
+
+5.2 Forward-Looking Design Directions 
+
+If we were to build this again, we would not change the components—we would change the order. 
+
+Map before path. Users need structural orientation before engagement. A static, navigable, exportable overview of the full preparation space—organized by theoretical framework, covering strategy, relationship dynamics, and likely resistance—should come first. Not as a preamble to the AI, but as the primary resource. Users should be able to see the full scope of what preparation requires, engage with different dimensions in any order, and return to earlier material as their understanding develops. 
+
+Path before simulation. Conversational AI earns its place once users have the map and have identified where they need depth. At that point, dialogue is no longer imposing a sequence—it is serving one the user has already chosen. The system becomes a tool users direct rather than a guide users follow. 
+
+Simulation last. Rehearsal belongs here because it is inherently sequential—it practices something that is itself linear. Once users have strategic orientation and have selected what they want to work on, structured roleplay with calibrated resistance is the right next step. This sequencing principle extends beyond negotiation. Career coaching, legal preparation, med-ical decision-making, performance reviews—any high-stakes context requiring both strategic overview and emotional rehearsal faces the same underlying tension. The medium is not neutral. Matching interaction architecture to cognitive task structure is not a refinement of AI coaching design. It is a precondition for it. 
+
+AI Disclosure 
+
+The authors used AI-assisted writing tools to support grammar and prose editing. All intellectual content, arguments, and analytical claims are the authors’ own. 
+
+References 
+
+[1] Saleema Amershi, Dan Weld, Mihaela Vorvoreanu, Adam Fourney, Besmira Nushi, Penny Collisson, Jina Suh, Shamsi Iqbal, Paul N Bennett, Kori Inkpen, et al . 2019. Guidelines for human-AI interaction. In Proceedings of the 2019 chi conference on human factors in computing systems . 1–13. [2] Albert Bandura. 1977. Self-efficacy: toward a unifying theory of behavioral change. Psychological review 84, 2 (1977), 191. [3] Graham L. Bradley and Amanda C. Campbell. 2016. Managing difficult workplace conversations. International Journal of Business Communication 53, 4 (Jul 2016), 443–464. doi:10.1177/2329488414525468 [4] Jeanne Brett and Leigh Thompson. 2016. Negotiation. Organizational behavior and human decision processes 136 (2016), 68–79. [5] Zana Buçinca, Maja Barbara Malaya, and Krzysztof Z Gajos. 2021. To trust or to think: Cognitive forcing functions can reduce overreliance on AI in AI-assisted decision-making. Proceedings of the ACM on Human-Computer Interaction 
+
+5, CSCW1 (2021), 1–21. [6] Ulrike Cress and Joachim Kimmerle. 2023. Co-constructing knowledge with generative AI tools: Reflections from a CSCL perspective: U. Cress, J. Kimmerle. International Journal of Computer-Supported Collaborative Learning 18, 4 (2023), 607–614. [7] Vedant Das Swain and Koustuv Saha. 2024. Teacher, trainer, counsel, spy: How generative AI can bridge or widen the gaps in worker-centric digital phenotyping of Wellbeing. In Proceedings of the 3rd Annual Meeting of the Symposium on Human-Computer Interaction for Work . 1–13. [8] Vedant Das Swain, Qiuyue "Joy" Zhong, Jash Rajesh Parekh, Yechan Jeon, Roy Zimmerman, Mary Czerwinski, Jina Suh, Varun Mishra, Koustuv Saha, and Javier Hernandez. 2025. AI on My Shoulder: Supporting Emotional Labor in Front-Office Roles with an LLM-based Empathetic Coworker. In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems .[9] Veda Duddu, Jash Rajesh Parekh, Andy Mao, Hanyi Min, Ziang Xiao, Vedant Das Swain, and Koustuv Saha. 2025. Does AI Coaching Prepare us for Workplace Negotiations? arXiv preprint arXiv:2509.22545 (2025). AI-Mediated Negotiation: Design Reflections and Lessons 7
+
+[10] Veda Duddu, Jash Rajesh Parekh, Andy Mao, Hanyi Min, Ziang Xiao, Vedant Das Swain, and Koustuv Saha. 2026. Not My Truce: Personality Differences in AI-Mediated Workplace Negotiation. arXiv preprint arXiv:2604.00464 (2026). [11] Gerhard Fischer. 1998. Beyond" couch potatoes": From consumers to designers. In Proceedings. 3rd Asia Pacific Computer Human Interaction (Cat. No. 98EX110) . IEEE, 2–9. [12] Edna B Foa and Michael J Kozak. 1986. Emotional processing of fear: exposure to corrective information. Psychological bulletin 99, 1 (1986), 20. [13] Jon L Pierce, Tatiana Kostova, and Kurt T Dirks. 2001. Toward a theory of psychological ownership in organizations. 
+
+Academy of management review 26, 2 (2001), 298–310. [14] Anthony J Porcelli and Mauricio R Delgado. 2017. Stress and decision making: effects on valuation, learning, and risk-taking. Current opinion in behavioral sciences 14 (2017), 33–39. [15] Omar Shaikh, Valentino Emil Chai, Michele Gelfand, Diyi Yang, and Michael S Bernstein. 2024. Rehearsal: Simulating conflict to teach conflict resolution. In Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems .1–20. [16] Ashish Sharma, Kevin Rushton, Inna Lin, David Wadden, Khendra Lucas, Adam Miner, Theresa Nguyen, and Tim Althoff. 2023. Cognitive reframing of negative thoughts through human-language model interaction. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) . 9977–10000. [17] Gretchen M Spreitzer. 1995. Psychological empowerment in the workplace: Dimensions, measurement, and validation. 
+
+Academy of management Journal 38, 5 (1995), 1442–1465. [18] John Sweller. 2011. Cognitive load theory. In Psychology of learning and motivation . Vol. 55. Elsevier, 37–76.

@@ -6,35 +6,65 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-22
-- 运行时间：2026-06-22 22:26:06 UTC
+- 最新运行日期：2026-06-23
+- 运行时间：2026-06-23 21:37:34 UTC
 - 运行状态：成功
-- 本次总论文数：5
-- 精读区：4
-- 速读区：1
+- 本次总论文数：15
+- 精读区：6
+- 速读区：9
 
 ### 今日简报（AI）
-今日精读2篇高分论文，速读1篇，聚焦情感计算自蒸馏与AI创意协作分析。最值得关注OmniOPSD的理性特权自蒸馏用于情感计算，以及Co-Creativity中AI与人类的创意互动模式。建议优先阅读OmniOPSD理解其蒸馏机制，再结合SAGE的随机提示优化方法拓展应用。
-- 详情：[/202606/22/README](/202606/22/README)
+今日精读15篇论文，重点聚焦人机协作与AI交互中的协同效应及公共部门采购需求。最值得关注的是共享工作空间的人机协同机制，以及公共领域AI交互的规范性要求。建议读者优先关注人机交互的隐私对齐与层次化动作建模方向。
+- 详情：[/202606/23/README](/202606/23/README)
 
 ### 精读区论文标签
-1. [OmniOPSD: Rationale-Privileged On-Policy Self-Distillation for Affective Computing](/202606/22/2606.15920v1-omniopsd-rationale-privileged-on-policy-self-distillation-for-affective-computing)  
+1. [Searching for Synergy in Shared Workspace Human-AI Collaboration](/202606/23/2606.18413v3-searching-for-synergy-in-shared-workspace-human-ai-collaboration)  
    标签：评分：9.0/10、query:hai
-   evidence：面向人类中心场景的情感计算，理性优先自蒸馏方法
-2. [Co-Creativity at the Table: A Qualitative Analysis of Creative Interactions in the Podcast "Adventure AI"](/202606/22/2606.18010v1-co-creativity-at-the-table-a-qualitative-analysis-of-creative-interactions-in-the-podcast-adventure-ai)  
+   evidence：共享工作空间人机协作协同效应
+2. [Human-AI Interaction Requirements in Public Sector Procurements](/202606/23/2606.21247v1-human-ai-interaction-requirements-in-public-sector-procurements)  
    标签：评分：9.0/10、query:hai
-   evidence：定性分析龙与地下城游戏中人机交互
-3. [Frame-Conditioned Moral Computation in LLaMA 3.1-8B-Instruct: A Mechanistic Interpretability Audit of Ethical Reasoning](/202606/22/2606.15507v1-frame-conditioned-moral-computation-in-llama-31-8b-instruct-a-mechanistic-interpretability-audit-of-ethical-reasoning)  
-   标签：评分：8.0/10、query:hai
-   evidence：伦理推理解释的机制可解释性
-4. [Rethinking Scaffolding in LLM Tutors: The Interactional Mismatch Between Benchmarks and Real-World Deployments](/202606/22/2606.15766v1-rethinking-scaffolding-in-llm-tutors-the-interactional-mismatch-between-benchmarks-and-real-world-deployments)  
-   标签：评分：8.0/10、query:hai
-   evidence：以人为中心的AI辅导系统设计
+   evidence：面向采购的人机交互需求分类法
+3. [LLM and Human Modes of Representation](/202606/23/2606.21616v1-llm-and-human-modes-of-representation)  
+   标签：评分：9.0/10、query:hai
+   evidence：比较LLM与人类认知表征方式
+4. [Resume Screening, Fast and Slow: (Biased) AI Recommendations' Influence on Human Decision Making](/202606/23/2606.22213v1-resume-screening-fast-and-slow-biased-ai-recommendations-influence-on-human-decision-making)  
+   标签：评分：9.0/10、query:hai
+   evidence：人机协作简历筛选中的偏见影响分析
+5. [Human and AI collaboration for pulmonary nodule segmentation](/202606/23/2606.22486v1-human-and-ai-collaboration-for-pulmonary-nodule-segmentation)  
+   标签：评分：9.0/10、query:hai
+   evidence：人机协作在医学图像分割中的应用
+6. [Statistical Proof as a Window into Human-AI Collaboration: Practical Insights and a Community Agenda](/202606/23/2606.23666v1-statistical-proof-as-a-window-into-human-ai-collaboration-practical-insights-and-a-community-agenda)  
+   标签：评分：9.0/10、query:hai
+   evidence：统计证明中的人机协作
 
 ### 速读区论文标签
-1. [SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration](/202606/22/2606.18902v1-sage-stochastic-prompt-optimization-via-agent-guided-exploration)  
+1. [How Should Agents Read Demonstrations? Hierarchical Structure Beats Flat Action Logs](/202606/23/2606.20978v1-how-should-agents-read-demonstrations-hierarchical-structure-beats-flat-action-logs)  
+   标签：评分：8.0/10、query:hai
+   evidence：以人为本的示范编程、层次化结构用于智能体授权
+2. [PrivacyAlign: Contextual Privacy Alignment for LLM Agents](/202606/23/2606.21710v1-privacyalign-contextual-privacy-alignment-for-llm-agents)  
+   标签：评分：8.0/10、query:hai
+   evidence：以人类判断为中心的智能体隐私对齐
+3. [Bridging Technical AI, Societal Impacts, and Workforce Competencies in AI Education](/202606/23/2606.20994v1-bridging-technical-ai-societal-impacts-and-workforce-competencies-in-ai-education)  
    标签：评分：7.0/10、query:hai
-   evidence：随机提示优化方法，通过智能体引导探索改善人机交互
+   evidence：课程映射连接技术AI、社会危害和工作能力，包括以人为中心的设计
+4. [LK Jam: System Architecture and Implementation of a Real-Time Human-AI Interactive Music Generation System using Role-Aware GRU](/202606/23/2606.21018v1-lk-jam-system-architecture-and-implementation-of-a-real-time-human-ai-interactive-music-generation-system-using-role-aware-gru)  
+   标签：评分：7.0/10、query:hai
+   evidence：实时人机交互音乐生成、双向互动
+5. [AI-Mediated Negotiation: Design Reflections and Lessons](/202606/23/2606.21886v1-ai-mediated-negotiation-design-reflections-and-lessons)  
+   标签：评分：7.0/10、query:hai
+   evidence：AI中介谈判系统的设计反思与教训
+6. [AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction](/202606/23/2606.23449v1-aohp-an-open-source-os-level-agent-harness-for-personalized-efficient-and-secure-interaction)  
+   标签：评分：7.0/10、query:hai
+   evidence：面向个性化安全交互的操作系统级代理框架
+7. [Generative Responsible AI Data Evaluation Schema (GRAIDES) for AI Assurance in Local Government](/202606/23/2606.20963v1-generative-responsible-ai-data-evaluation-schema-graides-for-ai-assurance-in-local-government)  
+   标签：评分：6.0/10、query:hai
+   evidence：负责任AI评估模式用于AI保证
+8. [AI Alignment From Social Choice Perspectives](/202606/23/2606.21550v1-ai-alignment-from-social-choice-perspectives)  
+   标签：评分：6.0/10、query:hai
+   evidence：基于人类反馈的AI对齐、社会选择理论、处理分歧
+9. [Inverse Turing Bench: Evaluating Language Models as Judges of Human vs. AI Dialogue](/202606/23/2606.21844v1-inverse-turing-bench-evaluating-language-models-as-judges-of-human-vs-ai-dialogue)  
+   标签：评分：6.0/10、query:hai
+   evidence：区分人机对话的基准
 
 
 <div class="dpr-home-promo-card">

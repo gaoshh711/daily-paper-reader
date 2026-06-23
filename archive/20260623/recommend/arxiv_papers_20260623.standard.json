@@ -1,0 +1,624 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-23T21:28:10.119940+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 8,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2606.18413v3",
+      "source": "arxiv",
+      "title": "Searching for Synergy in Shared Workspace Human-AI Collaboration",
+      "abstract": "Automated AI agents are increasingly capable, yet many scientific and professional tasks require human judgment and contextual expertise. We use simulated shared-workspace human-AI teams as a controlled testbed for studying how collaboration structure shapes team behavior. Using the Collaborative Gym environment with tasks from DiscoveryBench, we vary team compositions and collaboration structures across 1,482 sessions. We find that adding additional collaborators can lower performance when coordination structure is absent. We then evaluate collaboration scaffolding that combines shared group memory with simulated human-in-the-loop (HITL) gates, where selected actions require approval from a designated simulated participant. This scaffolding improves performance, most clearly in three-person teams, with clearer responsibility signals and stronger routing of expertise to team actions. Overall, our results suggest that coordination structure is central to whether available capability improves team outcomes.",
+      "authors": [
+        "Nachiket Kotalwar",
+        "Rohini Das",
+        "Carolyn Rose"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-16T19:08:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.18413v3",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Human-AI collaboration synergy in shared workspace",
+      "llm_evidence_cn": "共享工作空间人机协作协同效应",
+      "llm_evidence": "共享工作空间人机协作协同效应",
+      "canonical_evidence": "共享工作空间人机协作协同效应",
+      "llm_tldr_en": "Studies human-AI collaboration structure in shared workspace using Collaborative Gym, finding that coordination scaffolding improves performance.",
+      "llm_tldr_cn": "本文研究共享工作空间中的人机协作结构。使用Collaborative Gym和DiscoveryBench任务，进行1482次模拟实验。发现缺乏协调结构时增加协作者反而降低性能。提出的协作脚手架（共享组记忆+人机回环门控）显著提升团队表现，为人机协作设计提供了实证依据。",
+      "llm_tldr": "本文研究共享工作空间中的人机协作结构。使用Collaborative Gym和DiscoveryBench任务，进行1482次模拟实验。发现缺乏协调结构时增加协作者反而降低性能。提出的协作脚手架（共享组记忆+人机回环门控）显著提升团队表现，为人机协作设计提供了实证依据。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.21247v1",
+      "source": "arxiv",
+      "title": "Human-AI Interaction Requirements in Public Sector Procurements",
+      "abstract": "Public sector organizations increasingly procure AI-enabled ICT systems to support decision-making and service delivery. Although ethical AI frameworks emphasize transparency, accountability, and human oversight, these principles are rarely translated into explicit requirements in procurement processes. Consequently, human-AI interaction (HAI) is often left to vendor design choices. This paper conceptualizes HAI as a procurement-critical design dimension and proposes a taxonomy of interaction requirements tailored to public sector ICT procurement. The taxonomy enables contracting authorities to specify and govern interaction properties through procurement instruments, supporting both ethical compliance and sustainable value realization.",
+      "authors": [
+        "Mateen A. Abbasi",
+        "Tommi Mikkonen",
+        "Sinna Pirinen",
+        "Aapo Koski"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.HC",
+        "cs.SE"
+      ],
+      "published": "2026-06-19T09:17:21+00:00",
+      "link": "https://arxiv.org/pdf/2606.21247v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "taxonomy of human-AI interaction requirements for procurement",
+      "llm_evidence_cn": "面向采购的人机交互需求分类法",
+      "llm_evidence": "面向采购的人机交互需求分类法",
+      "canonical_evidence": "面向采购的人机交互需求分类法",
+      "llm_tldr_en": "This paper conceptualizes human-AI interaction as a procurement-critical dimension and proposes a taxonomy of interaction requirements for public sector ICT procurement.",
+      "llm_tldr_cn": "公共部门采购AI系统时，人机交互原则常被忽略。本文将HAI概念化为采购关键维度，提出针对公共部门ICT采购的交互需求分类法，使合同方能够指定和治理交互属性。",
+      "llm_tldr": "公共部门采购AI系统时，人机交互原则常被忽略。本文将HAI概念化为采购关键维度，提出针对公共部门ICT采购的交互需求分类法，使合同方能够指定和治理交互属性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.21616v1",
+      "source": "arxiv",
+      "title": "LLM and Human Modes of Representation",
+      "abstract": "Much work on the cognitive foundations of AI has focussed on comparisons between the ways in which Large Language Models (LLMs) and humans process information and represent it. One aspect of this comparison involves determining the extent to which LLMs can achieve or surpass human performance on a variety of cognitively interesting tasks. A second explores points of convergence and divergence between LLM and human systems for processing information. Here, I consider some recent research that has addressed both issues in two informational domains. The first is the representation of linguistic knowledge. The second is real world reasoning and planning. While LLMs frequently achieve impressive levels of performance and fluency on linguistic applications, they tend to handle linguistic content in ways that are distinct from human processing. They are also, for the most part, less efficient than humans in learning and generalisation for reasoning tasks.",
+      "authors": [
+        "Shalom Lappin"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-06-19T17:20:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.21616v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "compares LLM and human cognitive representations",
+      "llm_evidence_cn": "比较LLM与人类认知表征方式",
+      "llm_evidence": "比较LLM与人类认知表征方式",
+      "canonical_evidence": "比较LLM与人类认知表征方式",
+      "llm_tldr_en": "This paper examines the cognitive foundations of AI by comparing LLM and human modes of representation in linguistic knowledge and real-world reasoning, revealing convergences and divergences.",
+      "llm_tldr_cn": "本文聚焦于AI认知基础，系统比较了大型语言模型与人类在语言知识表征和现实世界推理中的信息处理方式。研究发现，LLM在语言任务上表现出色，但在深层语义理解上仍与人类存在差异。该研究为人机认知对比提供了重要视角，对设计更符合人类认知的AI系统具有启示意义。",
+      "llm_tldr": "本文聚焦于AI认知基础，系统比较了大型语言模型与人类在语言知识表征和现实世界推理中的信息处理方式。研究发现，LLM在语言任务上表现出色，但在深层语义理解上仍与人类存在差异。该研究为人机认知对比提供了重要视角，对设计更符合人类认知的AI系统具有启示意义。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.22213v1",
+      "source": "arxiv",
+      "title": "Resume Screening, Fast and Slow: (Biased) AI Recommendations' Influence on Human Decision Making",
+      "abstract": "AI is increasingly being used collaboratively with people to make decisions in high-stakes domains, but this new paradigm is still not well-understood in many respects -- particularly regarding how AI that replicates human social biases influences people's decision making processes and how that can influence outcomes. In this study, we analyzed the time people spend viewing candidate resumes from an experiment investigating biased AI resume screening to evaluate decision-making fairness and cognitive processes underlying human-AI collaboration. We found that spending more time viewing resumes corresponds to candidates' selection chance increasing by 3-4% if they are not recommended, and people may spend up to 55.6% longer viewing resumes when no AI recommendations are given. Furthermore, people who completed an implicit association test (IAT) before resume screening were significantly more likely to evaluate candidates of different races for the same amount of time, and their IAT scores were also predictive of the time spent in human-AI collaboration. These results demonstrate how people's decision-making processes can be insufficient for overseeing AI in high-stakes domains.",
+      "authors": [
+        "Kyra Wilson",
+        "Mattea Sim",
+        "Anna-Maria Gueorguieva",
+        "Soham Chatterjee",
+        "Aylin Caliskan"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-06-20T20:22:04+00:00",
+      "link": "https://arxiv.org/pdf/2606.22213v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI collaboration in resume screening with bias analysis",
+      "llm_evidence_cn": "人机协作简历筛选中的偏见影响分析",
+      "llm_evidence": "人机协作简历筛选中的偏见影响分析",
+      "canonical_evidence": "人机协作简历筛选中的偏见影响分析",
+      "llm_tldr_en": "This study investigates biased AI recommendations' influence on human decision-making in resume screening, finding that increased viewing time improves selection chances for non-recommended candidates.",
+      "llm_tldr_cn": "本文通过实验探究了有偏见的AI推荐如何影响人类在简历筛选中的决策过程。研究发现，当AI不推荐某候选人时，人类花费更多时间查看该候选人会增加其被选中的几率（3-4%），而候选人若获得AI推荐，人类可能花费长达55.6%的额外时间查看。该工作揭示了人机协作中认知偏差的复杂性。",
+      "llm_tldr": "本文通过实验探究了有偏见的AI推荐如何影响人类在简历筛选中的决策过程。研究发现，当AI不推荐某候选人时，人类花费更多时间查看该候选人会增加其被选中的几率（3-4%），而候选人若获得AI推荐，人类可能花费长达55.6%的额外时间查看。该工作揭示了人机协作中认知偏差的复杂性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.22486v1",
+      "source": "arxiv",
+      "title": "Human and AI collaboration for pulmonary nodule segmentation",
+      "abstract": "Medical expert annotators are scarce, and blind reliance on artificial intelligence (AI) can be misleading, motivating approaches in which humans, particularly junior medical trainees or even non-medical personnel, collaborate with AI to achieve robust medical segmentation. Although the Segment Anything Model (SAM) shows promise for general-purpose image segmentation, its performance in human-AI collaboration for specialized medical tasks has not been thoroughly evaluated. Here we present Hi-Seg, a human-in-the-loop segmentation framework for pulmonary nodules built on SAM. Humans iteratively refine prompts through trial-and-error learning and semantic reasoning, progressively guiding SAM toward higher-quality masks. Using chest CT scans from 1,179 patients across 12 centers, we conducted the first large-scale external validation of collaborative human-SAM segmentation. Across all annotator groups, Hi-Seg achieved a mean Dice score of almost 85%, outperforming five state-of-the-art deep learning models by 10-22% and 13 SAM variants by 1-29%. Hi-Seg improved segmentation accuracy while reducing annotation time for medical annotators, and briefly trained non-medical annotators achieved performance comparable to that of the junior medical student. These findings suggest that human-in-the-loop segmentation can reduce clinician workload, enable scalable crowdsourced annotation, and transform clinical workflows by facilitating the safe and efficient integration of foundation models into routine clinical practice.",
+      "authors": [
+        "Hongqiao Dong",
+        "Wenhao Chi",
+        "Ruobing Liang",
+        "Xiaokui Yang",
+        "Wenhua Liang",
+        "Peng Hou",
+        "Wenjun Pu",
+        "Yipeng Zhao",
+        "Ping Chen",
+        "Haiping Liu",
+        "Jianxing He",
+        "Bo Liu"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-21T13:11:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.22486v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI collaboration for medical image segmentation",
+      "llm_evidence_cn": "人机协作在医学图像分割中的应用",
+      "llm_evidence": "人机协作在医学图像分割中的应用",
+      "canonical_evidence": "人机协作在医学图像分割中的应用",
+      "llm_tldr_en": "Hi-Seg framework enables humans to collaborate with SAM in pulmonary nodule segmentation through iterative prompt refinement, achieving robust results with non-expert annotators.",
+      "llm_tldr_cn": "本文提出Hi-Seg，一种基于SAM的人机协同肺结节分割框架。非专家标注者通过试错学习和语义推理不断优化提示，渐进式引导SAM生成更高质量的分割掩膜。基于1179名患者的CT扫描实验表明，该方法在有限专家参与下即可达到专业级分割精度，验证了人机协作在医学影像分析中的巨大潜力。",
+      "llm_tldr": "本文提出Hi-Seg，一种基于SAM的人机协同肺结节分割框架。非专家标注者通过试错学习和语义推理不断优化提示，渐进式引导SAM生成更高质量的分割掩膜。基于1179名患者的CT扫描实验表明，该方法在有限专家参与下即可达到专业级分割精度，验证了人机协作在医学影像分析中的巨大潜力。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23666v1",
+      "source": "arxiv",
+      "title": "Statistical Proof as a Window into Human-AI Collaboration: Practical Insights and a Community Agenda",
+      "abstract": "Large language models (LLMs) are increasingly woven into expert cognitive work in daily research, yet we know little about how human expertise should adapt when an AI system can execute substantial technical reasoning on its own. Here we use statistical proof development, a demanding and structured form of expert reasoning, as a window into this broader question. Drawing on day-to-day proof problems, we find that current general-purpose LLMs occupy a useful but limited role: they can execute technical components given a precisely formulated problem and targeted guidance, but become unreliable when the problem is open-ended or requires a long reasoning chain with multiple interdependent steps. This execution-strategy gap is rooted in what makes research-level statistical proof distinctive: unlike pure mathematics, where problems arrive pre-formulated and often demand novel techniques, statistical proof requires first modeling a scientific question into a statistical framework with appropriate assumptions, and then identifying and adapting the right strategy from a repertoire of reusable domain-specific tools. Each step requires deep expertise in both the statistical literature and the real-world context being modeled. In such work, current AI assistance does not reduce the need for human expertise; it relocates that expertise to where human decision-making matters most, such as problem formulation and verification of AI-generated results, and may raise the bar for both. These findings yield practical suggestions for how statisticians can structure AI-assisted proof workflows, and point to a broader community agenda for shared resources, better AI tools, and training the next generation of researchers. Using statistical proof as a window, our study has implications for how experts structure human-AI collaboration in technical cognitive domains more broadly.",
+      "authors": [
+        "Xiaojing Sun",
+        "Huayu Tang",
+        "Buxin Su",
+        "Mateo Matijasevick",
+        "Chong Wu",
+        "Fei Xue",
+        "Bingxin Zhao"
+      ],
+      "primary_category": "stat.OT",
+      "categories": [
+        "stat.OT",
+        "stat.ME"
+      ],
+      "published": "2026-06-22T17:51:19+00:00",
+      "link": "https://arxiv.org/pdf/2606.23666v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI collaboration in statistical proof",
+      "llm_evidence_cn": "统计证明中的人机协作",
+      "llm_evidence": "统计证明中的人机协作",
+      "canonical_evidence": "统计证明中的人机协作",
+      "llm_tldr_en": "This paper studies human-AI collaboration through statistical proof development, finding LLMs useful for precise tasks but unreliable for open-ended reasoning, highlighting the execution-strategy gap.",
+      "llm_tldr_cn": "本文以统计证明开发为窗口，探讨人类专业知识如何与AI协作。发现当前LLM可在精确定义的问题下执行技术组件，但在开放式或长链推理中不可靠，揭示了执行策略差距，为人机协作方法设计提供实践见解。",
+      "llm_tldr": "本文以统计证明开发为窗口，探讨人类专业知识如何与AI协作。发现当前LLM可在精确定义的问题下执行技术组件，但在开放式或长链推理中不可靠，揭示了执行策略差距，为人机协作方法设计提供实践见解。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.20978v1",
+      "source": "arxiv",
+      "title": "How Should Agents Read Demonstrations? Hierarchical Structure Beats Flat Action Logs",
+      "abstract": "Programming by Demonstration (PbD) offers a human-centered way to author procedural knowledge for LLM agents: users communicate what they want by showing rather than by writing prompts or code, making agent authoring accessible to non-programmers. The natural output of a PbD recording is a flat action log, but how this log is organized before being passed to the agent is an open design question with significant consequences for plan quality. We propose grouping recorded actions into labeled, hierarchical subgoals and evaluate the effect of this organizational structure in a controlled experiment. Across 85 web automation tasks, we compare a zero-shot baseline against four demonstration formats that share identical action sequences but differ in structure. On 43 natural-language tasks with vague descriptions, hierarchically grouped demonstrations improve pass rates from 76.7\\% to 90.7\\% (paired permutation test $p{=}0.034$; win-loss 6:0), while flat demonstrations show a smaller, non-significant improvement. On 42 tasks with precise descriptions, no format provides any benefit, confirming that the hierarchical advantage arises specifically when descriptions leave procedural details ambiguous. Ablation shows that subgoal grouping alone drives the effect: preconditions, postconditions, and parameter annotations add no measurable benefit. These results offer a concrete design recommendation for PbD pipelines and, more broadly, for any system that feeds procedural context to an LLM agent: segment action sequences into named subgoal groups rather than presenting flat step lists.",
+      "authors": [
+        "Honjar Xing",
+        "Jefferson Lin",
+        "Henry Lieberman"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-18T22:57:14+00:00",
+      "link": "https://arxiv.org/pdf/2606.20978v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-centered programming by demonstration, hierarchical structure for agent authoring",
+      "llm_evidence_cn": "以人为本的示范编程、层次化结构用于智能体授权",
+      "llm_evidence": "以人为本的示范编程、层次化结构用于智能体授权",
+      "canonical_evidence": "以人为本的示范编程、层次化结构用于智能体授权",
+      "llm_tldr_en": "Shows that organizing recorded demonstrations into hierarchical subgoals significantly improves LLM agent plan quality over flat action logs, for human-centered authoring.",
+      "llm_tldr_cn": "本文针对示范编程（PbD）中如何组织记录的动作日志这一设计问题，提出将日志分组为带标签的层次化子目标。在85个Web自动化任务上进行的对照实验表明，层次化结构相比平面日志显著提升了LLM智能体的计划质量。该工作为设计更易于非程序员使用的以人为本的AI系统提供了有效方法。",
+      "llm_tldr": "本文针对示范编程（PbD）中如何组织记录的动作日志这一设计问题，提出将日志分组为带标签的层次化子目标。在85个Web自动化任务上进行的对照实验表明，层次化结构相比平面日志显著提升了LLM智能体的计划质量。该工作为设计更易于非程序员使用的以人为本的AI系统提供了有效方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.20994v1",
+      "source": "arxiv",
+      "title": "Bridging Technical AI, Societal Impacts, and Workforce Competencies in AI Education",
+      "abstract": "As AI becomes embedded across everyday life and work, educators must help students connect technical knowledge with societal consequences and workplace responsibilities. Yet AI education often remains fragmented, with technical concepts, ethics, human-centered design, and workforce preparation taught separately. This work-in-progress presents a curriculum mapping framework that links technical systems, societal harms, and workforce competencies, beginning with institutional courses and expanding through an external 335-course registry. Early findings from six courses suggest that technical coverage is often strong, societal harms are present but unevenly integrated, and workforce competencies are rarely explicitly assessed. These findings speak to AI literacy efforts by showing that literacy cannot stop at awareness of AI concepts or harms; it must also include competencies for responsible action in AI-enabled contexts.",
+      "authors": [
+        "Narges Zare",
+        "Divya Ramesh",
+        "Cori Faklaris"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-06-19T00:00:18+00:00",
+      "link": "https://arxiv.org/pdf/2606.20994v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Curriculum mapping linking technical AI, societal harms, and workforce competencies including human-centered design",
+      "llm_evidence_cn": "课程映射连接技术AI、社会危害和工作能力，包括以人为中心的设计",
+      "llm_evidence": "课程映射连接技术AI、社会危害和工作能力，包括以人为中心的设计",
+      "canonical_evidence": "课程映射连接技术AI、社会危害和工作能力，包括以人为中心的设计",
+      "llm_tldr_en": "Work-in-progress curriculum mapping framework that integrates human-centered design with technical AI and ethics.",
+      "llm_tldr_cn": "AI教育中技术概念、伦理和以人为中心的设计常被分离。本文提出课程映射框架，连接技术系统、社会危害和工作能力，基于六门课程初步发现技术覆盖强但社会危害整合不均，工作能力评估不足。为设计以人为中心的AI课程提供了指导。",
+      "llm_tldr": "AI教育中技术概念、伦理和以人为中心的设计常被分离。本文提出课程映射框架，连接技术系统、社会危害和工作能力，基于六门课程初步发现技术覆盖强但社会危害整合不均，工作能力评估不足。为设计以人为中心的AI课程提供了指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.20963v1",
+      "source": "arxiv",
+      "title": "Generative Responsible AI Data Evaluation Schema (GRAIDES) for AI Assurance in Local Government",
+      "abstract": "Trust in the application of generative Artificial Intelligence (AI) relies on well-governed measurable evidence of performance and safety. In practice, however, evaluation data is often fragmented across systems, inconsistently structured and difficult to compare. We introduce the Generative Responsible AI Data Evaluation Schema (GRAIDES) as a lightweight open-source data model for centralising AI observability across popular vendors. Practical blueprints for code, architecture and statistical evaluation are shared as guidance about how to approach generative system assurance at the organisational level. Illustrative case study results are reported from Westminster City Council's AI catalogue with a focus on measuring human-model alignment including detecting systematic disagreement between evaluators. By framing evaluations as a data modelling problem, GRAIDES provides a practical pathway toward more consistent and reproducible benchmarking, tuning and assurance activities for generative AI systems.",
+      "authors": [
+        "Ethan Knights",
+        "Christopher Conlan",
+        "Temilorun Gbolahan",
+        "Stephen Waterman",
+        "Gurpreet Muctor"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.DB"
+      ],
+      "published": "2026-06-18T22:00:25+00:00",
+      "link": "https://arxiv.org/pdf/2606.20963v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Responsible AI evaluation schema for AI assurance",
+      "llm_evidence_cn": "负责任AI评估模式用于AI保证",
+      "llm_evidence": "负责任AI评估模式用于AI保证",
+      "canonical_evidence": "负责任AI评估模式用于AI保证",
+      "llm_tldr_en": "Lightweight open-source data model for centralizing AI observability across vendors, with case study in local government.",
+      "llm_tldr_cn": "生成式AI系统评估数据分散且不一致，本文提出GRAIDES轻量级开源数据模型，统一AI可观测性。提供代码和架构蓝图，并在威斯敏斯特市议会AI目录中进行案例研究，重点关注人工模组测量。为组织级生成式AI保证提供了实用方案。",
+      "llm_tldr": "生成式AI系统评估数据分散且不一致，本文提出GRAIDES轻量级开源数据模型，统一AI可观测性。提供代码和架构蓝图，并在威斯敏斯特市议会AI目录中进行案例研究，重点关注人工模组测量。为组织级生成式AI保证提供了实用方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.21710v1",
+      "source": "arxiv",
+      "title": "PrivacyAlign: Contextual Privacy Alignment for LLM Agents",
+      "abstract": "AI agents acting on behalf of users are constantly making decisions, and for users to trust their agents, those decisions must align with what they actually want. Privacy is an important alignment problem for agents: every message, post, or tool call an agent makes is a contextual judgment about what is appropriate to share, with whom, and under which conditions. Because such judgments depend on social expectations and norms, human judgment does not merely label privacy violations but also helps define them. While existing work relies on unreliable proxies for both training and evaluation, we place human judgment at the center of agentic privacy alignment. We introduce PrivacyAlign, a dataset of 1,350 samples with 3,516 detailed annotations from 599 unique annotators across diverse scenarios where current LLMs actually leak, and use it to ground both alignment training and automated evaluation in human privacy norms. Building on these annotations, we first show that conditioning LLM judges on human annotations and explanations for reference responses to the same prompt makes their judgments more reliable. We then introduce annotation-conditioned reward modeling, which uses these annotations to score new responses during RL, and show that small open-weight agents trained with this reward better align with human privacy norms, with strong gains on PrivacyAlign and existing privacy benchmarks for agents.",
+      "authors": [
+        "Manveer Singh Tamber",
+        "Abhay Puri",
+        "Marc-Etienne Brunet",
+        "Perouz Taslakian",
+        "Jimmy Lin",
+        "Spandana Gella"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "published": "2026-06-19T19:50:55+00:00",
+      "link": "https://arxiv.org/pdf/2606.21710v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human judgment centered privacy alignment for agents",
+      "llm_evidence_cn": "以人类判断为中心的智能体隐私对齐",
+      "llm_evidence": "以人类判断为中心的智能体隐私对齐",
+      "canonical_evidence": "以人类判断为中心的智能体隐私对齐",
+      "llm_tldr_en": "PrivacyAlign places human judgment at the center of agentic privacy alignment, using 1,350 samples with detailed annotations to train models for contextual privacy decisions.",
+      "llm_tldr_cn": "本文提出PrivacyAlign框架，将人类判断置于智能体隐私对齐的核心位置。通过构建包含1350个样本、3516条详细标注的数据集，并引入599名标注者，使AI代理能够基于社会情境做出符合用户隐私偏好的决策。该方法强调人类在定义隐私边界中的关键作用，提升了代理系统的可信度。",
+      "llm_tldr": "本文提出PrivacyAlign框架，将人类判断置于智能体隐私对齐的核心位置。通过构建包含1350个样本、3516条详细标注的数据集，并引入599名标注者，使AI代理能够基于社会情境做出符合用户隐私偏好的决策。该方法强调人类在定义隐私边界中的关键作用，提升了代理系统的可信度。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2606.21018v1",
+      "source": "arxiv",
+      "title": "LK Jam: System Architecture and Implementation of a Real-Time Human-AI Interactive Music Generation System using Role-Aware GRU",
+      "abstract": "As artificial intelligence advances into the era of Embodied AI, live musical interaction urgently needs to break free from the limitations of offline, unidirectional generation, achieving a \"virtual synergy\" capable of low-latency, dynamic interplay. To address this, this technical report presents LK_Jam, a real-time, bidirectional human-computer interactive music generation system based on a lightweight Gated Recurrent Unit (GRU) and a high-performance audio host architecture. In the algorithmic representation layer, this system abandons the computationally expensive fixed time-grid. Instead, it constructs a multi-dimensional sparse event stream integrating time-shifts, continuous harmonic embeddings, and role-aware encoding, enabling the model to accurately capture turn-taking logic and micro-timing in a single-step inference. In the engineering implementation layer, this paper builds a strict multithreaded lock-free communication bridge using C++ and the JUCE framework, incorporating the RTNeural inference engine designed specifically for real-time audio. By utilizing compile-time network topology solidification and a zero-allocation (allocation-free) mechanism, the end-to-end overhead of autoregressive decoding is strictly locked at \\(O(1)\\) complexity, structurally mitigating the risk of audio thread dropouts in DAW plugin environments. Furthermore, this study designs a three-stage progressive training strategy, achieving a leap from basic chord harmonization to expert-level interaction. Preliminary observations and architectural analysis demonstrate that while ensuring musical coherence and interactive role-play, the proposed system successfully challenges extreme real-time engineering constraints, offering a highly robust and deployable technical paradigm for next-generation AI co-performers in live music.",
+      "authors": [
+        "Yakun Liu",
+        "Zhiyu Jin",
+        "Dong Liu",
+        "Hai Luan"
+      ],
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-19T01:03:44+00:00",
+      "link": "https://arxiv.org/pdf/2606.21018v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "real-time human-AI interactive music generation, bidirectional interaction",
+      "llm_evidence_cn": "实时人机交互音乐生成、双向互动",
+      "llm_evidence": "实时人机交互音乐生成、双向互动",
+      "canonical_evidence": "实时人机交互音乐生成、双向互动",
+      "llm_tldr_en": "Presents LK_Jam, a real-time bidirectional human-AI music generation system using lightweight GRU and multi-dimensional sparse event stream, enabling low-latency dynamic interplay.",
+      "llm_tldr_cn": "本文提出LK_Jam实时双向人机交互音乐生成系统，采用轻量级GRU和高性能音频主机架构。系统摒弃固定时间网格，构建包含时间偏移、连续和声嵌入等元素的多维稀疏事件流，实现低延迟动态交互。该系统为人机协同创作提供了可行的技术方案。",
+      "llm_tldr": "本文提出LK_Jam实时双向人机交互音乐生成系统，采用轻量级GRU和高性能音频主机架构。系统摒弃固定时间网格，构建包含时间偏移、连续和声嵌入等元素的多维稀疏事件流，实现低延迟动态交互。该系统为人机协同创作提供了可行的技术方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.21550v1",
+      "source": "arxiv",
+      "title": "AI Alignment From Social Choice Perspectives",
+      "abstract": "Alignment from human feedback uses human judgments about model outputs to steer the behavior of language models after pretraining. When those judgments reflect conflicting views of desirable behavior, the learned objective becomes an aggregate determination of what the model should prefer. We survey recent work that has studied this aggregation problem through the lens of social choice theory. We illustrate how the social choice perspective helps identify failure modes in the feedback aggregation layer and reveals a broader design space for handling disagreement in explicit and principled ways.",
+      "authors": [
+        "Daniel Halpern",
+        "Evi Micha",
+        "Ariel D. Procaccia",
+        "Benjamin Schiffer",
+        "Itai Shapira",
+        "Shirley Zhang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-19T15:47:01+00:00",
+      "link": "https://arxiv.org/pdf/2606.21550v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "AI alignment from human feedback, social choice theory, handling disagreement",
+      "llm_evidence_cn": "基于人类反馈的AI对齐、社会选择理论、处理分歧",
+      "llm_evidence": "基于人类反馈的AI对齐、社会选择理论、处理分歧",
+      "canonical_evidence": "基于人类反馈的AI对齐、社会选择理论、处理分歧",
+      "llm_tldr_en": "Surveys social choice approaches to aggregating conflicting human feedback for AI alignment, identifying failure modes and design space for principled disagreement handling.",
+      "llm_tldr_cn": "本文从社会选择理论视角综述了AI对齐中人类反馈聚合问题。当人类对模型行为有冲突意见时，学习目标成为聚合结果。文章梳理了反馈聚合层的失败模式，并揭示了处理分歧的广阔设计空间。该工作为设计以人为本的对齐流程提供了理论指导。",
+      "llm_tldr": "本文从社会选择理论视角综述了AI对齐中人类反馈聚合问题。当人类对模型行为有冲突意见时，学习目标成为聚合结果。文章梳理了反馈聚合层的失败模式，并揭示了处理分歧的广阔设计空间。该工作为设计以人为本的对齐流程提供了理论指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.21886v1",
+      "source": "arxiv",
+      "title": "AI-Mediated Negotiation: Design Reflections and Lessons",
+      "abstract": "Conversational AI promises a new kind of preparation for high-stakes workplace negotiations -- personalized, interactive, and capable of simulating realistic resistance. That promise is intuitive. We built Trucey, a theory-driven coaching system, to test it. The system encoded four assumptions: that articulation supports clarification, that personalization builds strategic competence, that chunked delivery reduces cognitive load, and that structured scaffolding removes metacognitive burden. A pre-registered experiment (N=267) and interviews (N=15) complicated each of them. Notably, the static handbook we included as a passive control outperformed both AI conditions on empowerment and usability. We reflect on why: each assumption encoded a specific model of how preparation unfolds, and the findings revealed that conversational AI imposes a linear execution model on a task that is fundamentally recursive. We identify an unexamined scope condition on established HAI design guidelines and close with a sequencing principle -- map before path, path before simulation -- for future AI coaching design.",
+      "authors": [
+        "Veda Duddu",
+        "Jash Rajesh Parekh",
+        "Andy Mao",
+        "Hanyi Min",
+        "Ziang Xiao",
+        "Vedant Das Swain",
+        "Koustuv Saha"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "published": "2026-06-20T05:15:28+00:00",
+      "link": "https://arxiv.org/pdf/2606.21886v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "design reflections and lessons from AI-mediated negotiation system",
+      "llm_evidence_cn": "AI中介谈判系统的设计反思与教训",
+      "llm_evidence": "AI中介谈判系统的设计反思与教训",
+      "canonical_evidence": "AI中介谈判系统的设计反思与教训",
+      "llm_tldr_en": "Trucey, a theory-driven coaching system for negotiation preparation, was tested and found worse than a static handbook, leading to reflections on design assumptions for human-centered AI.",
+      "llm_tldr_cn": "本文设计并评估了理论驱动的谈判辅导系统Trucey，发现静态手册反而优于AI条件，颠覆了关于表达、个性化、分块和脚手架设计的假设，为设计人本AI系统提供了重要经验教训。",
+      "llm_tldr": "本文设计并评估了理论驱动的谈判辅导系统Trucey，发现静态手册反而优于AI条件，颠覆了关于表达、个性化、分块和脚手架设计的假设，为设计人本AI系统提供了重要经验教训。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.21844v1",
+      "source": "arxiv",
+      "title": "Inverse Turing Bench: Evaluating Language Models as Judges of Human vs. AI Dialogue",
+      "abstract": "As AI systems integrate into online spaces, differentiating them from humans in conversations is increasingly important. We present Inverse Turing Bench, a benchmark that evaluates LLMs and other models on their ability to differentiate humans and AI in multi-turn text. The benchmark provides a collection of paired dialogue transcripts, wherein one dialogue is between two humans and the other is between a human and an AI. The task is to correctly identify which dialogue is human-only vs. human-AI. We evaluated a preliminary set of models against this benchmark, and found that GPTZero, Claude Opus-4.6, and GPT-5.5 achieve the highest accuracy: 89.41%, 77.92%, and 75.94% respectively. Our results suggest that statistical approaches to detection have semantic blind spots, but semantic approaches are susceptible to persona-prompting. Our work speaks to the Inverse Turing Test as a probe of LLM theory of mind, and motivates human-AI differentiation as a critical capability for AI systems. Our live benchmark can be found at https://huggingface.co/spaces/roc-hci/Inverse-Turing-Bench-Leaderboard (anonymity preserved).",
+      "authors": [
+        "William Hager",
+        "Ishika Rathi",
+        "Masum Hasan",
+        "Cameron Jones"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "published": "2026-06-20T02:47:56+00:00",
+      "link": "https://arxiv.org/pdf/2606.21844v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "benchmark for differentiating human vs. AI dialogue",
+      "llm_evidence_cn": "区分人机对话的基准",
+      "llm_evidence": "区分人机对话的基准",
+      "canonical_evidence": "区分人机对话的基准",
+      "llm_tldr_en": "Inverse Turing Bench evaluates models on distinguishing human-human from human-AI dialogues, with GPTZero achieving highest accuracy.",
+      "llm_tldr_cn": "本文提出逆向图灵基准，评估语言模型区分纯人类对话与人机对话的能力，实验表明GPTZero等模型可高精度识别，为理解人机交互特征提供工具。",
+      "llm_tldr": "本文提出逆向图灵基准，评估语言模型区分纯人类对话与人机对话的能力，实验表明GPTZero等模型可高精度识别，为理解人机交互特征提供工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.23449v1",
+      "source": "arxiv",
+      "title": "AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction",
+      "abstract": "AI agents are driving a new software paradigm, with the ability to autonomously call tools, extract information, manage memory, and complete tasks that span applications and data sources. Most existing end-user operating systems, however, are designed for application-centric workflows and offer little native support for AI agents. This mismatch limits the wider adoption of agents and leads to execution overhead and safety risks when running agents on conventional systems. While the concept of agent-native operating systems is emerging, the research community lacks an open testbed to explore the architectural primitives desired for agent-mediated interaction. We present AOHP (Android Open Harness Project), an OS-level agent harness built on the Android Open Source Project (AOSP). The core design principle of AOHP is to treat agents as first-class OS actors, enabling adaptive user interfaces and agent-friendly runtime environments. AOHP preserves the mature Android software and hardware ecosystem while introducing three agent-oriented system mechanisms: personalized service composition, efficient agent interfaces, and secure information flow. Based on preliminary experiments on challenging tasks covering key capabilities of OS agents, AOHP shows clear advantages in task completion (+21.12% completion rate), execution cost (-51.55% token cost), and security-policy compliance.",
+      "authors": [
+        "Shanhui Zhao",
+        "Jiacheng Liu",
+        "Guohong Liu",
+        "Jichao Yan",
+        "Jialei Ye",
+        "Yuhao Yang",
+        "Hao Wen",
+        "Shizuo Tian",
+        "Yizhen Yuan",
+        "Yuxuan Chen",
+        "Yunxin Liu",
+        "Ju Ren",
+        "Ya-Qin Zhang",
+        "Chao Huang",
+        "Yao Guo",
+        "Yuanchun Li"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.OS"
+      ],
+      "published": "2026-06-22T15:02:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.23449v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "OS-level agent harness for personalized secure interaction",
+      "llm_evidence_cn": "面向个性化安全交互的操作系统级代理框架",
+      "llm_evidence": "面向个性化安全交互的操作系统级代理框架",
+      "canonical_evidence": "面向个性化安全交互的操作系统级代理框架",
+      "llm_tldr_en": "AOHP provides an open-source OS-level harness to support AI agents with personalized, efficient, and secure interaction, addressing the gap in agent-native OS primitives.",
+      "llm_tldr_cn": "现有操作系统缺乏对AI代理的原生支持，导致执行开销和安全风险。本文提出AOHP，一个开源的OS级代理框架，为代理介导的交互提供个性化、高效和安全的系统原语，推动人本AI系统设计。",
+      "llm_tldr": "现有操作系统缺乏对AI代理的原生支持，导致执行开销和安全风险。本文提出AOHP，一个开源的OS级代理框架，为代理介导的交互提供个性化、高效和安全的系统原语，推动人本AI系统设计。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
