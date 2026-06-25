@@ -1,0 +1,136 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-25T21:08:17.597035+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2606.25149v1",
+      "source": "arxiv",
+      "title": "Proactive Systems in HCI and AI: Concepts, Challenges, and Opportunities",
+      "abstract": "The last few years have seen a significant rise in interest in highly autonomous and proactive systems, fueled by advances in AI. Systems that anticipate user needs, take initiative, and act without explicit user input. Such systems span a wide range of applications, from smart lighting that adapts to user activity to assistive robots that plan actions in advance to intelligent thermostats that learn routines and adjust environments proactively. Despite this breadth, the concept of proactivity remains loosely defined and inconsistently applied across research and practice. Current usage of the term often conflates fundamentally different system behaviors. For instance, simple reminders or recommendation systems are frequently labeled as proactive, even though underlying mechanisms and intentions differ significantly. This conceptual ambiguity limits our ability to systematically design, compare, and evaluate proactive systems. Moreover, existing methodologies for design and evaluation are largely rooted in reactive interaction paradigms, failing to address the unique challenges posed by proactive behavior, including timing, appropriateness, user control, transparency, and trust. This multidisciplinary workshop aims to establish a clearer and more rigorous foundation for understanding proactive systems. We bring together researchers and practitioners from Human-Computer Interaction, AI, and related fields to (1) develop a shared conceptualization of proactivity, (2) identify gaps and limitations in current design and evaluation approaches, and (3) co-create human-centered guidelines and research directions for future systems. Through interactive discussions and collaborative activities, the workshop seeks to map key challenges and opportunities, ultimately advancing robust and consistent frameworks for designing and evaluating proactive technologies.",
+      "authors": [
+        "Nima Zargham",
+        "Sharon Ferguson",
+        "Jaisie Sin",
+        "Cosmin Munteanu",
+        "Anastasia Kuzminykh"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-06-23T20:30:58+00:00",
+      "link": "https://arxiv.org/pdf/2606.25149v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "concepts and challenges of proactive HCI systems",
+      "llm_evidence_cn": "主动HCI系统的概念与挑战",
+      "llm_evidence": "主动HCI系统的概念与挑战",
+      "canonical_evidence": "主动HCI系统的概念与挑战",
+      "llm_tldr_en": "A comprehensive survey of proactive systems in HCI and AI, clarifying concepts and identifying opportunities.",
+      "llm_tldr_cn": "尽管主动系统在HCI和AI中日益重要，但主动性概念仍模糊且应用不一致。本文综述了主动系统的概念、挑战和机遇，范围从智能照明到辅助机器人，并提出了一个统一的定义框架。该工作有助于规范主动交互设计。",
+      "llm_tldr": "尽管主动系统在HCI和AI中日益重要，但主动性概念仍模糊且应用不一致。本文综述了主动系统的概念、挑战和机遇，范围从智能照明到辅助机器人，并提出了一个统一的定义框架。该工作有助于规范主动交互设计。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25337v1",
+      "source": "arxiv",
+      "title": "AI Coaching for Accelerating Human Skill Development with Reinforcement Learning",
+      "abstract": "AI copilots can substantially boost human performance through shared control, but excessive assistance can induce over-reliance and skill atrophy. This paper studies how an embodied AI agent can act as a coach that accelerates human motor-skill development. We argue that effective coaching requires strategic scaffolding and stepping back that are aligned with the learner's capability, allowing productive failures that drive learning. We formalize the interactive AI coaching process as a non-cooperative dynamic game in which the learner optimizes task performance while the coach targets the learner's independent competence. Building on this formalism, we develop a reinforcement learning framework combining adaptive shared control with probabilistic models of the coach's causal influence on skill evolution, enabling tractable training of coaching policies. A comprehensive user study (N=33) on first-person-view drone racing shows significant gains in human learning outcomes over state-of-the-art AI coaching baselines.",
+      "authors": [
+        "Wei Wang",
+        "Enlin Gu",
+        "Antonio Loquercio",
+        "Haimin Hu",
+        "Rahul Mangharam"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-24T03:05:22+00:00",
+      "link": "https://arxiv.org/pdf/2606.25337v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "AI coaching for human skill development, formalizing interactive human-AI collaboration as a dynamic game",
+      "llm_evidence_cn": "AI教练促进人类技能发展，将人机协作形式化为动态博弈",
+      "llm_evidence": "AI教练促进人类技能发展，将人机协作形式化为动态博弈",
+      "canonical_evidence": "AI教练促进人类技能发展，将人机协作形式化为动态博弈",
+      "llm_tldr_en": "Studies embodied AI as a coach for motor-skill learning, using a non-cooperative game framework and RL to balance assistance and learner independence.",
+      "llm_tldr_cn": "本文研究AI作为教练加速人类运动技能发展，将交互式AI教练过程建模为非合作动态博弈，并结合自适应共享控制与强化学习。实验表明，该框架在促进学习独立性的同时保持任务表现，为人类-AI协作提供了新的方法论。",
+      "llm_tldr": "本文研究AI作为教练加速人类运动技能发展，将交互式AI教练过程建模为非合作动态博弈，并结合自适应共享控制与强化学习。实验表明，该框架在促进学习独立性的同时保持任务表现，为人类-AI协作提供了新的方法论。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.23094v1",
+      "source": "arxiv",
+      "title": "Cognitive Digital Twins: Ethical Risks and Governance for AI Systems That Model the Mind",
+      "abstract": "As AI systems become increasingly persistent and personalized, they make possible a class of technologies that we call cognitive digital twins (CDTs): dynamic computational representations of a specific person's cognition, updated from behavioral, contextual, or physiological data in order to model, predict, or simulate that person's cognition, or to act as that person's communicative or decision-making proxy. CDTs combine cognitive inference with longitudinal representation, simulation, and proxy action in ways that existing governance strategies for personal assistants, autonomous agents, recommender systems, and automated decision systems only partially address. This paper makes four contributions. First, we define CDTs and distinguish them from adjacent systems. Second, we introduce a 5A governance framework organized around authority, autonomy, access and control, accountability, and availability. Third, we identify CDT-specific risks, from misrepresentation and epistemic authority shifts to shadow twins, simulated participation, proxy action, and proxy-power asymmetries. Fourth, we analyze governance gaps and propose requirements for high-risk CDTs that strengthen consent, purpose limitation, validity, traceability, contestation, independent review, and model retirement. Existing frameworks primarily regulate data processing, automated decisions, or autonomous actions; CDTs also require governance at the level of cognitive representation itself, before any final decision or external action occurs. We argue that CDTs require governance not only because they can act for people, but because they can become infrastructures through which cognition is represented, simulated, classified, and operationalized.",
+      "authors": [
+        "Vamshi Krishna Bonagiri",
+        "Juan Nicolas Sepulveda-Arias",
+        "Abdoul Jalil Djiberou Mahamadou",
+        "Monojit Choudhury"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-22T09:40:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.23094v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ethical risks and governance for AI systems that model human cognition, relevant to human-centered AI principles",
+      "llm_evidence_cn": "对建模人类认知的AI系统的伦理风险与治理，与人类中心AI原则相关",
+      "llm_evidence": "对建模人类认知的AI系统的伦理风险与治理，与人类中心AI原则相关",
+      "canonical_evidence": "对建模人类认知的AI系统的伦理风险与治理，与人类中心AI原则相关",
+      "llm_tldr_en": "Defines cognitive digital twins and discusses their ethical risks, governance gaps, and proposes a framework for responsible design.",
+      "llm_tldr_cn": "本文定义认知数字孪生（CDT）为动态表征个人认知的计算模型，分析其区别于传统AI的伦理风险，指出现有治理策略的不足。该工作为人类中心AI设计提供了伦理指导，强调对模拟人类心智的系统需额外监管。",
+      "llm_tldr": "本文定义认知数字孪生（CDT）为动态表征个人认知的计算模型，分析其区别于传统AI的伦理风险，指出现有治理策略的不足。该工作为人类中心AI设计提供了伦理指导，强调对模拟人类心智的系统需额外监管。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

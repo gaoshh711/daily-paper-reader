@@ -1,0 +1,54 @@
+{
+  "label": "2026-06-25",
+  "date": "2026-06-25",
+  "generated_at": "2026-06-25T21:10:38",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202606/25/2606.25149v1-proactive-systems-in-hci-and-ai-concepts-challenges-and-opportunities",
+      "section": "deep",
+      "title_en": "Proactive Systems in HCI and AI: Concepts, Challenges, and Opportunities",
+      "authors": "Nima Zargham, Sharon Ferguson, Jaisie Sin, Cosmin Munteanu, Anastasia Kuzminykh",
+      "date": "2026-06-23",
+      "pdf": "https://arxiv.org/pdf/2606.25149v1",
+      "score": "9.0",
+      "evidence": "主动HCI系统的概念与挑战",
+      "tldr": "随着AI发展，主动系统（如智能恒温器、辅助机器人）日益普及，但“主动性”定义混乱，常与简单提醒混淆。现有设计评估方法基于被动交互范式，无法解决时机、用户控制等挑战。本文通过多学科研讨会，旨在建立共享概念框架，识别设计评估缺口，并制定以人为中心的指导方针。",
+      "tags": "query:hai",
+      "abstract_en": "The last few years have seen a significant rise in interest in highly autonomous and proactive systems, fueled by advances in AI. Systems that anticipate user needs, take initiative, and act without explicit user input. Such systems span a wide range of applications, from smart lighting that adapts to user activity to assistive robots that plan actions in advance to intelligent thermostats that learn routines and adjust environments proactively. Despite this breadth, the concept of proactivity remains loosely defined and inconsistently applied across research and practice. Current usage of the term often conflates fundamentally different system behaviors. For instance, simple reminders or recommendation systems are frequently labeled as proactive, even though underlying mechanisms and intentions differ significantly. This conceptual ambiguity limits our ability to systematically design, compare, and evaluate proactive systems. Moreover, existing methodologies for design and evaluation are largely rooted in reactive interaction paradigms, failing to address the unique challenges posed by proactive behavior, including timing, appropriateness, user control, transparency, and trust. This multidisciplinary workshop aims to establish a clearer and more rigorous foundation for understanding proactive systems. We bring together researchers and practitioners from Human-Computer Interaction, AI, and related fields to (1) develop a shared conceptualization of proactivity, (2) identify gaps and limitations in current design and evaluation approaches, and (3) co-create human-centered guidelines and research directions for future systems. Through interactive discussions and collaborative activities, the workshop seeks to map key challenges and opportunities, ultimately advancing robust and consistent frameworks for designing and evaluating proactive technologies.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/25/2606.25337v1-ai-coaching-for-accelerating-human-skill-development-with-reinforcement-learning",
+      "section": "deep",
+      "title_en": "AI Coaching for Accelerating Human Skill Development with Reinforcement Learning",
+      "authors": "Wei Wang, Enlin Gu, Antonio Loquercio, Haimin Hu, Rahul Mangharam",
+      "date": "2026-06-24",
+      "pdf": "https://arxiv.org/pdf/2606.25337v1",
+      "score": "9.0",
+      "evidence": "AI教练促进人类技能发展，将人机协作形式化为动态博弈",
+      "tldr": "过度AI辅助会导致人类技能萎缩，本文提出一种强化学习教练框架，通过非合作动态博弈建模教练与学习者的交互，结合自适应共享控制和因果概率模型来训练教练策略，实现战略性脚手架和退步。在无人机竞速用户研究中，该方法显著提升了学习效果，优于现有AI教练基线。",
+      "tags": "query:hai",
+      "abstract_en": "AI copilots can substantially boost human performance through shared control, but excessive assistance can induce over-reliance and skill atrophy. This paper studies how an embodied AI agent can act as a coach that accelerates human motor-skill development. We argue that effective coaching requires strategic scaffolding and stepping back that are aligned with the learner's capability, allowing productive failures that drive learning. We formalize the interactive AI coaching process as a non-cooperative dynamic game in which the learner optimizes task performance while the coach targets the learner's independent competence. Building on this formalism, we develop a reinforcement learning framework combining adaptive shared control with probabilistic models of the coach's causal influence on skill evolution, enabling tractable training of coaching policies. A comprehensive user study (N=33) on first-person-view drone racing shows significant gains in human learning outcomes over state-of-the-art AI coaching baselines.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202606/25/2606.23094v1-cognitive-digital-twins-ethical-risks-and-governance-for-ai-systems-that-model-the-mind",
+      "section": "quick",
+      "title_en": "Cognitive Digital Twins: Ethical Risks and Governance for AI Systems That Model the Mind",
+      "authors": "Vamshi Krishna Bonagiri, Juan Nicolas Sepulveda-Arias, Abdoul Jalil Djiberou Mahamadou, Monojit Choudhury",
+      "date": "2026-06-22",
+      "pdf": "https://arxiv.org/pdf/2606.23094v1",
+      "score": "7.0",
+      "evidence": "对建模人类认知的AI系统的伦理风险与治理，与人类中心AI原则相关",
+      "tldr": "认知数字孪生（CDT）作为动态表征个体认知的AI系统，带来伦理风险与治理挑战。本文定义CDT并区分于相邻系统；提出5A治理框架（权威、自主、访问控制、问责、可用性），识别误表征、代理权力不对称等特有风险。通过分析治理缺口，提出针对高风险CDT的强化要求，包括同意、目的限定、有效性、可追溯性、可争议性、独立审查及模型退役。主要贡献在于指出治理需超越数据与行动层面，直指认知表征本身。",
+      "tags": "query:hai",
+      "abstract_en": "As AI systems become increasingly persistent and personalized, they make possible a class of technologies that we call cognitive digital twins (CDTs): dynamic computational representations of a specific person's cognition, updated from behavioral, contextual, or physiological data in order to model, predict, or simulate that person's cognition, or to act as that person's communicative or decision-making proxy. CDTs combine cognitive inference with longitudinal representation, simulation, and proxy action in ways that existing governance strategies for personal assistants, autonomous agents, recommender systems, and automated decision systems only partially address. This paper makes four contributions. First, we define CDTs and distinguish them from adjacent systems. Second, we introduce a 5A governance framework organized around authority, autonomy, access and control, accountability, and availability. Third, we identify CDT-specific risks, from misrepresentation and epistemic authority shifts to shadow twins, simulated participation, proxy action, and proxy-power asymmetries. Fourth, we analyze governance gaps and propose requirements for high-risk CDTs that strengthen consent, purpose limitation, validity, traceability, contestation, independent review, and model retirement. Existing frameworks primarily regulate data processing, automated decisions, or autonomous actions; CDTs also require governance at the level of cognitive representation itself, before any final decision or external action occurs. We argue that CDTs require governance not only because they can act for people, but because they can become infrastructures through which cognition is represented, simulated, classified, and operationalized.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
