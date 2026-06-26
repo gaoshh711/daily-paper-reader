@@ -1,0 +1,366 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-26T21:09:26.974018+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2606.26523v1",
+      "source": "arxiv",
+      "title": "Radical AI Interpretability",
+      "abstract": "We develop a framework for interpreting AI systems as agents, drawing on the philosophical tradition of radical interpretation and the tools of mechanistic interpretability. The core question is: given the computational facts about a system, how do we solve for its beliefs, desires, and meanings? This matters increasingly for safety. We want to be able to trust the systems we deploy, whether by understanding their goals or, more modestly, by reliably detecting deception. Interpretability researchers are building tools to read beliefs and desires off a model's internals, but there is no settled account of when such a tool has succeeded. This book supplies one. We propose criteria on both representationalist and interpretationist approaches, and tie each to tests current interpretability methods can carry out. A central lesson is that these attributions cannot be made piecemeal. Beliefs, desires, and the propositional structure they presuppose are jointly constrained, and a method that fixes one while measuring the others inherits whatever distortions that introduces. This holism becomes pressing for AI systems, which may not share the interpreter's concepts. However, it also provides leverage: a system's attitudes constrain its propositional structure, that structure constrains which attitudes can be attributed, and mechanistic interpretability can help us measure both.",
+      "authors": [
+        "Daniel A. Herrmann",
+        "Benjamin A. Levinstein"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-06-25T01:58:38+00:00",
+      "link": "https://arxiv.org/pdf/2606.26523v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "framework for AI interpretability as agent interpretation",
+      "llm_evidence_cn": "将AI解释性视为代理解释的框架",
+      "llm_evidence": "将AI解释性视为代理解释的框架",
+      "canonical_evidence": "将AI解释性视为代理解释的框架",
+      "llm_tldr_en": "Develops a radical interpretation framework for AI systems as agents, linking mechanistic interpretability to philosophical tradition.",
+      "llm_tldr_cn": "本文融合激进解释的哲学传统与机械可解释性工具，开发了一个将AI系统解释为代理的框架。核心问题是如何从计算事实求解系统的信念、欲望和含义。该书提出了表征主义和解释主义两种路径的评判标准，将之与当前可解释性方法挂钩，旨在建立对部署系统的信任。直接服务于可解释AI交互的需求。",
+      "llm_tldr": "本文融合激进解释的哲学传统与机械可解释性工具，开发了一个将AI系统解释为代理的框架。核心问题是如何从计算事实求解系统的信念、欲望和含义。该书提出了表征主义和解释主义两种路径的评判标准，将之与当前可解释性方法挂钩，旨在建立对部署系统的信任。直接服务于可解释AI交互的需求。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26573v1",
+      "source": "arxiv",
+      "title": "Pingquanqi (Equalizer): A Cross-Domain Sociotechnical Framework for Human-Agent Interaction Governance",
+      "abstract": "LLM agents are transitioning from experimental tools to permanent infrastructure -- a computational layer as enduring as the electrical grid. Like any infrastructure, they carry a cost chain from physical capital through enterprise investment to user consumption, ending at the user's most irreplaceable resource: lifetime. When unoptimized, this chain leaks, consuming user lifetime without adequate compensation. This paper proposes Pingquanqi (Equalizer), a cross-domain sociotechnical framework for Human-Agent Interaction Governance (HAIGF). Its product form is an Agent framework-level embedded design specification, analogous to WCAG for web accessibility, whose goal is not to be purchased but adopted as a standard. Pingquanqi consists of four integrated components deployable as native middleware: (1) a user-state discrimination model enabling proactive knowledge leveling, (2) a Bayesian progressive stop-loss rule capping per-session interaction cost, (3) controlled friction mechanisms breaking self-reinforcing dependency loops, and (4) Lsteal, a transparency metric rendering token-to-lifetime cost conversion visible. A fifth mechanism, reflective summarization (F5), enables guided cognitive recollection. The framework is grounded in cross-cultural philosophy: Mao's epistemology of practice (On Practice, 1937) provides the basis for cross-session knowledge accumulation; Wang Yangming's unity of knowledge and action (zhi xing he yi, c. 1509) illuminates Lsteal's root -- knowing without acting is incomplete; and Hegel's unity of theory and practice demonstrates cross-traditional convergence. This paper argues Pingquanqi's primary economic beneficiary is the enterprise deploying Agent services -- through reduced wasted computation, improved user satisfaction, and sustained subscription revenue -- with individual user benefit as the natural downstream consequence.",
+      "authors": [
+        "Yu Wang"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.HC"
+      ],
+      "published": "2026-06-25T03:47:12+00:00",
+      "link": "https://arxiv.org/pdf/2606.26573v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-agent interaction governance framework",
+      "llm_evidence_cn": "人机交互治理框架",
+      "llm_evidence": "人机交互治理框架",
+      "canonical_evidence": "人机交互治理框架",
+      "llm_tldr_en": "Proposes Pingquanqi, a sociotechnical framework for governing human-agent interactions, analogous to WCAG for web accessibility.",
+      "llm_tldr_cn": "该论文提出Pingquanqi（均衡器），一个跨领域的社会技术框架，用于人机交互治理。框架类似于Web可访问性指南WCAG，旨在成为智能体框架层面的嵌入设计标准，以优化用户生命周期价值。该工作填补了人机交互治理标准化的空白。",
+      "llm_tldr": "该论文提出Pingquanqi（均衡器），一个跨领域的社会技术框架，用于人机交互治理。框架类似于Web可访问性指南WCAG，旨在成为智能体框架层面的嵌入设计标准，以优化用户生命周期价值。该工作填补了人机交互治理标准化的空白。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.26614v1",
+      "source": "arxiv",
+      "title": "HiLSVA: Design and Evaluation of a Human-in-the-Loop Agentic System for Scientific Visualization",
+      "abstract": "Large language model (LLM) agents enable natural language interaction for scientific visualization (SciVis). Still, prior systems have essentially prioritized autonomy over human analytical control, thereby limiting transparency and human oversight. We present HiLSVA, a human-in-the-loop agentic system that supports mixed-initiative SciVis workflows. HiLSVA integrates a plan-first multi-agent architecture with explicit human oversight, stepwise provenance tracking, and learn-at-test-time adaptation from user feedback. The system supports fluid handoff between humans and agents through both natural language and direct manipulation of visualizations, while sandboxed execution ensures safe, reproducible workflows. In doing so, HiLSVA reframes agentic SciVis as a collaborative process that augments, rather than replaces, human analytical reasoning. We evaluate HiLSVA through representative case studies and a controlled user study with twelve participants of varying expertise across multiple autonomy settings. Results show that mixed-initiative interaction improves task completion, user control, and workflow transparency across different levels of user expertise, while revealing a tradeoff between execution efficiency and human oversight. These findings highlight the importance of human-centered design in agentic SciVis and guide the development of future collaborative visualization systems. We encourage readers to explore our demo video, case studies, and source code at https://hilsva.github.io/.",
+      "authors": [
+        "Kuangshi Ai",
+        "Patrick Phuoc Do",
+        "Chaoli Wang"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "published": "2026-06-25T05:19:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.26614v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-in-the-loop agentic system for SciVis",
+      "llm_evidence_cn": "人机协同的科学可视化智能系统",
+      "llm_evidence": "人机协同的科学可视化智能系统",
+      "canonical_evidence": "人机协同的科学可视化智能系统",
+      "llm_tldr_en": "Presents HiLSVA, a human-in-the-loop agentic system for SciVis with plan-first multi-agent architecture, stepwise provenance, and learn-at-test-time adaptation.",
+      "llm_tldr_cn": "该论文提出HiLSVA，一种人机协同的科学可视化智能系统。系统采用计划优先的多智能体架构，集成显式人工监督、逐步溯源和测试时自适应学习。支持自然语言和直接操作两种交互方式，沙盒执行确保安全可复现。该系统实现了人类与智能体之间的灵活交接，增强了透明度和控制力。",
+      "llm_tldr": "该论文提出HiLSVA，一种人机协同的科学可视化智能系统。系统采用计划优先的多智能体架构，集成显式人工监督、逐步溯源和测试时自适应学习。支持自然语言和直接操作两种交互方式，沙盒执行确保安全可复现。该系统实现了人类与智能体之间的灵活交接，增强了透明度和控制力。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.27233v1",
+      "source": "arxiv",
+      "title": "Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Contexts",
+      "abstract": "We present a conceptual framework for analyzing dialogue in collaborative problem-solving contexts, with an emphasis on the emerging dynamics of human-AI and multi-agent collaboration. As intelligent systems become active agents capable of autonomous reasoning and strategic cooperation, understanding the dialogic interaction during collaborative problem solving is increasingly important for optimizing and evaluating such partnerships. Our framework addresses key limitations in current analytical approaches through a hierarchical two-layer coding scheme that integrates cognitive and non-cognitive problem solving with metacognitive regulatory mechanisms. We demonstrate its effectiveness and generalizability across nine datasets spanning multiple domains, and provide insights into how humans and agents coordinate their knowledge, skills, and efforts to solve complex problems, showing in particular that metacognitive regulation can be an essential discriminator of deeper collaboration.",
+      "authors": [
+        "Zhengyuan Liu",
+        "Stella Xin Yin",
+        "Min-Yen Kan",
+        "Nancy F. Chen"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-06-25T16:20:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.27233v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "framework for analyzing dialogue dynamics in human-AI collaboration",
+      "llm_evidence_cn": "人机协作对话动态分析框架",
+      "llm_evidence": "人机协作对话动态分析框架",
+      "canonical_evidence": "人机协作对话动态分析框架",
+      "llm_tldr_en": "Presents a hierarchical coding scheme for collaborative dialogue, integrating cognitive and metacognitive mechanisms, tested across domains.",
+      "llm_tldr_cn": "本文提出一个用于分析协作问题解决中对话动态的概念框架，特别强调人机与多智能体协作。该框架采用层级两阶段编码方案，整合了认知与非认知问题解决以及元认知调节机制，并在九个数据集上验证了其有效性和普适性。为理解和优化人机协作评估提供了新工具。",
+      "llm_tldr": "本文提出一个用于分析协作问题解决中对话动态的概念框架，特别强调人机与多智能体协作。该框架采用层级两阶段编码方案，整合了认知与非认知问题解决以及元认知调节机制，并在九个数据集上验证了其有效性和普适性。为理解和优化人机协作评估提供了新工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.20877v1",
+      "source": "arxiv",
+      "title": "Artificial collectives of specialists and generalists excel at different tasks",
+      "abstract": "Collective artificial intelligence, where multiple agents work on shared tasks, holds potential to solve expansive problems in fields from medicine to collective governance. But while prescriptive engineering solutions abound, we lack descriptive scientific understanding of artificial collectives, and therefore principles for how to design resource efficient multi-agent systems. Through systematic experiments with optimizing agents, we characterize how agent interpretive abilities, rationality bounds, and task qualities interact to shape collective performance. Agents range from specialists, with narrow interpretive abilities, to generalists, with broad ones. Collectives of specialists correspond to sparse, centralized networks, while collectives of generalists correspond to dense, decentralized ones. We show that interpretive network properties have small performance effects on average (0.07 standard deviations of performance). However, for specific task qualities, these effects are 4.5 times larger (0.33 sd) and can reach much higher for certain task qualities (1.84 sd). This leads collectives of generalists to perform better on tasks that involve generating, choosing, and coordinating, while collectives of specialists with a few generalist mediators perform better on tasks that involve negotiating. Rationality bounds then moderate these relationships. At loose bounds, specialists outperform generalists through more effective sampling of high-dimensional decision spaces. At tight bounds, generalists outperform specialists through better gradient estimation. A fundamental trade-off between performance and convergence speed emerges at moderate bounds. These findings suggest that multi-agent design could benefit from matching interpretive networks to both task demands and agents' computational limits, with implications for the efficiency and energy costs of multi-agent systems.",
+      "authors": [
+        "John Meluso",
+        "Laurent Hébert-Dufresne",
+        "Christoph Riedl",
+        "H. Oliver Gao"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.SI",
+        "nlin.AO",
+        "physics.soc-ph"
+      ],
+      "published": "2026-06-18T19:08:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.20877v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "principles for designing multi-agent systems, relevant to human-centered AI design",
+      "llm_evidence_cn": "多智能体系统设计原则，与人机共融设计相关",
+      "llm_evidence": "多智能体系统设计原则，与人机共融设计相关",
+      "canonical_evidence": "多智能体系统设计原则，与人机共融设计相关",
+      "llm_tldr_en": "Characterizes how agent specialization and collectives affect performance, offering design principles for multi-agent systems.",
+      "llm_tldr_cn": "本文系统研究了人工集体的设计原则，通过实验刻画了智能体解释能力、理性边界与任务质量如何共同影响集体表现。发现专家型与通才型智能体的集体分别适合不同任务，为设计资源高效的多智能体系统提供了科学依据，对构建以人为中心的AI系统有参考价值。",
+      "llm_tldr": "本文系统研究了人工集体的设计原则，通过实验刻画了智能体解释能力、理性边界与任务质量如何共同影响集体表现。发现专家型与通才型智能体的集体分别适合不同任务，为设计资源高效的多智能体系统提供了科学依据，对构建以人为中心的AI系统有参考价值。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.23991v1",
+      "source": "arxiv",
+      "title": "Critique of Agent Model",
+      "abstract": "What is an agent? What constitutes agency? With the rise of Large Language Model (LLM) systems marketed as ``coding agents'', ``AI co-scientists'', and other ``agentic\" tools that promise to drive up productivity, and at the same time, ``existential\" concerns such as AI escaping human control with destructive power under a speculative ``machine agency\" against humans, it has become essential to clarify where automation ends and agency begins, both for building capable systems and for understanding whether and what to fear. Drawing on Descartes' grounding of agency in independent thought, and on portrayals of autonomous beings in science fiction, we survey the current landscape of AI agents, and analyze agent architectures along five dimensions: goal, identity, decision-making, self-regulation, and learning. Specifically, we argue that genuine agency requires these structures to be \\emph{internalized within the system itself} rather than assembled through external scaffolding. This distinction between \\emph{agentic} systems, whose competence resides in engineered workflows, and \\emph{agentive} systems, whose capabilities (including social interaction) arise endogenously, defines the boundary between systems designed for prescribed tasks, and those capable of operating in the open world with true autonomy. Building on this analysis, we propose the Goal-Identity-Configurator (GIC) architecture for a general-purpose agent model, combining hierarchical goal decomposition, identity evolution, simulative reasoning grounded in a separately trained world model, learned self-regulation, and self-directed learning from both real and simulated experience. Furthermore, we share insight on the auditability, controllability, and safety of agentive systems that possess greater autonomy and ``agency\", but remain under human oversight.",
+      "authors": [
+        "Eric Xing",
+        "Mingkai Deng",
+        "Jinyu Hou"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "published": "2026-06-22T22:50:02+00:00",
+      "link": "https://arxiv.org/pdf/2606.23991v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "philosophical critique of AI agency, relevant to human-AI interaction concepts",
+      "llm_evidence_cn": "对AI代理的哲学批判，涉及人机交互概念",
+      "llm_evidence": "对AI代理的哲学批判，涉及人机交互概念",
+      "canonical_evidence": "对AI代理的哲学批判，涉及人机交互概念",
+      "llm_tldr_en": "Analyzes agent architectures along five dimensions (goal, identity, etc.) to clarify where automation ends and agency begins.",
+      "llm_tldr_cn": "面对声称的'编码代理'和'AI科学家'等代理系统以及机器代理失控的担忧，本文基于笛卡尔哲学和科幻视角，梳理当前AI代理的景观，从目标、身份、决策、自我调节和自主性五个维度分析代理架构。该工作有助于澄清代理概念，为构建可靠的人机交互系统奠定概念基础。",
+      "llm_tldr": "面对声称的'编码代理'和'AI科学家'等代理系统以及机器代理失控的担忧，本文基于笛卡尔哲学和科幻视角，梳理当前AI代理的景观，从目标、身份、决策、自我调节和自主性五个维度分析代理架构。该工作有助于澄清代理概念，为构建可靠的人机交互系统奠定概念基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.24014v1",
+      "source": "arxiv",
+      "title": "Reinforcement Learning Towards Broadly and Persistently Beneficial Models",
+      "abstract": "As AI systems are deployed across increasingly diverse and high-stakes settings, model alignment must generalize beyond the tasks and domains seen during training. This is especially important for reinforcement learning (RL), which can introduce unexpected misalignment through reward hacking, deception, or other unintended strategies. We study whether RL on beneficial behavior, instantiated in realistic domains, can produce broad and persistent alignment generalization beyond the training distribution. We construct a dataset of realistic situations designed to measure and train beneficial traits, such as truthfulness, fairness, risk awareness, and corrigibility, spanning varied domains, including health, science, and education. We then train models with RL on this dataset and evaluate them on more than 50 independent benchmarks of alignment and beneficial behavior. Compared to a compute-matched baseline, beneficial trait RL improves performance on over 80% of these out-of-distribution benchmarks. We observe substantial out-of-distribution alignment transfer: a beneficial-behavior RL intervention entirely limited to one domain, health, produces broad improvements on non-health alignment evaluations, including reduced reward hacking, deception, and general misalignment. Finally, we study alignment persistence: whether behavior remains robustly aligned under attempts to steer models towards misalignment. Models trained with beneficial trait RL show improved persistence, including greater resistance to adversarial prompting and harmful finetuning; further work is required to isolate the sources of these effects. These results suggest that RL to reinforce beneficial behavior in realistic domains can produce models that are more robustly aligned with human flourishing.",
+      "authors": [
+        "Akshay V. Jagadeesh",
+        "Rahul K. Arora",
+        "Khaled Saab",
+        "Ali Malik",
+        "Mikhail Trofimov",
+        "Foivos Tsimpourlas",
+        "Johannes Heidecke",
+        "Karan Singhal"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-06-22T23:35:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.24014v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Reinforcement learning for beneficial AI alignment",
+      "llm_evidence_cn": "强化学习实现有益AI对齐",
+      "llm_evidence": "强化学习实现有益AI对齐",
+      "canonical_evidence": "强化学习实现有益AI对齐",
+      "llm_tldr_en": "Studies whether RL on beneficial behavior can produce broad alignment generalization, using a dataset of realistic situations to train traits like truthfulness and fairness.",
+      "llm_tldr_cn": "该论文研究强化学习是否能在广泛领域泛化有益行为对齐。作者构建了涵盖健康、科学、教育等领域的真实场景数据集，训练模型体现诚实、公平、风险意识等有益特质，探索持久且广泛的对齐泛化。",
+      "llm_tldr": "该论文研究强化学习是否能在广泛领域泛化有益行为对齐。作者构建了涵盖健康、科学、教育等领域的真实场景数据集，训练模型体现诚实、公平、风险意识等有益特质，探索持久且广泛的对齐泛化。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.24937v1",
+      "source": "arxiv",
+      "title": "The Hitchhiker's Guide to Agentic AI: From Foundations to Systems",
+      "abstract": "The Hitchhiker's Guide to Agentic AI is a comprehensive practitioner's reference for building autonomous AI systems. The book covers the full stack from first principles to production deployment, organized around a central thesis: building great agentic systems requires understanding every layer of the pipeline, not just one. The book opens with the LLM substrate -- transformer architecture, GPU systems, training and fine-tuning (SFT,LoRA, MoE), model compression, and inference optimization -- treated as essential foundations rather than the primary focus. It then develops the alignment and reasoning layer: reinforcement learning from human feedback (RLHF), PPO, DPO and its variants, GRPO, reward modeling, and RL for large reasoning models including chain-of-thought and test-time scaling. The second half is devoted to agentic AI proper. Topics include agentic training and trajectory-based RL, retrieval-augmented generation (RAG and Agentic RAG), memory systems (in-context, external, episodic, and semantic), agent harness design and context management, and a taxonomy of agent design patterns. Inter-agent coordination is covered in depth: the Model Context Protocol (MCP), agent skills and tool use, the Agent-to-Agent (A2A) communication protocol, and multi-agent architectures spanning centralized, decentralized, and hierarchical topologies. The book concludes with agent development frameworks, agentic UI design, evaluation methodology for agentic tasks, and production deployment. Each chapter pairs rigorous theoretical foundations with implementation guidance, code examples, and references to the primary literature.",
+      "authors": [
+        "Haggai Roitman"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "published": "2026-06-22T17:48:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.24937v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Comprehensive guide to building human-aligned AI systems",
+      "llm_evidence_cn": "构建人类对齐AI系统的综合指南",
+      "llm_evidence": "构建人类对齐AI系统的综合指南",
+      "canonical_evidence": "构建人类对齐AI系统的综合指南",
+      "llm_tldr_en": "A comprehensive practitioner reference covering full stack from LLM foundations to alignment techniques for building autonomous AI systems.",
+      "llm_tldr_cn": "该文档是面向实践的自治AI系统构建参考，从Transformer架构、训练优化到RLHF、PPO等对齐技术，涵盖全栈知识。强调要理解每一层而非单一局部，为工程师提供系统化指导。",
+      "llm_tldr": "该文档是面向实践的自治AI系统构建参考，从Transformer架构、训练优化到RLHF、PPO等对齐技术，涵盖全栈知识。强调要理解每一层而非单一局部，为工程师提供系统化指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.27005v1",
+      "source": "arxiv",
+      "title": "Adaptive Utility driven Resource Orchestration for Resilient AI (AURORA-AI)",
+      "abstract": "Modern AI systems are increasingly deployed under non-stationary computational, demographic, and operational conditions in which static resource allocation strategies degrade both predictive performance and human-centric properties such as fairness and explainability. This paper presents AURORA-AI, an Adaptive Utility-driven Resource Orchestration framework for Resilient AI that unifies Hamilton-Jacobi-Bellman feedback control, Lyapunov-based stability monitoring, and a fairness-aware composite utility into a single closed-loop policy.The framework continuously redistributes computational budget across a population of heterogeneous AI models so that the global utility, defined jointly over predictive performance, demographic parity, cost, latency, robustness, and interpretability, remains maximised under disruption. The framework is evaluated in a stress-rich discrete-time simulation that concurrently injects demographic bias shocks, gradual concept drift, and abrupt black-swan disruptions, and is compared against five established controllers including Static, Round Robin, Greedy, LinUCB, and a deep reinforcement-learning agent based on Proximal Policy Optimisation. AURORA-AI achieves immediate recovery from the black-swan event compared to eighty-eight time steps for the Static baseline and twenty-two for Proximal Policy Optimisation, lifts the alpha-quantile and the super-quantile by twenty-nine and twenty-five percent respectively, simultaneously reduces the mean and maximum demographic parity gap, and increases the fraction of Lyapunov-stable operating steps. These results indicate that fairness-aware adaptive orchestration grounded in stability theory is a practical and theoretically motivated path toward resilient human-centric AI deployment.",
+      "authors": [
+        "Rahul Umesh Mhapsekar",
+        "Ilias Cherkaoui",
+        "Lizy Abraham",
+        "Indrakshi Dey"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-25T13:22:07+00:00",
+      "link": "https://arxiv.org/pdf/2606.27005v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Resource orchestration for fairness and explainability in AI",
+      "llm_evidence_cn": "面向公平性和可解释性的资源编排",
+      "llm_evidence": "面向公平性和可解释性的资源编排",
+      "canonical_evidence": "面向公平性和可解释性的资源编排",
+      "llm_tldr_en": "Proposes AURORA-AI, an adaptive resource orchestration framework that optimizes for predictive performance, fairness, and cost using control theory.",
+      "llm_tldr_cn": "该论文针对AI系统在非平稳条件下静态资源分配导致公平性和可解释性下降的问题，提出AURORA-AI框架，融合Hamilton-Jacobi-Bellman反馈控制、Lyapunov稳定性监控和公平性感知复合效用，动态分配计算资源以平衡性能、公平和成本。",
+      "llm_tldr": "该论文针对AI系统在非平稳条件下静态资源分配导致公平性和可解释性下降的问题，提出AURORA-AI框架，融合Hamilton-Jacobi-Bellman反馈控制、Lyapunov稳定性监控和公平性感知复合效用，动态分配计算资源以平衡性能、公平和成本。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
