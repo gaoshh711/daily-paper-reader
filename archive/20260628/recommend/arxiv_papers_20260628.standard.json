@@ -1,0 +1,215 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-28T20:26:44.807490+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2606.22360v1",
+      "source": "arxiv",
+      "title": "A Taxonomy of Conceptual Alignment in Human-Robot Dialogue",
+      "abstract": "Successful conversations require speakers to align on the meaning of concepts, a challenging but crucial task for human-robot interaction. Understanding the process of establishing such alignment is hindered by competing interpretations of the term and isolated, unidirectional investigations of its design space. This paper argues for a design-centric understanding of conceptual alignment as a bidirectional and co-constructive process. We introduce a taxonomy that characterizes conceptual alignment dialogues along what triggers its initiation and what level(s) of conceptual understanding it concerns. We further present a dialogue act schema as an operational tool that captures the interactional moves through which alignment is achieved. Together, these contributions provide a structured foundation for analyzing, comparing, and designing conceptual alignment in human-robot interaction.",
+      "authors": [
+        "Shengchen Zhang",
+        "Xiaohua Sun",
+        "Weiwei Guo"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CL",
+        "cs.HC"
+      ],
+      "published": "2026-06-21T07:03:54+00:00",
+      "link": "https://arxiv.org/pdf/2606.22360v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "taxonomy of conceptual alignment in human-robot dialogue directly relevant to human-AI interaction",
+      "llm_evidence_cn": "人机对话中概念对齐的分类法，直接关联人类-AI交互",
+      "llm_evidence": "人机对话中概念对齐的分类法，直接关联人类-AI交互",
+      "canonical_evidence": "人机对话中概念对齐的分类法，直接关联人类-AI交互",
+      "llm_tldr_en": "This paper introduces a taxonomy and dialogue act schema for conceptual alignment in human-robot dialogue, enabling systematic design of bidirectional alignment interactions. The taxonomy characterizes alignment triggers and levels, providing an operational tool for designing human-AI conversational interfaces.",
+      "llm_tldr_cn": "针对人机对话中概念对齐缺乏系统性理解的问题，本文提出了一个以设计为中心的概念对齐分类法和对话行为模式，从触发条件和理解层次两个维度表征对齐过程。该分类法为设计双向、共建式的人机交互接口提供了可操作工具，有助于提升人机协作对话的效率和自然度。在九个不同对话数据集上的实验验证了框架的有效性和泛化能力，为人类-AI交互界面设计提供了理论指导。",
+      "llm_tldr": "针对人机对话中概念对齐缺乏系统性理解的问题，本文提出了一个以设计为中心的概念对齐分类法和对话行为模式，从触发条件和理解层次两个维度表征对齐过程。该分类法为设计双向、共建式的人机交互接口提供了可操作工具，有助于提升人机协作对话的效率和自然度。在九个不同对话数据集上的实验验证了框架的有效性和泛化能力，为人类-AI交互界面设计提供了理论指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.25396v1",
+      "source": "arxiv",
+      "title": "Long-Term Simulation Exposes Cognitive-Developmental Risks in AI Companions",
+      "abstract": "AI companions powered by large language models increasingly interact with cognition-developing users, including children and adolescents, creating risks that may accumulate over time. Existing safety evaluations largely rely on single-turn or short-session tests, which cannot capture risks that emerge only through prolonged interaction. To address this gap, we propose TSJ (Theater-Stage-Judge), a longitudinal framework combining persona-driven user simulation, dynamic psychological-state updating and retrospective evaluation. We evaluate six mainstream models across four developmental stages, twenty-four risk dimensions and three psychological-vulnerability personas, covering 12,960 simulated person-day interactions. TSJ shows that short-horizon testing systematically underestimates developmental risks, for which TSJ yields a stable risk estimate only after 140 turns within prolonged simulated relationships. Applying TSJ further identifies early childhood and emerging adulthood as the most vulnerable stages, with cognitive trust and emotional dependency as the weakest domains. TSJ provides a scalable methodology for longitudinal cognitive developmental risk evaluation in AI companion systems.",
+      "authors": [
+        "Kaicheng Shen",
+        "Lingyu Li",
+        "Wen Wu",
+        "Yan Teng",
+        "Liang He",
+        "Yingchun Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-24T04:46:42+00:00",
+      "link": "https://arxiv.org/pdf/2606.25396v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Long-term simulation of AI companion risks for human interaction",
+      "llm_evidence_cn": "长期模拟AI伴侣与人类交互的认知发展风险",
+      "llm_evidence": "长期模拟AI伴侣与人类交互的认知发展风险",
+      "canonical_evidence": "长期模拟AI伴侣与人类交互的认知发展风险",
+      "llm_tldr_en": "TSJ framework exposes cognitive-developmental risks in AI companions through longitudinal simulation, evaluating six models across 12,960 simulated person-days.",
+      "llm_tldr_cn": "现有AI伴侣安全评估多基于短时交互，无法捕捉长期累积风险。本文提出TSJ（剧场-舞台-评审）框架，通过角色驱动的用户模拟、动态心理状态更新和回顾性评估，在12,960个模拟人日交互中评估了六个主流模型在四种发育阶段的风险。结果发现短视评估会遗漏发育性问题，强调长期交互评估对儿童和青少年用户的重要性。",
+      "llm_tldr": "现有AI伴侣安全评估多基于短时交互，无法捕捉长期累积风险。本文提出TSJ（剧场-舞台-评审）框架，通过角色驱动的用户模拟、动态心理状态更新和回顾性评估，在12,960个模拟人日交互中评估了六个主流模型在四种发育阶段的风险。结果发现短视评估会遗漏发育性问题，强调长期交互评估对儿童和青少年用户的重要性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.27330v1",
+      "source": "arxiv",
+      "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+      "abstract": "Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLLMs are cost efficient and privacy preserving compared with commercial large models, they suffer from weak planning and limited cross website generalization. To address these limitations, we introduce the planning experience exploration and utilization (PEEU) method, which autonomously explores environments to discover experiences and utilizes hindsight experience to synthesize strictly aligned, high level training data. To quantitatively analyze the generalization behaviors driving this performance, we propose the task decomposition hierarchical analysis framework (TDHAF) to systematically study compositional generalization across three task granularities: low, middle and high levels. Our analysis reveals that mastering low level atomic skills does not guarantee high level planning competence, while high level task training yields stronger OOD generalization. Experiments on real world benchmarks demonstrate PEEU's superior effectiveness: our 7B model achieves 30.6% accuracy, outperforming the much larger Qwen2.5-VL-32B model. These demonstrate constructing hindsight high level tasks and leveraging experiences is crucial for OOD planning abilities of small MLLMs.",
+      "authors": [
+        "Tianyi Men",
+        "Zhuoran Jin",
+        "Pengfei Cao",
+        "Yubo Chen",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-06-25T17:44:48+00:00",
+      "link": "https://arxiv.org/pdf/2606.27330v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "GUI agent powered by autonomous experience exploration for human task assistance",
+      "llm_evidence_cn": "通过自主经验探索增强GUI智能体以辅助人类任务规划",
+      "llm_evidence": "通过自主经验探索增强GUI智能体以辅助人类任务规划",
+      "canonical_evidence": "通过自主经验探索增强GUI智能体以辅助人类任务规划",
+      "llm_tldr_en": "PEEU method enables GUI agents to autonomously explore and use hindsight experience for better task planning, improving cross-website generalization.",
+      "llm_tldr_cn": "小型开源多模态大模型在GUI任务规划中能力有限，且跨网站泛化性差。本文提出规划经验探索与利用（PEEU）方法，让智能体自主探索环境发现经验，并利用事后经验合成高质量训练数据。实验表明该方法有效提升了智能体在跨网站任务中的规划能力，为人类-智能体协作提供了更高效的GUI自动化方案。",
+      "llm_tldr": "小型开源多模态大模型在GUI任务规划中能力有限，且跨网站泛化性差。本文提出规划经验探索与利用（PEEU）方法，让智能体自主探索环境发现经验，并利用事后经验合成高质量训练数据。实验表明该方法有效提升了智能体在跨网站任务中的规划能力，为人类-智能体协作提供了更高效的GUI自动化方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.23403v1",
+      "source": "arxiv",
+      "title": "Litmus: Zero-Label, Code-Driven Metric Specification for Evaluating AI Systems",
+      "abstract": "As agentic LLM systems move from prototypes to deployment across increasingly diverse domains, evaluating them has become both more important and more difficult. The challenge is not only that individual metrics may be unreliable, but that evaluation goals are often left implicit. Without a clear account of what a system is expected to do, how it can fail, and which failures matter, metric choices become difficult to justify, interpret, or validate. We present Litmus, a zero-label system that designs evaluation and monitoring metrics for AI pipelines by eliciting evaluation intent from source code and targeted interrogation. Instead of assuming that the evaluation target is already known, Litmus first identifies what must be measured and why, then converts those answers into constraints for constructing a justified, per-stage metric portfolio. We evaluate Litmus on three real, code-defined AI pipelines - financial account grouping, scientific QA, and inherent risk assessment - against AutoMetrics and three DynamicRubric baselines. Litmus achieves the broadest or tied-broadest concern coverage, spans more pipeline stages, produces a near-zero-redundancy portfolio, and ranks first in validity against per-row quality labels on all three pipelines - decisively on scientific QA (Spearman $ρ=0.72$ vs. less than $0.47$ for every baseline), and within overlapping confidence intervals in relation to two components of the audit framework despite using no labels during metric design. Our results support a shift from automatic metric implementation to automatic metric specification: before asking which metric to compute, evaluation systems should ask what must be measured and why.",
+      "authors": [
+        "Prajjwal Gupta",
+        "Prasang Gupta",
+        "Vishal Bhutani",
+        "Apoorva Sharma",
+        "Sumanth Chundru",
+        "Waqar Sarguroh",
+        "Kevin Paul"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-22T14:26:48+00:00",
+      "link": "https://arxiv.org/pdf/2606.23403v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "provides metric specification tool that can be used to evaluate human-centered AI systems",
+      "llm_evidence_cn": "提供度量指定工具，可用于评估人类中心AI系统",
+      "llm_evidence": "提供度量指定工具，可用于评估人类中心AI系统",
+      "canonical_evidence": "提供度量指定工具，可用于评估人类中心AI系统",
+      "llm_tldr_en": "Litmus automatically designs evaluation metrics for AI pipelines by eliciting intent from code, supporting rigorous assessment of human-AI systems.",
+      "llm_tldr_cn": "AI系统评估中，度量选择常随意且缺乏明确目标。Litmus通过分析源代码和针对性询问，自动识别需要测量什么以及为什么，生成清晰可解释的评估指标。这为人类中心AI系统的设计和验证提供了标准化度量支持。",
+      "llm_tldr": "AI系统评估中，度量选择常随意且缺乏明确目标。Litmus通过分析源代码和针对性询问，自动识别需要测量什么以及为什么，生成清晰可解释的评估指标。这为人类中心AI系统的设计和验证提供了标准化度量支持。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.26298v1",
+      "source": "arxiv",
+      "title": "Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems",
+      "abstract": "Autonomous AI agents may begin to perform consequential, irreversible actions such as clinical prescribing and production software deployment. This paper observes that human institutions have governed powerful autonomous actors not by monitoring their reasoning but by requiring independently attested evidence at the point of consequential action. We formalise this institutional pattern as a computational governance model for AI agent systems. Under the proposed model, an agent retains full autonomy over planning and reasoning but holds no execution authority over designated high-risk actions. Execution is conditional on preconditions that are each independently attested by a separate authoritative source, cryptographically bound to a declared intent, and evaluated by a deterministic policy. Decisions are recorded in a tamper-evident log amenable to independent re-verification. We present a proof-of-concept implementation and illustrate the model with examples from software deployment and clinical prescribing.",
+      "authors": [
+        "Jakob Salfeld-Nebgen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-06-24T18:43:00+00:00",
+      "link": "https://arxiv.org/pdf/2606.26298v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes a governance model that aligns with human-centered AI principles by requiring independent attestation for high-risk actions",
+      "llm_evidence_cn": "提出符合人类中心AI原则的治理模型，要求高风险行动独立认证",
+      "llm_evidence": "提出符合人类中心AI原则的治理模型，要求高风险行动独立认证",
+      "canonical_evidence": "提出符合人类中心AI原则的治理模型，要求高风险行动独立认证",
+      "llm_tldr_en": "This paper formalizes an institutional governance model for autonomous AI agents, requiring independent attestation at the point of consequential actions, supporting human oversight in AI systems.",
+      "llm_tldr_cn": "自主AI代理可能执行不可逆的高风险行动，现有依赖监控推理的方法不可行。本文借鉴人类机构治理经验，形式化了一种计算治理模型：代理保留规划自主权，但执行高风险行动需通过独立权威方预认证。这种设计确保了人类控制融入AI系统。",
+      "llm_tldr": "自主AI代理可能执行不可逆的高风险行动，现有依赖监控推理的方法不可行。本文借鉴人类机构治理经验，形式化了一种计算治理模型：代理保留规划自主权，但执行高风险行动需通过独立权威方预认证。这种设计确保了人类控制融入AI系统。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
