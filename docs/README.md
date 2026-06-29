@@ -6,35 +6,41 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-28
-- 运行时间：2026-06-28 20:29:34 UTC
+- 最新运行日期：2026-06-29
+- 运行时间：2026-06-29 21:38:16 UTC
 - 运行状态：成功
-- 本次总论文数：5
+- 本次总论文数：7
 - 精读区：2
-- 速读区：3
+- 速读区：5
 
 ### 今日简报（AI）
-今日精读聚焦人机对话概念对齐分类与AI伴侣长期认知风险，速读涵盖GUI智能体经验探索、零标注评估及自主系统治理。最值得关注《概念对齐分类法》（9.0分）和《AI伴侣长期模拟风险》（8.0分），前者系统化人机对齐框架，后者警示AI成瘾性设计隐患。建议优先阅读这两篇，深入理解人机交互的核心挑战与长期安全边界。
-- 详情：[/202606/28/README](/202606/28/README)
+今日精读聚焦人类与LLM交互中的敲键盘行为如何揭示认知负荷，以及情感安全作为LLM安全缺失的关键维度；速读另有三篇关于价值约束分配和民主化AI原则的论文。最值得看的是《Typing Behavior in Human-LLM Interaction》与《Affective AI Safety》，前者用击键动力学量化提示时的认知努力，后者强调情感对齐是安全研究盲区。建议普通读者优先精读这两篇，理解行为数据如何提升交互效率，以及为何AI安全需要纳入情感伦理考量。
+- 详情：[/202606/29/README](/202606/29/README)
 
 ### 精读区论文标签
-1. [A Taxonomy of Conceptual Alignment in Human-Robot Dialogue](/202606/28/2606.22360v1-a-taxonomy-of-conceptual-alignment-in-human-robot-dialogue)  
+1. [Typing Behavior in Human-LLM Interaction: Keystroke Dynamics Reveal Cognitive Effort During Prompting](/202606/29/2606.28090v1-typing-behavior-in-human-llm-interaction-keystroke-dynamics-reveal-cognitive-effort-during-prompting)  
    标签：评分：9.0/10、query:hai
-   evidence：人机对话中概念对齐的分类法，直接关联人类-AI交互
-2. [Long-Term Simulation Exposes Cognitive-Developmental Risks in AI Companions](/202606/28/2606.25396v1-long-term-simulation-exposes-cognitive-developmental-risks-in-ai-companions)  
+   evidence：通过按键动态直接研究人类与LLM交互，测量认知努力
+2. [Affective AI Safety: The Missing Piece in LLM Safety](/202606/29/2606.23380v1-affective-ai-safety-the-missing-piece-in-llm-safety)  
    标签：评分：8.0/10、query:hai
-   evidence：长期模拟AI伴侣与人类交互的认知发展风险
+   evidence：探索AI-人类交互中的情感安全，解决情感伤害
 
 ### 速读区论文标签
-1. [Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning](/202606/28/2606.27330v1-empowering-gui-agents-via-autonomous-experience-exploration-and-hindsight-experience-utilization-for-task-planning)  
+1. [Affective AI Safety: The Missing Piece in LLM Safety](/202606/29/2606.23380v2-affective-ai-safety-the-missing-piece-in-llm-safety)  
    标签：评分：7.0/10、query:hai
-   evidence：通过自主经验探索增强GUI智能体以辅助人类任务规划
-2. [Litmus: Zero-Label, Code-Driven Metric Specification for Evaluating AI Systems](/202606/28/2606.23403v1-litmus-zero-label-code-driven-metric-specification-for-evaluating-ai-systems)  
+   evidence：情感AI安全作为LLM设计的人本原则
+2. [Towards Value-Constrained Credit Assignment in Fully Delegated AI Cooperatives](/202606/29/2606.28217v1-towards-value-constrained-credit-assignment-in-fully-delegated-ai-cooperatives)  
+   标签：评分：7.0/10、query:hai
+   evidence：价值约束下的信用分配用于人-AI合作体设计
+3. [Democratic ICAI: Debating Our Way to Steering Principles from Preferences](/202606/29/2606.28294v1-democratic-icai-debating-our-way-to-steering-principles-from-preferences)  
+   标签：评分：7.0/10、query:hai
+   evidence：通过辩论展现决策理由，增强可解释性
+4. [IMAGIN-4D: Image-Guided Controllable Interaction Generation](/202606/29/2606.23675v1-imagin-4d-image-guided-controllable-interaction-generation)  
    标签：评分：6.0/10、query:hai
-   evidence：提供度量指定工具，可用于评估人类中心AI系统
-3. [Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems](/202606/28/2606.26298v1-governing-actions-not-agents-institutional-attestation-as-a-governance-model-for-autonomous-ai-systems)  
+   evidence：生成人-物交互用于动画和具身AI
+5. [The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems](/202606/29/2606.26057v1-the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other-escapable-ai-systems)  
    标签：评分：6.0/10、query:hai
-   evidence：提出符合人类中心AI原则的治理模型，要求高风险行动独立认证
+   evidence：运行时AI对齐架构，用于设计更安全的人机交互系统
 
 
 <div class="dpr-home-promo-card">

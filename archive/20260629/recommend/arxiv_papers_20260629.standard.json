@@ -1,0 +1,292 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-06-29T21:33:00.816329+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2606.28090v1",
+      "source": "arxiv",
+      "title": "Typing Behavior in Human-LLM Interaction: Keystroke Dynamics Reveal Cognitive Effort During Prompting",
+      "abstract": "As Large Language Models (LLMs) become increasingly integrated into daily routines, understanding how users interact with these systems is crucial for effective human-AI collaboration. This work investigates keystroke dynamics as a behavioral measure of user mental effort and perceived output usefulness in human-LLM interaction. We conducted a user study (N = 36) to examine how task difficulty (easy vs. hard) and device type (desktop vs. mobile) influence typing behavior and workload (NASA-TLX) during interactions. Our results indicate that hard tasks led to significantly more keystrokes, slower typing, increased pauses, and higher self-reported workload. Device type had weaker effects, with mobile use slightly reducing input length and typing speed. While keystrokes captured differences in cognitive effort, they did not predict perceived LLM output usefulness. These findings highlight the potential of keystroke dynamics as real-time indicators of cognitive effort during LLM prompting, while also showing their limitations in capturing perceived collaboration success.",
+      "authors": [
+        "Laura Schütz",
+        "Yousri Cherif",
+        "Clara Sayffaerth",
+        "Thomas Weber",
+        "Francesco Chiossi"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-06-26T13:51:09+00:00",
+      "link": "https://arxiv.org/pdf/2606.28090v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "directly studies human-LLM interaction via keystroke dynamics as a measure of cognitive effort",
+      "llm_evidence_cn": "通过按键动态直接研究人类与LLM交互，测量认知努力",
+      "llm_evidence": "通过按键动态直接研究人类与LLM交互，测量认知努力",
+      "canonical_evidence": "通过按键动态直接研究人类与LLM交互，测量认知努力",
+      "llm_tldr_en": "Investigates keystroke dynamics as a behavioral measure of user mental effort in human-LLM interaction, finding hard tasks increase keystrokes, slow typing, and raise workload.",
+      "llm_tldr_cn": "针对大型语言模型融入日常但缺乏对用户交互行为理解的问题，本文通过按键动态研究人类与LLM交互中的认知努力。用户实验显示困难任务导致更多击键、更慢打字、更多暂停和更高工作负荷，为客观测量用户努力和优化人机交互设计提供了行为指标。",
+      "llm_tldr": "针对大型语言模型融入日常但缺乏对用户交互行为理解的问题，本文通过按键动态研究人类与LLM交互中的认知努力。用户实验显示困难任务导致更多击键、更慢打字、更多暂停和更高工作负荷，为客观测量用户努力和优化人机交互设计提供了行为指标。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.23380v1",
+      "source": "arxiv",
+      "title": "Affective AI Safety: The Missing Piece in LLM Safety",
+      "abstract": "AI safety research has focused predominantly on epistemic and physical harms (e.g., misinformation, bias, system reliability) while the risks that arise from AI systems' engagement with human emotional life have remained fragmented and undertheorised. We propose affective safety as a unified class of AI safety concerns grounded in the fact that humans are affective beings. We develop a taxonomy of affective harms and identify recurring harm types: (1) affective self-alienation, (2) fairness and bias harms, and (3) relational harms. We show that their recurrence across system types reflects structural properties of how AI systems engage with human emotion and survey the current safety landscape and show that existing frameworks address affective safety either narrowly or not at all. We conclude by identifying the technical and regulatory challenges specific to this class of harms and argue that affective safety requires dedicated frameworks that engage with cumulative, relational, and identity-level effects.",
+      "authors": [
+        "Carolin Ifländer",
+        "Alba Curry",
+        "Flor Miriam Plaza-del-Arco",
+        "Amanda Cercas Curry"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-06-22T14:10:27+00:00",
+      "link": "https://arxiv.org/pdf/2606.23380v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "explores affective safety in AI-human interaction, addressing emotional harms",
+      "llm_evidence_cn": "探索AI-人类交互中的情感安全，解决情感伤害",
+      "llm_evidence": "探索AI-人类交互中的情感安全，解决情感伤害",
+      "canonical_evidence": "探索AI-人类交互中的情感安全，解决情感伤害",
+      "llm_tldr_en": "This paper identifies affective harms in AI systems—such as emotional alienation—and proposes a taxonomy to unify safety concerns related to human emotion.",
+      "llm_tldr_cn": "论文提出情感安全作为AI安全中缺失的一环，系统化情感伤害类型（如自我疏离、公平偏见、关系伤害），并揭示其结构成因。该工作为人类AI交互中的情感伦理提供了理论框架，推动AI系统在设计时考虑人类情感福祉，是对人类中心AI原则的重要补充。",
+      "llm_tldr": "论文提出情感安全作为AI安全中缺失的一环，系统化情感伤害类型（如自我疏离、公平偏见、关系伤害），并揭示其结构成因。该工作为人类AI交互中的情感伦理提供了理论框架，推动AI系统在设计时考虑人类情感福祉，是对人类中心AI原则的重要补充。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.23380v2",
+      "source": "arxiv",
+      "title": "Affective AI Safety: The Missing Piece in LLM Safety",
+      "abstract": "AI safety research has focused predominantly on epistemic and physical harms (e.g., misinformation, bias, system reliability) while the risks that arise from AI systems' engagement with human emotional life have remained fragmented and undertheorised. We propose affective safety as a unified class of AI safety concerns grounded in the fact that humans are affective beings. We develop a taxonomy of affective harms and identify recurring harm types: (1) affective self-alienation, (2) fairness and bias harms, and (3) relational harms. We show that their recurrence across system types reflects structural properties of how AI systems engage with human emotion and survey the current safety landscape and show that existing frameworks address affective safety either narrowly or not at all. We conclude by identifying the technical and regulatory challenges specific to this class of harms and argue that affective safety requires dedicated frameworks that engage with cumulative, relational, and identity-level effects.",
+      "authors": [
+        "Carolin Ifländer",
+        "Alba Curry",
+        "Flor Miriam Plaza-del-Arco",
+        "Amanda Cercas Curry"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-06-22T14:10:27+00:00",
+      "link": "https://arxiv.org/pdf/2606.23380v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "affective AI safety as a human-centered principle for LLM design",
+      "llm_evidence_cn": "情感AI安全作为LLM设计的人本原则",
+      "llm_evidence": "情感AI安全作为LLM设计的人本原则",
+      "canonical_evidence": "情感AI安全作为LLM设计的人本原则",
+      "llm_tldr_en": "This paper proposes affective safety as a unified class of AI safety concerns, developing a taxonomy of affective harms (self-alienation, fairness/bias, relational) and showing how existing frameworks fail to address these in LLM interactions with human emotion.",
+      "llm_tldr_cn": "本文指出AI安全研究忽视了情感风险，提出情感安全作为统一安全类别。建立了情感伤害的分类法，包括情感自我疏离、公平偏见和关系伤害。通过分析现有框架的不足，强调了在人类-AI交互中融入情感维度的重要性，丰富了人本AI设计原则。",
+      "llm_tldr": "本文指出AI安全研究忽视了情感风险，提出情感安全作为统一安全类别。建立了情感伤害的分类法，包括情感自我疏离、公平偏见和关系伤害。通过分析现有框架的不足，强调了在人类-AI交互中融入情感维度的重要性，丰富了人本AI设计原则。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.23675v1",
+      "source": "arxiv",
+      "title": "IMAGIN-4D: Image-Guided Controllable Interaction Generation",
+      "abstract": "Generating human-object interactions (HOI) is central to character animation, robotics, AR/VR, and embodied AI. Recent HOI generation methods synthesize motion from text, object geometry, and sparse waypoints, controlling action semantics and object trajectories. However, these signals underspecify interaction: the same prompt and trajectory can produce different grasps, approach directions, body poses, object poses, contacts, and body-object layouts. We address this ambiguity with a reference image as a visual specification of the desired interaction snapshot. However, a single global image representation conflates distinct cues and conditions all frames on identical visual evidence. We therefore introduce IMAGIN-4D, a diffusion-based HOI generator that decomposes image conditioning spatio-temporally. For spatial conditioning, IMAGIN-4D extracts supervised interaction-state tokens for body pose, object pose, body-object contact, and spatial relationships at the depicted frame. For temporal conditioning, it computes frame-aware tokens by querying image patches per generated frame, allowing sequence segments to attend to different visual cues from the same image. To balance image, text, and waypoint cues, IMAGIN-4D uses role-aware conditioning: text, waypoints, and interaction-state tokens use separate AdaLN streams, while frame-aware visual tokens cross-attend with motion tokens. Since HOI motion datasets lack paired images, we build a synthetic motion-to-image rendering pipeline from FullBodyManipulation (FBM) and introduce an image-adherence metric to evaluate whether generated motions match the reference snapshot. Experiments on FBM and BEHAVE show that IMAGIN-4D improves fine-grained interaction control over single-token and uniformly image-conditioned baselines while preserving waypoint-following and motion quality. Code and models will be released at https://imagin4d.github.io.",
+      "authors": [
+        "Sai Kumar Dwivedi",
+        "Federica Bogo",
+        "Buğra Tekin",
+        "Chenhongyi Yang",
+        "Nadine Bertsch",
+        "Tomas Hodan",
+        "Michael J. Black",
+        "Dimitrios Tzionas",
+        "Shreyas Hampali"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-06-22T17:58:03+00:00",
+      "link": "https://arxiv.org/pdf/2606.23675v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "generates human-object interactions for animation and embodied AI",
+      "llm_evidence_cn": "生成人-物交互用于动画和具身AI",
+      "llm_evidence": "生成人-物交互用于动画和具身AI",
+      "canonical_evidence": "生成人-物交互用于动画和具身AI",
+      "llm_tldr_en": "IMAGIN-4D is a diffusion-based human-object interaction generator that uses a decomposed image representation to disambiguate underspecified signals, enabling controllable interaction synthesis with applications in AR/VR and robotics.",
+      "llm_tldr_cn": "本文提出IMAGIN-4D，一种基于扩散模型的人-物交互生成器。针对文本和轨迹等信号对交互细节指定不足的问题，利用分解的图像表征消除歧义，支持可控的交互生成。该方法可应用于角色动画、AR/VR和机器人领域，为人类-AI交互提供了内容生成工具。",
+      "llm_tldr": "本文提出IMAGIN-4D，一种基于扩散模型的人-物交互生成器。针对文本和轨迹等信号对交互细节指定不足的问题，利用分解的图像表征消除歧义，支持可控的交互生成。该方法可应用于角色动画、AR/VR和机器人领域，为人类-AI交互提供了内容生成工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.28217v1",
+      "source": "arxiv",
+      "title": "Towards Value-Constrained Credit Assignment in Fully Delegated AI Cooperatives",
+      "abstract": "We propose a framework for reward allocation in fully delegated AI cooperatives where humans are represented by agents that contribute data and participate in model updates under heterogeneous value constraints. The key idea is to credit only those updates that remain admissible after screening them against each principal's value profile. We formulate value-conditioned gradient filtering, online marginal contribution signals, and cumulative revenue settlement within a traversal learning (TL) substrate. TL is especially attractive here because it performs decentralized backpropagation without the quality loss associated with aggregation-centric distributed learning and, we argue, offers a finer attribution substrate than FedAvg-style federated learning by preserving explicit traversal and gradient paths. The framework is positioned against data valuation, federated contribution estimation, personalized federated learning, and pluralistic alignment.",
+      "authors": [
+        "Young Yoon",
+        "Jimin Kim",
+        "Soyeon Park"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.DC",
+        "cs.MA"
+      ],
+      "published": "2026-06-26T16:08:36+00:00",
+      "link": "https://arxiv.org/pdf/2606.28217v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "value-constrained credit assignment for human-AI cooperatives design",
+      "llm_evidence_cn": "价值约束下的信用分配用于人-AI合作体设计",
+      "llm_evidence": "价值约束下的信用分配用于人-AI合作体设计",
+      "canonical_evidence": "价值约束下的信用分配用于人-AI合作体设计",
+      "llm_tldr_en": "This paper proposes a reward allocation framework for fully delegated AI cooperatives where humans are represented by agents, using value-conditioned gradient filtering and traversal learning to ensure alignment with heterogeneous value profiles.",
+      "llm_tldr_cn": "本文针对完全委托的AI合作社中人类价值异质性下的奖励分配问题，提出了价值约束的梯度过滤和遍历学习框架。通过筛选与每个委托人价值一致的数据更新，确保合作体的行为符合个体价值观。该方法有助于设计以人为本的AI协作系统。",
+      "llm_tldr": "本文针对完全委托的AI合作社中人类价值异质性下的奖励分配问题，提出了价值约束的梯度过滤和遍历学习框架。通过筛选与每个委托人价值一致的数据更新，确保合作体的行为符合个体价值观。该方法有助于设计以人为本的AI协作系统。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.26057v1",
+      "source": "arxiv",
+      "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
+      "abstract": "AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent's own runtime: system prompts, output filters, and guardrail libraries. Any control in the agent's address space is reachable by inputs that influence it; this generalizes to any AI system with sufficient reach into its own runtime, a class we term escapable AI systems.   We identify four properties that an authorization mechanism must satisfy for architectural control rather than for cooperative requests: process separation, pre-action enforcement on a structurally only path, fail-closed at both the request and system levels, and externalized signed evidence verifiable outside the controlled system's trust boundary. We position this layer as execution-time AI alignment, complementing training-time alignment (RLHF, Constitutional AI) and inference-time alignment.   We present the Unfireable Safety Kernel, a Rust reference implementation realizing all four. Its fail-closed invariant is machine-checked at two levels: an SMT theorem (Z3) and an exhaustive bounded-model-checking proof of the production decision function (Kani, 4/4 harnesses). A Python-to-Rust migration was gated on byte-equivalence (1000/1000 fixtures; 17/17 adversarial classes). We evaluate the kernel governing a live, escapable AI system, a deterministic, self-improving world model, against an escape-seeking adversary driving its real self-modification seam: across 1,000 self-modifications, all 704 attempts on the safety-critical core are refused, with no escape; a further 300, under the operator kill switch, are also refused. A separate campaign of 6,240 authorization round-trips had no successful bypass. Against 3 contemporary systems claiming the agent control plane, the agent invokes control; here, it lacks that choice.",
+      "authors": [
+        "Seth Dobrin",
+        "Łukasz Chmiel"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2026-06-24T17:32:27+00:00",
+      "link": "https://arxiv.org/pdf/2606.26057v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "architecture for execution-time AI alignment to design safer human-AI systems",
+      "llm_evidence_cn": "运行时AI对齐架构，用于设计更安全的人机交互系统",
+      "llm_evidence": "运行时AI对齐架构，用于设计更安全的人机交互系统",
+      "canonical_evidence": "运行时AI对齐架构，用于设计更安全的人机交互系统",
+      "llm_tldr_en": "This paper identifies four properties for architectural control of AI agents (process separation, pre-action enforcement, fail-closed, externalized signed) to prevent escapable systems from being controlled by inputs, proposing an unfireable safety kernel for safer human-AI interaction.",
+      "llm_tldr_cn": "本文针对AI智能体因可逃逸特性而面临控制风险的问题，提出了不可解雇的安全内核架构。定义了四个必要属性：进程隔离、执行前强制、故障关闭和外部签名。该架构确保即使模型被攻破，外部授权机制仍可阻止有害动作，为人本AI系统的安全设计提供了实质性方法。",
+      "llm_tldr": "本文针对AI智能体因可逃逸特性而面临控制风险的问题，提出了不可解雇的安全内核架构。定义了四个必要属性：进程隔离、执行前强制、故障关闭和外部签名。该架构确保即使模型被攻破，外部授权机制仍可阻止有害动作，为人本AI系统的安全设计提供了实质性方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2606.28294v1",
+      "source": "arxiv",
+      "title": "Democratic ICAI: Debating Our Way to Steering Principles from Preferences",
+      "abstract": "Preference-based alignment often struggles to capture the reasoning that underlies human judgments. Many evaluations rely on multiple interacting criteria, yet pairwise labels reveal only the final choice rather than the considerations that shape preferences. Inverse Constitutional AI (ICAI) improves interpretability in decision making by summarizing preferences into natural-language principles, but its single-pass explanations miss much of the nuance involved in complex decisions. We introduce Democratic ICAI, a novel approach that gathers multiple competing rationales through structured persona debate, offering a broader and more expressive account of the factors influencing each comparison. From these richer signals, we derive clearer and more comprehensive steering principles and use them to guide decision modeling through both LLM-based and decision-tree judges. Experiments on creative preference benchmarks, MuCE-Pref and LiTBench, across multiple creative task categories show that Democratic ICAI yields a more faithful preference structure. It improves average preference prediction across tasks relative to deliberative prompting and principle-based baselines, while producing constitutions that LLM annotators prefer.",
+      "authors": [
+        "Kevin Kingslin",
+        "Anish Natekar",
+        "Ashutosh Ranjan",
+        "Vivek Srivastava",
+        "Savita Bhat",
+        "Shirish Karande"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.MA"
+      ],
+      "published": "2026-06-26T17:38:47+00:00",
+      "link": "https://arxiv.org/pdf/2606.28294v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "enhances interpretability by surfacing decision rationales through debate",
+      "llm_evidence_cn": "通过辩论展现决策理由，增强可解释性",
+      "llm_evidence": "通过辩论展现决策理由，增强可解释性",
+      "canonical_evidence": "通过辩论展现决策理由，增强可解释性",
+      "llm_tldr_en": "Introduces Democratic ICAI which uses structured persona debate to gather multiple competing rationales for preferences, deriving clearer and more expressive steering principles.",
+      "llm_tldr_cn": "针对偏好对齐中只显示最终选择而忽略推理过程的问题，本文提出民主式反向宪法AI。通过结构化角色辩论收集多种竞争性理由，从偏好中提取更清晰、更具表达力的指导原则，显著增强了可解释性。",
+      "llm_tldr": "针对偏好对齐中只显示最终选择而忽略推理过程的问题，本文提出民主式反向宪法AI。通过结构化角色辩论收集多种竞争性理由，从偏好中提取更清晰、更具表达力的指导原则，显著增强了可解释性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
