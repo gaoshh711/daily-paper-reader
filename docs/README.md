@@ -6,41 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-29
-- 运行时间：2026-06-29 21:38:16 UTC
+- 最新运行日期：2026-06-30
+- 运行时间：2026-06-30 22:02:33 UTC
 - 运行状态：成功
-- 本次总论文数：7
-- 精读区：2
-- 速读区：5
+- 本次总论文数：6
+- 精读区：3
+- 速读区：3
 
 ### 今日简报（AI）
-今日精读聚焦人类与LLM交互中的敲键盘行为如何揭示认知负荷，以及情感安全作为LLM安全缺失的关键维度；速读另有三篇关于价值约束分配和民主化AI原则的论文。最值得看的是《Typing Behavior in Human-LLM Interaction》与《Affective AI Safety》，前者用击键动力学量化提示时的认知努力，后者强调情感对齐是安全研究盲区。建议普通读者优先精读这两篇，理解行为数据如何提升交互效率，以及为何AI安全需要纳入情感伦理考量。
-- 详情：[/202606/29/README](/202606/29/README)
+今天精读了人机亲密关系中的空间虚拟具身和可审计对话系统两篇高分研究。最值得关注的是虚拟实体在亲密关系中的设计原则，以及用LLMography实现对话可追溯性。建议优先阅读这两篇精读文章，把握空间化交互与AI治理的前沿方向。
+- 详情：[/202606/30/README](/202606/30/README)
 
 ### 精读区论文标签
-1. [Typing Behavior in Human-LLM Interaction: Keystroke Dynamics Reveal Cognitive Effort During Prompting](/202606/29/2606.28090v1-typing-behavior-in-human-llm-interaction-keystroke-dynamics-reveal-cognitive-effort-during-prompting)  
+1. ["If I Can See You": Understanding Spatially Situated Virtual Embodiment in Close Human-AI Relationships](/202606/30/2606.28714v1-if-i-can-see-you-understanding-spatially-situated-virtual-embodiment-in-close-human-ai-relationships)  
    标签：评分：9.0/10、query:hai
-   evidence：通过按键动态直接研究人类与LLM交互，测量认知努力
-2. [Affective AI Safety: The Missing Piece in LLM Safety](/202606/29/2606.23380v1-affective-ai-safety-the-missing-piece-in-llm-safety)  
+   evidence：关于亲密人机关系中空间虚拟具身化的研究
+2. [LLMography: Transforming Human-AI Conversations into Traceability, Oversight, and Auditability Indicators](/202606/30/2606.29437v1-llmography-transforming-human-ai-conversations-into-traceability-oversight-and-auditability-indicators)  
+   标签：评分：9.0/10、query:hai
+   evidence：将人机对话转化为可追溯性指标
+3. [AI in the Wild: A Large Scale Analysis of Authentic Interactions of College Students with Generative AI](/202606/30/2606.29442v1-ai-in-the-wild-a-large-scale-analysis-of-authentic-interactions-of-college-students-with-generative-ai)  
    标签：评分：8.0/10、query:hai
-   evidence：探索AI-人类交互中的情感安全，解决情感伤害
+   evidence：大规模真实学生与AI交互分析
 
 ### 速读区论文标签
-1. [Affective AI Safety: The Missing Piece in LLM Safety](/202606/29/2606.23380v2-affective-ai-safety-the-missing-piece-in-llm-safety)  
+1. [Human-in-the-Loop Nugget Annotation for Accountable LLM-as-a-Judge Evaluations](/202606/30/2606.29033v1-human-in-the-loop-nugget-annotation-for-accountable-llm-as-a-judge-evaluations)  
    标签：评分：7.0/10、query:hai
-   evidence：情感AI安全作为LLM设计的人本原则
-2. [Towards Value-Constrained Credit Assignment in Fully Delegated AI Cooperatives](/202606/29/2606.28217v1-towards-value-constrained-credit-assignment-in-fully-delegated-ai-cooperatives)  
-   标签：评分：7.0/10、query:hai
-   evidence：价值约束下的信用分配用于人-AI合作体设计
-3. [Democratic ICAI: Debating Our Way to Steering Principles from Preferences](/202606/29/2606.28294v1-democratic-icai-debating-our-way-to-steering-principles-from-preferences)  
-   标签：评分：7.0/10、query:hai
-   evidence：通过辩论展现决策理由，增强可解释性
-4. [IMAGIN-4D: Image-Guided Controllable Interaction Generation](/202606/29/2606.23675v1-imagin-4d-image-guided-controllable-interaction-generation)  
+   evidence：采用人在回路的注释工具，由人类识别信息要点
+2. [Towards Automating Scientific Review with Google's Paper Assistant Tool](/202606/30/2606.28277v1-towards-automating-scientific-review-with-googles-paper-assistant-tool)  
    标签：评分：6.0/10、query:hai
-   evidence：生成人-物交互用于动画和具身AI
-5. [The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems](/202606/29/2606.26057v1-the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other-escapable-ai-systems)  
+   evidence：科学评估中AI-人类协作层次分类
+3. [Hierarchical Experimentalist Agents](/202606/30/2606.29315v1-hierarchical-experimentalist-agents)  
    标签：评分：6.0/10、query:hai
-   evidence：运行时AI对齐架构，用于设计更安全的人机交互系统
+   evidence：通过主动实验学习以支持人类决策的LLM代理
 
 
 <div class="dpr-home-promo-card">
