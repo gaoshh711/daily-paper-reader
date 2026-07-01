@@ -6,38 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-06-30
-- 运行时间：2026-06-30 22:02:33 UTC
+- 最新运行日期：2026-07-01
+- 运行时间：2026-07-01 21:28:18 UTC
 - 运行状态：成功
-- 本次总论文数：6
-- 精读区：3
+- 本次总论文数：5
+- 精读区：2
 - 速读区：3
 
 ### 今日简报（AI）
-今天精读了人机亲密关系中的空间虚拟具身和可审计对话系统两篇高分研究。最值得关注的是虚拟实体在亲密关系中的设计原则，以及用LLMography实现对话可追溯性。建议优先阅读这两篇精读文章，把握空间化交互与AI治理的前沿方向。
-- 详情：[/202606/30/README](/202606/30/README)
+今日精选5篇论文，涵盖机器人日常预测导航、AI代理组织行为、交互评估及AI工程师进化等方向。最值得关注的是《HUMEMBR》提出的预测性具身导航新方法，以及《Agentic AI组织行为》中人类-智能体协作的集体智能研究。建议优先精读这两篇高评分论文，深入理解AI在复杂社会互动中的设计前沿。
+- 详情：[/202607/01/README](/202607/01/README)
 
 ### 精读区论文标签
-1. ["If I Can See You": Understanding Spatially Situated Virtual Embodiment in Close Human-AI Relationships](/202606/30/2606.28714v1-if-i-can-see-you-understanding-spatially-situated-virtual-embodiment-in-close-human-ai-relationships)  
-   标签：评分：9.0/10、query:hai
-   evidence：关于亲密人机关系中空间虚拟具身化的研究
-2. [LLMography: Transforming Human-AI Conversations into Traceability, Oversight, and Auditability Indicators](/202606/30/2606.29437v1-llmography-transforming-human-ai-conversations-into-traceability-oversight-and-auditability-indicators)  
-   标签：评分：9.0/10、query:hai
-   evidence：将人机对话转化为可追溯性指标
-3. [AI in the Wild: A Large Scale Analysis of Authentic Interactions of College Students with Generative AI](/202606/30/2606.29442v1-ai-in-the-wild-a-large-scale-analysis-of-authentic-interactions-of-college-students-with-generative-ai)  
+1. [HUMEMBR: Learning Human Routines for Predictive Embodied Navigation](/202607/01/2606.30404v1-humembr-learning-human-routines-for-predictive-embodied-navigation)  
    标签：评分：8.0/10、query:hai
-   evidence：大规模真实学生与AI交互分析
+   evidence：以人为中心的环境导航，学习人类日常行为
+2. [The Organizational Behavior of Agentic AI: Collective Intelligence in Human-Agent Workflows](/202607/01/2606.30986v1-the-organizational-behavior-of-agentic-ai-collective-intelligence-in-human-agent-workflows)  
+   标签：评分：8.0/10、query:hai
+   evidence：人-代理工作流与集体智能
 
 ### 速读区论文标签
-1. [Human-in-the-Loop Nugget Annotation for Accountable LLM-as-a-Judge Evaluations](/202606/30/2606.29033v1-human-in-the-loop-nugget-annotation-for-accountable-llm-as-a-judge-evaluations)  
+1. [Evaluating Interactivity: Toward Automated Assessment of AI-Generated Explorable Explanations](/202607/01/2606.31012v1-evaluating-interactivity-toward-automated-assessment-of-ai-generated-explorable-explanations)  
    标签：评分：7.0/10、query:hai
-   evidence：采用人在回路的注释工具，由人类识别信息要点
-2. [Towards Automating Scientific Review with Google's Paper Assistant Tool](/202606/30/2606.28277v1-towards-automating-scientific-review-with-googles-paper-assistant-tool)  
+   evidence：评估AI生成的可探索解释的互动性，与可解释AI接口相关
+2. [From Determinism to Delegation: AI-Native Software Engineering and the Evolution of the Agentic Engineer](/202607/01/2606.28791v1-from-determinism-to-delegation-ai-native-software-engineering-and-the-evolution-of-the-agentic-engineer)  
    标签：评分：6.0/10、query:hai
-   evidence：科学评估中AI-人类协作层次分类
-3. [Hierarchical Experimentalist Agents](/202606/30/2606.29315v1-hierarchical-experimentalist-agents)  
+   evidence：AI原生软件工程范式转变，强调人类对代理的监督
+3. [Bad company corrupts good morals: Understanding and Measuring Narrative-Induced Moral Reasoning Degradation in LLMs](/202607/01/2606.28981v1-bad-company-corrupts-good-morals-understanding-and-measuring-narrative-induced-moral-reasoning-degradation-in-llms)  
    标签：评分：6.0/10、query:hai
-   evidence：通过主动实验学习以支持人类决策的LLM代理
+   evidence：研究在人类交互场景中部署的LLM因叙事导致的道德推理退化
 
 
 <div class="dpr-home-promo-card">
