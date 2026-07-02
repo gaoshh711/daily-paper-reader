@@ -1,0 +1,1580 @@
+Title: A Simple Solution to Improving Human Supervision of Algorithms: Evidence from Smart Vending
+
+URL Source: https://arxiv.org/pdf/2607.00420v1
+
+Published Time: Thu, 02 Jul 2026 00:35:50 GMT
+
+Number of Pages: 53
+
+Markdown Content:
+# A Simple Solution to Improving Human Supervision of Algorithms: Evidence from Smart Vending 
+
+Minda Zhao 
+
+H. Milton Stewart School of Industrial and Systems Engineering, Georgia Institute of Technology 
+
+Brian Rongqing Han 
+
+Gies College of Business, University of Illinois Urbana-Champaign 
+
+Xin Chen 
+
+H. Milton Stewart School of Industrial and Systems Engineering, Georgia Institute of Technology 
+
+Tao Zhu 
+
+Shenzhen Fengyi Technology Co., Ltd. 
+
+Abstract. Problem definition: Organizations increasingly deploy autonomous artificial intelligence (AI) systems for operational decisions, such as inventory replenishment. Yet fully granting override rights can degrade performance due to human bias and noise, while prohibiting them may overlook valuable private information. This raises a key question: How should override rights be structured to improve human supervision of autonomous AI? Methodology/results: We propose a constrained override policy that limits overrides per decision episode to enable selective filtering that prioritizes high-value overrides. We tested it through a randomized field experiment with 553 workers at a major Chinese smart vending machine retailer that manages more than 59 , 000 
+
+machines and 4, 000 SKUs. Workers were assigned to no overrides, free overrides, or a two-per-machine limit on downward overrides. Free overrides reduce inventory by 1.95% but also cut sales by 1.19% . Constrained overrides reduce inventory by 1.28% 
+
+without harming sales, as workers select better SKUs to override, confirmed via local average treatment effects. Gains are largest for experienced workers, high-incentive SKUs, and growth-stage SKUs. A simulated personalized policy further increases sales probability by 9.1% . Managerial implications: Academics gain novel insights from the causal effects of discretion design in human-supervised AI, emphasizing selective filtering to enhance decision quality. Managers can benefit from a scalable, low-cost policy for operations such as retail, logistics, and resource planning, reducing excess inventory without sales loss while harnessing private human information, with no need for algorithmic redesign, information customization, or additional training. 
+
+Key words: human-AI collaboration; private information; algorithm override; field experiment; local average treatment effect 
+
+## 1. Introduction 
+
+Data-driven decision-making is transforming businesses by automating complex and frequent tasks previ-ously reliant on human judgment (Brynjolfsson and McElheran 2016, Bar-Gill et al. 2024). Algorithms and 
+
+1  
+
+> arXiv:2607.00420v1 [cs.HC] 1 Jul 2026 2Zhao et al.: Improving Human Supervision of Algorithms
+
+artificial intelligence (AI) systems 1 are now routinely employed in critical decision-making domains such as drug discovery (Lou and Wu 2021) and digital content recommendation (Chen et al. 2024). Despite sub-stantial advancements in algorithmic capabilities, many organizations continue to grant frontline employees discretionary power to override algorithmic recommendations. Such override rights reflect a widespread managerial belief that human workers possess contextual or local information unavailable to algorithms, which can potentially enhance decisions when algorithms falter. However, the causal impact of human overrides on algorithmic performance remains ambiguous. While a considerable body of literature (e.g., Ibanez et al. 2018, Kesavan and Kushwaha 2020, Liang et al. 2024) indicates that human overrides can degrade the performance of autonomous algorithmic decisions, high-lighting the risks of human bias , there is also evidence suggesting that overrides can sometimes improve outcomes. For example, overrides have been shown to be beneficial when humans utilize domain-specific insights not captured by the algorithm (Kesavan et al. 2025, Wang et al. 2025). Thus, despite significant advancements in automation, human operators can still possess critical private information that enhances the quality of decision-making. These mixed findings raise an essential design question: How should over-ride rights be structured to improve human-AI collaboration when AI systems operate autonomously? 
+
+This question defines an important regime in human-AI collaboration, where autonomous systems make routine decisions while human supervisors primarily execute and occasionally intervene through discre-tionary overrides. This setup is increasingly common in operational contexts such as retail, logistics, and resource planning, where AI handles frequent, moderate-stakes tasks and humans step in selectively. In these settings, neither humans nor algorithms consistently outperform the other; effectiveness depends on the nature of the decision (Brynjolfsson and Mitchell 2017), the allocation of authority (Athey et al. 2020), and how discretion is structured within the organization (Camerer 2018). Despite its practical relevance, the design of override rights, specifying who may intervene, under what conditions, and to what extent, remains theoretically underdeveloped and lacks empirical guidance. This contrasts with a different regime in which AI serves as an assistant: algorithms provide input, but humans make the final decision in every case. It emerges more commonly in high-stakes domains such as loan approvals (Lu and Zhang 2025, Wang et al. Zhao et al.: Improving Human Supervision of Algorithms 3
+
+2025) or medical diagnosis (Jussupow et al. 2021, Lebovitz et al. 2022). Recent research has explored how algorithm design and presentation improve outcomes by enhancing user trust through modifiable outputs (Dietvorst et al. 2018), tailoring advice to expert needs (Wolczynski et al. 2024), prompting reflective judg-ment via diagnostic support (Abdel-Karim et al. 2023), and mitigating trust-eroding bias amplification in feedback loops (Hu et al. 2024). Designing effective override policies for autonomous AI systems raises two distinct challenges. First, override decisions are inherently endogenous. Evaluating their effectiveness requires a counterfactual com-parison between the actual override and the algorithm’s original recommendation, yet only one of these is observed. As a result, causal assessment typically relies on randomized experiments that induce exogenous variation in override behavior (Kesavan and Kushwaha 2020, Sun et al. 2022) or on imputation using obser-vational data (Ibanez et al. 2018, Wang et al. 2025), which is more tractable when the outcome variables are binary. Second, override discretion is difficult to manage precisely because it is internal: workers must judge when intervention is warranted, despite cognitive limits (F¨ ugener et al. 2022), biased self-assessment (de V´ ericourt and Gurkan 2023), and limited feedback (Kwon et al. 2022). These constraints make it diffi-cult to assess, influence, or improve discretionary behavior directly. In this paper, we address these challenges and show that the causal value of human overrides depends critically on the structure of discretion. We introduce a constrained override policy that limits the number of overrides workers can make per decision episode. This simple cardinality constraint does not improve judg-ment per se, nor does it require identifying useful overrides in advance. Instead, it changes the decision envi-ronment: when override opportunities are scarce, workers are forced to prioritize. We term this the selective filtering mechanism , a process that screens out noisy overrides while preserving those with stronger private information. By converting unconstrained discretion into a filtering task, the policy transforms noise-prone override behavior into a scalable and effective mechanism for improving human-algorithm collaboration. Our study is motivated by a collaboration with Fengyi Technology, one of the largest smart vending machine retailers in China. By the end of July 2025 , the company operated over 170 , 000 smart vending machines across major cities. Each day, Fengyi uses centralized machine learning algorithms to gener-ate replenishment recommendations, specifying the quantity of each stock-keeping unit (SKU 2) for every 4 Zhao et al.: Improving Human Supervision of Algorithms 
+
+machine in the network. These decisions are executed by local workers, each responsible for replenishing 
+
+80 -100 machines using inventory from nearby warehouses. Workers are expected to follow algorithmic suggestions but retain discretion to increase stock for SKUs they expect to sell out. A key concern arises around downward overrides, instances where workers reduce the algorithm’s sug-gested quantity. In a 2022 pilot study, Fengyi found that granting unrestricted override rights led to a measurable decline in sales, despite workers’ incentives being aligned with both sales and inventory effi-ciency. That is, workers receive bonuses for achieving high sales but face penalties for excess inventory that remains unsold. At the same time, firm managers acknowledged that workers often possess valuable local information, such as customer preferences, store-level events, or nearby competition, that the algorithm cannot observe. This creates a core operational dilemma: how to preserve the benefits of human overrides while mitigating the risks of performance loss. The company sought a scalable policy that could structure discretionary power to better filter high-value human overrides. To formalize our proposed solution, we develop a stylized Bayesian model (Arrow 1973, Spence 1973) in which workers receive private signals about the potential benefit of overriding each SKU. These signals are both noisy and biased, reflecting imperfect human judgment. Under a free override policy, workers act on all signals exceeding a subjective threshold, resulting in a mix of low- and high-quality decisions. A constrained override policy, by limiting the number of allowable overrides, induces endogenous selection based on signal strength: workers are forced to rank-order override opportunities and act only on the most compelling ones. This selective filtering process raises the average quality of overrides without requiring the ex-ante identification of useful cases. While not intended as a comprehensive model of human behavior, our framework serves to illustrate the selective filtering hypothesis. The idea that structural constraints can improve decision quality is well-established. Prior work has shown that limiting options or reducing cognitive load can enhance perfor-mance, whether through choice set simplification (Iyengar and Lepper 2000, Iyengar and Kamenica 2010) or cognitive bandwidth constraints (Ariely and Zakay 2001, Evans et al. 2019, Shanmugam 2020). We demonstrate that these classical insights also apply to human supervision of algorithms, where a simple Zhao et al.: Improving Human Supervision of Algorithms 5
+
+cardinality constraint transforms override discretion into a prioritization task. To establish the robustness of this mechanism, we further develop a rational inattention formulation (Simon 1955, Sims 2003), in which workers further endogenize a cost for information acquisition in decision-making. Both formulations yield the same core logic: constraints filter noise by concentrating attention on the most valuable overrides. These results suggest that while different behavioral models offer plausible microfoundations, the effectiveness of constrained override does not depend on the specific structure of human decision-making. Guided by the theoretical prediction, we designed a randomized field experiment involving 553 work-ers managing over 59 , 000 vending machines and approximately 4, 000 SKUs. Workers were randomly assigned to one of three override policies that differed only in the extent of downward discretion: (1) no override , which prohibited reductions to algorithmic recommendations; (2) free override , which permitted unrestricted reductions; and (3) constrained override , which limited each worker to reducing at most two SKUs per machine. All groups retained full discretion to increase replenishment quantities, and in rare cases, such as warehouse stockouts, additional reductions were allowed for all groups. A key feature of our design is that randomization occurs at the worker level . This departs from prior studies that randomize at the SKU or decision level (Kesavan and Kushwaha 2020, Liang et al. 2024), which fix override opportunities and thus preclude endogenous prioritization. In contrast, our design allows workers to allocate discretion across SKUs, enabling us to test whether constrained override induces workers to prioritize their strongest override signals, a central implication of the selective filtering mechanism. We estimate the causal effects of override policies using a worker-machine-day panel and a difference-in-differences specification, comparing the constrained and free override groups to the no-override baseline. We measure performance outcomes at the machine level based on SKU-level sales and inventory between consecutive replenishments. The free override policy reduces inventory by 1.95% (p < 0.01 ) but also lowers daily sales by 1.19% and sales probability by 1.38 percentage points ( p < 0.01 ). The negative impact of unconstrained discretion aligns with prior work showing that unstructured human overrides can degrade algorithmic performance (Kesavan and Kushwaha 2020, Liang et al. 2024, Wang et al. 2025). In contrast, constrained override reduces inventory by 1.28% (p < 0.01 ) without affecting sales quantity or probability, 6 Zhao et al.: Improving Human Supervision of Algorithms 
+
+suggesting more selective and effective override behavior. These results are robust to alternative scalings and demand irregularities, reinforcing the conclusion that override policy shapes override quality. We then examine how override policies directly influence worker behavior. The free override policy leads to broad-based reductions: workers replenish fewer SKUs ( −0.55 , p < 0.01 ), lower total quantities ( −3.82 ,
+
+p < 0.01 ), and apply smaller reductions per SKU ( 0.12 ). The constrained override policy, in contrast, nar-rows the scope of overrides: workers override significantly fewer SKUs ( 0.36 vs. 1.96 , p < 0.01 ), but imple-ment larger reductions per SKU ( 0.75 , p < 0.01 ). While upward overrides increase modestly, the changes are insufficient to offset the focused nature of constrained downward overrides. The evidence indicates a more selective pattern of overrides: the constrained override policy reduces the frequency of overrides and refocuses discretion on a smaller set of high-confidence decisions. To directly test the selective filtering mechanism, we adopt a local average treatment effect (LATE) framework (Imbens and Angrist 1994), using randomized override policy assignment as an instrument for SKU-level override decisions. The LATE precisely captures the causal effect of override decisions for the subset of SKUs whose status is altered by the policy. Comparing the constrained override policy to the no override policy, we estimate a LATE of −3.45 items in inventory ( p < 0.01 ), with no significant change in sales quantity or probability, evidence of precise inventory reductions. In contrast, the free override pol-icy yields smaller inventory reductions ( −1.26 ) but significantly decreases the probability of sale by 10 .55 
+
+percentage points ( p < 0.01 ), indicating that unconstrained discretion results in lower-quality overrides. Robustness checks further reinforce this mechanism: intent-to-treat estimates show a consistent directional-ity; stricter definitions of override (e.g., zeroing out SKUs) yield larger LATEs; upward overrides exhibit no significant effects; and constrained LATE estimates remain stable after controlling for SKU features such as price and discount status. To translate the mechanism into practice, we examine when constrained overrides are most effective. We focus on three dimensions where the value of human discretion is likely to vary: worker experience, SKU-level incentive alignment, and algorithmic uncertainty. The constrained override policy yields the largest performance gains among senior workers, who reduce inventory by 1.72% (p < 0.01 ), and for growth-stage Zhao et al.: Improving Human Supervision of Algorithms 7
+
+SKUs, where inventory declines by 1.15% (p < 0.05 ) without reducing sales. It also performs well for top-selling SKUs, reducing inventory by 1.9% (p < 0.01 ); these products are more tied to compensation, aligning worker incentives with performance. In contrast, the free override policy reduces sales by 1.39% 
+
+and inventory by 2.85% among senior workers ( p < 0.01 ) and increases inventory for low-sales SKUs (+1 .16% , p < 0.1) while depressing sales across the board. These patterns suggest that the constrained override policy is most beneficial when workers possess stronger private signals, are more incentive-aligned, or when algorithmic forecasts are less reliable. At the same time, the consistent performance losses under the free override policy indicate that full discretion amplifies noise, even among experienced workers and high-value SKUs. Finally, we develop a data-driven refinement that adaptively filters human overrides at the instance level. Using override decisions from the constrained group as a behavioral benchmark, we train a logistic regres-sion model to estimate the likelihood that a given override reflects high-quality private information. This model is then used to simulate a personalized policy: override instances from the free group are accepted if their predicted probability exceeds a threshold and are rejected otherwise. The resulting personalized over-ride group exhibits a heavier tail in override volume per machine and a significantly higher sales probability, an increase of 9.1 percentage points ( p < 0.01 ) compared to the original constrained group. Before proceeding, we summarize our main contributions in three aspects: • We propose a simple override policy, constrained override, for the regime of autonomous AI with human supervision to improve human-AI collaboration . By imposing a cardinality constraint, the policy activates a selective filtering mechanism that transforms override discretion into a prioritization task, filter-ing noise and surfacing high-value human input. While classical behavioral models offer plausible micro-foundations, the effectiveness of the constrained override policy does not depend on the specific structure of human decision-making. • We provide causal evidence on override policies through a randomized field experiment . While the free override policy reduces both inventory and sales, consistent with prior findings on the risks of unstructured human discretion, the constrained override policy reverses this pattern, improving inventory efficiency with-out reducing sales. A local average treatment effect framework confirms that these gains reflect improved override precision, offering causal support for the selective filtering mechanism. 8 Zhao et al.: Improving Human Supervision of Algorithms 
+
+• We demonstrate that the constrained override policy is a scalable, low-cost intervention for improving human supervision of autonomous AI . It requires no algorithm redesign, no information customization, and no identification of private signals. The approach is easy to implement, generalizes across operational contexts, and enables firms to enhance decision quality without added complexity. The rest of the paper is structured as follows: Section 2 reviews related literature; Section 3 describes the empirical context, key hypotheses, and experimental design; Section 4 estimates the causal effects of override policies on performance and behavior; Section 5 tests the proposed mechanism; and Section 6 offers practical guidance through heterogeneous effects. 
+
+## 2. Literature Review 
+
+Prior research offers mixed evidence on the performance implications of human overrides to algorith-mic recommendations. A substantial body of work finds that discretionary overrides degrade outcomes: manual price changes reduce revenue (Phillips et al. 2015, Liang et al. 2024), task reassignments lower productivity (Ibanez et al. 2018), and forecast revisions increase error rates (Khosrowabadi et al. 2022). Experimental studies similarly show that override discretion introduces inconsistency and noise (Lehmann et al. 2022, Snyder et al. 2025), motivating calls for strict algorithm adherence (Kawaguchi 2021, Caro and de Tejada Cuenca 2023). In contrast, other work finds that override discretion can improve performance when humans possess relevant private information. For example, Kesavan and Kushwaha (2020) shows that workers improve inventory decisions for growth-stage SKUs, while Kwon et al. (2022), Kesavan et al. (2025) and Wang et al. (2025) find that forecasters enhance accuracy by addressing algorithmic blind spots. Fildes et al. (2009), Stip et al. (2024), and Tan and Staats (2020) further demonstrate that targeted overrides can correct systematic algorithmic errors. We reconcile these findings by showing that override effective-ness depends not on frequency but on the structure of discretion. Using field-based causal evidence, we demonstrate that a constrained override policy improves decision quality by inducing prioritization, whereas unconstrained discretion amplifies noise. Behavioral research offers foundational insight into why override discretion often leads to suboptimal outcomes. Bounded rationality and overconfidence are well-documented sources of systematic error (Su Zhao et al.: Improving Human Supervision of Algorithms 9
+
+2008, Ren and Croson 2013, Ren et al. 2017), and persistent deviations from optimality have been observed in inventory and transshipment contexts due to biased self-assessment and miscalibrated expectations (Li et al. 2017, Li 2019, Li et al. 2021). These effects are amplified by limited feedback and misaligned incen-tives (Feng and Zhang 2017, Ovchinnikov et al. 2015, Quiroga et al. 2019). Override behavior is also shaped by cognitive constraints: F¨ ugener et al. (2022) finds that humans often misjudge whether to delegate to algorithms, even when algorithmic outputs are demonstrably more accurate. Related studies show that deci-sion quality deteriorates when individuals face excessive choice (Iyengar and Lepper 2000), operate under time pressure (Ariely and Zakay 2001), or must allocate limited attention across competing alternatives (Evans et al. 2019, Shanmugam 2020). Algorithm aversion further reduces override effectiveness: individ-uals penalize machine errors more heavily than human ones (Dietvorst et al. 2015), and override behavior is shaped by perceived control and transparency (Dietvorst et al. 2018, Dietvorst and Bharti 2020). Addi-tional frictions stem from empathy gaps (Luo et al. 2019), social influence (Liu et al. 2023), and subjective overreliance (de V´ ericourt and Gurkan 2023). Building on this foundation, our contribution is to show that structural constraints can improve override quality by reshaping discretion in ways that align with these behavioral limits. Unlike prior work that seeks to suppress overrides or correct judgment directly, we offer a design-based solution that accommodates multiple behavioral microfoundations, such as Bayesian learning or rational inattention, without relying on any specific cognitive model. Recent work has begun to examine when override discretion adds value. Most approaches follow a two-stage logic: they first detect cases where human overrides improve outcomes and then modify algorithmic or organizational responses accordingly. For example, Kesavan and Kushwaha (2020) identify product cat-egories where overrides improve inventory efficiency, while Sun et al. (2022) develop adaptive systems that respond to human-identified product features. Similarly, Stip et al. (2024) and Fildes et al. (2009) show that override value increases when algorithmic errors are predictable. These solutions rely on behavioral modeling, domain-specific detection, or retrospective validation, making them difficult to scale across set-tings. In contrast, we offer a structural solution that induces prioritization at the point of discretion. Without requiring behavioral labels or predictive models, our approach filters high-value overrides through a simple constraint that reallocates attention across competing options. 10 Zhao et al.: Improving Human Supervision of Algorithms 
+
+A complementary body of work examines how to structure human-AI collaboration in ways that preserve human judgment while ensuring algorithmic consistency. Comparative studies in knowledge work, such as editorial decisions, reveal systematic advantages and limitations on both sides (Peukert et al. 2024). In high-stakes domains like healthcare and finance, algorithms serve as advisors, while humans retain deci-sion authority. Research in this regime focuses on interface design, transparency, and explanation quality to improve adherence and performance (Green and Chen 2019, Lebovitz et al. 2022, Grand-Cl´ ement and Pauphilet 2024, Balakrishnan et al. 2025, Lu and Zhang 2025). In contrast, many operational settings, including ours, assign decision rights to autonomous systems, with humans intervening only occasionally through override discretion. Work in this context has explored override shaping through forced prompts (Cao et al. 2024), learned delegation rules (F¨ ugener et al. 2021), and hybrid control frameworks that incor-porate human input into algorithmic models (Ibrahim et al. 2021, Chen et al. 2022, Cui et al. 2015). Oth-ers investigate whether explanation design improves override quality (Bastani et al. 2025). While these approaches are promising, they often depend on dynamic learning systems, behavioral personalization, or interface-level engineering. We offer a lightweight alternative without modifying the algorithm or customiz-ing the interface. 
+
+## 3. Research Context, Theoretical Rationale, and Experiment Design 
+
+We first describe Fengyi Technology’s business setting regarding smart vending machines. Next, we intro-duce our proposed solution and outline the hypothesis. Finally, we design a randomized field experiment to evaluate its effectiveness. 
+
+3.1. Empirical Context 
+
+Fengyi Technology is a leading self-service retail operator in China specializing in smart vending machines. As of July 2025 , the company’s service network spanned more than 70 metropolitan areas, managed approx-imately 170 , 000 machines, and served over 75 million consumers nationwide. Each vending machine offers ready-to-consume products such as breakfast items, snacks, dairy, and beverages, with typical assortments ranging from 40 to 50 SKUs. These machines are deployed in diverse offline environments such as office buildings, hotel lobbies, and outdoor public areas (see also Figure 3 in Section A.1 of the online appendix). Zhao et al.: Improving Human Supervision of Algorithms 11 
+
+All machines are connected to a centralized server via the internet, enabling real-time data collection and system-wide algorithmic management. This infrastructure allows the firm to dynamically forecast demand, monitor sales, and remotely update replenishment recommendations on a daily basis. A core operational task at Fengyi Technology is inventory replenishment, carried out by a large network of local workers. Each worker restocks 80 to 100 machines and typically services 10 to 15 per day using inventory from a nearby warehouse. To support this process, the company runs a centralized algorithm that provides daily SKU-level replenishment recommendations for each machine. These recommendations are derived from a two-stage system: a machine learning model first forecasts product-level demand based on historical sales, current inventory, and contextual features (e.g., day of week, weather, location type), and then a replenishment policy optimizes the replenishment quantity based on those forecasts. The algorithm follows a standard periodic review structure, specifically, an (R, T ) policy (Hadley and Whitin 1963), which determines restocking quantities by topping inventory back up to a target level R every T days. While the specific details of the forecasting and control models are not the focus of this study, they remained fixed throughout our experiment to provide a consistent baseline. A mobile app delivers recommendations that show, for each SKU on each machine, the recommended replenishment quantity, for example, “place 5
+
+cans of Coke on Machine A 124 .” The app also displays supporting information such as current inventory levels, historical daily sales, and warehouse stock availability, enabling workers to interpret and potentially override the suggestions in the field. (Please also refer to Figure 5 in the online appendix Section A for screenshots of the app interface.) The company manages a performance-based incentive system that evaluates workers based on both sales and inventory. Workers receive bonuses for achieving high sales but face penalties for excess inventory that remains unsold. Therefore, stocking more increases the chance of capturing demand but also raises the risk of spoilage or overstock penalties, especially for slow-moving or perishable items. Incentivized by bonuses and penalties, workers may override the algorithmic suggestion when they believe the algorithm falls short. Based on anecdotal evidence, some workers develop informal relationships with consumers and gain insights into product preferences that are not recorded in data. In addition, workers are sensitive to 12 Zhao et al.: Improving Human Supervision of Algorithms 
+
+nearby competition, such as the presence of a convenience store offering discounts on similar items, which can influence demand in ways the centralized system does not capture (Fisher et al. 2018). To test whether private, context-specific knowledge could improve replenishment performance, Fengyi Technology conducted a small-scale pilot in early 2022 . In this trial, selected workers operated under a free override policy that allowed them to override algorithm-suggested replenishment quantities without restrictions. The intervention led to a decline in overall sales, primarily due to widespread lost sales across SKUs caused by excessive downward overrides. These findings suggest that although workers may possess valuable private information, a free override policy can also introduce substantial noise and compromise performance. In response, the company applied a no (downward) override policy that prohibited workers from reducing the algorithm’s suggested replenishment quantity for any SKU but retained full discretion to increase it. Accordingly, workers are instructed to treat the algorithm’s recommendation as a mini-mum threshold, except in rare cases such as warehouse shortages. For example, if the system recommends restocking 10 units of bottled milk but only 6 are available at the warehouse, the worker may reduce the replenishment quantity to match available stock. 
+
+3.2. Solution and Key Hypothesis 
+
+To address the limitations of both the no override and free override regimes, we propose a simple policy: 
+
+constrained override . This policy imposes a cardinality constraint that limits each worker to overriding at most K SKUs per machine. As illustrated in Figure 1, varying levels of discretion lead to different override behavior and consequences. Under all policies, workers may still override in extreme cases (e.g., warehouse stockouts). The no override policy provides no discretionary power beyond such exceptions. The free override policy grants full discretion, resulting in a mix of “good” overrides (which reduce inventory without harming sales) and “bad” overrides (which lead to lost sales). Positioned in between, the constrained override does not simply yield a random subset of K overrides from the free override case, as workers are incentivized to improve inventory efficiency. Instead, by limiting the number of allowable downward overrides, the constrained policy motivates selective filtering : workers prioritize SKUs where they are more confident in their judgment. This “sorting effect” increases the proportion of “good” overrides. Zhao et al.: Improving Human Supervision of Algorithms 13  
+
+> Figure 1 Illustration of the Selective Filtering Hypothesis.
+
+To formalize this intuition, we develop a stylized Bayesian model in which workers select which SKUs to override based on noisy private signals and estimation bias. The model clarifies how a cardinality constraint induces a sorting effect, where workers prioritize SKUs with stronger signals. This mirrors classic results in signal-based screening and statistical discrimination (Arrow 1973, Spence 1973), where decisions based on noisy signals can still improve aggregate outcomes. Specifically, we consider a single decision episode when replenishing a machine stocked with N SKUs, indexed by k = 1 , . . . , N . Replenishment occurs for all SKUs based on the algorithm’s suggestions, yielding a baseline performance outcome vsk for each SKU k, observable to both the firm and the worker. If the worker overrides by reducing the algorithm’s suggested replenishment level for a selected SKU k, the actual performance becomes vak = vsk + ηk, where ηk ∼ N (μ, σ 2 
+
+> η
+
+) with μ < 0 representing SKU-specific local knowledge available only to the worker, such as nearby competition or contextual factors not captured by the algorithm. Here, we can also think of ηk as the individual causal effect of override. A positive ηk
+
+indicates a “good” override (private information), while a negative ηk indicates a “bad” override (human bias). The overall performance across all SKUs is thus PNk=1 vak = PNk=1 vsk + P 
+
+> k∈A
+
+ηk, where A is the set of overridden SKUs. The true distribution reflects a mild negative bias ( μ < 0), consistent with empirical evidence that humans often naively overweight noisy private signals, leading to a systematic negative impact of overrides (Kesavan and Kushwaha 2020). 14 Zhao et al.: Improving Human Supervision of Algorithms 
+
+The worker does not observe ηk directly but instead receives a noisy private signal sk = ηk + ϵk, where 
+
+ϵk ∼ N (0 , σ 2) represents independent judgment noise. We assume that workers believe ηk ∼ N (0 , σ 2 
+
+> η
+
+),reflecting potential miscalibration in perceiving the value of their local knowledge. We further assume that 
+
+ηk and ϵk are independent across SKUs. The worker uses sk as a noisy proxy for the override’s value and makes decisions accordingly. Each time a worker replenishes a machine, they choose a subset A ⊆{1, . . . , N } of SKUs to override to maximize the expected cumulative value of override, P 
+
+> k∈A
+
+E[ηk | sk],subject to a policy-specific constraint on A. Thus, the override decision is fully endogenized: the worker selects SKUs based on Bayesian inference and under different override policies. The additive signal structure and normality assumptions are standard in Bayesian models of noisy infor-mation (e.g., Spence 1973). We assume aligned incentives: workers override to improve performance, con-sistent with compensation and penalties tied to sales and inventory (Section 3.1). These simplifications help isolate the core mechanism, how override policy shapes the interaction between local knowledge ( ηk) and judgment noise ( ϵk). Our setup also parallels classic delegation models (e.g., Dessein 2002, Alonso and Matouschek 2008), but shifts focus from incentive misalignment to selective filtering under noise. 
+
+No Override Policy: The worker follows all algorithmic suggestions without exceptions. Since neither local knowledge ( ηk) nor judgment noise ( ϵk) is used, this policy eliminates human error but also ignores potential benefits from local knowledge. Therefore, the override set is ANo = ∅.
+
+Free Override Policy: The worker may override any SKU based on the perceived signal sk = ηk +ϵk. Given the miscalibration of workers’ prior belief ηk ∼ N (0 , σ 2 
+
+> η
+
+), the posterior expectation is E[ηk | sk] = σ2  
+
+> η
+> σ2
+> η+σ2
+
+sk.Then, the worker’s override set is AFree = {k : sk > 0}.
+
+Constrained Override Policy: The worker maximizes the expected override value by selecting the top K
+
+SKUs with the highest signals among the set {k : sk > 0}, since the posterior expectation E[ηk | sk] increases strictly in sk. Formally, the override set is AConstrained = {k : sk > 0, s k ≥ s(K)}, where s(1) ≥ s(2) ≥ · · · ≥ 
+
+s(N ) are the ordered signals. To simplify analytical derivations, we approximate AConstrained ≈ { k : sk ≥ s(K)}
+
+by dropping the threshold sk > 0 with a negligible approximation error when K ≪ N .Zhao et al.: Improving Human Supervision of Algorithms 15 
+
+LEMMA 1 (Selective Filtering Mechanism of Private Information) . For any SKU k ∈ [N ], the expected override value conditional on being selected under the constrained override policy is strictly pos-itive if the following condition holds: 
+
+E ηk | k ∈ AConstrained  > 0 if a(K) > −μ · τσ2
+
+> η
+
+.
+
+Here τ 2 := σ2 
+
+> η
+
++ σ2 and a(K) := 1
+
+> K
+
+PKj=1 E U(j)
+
+, with U(1) ≥ U(2) ≥ · · · ≥ U(N ) representing the order statistics of {U1, . . . , U N }, defined by Uk := ( sk − μ)/τ .
+
+We place all proofs in the online appendix (Section A.2). Intuitively, Lemma 1 shows that when the override constraint is imposed, workers focus on SKUs with the strongest signals. Since sk is positively correlated with ηk by definition, this sorting raises the expected value of selected overrides, as long as 
+
+K is sufficiently small (or equivalently, a(K) sufficiently large). We now formally compare informational efficiency across policies by aggregating ηk in the selected sets. 
+
+PROPOSITION 1 (Average Causal Effect of Override Policies) . The total expected override values across the three override policies satisfy: 
+
+E
+
+ X
+
+> k∈AConstrained
+
+ηk
+
+ > E
+
+" X
+
+> k∈ANo
+
+ηk
+
+#
+
+= 0 > E
+
+" X
+
+> k∈AFree
+
+ηk
+
+#
+
+if the model parameters satisfy h (−μ/τ ) < −μ · τ /σ 2 
+
+> η
+
+< a (K), where h(x) := ϕ(x)1−Φ( x) , and ϕ, Φ denote the standard normal probability density function (PDF) and cumulative distribution function (CDF), respec-tively. 
+
+Our theoretical model is not a comprehensive account of human decision-making, but a stylized frame-work to clarify the logic behind our empirical hypothesis (i.e., selective filtering). The idea that constraints (in various forms) improve decision-making is not new. There are several classical works on how struc-tural and cognitive limits shape behavior, including studies on choice overload (Iyengar and Lepper 2000, Iyengar and Kamenica 2010), cognitive bandwidth constraints (Ariely and Zakay 2001, Evans et al. 2019, Shanmugam 2020), and foundational models of bounded rationality and rational inattention (Simon 1955, 16 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Sims 2003). While our Bayesian model provides one plausible microfoundation, the underlying mechanism does not depend on this specific structure. To illustrate this robustness, Appendix A.3 presents a Rational Inattention (RI) model in which workers endogenously choose both signal precision and override decisions under cognitive cost. Unlike the Bayesian setup, the RI model embeds information-processing frictions directly into the decision problem. Despite this departure, we prove an analogue of Proposition 1, showing that constrained override yields higher expected informational value than either free or no override. Our contribution also contrasts with recent human-AI collaboration research focused on improving over-ride performance by enhancing belief accuracy through elicitation (Ibrahim et al. 2021), transparency (Bal-akrishnan et al. 2025), interpretability (Lu and Zhang 2025), or forecast aggregation (Chen et al. 2023). These interventions help workers assess override value more accurately on a case-by-case basis. In con-trast, our approach assumes no such cognitive improvement. Constrained override remains effective even if workers cannot precisely estimate override value, as long as they can weakly rank opportunities. Rather than correcting beliefs, we reshape the decision space to induce implicit sorting. This makes the mechanism practical and scalable: it requires no training, no interface changes, and no individualized feedback. It shifts the burden from identifying the best overrides to selecting only a few. In that sense, our solution is structural rather than behavioral. Most importantly, Proposition 1 provides a testable prediction on the relative performance of override policies, which arises not from greater effort or override volume, but from better selection of SKUs to override (Lemma 1). The override value E[ηk] represents a causal effect, as override decisions are fully endogenized in practice. This makes a randomized experiment essential for identification. We evaluate this prediction using both machine-level outcomes and SKU-level mechanisms in Sections 4-5. Before turning to the experiment, we derive one final implication from the model to guide implementation. 
+
+PROPOSITION 2 (Optimal Constraint Below Expected Free Overrides) . Under the conditions of Proposition 1, the optimal number of overrides K∗ that maximizes expected informational value satisfies: 
+
+K∗ < E[Kfree ] = N · Φ
+
+ μτ
+
+
+
+.Zhao et al.: Improving Human Supervision of Algorithms 17 
+
+Proposition 2 offers practical guidance for setting the override cap K. The result supports a conserva-tive approach to implementation: firms should set K below the typical override volume observed under unconstrained discretion to ensure net positive value from human input. 
+
+3.3. Experiment Design 
+
+A central feature of our experimental design, conducted in collaboration with Fengyi Technology, is ran-domization at the worker level rather than the SKU or decision level, as in prior studies (e.g., Kesavan and Kushwaha 2020, Liang et al. 2024). Unlike SKU-level randomization, which enforces overrides on specific items and eliminates non-compliance (precluding endogenous selection by workers), our approach varies discretionary power across workers, allowing them to choose which SKUs to override based on their private signals. This setup is crucial for testing our selective filtering hypothesis. The 46-day experiment started on May 4, 2023 , and included all full-time workers responsible for man-aging at least 10 vending machines. We randomized 553 workers, supervising more than 59 , 000 machines and 4, 000 SKUs, into three groups: 40% (n = 221 ) to the no override group, prohibiting downward over-ride; 40% (n = 223 ) to the constrained override group, allowing downward overrides for at most k SKUs per machine; and 20% (n = 109 ) to the free override group, with no restrictions on downward overrides. All groups could increase algorithm-suggested quantities. Guided by Proposition 2, which recommends choosing a constraint below the average to promote selec-tive filtering, we set K = 2 for the constrained override policy based on evidence from the previous pilot. Figure 4 (in the online appendix Section A.1) plots the distribution of the number of downward overrides per machine, which shows a median of four SKUs and a higher mean. Our choice of K = 2 reflects a conservative setting. We ensured covariate balance through repeated randomization using pre-treatment data from April 1
+
+to May 3, 2023 (Table 6 in the online appendix Section A.1). We followed each iteration of the assign-ment with pairwise t-tests until we detected no significant differences across key covariates. We selected these covariates based on their potential influence on causal estimates and include worker tenure ( Tenure ), the number of machines managed ( Managed Machines ), the share of top-performing machines ( Top-Sales 18 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Machines ), the share of high-sales SKUs ( Top-Sales SKUs ), and the share of growth-stage SKUs ( Growth-Stage SKUs ). We also included two behavioral covariates that reflect override activity: the daily number of machines with downward overrides ( Intervened Machines ) and the number of SKUs per machine with decreased replenishment quantities ( Decreased SKUs ). To minimize interference across groups, workers executed the policies through the app notification that they use daily to replenish stock. We made no additional announcements. We implemented banner noti-fications within the app (Figure 5 in the online appendix Section A.1) to ensure that local workers were clearly informed about their assigned override power. The banner for the constrained override group explic-itly displays the two-SKU constraint and indicates the current number of overridden SKUs. If an override exceeds this constraint, the app prompts workers to reduce the number of overridden SKUs accordingly. The banner for the free override group informs workers that they can freely reduce replenishment quantities for any SKU without restrictions. To prevent potential confounding effects from the presence of banners alone, we also included a “placebo” banner for the no override group that displays a standard replenishment rule irrelevant to the override experiment. 
+
+## 4. Impact of Constrained and Free Override Policies 
+
+To estimate the effects of override policies, we construct panel data at the (i, j, t ) level, where each obser-vation corresponds to worker i’s replenishment of machine j on day t. For each replenishment, we compute machine-level outcomes by averaging the performance of all replenished SKUs over the interval between the current and subsequent replenishments. This structure ensures that outcomes reflect the consequences of the override applied to the subset of replenished SKUs. We focus on three machine-level outcomes. Sales measures the average quantity sold across replenished SKUs during the replenishment window. Sales Probability is defined as the proportion of replenished SKUs that record at least one unit sold, thus capturing how effectively inventory translates into realized demand across the assortment. It serves as a more precise indicator of SKU-level performance compared to tradi-tional stockout rates, which may fail to accurately reflect lost sales. Inventory represents the average quan-tity on hand across replenished SKUs during the same window, reflecting stock levels maintained between Zhao et al.: Improving Human Supervision of Algorithms 19 
+
+replenishments. (We also present model-free evidence in Figure 6 in the online appendix Section B, which shows excessive reduction in inventory and sales of the free override group.) We estimate the following difference-in-differences (DID) specification: 
+
+Outcome ijt = α + δ1(ConstrainedOverride i · Post t)+ δ2(FreeOverride i · Post t) + γi + δc(j)t + εijt 
+
+(1) where ConstrainedOverride i and FreeOverride i are binary indicators denoting whether worker i was assigned to the constrained or free override groups, respectively, with the no-override group as control. The variable Post t equals to one for dates on or after the policy implementation date, and zero otherwise. We include worker fixed effects γi to control for time-invariant heterogeneity across individuals, and city-by-date fixed effects δc(j)t to absorb localized temporal shocks. The coefficients δ1 and δ2 identify the average treatment effects of constrained and free override policies, respectively, relative to the no override baseline. Throughout our paper, we cluster standard errors at the worker level to account for serial correlation and the unit of randomization.                                           
+
+> Table 1 Causal Impact of Free and Constrained Override Policies (Machine-Level Estimates)
+> log( Sales + 1) Sales Probability log( Inventory + 1)
+> (Unit: Item )(%)(Unit: Item )
+> ConstrainedOverride i·P ost t0.0010 −0.0020 −0.0128 ∗∗∗
+> (0 .0039) (0 .0027) (0 .0049)
+> F reeOverride i·P ost t−0.0119 ∗∗∗ −0.0138 ∗∗∗ −0.0195 ∗∗∗
+> (0 .0043) (0 .0033) (0 .0066)
+> Worker fixed effects Yes Yes Yes (City-Date) fixed effect Yes Yes Yes R20.1751 0.2072 0.1708
+> Observations 639 ,112 639 ,112 639 ,112
+> Note. Robust standard errors clustered by each worker are in parentheses.
+> ∗p < 0.1;∗∗ p < 0.05 ;∗∗∗ p < 0.01
+
+Table 1 presents the main policy effects. The free override policy leads to a 1.95% (p < 0.01 ) reduction in inventory but also causes a 1.19% (p < 0.01 ) decline in sales and a 1.38 percentage point ( p < 0.01 )drop in sales probability. These estimates suggest that granting workers full discretion results in overly aggressive reductions, which in turn suppress realized demand and narrow SKU-level sales coverage. This pattern echoes prior evidence that unstructured human intervention can degrade performance in algorithmic 20 Zhao et al.: Improving Human Supervision of Algorithms 
+
+systems (Kesavan and Kushwaha 2020, Liang et al. 2024, Wang et al. 2025). For example, Wang et al. (2025) documents that human evaluators who override algorithmic predictions make significantly worse decisions on average. Collectively, the consistent risk is that free override policies tend to amplify noise more than they reveal insight. In contrast, the constrained override policy reduces inventory by 1.28% (p < 0.01 ) without any statis-tically significant change in either sales or sales probability. This pattern suggests that limiting discretion improves the quality of overrides. If workers simply reduced fewer SKUs (randomly) without improving prioritization, we would expect a smaller but still negative effect on sales. The fact that sales remain stable despite lower inventory implies more selective overrides. Together, the main result is consistent with the prediction from Proposition 1, showing that the constraint affects not only the quantity of overrides, but also the quality and resulting operational performance. We conduct several robustness checks to assess the validity of our findings. (See the details in the online appendix Section B.1.) First, we re-estimate the model using level outcomes instead of log-transformed variables. The results remain consistent, confirming that our conclusions are not sensitive to outcome scal-ing. Second, we exclude weekends and major holidays to account for irregular demand patterns. The effects remain quantitatively similar. Finally, we estimate weekly DID effects and find that the effect persists over six weeks in the post-treatment period, which reflects systematic overrides in decision-making rather than transitory noise. 
+
+4.1. Changes in Replenishment and Overriding Behavior 
+
+As shown in Section 3.2, the main policy effects are driven largely by workers’ endogenous decision of overrides. We now begin unpacking those behavioral changes through a systematic investigation of workers’ post-treatment replenishment and override decisions. We first inspect the distribution of the number of downward overrides (see Figure 7 of the online appendix Section B.2) and confirm that there is a sharp concentration at one to two overrides, consistent with the policy cap of K = 2 . To provide a more comprehensive picture, Table 2 summarizes post-treatment replen-ishment behavior across policy groups. Actual replenishment consistently exceeds algorithmic suggestions, Zhao et al.: Improving Human Supervision of Algorithms 21 
+
+Table 2 Summary Statistics of Post-Treatment Replenishment and Override Behavior 
+
+No Downward Constrained Downward Free Downward Override Override Override 
+
+Algorithm Suggested 
+
+Total Replenishment Quantity per Machine 67 .5030 67 .3102 67 .7611 
+
+(Unit: Item) [23 .8934] [25 .8881] [24 .6702] 
+
+# of Replenished SKUs per Machine 15 .0123 14 .7256 14 .6471 
+
+(Unit: SKU) [3 .9810] [4 .6331] [4 .0278] 
+
+Replenishment Quantity per SKU 4.0221 4.0059 4.1116 
+
+(Unit: Item) [0 .9055] [1 .1946] [1 .2644] 
+
+Actual 
+
+Total Replenishment Quantity per Machine 74 .7499 74 .1293 68 .9102 
+
+(Unit: Item) [25 .6278] [24 .4824] [23 .9915] 
+
+# of Replenished SKUs per Machine 16 .2870 16 .2705 15 .5820 
+
+(Unit: SKU) [3 .7708] [3 .6787] [3 .6972] 
+
+Replenishment Quantity per SKU 4.4988 4.5013 4.3165 
+
+(Unit: Item) [1 .1620] [1 .4862] [1 .2964] 
+
+Downward Override 
+
+# of SKUs Overridden per Machine 0.6627 1.1795 2.7275 
+
+(Unit: SKU) [1 .9577] [2 .0567] [2 .9104] 
+
+Quantity Reduced per Overridden SKU 3.1414 4.4487 3.4221 
+
+(Unit: Item) [2 .4278] [2 .6788] [1 .8185] 
+
+Percentage of SKUs Decreased to Zero Quantity per Machine 0.0119 0.0227 0.0358 
+
+(Unit: %) [0 .0581] [0 .0613] [0 .0569] 
+
+Total Replenishment Quantity Reduced per Machine 2.4203 4.9991 9.1937 
+
+(Unit: Item) [7 .5783] [7 .9291] [10 .4052] 
+
+Upward Override 
+
+# of SKUs Overridden per Machine 3.1416 3.6084 3.4380 
+
+(Unit: SKU) [3 .8892] [4 .4969] [3 .7505] 
+
+Quantity Increased per Overridden SKU 2.9616 3.2681 2.9593 
+
+(Unit: Item) [1 .9653] [3 .2192] [1 .8809] 
+
+Total Replenishment Quantity Increased per Machine 9.6672 11 .8182 10 .3429 
+
+(Unit: Item) [14 .5975] [17 .6974] [13 .4644] 
+
+Note. Standard deviations of each group are in brackets. # of SKUs overridden per machine includes shelf with no ( 0) overrides. 
+
+particularly in the constrained override group, where workers stock an average of 74 .1 items per machine compared to 67 .3 suggested. This reflects the design of the policy that restrictions apply only to downward overrides, while upward overrides remain unrestricted. The most salient differences appear in downward overrides: free override workers remove an average of 9.2 items across 2.7 SKUs per machine, while con-strained workers remove about 5.0 items across 1.2 SKUs, with larger reductions per SKU ( 4.45 vs. 3.42 ). Constrained workers also override slightly more SKUs in the upward direction ( 3.61 vs. 3.44 ) and add more inventory per machine ( 11 .82 vs. 10 .34 ), with greater quantities per overridden SKU ( 3.27 vs. 2.96 ). We conduct a formal DID estimation to test whether the override policies causally influence algorithm and worker behavior as intended (Table 3). We re-estimate Equation (1) using dependent variables that capture replenishment behavior defined in Table 2. Panel A shows that the constrained override policy does not affect algorithmic suggestions. The free override policy leads to a significant increase in suggested quantities, an average of 3.67 additional items per machine ( p < 0.05 ). To examine the timing and nature of this response, we report weekly estimates in Table 10 of the online appendix (Section B). The increase in suggested quantities emerges only after the first week post-treatment, and the number of suggested SKUs 22 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Table 3 Effects of Override Policies on Replenishment and Override Behavior 
+
+Panel A: Replenishment Behavior 
+
+Algorithm Suggested Actual Behavior 
+
+Qty SKU Qty/SKU Qty SKU Qty/SKU (Item) (Count) (Item) (Item) (Count) (Item) 
+
+ConstrainedOverride i · P ost t 0.7625 −0.0186 0.0502 −0.7325 −0.1104 −0.1083 ∗∗ 
+
+(0.9512 ) (0.1776 ) (0.0357 ) (0.8487 ) (0.1301 ) (0.0441 )
+
+F reeOverride i · P ost t 3.6673 ∗∗ 0.2669 0.2244 ∗∗∗ −3.8175 ∗∗∗ −0.5505 ∗∗∗ −0.1816 ∗∗ 
+
+(1.6838 ) (0.2965 ) (0.0684 ) (1.0559 ) (0.1674 ) (0.0736 )Worker & City-Date FE Yes Yes Yes Yes Yes Yes R2 0.1937 0.2099 0.2105 0.1521 0.1431 0.1112 
+
+Observations 639 ,112 639 ,112 639 ,112 639 ,112 639 ,112 639 ,112 
+
+Panel B: Override Behavior 
+
+Downward Override Upward Override 
+
+SKU Qty/SKU Zero% Qty Red. SKU Qty/SKU Qty Inc. (Count) (Item) (%) (Item) (Count) (Item) (Item) 
+
+ConstrainedOverride i · P ost t 0.3624 ∗∗∗ 0.7542 ∗∗∗ 0.0109 ∗∗∗ 2.0719 ∗∗∗ 0.2296 ∗∗ −0.0403 0.5769 
+
+(0.1215 ) (0.1260 ) (0.0028 ) (0.3755 ) (0.1168 ) (0.0794 ) (0.4696 )
+
+F reeOverride i · P ost t 1.9564 ∗∗∗ 0.1201 0.0267 ∗∗∗ 6.6767 ∗∗∗ 0.0777 −0.1810 ∗∗ −0.8080 
+
+(0.2331 ) (0.1195 ) (0.0052 ) (0.7933 ) (0.2179 ) (0.0706 ) (0.8577 )Worker & City-Date FE Yes Yes Yes Yes Yes Yes Yes R2 0.4334 0.1492 0.3371 0.3633 0.3885 0.2219 0.2969 
+
+Observations 639 ,112 192 ,300 639 ,112 639 ,112 639 ,112 344 ,391 639 ,112 
+
+Note. Robust standard errors clustered at the worker level in parentheses. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+remains unchanged throughout. This pattern indicates that the algorithm is specifically reacting to under-replenishment by increasing the quantity allocated per SKU. Turning to actual replenishment behavior in Panel A, the free override policy produces broad reductions. Total replenishment quantity decreases by 3.82 items per machine ( p < 0.01 ), the number of SKUs by 
+
+0.55 (p < 0.01 ), and the quantity per SKU by 0.18 (p < 0.05 ). Under the constrained override policy, only the quantity per SKU declines ( −0.11 , p < 0.05 ), while total quantity and SKU count remain statistically unchanged. These patterns are consistent with our hypothesis that the constrained override policy narrows the scope of discretion. One might alternatively argue that the constraint simply limits overreaction, prompt-ing workers to make smaller, more cautious overrides. However, evidence from Panel B contradicts this interpretation. Constrained workers override significantly fewer SKUs ( 0.36 vs. 1.96 , p < 0.01 ) but apply much larger reductions per SKU ( 0.75 vs. 0.12 , p < 0.01 ), leading to an average of 2.07 items removed per machine, compared to 6.68 under free override. If the constraint merely tempered worker behavior, we would expect smaller, not larger, override quantities per SKU. Zhao et al.: Improving Human Supervision of Algorithms 23 
+
+Panel B also allows us to examine whether constrained workers reallocate quantity to other SKUs rather than removing it. Upward overrides increase slightly in SKU count ( 0.23 , p < 0.05 ) and total quantity (0.58 ), but these changes are modest relative to the magnitude of downward reductions and not statistically significant when considered independently. The majority of SKUs are not overridden, and net replenishment remains stable. We revisit this potential reallocation channel in the next section, where we analyze SKU-level performance to test for spillover effects more directly. Overall, the evidence from both panels supports the selective filtering mechanism: constrained override does not dilute or suppress override activity but instead concentrates worker attention on a smaller set of high-value overrides. 
+
+## 5. Testing the Selective Filtering: Local Average Treatment Effect 
+
+Having shown that override policies causally affect machine performance and shape override behavior in the intended direction, we now turn to isolating the causal effect of the override decision itself. In doing so, we evaluate the selective filtering mechanism proposed in Lemma 1, which posits that constrained override improves performance by inducing workers to concentrate their overrides on the most valuable subset of SKUs. Our goal is to estimate the causal effect of endogenously overriding a SKU on its performance until the next replenishment. However, such comparisons are infeasible because override decisions are made by workers and cannot be directly randomized at the SKU level. Instead, the randomized override policy gen-erates exogenous variation in override frequency across groups. As shown in Table 2, the no override group exhibits minimal downward override activity, while the constrained and free override groups allow progres-sively more overrides by design. We leverage this policy-induced variation as an instrument to identify the causal effect of overrides for the subset of SKUs whose override status is changed by the assigned policy. Specifically, we adopt the local average treatment effect (LATE) framework (Imbens and Angrist 1994), comparing the constrained override group ( Di = 1 ) to the no override group ( Di = 0 ). (The logic extends directly to comparisons involving the free override group.) Within the potential outcomes framework (Rubin 1974), let DownOverride ijkt (Di) denote the potential override status of SKU k on machine j at time t by worker i under policy Di. Similarly, let Yijkt (Di) denote the corresponding performance outcome (e.g., sale probability until the next replenishment). 24 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Each SKU-level instance can be classified into different types based on how override sta-tus responds to policy. Never-overridden instances are those for which DownOverride ijkt (1) = 
+
+DownOverride ijkt (0) = 0 ; that is, they are not overridden under either policy. Always-overridden instances satisfy DownOverride ijkt (1) = DownOverride ijkt (0) = 1 , meaning they are consistently overrid-den. Compliers are defined by DownOverride ijkt (1) = 1 and DownOverride ijkt (0) = 0 ; these are marginal override decisions induced by the policy and thus form the target population for the LATE. Given this con-ceptual definition, Imbens and Angrist (1994) show that using the randomized policy Di as an instrument, we can consistently estimate the average treatment effect for compliers: LATE = E[Yijkt (1) − Yijkt (0) |
+
+Complier ]. 
+
+> Figure 2 Illustration of LATE Identification: Constrained vs. No Override Policy
+
+Figure 2 illustrates how LATE is identified through observed override behavior and randomized policy assignment. Each instance falls into one of four quadrants, defined by its override status DownOverride ijkt = DownOverride ijkt (1) · Di + DownOverride ijkt (0) · (1 − Di) and the policy assign-ment Di ∈ { 0, 1}. Instances that are overridden in the no override group (top-left quadrant) typically reflect extreme scenarios, such as warehouse stockouts. These must be always-overridden cases: given that override is generally prohibited under this policy, any SKU that is still overridden would necessarily be overridden under the constrained condition as well. Overridden cases in the constrained group (top-right quadrant) include a mixture of always-overridden and complier instances. By randomization, the no override group Zhao et al.: Improving Human Supervision of Algorithms 25 
+
+also contains compliers, SKUs that are not overridden but would be if the policy allowed it (bottom-left quadrant). This variation enables identification of the LATE, which captures the causal effect of override decisions for the subset of SKUs whose status is altered by the policy. These are precisely the override decisions that the firm can influence. In this sense, LATE isolates the effect of enabling override discretion for SKUs that would otherwise follow algorithmic suggestions. Before proceeding to estimation, we clarify how our setting satisfies the core assumptions of the LATE framework. First, the assumption of monotonicity requires that no SKU becomes less likely to be overrid-den under the constrained override policy than under the no override policy, i.e., DownOverride ijkt (1) ≥
+
+DownOverride ijkt (0) for all i, j, k, t . This condition holds by design: the constrained policy either expands override discretion or leaves it unchanged relative to the control, and cannot reduce the probability of an override. Second, the relevance assumption requires that the instrumental variable, randomized policy assignment, affects the likelihood of override. This is satisfied by construction and supported empirically in Section 4.1, where we show that overrides increase under the constrained condition. Third, the exclusion restriction requires that the policy assignment affects outcomes only through its effect on override behavior. This is justified by the experimental design in Section 3.3, where all other aspects of the replenishment process are held constant across groups. The only manipulation is the degree of discretionary power over downward override. Accordingly, it is reasonable to assume that any effect of policy assignment on SKU performance operates exclusively through changes in override behavior. Our formal LATE estimation builds on the main analysis by applying a DID framework within a two-stage least squares (2SLS) specification, using panel data to control for time-invariant heterogeneity. We construct data at the most granular level for each replenish instance (i, j, k, t ). To focus on the impact of downward override in particular, we restrict the sample to include only instances where the worker followed or reduced the algorithmic suggestion. We estimate the following two-stage least squares (2SLS) model: 
+
+First stage (override decision): DownOverride ijkt = π0 + π1(ConstrainedOverride i · Post t) + γij + γk + δc(j)t + εijkt , (2) 26 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Second stage (outcome consequence): 
+
+Yijkt = α0 + βC · \DownOverride ijkt + γij + γk + δc(j)t + εijkt . (3) In both stages, we include fixed effects at a granular level: γij captures worker-machine heterogeneity, γk
+
+controls for SKU-specific effects, and δc(j)t absorbs city-by-date shocks. Standard errors εijkt are again clustered at the worker level. Outcome variables are defined consistently with the main analysis but mea-sured at the SKU-replenishment instance and averaged over the period until the next replenishment. We use level outcomes rather than log-transformed outcomes to preserve interpretability of effect magnitudes under the LATE framework. The instrument ConstrainedOverride i · Post t captures exogenous variation in override behavior induced by policy, and the coefficient βC identifies the causal effect of downward override for compliers. Table 4 estimates the LATE of downward overrides under both the constrained and free override policies, respectively. Relative to the no override group, which exhibits minimal downward overrides, the constrained policy increases override probability by 2.87 percentage points ( F = 5740 .2), confirming the relevance of the instrument. The second stage shows that these additional overrides reduce inventory by 3.45 items on average ( p < 0.01 ) without significantly affecting either sales quantity or sales probability. In contrast, the free override policy increases override probability by 12 .92 percentage points ( F = 65 ,405 .3), but these overrides lead to less inventory reduction ( 1.26 items, p < 0.01 ) and a significant 10 .6 percentage point drop in the probability of sale ( p < 0.01 ). These contrasting LATE estimates illustrate the central logic of the selective filtering mechanism pro-posed in Lemma 1. Under the free override policy, override decisions reflect a mix of high- and low-quality overrides, leading to a diluted average effect. In contrast, the constrained policy imposes a cardinality limit that forces workers to sort override opportunities and act only on the most promising ones. This endoge-nous selection process filters out noise and low-quality overrides. As a result, overrides under constraint disproportionately target SKUs with meaningful private signals, improving outcomes at the instance level. These SKU-level gains, in turn, drive the aggregate policy effects predicted by Proposition 1 and confirmed in Table 1. Zhao et al.: Improving Human Supervision of Algorithms 27 
+
+Table 4 LATE with Downward Override 
+
+Sales Sales Probability Inventory 
+
+(Unit: Item ) (%) (Unit: Item )
+
+Constrained vs No Override 
+
+First Stage (Outcome: DownOverride) 
+
+ConstrainedOverride i · P ost t 0.0287 ∗∗∗ (0 .0068) 
+
+(Worker-Machine), SKU, (City-Date) FE Yes R2 0.3272 
+
+F-stat 5740 .2∗∗∗ 
+
+Observations 7, 012 , 190 
+
+Second Stage (LATE) 
+
+\DownOverride ijkt 0.2830 −0.0442 −3.4456 ∗∗∗ 
+
+(0.3114 ) (0.0937 ) (0.9118 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.2881 0.3621 0.3198 
+
+Observations 7, 012 , 190 7, 012 , 190 7, 012 , 190 
+
+Free vs No Override 
+
+First Stage (Outcome: DownOverride) 
+
+F reeOverride i · P ost t 0.1292 ∗∗∗ (0 .0140) 
+
+(Worker-Machine), SKU, (City-Date) FE Yes R2 0.3516 
+
+F-stat 65 , 405 .3∗∗∗ 
+
+Observations 5, 189 , 189 
+
+Second Stage (LATE) 
+
+\DownOverride ijkt −0.1188 −0.1055 ∗∗∗ −1.2575 ∗∗∗ 
+
+(0.0798 ) (0.0257 ) (0.3055 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.2806 0.3545 0.3183 
+
+Observations 5, 189 , 189 5, 189 , 189 5, 189 , 189 
+
+Robust standard errors clustered at the worker level. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+Robustness checks in the online appendix Section C further validate the selective filtering mecha-nism. First, we estimate intent-to-treat (ITT) effects by regressing outcomes directly on policy assignment. Although smaller in magnitude, these effects are directionally consistent with the LATE estimates and reflect average policy impacts across all SKUs, including those not overridden. Second, we tighten the def-inition of a downward override in the first stage to capture only overrides that reduce SKU inventory to exactly zero. This stricter definition yields substantially larger LATE effects, suggesting that performance gains are concentrated in strongly selective decisions where workers fully remove a SKU from stock. Third, recall that Table 3 showed a modest increase in upward overrides under the randomized policy. We conduct an ITT analysis restricted to upward override instances and find no significant policy effects, helping to rule out alternative explanations based on general override effort or behavioral spillovers. 28 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Finally, following prior literature (Sun et al. 2019, Han et al. 2024), we test whether the observed LATE effects reflect worker private information rather than selection based solely on observable SKU character-istics, denoted as Xijkt . We augment the LATE specification by including instance-level covariates such as sale price and discount status (see details in Table 14 of the online appendix Section C). These features may correlate with override behavior. For example, workers might be more likely to remove a discounted or low-priced SKU, which could mechanically improve inventory performance even without relying on pri-vate information. If performance gains were driven solely by such observable features, the inclusion of such covariates would attenuate the estimated LATE effects. Instead, we find that the performance improvements under constrained override persist even after controlling for observables, while the negative effects of free override remain. This result suggests that workers contribute private information beyond what is captured by the algorithm, reinforcing the value of selective filtering. 
+
+## 6. From Mechanism to Practice: Designing Override Policies 
+
+Having established the selective filtering mechanism through theoretical analysis and empirical evidence, we now turn to practical design considerations. Specifically, we examine when override policies are most effective (policy-level heterogeneity) and how override limits might be tailored using data (instance-level learning). These extensions aim to bridge the gap between identifying the mechanism and enabling practical deployment. We examine three sources of heterogeneity that may shape the effectiveness of override policies: worker experience , incentive alignment , and data uncertainty . Panel A of Table 5 shows that senior workers, those with more than one year of tenure, drive both the positive effects of constrained override and the negative effects of free override. Under the constrained override policy, senior workers reduce inventory by 1.72% 
+
+(p < 0.01 ); under free override, they reduce inventory by 2.85% but cause a substantial 1.39% decrease in sales ( p < 0.01 ). In contrast, junior workers have no significant effects under either policy. Panel B shows that constrained override improves inventory only for top-sales SKUs ( −1.9% , p < 0.01 ), while free override harms sales across all SKUs and increases inventory for low-sales SKUs ( +1 .16% , p < 0.1). Panel C examines the SKU lifecycle stage as a proxy for algorithmic uncertainty. Constrained overrides Zhao et al.: Improving Human Supervision of Algorithms 29 
+
+Table 5 Heterogeneous Policy Effects at Machine Level 
+
+Panel A Senior Worker Junior Worker 
+
+log( Sales + 1) Sales Probability log( Inventory + 1) log( Sales + 1) Sales Probability log( Inventory + 1) 
+
+(Unit: Item ) (%) (Unit: Item ) (Unit: Item ) (%) (Unit: Item )
+
+ConstrainedOverride i· 0.0030 −0.0013 −0.0172 ∗∗∗ −0.0010 −0.0014 −0.0095 
+
+P ost t (0 .0048) (0 .0033) (0 .0063) (0 .0056) (0 .0044) (0 .0073) 
+
+F reeOverride i· −0.0139 ∗∗∗ −0.0163 ∗∗∗ −0.0285 ∗∗∗ −0.0100 −0.0114 ∗∗ −0.0036 
+
+P ost t (0 .0052) (0 .0042) (0 .0073) (0 .0063) (0 .0047) (0 .0110) 
+
+Worker fixed effects Yes Yes Yes Yes Yes Yes (City-Date) fixed effect Yes Yes Yes Yes Yes Yes R2 0.3409 0.4661 0.5080 0.3142 0.4531 0.5177 
+
+Observations 386 , 870 386 , 870 386 , 870 264 , 956 264 , 956 264 , 956 
+
+Panel B Top-Sales SKU Low-Sales SKU 
+
+log( Sales + 1) Sales Probability log( Inventory + 1) log( Sales + 1) Sales Probability log( Inventory + 1) 
+
+(Unit: Item ) (%) (Unit: Item ) (Unit: Item ) (%) (Unit: Item )
+
+ConstrainedOverride i· 0.0017 −0.0029 −0.0190 ∗∗∗ −0.0056 ∗∗ −0.0044 −0.0014 
+
+P ost t (0 .0036) (0 .0019) (0 .0056) (0 .0028) (0 .0031) (0 .0047) 
+
+F reeOverride i· −0.0158 ∗∗∗ −0.0161 ∗∗∗ −0.0340 ∗∗∗ −0.0066 ∗∗ −0.0126 ∗∗∗ 0.0116 ∗
+
+P ost t (0 .0041) (0 .0025) (0 .0077) (0 .0033) (0 .0037) (0 .0060) 
+
+Worker fixed effects Yes Yes Yes Yes Yes Yes (City-Date) fixed effect Yes Yes Yes Yes Yes Yes R2 0.1219 0.0948 0.1474 0.3410 0.4260 0.4113 
+
+Observations 576 , 123 576 , 123 576 , 123 624 , 627 624 , 627 624 , 627 
+
+Panel C Growth-Stage SKU Mature-Stage SKU 
+
+log( Sales + 1) Sales Probability log( Inventory + 1) log( Sales + 1) Sales Probability log( Inventory + 1) 
+
+(Unit: Item ) (%) (Unit: Item ) (Unit: Item ) (%) (Unit: Item )
+
+ConstrainedOverride i· 0.0021 −0.0031 −0.0115 ∗∗ −0.0020 −0.0076 ∗ −0.0205 ∗
+
+P ost t (0 .0040) (0 .0029) (0 .0054) (0 .0084) (0 .0040) (0 .0116) 
+
+F reeOverride i· −0.0062 −0.0145 ∗∗∗ −0.0218 ∗∗∗ −0.0269 ∗∗∗ −0.0252 ∗∗∗ −0.0434 ∗∗∗ 
+
+P ost t (0 .0054) (0 .0039) (0 .0076) (0 .0087) (0 .0053) (0 .0140) 
+
+Worker fixed effects Yes Yes Yes Yes Yes Yes Date fixed effect Yes Yes Yes Yes Yes Yes R2 0.2820 0.4088 0.4584 0.1668 0.1106 0.1737 
+
+Observations 621 , 497 621 , 497 621 , 497 110 , 507 110 , 507 110 , 507 
+
+Note. Robust standard errors clustered by each worker are in parentheses. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+significantly reduce inventory for growth-stage SKUs ( −1.15% , p < 0.05 ), with a similar though noisier effect for mature SKUs ( −2.05% , p < 0.1). Free override, by contrast, leads to sharp performance declines in both groups. Taken together, these results offer valuable practical insights. Constrained override is most effective when workers have experience, when SKUs are strongly tied to sales incentives, and when algorithmic forecasts are less reliable. These conditions highlight contexts where private information is more likely to be valuable and where filtering it through policy constraints yields the greatest benefit. At the same time, the consistent harm caused by free override, regardless of experience, incentive alignment, or data quality, underscores the risk of granting full discretion. These findings also contribute to the broader literature on private information in operational settings (Van Donselaar et al. 2010, Brau et al. 2023, Stip et al. 2024). Prior studies typically adopt a two-stage 30 Zhao et al.: Improving Human Supervision of Algorithms 
+
+approach: first identifying contexts in which private information exists and then integrating it into algorith-mic decision-making (Sun et al. 2022). Our work complements this stream by using a randomized override policy to simultaneously reveal and assess the value of private information through observed behavior. The heterogeneity results confirm earlier findings that private information is stronger among senior workers (Kwon et al. 2022) and for growth-stage SKUs (Kesavan and Kushwaha 2020). Importantly, our results show that the constrained override policy not only identifies contexts with valuable private information but also regulates its application, reducing low-quality overrides even among less experienced workers and in settings where algorithmic forecasts are relatively accurate. This highlights a broader design implication: override policies can function not only as decision levers, but also as filters that shape effective human-AI collaboration under uncertainty. The heterogeneous treatment effects suggest that the value of override discretion varies across workers and SKUs. However, our current policy imposes a uniform cardinality constraint, which may under-utilize high-quality private information and over-permit noisy overrides. To address this limitation, we develop a data-driven refinement that estimates the likelihood that a given override reflects high-quality judgment. The core idea is to learn SKU selection patterns from the constrained override group, where performance is improved, as a proxy for private information. First, we seek to train a logistic regression model to distinguish instances that are actually overridden by the constrained group from those intended to be overridden without constraints; the latter, however, are unobservable. Instead, we use the override instances selected by the free override group as a proxy, because the constrained override and free override groups are statistically identical due to randomization in the experimental design. Differences in override behavior reflect the presence or absence of the cardinality constraint. The model utilizes a comprehensive set of features that capture local conditions, worker charac-teristics, and SKU-level attributes. Each override in the free group is then scored by this model to estimate its probability of resembling an override made under constrained conditions, which reflects the quality of overrides. Second, we simulate a personalized override policy by accepting only those overrides in the free over-ride group with predicted probabilities above a calibrated threshold. This approach relaxes the fixed limit, Zhao et al.: Improving Human Supervision of Algorithms 31 
+
+allowing workers with stronger override signals to override more SKUs. We design a hypothetical sce-nario in which local workers make override decisions under the refined solution. Compared to the original constrained policy, the personalized override group achieves a 9.1 percentage point increase in sales prob-ability ( p < 0.01 ) and exhibits greater flexibility in override volume, validating the efficacy of this targeted refinement. We provide full details and implementation in Appendix D. 
+
+## 7. Conclusion 
+
+We propose a simple, scalable solution to improving human supervision of autonomous AI: a constrained override policy. By imposing a cardinality constraint on discretionary overrides, the policy activates a selec-tive filtering mechanism that preserves high-value private information while filtering out human bias. Unlike approaches that require identifying bias or private information in advance, our method is straightforward to implement and generalizes across settings. In a large-scale field experiment on Fengyi Technology’s smart-vending network, constrained overrides improved inventory efficiency without reducing sales, in contrast to the performance losses observed under the free override policy. Following the experiment, Fengyi Technol-ogy scaled the policy to more than 170 , 000 machines and 5, 000 SKUs across over 70 metropolitan areas, contributing to an estimated $1 , 000 , 000 annual reduction in inventory costs. The effectiveness of constrained override rests on three premises. First, worker incentives should be broadly aligned with the algorithm’s objective; otherwise, override choices may diverge from improving machine performance. Second, workers must possess some private, task-relevant information. Without such information, constrained override can only mitigate the losses of free override and cannot outperform the algorithm decision. Third, the operational context should involve low- to medium-stakes decisions in which algorithms hold primary authority and humans serve as supervisors. In high-stakes domains, strict adherence constraints are impractical, and design efforts should instead focus on improving algorithmic recommenda-tions. 
+
+## Acknowledgments 
+
+> The authors sincerely thank Fengyi Technology for their support. In particular, we are grateful to Xinning Shan, CEO of Fengyi Technology, for his generous support. We also extend our gratitude to Xiaoxia Chen for her invaluable assistance in setting up the randomized field experiments.
+
+32 Zhao et al.: Improving Human Supervision of Algorithms 
+
+## Notes      
+
+> 1Throughout this paper, we use the terms algorithm and AI interchangeably.
+> 2We distinguish between “SKU” and “item.” An SKU refers to a distinct product type (e.g., Coca-Cola 300 ml), while an item denotes a single unit of that product. Each machine may carry multiple SKUs, with several items in stock per SKU.
+
+## References 
+
+Abdel-Karim BM, Pfeuffer N, Carl KV, Hinz O (2023) How AI-based systems can induce reflections: The case of AI-augmented diagnostic work. MIS Quarterly 47(4):1395–1424. Alonso R, Matouschek N (2008) Optimal delegation. The Review of Economic Studies 75(1):259–293. Ariely D, Zakay D (2001) A timely account of the role of duration in decision making. Acta Psychologica 108(2):187– 207. Arrow KJ (1973) Higher education as a filter. Journal of Public Economics 2(3):193–216. Athey SC, Bryan KA, Gans JS (2020) The allocation of decision authority to human and artificial intelligence. AEA Papers and Proceedings 110:80–84. Bagnoli M, Bergstrom T (2005) Log-concave probability and its applications. Economic Theory 26(2):445–469. Balakrishnan M, Ferreira K, Tong J (2025) Human-algorithm collaboration with private information: Na¨ ıve advice-weighting behavior and mitigation. Management Science 0(0). Bar-Gill S, Brynjolfsson E, Hak N (2024) Helping small businesses become more data-driven: A field experiment on ebay. Management Science 70(11):7345–7372. Bastani H, Bastani O, Sinchaisri WP (2025) Improving human sequential decision making with reinforcement learn-ing. Management Science 0(0). Brau R, Aloysius J, Siemsen E (2023) Demand planning for the digital supply chain: How to integrate human judgment and predictive analytics. Journal of Operations Management 69(6):965–982. Brynjolfsson E, McElheran K (2016) The rapid adoption of data-driven decision-making. American Economic Review 
+
+106(5):133–139. Brynjolfsson E, Mitchell T (2017) What can machine learning do? Workforce implications. Science 358(6370):1530– 1534. Zhao et al.: Improving Human Supervision of Algorithms 33 Camerer CF (2018) Artificial Intelligence and Behavioral Economics , 587–608 (University of Chicago Press). Cao X, Hu C, Sun J, Zhang DJ (2024) How forced intervention facilitates long-term algorithm adoption. Available at SSRN 3640862 .Caro F, de Tejada Cuenca AS (2023) Believing in analytics: Managers’ adherence to price recommendations from a DSS. Manufacturing & Service Operations Management 25(2):524–542. Chen C, Jain N, Karamshetty V (2023) Algorithm-human-algorithm: A new classification approach to integrating judgemental adjustments. Proceedings of ICIS 2023 .Chen G, Chan T, Zhang DJ, Liu S, Wu Y (2024) The impact of a more diversified recommender system on digital platforms: Evidence from a large-scale field experiment. Available at SSRN 4365121 .Chen N, Hu M, Li W (2022) Algorithmic decision-making safeguarded by human knowledge. arXiv preprint arXiv:2211.11028 .Cui R, Allon G, Bassamboo A, Van Mieghem JA (2015) Information sharing in supply chains: An empirical and theoretical valuation. Management Science 61(11):2803–2824. de V´ ericourt F, Gurkan H (2023) Is your machine better than you? You may never know. Management Science 0(0). Dessein W (2002) Authority and communication in organizations. The Review of Economic Studies 69(4):811–838. Dietvorst BJ, Bharti S (2020) People reject algorithms in uncertain decision domains because they have diminishing sensitivity to forecasting error. Psychological Science 31(10):1302–1314. Dietvorst BJ, Simmons JP, Massey C (2015) Algorithm aversion: People erroneously avoid algorithms after seeing them err. Journal of Experimental Psychology: General 144(1):114–126. Dietvorst BJ, Simmons JP, Massey C (2018) Overcoming algorithm aversion: People will use imperfect algorithms if they can (even slightly) modify them. Management Science 64(3):1155–1170. Evans NJ, Bennett AJ, Brown SD (2019) Optimal or not; depends on the task. Psychonomic Bulletin & Review 
+
+26(3):1027–1034. Feng T, Zhang Y (2017) Modeling strategic behavior in the competitive newsvendor problem: An experimental inves-tigation. Production and Operations Management 26(7):1383–1398. 34 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Fildes R, Goodwin P, Lawrence M, Nikolopoulos K (2009) Effective forecasting and judgmental adjustments: An empirical evaluation and strategies for improvement in supply-chain planning. International Journal of Fore-casting 25(1):3–23. Fisher M, Gallino S, Li J (2018) Competition-based dynamic pricing in online retailing: A methodology validated with field experiments. Management Science 64(6):2496–2514. F¨ ugener A, Grahl J, Gupta A, Ketter W (2021) Will humans-in-the-loop become borgs? Merits and pitfalls of working with AI. MIS Quarterly 45(3b):1527–1556. F¨ ugener A, Grahl J, Gupta A, Ketter W (2022) Cognitive challenges in human–artificial intelligence collaboration: Investigating the path toward productive delegation. Information Systems Research 33(2):678–696. Grand-Cl´ ement J, Pauphilet J (2024) The best decisions are not the best advice: Making adherence-aware recommen-dations. Management Science 0(0). Green B, Chen Y (2019) Disparate interactions: An algorithm-in-the-loop analysis of fairness in risk assessments. 
+
+Proceedings of the Conference on Fairness, Accountability, and Transparency , 90–99. Hadley GG, Whitin TM (1963) Analysis of Inventory Systems (Englewood Cliffs, N.J., Prentice-Hall). Han BR, Sun T, Chu LY, Wu L, Xu Y (2024) Connecting customers and merchants offline: Experimental evidence from the commercialization of last-mile stations at Alibaba. MIS Quarterly 48(3):1157–1192. Hu X, Huang Y, Li B, Lu T (2024) Human-algorithmic bias: Source, evolution, and impact. Available at SSRN 4195014 
+
+.Ibanez MR, Clark JR, Huckman RS, Staats BR (2018) Discretionary task ordering: Queue management in radiological services. Management Science 64(9):4389–4407. Ibrahim R, Kim SH, Tong J (2021) Eliciting human judgment for prediction algorithms. Management Science 
+
+67(4):2314–2325. Imbens GW, Angrist JD (1994) Identification and estimation of local average treatment effects. Econometrica 
+
+62(2):467–475. Iyengar SS, Kamenica E (2010) Choice proliferation, simplicity seeking, and asset allocation. Journal of Public Eco-nomics 94(7-8):530–539. Zhao et al.: Improving Human Supervision of Algorithms 35 Iyengar SS, Lepper MR (2000) When choice is demotivating: Can one desire too much of a good thing? Journal of Personality and Social Psychology 79(6):995. Jussupow E, Spohrer K, Heinzl A, Gawlitza J (2021) Augmenting medical diagnosis decisions? An investigation into physicians’ decision-making process with artificial intelligence. Information Systems Research 32(3):713–735. Kawaguchi K (2021) When will workers follow an algorithm? A field experiment with a retail business. Management Science 67(3):1670–1695. Kesavan S, Kushwaha T (2020) Field experiment on the profit implications of merchants’ discretionary power to override data-driven decision-making tools. Management Science 66(11):5182–5190. Kesavan S, Kushwaha T, Steele D (2025) Profit implications of judgmental adjustments to forecast inputs: Evidence from a large-scale field experiment. Management Science 0(0). Khosrowabadi N, Hoberg K, Imdahl C (2022) Evaluating human behaviour in response to AI recommendations for judgemental forecasting. European Journal of Operational Research 303(3):1151–1167. Kwon C, Raman A, Tamayo J (2022) Human-computer interactions in demand forecasting and labor scheduling deci-sions. Available at SSRN 4773773 .Lebovitz S, Lifshitz-Assaf H, Levina N (2022) To engage or not to engage with AI for critical judgments: How professionals deal with opacity when using AI for medical diagnosis. Organization Science 33(1):126–148. Lehmann CA, Haubitz CB, F¨ ugener A, Thonemann UW (2022) The risk of algorithm transparency: How algorithm complexity drives the effects on the use of advice. Production and Operations Management 31(9):3419–3434. Li J, Li M, Zhao X (2021) Transshipment between overconfident newsvendors. Production and Operations Manage-ment 30(9):2803–2813. Li M (2019) Overconfident distribution channels. Production and Operations Management 28(6):1347–1365. Li M, Petruzzi NC, Zhang J (2017) Overconfident competing newsvendors. Management Science 63(8):2637–2646. Liang X, Wang Y, Li J (2024) Examining behavioral biases in discretionary pricing: Evidence from field and lab experiments. Production and Operations Management 33(6):1335–1353. Liu M, Tang X, Xia S, Zhang S, Zhu Y, Meng Q (2023) Algorithm aversion: Evidence from ridesharing drivers. 
+
+Management Science 0(0). 36 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Lou B, Wu L (2021) AI on drugs: Can artificial intelligence accelerate drug development? Evidence from a large-scale examination of bio-pharma firms. MIS Quarterly 45(3):1451–1482. Lu T, Zhang Y (2025) 1 +1>2? Information, humans, and machines. Information Systems Research 36(1):394–418. Luo X, Tong S, Fang Z, Qu Z (2019) Frontiers: Machines vs. humans: The impact of artificial intelligence chatbot disclosure on customer purchases. Marketing Science 38(6):937–947. Ovchinnikov A, Moritz B, Quiroga BF (2015) How to compete against a behavioral newsvendor. Production and Operations Management 24(11):1783–1793. Peukert C, Sen A, Claussen J (2024) The editor and the algorithm: Recommendation technology in online news. 
+
+Management Science 70(9):5816–5831. Phillips R, S ¸ ims ¸ek AS, Van Ryzin G (2015) The effectiveness of field price discretion: Empirical evidence from auto lending. Management Science 61(8):1741–1759. Quiroga BF, Moritz B, Ovchinnikov A (2019) Behavioral ordering, competition and profits: An experimental investi-gation. Production and Operations Management 28(9):2242–2258. Ren Y, C Croson D, TA Croson R (2017) The overconfident newsvendor. Journal of the Operational Research Society 
+
+68(5):496–506. Ren Y, Croson R (2013) Overconfidence in newsvendor orders: An experimental study. Management Science 
+
+59(11):2502–2517. Rubin DB (1974) Estimating causal effects of treatments in randomized and nonrandomized studies. Journal of Edu-cational Psychology 66(5):688–701. Rychlik T (1998) Bounds for expectations of L-estimates. Handbook of Statistics 16(6):105–145. Shanmugam PV (2020) Decision-making under cognitive constraints: Evidence from the emergency department. 
+
+Sementic Scholar 1–88. Simon HA (1955) A behavioral model of rational choice. The Quarterly Journal of Economics 69(1):99–118. Sims CA (2003) Implications of rational inattention. Journal of Monetary Economics 50(3):665–690. Snyder C, Keppler S, Leider S (2025) Algorithm reliance: Fast and slow. Management Science 0(0). Zhao et al.: Improving Human Supervision of Algorithms 37 Spence M (1973) Job market signaling. The Quarterly Journal of Economics 87(3):355–374. Stip J, Fransoo JC, van Houtum GJ (2024) Reluctant to decrease: Human-algorithm collaboration in tactical inventory decisions. Available at SSRN 4851815 .Su X (2008) Bounded rationality in newsvendor models. Manufacturing & Service Operations Management 
+
+10(4):566–589. Sun J, Zhang DJ, Hu H, Van Mieghem JA (2022) Predicting human discretion to adjust algorithmic prescription: A large-scale field experiment in warehouse operations. Management Science 68(2):846–865. Sun T, Shi L, Viswanathan S, Zheleva E (2019) Motivating effective mobile app adoptions: Evidence from a large-scale randomized field experiment. Information Systems Research 30(2):523–539. Tan TF, Staats BR (2020) Behavioral drivers of routing decisions: Evidence from restaurant table assignment. Produc-tion and Operations Management 29(4):1050–1070. Van Donselaar KH, Gaur V, Van Woensel T, Broekmeulen RA, Fransoo JC (2010) Ordering behavior in retail stores and implications for automated replenishment. Management Science 56(5):766–784. Wang H, Zhang Y, Lu T (2025) The power of disagreement: A field experiment to investigate human-algorithm col-laboration in loan evaluations. Management Science 0(0). Wolczynski N, Saar-Tsechansky M, Wang T (2024) The value of AI advice: Personalized and value-maximizing AI advisors are necessary to reliably benefit experts and organizations. arXiv preprint arXiv:2412.19530 .Zhao et al.: Improving Human Supervision of Algorithms 1
+
+Appendix A: Additional Information and Results from Section 3 
+
+A.1. Empirical Context and Experiment Design 
+
+Figure 3 Smart Vending Machines by Fengyi Technology 
+
+Note. The figure shows photos of smart vending machines deployed by Fengyi Technology in diverse offline environments such as office areas (left) and hotel lobbies (right). 
+
+Figure 4 Distribution of SKU-Level Downward Overrides Per Machine in a Small-Scale Pilot (Free Override) 
+
+Note. The histogram excludes shelves with no (0) downward overrides. Median = 4. Mean = 5.55 .
+
+Figure 5 Screenshots of the App for Different Groups 
+
+Note. Workers receive algorithmic suggestions via the app, along with inventory and sales data. Only downward overrides are subject to constraints; upward overrides remain unrestricted. 2 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Table 6 Randomization Check 
+
+Means Differences Feature No Constrained Free Constrained Free Constrained Override Override Override Override Override Override − No − No − Free Override Override Override 
+
+Tenure 0.710 0.664 0.651 −0.047 −0.059 0.012 
+
+(Binary: Senior/Junior ) [0 .455] [0 .474] [0 .479] (0 .044) (0 .055) (0 .056) 
+
+Managed Machines 96 .757 94 .916 94 .978 −1.841 −1.779 −0.062 
+
+(Unit: Machine ) [28 .222] [23 .971] [23 .922] (2 .486) (2 .976) (2 .798) 
+
+Top-Sales Machines 0.137 0.145 0.142 0.008 0.005 0.003 
+
+(%) [0 .083] [0 .082] [0 .081] (0 .008) (0 .010) (0 .009) 
+
+Top-Sales SKUs 0.174 0.178 0.178 0.004 0.005 −0.0003 
+
+(%) [0 .061] [0 .059] [0 .064] (0 .006) (0 .007) (0 .007) 
+
+Growth-Stage SKUs 0.554 0.551 0.564 −0.003 0.010 −0.013 
+
+(%) [0 .085] [0 .080] [0 .076] (0 .008) (0 .009) (0 .009) 
+
+Average Sales per Machine 0.0068 0.0045 0.0023 
+
+(Unit: Item ) (0 .0080) (0 .0097) (0 .0104) 
+
+Average Sales Probability per Machine Data anonymized 0.0023 0.0016 0.0007 
+
+(%) (0 .0030) (0 .0037) (0 .0037) 
+
+Average Inventory per Machine −0.0230 0.0056 −0.0286 
+
+(Unit: Item ) (0 .0435) (0 .0541) (0 .0557) 
+
+Intervened Machines 2.796 3.108 3.066 0.312 0.270 0.042 
+
+(Unit: Machine ) [2 .952] [3 .038] [2 .963] (0 .284) (0 .346) (0 .349) 
+
+# of Downward SKUs per Machine 1.502 1.710 1.850 0.208 0.348 −0.140 
+
+(Unit: SKU ) [1 .735] [2 .097] [2 .021] (0 .183) (0 .226) (0 .239) 
+
+n 221 223 109 
+
+Note. Standard deviations of each group are in brackets, and standard errors are in parentheses. # of downward SKUs per machine excludes shelf with no (0) downward overrides. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+A.2. Proofs of Bayesian Learning Model 
+
+Proof of Lemma 1. Recall the true prior ηk ∼ N (μ, σ 2 
+
+> η
+
+) and the observed signal structure sk = ηk + ϵk with 
+
+ϵk ∼ N (0 , σ 2). By the conjugate property of normal distributions, the posterior expectation of ηk conditional on the observed signal sk is given by: 
+
+E[ηk | sk = s] = μ + σ2
+
+> η
+
+τ 2 (s − μ), where τ 2 = σ2 
+
+> η
+
++ σ2.
+
+Since the posterior expectation is linear in sk, we apply the law of total expectation to obtain: 
+
+E ηk | k ∈ AConstrained  = μ + σ2
+
+> η
+
+τ 2
+
+ E sk | k ∈ AConstrained  − μ . (4) To compute E sk | k ∈ AConstrained  = E[sk | sk ≥ s(K)], we can reparameterize each signal as sk = μ + τ U k, where 
+
+Uk ∼ N (0 , 1) . This transformation maps the selection event onto the top-K values of the standard normal variables 
+
+Uk, where each observation’s rank is uniformly distributed. In particular, we have: 
+
+E[sk | sk ≥ s(K)] = μ + τ · a(K), where a(K) = 1
+
+K
+
+> K
+
+X
+
+> j=1
+
+E[U(j)]. (5) Zhao et al.: Improving Human Supervision of Algorithms 3Substituting Equation (5) into Equation (4), we obtain: 
+
+E ηk | k ∈ AConstrained  = μ + σ2
+
+> η
+
+τ 2
+
+ E[sk | sk ≥ s(K)] − μ = μ + σ2
+
+> η
+
+τ · a(K).
+
+This is strictly positive if a(K) > −μ · τ /σ 2 
+
+> η
+
+, which completes the proof. □
+
+Proof of Proposition 1. We compare the average causal effects of three override policies. Under the no override policy, the worker accepts all algorithm recommendations without overrides. Thus, ANo = ∅ and E P  
+
+> k∈ANo
+
+ηk
+
+ = 0 .Under the free override policy, the worker overrides SKU k if sk > 0. Similar to Lemma 1, for any SKU k, we have: 
+
+E ηk | k ∈ AFree  = E[ηk | sk > 0] = μ + σ2
+
+> η
+
+τ 2 (E[sk | sk > 0] − μ) .
+
+Using the standard normal reparameterization sk = μ + τ U k, with Uk ∼ N (0 , 1) , we get: 
+
+E[sk | sk > 0] = μ + τ · E[Uk | sk > 0] = μ + τ · E
+
+h
+
+Uk | Uk > − μτ
+
+i
+
+= μ + τ · h
+
+
+
+− μτ
+
+
+
+,
+
+where h(x) = ϕ(x)1−Φ( x) denotes the inverse Mills ratio for the standard normal distribution. Furthermore, the override probability of SKU k is P(sk > 0) = P(Uk > −μ/τ ) = Φ( μ/τ ). Aggregating across all SKUs, the expected total override value under free override is: 
+
+E
+
+" X
+
+> k∈AFree
+
+ηk
+
+#
+
+=
+
+> N
+
+X
+
+> k=1
+
+P(sk > 0) E[ηk | sk > 0] = N · Φ
+
+ μτ
+
+
+
+·
+
+
+
+μ + σ2
+
+> η
+
+τ h
+
+
+
+− μτ
+
+
+
+.
+
+This quantity is negative if μ + σ2 
+
+> η
+> τ
+
+h(−μ/τ ) < 0, which simplifies to h(−μ/τ ) < −μτ /σ 2 
+
+> η
+
+.Under the constrained override policy, the worker selects K SKUs with the highest signals sk. Applying Lemma 1, the expected total override value under constrained override is 
+
+E
+
+" X
+
+> k∈AConstrained
+
+ηk
+
+#
+
+=
+
+> N
+
+X
+
+> k=1
+
+P(sk ≥ s(K))E[ηk | sk ≥ s(K)] = K ·
+
+
+
+μ + σ2
+
+> η
+
+τ a(K)
+
+
+
+,
+
+which is positive if a(K) > −μτ /σ 2 
+
+> η
+
+.Putting all the results together, the desired ordering E[P 
+
+> k∈AConstrained
+
+ηk] > 0 > E[P 
+
+> k∈AFree
+
+ηk] holds if h (−μ/τ ) <
+
+−μτ /σ 2 
+
+> η
+
+< a (K), as stated in the proposition. □
+
+REMARK 1. Proposition 1 characterizes conditions under which the constrained override policy yields strictly positive expected override value, whereas the free override policy results in negative expected value on average. To build intuition, we explore these conditions under limiting regimes. For the free override policy, the total expected override value is negative if h(−μ/τ ) + μτ /σ 2 
+
+> η
+
+< 0. In the limiting case where μ → 0, this expression approaches 
+
+p2/π , rendering the condition invalid. This outcome aligns with a scenario of unbiased worker beliefs, where the 4 Zhao et al.: Improving Human Supervision of Algorithms 
+
+human bias vanishes, and free overrides thus enhance overall performance. Under the constrained override policy, the total expected override value is strictly positive if a(K) + μτ /σ 2 
+
+> η
+
+> 0. In the extreme ( μ → −∞ or σ → +∞), the condition inevitably fails, consistent with scenarios in which the worker’s prior is excessively negatively biased or their observations are entirely noisy. Under these conditions, the worker possesses no valuable private information, and any override would degrade performance. 
+
+Proof of Proposition 2. By Lemma 1, consider the expected total private information extracted under the con-strained override policy as a function of the override cap K:
+
+V (K) = K ·
+
+
+
+μ + σ2
+
+> η
+
+τ a(K)
+
+
+
+,
+
+where a(K) = 1
+
+> K
+
+PKj=1 E[U(j)], and Uk = ( sk − μ)/τ ∼ N (0 , 1) . Under the free override policy, the expected number of overrides is: 
+
+E[Kfree ] = N · P(sk > 0) = N · Φ
+
+ μτ
+
+
+
+.
+
+Define ¯K = ⌈E[Kfree ]⌉ as the smallest integer greater than or equal to this expectation. Our goal is to show V (K) ≤ 0
+
+for K ≥ ¯K, implying the optimal cap K∗ must lie below ¯K.First, observe that for any K ≥ ¯K:
+
+a(K) ≤ a( ¯K) ≤ E
+
+
+
+U U > Φ−1
+
+
+
+1 − ¯KN
+
+ 
+
+= h
+
+
+
+Φ−1
+
+
+
+1 − ¯KN
+
+ 
+
+.
+
+The first inequality follows from the fact that a(·) is non-increasing in K. The second inequality leverages standard properties of order statistics from a standard normal distribution (see Rychlik 1998, Equation (4)). Next: 
+
+h
+
+
+
+Φ−1
+
+
+
+1 − ¯KN
+
+ 
+
+≤ h
+
+
+
+Φ−1
+
+
+
+1 − Φ
+
+ μτ
+
+ 
+
+= h
+
+
+
+− μτ
+
+
+
+,
+
+since h(·) and Φ−1(·) are both strictly increasing (Bagnoli and Bergstrom 2005, Corollary 2), and by definition ¯K ≥
+
+E[Kfree ] = N · Φ( μ/τ ). Therefore, for K ≥ ¯K, we have: 
+
+μ + σ2
+
+> η
+
+τ a(K) ≤ μ + σ2
+
+> η
+
+τ h
+
+
+
+− μτ
+
+
+
+< 0,
+
+which immediately implies V (K) ≤ 0. Thus, the optimal cap K∗ must be strictly less than ¯K. □
+
+A.3. A Rational Inattention Model 
+
+We develop a Rational Inattention (RI) model as an alternative microfoundation for override behavior. Whereas the main model assumes that workers receive private signals of fixed precision and make override decisions subject to an exogenous cardinality constraint, the RI framework (Simon 1955, Sims 2003) endogenizes both signal quality and Zhao et al.: Improving Human Supervision of Algorithms 5attention allocation. By doing so, it provides a behavioral foundation for a selective override mechanism grounded in cognitive frictions. Crucially, we show that even when signal formation is endogenous, imposing a structural cap on override actions can still improve decision quality through a sorting effect analogous to that in the main model. To ensure comparability, we retain the same task environment. The worker replenishes a set of N SKUs indexed by 
+
+k ∈ { 1, . . . , N }. The individual causal effect of overriding SKU k is ηk ∼ N (μ, σ 2). Consistent with empirical patterns in override performance, we assume μ < 0, implying that override decisions are systematically biased downward on average. Departing from the baseline Bayesian setup, we now assume that the worker endogenously chooses a uniform attention level λ ∈ Λ ⊆ [0 , +∞), which determines the precision of the signal observed for each SKU. The observed signal is sk = ηk + ϵk, where ϵk ∼ N (0 , 1/λ ) captures processing noise, and signal variance is σ2 + 1 /λ . Greater attention improves signal quality but increases cognitive cost. Following standard RI models (Sims 2003), we assume that the cost of attention is proportional to mutual information. Since all SKUs share the same attention level, the total cost is κN · 12 log(1 + λσ 2), where κ > 0 denotes the marginal cost of information. After observing the signal vector {sk}, the worker chooses a subset A ⊆ { 1, . . . , N } of SKUs to override. Consistent with earlier assumptions, we assume the worker ignores the negative prior bias and sets μ = 0 in forming beliefs. The worker’s objective is to maximize expected override value net of cognitive cost: 
+
+max  
+
+> λ∈Λ,A
+
+E
+
+"X
+
+> k∈A
+
+ηk
+
+#
+
+− κN · 12 log(1 + λσ 2).
+
+Given a fixed attention level λ, he worker’s optimal override choices under each policy remain identical to those derived in Section 3.2. Specifically, let AConstrained (λ), AFree (λ), and ANo (λ) denote optimal override sets under con-strained, free, and no-override regimes respectively. We summarize the policies as follows: • No override policy : the worker must follow all algorithmic recommendations ANo (λ) = ∅ and chooses λ = 0 ,resulting in no override actions and no attention cost. • Free override policy : the worker first sets an attention level λ ∈ Λ. Based on the observation of the signal sk =
+
+ηk + ϵk, the worker overrides each SKU with a positive observed signal: AFree (λ) = {k : sk > 0}. Attention level λ is chosen to maximize expected net override value. • Constrained override policy : after setting the attention level λ ∈ Λ, the worker chooses at most K overrides by selecting SKUs with the largest positive signals: AConstrained (λ) = {k : sk ≥ s(K), s k > 0}. Similarly, we consider the approximation AConstrained (λ) ≈ { k : sk ≥ s(K)}. Then, λ is optimized to maximize expected net override value. By restricting actions to SKUs with the strongest signals, the constrained policy implements selective filtering, improving override quality. We now formalize the resulting ranking across policies. 6 Zhao et al.: Improving Human Supervision of Algorithms 
+
+PROPOSITION 3 (Selective Filtering under Rational Inattention) . Let λConstrained , λFree , and λNo denote the opti-mal attention levels under the constrained, free, and no-override policies, respectively. Then the expected total override values satisfy: 
+
+E
+
+ X
+
+> k∈AConstrained (λConstrained )
+
+ηk
+
+ > E
+
+ X
+
+> k∈ANo (λNo )
+
+ηk
+
+ = 0 > E
+
+ X
+
+> k∈AFree (λFree )
+
+ηk
+
+
+
+if h(−μ/ pσ2 + 1 /λ ) < −μpσ2 + 1 /λ/σ 2 
+
+> η
+
+< a (K) for any λ ∈ Λ.Proof of Proposition 3 By Proposition 1, for any fixed attention level λ ∈ Λ, if a(K) > −μpσ2 + 1 /λ/σ 2 
+
+> η
+
+, then: 
+
+E
+
+ X
+
+> k∈AConstrained (λ)
+
+ηk
+
+ > 0.
+
+Selecting the optimal attention level λConstrained , which maximizes the worker’s objective under the constrained over-ride regime, immediately yields the stated result. A parallel argument applies directly to the free override regime, establishing the negative expected value under optimal attention λFree . □
+
+Appendix B: Additional Analyses for Section 4 
+
+Figure 6 plots the daily average machine-level sales (top panel) and inventory levels (bottom panel). Each point repre-sents the average value across all treated machines operated by active workers in that group on a given day. The data span April 1 to June 18 , 2023 , with the vertical line indicating May 4, 2023 , the start of the experimental override policies. Prior to treatment, the three groups exhibit parallel trends, consistent with the random assignment of override policies at the worker level. After the intervention, meaningful differences emerge. The constrained override group achieves the highest average sales while maintaining moderate inventory levels. The free override group holds the lowest inventory but suffers from lower sales, suggesting excessive reductions. 
+
+Figure 6 Model-Free Evidence ( y-axis Anonymized) Zhao et al.: Improving Human Supervision of Algorithms 7
+
+B.1. Main Policy Effect 
+
+This section reports several robustness checks to support our main findings in Section 4. Table 7 presents results obtained by re-estimating our models using level outcomes rather than log-transformed variables. The results remain consistent with our main findings. Constrained override causes a statistically significant reduction in inventory (−0.0860 , p < 0.05 ) and a small, positive, but statistically insignificant effect on sales. In contrast, free override leads to both a significant inventory reduction ( −0.1452 , p < 0.01 ) and a significant decline in sales ( −0.0327 , p < 0.05 ). These patterns reinforce the conclusion that while both override policies reduce inventory, only the constrained over-ride avoids the negative sales impact observed under free override. 
+
+Table 7 Robustness Check (Machine-Level by Policy Group) 
+
+Sales Inventory 
+
+(Unit: Item ) (Unit: Item )
+
+Constrained Override i × P ost T reatment t 0.0084 −0.0860 ∗∗ 
+
+(0 .0169) (0 .0408) 
+
+F ree Override i × P ost T reatment t −0.0327 ∗∗ −0.1452 ∗∗∗ 
+
+(0 .0162) (0 .0524) 
+
+Worker fixed effects Yes Yes (City-Date) fixed effect Yes Yes R2 0.1739 0.1039 
+
+Observations 639 , 112 639 , 112 
+
+Note. Robust standard errors clustered by each worker are in parentheses. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+Table 8 verifies robustness to temporal variation by excluding weekends and public holidays. The results again support our main claims. Specifically, constrained override has no significant effect on sales (measured either as log quantity or as binary sales probability), but it continues to reduce inventory significantly ( −0.0117 , p < 0.05 ). Free override, by contrast, results in a statistically significant decline across all three metrics, log sales ( −0.0128 , p < 0.01 ), sales probability ( −0.0145 , p < 0.01 ), and inventory ( −0.0220 , p < 0.01 ). The consistent negative effects of free override on sales across specifications further underscore its unintended consequence of reduced performance, while highlighting the effectiveness of constrained override in improving efficiency without negatively impacting sales. Table 9 reports the results of the following weekly DID model: 
+
+Outcome ijt = α + β1,−1(ConstrainedOverride i · PreWeek1 t) + 
+
+> 6
+
+X
+
+> w=0
+
+δ1w (ConstrainedOverride i · PostWeek wt )+ β2,−1(FreeOverride i · PreWeek1 t) + 
+
+> 6
+
+X
+
+> w=0
+
+δ2w (FreeOverride i · PostWeek wt )+ γi + δc(j)t + εijt .
+
+(6) 8 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Table 8 Robustness Check (Exclude Weekends and Holidays) 
+
+log( Sales + 1) Sales Probability log( Inventory + 1) 
+
+(Unit: Item ) (%) (Unit: Item )
+
+Constrained Override i × P ost T reatment t 0.0018 −0.0022 −0.0117 ∗∗ 
+
+(0 .0039) (0 .0028) (0 .0050) 
+
+F ree Override i × P ost T reatment t −0.0128 ∗∗∗ −0.0145 ∗∗∗ −0.0220 ∗∗∗ 
+
+(0 .0042) (0 .0033) (0 .0065) 
+
+Worker fixed effects Yes Yes Yes (City-Date) fixed effect Yes Yes Yes R2 0.1651 0.1881 0.1681 
+
+Observations 532 , 592 532 , 592 532 , 592 
+
+Note. Robust standard errors clustered by each worker are in parentheses. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+Specifically, we interact each treatment group indicator with week-specific dummies for the seven weeks following the intervention, along with a pre-treatment lag term to assess potential pre-trends. We find no evidence of significant pre-treatment differences, further validating the randomization procedure. After the intervention, the free override group exhibits an immediate and sustained decline in both sales and sales probability, while the constrained group achieves 
+
+Table 9 Causal Impact of Free and Constrained Override Policies (Machine-Level Weekly DID Estimates) 
+
+log( Sales + 1) Sales Probability log( Inventory + 1) 
+
+(Unit: Item ) (%) (Unit: Item )
+
+Constrained Override i × P re W eek 1t 0.0008 −0.0022 −0.0037 (0 .0048) (0 .0029) (0 .0059) 
+
+Constrained Override i × P ost W eek 0t 0.0028 −0.0001 −0.0155 ∗∗∗ 
+
+(0 .0031) (0 .0029) (0 .0054) 
+
+Constrained Override i × P ost W eek 1t 0.0016 −0.0007 −0.0045 (0 .0038) (0 .0029) (0 .0061) 
+
+Constrained Override i × P ost W eek 2t −0.0027 −0.0036 −0.0147 ∗∗ 
+
+(0 .0041) (0 .0032) (0 .0064) 
+
+Constrained Override i × P ost W eek 3t −0.0006 −0.0030 −0.0160 ∗∗ 
+
+(0 .0047) (0 .0034) (0 .0065) 
+
+Constrained Override i × P ost W eek 4t −0.0003 −0.0067 ∗ −0.0130 ∗
+
+(0 .0062) (0 .0038) (0 .0068) 
+
+Constrained Override i × P ost W eek 5t 0.0013 −0.0032 −0.0162 ∗∗ 
+
+(0 .0063) (0 .0050) (0 .0076) 
+
+Constrained Override i × P ost W eek 6t 0.0099 0.0050 −0.0128 (0 .0097) (0 .0076) (0 .0092) 
+
+F ree Override i × P re W eek 1t −0.0010 −0.0036 −0.0060 (0 .0049) (0 .0029) (0 .0064) 
+
+F ree Override i × P ost W eek 0t −0.0055 −0.0063 ∗ −0.0154 ∗∗ 
+
+(0 .0039) (0 .0034) (0 .0060) 
+
+F ree Override i × P ost W eek 1t −0.0039 −0.0088 ∗∗∗ −0.0152 ∗∗ 
+
+(0 .0044) (0 .0033) (0 .0075) 
+
+F ree Override i × P ost W eek 2t −0.0115 ∗∗ −0.0166 ∗∗∗ −0.0109 (0 .0051) (0 .0039) (0 .0084) 
+
+F ree Override i × P ost W eek 3t −0.0153 ∗∗∗ −0.0177 ∗∗∗ −0.0136 ∗
+
+(0 .0050) (0 .0040) (0 .0081) 
+
+F ree Override i × P ost W eek 4t −0.0171 ∗∗∗ −0.0194 ∗∗∗ −0.0260 ∗∗∗ 
+
+(0 .0060) (0 .0047) (0 .0085) 
+
+F ree Override i × P ost W eek 5t −0.0189 ∗∗∗ −0.0199 ∗∗∗ −0.0343 ∗∗∗ 
+
+(0 .0072) (0 .0060) (0 .0102) 
+
+F ree Override i × P ost W eek 6t −0.0114 −0.0077 −0.0333 ∗∗∗ 
+
+(0 .0104) (0 .0089) (0 .0108) 
+
+Worker fixed effects Yes Yes Yes (City-Date) fixed effect Yes Yes Yes R2 0.1751 0.2073 0.1708 
+
+Observations 639 ,112 639 ,112 639 ,112 
+
+Note. Robust standard errors clustered by each worker are in parentheses. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 Zhao et al.: Improving Human Supervision of Algorithms 9a meaningful reduction in inventory without reducing sales. The persistence of these effects suggests that override behavior reflects systematic overrides in decision-making rather than transitory noise. Corresponding to the analyses in Section 4.1, Table 10 reports weekly DID estimates for algorithm suggestions. The constrained override group shows no significant change throughout. The free override group exhibits a marked increase in suggested quantity per machine beginning after Week 0. These findings suggest that the algorithm adapts to aggressive quantity reductions under free override by increasing future replenishment recommendations, without broadening the product mix. This supports our interpretation that the algorithm response is not a general reaction to override policy, but rather a targeted response to systematic over-reduction. 
+
+Table 10 Effect of Override Policies on Algorithm Suggestions (Machine-Level Weekly DID Estimates) 
+
+Quantity per Machine SKU per Machine Quantity per SKU (Unit: Item ) (%) (Unit: Item )
+
+Constrained Override i × P ost W eek 0t 0.0199 0.0257 0.0213 (1 .0510) (0 .1979) (0 .0393) 
+
+Constrained Override i × P ost W eek 1t 1.1871 −0.0052 0.0599 (1 .0766) (0 .2096) (0 .0441) 
+
+Constrained Override i × P ost W eek 2t 0.7990 −0.0360 0.0525 (1 .0643) (0 .1966) (0 .0408) 
+
+Constrained Override i × P ost W eek 3t 1.9995 ∗ 0.1982 0.0703 (1 .1639) (0 .2159) (0 .0470) 
+
+Constrained Override i × P ost W eek 4t 0.7336 −0.0392 0.0571 (1 .3331) (0 .2330) (0 .0499) 
+
+Constrained Override i × P ost W eek 5t 0.0005 −0.1597 0.0473 (1 .3461) (0 .2449) (0 .0513) 
+
+Constrained Override i × P ost W eek 6t 0.7487 −0.1849 0.1433 ∗∗ 
+
+(1 .5158) (0 .2770) (0 .0619) 
+
+F ree Override i × P ost W eek 0t 0.7786 0.0452 0.1196 ∗
+
+(1 .5799) (0 .2828) (0 .0617) 
+
+F ree Override i × P ost W eek 1t 4.3356 ∗∗ 0.4092 0.2525 ∗∗∗ 
+
+(1 .7832) (0 .3208) (0 .0729) 
+
+F ree Override i × P ost W eek 2t 3.6646 ∗∗ 0.1849 0.2223 ∗∗∗ 
+
+(1 .8503) (0 .3166) (0 .0738) 
+
+F ree Override i × P ost W eek 3t 3.3012 ∗ 0.1934 0.1822 ∗∗ 
+
+(1 .7478) (0 .3116) (0 .0746) 
+
+F ree Override i × P ost W eek 4t 3.5809 ∗ 0.1388 0.2437 ∗∗∗ 
+
+(2 .0951) (0 .3521) (0 .0818) 
+
+F ree Override i × P ost W eek 5t 3.8801 ∗ 0.2758 0.2543 ∗∗∗ 
+
+(2 .0326) (0 .3683) (0 .0829) 
+
+F ree Override i × P ost W eek 6t 4.4855 ∗∗ 0.3279 0.3053 ∗∗∗ 
+
+(2 .2517) (0 .3931) (0 .0919) 
+
+Worker fixed effects Yes Yes Yes (City-Date) fixed effect Yes Yes Yes R2 0.1938 0.2100 0.2105 
+
+Observations 639 ,112 639 ,112 639 ,112 
+
+Note. Robust standard errors clustered by each worker are in parentheses. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+B.2. Changes in Override Behavior 
+
+Figure 7 shows the distribution of downward overrides per machine-day across policy groups. As expected, the no override group exhibits near-zero override activity, with rare exceptions likely due to stockouts or edge cases. The free override group frequently overrides multiple SKUs, while the constrained group shows a sharp concentration at one to two overrides, consistent with the policy cap of K = 2 . Again, although the cap is not strictly enforced, instances of exceedance are rare and symmetrically distributed across groups due to worker-level randomization. 10 Zhao et al.: Improving Human Supervision of Algorithms 
+
+Figure 7 Number of Downward SKU Overrides per Machine-day by Policies 
+
+Note. The histogram includes shelves with no ( 0) downward overrides. 
+
+Appendix C: Additional Analyses from Section 5 
+
+This section provides several robustness checks to support the main LATE findings. First, Table 11 reports intent-to-treat (ITT) estimates using policy assignment as the regressor. The ITT results follow the same pattern as the LATE estimates: the constrained policy reduces inventory ( −0.099 , p < 0.01 ) without affecting sales, while the free policy reduces inventory ( −0.163 , p < 0.01 ) but simultaneously lowers the probability of sale ( −0.0136 , p < 0.01 ). As expected, the ITT effects are smaller in magnitude, but they reinforce the conclusion that constrained overrides improve performance through selective filtering, while free overrides degrade it. 
+
+Table 11 ITT with Downward Override 
+
+Sales Sales01 Inventory 
+
+(Unit: Item ) (%) (Unit: Item )
+
+Constrained vs No Override 
+
+Constrained Override i · P ost t 0.0081 −0.0013 −0.0990 ∗∗∗ 
+
+(0.0089 ) (0.0027 ) (0.0262 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.2881 0.3621 0.3198 
+
+Observations 7, 012 , 190 7, 012 , 190 7, 012 , 190 
+
+Free vs No Override 
+
+F ree Override i · P ost t −0.0154 −0.0136 ∗∗∗ −0.1625 ∗∗∗ 
+
+(0.0103 ) (0.0033 ) (0.0395 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.2806 0.3545 0.3183 
+
+Observations 5, 189 , 189 5, 189 , 189 5, 189 , 189 
+
+Robust standard errors clustered at the worker level. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+Second, we redefine the treatment to focus on a stricter class of override decisions, those that reduce inventory to exactly zero, while keeping the full sample unchanged. As shown in Table 12, the estimated effects are substantially Zhao et al.: Improving Human Supervision of Algorithms 11 larger in magnitude, as expected. Under the constrained policy, zero-out overrides reduce inventory by an average of 8.85 items ( p < 0.01 ), compared to 3.45 items in the main specification, with no significant sales loss. Under the free policy, inventory falls by 5.22 items ( p < 0.01 ) and sales probability drops by 43 .8 percentage points ( p < 0.01 ). The magnitude of the inventory reduction is substantially larger under this stricter definition, 8.85 items versus 3.45 
+
+in the baseline, confirming that zero-out overrides represent more decisive and high-impact interventions. Likewise, the negative sales effect under free override intensifies from 10 .6 to 43 .8 percentage points, highlighting the risks associated with unconstrained discretion in overaggressive overrides. 
+
+Table 12 LATE with Downward Override to Zero Inventory 
+
+Sales Sales01 Inventory 
+
+(Unit: Item ) (%) (Unit: Item )
+
+Constrained vs No Override 
+
+First Stage (Outcome: DownOverride0) 
+
+ConstrainedOverride i · P ost t 0.0112 ∗∗∗ (0 .0029) 
+
+(Worker-Machine), SKU, (City-Date) FE Yes R2 0.3210 
+
+F-stat 2738 .5∗∗∗ 
+
+Observations 7, 012 , 190 
+
+Second Stage (LATE) 
+
+\DownOverride 0ijkt 0.7261 −0.1136 −8.8548 ∗∗∗ 
+
+(0.8002 ) (0.2407 ) (2.3431 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.2881 0.3621 0.3198 
+
+Observations 7, 012 , 190 7, 012 , 190 7, 012 , 190 
+
+Free vs No Override 
+
+First Stage (Outcome: DownOverride0) 
+
+F reeOverride i · P ost t 0.0312 ∗∗∗ (0 .0049) 
+
+(Worker-Machine), SKU, (City-Date) FE Yes R2 0.2691 
+
+F-stat 12 , 538 .5∗∗∗ 
+
+Observations 5, 189 , 189 
+
+Second Stage (LATE) 
+
+\DownOverride 0ijkt −0.4929 −0.4377 ∗∗∗ −5.2162 ∗∗∗ 
+
+(0.3309 ) (0.1067 ) (1.2675 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.2806 0.3545 0.3183 
+
+Observations 5, 189 , 189 5, 189 , 189 5, 189 , 189 
+
+Robust standard errors clustered at the worker level. 
+
+> ∗
+
+p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+Third, Table 13 reports ITT estimates on a restricted sample consisting only of upward override instances. This specification tests whether override policies influence performance outcomes for SKUs whose replenishment quanti-ties were increased rather than decreased. All coefficients are small and statistically insignificant across sales, sales 12 Zhao et al.: Improving Human Supervision of Algorithms 
+
+probability, and inventory, indicating no meaningful effect of policy assignment on SKU performance in the upward direction. This null result helps rule out alternative explanations based on general override effort or broader behavioral changes, reinforcing that the main effects are specific to downward override behavior and consistent with selective filtering rather than general override activity.                                                       
+
+> Table 13 ITT (Upward Override Only)
+> Sales Sales01 Inventory
+> (Unit: Item )(%)(Unit: Item )
+> Constrained vs No Override
+> ConstrainedOverride i·P ost t0.0380 0.0002 −0.0640
+> (0.0277 )(0.0036 )(0.0549 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R20.3235 0.1980 0.3787
+> Observations 1,639 ,664 1,639 ,664 1,639 ,664
+> Free vs No Override
+> F reeOverride i·P ost t−0.0290 −0.0002 −0.0294
+> (0.0217 )(0.0044 )(0.0716 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R20.3077 0.1994 0.3648
+> Observations 1,187 ,107 1,187 ,107 1,187 ,107
+> Robust standard errors clustered at the worker level.
+> ∗p < 0.1;∗∗ p < 0.05 ;∗∗∗ p < 0.01
+
+Finally, Table 14 augments the LATE specification by including instance-level covariates. As we can see, the esti-mated inventory reduction under constrained override remains large and significant ( −3.50 items, p < 0.01 ), nearly identical to the baseline estimate ( −3.45 in Table 4), indicating that workers act on information beyond algorithm-accessible features. In contrast, for the free override policy, inventory reductions become only modestly weaker ( −1.48 
+
+vs. −1.26 ), but the negative sales effect remains large and significant ( −11 .0 percentage points, p < 0.01 ), suggest-ing that unconstrained override decisions continue to degrade performance even after conditioning on observed SKU characteristics. 
+
+Appendix D: Additional Information for Section 6 
+
+To learn how the constrained override group selects SKUs for downward overrides, we develop a logistic regression model at the instance level to estimate the probability that an SKU is selected by the constrained override group from SKUs intended to be overridden without constraints. However, the SKUs that the constrained override group would likely override in the absence of constraints are unobservable. We therefore use the SKUs selected by the free override group as a proxy because the constrained override and free override groups are statistically identical due to randomiza-tion in the experimental design. The training data consists of all observed downward overrides from constrained and Zhao et al.: Improving Human Supervision of Algorithms 13 
+
+Table 14 LATE with Downward Override Controlling for Observable Characteristics 
+
+Sales Sales Probability Inventory 
+
+(Unit: Item ) (%) (Unit: Item )
+
+Constrained vs No Override 
+
+First Stage (Outcome: DownOverride) 
+
+ConstrainedOverride i · P ost t 0.0287 ∗∗∗ (0.0068 )
+
+Discounted −0.0070 ∗∗∗ (0.0011 )
+
+Sale Price 0.0035 ∗∗∗ (0.0009 )
+
+Danger Flag −0.0069 ∗∗∗ (0.0010 )
+
+Growth SKU −0.0080 ∗∗∗ (0.0012 )
+
+Top SKU · Top Shelf −0.0188 ∗∗∗ (0.0020 )
+
+Top SKU 0.0357 ∗∗∗ (0.0032 )
+
+Top Shelf 0.0097 ∗∗∗ (0.0021 )
+
+Tenure 0.1158 (0.3584 )(Worker-Machine), SKU, (City-Date) FE Yes R2 0.3297 
+
+F-stat 3, 575 .6∗∗∗ 
+
+Observations 7, 012 , 190 
+
+Second Stage (LATE) 
+
+\DownOverride ijkt 0.2703 (0.3109 ) −0.0469 (0.0949 ) −3.4958 ∗∗∗ (0.8496 )
+
+Discounted −0.0009 (0.0054 ) 0.0093 ∗∗∗ (0.0011 ) 0.8500 ∗∗∗ (0.0291 )
+
+Sale Price −0.1199 ∗∗∗ (0.0066 ) −0.0098 ∗∗∗ (0.0005 ) −0.4889 ∗∗∗ (0.0183 )
+
+Danger Flag −0.0024 (0.0044 ) 0.0084 ∗∗∗ (0.0010 ) 0.7205 ∗∗∗ (0.0218 )
+
+Growth SKU −0.0960 ∗∗∗ (0.0056 ) −0.0101 ∗∗∗ (0.0015 ) −0.6266 ∗∗∗ (0.0208 )
+
+Top SKU · Top Shelf 0.1885 ∗∗∗ (0.0107 ) −0.0569 ∗∗∗ (0.0022 ) −0.8131 ∗∗∗ (0.0345 )
+
+Top SKU 0.3055 ∗∗∗ (0.0124 ) 0.0887 ∗∗∗ (0.0036 ) 3.8991 ∗∗∗ (0.0457 )
+
+Top Shelf −0.0947 ∗∗∗ (0.0071 ) 0.0419 ∗∗∗ (0.0022 ) 0.2845 ∗∗∗ (0.0262 )
+
+Tenure 0.5528 (1.0395 ) 0.0227 (0.1210 ) 0.2060 (1.0550 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.3022 0.3698 0.4133 
+
+Observations 7, 012 , 190 7, 012 , 190 7, 012 , 190 
+
+Free vs No Override 
+
+First Stage (Outcome: DownOverride) 
+
+F reeOverride i · P ost t 0.1292 ∗∗∗ (0.0140 )
+
+Discounted −0.0076 ∗∗∗ (0.0014 )
+
+Sale Price 0.0036 ∗∗∗ (0.0011 )
+
+Danger Flag −0.0077 ∗∗∗ (0.0012 )
+
+Growth SKU −0.0079 ∗∗∗ (0.0013 )
+
+Top SKU · Top Shelf −0.0235 ∗∗∗ (0.0029 )
+
+Top SKU 0.0488 ∗∗∗ (0.0045 )
+
+Top Shelf 0.0052 ∗∗ (0.0026 )
+
+Tenure −0.0253 (0.5195 )(Worker-Machine), SKU, (City-Date) FE Yes R2 0.3555 
+
+F-stat 10 , 729 .3∗∗∗ 
+
+Observations 5, 189 , 189 
+
+Second Stage (LATE) 
+
+\DownOverride ijkt −0.1423 ∗ (0.0805 ) −0.1101 ∗∗∗ (0.0262 ) −1.4750 ∗∗∗ (0.3213 )
+
+Discounted −0.0009 (0.0070 ) 0.0085 ∗∗∗ (0.0011 ) 0.9187 ∗∗∗ (0.0363 )
+
+Sale Price −0.1102 ∗∗∗ (0.0058 ) −0.0098 ∗∗∗ (0.0005 ) −0.4933 ∗∗∗ (0.0202 )
+
+Danger Flag −0.0080 (0.0049 ) 0.0071 ∗∗∗ (0.0010 ) 0.7508 ∗∗∗ (0.0243 )
+
+Growth SKU −0.1081 ∗∗∗ (0.0087 ) −0.0117 ∗∗∗ (0.0014 ) −0.6403 ∗∗∗ (0.0281 )
+
+Top SKU · Top Shelf 0.1757 ∗∗∗ (0.0109 ) −0.0607 ∗∗∗ (0.0020 ) −0.7497 ∗∗∗ (0.0390 )
+
+Top SKU 0.3178 ∗∗∗ (0.0075 ) 0.0919 ∗∗∗ (0.0021 ) 3.8015 ∗∗∗ (0.0423 )
+
+Top Shelf −0.0890 ∗∗∗ (0.0084 ) 0.0461 ∗∗∗ (0.0020 ) 0.2397 ∗∗∗ (0.0297 )
+
+Tenure −0.0805 (0.6144 ) −0.3038 (0.3209 ) 4.3243 (1.7150 )(Worker-Machine), SKU, (City-Date) FE Yes Yes Yes R2 0.2943 0.3621 0.4102 
+
+Observations 5, 189 , 189 5, 189 , 189 5, 189 , 189 
+
+Robust standard errors clustered at the worker level. ∗p < 0.1; ∗∗ p < 0.05 ; ∗∗∗ p < 0.01 
+
+free override groups, indexed by (i, j, k, t ) for worker, machine, SKU, and time, with instances (xijkt , y ijkt ). The fea-ture vector xijkt captures worker, machine, and SKU characteristics, and the label yijkt indicates the group: yijkt = 1 
+
+for constrained-group overrides and yijkt = 0 for free-group overrides. We employ features that could potentially influence the override selection process. First, we include features dis-played in the app (Figure 5) when local workers make override decisions, such as the current inventory level, weekly sales, and the suggested replenishment quantity of the SKU. These features are the most direct messages that local 14 Zhao et al.: Improving Human Supervision of Algorithms 
+
+workers receive when making override decisions. Additionally, we include the actual replenishment quantity of the SKU to capture the magnitude of override decisions. Second, we incorporate features that describe basic information about local workers, vending machines, and SKUs. We selected features in collaboration with Fengyi Technology based on their business insights regarding factors that may influence override decisions. Examples include the tenure of local workers, the type of environment where smart vending machines are located, top-sales vending machines or SKUs, danger flags for SKUs at risk of removal due to low sales, and whether SKUs are categorized as growth-stage SKUs. All features used in the regression are listed in Table 15, along with detailed explanations. Figure 8 presents the importance scores for the top 15 most essential features that correlate with private information, such as the top-sales SKU and location of the smart vending machines.  
+
+> Table 15 Feature Explanation
+
+Feature Explanation 
+
+Important Information 
+
+Weekly Sales Unit: item 
+
+Current Inventory Level Unit: item 
+
+Suggested Replenishment Quantity Suggested quantity from the centralized server 
+
+Actual Replenishment Quantity Actual quantity proposed by the local worker 
+
+Local Worker Characteristics 
+
+Tenure Calendar year since joining Fengyi Technology 
+
+Machine Characteristics 
+
+Business Name Name of province or important city, e.g., Shanghai 
+
+Environment Environment near vending machines, e.g., CBD area inside the building 
+
+Industry Category Industry category where the vending machine is located, e.g., Education 
+
+Top-Sales Machine 1 for top-sales vending machines; 0 for others 
+
+Longitude Longitude of vending machines 
+
+Latitude Latitude of vending machines 
+
+SKU Characteristics 
+
+Category Category of SKU 
+
+Top-Sales SKU 1 for top-sales SKUs; 0 for others 
+
+Purchase Price Unit: CNY 
+
+Sale Price Unit: CNY 
+
+Danger Flag Risk of the removal due to low sales 
+
+On Sales 1 for SKUs on sales; 0 for others 
+
+Product Life Cycle Days since the first fill time 
+
+New Flag 1 for Growth-stage SKUs; 0 for mature-stage SKUs 
+
+Remaining Lifetime Longest days until product perishes 
+
+Allow Machine Days Longest days that the product can be positioned on the vending machine 
+
+Allow Activity Days Longest days with promotion 
+
+Product Length Unit: cm 
+
+Product Width Unit: cm 
+
+Product Height Unit: cm Zhao et al.: Improving Human Supervision of Algorithms 15   
+
+> Figure 8 Feature Importance
+> Note. We calculate the absolute value of the standardized coefficient for each feature as its importance value, which quantifies the contribution of each feature to the predictions made by the logistic regression model. A detailed explanation of each feature is provided in Table 15.
+
+Leveraging the trained logistic regression, we implement an instance-level “Accept or Reject” policy for candidate downward overrides. The key idea is to keep proposed overrides that are more likely to be selected by the constrained override group. We outline a hypothetical scenario in which local workers make override decisions under the refined policy. Before replenishing, local workers receive a list of SKUs with suggested replenishment quantities. They iden-tify a set of SKUs to override and submit for approval by the centralized server. The centralized server then computes 
+
+ˆpijkt for each SKU, the estimated probability that would be selected by the constrained override group, and sets a threshold α ∈ (0 , 1) : overrides with ˆpijkt ≥ α are accepted, whereas those with ˆpijkt < α are rejected. This selection process personalizes the cardinality constraints across different workers and times. We simulate the hypothetical scenario using the randomized experimental data. Because workers in the free override group faced no downward constraint, their observed overrides serve as the pool of proposed overrides to the centralized server. Using the trained logistic regression, we compute ˆpijkt for each override instance and retain those with ˆpijkt ≥
+
+0.63 . We set the threshold α = 0 .63 so that the mean number of decreased SKUs is approximately equal in the constrained override and personalized override groups, thereby focusing on distributional differences. This procedure generates a new group of data, referred to as the personalized override group ( n = 100 ), which applies customized constraints tailored to each instance. We aim to compare performance between the constrained override group (fixed constraints) and the personalized override group (personalized constraints). Random assignment in the experimental design ensures the groups are statistically identical before override decisions, supporting a fair comparison. Figure 9 presents the distributions of the average number of decreased SKUs for the two groups. The red dashed line marks the threshold of 2 SKUs per machine, representing the fixed constraint imposed on the constrained override 16 Zhao et al.: Improving Human Supervision of Algorithms   
+
+> Figure 9 Personalization
+> Note. The histogram excludes shelves with no (0) downward overrides.
+
+group. As expected, the histogram for the constrained override group shows a sharp decline beginning at 3 SKUs. In contrast, the histogram for the personalized override group exhibits a heavier tail beyond 2 SKUs. The difference confirms the design of the refined solution, where personalized constraints are applied to different instances, allowing local workers with stronger private information to override more than 2 SKUs per machine. Then, we analyze the performance difference between the constrained and personalized override groups, focusing on sales probability at the override instance level. Figure 10 draws the distributions of averaged sales probability among vending machines, SKUs, and time for the two groups. The distribution of the personalized override group shifts to the right compared to the constrained override group. We also conduct a t-test to estimate the differences in sales probability at the worker level. The personalized override group exhibits an increase in sales probability by 9.1
+
+percentage point ( p-value < 0.01 ). These findings validate the effectiveness of the refined solution, which learns from SKU selection under the constrained override policy, thereby further supporting our explanation in Section 3.2.

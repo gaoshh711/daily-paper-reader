@@ -1,0 +1,427 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-02T20:23:12.024748+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2607.00420v1",
+      "source": "arxiv",
+      "title": "A Simple Solution to Improving Human Supervision of Algorithms: Evidence from Smart Vending",
+      "abstract": "Organizations increasingly deploy autonomous artificial intelligence (AI) systems for operational decisions, such as inventory replenishment. Yet fully granting override rights can degrade performance due to human bias and noise, while prohibiting them may overlook valuable private information. This raises a key question: How should override rights be structured to improve human supervision of autonomous AI? Methodology/results: We propose a constrained override policy that limits overrides per decision episode to enable selective filtering that prioritizes high-value overrides. We tested it through a randomized field experiment with 553 workers at a major Chinese smart vending machine retailer that manages more than 59,000 machines and 4,000 SKUs. Workers were assigned to no overrides, free overrides, or a two-per-machine limit on downward overrides. Free overrides reduce inventory by 1.95% but also cut sales by 1.19%. Constrained overrides reduce inventory by 1.28% without harming sales, as workers select better SKUs to override, confirmed via local average treatment effects. Gains are largest for experienced workers, high-incentive SKUs, and growth-stage SKUs. A simulated personalized policy further increases sales probability by 9.1%. Managerial implications: Academics gain novel insights from the causal effects of discretion design in human-supervised AI, emphasizing selective filtering to enhance decision quality. Managers can benefit from a scalable, low-cost policy for operations such as retail, logistics, and resource planning, reducing excess inventory without sales loss while harnessing private human information, with no need for algorithmic redesign, information customization, or additional training.",
+      "authors": [
+        "Minda Zhao",
+        "Brian Rongqing Han",
+        "Xin Chen",
+        "Tao Zhu"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-01T04:29:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.00420v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "improving human supervision of AI algorithms via constrained override policy",
+      "llm_evidence_cn": "通过限制性覆盖策略改进人类对AI算法的监督",
+      "llm_evidence": "通过限制性覆盖策略改进人类对AI算法的监督",
+      "canonical_evidence": "通过限制性覆盖策略改进人类对AI算法的监督",
+      "llm_tldr_en": "Proposes a constrained override policy to improve human supervision of autonomous AI, tested via field experiment with 553 workers, showing selective filtering prioritizes high-value overrides.",
+      "llm_tldr_cn": "该工作针对人类监督自主AI系统时难以平衡人类偏差与私有信息利用的问题，提出了限制性覆盖策略，通过限制每次决策中的覆盖次数实现选择性过滤。在553名工人的随机现场实验中，该方法显著提高了覆盖决策的质量，优先处理了高价值覆盖。这一方案为设计有效的人机协作监督机制提供了简单实用的路径。",
+      "llm_tldr": "该工作针对人类监督自主AI系统时难以平衡人类偏差与私有信息利用的问题，提出了限制性覆盖策略，通过限制每次决策中的覆盖次数实现选择性过滤。在553名工人的随机现场实验中，该方法显著提高了覆盖决策的质量，优先处理了高价值覆盖。这一方案为设计有效的人机协作监督机制提供了简单实用的路径。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.00445v1",
+      "source": "arxiv",
+      "title": "Gaze-Informed Proactive AI Assistance for Children's Picture Exploration",
+      "abstract": "Proactive assistance with large language models (LLMs) has received growing attention in the human computer interaction (HCI) community. However, most past work on proactive LLMs' assistance has focused on adult users and task-oriented settings, leaving open how such systems could support children, whose interests and needs are often expressed through gaze and other nonverbal behaviors rather than explicit requests. In this study, we focus on two key challenges of proactive assistance in children's picture exploration: when to provide assistance and what assistance to provide based on children's nonverbal behaviors. To address these challenges, we introduce Ollie, a gaze-informed proactive artificial intelligence (AI) assistant that offers short narrative descriptions based on where a child is looking. Ollie uses children's gaze to estimate their attention, identify their current visual focus, and select a related picture region for the LLM to verbally describe. In a within-subject experiment, we compared gaze-informed assistance with random assistance. Results show that gaze-informed assistance kept children's attention on their current focus for a longer period of time, and guided them more effectively to related picture regions. Children, parents, and a participating kindergarten teacher viewed Ollie positively and consider that it better matched children's interests when compared with the random assistance. This work shows the feasibility of using gaze as an implicit input for proactive AI assistance for children and provides design implications for future child-centered AI systems.",
+      "authors": [
+        "Zekun Wu",
+        "Man Su",
+        "Huiyong Li",
+        "Tomohiro Nagashima",
+        "Anna Maria Feit"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-01T04:58:08+00:00",
+      "link": "https://arxiv.org/pdf/2607.00445v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proactive AI assistant for children using gaze to infer needs",
+      "llm_evidence_cn": "利用视线推断儿童需求的主动AI助手",
+      "llm_evidence": "利用视线推断儿童需求的主动AI助手",
+      "canonical_evidence": "利用视线推断儿童需求的主动AI助手",
+      "llm_tldr_en": "Introduces Ollie, a gaze-informed proactive AI assistant that provides narrations for children based on their nonverbal behaviors during picture exploration.",
+      "llm_tldr_cn": "针对儿童在图片探索中通过视线等非语言行为表达需求的场景，现有主动AI助手主要针对成人任务导向场景，缺乏对儿童的支持。为此提出Ollie主动AI助手，系统通过分析儿童视线判断何时提供何种帮助，实现了基于非语言信号的主动交互。实验表明该方法能有效支持儿童探索，拓宽了主动互动技术的应用范围。",
+      "llm_tldr": "针对儿童在图片探索中通过视线等非语言行为表达需求的场景，现有主动AI助手主要针对成人任务导向场景，缺乏对儿童的支持。为此提出Ollie主动AI助手，系统通过分析儿童视线判断何时提供何种帮助，实现了基于非语言信号的主动交互。实验表明该方法能有效支持儿童探索，拓宽了主动互动技术的应用范围。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2606.30561v1",
+      "source": "arxiv",
+      "title": "The Human Creativity Benchmark",
+      "abstract": "Modern AI evaluation frameworks treat evaluator disagreement as noise to be resolved. In creative domains, professional disagreement reflects genuine differences in taste, not measurement error. We argue that evaluating creative AI requires preserving two distinct signals: convergence, where professionals align around shared best practices, and divergence, where individual taste legitimately varies. We present the Human Creativity Benchmark (HCB), a benchmark that operationalizes this separation by collecting pairwise preferences, scalar ratings on prompt adherence, usability, and visual appeal, and qualitative rationale from domain professionals. Across 15,000 professional judgments spanning five creative domains and three workflow phases (ideation, mockup, refinement), we find that convergence concentrates on verifiable dimensions like technical correctness and visual hierarchy, while divergence concentrates on taste-driven dimensions like aesthetic direction and conceptual risk. No model excels uniformly across all phases. Collapsing these signals into a single quality metric discards the most actionable information: where models must be correct versus where they should remain steerable.",
+      "authors": [
+        "Aspen Hopkins",
+        "Allison Nulty",
+        "Alexandria Minetti",
+        "Anoop Pakki",
+        "Angad Singh"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.HC"
+      ],
+      "published": "2026-06-29T16:59:46+00:00",
+      "link": "https://arxiv.org/pdf/2606.30561v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human evaluation of creative AI through pairwise preferences and qualitative rationale",
+      "llm_evidence_cn": "通过成对偏好和定性理由进行人类对创意AI的评估",
+      "llm_evidence": "通过成对偏好和定性理由进行人类对创意AI的评估",
+      "canonical_evidence": "通过成对偏好和定性理由进行人类对创意AI的评估",
+      "llm_tldr_en": "The Human Creativity Benchmark separates convergence and divergence in professional judgments to evaluate creative AI, collecting 15,000 judgments across five domains.",
+      "llm_tldr_cn": "针对现代AI评估将评估者分歧视为噪声的问题，本文提出人类创造力基准（HCB），通过收集成对偏好、标量评分和定性理由，保留专业人士在创意领域的共识与分歧，从而更真实地评估创意AI的表现。",
+      "llm_tldr": "针对现代AI评估将评估者分歧视为噪声的问题，本文提出人类创造力基准（HCB），通过收集成对偏好、标量评分和定性理由，保留专业人士在创意领域的共识与分歧，从而更真实地评估创意AI的表现。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.00523v1",
+      "source": "arxiv",
+      "title": "AI, Trust, and Teaming: The Humans-as-Handlers Approach for Autonomous and Opaque AI Systems",
+      "abstract": "Artificial intelligence (AI) is becoming ubiquitous, and across domains, increasingly autonomous systems are carrying out tasks which raise significant ethical and legal challenges which demonstrate a need for strong human-machine teams rooted in trust. In this article, I argue that within highly impactful areas (such as medicine or warfighting) there are grounds for us initially treating autonomous and opaque systems as relevantly analogous to dogs (or other animals with which we have close relationships). Under this analogy, humans making use of these systems are not to be viewed as \"users\" or \"deployers\" of these systems, but instead take the role of \"handlers\". This recasting of roles shifts the way we view humans, AI-enabled and autonomous systems, and the relations between them, and moreover clarifies the clear and traceable lines of responsibility humans have for the outcomes brought about when using these systems. In developing this point, I clarify that the machine-animal analogy does admit disanalogous elements, but that its touch-points ground it as a starting point. I then explore how we can divest the humans-as-handlers approach of those aspects of our relationships with animals which are unfitting for how we engage with and make use of autonomous and AI-enabled systems. I conclude by arguing that the trajectory of human-machine teamings for autonomous and AI-enabled systems should be a state where we authentically view these not as artifacts which we simply make use of, but as collaborators with which we pursue complex goals and carry out complex tasks.",
+      "authors": [
+        "Nathan G. Wood"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY",
+        "cs.ET",
+        "eess.SY"
+      ],
+      "published": "2026-07-01T07:10:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.00523v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes Humans-as-Handlers approach for trust and teaming with autonomous opaque AI",
+      "llm_evidence_cn": "提出将人类视为处理者的方法以建立与自主不透明AI的信任与协作",
+      "llm_evidence": "提出将人类视为处理者的方法以建立与自主不透明AI的信任与协作",
+      "canonical_evidence": "提出将人类视为处理者的方法以建立与自主不透明AI的信任与协作",
+      "llm_tldr_en": "Argues for treating autonomous opaque AI systems analogous to dogs, where humans act as handlers to foster trust and effective teaming in high-stakes domains.",
+      "llm_tldr_cn": "在医疗和军事等高影响领域，自主不透明AI系统带来信任与法律挑战。本文提出重新定位人类角色，从使用者变为‘处理者’，类比人与狗的关系来建立信任和团队协作。该视角为设计可信赖的人机协作系统提供了新的理论基础。",
+      "llm_tldr": "在医疗和军事等高影响领域，自主不透明AI系统带来信任与法律挑战。本文提出重新定位人类角色，从使用者变为‘处理者’，类比人与狗的关系来建立信任和团队协作。该视角为设计可信赖的人机协作系统提供了新的理论基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.00926v1",
+      "source": "arxiv",
+      "title": "Human-Machine Collaboration on Generative Meta-Learning: Model and Algorithm",
+      "abstract": "Generalizing machine learning models to environments that differ from their training distribution remains a critical hurdle, particularly when data from the target domain is entirely or partially unavailable. We propose Generative Meta-Learning with Human Feedback (GMHF), a novel framework that bridges this domain gap by leveraging expert intuition to guide data synthesis. Grounded in a theoretical analysis of generalization error, we derive bounds demonstrating that aligning the distribution of generated data with human beliefs regarding the target physics significantly mitigates risk. GMHF operationalizes this insight by employing a Conditional Neural ODE (cNODE) as a generative digital twin, coupled with a Reinforcement Learning (RL) agent. The agent iteratively refines the latent physical parameters of the generated trajectories based on feedback, effectively steering the meta-learner toward the unobserved target distribution. Empirical validation on a nonlinear Duffing oscillator shows that GMHF substantially reduces deployment loss as expert reliability increases, and that the divergence between generated and target data falls under reliable feedback, directly corroborating the divergence-minimisation mechanism predicted by our theory. Further experiments on a non-dynamical probabilistic model confirm that the framework extends beyond ODE-governed systems, establishing human-AI collaboration as a rigorous catalyst for robust generalisation under distribution shift.",
+      "authors": [
+        "Midhun Parakkal Unni",
+        "Samuel Kaski"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-01T13:29:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.00926v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-machine collaboration for generative meta-learning with feedback",
+      "llm_evidence_cn": "人类-机器协作的生成元学习与反馈",
+      "llm_evidence": "人类-机器协作的生成元学习与反馈",
+      "canonical_evidence": "人类-机器协作的生成元学习与反馈",
+      "llm_tldr_en": "Proposes Generative Meta-Learning with Human Feedback (GMHF) where expert intuition guides data synthesis to bridge domain gaps, using a Conditional Neural ODE and RL.",
+      "llm_tldr_cn": "为解决领域泛化问题，提出生成元学习与人类反馈（GMHF）框架，利用专家直觉指导条件神经ODE合成目标域数据，并配合强化学习智能体实现自适应合成，理论分析证明其风险降低。",
+      "llm_tldr": "为解决领域泛化问题，提出生成元学习与人类反馈（GMHF）框架，利用专家直觉指导条件神经ODE合成目标域数据，并配合强化学习智能体实现自适应合成，理论分析证明其风险降低。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.01034v1",
+      "source": "arxiv",
+      "title": "Behavior-Adaptive Conversational Agents: Toward a Fluid Personality Framework",
+      "abstract": "Large language model (LLM)-based conversational agents (CAs) are now ubiquitous, creating new opportunities for AI-mediated behavior change. Their capacity to project nuanced personalities and adopt diverse metaphorical roles raises a design question: how should an agent's persona and personality be calibrated to the moment? Recent evidence suggests that (i) moderate personality expression outperforms low or high extremes on trust, enjoyment, and intention to adopt in goal-oriented tasks, and (ii) context-appropriate metaphors outperform static one-note assistants on user experience and uptake. Yet most CAs still fix both persona and style, risking misalignment when dynamics, urgency, and formality vary, for example in medical information seeking, fitness coaching, and reflective learning. We propose a Fluid Personality Framework that jointly adapts (1) the agent's metaphorical persona, such as coach, tutor, librarian, or tool, and (2) its personality expression intensity, low, medium, or high, as a function of task context, user goals and traits, and situational urgency. We sketch the framework and its core design dimensions.",
+      "authors": [
+        "Hasibur Rahman",
+        "Smit Desai"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-07-01T15:03:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.01034v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "studies conversational agent personality adaptation design",
+      "llm_evidence_cn": "研究对话代理人格适应性设计",
+      "llm_evidence": "研究对话代理人格适应性设计",
+      "canonical_evidence": "研究对话代理人格适应性设计",
+      "llm_tldr_en": "Proposes a fluid personality framework for LLM-based conversational agents to adapt persona and style to context, improving trust and user experience.",
+      "llm_tldr_cn": "针对大语言模型对话代理人格固定问题，提出流畅人格框架，通过动态调整人格表达和语境隐喻提升用户信任和体验。实验表明适度人格表达优于极端，上下文相关隐喻优于静态助手。",
+      "llm_tldr": "针对大语言模型对话代理人格固定问题，提出流畅人格框架，通过动态调整人格表达和语境隐喻提升用户信任和体验。实验表明适度人格表达优于极端，上下文相关隐喻优于静态助手。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.29113v1",
+      "source": "arxiv",
+      "title": "LLM Semantic Signaling Game and Mechanism Design: Systematic Blindness, Awareness Shaping, and Mindset Dynamics",
+      "abstract": "Large language models (LLMs) increasingly mediate strategic interactions through natural language, making semantic control a critical element of communication and deception. This paper develops a semantic signaling game in which a sender selects a semantic control, an LLM generates a stochastic message, and a receiver evaluates the message using an awareness-dependent scoring mechanism. Receiver awareness is modeled as a type that determines which linguistic features are perceived and used for inference, providing a formal model of systematic blindness. The framework connects prompt-based control, statistical detection, and game-theoretic equilibrium analysis. Gaussian approximations of aggregate message scores enable likelihood-ratio decision rules, while Perfect Bayesian Nash equilibria characterize strategic behavior. The paper further develops mechanism-design approaches that reshape receiver awareness, penalize deceptive semantic controls, and modify receiver populations to induce benign pooling equilibria. Numerical experiments validate the Gaussian approximation, quantify awareness-ordering effects, analyze mindset dynamics under adaptive adversaries, and demonstrate how awareness shaping and guardrail costs reduce successful phishing attacks. The proposed framework provides a principled foundation for analyzing strategic language-mediated interactions in agentic AI systems and offers new tools for the design of robust and secure human-AI communication.",
+      "authors": [
+        "Quanyan Zhu"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-06-27T23:40:23+00:00",
+      "link": "https://arxiv.org/pdf/2606.29113v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "models semantic signaling and awareness shaping in LLM-mediated interaction",
+      "llm_evidence_cn": "建模LLM中介交互中的语义信号和意识塑造",
+      "llm_evidence": "建模LLM中介交互中的语义信号和意识塑造",
+      "canonical_evidence": "建模LLM中介交互中的语义信号和意识塑造",
+      "llm_tldr_en": "Develops a semantic signaling game with an awareness-dependent scoring mechanism, modeling systematic blindness and awareness shaping in LLM-mediated strategic interactions.",
+      "llm_tldr_cn": "针对LLM中介的战略交互中语义控制关键但缺乏形式化模型的问题，本文提出一个语义信号博弈，发送者选择语义控制，LLM生成随机消息，接收者使用依赖于意识的评分机制评估，形式化了系统性和意识塑造。",
+      "llm_tldr": "针对LLM中介的战略交互中语义控制关键但缺乏形式化模型的问题，本文提出一个语义信号博弈，发送者选择语义控制，LLM生成随机消息，接收者使用依赖于意识的评分机制评估，形式化了系统性和意识塑造。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.30697v1",
+      "source": "arxiv",
+      "title": "LUMOS: A Semantic Operating-System Layer for Accessibility-Grounded AI Agents",
+      "abstract": "Current operating systems expose interfaces optimized for human users but not for AI agents. Humans benefit from pixels, icons, windows, visual grouping, mouse movement, and keyboard shortcuts; AI agents instead need compact semantic state, grounded actions, and reliable feedback. As a result, many computer-use agents are forced to interpret screenshots, OCR output, and visual crops, introducing high token costs, visual ambiguity, latency, and coordinate uncertainty. This paper introduces LUMOS (Language Model Unified Machine-Readable Operating-System Semantics), a semantic interaction layer between AI agents and operating systems. LUMOS converts native accessibility metadata and browser UI structures into machine readable semantic blueprints with stable identifiers, roles, names, values, bounds, and action affordances. It also supports live semantic pointer grounding by querying the UI element under or near the cursor through operating-system automation APIs. An LLM then acts through an accessibility grounded observe act loop using constrained visible-UI primitives rather than application-specific scripts. LUMOS does not claim to replace visual agents; instead, it reduces dependence on screenshots when operating systems already provide semantic structure. These results suggest a path toward AI-native operating systems and machine-readable interaction layers.",
+      "authors": [
+        "Yogeswar Reddy Thota"
+      ],
+      "primary_category": "cs.OS",
+      "categories": [
+        "cs.OS",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "published": "2026-06-29T03:19:40+00:00",
+      "link": "https://arxiv.org/pdf/2606.30697v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "semantic interaction layer for AI agents to use OS interfaces grounded in accessibility",
+      "llm_evidence_cn": "为AI代理提供基于可访问性的语义交互层以使用操作系统界面",
+      "llm_evidence": "为AI代理提供基于可访问性的语义交互层以使用操作系统界面",
+      "canonical_evidence": "为AI代理提供基于可访问性的语义交互层以使用操作系统界面",
+      "llm_tldr_en": "LUMOS introduces a semantic layer converting accessibility metadata into machine-readable blueprints, enabling AI agents to interact with operating systems more efficiently than via screenshots.",
+      "llm_tldr_cn": "针对当前操作系统界面不适合AI代理的问题，本文提出LUMOS，一个将原生可访问性元和浏览器UI结构转换为机器可读语义蓝图的交互层，从而降低视觉歧义和延迟，提升代理与人类系统的交互效率。",
+      "llm_tldr": "针对当前操作系统界面不适合AI代理的问题，本文提出LUMOS，一个将原生可访问性元和浏览器UI结构转换为机器可读语义蓝图的交互层，从而降低视觉歧义和延迟，提升代理与人类系统的交互效率。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.30970v1",
+      "source": "arxiv",
+      "title": "AgentBound: Verifiable Behavioral Governance for Autonomous AI Agents",
+      "abstract": "Autonomous AI agents increasingly perform consequential actions on behalf of human principals, including financial transactions, external communications, and enterprise workflows. Existing agent infrastructure relies on identity federation and delegated authorization to authenticate workloads and control resource access, but it cannot determine whether an authorized action should be executed under the current behavioral and operational context.   We present AgentBound, a runtime governance framework that provides verifiable behavioral oversight for autonomous AI agents. AgentBound evaluates each proposed action using three independent authorities: delegated authorization, owner-signed behavioral constitutions, and site action contracts. Their judgments are conservatively composed through a formal decision model to determine whether an action should be permitted, reviewed, or denied before execution.   To provide accountability, AgentBound generates cryptographically verifiable governance receipts that bind every action to the exact delegation, policy, and semantic artifacts governing the decision, enabling independent replay verification and policy provenance. The framework also introduces standing delegation for long-running agents, allowing periodic workloads to operate under continuously refreshed governance policies while preserving revocability and bounded authority.   We present the formal foundation, system architecture, governance receipt protocol, and AgentBound-Bench, a benchmark framework for evaluating governance correctness, authority composition, and accountability. Rather than replacing model alignment, AgentBound complements it by providing a deterministic governance layer between authorization and execution, transforming governance from a process that must be trusted into one that can be independently verified.",
+      "authors": [
+        "Anuj Kaul",
+        "Qianlong Lan",
+        "Pranay Gupta"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-06-29T23:12:06+00:00",
+      "link": "https://arxiv.org/pdf/2606.30970v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "behavioral governance for autonomous agents with human oversight",
+      "llm_evidence_cn": "自主智能体的行为治理与人类监督",
+      "llm_evidence": "自主智能体的行为治理与人类监督",
+      "canonical_evidence": "自主智能体的行为治理与人类监督",
+      "llm_tldr_en": "AgentBound provides runtime governance for autonomous agents via three independent authorities.",
+      "llm_tldr_cn": "自主AI代理执行敏感操作时需要行为合规。本文提出AgentBound运行时治理框架，结合委托授权、所有者签署的行为宪章和站点行动合同三大独立权威，评估每个提议动作。该框架确保代理行为在上下文中的合法性。",
+      "llm_tldr": "自主AI代理执行敏感操作时需要行为合规。本文提出AgentBound运行时治理框架，结合委托授权、所有者签署的行为宪章和站点行动合同三大独立权威，评估每个提议动作。该框架确保代理行为在上下文中的合法性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.00155v1",
+      "source": "arxiv",
+      "title": "A Contextual-Bandit Oversight Game with Two-Sided Informational Asymmetry",
+      "abstract": "We study runtime human oversight of an AI agent when private information runs in both directions: the human privately knows her reward function, while the AI privately knows the quality of the action it proposes. This is the kind of asymmetry that arises naturally when an autonomous robot or software agent has inspected a situation its human supervisor cannot directly assess. Building on Cooperative Inverse Reinforcement Learning (CIRL) and the Oversight Game, we introduce a contextual-bandit team game with two-sided asymmetric information and a play/ask/trust/oversee interface. The bandit structure removes physical state transitions and thereby yields exact one-shot characterizations that would remain conjectural in the full POMDP setting, though the common belief remains a dynamically controlled state across rounds. We give two one-shot characterizations, a team optimum and a behaviorally natural myopic rule, whose gap is a slab of avoidable harm: a region in which the AI privately knows the proposed action is harmful and shutdown would help, yet a myopic human, trusting her prior, declines to oversee. We show this gap is the price of non-credible oversight communication, and give a partial analysis of how it resolves dynamically over repeated rounds through passive learning and active signaling with a one-period-lagged oversight response.",
+      "authors": [
+        "Yunjin Tong"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.GT"
+      ],
+      "published": "2026-06-30T20:30:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.00155v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "studies runtime human oversight of AI with asymmetric information",
+      "llm_evidence_cn": "研究运行时人类监督AI的信息不对称问题",
+      "llm_evidence": "研究运行时人类监督AI的信息不对称问题",
+      "canonical_evidence": "研究运行时人类监督AI的信息不对称问题",
+      "llm_tldr_en": "Introduces a contextual-bandit oversight game with two-sided asymmetric information, providing a play/ask/trust/oversee interface for human-AI interaction.",
+      "llm_tldr_cn": "在合作逆强化学习基础上，引入双边信息不对称的情境赌博机监督博弈，设计了一个\"执行/询问/信任/监督\"接口，刻画人类监督AI时的最优策略，并提供精确单步特征。",
+      "llm_tldr": "在合作逆强化学习基础上，引入双边信息不对称的情境赌博机监督博弈，设计了一个\"执行/询问/信任/监督\"接口，刻画人类监督AI时的最优策略，并提供精确单步特征。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.00211v1",
+      "source": "arxiv",
+      "title": "Constructing Epistemic AI Literacy: Detecting Epistemic Aims and Processes in Student-AI Co-Programming",
+      "abstract": "Epistemic thinking plays a central role in students' learning processes when applying generative artificial intelligence (GenAI), particularly in programming contexts where learners must construct queries, evaluate and validate AI-generated outputs, and regulate problem-solving strategies. This study introduces the conceptual framework of Epistemic AI Literacy (EAIL), reframing AI literacy as a process-oriented epistemic phenomenon that emerges through dynamic human-AI interactions across different domains. Drawing on the AIR (epistemic aims, ideals and reliable epistemic processes) framework, this study examines how epistemic aims and epistemic processes are enacted in GenAI-supported co-programming activities and explores scalable approaches for operationalizing these constructs in interaction data. Using a large dialogue dataset of human-AI co-programming, this study identifies observable dimensions of epistemic aims (i.e., mastery-oriented aims) and epistemic processes (i.e., outsourcing, explanation seeking, verification seeking, prompt monitoring, and epistemic justification). The results reveal a prevalent lack of EAIL, with 78.8% of student-GenAI interactions relying on non-mastery-oriented aims and less reliable epistemic strategies like outsourcing and verification-seeking. Conversely, only 11.1% of interactions showed high epistemic engagement, where mastery-oriented aims were coupled with advanced epistemic strategies like epistemic justification in a more reliable epistemic process.",
+      "authors": [
+        "Mengqian Wu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-06-30T21:43:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.00211v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "student-AI co-programming epistemic literacy",
+      "llm_evidence_cn": "学生-AI协作编程中的认知素养",
+      "llm_evidence": "学生-AI协作编程中的认知素养",
+      "canonical_evidence": "学生-AI协作编程中的认知素养",
+      "llm_tldr_en": "Introduces Epistemic AI Literacy framework examining how epistemic aims and processes emerge in human-AI co-programming.",
+      "llm_tldr_cn": "在生成式AI辅助编程中，学生的认知思维至关重要。本文提出认知性AI素养（EAIL）框架，基于AIR理论，分析学生与AI协作编程中的认知目标和过程。研究发现动态人机交互塑造了认知表现。该框架为理解人机协作学习提供了新视角。",
+      "llm_tldr": "在生成式AI辅助编程中，学生的认知思维至关重要。本文提出认知性AI素养（EAIL）框架，基于AIR理论，分析学生与AI协作编程中的认知目标和过程。研究发现动态人机交互塑造了认知表现。该框架为理解人机协作学习提供了新视角。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
