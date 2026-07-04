@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-04",
+  "date": "2026-07-04",
+  "generated_at": "2026-07-04T20:47:33",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/04/2606.31572v1-formideable-safe-and-socially-aware-autonomous-systems",
+      "section": "deep",
+      "title_en": "FormIDEAble: Safe and Socially-aware Autonomous Systems",
+      "authors": "Livia Lestingi, Amel Bennaceur, Marcello M. Bersani, Carlos Gavidia-Calderon, Anastasia Kordoni, Mark Levine, Bashar Nuseibeh, Matteo Rossi",
+      "date": "2026-06-30",
+      "pdf": "https://arxiv.org/pdf/2606.31572v1",
+      "score": "8.0",
+      "evidence": "具有安全保证和社会感知的人机协作",
+      "tldr": "自主系统在关键场景中需与人类协调并满足安全约束，但现有方法难以兼顾社会性和形式保证。本文提出FormIDEAble，将人机合作建模为Priced Timed马尔可夫决策过程，并转化为代价有界可达性问题求解。在紧急疏散实验中，该方法能生成安全策略，同时显示优化与安全之间存在权衡。FormIDEAble为安全且社会感知的自主决策提供了形式化基础。",
+      "tags": "query:hai",
+      "abstract_en": "Autonomous agents operating in socio-critical settings must coordinate with humans under uncertainty while respecting explicit safety constraints. Existing approaches either account for social dynamics without formal guarantees or provide formal assurance while abstracting away human behaviour. We introduce FormIDEAble, a formally grounded approach for synthesising socially-aware cooperation strategies with safety guarantees. The cooperation between humans and the autonomous agent is modelled as a Priced Timed Markov Decision Process, and decision-making is formulated as a cost-bounded reachability problem. We illustrate the approach using an emergency evacuation scenario. Initial experimental evidence demonstrates the effectiveness of the approach and highlights the trade-offs between optimisation and safety guarantees. FormIDEAble provides a principled foundation for formally assured, socially-aware decision-making in socio-critical systems.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

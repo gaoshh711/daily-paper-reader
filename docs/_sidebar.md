@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-04 <!--dpr-date:20260704-->
+    * 精读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/04/2606.31572v1-formideable-safe-and-socially-aware-autonomous-systems" data-sidebar-item="{&quot;title&quot;: &quot;FormIDEAble: Safe and Socially-aware Autonomous Systems&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.31572v1-formideable-safe-and-socially-aware-autonomous-systems&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;hai&quot;}], &quot;evidence&quot;: &quot;具有安全保证和社会感知的人机协作&quot;}">FormIDEAble: Safe and Socially-aware Autonomous Systems</a>
   * 2026-07-03 <!--dpr-date:20260703-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/03/2606.31980v1-digitalcoach-communication-and-grounding-gaps-in-human-and-agentic-computer-use-coaching" data-sidebar-item="{&quot;title&quot;: &quot;DigitalCoach: Communication and Grounding Gaps in Human and Agentic Computer Use Coaching&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2606.31980v1-digitalcoach-communication-and-grounding-gaps-in-human-and-agentic-computer-use-coaching&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;hai&quot;}], &quot;evidence&quot;: &quot;用于软件任务学习的人机辅导交互&quot;}">DigitalCoach: Communication and Grounding Gaps in Human and Agentic Computer Use Coaching</a>

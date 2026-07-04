@@ -1,0 +1,58 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-04T20:46:22.442414+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2606.31572v1",
+      "source": "arxiv",
+      "title": "FormIDEAble: Safe and Socially-aware Autonomous Systems",
+      "abstract": "Autonomous agents operating in socio-critical settings must coordinate with humans under uncertainty while respecting explicit safety constraints. Existing approaches either account for social dynamics without formal guarantees or provide formal assurance while abstracting away human behaviour. We introduce FormIDEAble, a formally grounded approach for synthesising socially-aware cooperation strategies with safety guarantees. The cooperation between humans and the autonomous agent is modelled as a Priced Timed Markov Decision Process, and decision-making is formulated as a cost-bounded reachability problem. We illustrate the approach using an emergency evacuation scenario. Initial experimental evidence demonstrates the effectiveness of the approach and highlights the trade-offs between optimisation and safety guarantees. FormIDEAble provides a principled foundation for formally assured, socially-aware decision-making in socio-critical systems.",
+      "authors": [
+        "Livia Lestingi",
+        "Amel Bennaceur",
+        "Marcello M. Bersani",
+        "Carlos Gavidia-Calderon",
+        "Anastasia Kordoni",
+        "Mark Levine",
+        "Bashar Nuseibeh",
+        "Matteo Rossi"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-06-30T12:30:49+00:00",
+      "link": "https://arxiv.org/pdf/2606.31572v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-AI collaboration with safety guarantees and social awareness",
+      "llm_evidence_cn": "具有安全保证和社会感知的人机协作",
+      "llm_evidence": "具有安全保证和社会感知的人机协作",
+      "canonical_evidence": "具有安全保证和社会感知的人机协作",
+      "llm_tldr_en": "FormIDEAble synthesises socially-aware cooperation strategies for human-autonomous agent systems with formal safety guarantees.",
+      "llm_tldr_cn": "自主系统在关键社会场景中需与人类安全协作，现有方法要么缺乏形式化保证，要么忽视人类行为。本文提出FormIDEAble框架，将人机协作建模为带代价的定时马尔可夫决策过程，通过有界可达性综合具备社会感知的合作策略。以紧急疏散为例验证，实验表明该方法在保证安全的同时能有效协调人类行为。",
+      "llm_tldr": "自主系统在关键社会场景中需与人类安全协作，现有方法要么缺乏形式化保证，要么忽视人类行为。本文提出FormIDEAble框架，将人机协作建模为带代价的定时马尔可夫决策过程，通过有界可达性综合具备社会感知的合作策略。以紧急疏散为例验证，实验表明该方法在保证安全的同时能有效协调人类行为。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
