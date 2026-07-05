@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-05",
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05T21:07:36",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/05/2607.00533v1-you-shall-not-pass-where-and-why-developers-draw-the-line-on-ai-autonomy",
+      "section": "deep",
+      "title_en": "You Shall Not Pass! Where and Why Developers Draw The Line on AI Autonomy",
+      "authors": "Rudrajit Choudhuri, Christian Bird, Carmen Badea, Marco Gerosa, Anita Sarma",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.00533v1",
+      "score": "8.0",
+      "evidence": "关于开发者对AI自主性接受度的实证研究，为人机协作设计提供依据",
+      "tldr": "随着AI承担更多软件工作，开发者对AI自主性的界限影响工具设计和有意义工作。本研究基于认知评价理论、工作设计和自动化研究，对448名微软开发者进行混合方法调查。结果发现，开发者普遍接受AI在监督下工作，但自主性接受度因任务和个人而异，对身份定义、面向人类和设计导向的工作接受度最低，AI经验和风险容忍度高的开发者接受度更高。结论表明，任务问责制降低开发者允许AI代表其行动的可能性，而任务需求增加授权意愿，为设计有意义工作提供重要启示。",
+      "tags": "query:hai",
+      "abstract_en": "As AI takes on more software work, the line between human and AI effort is shifting. Where developers draw that line around AI autonomy bears on how we design tools and roles that preserve meaningful work. Drawing on cognitive appraisal theory, work design, and automation research, we conducted a mixed-methods study of 448 professional developers at Microsoft to investigate their accepted levels of AI autonomy across software engineering work. Most developers accepted AI producing work under their oversight, although accepted autonomy varied substantively across tasks and individuals. Acceptance was lowest for identity-defining, human-facing, and design-oriented work, and higher among developers with more AI experience and risk tolerance. Task accountability was associated with lower odds of allowing AI to act on developers' behalf, whereas task identity was associated with lower odds of granting AI decision-making autonomy. Task demands had the opposite effect, increasing willingness to delegate decision-making to AI. Our findings suggest that preferences for AI autonomy reflect how developers cognitively experience their work, highlighting important considerations for designing meaningful work.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/05/2606.28791v1-from-determinism-to-delegation-ai-native-software-engineering-and-the-evolution-of-the-agentic-engineer",
+      "section": "quick",
+      "title_en": "From Determinism to Delegation: AI-Native Software Engineering and the Evolution of the Agentic Engineer",
+      "authors": "Mamdouh Alenezi",
+      "date": "2026-06-27",
+      "pdf": "https://arxiv.org/pdf/2606.28791v1",
+      "score": "7.0",
+      "evidence": "将工程重心转向监督智能体工作流；人机协作",
+      "tldr": "LLM驱动的持续多步自主执行使软件工程从确定性编码转向监督概率性行为，这是一场范式转变。本文定义AI原生软件工程，刻画代理工程师角色，分析工作单元、正确性标准和责任归属三大变化，并详细剖析推理-行动循环、上下文工程、行为漂移及组合错误等核心机制。多项实证研究表明生产率提升与经验开发者减速并存，揭示纪律性监督、风险评估和间接提示注入防范是关键能力。软件工程的未来是人机共生而非替代，代理工程建立在经典软件工程基础之上。",
+      "tags": "query:hai",
+      "abstract_en": "Software engineering is experiencing its most significant transformation since the emergence of high-level programming languages. As large language models (LLMs) increasingly enable sustained, multi-step, tool-mediated execution, engineering value is shifting from writing deterministic code to supervising probabilistic and autonomous behavior. This paper argues that AI-Native Software Engineering is a paradigm shift rather than a mere tooling advance, creating a new professional archetype: the Agentic Engineer, whose primary artifact is the agentic system rather than the program.   We characterize this transition through three changes: (i) the unit of work shifts from functions to supervised agent workflows, (ii) correctness shifts from binary assertions to statistical evaluation under uncertainty, and (iii) accountability shifts from code authorship to outcome ownership. Drawing on post-2022 research, we compare traditional and agentic engineering roles and define core mechanisms of autonomous agents, including reasoning-acting loops, context engineering, tool use, memory, behavioral drift, and compositional error.   We place human-AI collaboration within socio-technical frameworks and examine mixed empirical evidence. While some studies report productivity gains, others show slowdowns among experienced developers, highlighting disciplined oversight rather than automation as the critical competency. Using established governance frameworks, we identify required skills and risks, including indirect prompt injection. We conclude that the future is one of symbiosis rather than substitution: agentic engineering builds upon and depends on classical software engineering principles.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

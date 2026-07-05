@@ -1,0 +1,92 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-05T21:05:41.271284+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.00533v1",
+      "source": "arxiv",
+      "title": "You Shall Not Pass! Where and Why Developers Draw The Line on AI Autonomy",
+      "abstract": "As AI takes on more software work, the line between human and AI effort is shifting. Where developers draw that line around AI autonomy bears on how we design tools and roles that preserve meaningful work. Drawing on cognitive appraisal theory, work design, and automation research, we conducted a mixed-methods study of 448 professional developers at Microsoft to investigate their accepted levels of AI autonomy across software engineering work. Most developers accepted AI producing work under their oversight, although accepted autonomy varied substantively across tasks and individuals. Acceptance was lowest for identity-defining, human-facing, and design-oriented work, and higher among developers with more AI experience and risk tolerance. Task accountability was associated with lower odds of allowing AI to act on developers' behalf, whereas task identity was associated with lower odds of granting AI decision-making autonomy. Task demands had the opposite effect, increasing willingness to delegate decision-making to AI. Our findings suggest that preferences for AI autonomy reflect how developers cognitively experience their work, highlighting important considerations for designing meaningful work.",
+      "authors": [
+        "Rudrajit Choudhuri",
+        "Christian Bird",
+        "Carmen Badea",
+        "Marco Gerosa",
+        "Anita Sarma"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.SE"
+      ],
+      "published": "2026-07-01T07:24:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.00533v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "empirical study on developers' accepted AI autonomy across tasks, informing human-AI collaboration design",
+      "llm_evidence_cn": "关于开发者对AI自主性接受度的实证研究，为人机协作设计提供依据",
+      "llm_evidence": "关于开发者对AI自主性接受度的实证研究，为人机协作设计提供依据",
+      "canonical_evidence": "关于开发者对AI自主性接受度的实证研究，为人机协作设计提供依据",
+      "llm_tldr_en": "Mixed-methods study of 448 developers reveals nuanced acceptance of AI autonomy, lowest for identity-defining and human-facing tasks, informing human-AI role design.",
+      "llm_tldr_cn": "针对AI在软件开发中自主性边界问题，本文对448名微软开发者进行混合方法研究，发现开发者普遍接受在监督下由AI完成工作，但对身份定义、面向人类和设计类任务的自主性接受度最低。研究揭示了任务类型、个人经验和风险偏好对AI自主性接受度的影响，为设计人机协作工具和角色提供了重要参考。",
+      "llm_tldr": "针对AI在软件开发中自主性边界问题，本文对448名微软开发者进行混合方法研究，发现开发者普遍接受在监督下由AI完成工作，但对身份定义、面向人类和设计类任务的自主性接受度最低。研究揭示了任务类型、个人经验和风险偏好对AI自主性接受度的影响，为设计人机协作工具和角色提供了重要参考。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2606.28791v1",
+      "source": "arxiv",
+      "title": "From Determinism to Delegation: AI-Native Software Engineering and the Evolution of the Agentic Engineer",
+      "abstract": "Software engineering is experiencing its most significant transformation since the emergence of high-level programming languages. As large language models (LLMs) increasingly enable sustained, multi-step, tool-mediated execution, engineering value is shifting from writing deterministic code to supervising probabilistic and autonomous behavior. This paper argues that AI-Native Software Engineering is a paradigm shift rather than a mere tooling advance, creating a new professional archetype: the Agentic Engineer, whose primary artifact is the agentic system rather than the program.   We characterize this transition through three changes: (i) the unit of work shifts from functions to supervised agent workflows, (ii) correctness shifts from binary assertions to statistical evaluation under uncertainty, and (iii) accountability shifts from code authorship to outcome ownership. Drawing on post-2022 research, we compare traditional and agentic engineering roles and define core mechanisms of autonomous agents, including reasoning-acting loops, context engineering, tool use, memory, behavioral drift, and compositional error.   We place human-AI collaboration within socio-technical frameworks and examine mixed empirical evidence. While some studies report productivity gains, others show slowdowns among experienced developers, highlighting disciplined oversight rather than automation as the critical competency. Using established governance frameworks, we identify required skills and risks, including indirect prompt injection. We conclude that the future is one of symbiosis rather than substitution: agentic engineering builds upon and depends on classical software engineering principles.",
+      "authors": [
+        "Mamdouh Alenezi"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-06-27T07:43:43+00:00",
+      "link": "https://arxiv.org/pdf/2606.28791v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "shifts engineering focus to supervising agent workflows; human-AI collaboration",
+      "llm_evidence_cn": "将工程重心转向监督智能体工作流；人机协作",
+      "llm_evidence": "将工程重心转向监督智能体工作流；人机协作",
+      "canonical_evidence": "将工程重心转向监督智能体工作流；人机协作",
+      "llm_tldr_en": "Describes the paradigm shift to AI-Native Software Engineering where humans supervise agentic systems, creating a new collaboration archetype.",
+      "llm_tldr_cn": "提出AI原生软件工程范式：工程师角色从编写确定性代码转变为监督概率性、自主性的智能体系统；该转变重新定义了人机协作中人类的价值，强调监督、反馈与迭代优化。",
+      "llm_tldr": "提出AI原生软件工程范式：工程师角色从编写确定性代码转变为监督概率性、自主性的智能体系统；该转变重新定义了人机协作中人类的价值，强调监督、反馈与迭代优化。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
