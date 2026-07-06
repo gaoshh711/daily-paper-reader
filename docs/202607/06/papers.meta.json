@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-06",
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T21:02:37",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/06/2606.30980v1-ethics-and-social-responsibility-in-ai-assisted-interviewing-an-llm-in-the-loop-study-of-ai-generated-follow-up-questions",
+      "section": "quick",
+      "title_en": "Ethics and Social Responsibility in AI-Assisted Interviewing: An LLM-in-the-Loop Study of AI-Generated Follow-Up Questions",
+      "authors": "He Zhang, Yueyan Liu, Xin Guan, Jie Cai, John M. Carroll",
+      "date": "2026-06-29",
+      "pdf": "https://arxiv.org/pdf/2606.30980v1",
+      "score": "6.0",
+      "evidence": "面试中的人机协作及伦理问题",
+      "tldr": "半结构化访谈中，访谈者的认知负荷和领域知识限制影响追问深度。本研究采用LLM-in-the-loop Wizard-of-Oz方法，模拟AI实时生成追问并由人类共同访谈者选择性传递或编辑。17位访谈者指出五个关键问题：有害语言、尊重感缺失、不平等、责任不明、隐私风险。这些发现为设计更安全、尊重和负责任的AI辅助访谈系统提供了治理启示。",
+      "tags": "query:hai",
+      "abstract_en": "Semi-structured interviews rely on timely, context-sensitive follow-up questions, yet interviewers' cognitive load and limited domain familiarity can constrain probing depth. We report findings from an LLM-in-the-loop Wizard-of-Oz (WoZ) study that simulates an AI follow-up assistant in live interviewing while preserving human oversight. In our setup, a co-interviewer selectively relayed and could edit AI-generated follow-up questions (AGQs) produced in real time by GPT-4o, enabling a realistic approximation of deployment without fully automating the interaction. Across 17 interviewers with varied qualitative-method expertise, participants raised five interlocking concerns: (1) harmful or discriminatory language and unpredictable interaction harms, (2) undermining interviewees' sense of respect through divided attention and missing nonverbal cues, (3) technology-based participation inequality, (4) unclear responsibility when harms occur, and (5) privacy, disclosure, and compliance risks when AI listens, records, or transcribes sensitive content. We translate these concerns into design and governance implications for safer, more respectful, and more accountable AI-assisted interviewing.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/06/2607.00642v1-coachable-agents-for-interactive-gameplay",
+      "section": "quick",
+      "title_en": "Coachable agents for interactive gameplay",
+      "authors": "Roberto Capobianco, Harm van Seijen, Nolan D. Bard, Neil Burch, Fatima Davelouis, Josh Davidson, Alisa Devlic, Yunshu Du, Ishan Durugkar, Siddhant Gangapurwala, Daniel Hernandez, G. Zacharias Holland, Sahil Jain, Kenta Kawamoto, Raksha Kumaraswamy, Patrick MacAlpine, Dustin R. Morrill, Declan Oller, Francesco Riccio, Akanksha Saran, Craig Sherstan, Kaushik Subramanian, Thomas J. Walsh, Samuel Barrett, Kizza N. Frisbee, Mady Govil, Johannes Günther, Varun R. Kompella, James A. MacGlashan, Maxwell Svetlik, Michael D. Thomure, Jaden B. Travnik, Kevin Waugh, Elahe Aghapour, Florian Fuchs, Andreanne Lemay, Shruti Mishra, Takuma Seno, Peter Stone, Michael Spranger, Peter R. Wurman",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.00642v1",
+      "score": "6.0",
+      "evidence": "教练框架让智能体展现风格",
+      "tldr": "强化学习通常只学到单一最优行为，但用户常需实时控制任务执行风格。本文提出一种结合通用价值函数近似器（UVFA）、精心设计的训练场景、学习算法和数据增强的框架，使智能体在复杂领域展现出指定风格。在《地平线：西之绝境》、《Gran Turismo》和人形机器人行走等截然不同的领域中，智能体均能在满足主任务的同时高度符合风格要求。该技术允许用户在运行时灵活选择最终行为，增强了交互控制能力。",
+      "tags": "query:hai",
+      "abstract_en": "Reinforcement learning has proven to be a valuable tool in the creation of advanced AI and robotic systems, contributing to everything from game playing to robotics to foundation models. Through trial-and-error, these AI systems typically learn one, near-optimal behavior to solve their tasks. However, there are many use cases in which one would like to assert some level of control, preferably in real time, over how the task is solved. We refer to these modifications of a core task as styles. We combine universal value function approximators (UVFAs) with carefully selected training scenarios, learning algorithms, and data augmentation to create a framework for coaching agents that exhibit styles in complex domains. We demonstrate the framework's application in the AAA video games Horizon Forbidden West and Gran Turismo, and in an open-source humanoid test domain. Despite the different nature of the domains -- car racing, stylized game combat, and humanoid walking -- each agent shows strong coherence to the style requests while still satisfying the main task in its domain. Importantly, the techniques outlined in this paper allow an end user to choose the final behavior at run time, giving them flexible control over the final executed performance.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/06/2607.01392v1-multi-objective-exploration-and-preference-optimization-via-mutual-information",
+      "section": "quick",
+      "title_en": "Multi-Objective Exploration and Preference Optimization via Mutual Information",
+      "authors": "Hongyan Xie, Yikun Ban, Ruiyu Fang, Zixuang Huang, Deqing Wang, Jianxin Li, Shuangyong Song",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.01392v1",
+      "score": "6.0",
+      "evidence": "多目标人类价值对齐",
+      "tldr": "多目标对齐大语言模型时，现有方法因探索不确定性导致生成响应与偏好向量不对齐。本文提出MI-EPO框架，通过最大化响应、反馈与偏好向量间的联合条件互信息，并利用概率路由机制分解目标对齐与探索，从而生成区分且对齐的响应。实验表明，MI-EPO在安全对齐和帮助性任务上显著提升对齐度和可控性，实现稳定多目标权衡。该工作为多目标偏好优化提供了统一信息论视角。",
+      "tags": "query:hai",
+      "abstract_en": "Aligning large language models with diverse and heterogeneous human values requires multi-objective alignment methods to effectively trade off conflicting preference dimensions. Current methods achieve this trade-off by training policies conditioned on preference vectors and leveraging online direct preference optimization. However, exploration uncertainty can cause the reward distributions of responses generated under different preference vectors to overlap, and the generated responses may fail to effectively align with the corresponding preference vectors. In this paper, we propose Multi-Objective Exploration and Preference Optimization via Mutual Information (MI-EPO), an information-theoretic framework. It unifies multi-objective exploration and alignment by maximizing the joint conditional mutual information among generated responses, preference feedback, and preference vectors. By incorporating a probabilistic routing mechanism, MI-EPO naturally decomposes objective alignment and preference-aware exploration, encouraging the model to generate responses that are distinguishable and aligned with different preference conditions. Experiments on safe alignment and helpful assistant tasks show that MI-EPO significantly improves the alignment between generated responses and preference vectors, makes the outputs more controllable, and achieves stable trade-offs across multiple objectives.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
