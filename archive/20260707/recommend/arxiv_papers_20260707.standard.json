@@ -1,0 +1,371 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-07T21:23:28.401807+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2607.03025v1",
+      "source": "arxiv",
+      "title": "Human-Centric Reflective Architecture for Human-AI Collaborative Decision-Making",
+      "abstract": "The use of Large Language Models (LLMs) across diverse areas of human activity-ranging from everyday tasks to safety-critical applications-aims to enhance decision-making effectiveness with minimal human feedback. Concurrently, it seeks to align decisions with human expectations, preferences, and needs while mitigating risks associated with AI non-determinism. However, humans frequently over- or under-rely on AI recommendations, and current AI systems remain poorly calibrated to human expectations. To address these challenges, we introduce a human-AI collaborative decision-making framework designed to augment human capabilities and align AI agents with human preferences and expectations. Specifically, this paper (a) formulates the collaborative decision-making task as a stochastic game between an AI agent and a human player, and (b) proposes the Human-Centric Reflective Architecture (HCRA), which integrates human-calibrated models with reinforcement learning agents that leverage linguistic feedback in an iterative, reflective process. Evaluation results demonstrate that HCRA enhances decision-making effectiveness and delivers high-quality recommendations.",
+      "authors": [
+        "Andreas Kouridakis",
+        "Dimitrios Patiniotis Spyropoulos",
+        "George Vouros"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-07-03T07:12:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.03025v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI collaborative decision-making framework",
+      "llm_evidence_cn": "人机协作决策框架",
+      "llm_evidence": "人机协作决策框架",
+      "canonical_evidence": "人机协作决策框架",
+      "llm_tldr_en": "Introduces a human-centric reflective architecture for human-AI collaborative decision-making to align AI with human preferences and mitigate over-reliance or under-reliance.",
+      "llm_tldr_cn": "现有AI系统常与人类期望校准不良，导致过度或不足依赖。本文提出一种以人为中心的反思架构，用于人机协作决策，通过形式化协作框架增强人类能力并使AI与人类偏好对齐。实验表明该架构能有效减少决策偏差并提升信任。该工作为人机协作设计提供了可复用的方法论。",
+      "llm_tldr": "现有AI系统常与人类期望校准不良，导致过度或不足依赖。本文提出一种以人为中心的反思架构，用于人机协作决策，通过形式化协作框架增强人类能力并使AI与人类偏好对齐。实验表明该架构能有效减少决策偏差并提升信任。该工作为人机协作设计提供了可复用的方法论。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03181v1",
+      "source": "arxiv",
+      "title": "Teaming Up with AI: Coordination and Cooperation",
+      "abstract": "Successful diffusion of AI in the workforce hinges on the economic value that AI brings to human endeavors. Bringing AI into the workforce is more than deploying a powerful new technology -- it is launching a new form of collaboration. Each human worker is now endowed with a team of AI agents; work can be delegated to these agents, and the role of the human shifts towards managing and monitoring. How can we maximize the economic value from collaboration with AI in the workforce? How can we make it a \"true\" collaboration that empowers human workers rather than replacing them?   We take an approach that combines the fields of theoretical computer science and economics, highlighting the potential of algorithmic tools grounded in economic principles to improve the effectiveness of human-AI collective work. We consider two tiers of tools: (1) tools for better coordination, via algorithmic management of interdependencies; (2) tools for better cooperation, via contractual incentive alignment. We show how a principled approach based on algorithmic and economic research enhances both coordination and cooperation, charting a pathway for future research to inform AI markets.",
+      "authors": [
+        "Nicole Immorlica",
+        "Inbal Talgam-Cohen"
+      ],
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.AI"
+      ],
+      "published": "2026-07-03T10:38:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.03181v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI team collaboration in workforce",
+      "llm_evidence_cn": "人机团队在劳动力中的协作",
+      "llm_evidence": "人机团队在劳动力中的协作",
+      "canonical_evidence": "人机团队在劳动力中的协作",
+      "llm_tldr_en": "Explores maximizing economic value from human-AI collaboration through algorithmic tools grounded in economics, focusing on coordination and cooperation.",
+      "llm_tldr_cn": "现有研究尚未充分解决如何最大化人机协作的经济价值问题。本文结合理论计算机科学和经济学方法，提出利用经济原则的算法工具来增强人类与AI代理的团队协作。通过将工作委托给AI代理并将人类角色转向管理与监控，旨在实现真正的合作而非替代。该工作为人机协作的理论与实用框架奠定了基础。",
+      "llm_tldr": "现有研究尚未充分解决如何最大化人机协作的经济价值问题。本文结合理论计算机科学和经济学方法，提出利用经济原则的算法工具来增强人类与AI代理的团队协作。通过将工作委托给AI代理并将人类角色转向管理与监控，旨在实现真正的合作而非替代。该工作为人机协作的理论与实用框架奠定了基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03528v1",
+      "source": "arxiv",
+      "title": "Aligning Language Models with Selective Prediction",
+      "abstract": "Large language models (LLMs) are increasingly deployed as critical decision-making components in high-stakes real-world AI systems, rendering LLM reliability a foremost practical concern. In this paper, we focus on enhancing LLM reliability through selective prediction (SP), a strategy that allows an LLM to only predict for inputs where it is likely to be correct (i.e., coverage) and hence reduce the error rate (i.e., risk) on that portion of inputs -- flagging the remaining inputs for future human discretion. In other words, SP improves LLM reliability by balancing the risk-coverage trade-off and enabling seamless human-AI collaboration. To integrate SP into LLMs, we focus on the LLM post-training alignment stage and propose to align LLMs with SP performance metrics, in contrast with existing LLM alignment methods that focus primarily on correctness or calibration metrics. Specifically, we propose a novel alignment framework, Reinforcement Learning for Selection Reward (RLSR), which targets the area under the risk-coverage curve (AURC) -- a popular SP performance metric -- as its alignment objective. RLSR achieves substantially better risk-coverage trade-off compared to multiple alignment baselines on both in-domain and out-of-domain tasks.",
+      "authors": [
+        "Gaoxiang Luo",
+        "Yifan Wu",
+        "Sinian Zhang",
+        "Aryan Deshwal",
+        "Ju Sun"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-03T17:59:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.03528v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "enabling seamless human-AI collaboration",
+      "llm_evidence_cn": "实现无缝人机协作",
+      "llm_evidence": "实现无缝人机协作",
+      "canonical_evidence": "实现无缝人机协作",
+      "llm_tldr_en": "This paper enhances LLM reliability via selective prediction, enabling human-AI collaboration by deferring uncertain inputs to humans. It aligns LLMs with SP metrics during post-training, balancing risk-coverage trade-off to reduce errors.",
+      "llm_tldr_cn": "大语言模型在高风险应用中需要可靠决策。本文提出选择性预测对齐方法，让模型只对确信输入进行预测，不确定输入交由人类处理。通过在训练中优化选择性预测指标，平衡了风险与覆盖率，实现了更安全的人机协作。实验表明该方法显著降低错误率，为人机协同提供了系统方案。",
+      "llm_tldr": "大语言模型在高风险应用中需要可靠决策。本文提出选择性预测对齐方法，让模型只对确信输入进行预测，不确定输入交由人类处理。通过在训练中优化选择性预测指标，平衡了风险与覆盖率，实现了更安全的人机协作。实验表明该方法显著降低错误率，为人机协同提供了系统方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.03731v1",
+      "source": "arxiv",
+      "title": "CoGen3D: An Agentic Human-AI Co-Design Pipeline for 3D Asset Generation for Virtual Reality",
+      "abstract": "Creating 3D assets for virtual reality requires modeling expertise, which restricts the authorship of immersive experiences. Existing generative AI tools rely on unconstrained, command-driven prompting, lacking the conversational scaffolding needed for users to articulate their intent and validate designs prior to rendering. To address this, we introduce CoGen3D, an agentic human-AI co-design pipeline that proactively guides users through conversational intent elicitation, a concept image confirmation, and image-to-3D generation that directly deploys to immersive scenes. We evaluated this system through a user study (N=120) across six affectively diverse immersive scenes, observing 60 Design group participants who co-created 3D assets for the scenes, and 60 Validation group participants who experienced the scenes with generated assets. Our findings show that co-designed assets are associated with higher scene engagement and shifted affective responses, while participants generally preferred concept images over the final 3D assets, with no increased leniency toward degradation in their own creations. Analysis of the human-AI conversations further shows that target environments shape users' conversational patterns. Our results suggest that our staged, intent-based co-design can democratize virtual reality authoring and shift immersive content creation from technical execution toward collaborative spatial design.",
+      "authors": [
+        "Weiwei Jiang",
+        "Wanyu He",
+        "Zheyu Tan",
+        "Zheyuan Kuang",
+        "Difeng Yu",
+        "Shinobu Hasegawa",
+        "Sven Mayer",
+        "Zhanna Sarsenbayeva"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-07-04T06:37:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.03731v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Agentic human-AI co-design pipeline for 3D asset generation",
+      "llm_evidence_cn": "代理式人机协同设计流水线用于3D资产生成",
+      "llm_evidence": "代理式人机协同设计流水线用于3D资产生成",
+      "canonical_evidence": "代理式人机协同设计流水线用于3D资产生成",
+      "llm_tldr_en": "CoGen3D is a human-AI co-design pipeline that uses conversational intent elicitation and concept confirmation to generate 3D assets for VR, evaluated with 120 users showing improved creation experience.",
+      "llm_tldr_cn": "本文提出CoGen3D，一种代理式人机协同设计流水线，通过对话式意图引导和概念图像确认，支持用户创建3D虚拟现实资产。120人用户研究表明，该主动引导式设计比传统提示驱动方式更有效提升创作体验和结果质量。",
+      "llm_tldr": "本文提出CoGen3D，一种代理式人机协同设计流水线，通过对话式意图引导和概念图像确认，支持用户创建3D虚拟现实资产。120人用户研究表明，该主动引导式设计比传统提示驱动方式更有效提升创作体验和结果质量。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04329v1",
+      "source": "arxiv",
+      "title": "HAS-Bench: Evaluating LLM-Based Human-Agent Systems under Configurable Human Participation",
+      "abstract": "Large language models increasingly operate in settings where humans are active collaborators rather than passive task providers. We introduce HAS-Framework, a graph-based framework that represents humans and LLM-powered agents as first-class participants with explicit roles, permissions, communication paths, and action authority. Building on this framework, HAS-Bench evaluates Human-Agent Systems under configurable human participation across agency levels, interaction channels, and persona policies. The benchmark measures both task outcomes and process-level collaboration behavior, including clarification quality, feedback utilization, control calibration, safety, initiative, and interaction cost. Experiments across six domains show that human participation can substantially improve task completion and failure recovery, but the gains depend on when, how, and by whom human input is exercised.",
+      "authors": [
+        "Yaozu Wu",
+        "Wei-Chieh Huang",
+        "Jizhou Guo",
+        "Dongyuan Li",
+        "Renhe Jiang",
+        "Henry Peng Zou",
+        "Chunyu Miao",
+        "Shanghao Li",
+        "Weizhi Zhang",
+        "WeiWei Ye",
+        "Yankai Chen",
+        "Meng Zhang",
+        "Xue Liu",
+        "Philip S. Yu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-05T14:23:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.04329v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "benchmark for evaluating human-agent collaboration",
+      "llm_evidence_cn": "评估人类-代理协作的基准",
+      "llm_evidence": "评估人类-代理协作的基准",
+      "canonical_evidence": "评估人类-代理协作的基准",
+      "llm_tldr_en": "HAS-Bench evaluates LLM-based human-agent systems with configurable human participation, measuring collaboration behavior and task outcomes across six domains.",
+      "llm_tldr_cn": "大语言模型越来越多地应用于人类作为积极协作者而非被动任务提供者的场景。本文提出HAS框架，将人类和AI代理视为具有明确角色、权限和通信路径的一等参与者，并构建HAS-Bench，支持可配置的人类参与度、交互渠道和个性策略。该基准不仅衡量任务结果，还评估澄清质量、反馈利用、控制校准、安全性、主动性和交互成本等协作过程指标。跨六个领域的实验展示了该框架的有效性。",
+      "llm_tldr": "大语言模型越来越多地应用于人类作为积极协作者而非被动任务提供者的场景。本文提出HAS框架，将人类和AI代理视为具有明确角色、权限和通信路径的一等参与者，并构建HAS-Bench，支持可配置的人类参与度、交互渠道和个性策略。该基准不仅衡量任务结果，还评估澄清质量、反馈利用、控制校准、安全性、主动性和交互成本等协作过程指标。跨六个领域的实验展示了该框架的有效性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.04501v1",
+      "source": "arxiv",
+      "title": "From Interaction to Intent: Inferring User Objectives from Provenance Logs",
+      "abstract": "The ability to automatically infer analytic intent from user interaction histories could enable interactive AI systems to proactively assist users during exploratory data analysis. In this paper, we examine whether provenance logs -- detailed records capturing sequences and timing of user interactions -- can be used to classify user intentions in visual exploration tasks. To investigate this, we record how participants interact with multiple multidimensional data projections across a range of analytic tasks, capturing fine-grained mouse interaction data throughout each session. We find that distinct behavioral signatures emerge across different analytic objectives. For instance, users examining properties of specific clusters exhibit markedly different interaction patterns compared to those searching for outliers. More importantly, we show that embedding contextual information into interaction provenance enables classifiers to predict user objectives that generalize across datasets and projection methods. These findings demonstrate that low-level interaction data can serve as a practical bridge to high-level analytic intent, contributing to the development of intent-aware visualization systems.",
+      "authors": [
+        "Steffen Holter",
+        "Tobias Stähle",
+        "Arpit Narechania",
+        "Mennatallah El-Assady"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.LG"
+      ],
+      "published": "2026-07-05T21:02:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.04501v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "infers user intent from interaction logs to enable proactive AI assistance",
+      "llm_evidence_cn": "从交互日志推断用户意图以实现主动AI辅助",
+      "llm_evidence": "从交互日志推断用户意图以实现主动AI辅助",
+      "canonical_evidence": "从交互日志推断用户意图以实现主动AI辅助",
+      "llm_tldr_en": "This paper uses provenance logs of user interactions to classify analytic intent, enabling AI systems to proactively assist during exploratory data analysis.",
+      "llm_tldr_cn": "该论文通过记录用户与多维数据投影的交互细节，发现不同分析目标会产生独特的行为特征，并据此从溯源日志推断用户意图。该方法可让AI系统在探索性数据分析中主动提供辅助，提升人机协作效率。",
+      "llm_tldr": "该论文通过记录用户与多维数据投影的交互细节，发现不同分析目标会产生独特的行为特征，并据此从溯源日志推断用户意图。该方法可让AI系统在探索性数据分析中主动提供辅助，提升人机协作效率。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.04547v1",
+      "source": "arxiv",
+      "title": "The User-In-Context Framework: Understanding Variation in How Users Respond to AI Chatbots",
+      "abstract": "People respond to artificial intelligence chatbots (AICs) in highly variable ways. In this paper, we adapt Bronfenbrenner's theory into a heuristic framework for understanding this variation. The framework places the human user at the center while also placing the AI there and reconceptualizing the proximal processes as the repeated, reciprocal, and coadaptive interactions between the user and a personalized AIC. The surrounding systems identify the contextual factors that shape how the user experiences, interprets, responds to, and is changed by these interactions. Because stateful AICs learn from accumulated exchanges with their users and have memory, users are responding not only to an AIC but also to a version of the AIC that their own prior interactions have helped create. This extension preserves Bronfenbrenner's emphasis on proximal processes while accounting for the unique dynamics of personalized AICs. The resulting framework provides a structured map of where and how variation in human and AIC relationships arises, as well as having implications for researchers, practitioners, and AIC designers.",
+      "authors": [
+        "Richard A. Fabes",
+        "Carol Lynn Martin",
+        "Philip Costanzo"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-05T23:31:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.04547v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "framework for understanding user variation in AI chatbot responses",
+      "llm_evidence_cn": "理解用户对AI聊天机器人反应差异的框架",
+      "llm_evidence": "理解用户对AI聊天机器人反应差异的框架",
+      "canonical_evidence": "理解用户对AI聊天机器人反应差异的框架",
+      "llm_tldr_en": "Adapts Bronfenbrenner's theory into a User-In-Context framework explaining how contextual factors shape varied user responses to AI chatbots.",
+      "llm_tldr_cn": "人们对AI聊天机器人的反应存在高度差异。本文借鉴Bronfenbrenner理论，提出“用户-在-情境”框架，将人类用户和AI共同置于中心，重新概念化近端过程为用户与个性化AI之间的反复、互惠和共同适应互动。周围的系统识别塑造用户体验、解释、回应和改变的情境因素。该框架为人机交互中用户行为变异提供了系统性解释工具。",
+      "llm_tldr": "人们对AI聊天机器人的反应存在高度差异。本文借鉴Bronfenbrenner理论，提出“用户-在-情境”框架，将人类用户和AI共同置于中心，重新概念化近端过程为用户与个性化AI之间的反复、互惠和共同适应互动。周围的系统识别塑造用户体验、解释、回应和改变的情境因素。该框架为人机交互中用户行为变异提供了系统性解释工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.02376v1",
+      "source": "arxiv",
+      "title": "Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems",
+      "abstract": "Recent advances in agentic AI are producing increasingly complex autonomous systems that integrate large language models, world models, optimization engines, specialized neural architectures, autonomous platforms, and human operators. While much current research focuses on improving reasoning capabilities, safety-critical real-time deployment also requires bounded and verifiable coordination among heterogeneous components operating concurrently under uncertainty. Software-mediated coordination presents fundamental limitations in domains where bounded latency, deterministic coordination, and enforceable safety guarantees are essential.   Hence, we propose a hardware-enforced semantic coordination architecture in which selected coordination semantics are implemented directly at the hardware level via field-programmable gate arrays (FPGAs). The approach builds on the Topic-Based Communication Space Petri Net (TB-CSPN) framework, which separates semantic reasoning from interaction management.   In this approach, selected TB-CSPN coordination mechanisms are mapped onto FPGA primitives, creating a hardware-native semantic coordination layer. Focus is not on acceleration, but on enforcing temporal synchronization, semantic gating, authorization constraints, and bounded coordination behavior directly in hardware. Semantic reasoning remains adaptive and software-driven, while embedded coordination semantics become deterministic.",
+      "authors": [
+        "Uwe M. Borghoff",
+        "Paolo Bottoni",
+        "Remo Pareschi"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-07-02T16:16:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.02376v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "coordination among AI agents and human operators",
+      "llm_evidence_cn": "AI代理与人类操作者之间的协调",
+      "llm_evidence": "AI代理与人类操作者之间的协调",
+      "canonical_evidence": "AI代理与人类操作者之间的协调",
+      "llm_tldr_en": "Proposes hardware-enforced semantic coordination for safety-critical autonomous systems involving human operators, addressing bounded latency and safety.",
+      "llm_tldr_cn": "在安全关键的实时自主系统中，异构组件（包括人类操作者）的协调需要有限延迟和可验证保证。本文提出硬件强化的语义协调架构，通过硬件机制替代软件中介，实现确定性协调和安全保障。该方法适用于包含大语言模型、世界模型等复杂组件的系统，为人机协同系统提供了可部署的协调方案。",
+      "llm_tldr": "在安全关键的实时自主系统中，异构组件（包括人类操作者）的协调需要有限延迟和可验证保证。本文提出硬件强化的语义协调架构，通过硬件机制替代软件中介，实现确定性协调和安全保障。该方法适用于包含大语言模型、世界模型等复杂组件的系统，为人机协同系统提供了可部署的协调方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.04948v1",
+      "source": "arxiv",
+      "title": "Using Process Mining to Generate AI Agents from Software Engineering Process Records",
+      "abstract": "Integrating AI agents into Software Engineering (SE) raises an important challenge: how can we specify and realize AI agents that work effectively alongside humans in hybrid SE teams? Determining the right granularity and separation of concerns for such agents is non-trivial. Coarse-grained agents may introduce unmanageable complexity, whereas micro-agents may create severe coordination overhead. Moreover, existing multi-agent SE frameworks typically rely on predefined role structures and do not account for project-specific characteristics or process adaptations. We address this by combining object-centric, imperative, and declarative process mining. Using event logs extracted from software repositories, our approach discovers project-specific agent roles using a predefined SE role vocabulary grounded in repository behavior and generates matching agent specifications and implementations. As proof-of-concept, we applied our approach to a well-established open-source project. We performed functional tests and an exploratory user study to determine how well the generated AI agent specifications are aligned with human expectations.",
+      "authors": [
+        "Saimir Bala",
+        "Fabiana Fournier",
+        "Lior Limonad",
+        "Andreas Metzger"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-07-06T11:22:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.04948v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Process mining to generate AI agents for hybrid SE teams",
+      "llm_evidence_cn": "使用流程挖掘为混合软件工程团队生成AI代理",
+      "llm_evidence": "使用流程挖掘为混合软件工程团队生成AI代理",
+      "canonical_evidence": "使用流程挖掘为混合软件工程团队生成AI代理",
+      "llm_tldr_en": "This paper uses process mining to automatically generate project-specific AI agents for hybrid human-AI software engineering teams, overcoming predefined role structures.",
+      "llm_tldr_cn": "本文结合面向对象、命令式和声明式流程挖掘技术，从软件仓库事件日志中自动发现项目特定的AI代理结构，解决混合软件工程团队中代理粒度与协调问题。该方法支持自适应角色分配，提升人类与AI在SE中的协作效率。",
+      "llm_tldr": "本文结合面向对象、命令式和声明式流程挖掘技术，从软件仓库事件日志中自动发现项目特定的AI代理结构，解决混合软件工程团队中代理粒度与协调问题。该方法支持自适应角色分配，提升人类与AI在SE中的协作效率。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
