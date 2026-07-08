@@ -6,49 +6,43 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-07
-- 运行时间：2026-07-07 21:30:23 UTC
+- 最新运行日期：2026-07-08
+- 运行时间：2026-07-08 20:42:23 UTC
 - 运行状态：成功
-- 本次总论文数：9
-- 精读区：6
-- 速读区：3
+- 本次总论文数：7
+- 精读区：3
+- 速读区：4
 
 ### 今日简报（AI）
-今日推荐9篇论文，精读6篇，速读3篇，聚焦人机协作与AI系统安全。  
-最值得关注的两个方向：人机协作决策的人本反思架构（9.0分）与团队协调机制（9.0分），以及用户与AI聊天机器人交互的上下文框架（8.0分）。  
-建议先精读两篇高分论文，理解如何设计以人为中心的AI协作系统，再结合速读内容思考实际应用场景。
-- 详情：[/202607/07/README](/202607/07/README)
+今日精选7篇人机交互研究，精读聚焦集体认知与自动化控制两项高分论文。  
+最值得关注：网络科学视角下混合群体认知机制，以及AI服务系统中何时自动化的学习策略。  
+建议进一步探究人机协作中认知模型与自动化阈值的交叉应用。
+- 详情：[/202607/08/README](/202607/08/README)
 
 ### 精读区论文标签
-1. [Human-Centric Reflective Architecture for Human-AI Collaborative Decision-Making](/202607/07/2607.03025v1-human-centric-reflective-architecture-for-human-ai-collaborative-decision-making)  
+1. [Collective Cognition in Hybrid Groups: A Network Science Synthesis](/202607/08/2607.05593v1-collective-cognition-in-hybrid-groups-a-network-science-synthesis)  
    标签：评分：9.0/10、query:hai
-   evidence：人机协作决策框架
-2. [Teaming Up with AI: Coordination and Cooperation](/202607/07/2607.03181v1-teaming-up-with-ai-coordination-and-cooperation)  
-   标签：评分：9.0/10、query:hai
-   evidence：人机团队在劳动力中的协作
-3. [Aligning Language Models with Selective Prediction](/202607/07/2607.03528v1-aligning-language-models-with-selective-prediction)  
-   标签：评分：9.0/10、query:hai
-   evidence：实现无缝人机协作
-4. [CoGen3D: An Agentic Human-AI Co-Design Pipeline for 3D Asset Generation for Virtual Reality](/202607/07/2607.03731v1-cogen3d-an-agentic-human-ai-co-design-pipeline-for-3d-asset-generation-for-virtual-reality)  
-   标签：评分：9.0/10、query:hai
-   evidence：代理式人机协同设计流水线用于3D资产生成
-5. [HAS-Bench: Evaluating LLM-Based Human-Agent Systems under Configurable Human Participation](/202607/07/2607.04329v1-has-bench-evaluating-llm-based-human-agent-systems-under-configurable-human-participation)  
-   标签：评分：9.0/10、query:hai
-   evidence：评估人类-代理协作的基准
-6. [From Interaction to Intent: Inferring User Objectives from Provenance Logs](/202607/07/2607.04501v1-from-interaction-to-intent-inferring-user-objectives-from-provenance-logs)  
+   evidence：人机混合群体集体认知的网络科学综合
+2. [Learning When to Automate: Queue Control in Human-AI Service Systems](/202607/08/2607.06017v1-learning-when-to-automate-queue-control-in-human-ai-service-systems)  
    标签：评分：8.0/10、query:hai
-   evidence：从交互日志推断用户意图以实现主动AI辅助
+   evidence：人机服务系统中的队列控制与自动化决策
+3. [Agents That Teach: Towards Designing Incidental Learning Back into AI-Assisted Software Development](/202607/08/2607.06101v1-agents-that-teach-towards-designing-incidental-learning-back-into-ai-assisted-software-development)  
+   标签：评分：8.0/10、query:hai
+   evidence：在AI辅助软件开发中重新设计附带学习
 
 ### 速读区论文标签
-1. [The User-In-Context Framework: Understanding Variation in How Users Respond to AI Chatbots](/202607/07/2607.04547v1-the-user-in-context-framework-understanding-variation-in-how-users-respond-to-ai-chatbots)  
-   标签：评分：8.0/10、query:hai
-   evidence：理解用户对AI聊天机器人反应差异的框架
-2. [Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems](/202607/07/2607.02376v1-hardware-enforced-semantic-coordination-for-safety-critical-real-time-autonomous-systems)  
+1. [Attention Limited Reward Learning](/202607/08/2607.04590v1-attention-limited-reward-learning)  
    标签：评分：7.0/10、query:hai
-   evidence：AI代理与人类操作者之间的协调
-3. [Using Process Mining to Generate AI Agents from Software Engineering Process Records](/202607/07/2607.04948v1-using-process-mining-to-generate-ai-agents-from-software-engineering-process-records)  
+   evidence：研究人类成对比较用于偏好学习，与人机交互概念相关
+2. [Governable Individuals: An Identity Layer for Embodied Agents That Keep Learning](/202607/08/2607.05463v1-governable-individuals-an-identity-layer-for-embodied-agents-that-keep-learning)  
    标签：评分：7.0/10、query:hai
-   evidence：使用流程挖掘为混合软件工程团队生成AI代理
+   evidence：提出具身代理的身份层治理，符合人类中心AI设计原则
+3. [A toy framework for single and multi-agent human-AI curiosity ecosystems](/202607/08/2607.06214v1-a-toy-framework-for-single-and-multi-agent-human-ai-curiosity-ecosystems)  
+   标签：评分：7.0/10、query:hai
+   evidence：人机好奇心生态中的询问策略框架
+4. [PERSONAJUDGE: Simulating Individual Human Preference Judgments with Evaluator-Specific Demonstration Data](/202607/08/2607.05742v1-personajudge-simulating-individual-human-preference-judgments-with-evaluator-specific-demonstration-data)  
+   标签：评分：6.0/10、query:hai
+   evidence：利用界面遥测模拟人类评估者判断，与可解释交互界面相关
 
 
 <div class="dpr-home-promo-card">

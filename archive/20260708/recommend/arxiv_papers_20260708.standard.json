@@ -1,0 +1,282 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-08T20:37:15.944993+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.05593v1",
+      "source": "arxiv",
+      "title": "Collective Cognition in Hybrid Groups: A Network Science Synthesis",
+      "abstract": "The growing integration of AI agents into human teams calls for a principled understanding of how collective intelligence emerges in hybrid systems. Recent frameworks clarify how attention, memory, and reasoning differences shape human-AI interaction at the individual and dyadic levels, but a formal account of how these differences scale to group-level dynamics is lacking. Most network science has examined either human-only or multi-agent AI-only systems, leaving open how its findings and parametrizations translate to hybrid groups. This chapter synthesizes network science, collective cognition, and multi-agent systems through the lens of attention, memory, and reasoning. We review how task environments, group topologies, agent-level processes, and incentive structures shape collective outcomes in human-only and AI-only networks, then examine how these results extend to hybrid settings, conceptualizing hybrid networks as heterogeneous human-AI nodes and links with distinct individual and transactive constraints. Our comparative analysis identifies which network effects are robust across agent types and which require revision, and highlights configurations that were peripheral in single-type traditions, such as human gatekeepers of AI sub-networks, but become structurally central in hybrid teams. Integrating a cognitive systems perspective with network science, we clarify how established exploration-exploitation and efficiency-redundancy trade-offs may operate differently in hybrid teams, and conclude with implications for organizational design, governance, and the responsible development of hybrid intelligence systems.",
+      "authors": [
+        "Babak Hemmatian",
+        "Razan Baltaji",
+        "Lav R. Varshney"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-06T19:44:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.05593v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "network science synthesis of collective cognition in human-AI hybrid groups",
+      "llm_evidence_cn": "人机混合群体集体认知的网络科学综合",
+      "llm_evidence": "人机混合群体集体认知的网络科学综合",
+      "canonical_evidence": "人机混合群体集体认知的网络科学综合",
+      "llm_tldr_en": "Synthesizes network science, collective cognition, and multi-agent systems to understand how attention, memory, and reasoning scale in human-AI teams.",
+      "llm_tldr_cn": "针对AI代理融入人类团队后集体智能如何涌现的问题，通过网络科学视角综合注意力、记忆和推理差异，分析任务环境、群体拓扑和激励机制如何影响混合群体的动态。该综述填补了从个体/二元交互到群体层面认知的理论空白，为设计高效人机团队提供了网络科学框架。",
+      "llm_tldr": "针对AI代理融入人类团队后集体智能如何涌现的问题，通过网络科学视角综合注意力、记忆和推理差异，分析任务环境、群体拓扑和激励机制如何影响混合群体的动态。该综述填补了从个体/二元交互到群体层面认知的理论空白，为设计高效人机团队提供了网络科学框架。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.06017v1",
+      "source": "arxiv",
+      "title": "Learning When to Automate: Queue Control in Human-AI Service Systems",
+      "abstract": "We study a human-AI service system in which tasks arrive sequentially and are processed through a two-stage architecture: an automated chatbot followed, when necessary, by a human agent. We consider $T$ sequentially arriving tasks, each belonging to one of $K$ heterogeneous types. For each task the decision maker chooses how many resources to allocate to the chatbot, whose type-dependent success probabilities are initially unknown. Tasks not resolved by the chatbot enter type-dependent human-service queues, where they are processed by a human agent with unknown service rates. This model captures a central tradeoff in hybrid service systems: relying more on automation reduces human congestion but increases chatbot costs, while insufficient automation may overload the human agent. We propose the UCB-DPP policy, which combines Upper Confidence Bounds with Drift-Plus-Penalty control to learn the unknown parameters of the system while making queue-aware decisions. We prove that UCB-DPP achieves regret $\\widetilde{\\mathcal{O}}(K\\sqrt{T})$ and guarantees mean-rate stability of the human-service queues. Simulations on synthetic instances show that the proposed policy outperforms natural baselines.",
+      "authors": [
+        "Giovanni Montanari",
+        "Marco Scarsini",
+        "Vianney Perchet"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "published": "2026-07-07T08:58:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.06017v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-AI service system queue control and automation decisions",
+      "llm_evidence_cn": "人机服务系统中的队列控制与自动化决策",
+      "llm_evidence": "人机服务系统中的队列控制与自动化决策",
+      "canonical_evidence": "人机服务系统中的队列控制与自动化决策",
+      "llm_tldr_en": "Models a hybrid service system with chatbot and human agent, analyzing the tradeoff between automation and human workload.",
+      "llm_tldr_cn": "研究一个两阶段人机服务系统：先由聊天机器人处理任务，未解决则转交人类代理。考虑异构任务类型和未知成功概率，决策者需分配资源优化。模型揭示了自动化减少人类拥塞但增加成本的权衡，以及人员配置策略。该工作为混合服务系统的人机交互设计提供了理论依据。",
+      "llm_tldr": "研究一个两阶段人机服务系统：先由聊天机器人处理任务，未解决则转交人类代理。考虑异构任务类型和未知成功概率，决策者需分配资源优化。模型揭示了自动化减少人类拥塞但增加成本的权衡，以及人员配置策略。该工作为混合服务系统的人机交互设计提供了理论依据。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.06101v1",
+      "source": "arxiv",
+      "title": "Agents That Teach: Towards Designing Incidental Learning Back into AI-Assisted Software Development",
+      "abstract": "AI coding agents are rapidly reshaping how software is built, with developers increasingly delegating substantial coding tasks to autonomous agents in pursuit of higher productivity. While these gains are real, they come at the cost of incidental learning. Developers historically acquired informal knowledge through effortful problem-solving, and this has long shaped how software engineering expertise develops. However, with over-reliance on agentic coding, unpracticed skills could atrophy silently over time. As this learning pathway is short-circuited, developers risk silently accruing Knowledge Debt, a developer-level analogue of Technical Debt, where changes the agent executes that the developer cannot fully understand accrue over time. In this paper, we argue that incidental learning will not re-emerge on its own and must be consciously designed back into developer-agent interactions, and propose six design principles to guide such systems. We then present \"SHIELD\", a multi-agent system grounded in the notion of \"agents that teach\", that operationalizes these principles by leveraging the AI coding agent's own reasoning to surface contextual, out-of-band learning moments without disrupting developer flow. Through this work, we envision a path toward learning-aware development environments where productivity and learning are complementary, not competing.",
+      "authors": [
+        "Rohit Mehra",
+        "Samdyuti Suri",
+        "Prithviraj K Tagadinamani",
+        "Kapil Singi",
+        "Vikrant Kaulgud",
+        "Adam P. Burden"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "published": "2026-07-07T10:14:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.06101v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Designing incidental learning in AI-assisted software development",
+      "llm_evidence_cn": "在AI辅助软件开发中重新设计附带学习",
+      "llm_evidence": "在AI辅助软件开发中重新设计附带学习",
+      "canonical_evidence": "在AI辅助软件开发中重新设计附带学习",
+      "llm_tldr_en": "Explores how AI coding agents can be redesigned to preserve incidental learning, introducing the concept of Knowledge Debt and proposing design strategies.",
+      "llm_tldr_cn": "AI编码代理提高生产力的同时可能导致开发者知识流失。本文提出‘知识债务’概念，类比技术债务，指开发者无法理解代理执行的变化。通过分析学习路径短路问题，设计让代理在执行任务时附带教学的方法，以维持开发者技能增长。研究为AI辅助开发中的人机学习协作提供了新视角。",
+      "llm_tldr": "AI编码代理提高生产力的同时可能导致开发者知识流失。本文提出‘知识债务’概念，类比技术债务，指开发者无法理解代理执行的变化。通过分析学习路径短路问题，设计让代理在执行任务时附带教学的方法，以维持开发者技能增长。研究为AI辅助开发中的人机学习协作提供了新视角。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.04590v1",
+      "source": "arxiv",
+      "title": "Attention Limited Reward Learning",
+      "abstract": "Pairwise human comparisons are a primary interface through which modern AI systems learn human preferences. RLHF and related alignment pipelines typically model such comparisons with Bradley--Terry log-odds, where choice probabilities are governed by latent reward differences. This paper examines what this assumption misses through a reduced-form model motivated by rational inattention, in which each label is generated by a low-capacity evaluation channel. The model separates two forms of ambiguity that standard reward modeling tends to conflate: a comparison may be difficult because the two candidates are genuinely close in value, or because the relevant distinction is hard to detect under limited attention. We show that limited attention can fundamentally distort what pairwise comparisons reveal. In particular, passive comparison data cannot generally distinguish reward, attention, and default tendencies, and heterogeneous attention can make standard Bradley--Terry reward modeling recover misleading rankings. Our analysis shows that learning is governed not by the raw number of labels, but by the amount of attended information each label carries. A case study on human votes over language-model pairs from Chatbot Arena exhibits the predicted signature, a cyclic component of the comparison data that exceeds sampling noise and that no scalar reward can represent; a second case study on perceptual comparisons shows that response times and gaze carry gap information that the labels do not. This perspective suggests that human feedback should be treated not as direct revealed preference, but as an attention-limited measurement process: a weak preference signal may reflect hidden evaluation difficulty rather than genuine indifference.",
+      "authors": [
+        "Wenqian Xing"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-06T01:33:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.04590v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "studies human pairwise comparisons for preference learning, relevant to human-AI interaction concepts",
+      "llm_evidence_cn": "研究人类成对比较用于偏好学习，与人机交互概念相关",
+      "llm_evidence": "研究人类成对比较用于偏好学习，与人机交互概念相关",
+      "canonical_evidence": "研究人类成对比较用于偏好学习，与人机交互概念相关",
+      "llm_tldr_en": "Examines how limited human attention distorts pairwise comparisons in reward learning, proposing a model that separates ambiguity from genuine difficulty.",
+      "llm_tldr_cn": "本文研究人类有限注意力如何扭曲成对比较在奖励学习中的作用。通过理性忽视模型，将比较的困难区分两种来源：真正的价值接近与注意力限制。结果表明，标准偏好建模可能因忽略注意力约束而产生偏差。该工作深化了对人机交互中人类反馈机制的理解。",
+      "llm_tldr": "本文研究人类有限注意力如何扭曲成对比较在奖励学习中的作用。通过理性忽视模型，将比较的困难区分两种来源：真正的价值接近与注意力限制。结果表明，标准偏好建模可能因忽略注意力约束而产生偏差。该工作深化了对人机交互中人类反馈机制的理解。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05742v1",
+      "source": "arxiv",
+      "title": "PERSONAJUDGE: Simulating Individual Human Preference Judgments with Evaluator-Specific Demonstration Data",
+      "abstract": "Large language models increasingly serve as judges in AI evaluation, but current approaches rely on consensus preferences that ignore individual evaluator variation. We propose a novel simulation approach that combines categorical judgments with evaluator-specific auxiliary data--retrospective reasoning traces and interface telemetry--to enable LLM-based simulation of individual evaluators via in-context learning. We conduct a systematic empirical study of this approach using multi-facet data from 32 trained annotators across 4,200 preference judgments in a 4 x 4 x 4 factorial design. Our key findings: (1) The simulation approach achieves up to 9.9 percentage point improvements over the Base Judge; (2) Reasoning traces provide the largest gains with higher collection efforts, while interface telemetry often hurts rather than helps performance despite being cheaper to collect. (3) Simulation difficulty is systematic, predicted by an evaluator's neutral usage (most clearly on Helpfulness) and divergence from consensus; the neutral-usage tendency--rather than simulatability itself--is the cross-task-stable property (r = 0.728). These results establish both the potential and limits of evaluator-specific auxiliary data for personalized evaluation, offering methodological insights for scaling individual aware AI assessment.",
+      "authors": [
+        "Zeyu He",
+        "Xuan Qi",
+        "Subramanian Chidambaram",
+        "Zhichao Xu",
+        "Vinayak Arannil",
+        "Lydia Chilton",
+        "Alex C. Williams"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-07T01:56:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.05742v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "simulates human evaluator judgments using interface telemetry, relevant to explainable interaction interfaces",
+      "llm_evidence_cn": "利用界面遥测模拟人类评估者判断，与可解释交互界面相关",
+      "llm_evidence": "利用界面遥测模拟人类评估者判断，与可解释交互界面相关",
+      "canonical_evidence": "利用界面遥测模拟人类评估者判断，与可解释交互界面相关",
+      "llm_tldr_en": "Proposes PERSONAJUDGE to simulate individual human preference judgments using retrospective reasoning traces and interface telemetry, improving LLM-based evaluation fidelity.",
+      "llm_tldr_cn": "该论文针对LLM评估忽视个体差异的问题，提出结合分类判断与评估者辅助数据（推理追踪和界面遥测）模拟个体偏好。实验基于32名标注者的4200条偏好数据，该方法在模拟个体判断上提升9.9个百分点，支持可解释性。",
+      "llm_tldr": "该论文针对LLM评估忽视个体差异的问题，提出结合分类判断与评估者辅助数据（推理追踪和界面遥测）模拟个体偏好。实验基于32名标注者的4200条偏好数据，该方法在模拟个体判断上提升9.9个百分点，支持可解释性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.05463v1",
+      "source": "arxiv",
+      "title": "Governable Individuals: An Identity Layer for Embodied Agents That Keep Learning",
+      "abstract": "Embodied artificial intelligence is moving from deployable models to persistent agents that learn in the field, acquire skills and migrate across bodies. Governing such a system means governing an individual, not a model, and existing proposals (agent identifiers, activity logs, guardrails) do not survive an agent that keeps rewriting itself. We propose the governable individual: an agent whose competence may change without bound, but whose authority, memory schema, embodiment rights and capability roster can widen only through signed lifecycle transitions that update a public identity commitment. In our tests, neither learned judgement nor behavioural testing was sufficient to carry this on its own; the load-bearing layer must be architectural. We describe the abstraction, a runtime mechanism that realizes it, and the open problems in between.",
+      "authors": [
+        "Xue Qin",
+        "Simin Luan",
+        "Cong Yang",
+        "Zhijun Li"
+      ],
+      "primary_category": "q-bio.NC",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "published": "2026-07-06T03:04:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.05463v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "proposes an identity layer for governing embodied agents, aligning with human-centered AI design principles",
+      "llm_evidence_cn": "提出具身代理的身份层治理，符合人类中心AI设计原则",
+      "llm_evidence": "提出具身代理的身份层治理，符合人类中心AI设计原则",
+      "canonical_evidence": "提出具身代理的身份层治理，符合人类中心AI设计原则",
+      "llm_tldr_en": "Introduces the governable individual concept, an identity layer for embodied agents that ensures authority and schema changes only through signed lifecycle transitions.",
+      "llm_tldr_cn": "本文提出“可治理个体”概念，为持续学习的具身代理提供身份层。代理的能力可无限变化，但其权限、记忆架构等仅能通过签名的生命周期转换更新。该架构保证了代理的可治理性，对于设计长期可靠的人机交互系统至关重要。",
+      "llm_tldr": "本文提出“可治理个体”概念，为持续学习的具身代理提供身份层。代理的能力可无限变化，但其权限、记忆架构等仅能通过签名的生命周期转换更新。该架构保证了代理的可治理性，对于设计长期可靠的人机交互系统至关重要。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.06214v1",
+      "source": "arxiv",
+      "title": "A toy framework for single and multi-agent human-AI curiosity ecosystems",
+      "abstract": "This paper offers a toy framework for considering curiosity as an ecosystem. First, it suggests that a single agent's inquiry policy (how, when, and why an agent asks a question) depends on how the agent values immediate uncertainty reduction, costs, delayed return, and the value of keeping the question open. A key concept in the framework is that the weights on these decision-related terms can change with experience. For example, a period of cheap, quickly answered questions may change the cost of inquiry on a short timescale and change which kinds of questions the agent is drawn to answer over a longer timescale. Second, these ideas are extended to many agents exploring a shared knowledge landscape, and there the framework tracks inquiry volume, topic diversity, frontier-directed inquiry, redundancy, and reusable knowledge. The result is a conceptual toy framework for studying curiosity ecology and for future efforts towards designing multi-agent AI systems for discovery. It serves as a companion piece for a paper currently under review in Trends in Neurosciences.",
+      "authors": [
+        "Ilya E. Monosov"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-07T12:40:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.06214v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "framework for curiosity-driven inquiry in human-AI ecosystems",
+      "llm_evidence_cn": "人机好奇心生态中的询问策略框架",
+      "llm_evidence": "人机好奇心生态中的询问策略框架",
+      "canonical_evidence": "人机好奇心生态中的询问策略框架",
+      "llm_tldr_en": "Proposes a toy framework for curiosity in human-AI systems, modeling how agents value uncertainty reduction and costs in inquiry policies, extended to multi-agent knowledge landscapes.",
+      "llm_tldr_cn": "该论文提出一个面向人机好奇心生态的玩具框架。建模单智能体询问策略如何权衡不确定性、成本与延迟回报，并随时间变化。扩展到多智能体共享知识场景，跟踪询问量以优化学习。为理解探索行为提供理论基础。",
+      "llm_tldr": "该论文提出一个面向人机好奇心生态的玩具框架。建模单智能体询问策略如何权衡不确定性、成本与延迟回报，并随时间变化。扩展到多智能体共享知识场景，跟踪询问量以优化学习。为理解探索行为提供理论基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
