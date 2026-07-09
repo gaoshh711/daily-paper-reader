@@ -6,43 +6,37 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-08
-- 运行时间：2026-07-08 20:42:23 UTC
+- 最新运行日期：2026-07-09
+- 运行时间：2026-07-09 21:00:53 UTC
 - 运行状态：成功
-- 本次总论文数：7
-- 精读区：3
-- 速读区：4
+- 本次总论文数：5
+- 精读区：4
+- 速读区：1
 
 ### 今日简报（AI）
-今日精选7篇人机交互研究，精读聚焦集体认知与自动化控制两项高分论文。  
-最值得关注：网络科学视角下混合群体认知机制，以及AI服务系统中何时自动化的学习策略。  
-建议进一步探究人机协作中认知模型与自动化阈值的交叉应用。
-- 详情：[/202607/08/README](/202607/08/README)
+今日精读两篇高分论文，聚焦人机协作中的不确定性与社会规范。
+最值得看的是《Robust Human-AI Complementarity under Uncertainty》和《Learning social norms enhances compatibility in dynamic human-AI coordination》，均获9分，分别探讨不确定性下稳健互补与社会规范提升协调兼容性。
+建议深入研读这两篇论文，理解不确定性处理和社会规范建模对实际人机系统设计的关键作用。
+- 详情：[/202607/09/README](/202607/09/README)
 
 ### 精读区论文标签
-1. [Collective Cognition in Hybrid Groups: A Network Science Synthesis](/202607/08/2607.05593v1-collective-cognition-in-hybrid-groups-a-network-science-synthesis)  
+1. [Robust Human-AI Complementarity under Uncertainty](/202607/09/2607.06656v1-robust-human-ai-complementarity-under-uncertainty)  
    标签：评分：9.0/10、query:hai
-   evidence：人机混合群体集体认知的网络科学综合
-2. [Learning When to Automate: Queue Control in Human-AI Service Systems](/202607/08/2607.06017v1-learning-when-to-automate-queue-control-in-human-ai-service-systems)  
-   标签：评分：8.0/10、query:hai
-   evidence：人机服务系统中的队列控制与自动化决策
-3. [Agents That Teach: Towards Designing Incidental Learning Back into AI-Assisted Software Development](/202607/08/2607.06101v1-agents-that-teach-towards-designing-incidental-learning-back-into-ai-assisted-software-development)  
-   标签：评分：8.0/10、query:hai
-   evidence：在AI辅助软件开发中重新设计附带学习
+   evidence：研究人类-AI互补性与错误相关性以实现稳健协作
+2. [Learning social norms enhances compatibility in dynamic human-AI coordination](/202607/09/2607.07021v1-learning-social-norms-enhances-compatibility-in-dynamic-human-ai-coordination)  
+   标签：评分：9.0/10、query:hai
+   evidence：学习社会规范以增强动态人机协调
+3. [Creativity from Friction: Human-AI Interaction for Exploratory Structural Design](/202607/09/2607.07521v1-creativity-from-friction-human-ai-interaction-for-exploratory-structural-design)  
+   标签：评分：9.0/10、query:hai
+   evidence：人机交互在探索性设计中利用摩擦激发创造力
+4. [Two-player Alternate Uses Test: A Controlled Testbed for Interactive Human-AI and Human-Human Co-Creation](/202607/09/2607.07522v1-two-player-alternate-uses-test-a-controlled-testbed-for-interactive-human-ai-and-human-human-co-creation)  
+   标签：评分：9.0/10、query:hai
+   evidence：人类-AI共同创造实验平台；协作方法与益处
 
 ### 速读区论文标签
-1. [Attention Limited Reward Learning](/202607/08/2607.04590v1-attention-limited-reward-learning)  
-   标签：评分：7.0/10、query:hai
-   evidence：研究人类成对比较用于偏好学习，与人机交互概念相关
-2. [Governable Individuals: An Identity Layer for Embodied Agents That Keep Learning](/202607/08/2607.05463v1-governable-individuals-an-identity-layer-for-embodied-agents-that-keep-learning)  
-   标签：评分：7.0/10、query:hai
-   evidence：提出具身代理的身份层治理，符合人类中心AI设计原则
-3. [A toy framework for single and multi-agent human-AI curiosity ecosystems](/202607/08/2607.06214v1-a-toy-framework-for-single-and-multi-agent-human-ai-curiosity-ecosystems)  
-   标签：评分：7.0/10、query:hai
-   evidence：人机好奇心生态中的询问策略框架
-4. [PERSONAJUDGE: Simulating Individual Human Preference Judgments with Evaluator-Specific Demonstration Data](/202607/08/2607.05742v1-personajudge-simulating-individual-human-preference-judgments-with-evaluator-specific-demonstration-data)  
+1. [HumAIN: Human-Aware Implicit Social Robot Navigation](/202607/09/2607.07357v1-humain-human-aware-implicit-social-robot-navigation)  
    标签：评分：6.0/10、query:hai
-   evidence：利用界面遥测模拟人类评估者判断，与可解释交互界面相关
+   evidence：利用人类行为隐式线索的社交机器人导航框架
 
 
 <div class="dpr-home-promo-card">

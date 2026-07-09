@@ -1,0 +1,223 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-09T20:56:54.060590+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.06656v1",
+      "source": "arxiv",
+      "title": "Robust Human-AI Complementarity under Uncertainty",
+      "abstract": "Machine learning models are often intended to augment rather than replace human decision makers, by providing information that is complementary to human judgement.   Yet, in practice, human decision makers routinely fail to realize such complementary gains, even when models provide useful signal.   In this work, we study how asymmetric information about the quality of information available to a human decision maker vs. an AI impacts the ability of a decision maker to extract complementary value from AI predictions.   We show that a key factor is the error correlation structure between human and AI predictions. In particular, when the AI's prediction errors are \\textit{negatively correlated} with those of the human, the decision maker can construct robust strategies which guarantee improvements in expected utility. We empirically investigate whether these conditions for complementarity arise in practice, using real-world forecasting benchmarks.",
+      "authors": [
+        "Yewon Byun",
+        "Bryan Wilder"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-07-07T17:58:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.06656v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "studies human-AI complementarity and error correlation for robust collaboration",
+      "llm_evidence_cn": "研究人类-AI互补性与错误相关性以实现稳健协作",
+      "llm_evidence": "研究人类-AI互补性与错误相关性以实现稳健协作",
+      "canonical_evidence": "研究人类-AI互补性与错误相关性以实现稳健协作",
+      "llm_tldr_en": "This paper examines how asymmetric information affects human-AI complementary gains and shows that negative error correlation enables robust decision strategies.",
+      "llm_tldr_cn": "该论文针对人类决策者在实际中未能从AI预测中获取互补增益的问题，研究了信息不对称的影响，发现人类与AI预测误差的负相关结构是构建稳健互补策略的关键因素，为设计更有效的人机协作系统提供了理论指导。",
+      "llm_tldr": "该论文针对人类决策者在实际中未能从AI预测中获取互补增益的问题，研究了信息不对称的影响，发现人类与AI预测误差的负相关结构是构建稳健互补策略的关键因素，为设计更有效的人机协作系统提供了理论指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07021v1",
+      "source": "arxiv",
+      "title": "Learning social norms enhances compatibility in dynamic human-AI coordination",
+      "abstract": "Humans continuously coordinate with others in dynamic interactions, often through implicit, hard-to-quantify social norms that act as shared tacit expectations among interacting agents. As AI agents, including large language models (LLMs), become embedded in daily life, they increasingly participate in such interactions and reshape social interaction structures. Yet they often fail to coordinate with humans in an effective, considerate, and natural manner. We hypothesize that this gap arises because existing approaches align model behavior with human demonstrations without explicitly quantifying the underlying norms that generate such behavior. We selected pedestrian-vehicle interaction as a representative dynamic interaction and developed a simplified experimental platform that captures its key interactive features. From 3,456 dynamic human interactions collected via this platform, we identified three principles underlying human social norms: outcome predictability, value alignment, and advantage awareness. Incorporating these principles into AI agents significantly improves human-AI coordination. In the closed-loop interaction task with humans, the social-norm-informed LLM achieved a nearly fourfold higher total score than the baseline strategy and outperformed human-human interactions by 43%. These findings indicate that formalizing tacit social norms into explicit, quantifiable principles can enable AI agents to achieve mutually beneficial coordination in dynamic interactions, supporting their more natural integration into human society.",
+      "authors": [
+        "Yi Yang",
+        "Siyuan Liu",
+        "Xin Gao",
+        "Huamu Sun",
+        "Chao Liu",
+        "Qing Zhou",
+        "Bingbing Nie"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-07-08T05:39:08+00:00",
+      "link": "https://arxiv.org/pdf/2607.07021v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "learning social norms for dynamic human-AI coordination",
+      "llm_evidence_cn": "学习社会规范以增强动态人机协调",
+      "llm_evidence": "学习社会规范以增强动态人机协调",
+      "canonical_evidence": "学习社会规范以增强动态人机协调",
+      "llm_tldr_en": "Proposes learning social norms to improve human-AI coordination in dynamic interactions, using pedestrian-vehicle simulation to demonstrate effectiveness.",
+      "llm_tldr_cn": "针对AI在动态交互中与人类协调不佳的问题，提出通过学习隐式社会规范来增强兼容性。以行人-车辆交互为例，开发仿真实验，证明量化潜在规范可提升AI的协调能力，使交互更自然、有效、体贴。",
+      "llm_tldr": "针对AI在动态交互中与人类协调不佳的问题，提出通过学习隐式社会规范来增强兼容性。以行人-车辆交互为例，开发仿真实验，证明量化潜在规范可提升AI的协调能力，使交互更自然、有效、体贴。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07521v1",
+      "source": "arxiv",
+      "title": "Creativity from Friction: Human-AI Interaction for Exploratory Structural Design",
+      "abstract": "AI agents that generate final answers based on user input often do not meet the needs of creative fields. Fields such as structural design and architecture need interactive systems that help users externalise and develop ideas, explore alternatives, and refine partial solutions. The final product of such designs needs to comply with many constraints concerning, e.g., spatial configuration, mechanical behaviour, material quantities, and costs. These constraints create friction in the design process, which can stimulate novel and creative solutions. In this paper, we discuss the misalignment between current generative AI goals to remove friction and provide final solutions and the needs of creators, such as structural designers, who develop ideas through iterative work. We present the design dimensions of systems allowing for constrained human-AI co-creation that rely on vision-language models making structural exploration conversational, multimodal, and responsive to evolving human intent in ways that follow and augment the discipline's creative process. Through a pilot design interface based on these principles and a study with experts in the field, this paper shows how structural designers perceive interactive AI systems and how such systems can support design space exploration by reducing repetitive modelling friction while preserving reflective design friction.",
+      "authors": [
+        "Ricardo Maia Avelino",
+        "Rita Sevastjanova",
+        "Tom Van Mele",
+        "Philippe Block",
+        "Mennatallah El-Assady"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-07-08T15:17:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.07521v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI interaction for exploratory design, friction as creativity driver",
+      "llm_evidence_cn": "人机交互在探索性设计中利用摩擦激发创造力",
+      "llm_evidence": "人机交互在探索性设计中利用摩擦激发创造力",
+      "canonical_evidence": "人机交互在探索性设计中利用摩擦激发创造力",
+      "llm_tldr_en": "Discusses misalignment between generative AI goals and creative design needs, proposing that friction in constraints can stimulate novel solutions.",
+      "llm_tldr_cn": "本文指出当前生成式AI追求消除摩擦以提供最终方案的目标与创作者（如结构设计师）的需求之间存在错位。在结构设计中，空间配置、力学行为等约束产生的摩擦实际上能激发新颖的创意。论文呼吁重新设计交互系统，在帮助用户外化想法、探索替代方案和细化部分解的过程中发挥摩擦的积极作用。",
+      "llm_tldr": "本文指出当前生成式AI追求消除摩擦以提供最终方案的目标与创作者（如结构设计师）的需求之间存在错位。在结构设计中，空间配置、力学行为等约束产生的摩擦实际上能激发新颖的创意。论文呼吁重新设计交互系统，在帮助用户外化想法、探索替代方案和细化部分解的过程中发挥摩擦的积极作用。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07522v1",
+      "source": "arxiv",
+      "title": "Two-player Alternate Uses Test: A Controlled Testbed for Interactive Human-AI and Human-Human Co-Creation",
+      "abstract": "Controlled research on AI ideation typically compares independent agents, while field studies of human-AI collaboration sacrifice experimental control. We introduce a controlled, two-player extension of the Alternate Uses Test (AUT) that enables comparison of human-human and human-AI co-creation under matched interactive conditions, alongside calibrated non-interactive baselines. The platform supports decomposition of performance into three typically confounded factors: participant traits, partner perceptions, and content dynamics. An in-person pilot (N = 62) demonstrates its utility. Under matched time limits, originality with a GPT-4 partner is statistically equivalent to that with a human partner. Approach motivation (BAS Drive) moderates whether interactive partnership benefits originality, and self-reported cognitive outsourcing predicts lower originality specifically in human-human dyads. Prior exposure to highly creative ideas improves later performance, suggesting a \"seeding\" intervention. We release the platform, code, and dataset as a shared testbed for controlled studies of human-AI co-creation.",
+      "authors": [
+        "Babak Hemmatian",
+        "Anita Keshmirian",
+        "Yijun Lin",
+        "Shravan Ramamoorthy",
+        "Maryam Jahadakbar",
+        "Eli Khuri-Reid",
+        "Jingtong Wang",
+        "Sarah Hadjarab",
+        "Sindre Veum",
+        "Pranav Gupta",
+        "Deepak Somaya",
+        "Lav R. Varshney"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-08T15:17:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.07522v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-AI co-creation testbed; collaboration methods and benefits",
+      "llm_evidence_cn": "人类-AI共同创造实验平台；协作方法与益处",
+      "llm_evidence": "人类-AI共同创造实验平台；协作方法与益处",
+      "canonical_evidence": "人类-AI共同创造实验平台；协作方法与益处",
+      "llm_tldr_en": "Introduces a controlled two-player Alternate Uses Test to compare human-human and human-AI co-creation, finding that originality with GPT-4 is equivalent to human partners, enabling decomposition of collaboration factors.",
+      "llm_tldr_cn": "该论文提出了一个受控的双人“替代用途测试”平台，用于在匹配互动条件下比较人类-人类和人类-AI共同创造。该平台能够分解通常混淆的三类因素：参与者特质、伙伴感知和内容动态。通过62人试点实验，发现GPT-4伙伴的原创性与人类伙伴在统计学上等价。该工具为研究人类-AI协作提供了可重复的受控环境。",
+      "llm_tldr": "该论文提出了一个受控的双人“替代用途测试”平台，用于在匹配互动条件下比较人类-人类和人类-AI共同创造。该平台能够分解通常混淆的三类因素：参与者特质、伙伴感知和内容动态。通过62人试点实验，发现GPT-4伙伴的原创性与人类伙伴在统计学上等价。该工具为研究人类-AI协作提供了可重复的受控环境。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.07357v1",
+      "source": "arxiv",
+      "title": "HumAIN: Human-Aware Implicit Social Robot Navigation",
+      "abstract": "Effective social robot navigation requires sensitivity to human behavior, often revealed through subtle skeletal cues like gait and orientation. We present Human-Aware Implicit Social Robot Navigation (HumAIN), a novel framework that fuses implicit social cues directly into the planning loop via knowledge distillation. We first employ a transformer-based teacher model that fuses rich multi-modal inputs, including historic images, skeletal keypoints, robot state, and a robot's target goal, to learn robust, human-aware representations for the robot's future trajectory planning. To enable real-time deployment, we then distill this knowledge into a lightweight student model. By optimizing for both trajectory reconstruction and latent feature alignment with the teacher, the student learns to infer complex social dynamics from minimal inputs. Bridging the prediction-planning gap with an efficient distilled architecture, our method enables robots to reason about human behavior in a manner that is adaptive, robust, and socially compliant. We validate HumAIN through extensive experiments, where it improves trajectory prediction metrics by an average of 29.8% across all metrics compared to state-of-the-art baselines. These results highlight the benefit of using implicit, whole-body cues to achieve human-like navigation awareness on resource-constrained platforms.",
+      "authors": [
+        "Daeun Song",
+        "Nhat Le",
+        "Jeffrey Chen",
+        "Mohammad Nazeri",
+        "Amirreza Payandeh",
+        "Rohan Chandra",
+        "Reuth Mirsky",
+        "Ross Mead",
+        "Ling Xiao",
+        "Xuesu Xiao"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-07-08T12:52:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.07357v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "human-aware social robot navigation using implicit cues from human behavior",
+      "llm_evidence_cn": "利用人类行为隐式线索的社交机器人导航框架",
+      "llm_evidence": "利用人类行为隐式线索的社交机器人导航框架",
+      "canonical_evidence": "利用人类行为隐式线索的社交机器人导航框架",
+      "llm_tldr_en": "Presents HumAIN, a framework that fuses implicit social cues like gait and orientation into robot navigation planning via knowledge distillation, enabling real-time human-aware trajectory planning.",
+      "llm_tldr_cn": "该论文针对社交机器人导航中对人类行为敏感性的需求，提出HumAIN框架，通过知识蒸馏将多模态输入（历史图像、骨骼关键点等）融合到规划循环中。先用Transformer教师模型学习鲁棒的人意识表示，再蒸馏为轻量学生模型用于实时部署。实验表明该方法在保持实时性的同时提升了导航的社交适宜性。",
+      "llm_tldr": "该论文针对社交机器人导航中对人类行为敏感性的需求，提出HumAIN框架，通过知识蒸馏将多模态输入（历史图像、骨骼关键点等）融合到规划循环中。先用Transformer教师模型学习鲁棒的人意识表示，再蒸馏为轻量学生模型用于实时部署。实验表明该方法在保持实时性的同时提升了导航的社交适宜性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
