@@ -1,0 +1,199 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-10T20:07:17.927863+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.02467v1",
+      "source": "arxiv",
+      "title": "Human Capital, Not Model Benchmarks, Predicts Hybrid Intelligence in Forecasting",
+      "abstract": "Whether pairing people with AI helps or hurts is usually reported as a single average effect. Using a real-money prediction market (Polymarket) as an objective, externally resolved benchmark, this pilot shows that the value of human-AI collaboration depends on a specific, measurable form of human capital. Analyzed at the level of the individual forecaster, hybrid performance is trimodal: most people either deferred to the model (matching it) or used it to rubber-stamp a prior guess (performing worse than the model alone), while a minority engaged in genuine complementary reasoning and reached accuracy matching or even exceeding (i.e., lower error than) the market itself. Collaborative traits (perspective-taking, intellectual humility, and curiosity) rather than raw cognitive ability or model benchmarks, distinguished who reached that mode. The results are preliminary but statistically robust, and motivate a pre-registered replication now in preparation.",
+      "authors": [
+        "Vivienne Ming"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "published": "2026-07-02T17:34:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.02467v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Human capital predicts hybrid intelligence in forecasting",
+      "llm_evidence_cn": "人力资本预测预测任务中的混合智能表现",
+      "llm_evidence": "人力资本预测预测任务中的混合智能表现",
+      "canonical_evidence": "人力资本预测预测任务中的混合智能表现",
+      "llm_tldr_en": "Shows that human cognitive traits (perspective-taking, intellectual humility) predict success in human-AI collaborative forecasting.",
+      "llm_tldr_cn": "本文通过实际预测市场（Polymarket）实验发现，人机协作的价值取决于特定人力资本（如视角采择、智识谦逊）。大多数参与者表现不佳，而少数进行真正互补推理的人达到甚至超越市场精度。该研究直接量化了人机协作的效益及其预测因素。",
+      "llm_tldr": "本文通过实际预测市场（Polymarket）实验发现，人机协作的价值取决于特定人力资本（如视角采择、智识谦逊）。大多数参与者表现不佳，而少数进行真正互补推理的人达到甚至超越市场精度。该研究直接量化了人机协作的效益及其预测因素。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07721v1",
+      "source": "arxiv",
+      "title": "Context Graphs for Proactive Enterprise Agents",
+      "abstract": "Retrieval-Augmented Generation (RAG) and agentic frameworks have advanced enterprise AI considerably, yet agents remain fundamentally reactive: they wait for a human query before acting. This paper argues that genuine enterprise productivity gains require proactive agents: systems that surface relevant, actionable information to workers before they ask. We propose the Context Graph, a live relational data structure that models enterprise entities, their relationships, and state transitions over time. Built on this graph, we define a Delta Detection Engine that continuously monitors state changes, a Proactivity Scorer that ranks candidate insights by urgency, relevance, and persona-fit, and a Surfacing Layer powered by an LLM that delivers ranked notifications with grounded explanations. We formalize each component, derive a unified Proactivity Score function, and provide a complete end-to-end Python implementation using NetworkX and the Anthropic Claude API. Evaluation across three generic enterprise case studies (contract lifecycle management, engineering incident response, and sales pipeline hygiene) demonstrates that context-graph-driven proactivity achieves Precision@5 of 0.83, a false positive rate of 0.11, and reduces mean time to surface from 47 minutes (reactive baseline) to under 30 second.",
+      "authors": [
+        "Avinash Kumar"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-04T14:37:23+00:00",
+      "link": "https://arxiv.org/pdf/2607.07721v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proactive agents that surface information to workers before they ask",
+      "llm_evidence_cn": "主动为工人提供信息的代理，无需等待查询",
+      "llm_evidence": "主动为工人提供信息的代理，无需等待查询",
+      "canonical_evidence": "主动为工人提供信息的代理，无需等待查询",
+      "llm_tldr_en": "Proposes Context Graphs to enable proactive enterprise agents that surface relevant information to workers without waiting for queries, moving beyond reactive RAG systems.",
+      "llm_tldr_cn": "当前企业AI代理主要被动响应人类查询。本文提出上下文图这一实时关系数据结构，通过增量检测引擎和主动性评分器，使代理能在人类提问前主动推送相关信息。实验表明该方法提升了信息传递的时效性和相关性，为实现真正主动的人机协作提供了新框架。",
+      "llm_tldr": "当前企业AI代理主要被动响应人类查询。本文提出上下文图这一实时关系数据结构，通过增量检测引擎和主动性评分器，使代理能在人类提问前主动推送相关信息。实验表明该方法提升了信息传递的时效性和相关性，为实现真正主动的人机协作提供了新框架。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.07729v1",
+      "source": "arxiv",
+      "title": "Collective Intelligence with Foundation Models",
+      "abstract": "As foundation models grow in scale and diversity, coordinating multiple models into cooperative reasoning systems offers a path toward safer, more reliable AI. This chapter presents a multi-agent framework where solver models generate independent drafts, each undergoes structured critique and revision by a critic agent, and an aggregator agent synthesizes a final consensus solution. A scoring module provides semantic, numerical, and procedural evaluation across all agents. Through ablation studies on a benchmark spanning calculus, physics, chemistry, biology, economics, optimization, statistics, and mathematics, we isolate the contributions of framework architecture versus model diversity. We compare four configurations: (1) Individual Baseline, (2) Homogeneous Framework using one shared model, (3) Redundant Homogeneous Solvers using multiple instances of the same model, and (4) Heterogeneous Framework with diverse specialized models. Results show that while framework structure and redundant sampling yield modest gains, model heterogeneity is the critical factor driving substantial performance improvements. The heterogeneous configuration achieves superior step-wise accuracy (0.64 vs. 0.54 for individual models; 2.3x improvement over homogeneous configurations) with reduced variance across categories and difficulty levels. Step-wise reasoning quality (correctness of intermediate steps, not just final answers) improves dramatically only with model diversity, showing that heterogeneous agents provide complementary error detection and reasoning refinement essential for explainability and auditability. We discuss architectural principles, evaluation methodology, and implications for Global Applied AI, showing how heterogeneous multi-agent coordination supports transparent, auditable, high-confidence decision-making across scientific and industrial domains.",
+      "authors": [
+        "J. de Curtò",
+        "I. de Zarzà"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-06T19:52:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.07729v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Multi-agent framework for collective intelligence",
+      "llm_evidence_cn": "多智能体协作框架提升集体智能",
+      "llm_evidence": "多智能体协作框架提升集体智能",
+      "canonical_evidence": "多智能体协作框架提升集体智能",
+      "llm_tldr_en": "Proposes a multi-agent framework with solver, critic, and aggregator for cooperative reasoning among foundation models.",
+      "llm_tldr_cn": "本文提出一个多智能体框架，包含求解器、评论者和聚合器，用于基础模型间的协作推理。通过消融研究在多个学科基准上验证了框架架构与模型多样性的贡献。尽管主要聚焦AI智能体间协作，但其方法可迁移到人机混合智能场景，为理解人机协作机制提供参考。",
+      "llm_tldr": "本文提出一个多智能体框架，包含求解器、评论者和聚合器，用于基础模型间的协作推理。通过消融研究在多个学科基准上验证了框架架构与模型多样性的贡献。尽管主要聚焦AI智能体间协作，但其方法可迁移到人机混合智能场景，为理解人机协作机制提供参考。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.08285v1",
+      "source": "arxiv",
+      "title": "Psychological Competence as a Missing Dimension in AI Evaluation",
+      "abstract": "Current AI evaluation frameworks focus primarily on technical performance, including accuracy, robustness, reasoning ability, and policy compliance. These measures remain essential, but they are not sufficient for systems that interact directly with users through natural language. Human-facing AI systems are increasingly used as advisors, coaches, tutors, and companions. In these roles, their responses can shape how users reason, interpret emotions, form beliefs, calibrate trust, and make decisions. The relevant unit of evaluation is therefore not only the model, but the human-AI interaction. This paper introduces psychological competence as a missing dimension in AI evaluation. We define psychological competence as the capacity of a human-facing AI system to support user cognition, emotional interpretation, and behavioral decision-making in ways that are appropriate to the user, context, and purpose of the interaction. This includes interaction properties such as framing, tone, perceived authority, responsiveness, uncertainty handling, and conversational guidance. Existing evaluation approaches capture parts of this problem but rarely assess these psychological effects directly. Drawing on behavioral science and human-AI interaction research, we outline a conceptual framework for psychological competence and its core domains. Rather than proposing a specific benchmark, we define the construct, clarify its boundaries, and describe how it may be assessed through scenario-based probes, structured human evaluation, and model-assisted evaluation methods. We argue that psychological competence should become a core consideration for model providers, deploying organizations, researchers, and regulators concerned with the real-world effects of human-facing AI systems.",
+      "authors": [
+        "Marcos Economides",
+        "Paul M. Sacher",
+        "Samuel Salzer",
+        "Alexis Michelle Abellar",
+        "Fendi Tsim",
+        "Antoine Ferrère"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-09T09:29:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.08285v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "introduces psychological competence as a dimension for evaluating human-facing AI",
+      "llm_evidence_cn": "提出心理能力作为面向人类AI的评估维度",
+      "llm_evidence": "提出心理能力作为面向人类AI的评估维度",
+      "canonical_evidence": "提出心理能力作为面向人类AI的评估维度",
+      "llm_tldr_en": "Proposes psychological competence as a missing evaluation dimension for human-facing AI, emphasizing human-AI interaction beyond technical metrics.",
+      "llm_tldr_cn": "当前AI评估偏重技术指标，忽略了与用户交互时对心理层面的影响。本文定义心理能力为面向人类AI系统影响用户推理、信任等的能力，并论证其应纳入评估。该工作为人类中心AI的设计与评估提供了新准则，强调交互质量比纯性能更重要。",
+      "llm_tldr": "当前AI评估偏重技术指标，忽略了与用户交互时对心理层面的影响。本文定义心理能力为面向人类AI系统影响用户推理、信任等的能力，并论证其应纳入评估。该工作为人类中心AI的设计与评估提供了新准则，强调交互质量比纯性能更重要。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.08495v1",
+      "source": "arxiv",
+      "title": "The Context Access Divide: Interaction-Level Architecture as a Complementary Dimension of Agentic Inequality",
+      "abstract": "Sharp et al. (2025) introduce \"agentic inequality\" as a framework for analyzing disparities in access to AI agents across three dimensions: availability, quality, and quantity. These person- and organization-level dimensions characterize who can access agents and at what capability, but do not address a structurally important divide operating at a finer level: the individual interaction. Two users with nominally equivalent agent access may experience qualitatively different AI utility depending on whether the system can autonomously retrieve context from the user's knowledge corpus (Dynamic Context Retrieval) or requires the user to manually identify and attach relevant documents at each query (Manual Attachment). We term this the Context Access Divide (CAD). For knowledge-intensive workers whose intellectual capital spans tens of thousands of files, the CAD constitutes a qualitative threshold in AI usefulness: below it, the cognitive burden of context curation falls on the human, reproducing the inefficiencies AI is meant to eliminate. We propose contextuality -- the degree to which an AI system autonomously accesses a user's accumulated knowledge capital -- as a dimension of AI-mediated inequality that complements, but is not reducible to, the Sharp et al. framework. We formalize the CAD with a probabilistic model grounded in the fan effect literature in cognitive psychology, demonstrating that manual context attachment leads to a combinatorial collapse in task-success probability as corpus size and task conjunctivity grow, while dynamic retrieval architectures are structurally insulated from this collapse. We analyze the technical basis of this divide in the Model Context Protocol (MCP) and retrieval-augmented generation (RAG) architectures, and examine its implications for knowledge-work stratification and AI platform governance.",
+      "authors": [
+        "Masahiro Fujita"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "published": "2026-07-09T13:53:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.08495v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "interaction-level divide in context access for AI agents",
+      "llm_evidence_cn": "AI代理上下文访问的交互层面差异",
+      "llm_evidence": "AI代理上下文访问的交互层面差异",
+      "canonical_evidence": "AI代理上下文访问的交互层面差异",
+      "llm_tldr_en": "Identifies a context access divide where users' AI utility depends on autonomous vs. manual context retrieval.",
+      "llm_tldr_cn": "该论文指出代理不平等中一个被忽视的交互层面：用户能否自主获取上下文决定了AI效用的差异，提出动态上下文检索与手动附件两种模式的对比分析。",
+      "llm_tldr": "该论文指出代理不平等中一个被忽视的交互层面：用户能否自主获取上下文决定了AI效用的差异，提出动态上下文检索与手动附件两种模式的对比分析。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
