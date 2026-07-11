@@ -6,37 +6,22 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-10
-- 运行时间：2026-07-10 20:10:45 UTC
+- 最新运行日期：2026-07-11
+- 运行时间：2026-07-11 20:15:20 UTC
 - 运行状态：成功
-- 本次总论文数：5
-- 精读区：4
-- 速读区：1
+- 本次总论文数：0
+- 精读区：0
+- 速读区：0
 
 ### 今日简报（AI）
-1) 今日精读两篇高分论文：人力资本比模型基准更能预测混合智能表现，上下文图技术可赋能主动型企业代理。  
-2) 最值得看的方向：人力资本是预测混合智能的关键；上下文图能帮助代理主动获取信息。  
-3) 建议普通读者关注人力资本在AI应用中的核心价值，并警惕上下文访问鸿沟带来的不平等。
-- 详情：[/202607/10/README](/202607/10/README)
+> 今日无新推荐，系统未产出可展示论文。
+- 详情：[/202607/11/README](/202607/11/README)
 
 ### 精读区论文标签
-1. [Human Capital, Not Model Benchmarks, Predicts Hybrid Intelligence in Forecasting](/202607/10/2607.02467v1-human-capital-not-model-benchmarks-predicts-hybrid-intelligence-in-forecasting)  
-   标签：评分：9.0/10、query:hai
-   evidence：人力资本预测预测任务中的混合智能表现
-2. [Context Graphs for Proactive Enterprise Agents](/202607/10/2607.07721v1-context-graphs-for-proactive-enterprise-agents)  
-   标签：评分：8.0/10、query:hai
-   evidence：主动为工人提供信息的代理，无需等待查询
-3. [Collective Intelligence with Foundation Models](/202607/10/2607.07729v1-collective-intelligence-with-foundation-models)  
-   标签：评分：8.0/10、query:hai
-   evidence：多智能体协作框架提升集体智能
-4. [Psychological Competence as a Missing Dimension in AI Evaluation](/202607/10/2607.08285v1-psychological-competence-as-a-missing-dimension-in-ai-evaluation)  
-   标签：评分：8.0/10、query:hai
-   evidence：提出心理能力作为面向人类AI的评估维度
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [The Context Access Divide: Interaction-Level Architecture as a Complementary Dimension of Agentic Inequality](/202607/10/2607.08495v1-the-context-access-divide-interaction-level-architecture-as-a-complementary-dimension-of-agentic-inequality)  
-   标签：评分：7.0/10、query:hai
-   evidence：AI代理上下文访问的交互层面差异
+- 本次无速读推荐。
 
 
 <div class="dpr-home-promo-card">
