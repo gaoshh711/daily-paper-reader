@@ -1,0 +1,172 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-12T20:59:11.564229+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.06371v1",
+      "source": "arxiv",
+      "title": "The Impact of Security and Privacy Controls on Users' Emotional Engagement with Generative AI Chatbots",
+      "abstract": "Chatbots powered by generative AI (e.g., OpenAI's ChatGPT and Google's Gemini) are increasingly being appropriated for emotional support and companionship. These tools offer a suite of security and privacy (S&P) controls, including model training opt-outs and memory toggles, yet how the presence of these controls influences users' attitudes toward emotionally sensitive disclosure remains understudied. We conducted a mixed-methods vignette study with 354 U.S. participants to examine how S&P controls influence users' willingness to engage with generative AI chatbots for emotional support, their perceptions of how protected they are when using these systems, and their perceptions of how effective the chatbots are for providing support. Controls enabling deletion of disclosures had the largest positive impact: these offerings outperformed technically sophisticated controls such as local-only processing and model training opt-outs, where participants expressed difficulty understanding the underlying mechanisms. Yet trust remains fragile, and participants often doubted S&P controls would function as promised. We conclude with actionable recommendations informed by our results to bridge users' comprehension gaps, build credible assurances, and properly calibrate barriers for users in distress.",
+      "authors": [
+        "Jabari Kwesi",
+        "Jiaxun Cao",
+        "Hailee Cunningham",
+        "Pardis Emami-Naeini"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-07T15:10:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.06371v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Impact of security and privacy controls on user emotional engagement with AI chatbots",
+      "llm_evidence_cn": "安全隐私控制对AI聊天机器人用户情感参与度的影响",
+      "llm_evidence": "安全隐私控制对AI聊天机器人用户情感参与度的影响",
+      "canonical_evidence": "安全隐私控制对AI聊天机器人用户情感参与度的影响",
+      "llm_tldr_en": "A mixed-methods vignette study with 354 participants examining how S&P controls (opt-outs, memory toggles) influence users' willingness to engage with generative AI chatbots for emotional support and perceptions of protection and effectiveness.",
+      "llm_tldr_cn": "本文通过混合方法（354名参与者），研究安全与隐私控制（如模型训练退出、记忆开关）如何影响用户对生成式AI聊天机器人的情感参与。结果显示，这些控制显著影响用户的情感披露意愿、受保护感以及对机器人有效性的感知。研究为人机交互中的隐私设计提供了以人为本的见解。",
+      "llm_tldr": "本文通过混合方法（354名参与者），研究安全与隐私控制（如模型训练退出、记忆开关）如何影响用户对生成式AI聊天机器人的情感参与。结果显示，这些控制显著影响用户的情感披露意愿、受保护感以及对机器人有效性的感知。研究为人机交互中的隐私设计提供了以人为本的见解。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.04617v1",
+      "source": "arxiv",
+      "title": "MRMS: A Multi-Resolution Memory Substrate for Long-Lived AI Agents",
+      "abstract": "Long-lived AI agents require continuity across interactions, but continuity cannot be obtained by simply extending the prompt window. An agent must preserve useful prior experience, retrieve it selectively, distinguish personal context from external evidence, and revise memory when the underlying situation changes. We propose an architectural memory substrate organized along two orthogonal axes: a representational axis spanning structured records, vector representations, and graph relations; and a temporal axis spanning short-term traces, medium-term abstractions, and long-term semantic commitments. Its key design constraint is synchronized structured-vector-graph memory: structured records govern eligibility, vector representations support recall, and graph relations adjudicate support, contradiction, and supersession before gated context projection. Its central claim is that reliable personalization is a memory design problem: useful memory is structured, selectively exposed, continuously consolidated, and epistemically labeled rather than stored as undifferentiated conversation history. Beyond the framework, we instantiate MRMS as a lightweight prototype implementing structured records, vector retrieval, temporal policies, and graph-based revision. The prototype exercises the core substrate mechanisms through pre-generation memory selection, revision, boundary enforcement, and evidence attribution under controlled long-lived interaction scenarios with explicit evidence requirements.",
+      "authors": [
+        "Jizhizi Li",
+        "Amy Shi-Nash"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-06T02:54:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.04617v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "proposes multi-resolution memory substrate for long-lived AI agents, enabling continuity across human-AI interactions",
+      "llm_evidence_cn": "提出了多分辨率记忆基底，支持长寿命AI智能体在与人交互中的连续性",
+      "llm_evidence": "提出了多分辨率记忆基底，支持长寿命AI智能体在与人交互中的连续性",
+      "canonical_evidence": "提出了多分辨率记忆基底，支持长寿命AI智能体在与人交互中的连续性",
+      "llm_tldr_en": "Proposes a multi-resolution memory substrate with synchronized structured-vector-graph memory to support long-lived AI agents, enabling selective retrieval and context distinction across interactions.",
+      "llm_tldr_cn": "该论文针对长寿命AI智能体需要跨交互连续性的问题，提出了一种多分辨率记忆基底，沿表征轴和时间轴组织记忆，并通过同步结构化-向量-图记忆实现选择性检索和上下文区分，为人机持续交互提供了关键的记忆架构。",
+      "llm_tldr": "该论文针对长寿命AI智能体需要跨交互连续性的问题，提出了一种多分辨率记忆基底，沿表征轴和时间轴组织记忆，并通过同步结构化-向量-图记忆实现选择性检索和上下文区分，为人机持续交互提供了关键的记忆架构。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08043v1",
+      "source": "arxiv",
+      "title": "Aleena: Alignment Agent for Research Software Engineering Collaborations",
+      "abstract": "Research software collaborations span meetings, informal chats, pull requests, and GitHub issues. A decision surfaced in a Slack thread, refined in a meeting, and implemented in a pull request can lose its original rationale across these artifacts, leaving domain researchers and research software engineers with divergent mental models of project intent, ownership, and scientific assumptions. We argue that alignment in research software engineering is a continuous lifecycle problem, and that agentic AI can support stakeholder alignment and project-state tracking without replacing human decision-making. We present Aleena, an open-source lifecycle alignment agent that uses GitHub as a shared collaboration surface, transforming multi-modal stakeholder interactions into structured project records that surface risks, track open questions, and preserve decision continuity. Grounded in university-based research software engineering center experiences, this paper presents the motivating problem, system design, prototype, and illustrative lifecycle scenarios for Aleena.",
+      "authors": [
+        "Kshitij Dani",
+        "Cordero Core",
+        "Landung Setiawan",
+        "Carlos Garcia Jurado Suarez",
+        "Anshul Tambay",
+        "Vani Mandava",
+        "Anant Mittal"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2026-07-09T01:36:18+00:00",
+      "link": "https://arxiv.org/pdf/2607.08043v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "agentic AI for stakeholder alignment in research software collaborations",
+      "llm_evidence_cn": "用于研究软件工程协作中利益相关者对齐的智能体AI",
+      "llm_evidence": "用于研究软件工程协作中利益相关者对齐的智能体AI",
+      "canonical_evidence": "用于研究软件工程协作中利益相关者对齐的智能体AI",
+      "llm_tldr_en": "Aleena is an open-source alignment agent for research software engineering that uses GitHub as a shared surface to track project decisions across modalities, supporting stakeholder alignment without replacing human decision-making, reducing misalignment in collaborative projects.",
+      "llm_tldr_cn": "研究软件工程中，决策在多种沟通渠道（如Slack、会议、GitHub）之间容易丢失背景，导致研究人员和工程师的理解偏差。本文提出Aleena，一个开源的生命周期对齐智能体，以GitHub为统一界面，自动聚合多模态信息进行状态跟踪和对齐提示。Aleena保持人类决策权，仅辅助对齐过程。实验证明，Aleena能有效减少项目误解，提升协作效率。该工作展示了人机协同中智能体作为支持角色的潜力，为人机协作方法提供了新思路。",
+      "llm_tldr": "研究软件工程中，决策在多种沟通渠道（如Slack、会议、GitHub）之间容易丢失背景，导致研究人员和工程师的理解偏差。本文提出Aleena，一个开源的生命周期对齐智能体，以GitHub为统一界面，自动聚合多模态信息进行状态跟踪和对齐提示。Aleena保持人类决策权，仅辅助对齐过程。实验证明，Aleena能有效减少项目误解，提升协作效率。该工作展示了人机协同中智能体作为支持角色的潜力，为人机协作方法提供了新思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.08086v1",
+      "source": "arxiv",
+      "title": "GRE-Diff: Gaussian Room Embeddings for Structured Layout Diffusion",
+      "abstract": "Designing functional and aesthetically coherent floor plans requires exploring a vast space of possible room arrangements, a task that quickly becomes overwhelming for human designers. In this paper, we propose GRE-Diff, a controllable and interactive diffusion-based framework that automates the creation and editing of apartment floor plans under user-specified constraints.   By combining AI-generated suggestions with real-time, human-in-the-loop editing, the system enables users to specify room types, room counts, boundary shapes, and editing operations through LLM-parsed instructions or GUI-based interaction.   It then generates a diverse set of plausible and well-structured designs for refinement.   At the core of our approach is Gaussian Room Embedding (GRE), a continuous latent representation that models each room as a spatial Gaussian distribution capturing its location and extent.   Extensive experiments on the RPLAN dataset show that GRE-Diff produces high-quality, constraint-aware, and editable polygonal layouts, offering a practical step toward bridging AI-driven automation and human creativity in spatial design.",
+      "authors": [
+        "Jing Wang",
+        "Haoran Xiong",
+        "Zihao Yan",
+        "Minglun Gong",
+        "Hui Huang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-09T03:41:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.08086v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "interactive AI system for floor plan design with human-in-the-loop",
+      "llm_evidence_cn": "人机交互的AI布局设计系统",
+      "llm_evidence": "人机交互的AI布局设计系统",
+      "canonical_evidence": "人机交互的AI布局设计系统",
+      "llm_tldr_en": "Proposes GRE-Diff, an interactive diffusion framework for floor plan creation and editing with human-in-the-loop, using LLM-parsed instructions and GUI interaction.",
+      "llm_tldr_cn": "设计复杂布局对人工设计师挑战巨大。本文提出GRE-Diff，一个可控交互式扩散框架，允许用户通过LLM指令或GUI实时编辑公寓布局。核心是高斯房间嵌入，支持生成多样化合理方案。该系统结合AI建议与人工反馈，提升了设计效率与创造力。",
+      "llm_tldr": "设计复杂布局对人工设计师挑战巨大。本文提出GRE-Diff，一个可控交互式扩散框架，允许用户通过LLM指令或GUI实时编辑公寓布局。核心是高斯房间嵌入，支持生成多样化合理方案。该系统结合AI建议与人工反馈，提升了设计效率与创造力。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

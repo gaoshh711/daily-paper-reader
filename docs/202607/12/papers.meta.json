@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-12",
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T21:01:51",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/12/2607.06371v1-the-impact-of-security-and-privacy-controls-on-users-emotional-engagement-with-generative-ai-chatbots",
+      "section": "quick",
+      "title_en": "The Impact of Security and Privacy Controls on Users' Emotional Engagement with Generative AI Chatbots",
+      "authors": "Jabari Kwesi, Jiaxun Cao, Hailee Cunningham, Pardis Emami-Naeini",
+      "date": "2026-07-07",
+      "pdf": "https://arxiv.org/pdf/2607.06371v1",
+      "score": "7.0",
+      "evidence": "安全隐私控制对AI聊天机器人用户情感参与度的影响",
+      "tldr": "生成式AI聊天机器人正被用于情感支持，但其安全与隐私控制如何影响用户情感披露尚不明确。本研究通过354名美国参与者的混合方法小场景实验，发现删除披露的控制对用户意愿提升最大，而本地处理等复杂控制用户难以理解。信任依然脆弱，用户常怀疑控制能否兑现承诺。据此提出弥补理解差距、建立可信保障和校准障碍的建议。",
+      "tags": "query:hai",
+      "abstract_en": "Chatbots powered by generative AI (e.g., OpenAI's ChatGPT and Google's Gemini) are increasingly being appropriated for emotional support and companionship. These tools offer a suite of security and privacy (S&P) controls, including model training opt-outs and memory toggles, yet how the presence of these controls influences users' attitudes toward emotionally sensitive disclosure remains understudied. We conducted a mixed-methods vignette study with 354 U.S. participants to examine how S&P controls influence users' willingness to engage with generative AI chatbots for emotional support, their perceptions of how protected they are when using these systems, and their perceptions of how effective the chatbots are for providing support. Controls enabling deletion of disclosures had the largest positive impact: these offerings outperformed technically sophisticated controls such as local-only processing and model training opt-outs, where participants expressed difficulty understanding the underlying mechanisms. Yet trust remains fragile, and participants often doubted S&P controls would function as promised. We conclude with actionable recommendations informed by our results to bridge users' comprehension gaps, build credible assurances, and properly calibrate barriers for users in distress.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/12/2607.08043v1-aleena-alignment-agent-for-research-software-engineering-collaborations",
+      "section": "quick",
+      "title_en": "Aleena: Alignment Agent for Research Software Engineering Collaborations",
+      "authors": "Kshitij Dani, Cordero Core, Landung Setiawan, Carlos Garcia Jurado Suarez, Anshul Tambay, Vani Mandava, Anant Mittal",
+      "date": "2026-07-09",
+      "pdf": "https://arxiv.org/pdf/2607.08043v1",
+      "score": "7.0",
+      "evidence": "用于研究软件工程协作中利益相关者对齐的智能体AI",
+      "tldr": "研究软件工程协作中，决策分散于Slack、会议、PR等多模态媒介，导致领域研究者与RSE的心智模型分歧。为此提出Aleena，一个基于GitHub的生命周期对齐代理，自动捕获交互并转化为结构化记录，追踪开放问题和决策连续性。原型在RSE中心场景中验证了风险追踪与决策保存能力。该方法在不替代人类决策的前提下，通过代理AI支持利益相关者对齐和项目状态跟踪。",
+      "tags": "query:hai",
+      "abstract_en": "Research software collaborations span meetings, informal chats, pull requests, and GitHub issues. A decision surfaced in a Slack thread, refined in a meeting, and implemented in a pull request can lose its original rationale across these artifacts, leaving domain researchers and research software engineers with divergent mental models of project intent, ownership, and scientific assumptions. We argue that alignment in research software engineering is a continuous lifecycle problem, and that agentic AI can support stakeholder alignment and project-state tracking without replacing human decision-making. We present Aleena, an open-source lifecycle alignment agent that uses GitHub as a shared collaboration surface, transforming multi-modal stakeholder interactions into structured project records that surface risks, track open questions, and preserve decision continuity. Grounded in university-based research software engineering center experiences, this paper presents the motivating problem, system design, prototype, and illustrative lifecycle scenarios for Aleena.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/12/2607.08086v1-gre-diff-gaussian-room-embeddings-for-structured-layout-diffusion",
+      "section": "quick",
+      "title_en": "GRE-Diff: Gaussian Room Embeddings for Structured Layout Diffusion",
+      "authors": "Jing Wang, Haoran Xiong, Zihao Yan, Minglun Gong, Hui Huang",
+      "date": "2026-07-09",
+      "pdf": "https://arxiv.org/pdf/2607.08086v1",
+      "score": "7.0",
+      "evidence": "人机交互的AI布局设计系统",
+      "tldr": "室内布局设计空间庞大，人工设计效率低。本文提出GRE-Diff，基于扩散模型的可控交互框架，通过LLM解析指令或GUI输入约束，自动生成并编辑公寓平面图。核心创新为高斯房间嵌入（GRE），用连续高斯分布表示房间位置和范围。在RPLAN数据集上实验表明，该方法能生成高质量、符合约束且可编辑的多边形布局，有效融合AI自动化与人类创造力。",
+      "tags": "query:hai",
+      "abstract_en": "Designing functional and aesthetically coherent floor plans requires exploring a vast space of possible room arrangements, a task that quickly becomes overwhelming for human designers. In this paper, we propose GRE-Diff, a controllable and interactive diffusion-based framework that automates the creation and editing of apartment floor plans under user-specified constraints.   By combining AI-generated suggestions with real-time, human-in-the-loop editing, the system enables users to specify room types, room counts, boundary shapes, and editing operations through LLM-parsed instructions or GUI-based interaction.   It then generates a diverse set of plausible and well-structured designs for refinement.   At the core of our approach is Gaussian Room Embedding (GRE), a continuous latent representation that models each room as a spatial Gaussian distribution capturing its location and extent.   Extensive experiments on the RPLAN dataset show that GRE-Diff produces high-quality, constraint-aware, and editable polygonal layouts, offering a practical step toward bridging AI-driven automation and human creativity in spatial design.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/12/2607.04617v1-mrms-a-multi-resolution-memory-substrate-for-long-lived-ai-agents",
+      "section": "quick",
+      "title_en": "MRMS: A Multi-Resolution Memory Substrate for Long-Lived AI Agents",
+      "authors": "Jizhizi Li, Amy Shi-Nash",
+      "date": "2026-07-06",
+      "pdf": "https://arxiv.org/pdf/2607.04617v1",
+      "score": "6.0",
+      "evidence": "提出了多分辨率记忆基底，支持长寿命AI智能体在与人交互中的连续性",
+      "tldr": "长期AI智能体需要跨越交互的连续性，但仅靠扩大提示窗口无法实现。MRMS提出沿表示轴和时间轴组织记忆的多分辨率基底，核心是同步结构化-向量-图记忆机制，由结构化记录控制资格，向量支持召回，图关系裁决矛盾后门控投影。原型验证了在长期交互中记忆选择、修订、边界强制和证据归因。该工作主张可靠个性化本质是记忆设计问题，强调结构化、选择性暴露和持续巩固。",
+      "tags": "query:hai",
+      "abstract_en": "Long-lived AI agents require continuity across interactions, but continuity cannot be obtained by simply extending the prompt window. An agent must preserve useful prior experience, retrieve it selectively, distinguish personal context from external evidence, and revise memory when the underlying situation changes. We propose an architectural memory substrate organized along two orthogonal axes: a representational axis spanning structured records, vector representations, and graph relations; and a temporal axis spanning short-term traces, medium-term abstractions, and long-term semantic commitments. Its key design constraint is synchronized structured-vector-graph memory: structured records govern eligibility, vector representations support recall, and graph relations adjudicate support, contradiction, and supersession before gated context projection. Its central claim is that reliable personalization is a memory design problem: useful memory is structured, selectively exposed, continuously consolidated, and epistemically labeled rather than stored as undifferentiated conversation history. Beyond the framework, we instantiate MRMS as a lightweight prototype implementing structured records, vector retrieval, temporal policies, and graph-based revision. The prototype exercises the core substrate mechanisms through pre-generation memory selection, revision, boundary enforcement, and evidence attribution under controlled long-lived interaction scenarios with explicit evidence requirements.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
