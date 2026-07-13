@@ -1,0 +1,135 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-13T20:18:24.896359+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.09018v1",
+      "source": "arxiv",
+      "title": "Central Tendency Bias in Human Selection of AI-Generated Design Variations",
+      "abstract": "Image-generation AI systems increasingly support creative work by producing multiple design variations for users to evaluate and select. In such human-AI co-creation workflows, selection becomes a critical stage where human judgment guides AI-generated possibilities toward final outcomes. While presenting multiple alternatives is intended to encourage exploration, the simultaneous multi-option presentation may introduce systematic biases in human decision making. Drawing on ensemble perception theory, we investigate whether these interfaces induce central tendency bias-the tendency to favor options closer to the center of a design set. We conducted a controlled experiment manipulating the variance of design sets (high vs. low) and measured participants' selections in both aesthetic preference and representativeness tasks. Results show that higher variance increases the selection of center-proximal designs across both tasks. These findings suggest that multi-variation interfaces in image-generation AI systems may constrain selection diversity, revealing a potential tension between diversity in generated outputs and diversity in human selection outcomes.",
+      "authors": [
+        "Huiyang Chen",
+        "Keqing Jiao"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-10T00:53:30+00:00",
+      "link": "https://arxiv.org/pdf/2607.09018v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human bias in selecting AI-generated design variations during co-creation",
+      "llm_evidence_cn": "人机共创中人类选择AI生成设计变体时的偏见",
+      "llm_evidence": "人机共创中人类选择AI生成设计变体时的偏见",
+      "canonical_evidence": "人机共创中人类选择AI生成设计变体时的偏见",
+      "llm_tldr_en": "Reveals central tendency bias in human selection of AI-generated design variations, impacting human-AI co-creation workflows.",
+      "llm_tldr_cn": "本文发现用户在评估AI生成的设计变体时存在中心趋势偏好——倾向于选择接近集合中心的选项。通过实验操纵设计集方差，验证了该偏向在人机共创中的存在，并指出多选项同时呈现可能抑制探索性选择。该工作直接揭示了人机协作界面中的决策偏差。",
+      "llm_tldr": "本文发现用户在评估AI生成的设计变体时存在中心趋势偏好——倾向于选择接近集合中心的选项。通过实验操纵设计集方差，验证了该偏向在人机共创中的存在，并指出多选项同时呈现可能抑制探索性选择。该工作直接揭示了人机协作界面中的决策偏差。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.09215v1",
+      "source": "arxiv",
+      "title": "Configurable AI Coding Assistants: Designing For Developers Who Like to Be in Control",
+      "abstract": "AI coding assistants are now widely used in professional development, yet they offer only limited ways for developers to control how they behave. In this paper, we investigate what kinds of configurations experienced developers want in coding assistants, how they prioritize different types of configuration needs, and which interface mechanisms they prefer. We first synthesize product documentation and prior research on trust and personalization to compile a list of 33 configuration options, grouped into four categories: Code suggestions, System & policies, Human-assistant interaction, and Users & their personal context. We then conduct a survey with 56 professional developers and 7 design sessions in which participants arrange configurations into their perfect control board and talk about their needs and experiences in more depth.   Developers report strong interest in configurability: 72.6% of usefulness ratings are positive, while only around a third indicate that the corresponding configuration is known to participants in their tools. Demand is particularly high for task-related controls such as minimum confidence thresholds, visibility of suggestion quality, and response length, whereas many persona-related configurations are seen as unnecessary. In this paper, we discuss the implications for designing more unified and discoverable configuration surfaces for future coding assistants",
+      "authors": [
+        "Ekaterina Koshchenko",
+        "Jovana Stankovic",
+        "Ilya Zakharov",
+        "Agnia Sergeyuk"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-10T09:06:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.09215v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Design study on configurable AI coding assistants focusing on developer control and human-centered design",
+      "llm_evidence_cn": "关于可配置AI编码助手的设计研究，聚焦开发者控制和以人为中心的设计",
+      "llm_evidence": "关于可配置AI编码助手的设计研究，聚焦开发者控制和以人为中心的设计",
+      "canonical_evidence": "关于可配置AI编码助手的设计研究，聚焦开发者控制和以人为中心的设计",
+      "llm_tldr_en": "Investigates developer preferences for AI coding assistant configurations, synthesizing 33 options and conducting surveys and design sessions.",
+      "llm_tldr_cn": "该论文通过调查56名专业开发者和7次设计会议，研究了开发者对AI编码助手配置的需求，包括代码建议、系统策略、人机交互和用户上下文四类共33个选项，并评估了他们的优先偏好和界面机制，为以人为中心的AI编码助手设计提供了实证指导。",
+      "llm_tldr": "该论文通过调查56名专业开发者和7次设计会议，研究了开发者对AI编码助手配置的需求，包括代码建议、系统策略、人机交互和用户上下文四类共33个选项，并评估了他们的优先偏好和界面机制，为以人为中心的AI编码助手设计提供了实证指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.04433v1",
+      "source": "arxiv",
+      "title": "Autonomous Information Seeking: A Roadmap for Agentic Recommender Systems",
+      "abstract": "The rapid integration of large language model-based agents into recommender systems has driven a shift from static, ranking-based pipelines toward autonomous and interactive systems that can reason, plan, and act. This survey provides a comprehensive overview of this emerging landscape by introducing a unified taxonomy grounded in the level of autonomy and three core paradigms of agentic recommender systems: agent-assisted recommendation, agent-as-recommender, and agent-as-user-simulator. The autonomy framework organizes existing methods along increasing capabilities in proactivity, context awareness, interaction flexibility, and adaptivity. Building on this framework, the survey analyzes how each paradigm adopts different agentic architectures and how agents enhance key components such as profiles, memory, tool use, workflows, and optimization mechanisms. We further examine evaluation methodologies for agentic recommendation, covering automated metrics, LLM-based judging, and simulation-based assessment, and discuss their limitations in capturing reasoning quality, user experience, and system behavior. Beyond existing evaluation protocols, we further discuss unresolved issues in evaluating agentic recommender systems, including trajectory-level assessment, agent contribution analysis, and calibration of user simulation. Lastly, the survey outlines open challenges in lifelong user modeling, contextual abstraction, multimodal alignment, controllability, trustworthiness, privacy, scalability, and efficiency. Together, these analyses establish a unified foundation for understanding the current progress of agentic recommender systems and highlight promising opportunities for developing more autonomous, reliable, and human-aligned recommendation agents.",
+      "authors": [
+        "Xinyu Lin",
+        "Yashar Deldjoo",
+        "Sunhao Dai",
+        "Honghui Bao",
+        "Xiaopeng Ye",
+        "Fatemeh Nazary",
+        "Wenjie Wang",
+        "Tommaso Di Noia",
+        "Jun Xu",
+        "Tat-Seng Chua"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "published": "2026-07-05T17:55:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.04433v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Survey on agentic recommender systems discussing interactive and autonomous paradigms, relevant to human-AI interaction",
+      "llm_evidence_cn": "关于代理推荐系统的综述，讨论交互式和自主范式，与人机交互相关",
+      "llm_evidence": "关于代理推荐系统的综述，讨论交互式和自主范式，与人机交互相关",
+      "canonical_evidence": "关于代理推荐系统的综述，讨论交互式和自主范式，与人机交互相关",
+      "llm_tldr_en": "Comprehensive survey of autonomous and interactive LLM-based recommender systems, proposing a taxonomy based on autonomy level and interaction flexibility.",
+      "llm_tldr_cn": "该综述系统梳理了基于LLM的自主推荐系统，提出了一个按自治程度和组织核心范式分类的体系，分析代理辅助推荐、代理即推荐器和代理即用户模拟器三种模式，强调了交互灵活性和适应性，对于设计以人为中心的推荐系统有参考价值。",
+      "llm_tldr": "该综述系统梳理了基于LLM的自主推荐系统，提出了一个按自治程度和组织核心范式分类的体系，分析代理辅助推荐、代理即推荐器和代理即用户模拟器三种模式，强调了交互灵活性和适应性，对于设计以人为中心的推荐系统有参考价值。",
+      "llm_tags": [
+        "query:hai:composite"
+      ],
+      "matched_query_tag": "query:hai:composite",
+      "matched_query_text": "Papers central to 关于HAI（人机交互/人类中心AI）的检索, especially work that connects or combines: human AI interaction concepts and applications; human-centered AI principles and design; human AI collaboration methods and benefits; explainable AI interaction interfaces; how to design human centered AI systems.",
+      "matched_requirement_id": "req-composite-hai",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

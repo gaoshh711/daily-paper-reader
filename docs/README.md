@@ -6,33 +6,29 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-12
-- 运行时间：2026-07-12 21:01:44 UTC
+- 最新运行日期：2026-07-13
+- 运行时间：2026-07-13 20:21:12 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：0
-- 速读区：4
+- 本次总论文数：3
+- 精读区：2
+- 速读区：1
 
 ### 今日简报（AI）
-今日速读4篇论文，涵盖生成式AI安全与隐私控制、科研协作对齐、结构化布局扩散三大方向。最值得关注的是《The Impact of Security and Privacy Controls on Users' Emotional Engagement with Generative AI Chatbots》揭示的用户情感与隐私控制关联，以及《Aleena》提出的AI对齐工具在软件工程协作中的潜力。普通读者可优先关注生成式AI安全机制如何影响日常使用体验。
-- 详情：[/202607/12/README](/202607/12/README)
+今日精读两篇高分论文（9.0/10）：AI生成设计变体的人类选择存在中心趋同偏差，可配置编码助手需兼顾开发者控制欲；速读一篇自主信息检索路线图（6.0/10）。最值得关注的是设计选择中的认知偏差与开发者对工具控制权的需求。建议普通读者可重点思考AI辅助决策时如何避免自身偏好干扰，并留意可配置工具对效率的影响。
+- 详情：[/202607/13/README](/202607/13/README)
 
 ### 精读区论文标签
-- 本次无精读推荐。
+1. [Central Tendency Bias in Human Selection of AI-Generated Design Variations](/202607/13/2607.09018v1-central-tendency-bias-in-human-selection-of-ai-generated-design-variations)  
+   标签：评分：9.0/10、query:hai
+   evidence：人机共创中人类选择AI生成设计变体时的偏见
+2. [Configurable AI Coding Assistants: Designing For Developers Who Like to Be in Control](/202607/13/2607.09215v1-configurable-ai-coding-assistants-designing-for-developers-who-like-to-be-in-control)  
+   标签：评分：9.0/10、query:hai
+   evidence：关于可配置AI编码助手的设计研究，聚焦开发者控制和以人为中心的设计
 
 ### 速读区论文标签
-1. [The Impact of Security and Privacy Controls on Users' Emotional Engagement with Generative AI Chatbots](/202607/12/2607.06371v1-the-impact-of-security-and-privacy-controls-on-users-emotional-engagement-with-generative-ai-chatbots)  
-   标签：评分：7.0/10、query:hai
-   evidence：安全隐私控制对AI聊天机器人用户情感参与度的影响
-2. [Aleena: Alignment Agent for Research Software Engineering Collaborations](/202607/12/2607.08043v1-aleena-alignment-agent-for-research-software-engineering-collaborations)  
-   标签：评分：7.0/10、query:hai
-   evidence：用于研究软件工程协作中利益相关者对齐的智能体AI
-3. [GRE-Diff: Gaussian Room Embeddings for Structured Layout Diffusion](/202607/12/2607.08086v1-gre-diff-gaussian-room-embeddings-for-structured-layout-diffusion)  
-   标签：评分：7.0/10、query:hai
-   evidence：人机交互的AI布局设计系统
-4. [MRMS: A Multi-Resolution Memory Substrate for Long-Lived AI Agents](/202607/12/2607.04617v1-mrms-a-multi-resolution-memory-substrate-for-long-lived-ai-agents)  
+1. [Autonomous Information Seeking: A Roadmap for Agentic Recommender Systems](/202607/13/2607.04433v1-autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems)  
    标签：评分：6.0/10、query:hai
-   evidence：提出了多分辨率记忆基底，支持长寿命AI智能体在与人交互中的连续性
+   evidence：关于代理推荐系统的综述，讨论交互式和自主范式，与人机交互相关
 
 
 <div class="dpr-home-promo-card">

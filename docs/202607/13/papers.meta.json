@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-13",
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T20:21:19",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/13/2607.09018v1-central-tendency-bias-in-human-selection-of-ai-generated-design-variations",
+      "section": "deep",
+      "title_en": "Central Tendency Bias in Human Selection of AI-Generated Design Variations",
+      "authors": "Huiyang Chen, Keqing Jiao",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09018v1",
+      "score": "9.0",
+      "evidence": "人机共创中人类选择AI生成设计变体时的偏见",
+      "tldr": "图像生成AI常生成多个设计变体供用户选择，但多选项同时呈现可能引入中心趋势偏差。基于整体知觉理论，我们通过控制实验操纵设计集方差高低，测量用户在审美偏好和代表性任务中的选择。结果显示高方差显著增加了中心邻近设计的选择频率。这表明多变体界面可能限制选择多样性，揭示了生成多样性与选择多样性之间的潜在矛盾。",
+      "tags": "query:hai",
+      "abstract_en": "Image-generation AI systems increasingly support creative work by producing multiple design variations for users to evaluate and select. In such human-AI co-creation workflows, selection becomes a critical stage where human judgment guides AI-generated possibilities toward final outcomes. While presenting multiple alternatives is intended to encourage exploration, the simultaneous multi-option presentation may introduce systematic biases in human decision making. Drawing on ensemble perception theory, we investigate whether these interfaces induce central tendency bias-the tendency to favor options closer to the center of a design set. We conducted a controlled experiment manipulating the variance of design sets (high vs. low) and measured participants' selections in both aesthetic preference and representativeness tasks. Results show that higher variance increases the selection of center-proximal designs across both tasks. These findings suggest that multi-variation interfaces in image-generation AI systems may constrain selection diversity, revealing a potential tension between diversity in generated outputs and diversity in human selection outcomes.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/13/2607.09215v1-configurable-ai-coding-assistants-designing-for-developers-who-like-to-be-in-control",
+      "section": "deep",
+      "title_en": "Configurable AI Coding Assistants: Designing For Developers Who Like to Be in Control",
+      "authors": "Ekaterina Koshchenko, Jovana Stankovic, Ilya Zakharov, Agnia Sergeyuk",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09215v1",
+      "score": "9.0",
+      "evidence": "关于可配置AI编码助手的设计研究，聚焦开发者控制和以人为中心的设计",
+      "tldr": "当前AI编码助手仅提供有限的可配置性，但专业开发者强烈希望获得更多控制权。本研究通过综合产品文档和先前研究，提出33个配置选项并分成四类。对56名开发者调查和7次设计会议发现，72.6%的有用性评级为正，但仅约三分之一参与者知晓现有工具中存在对应配置。结果显示开发者高度关注任务相关控制（如置信度阈值、建议质量可见性），而人设相关配置需求较低。最后讨论如何设计更统一且可发现的配置界面以支持未来编码助手。",
+      "tags": "query:hai",
+      "abstract_en": "AI coding assistants are now widely used in professional development, yet they offer only limited ways for developers to control how they behave. In this paper, we investigate what kinds of configurations experienced developers want in coding assistants, how they prioritize different types of configuration needs, and which interface mechanisms they prefer. We first synthesize product documentation and prior research on trust and personalization to compile a list of 33 configuration options, grouped into four categories: Code suggestions, System & policies, Human-assistant interaction, and Users & their personal context. We then conduct a survey with 56 professional developers and 7 design sessions in which participants arrange configurations into their perfect control board and talk about their needs and experiences in more depth.   Developers report strong interest in configurability: 72.6% of usefulness ratings are positive, while only around a third indicate that the corresponding configuration is known to participants in their tools. Demand is particularly high for task-related controls such as minimum confidence thresholds, visibility of suggestion quality, and response length, whereas many persona-related configurations are seen as unnecessary. In this paper, we discuss the implications for designing more unified and discoverable configuration surfaces for future coding assistants",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/13/2607.04433v1-autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems",
+      "section": "quick",
+      "title_en": "Autonomous Information Seeking: A Roadmap for Agentic Recommender Systems",
+      "authors": "Xinyu Lin, Yashar Deldjoo, Sunhao Dai, Honghui Bao, Xiaopeng Ye, Fatemeh Nazary, Wenjie Wang, Tommaso Di Noia, Jun Xu, Tat-Seng Chua",
+      "date": "2026-07-05",
+      "pdf": "https://arxiv.org/pdf/2607.04433v1",
+      "score": "6.0",
+      "evidence": "关于代理推荐系统的综述，讨论交互式和自主范式，与人机交互相关",
+      "tldr": "推荐系统正从静态排名转向自主交互系统，大语言模型智能体成为核心。本文提出基于自主性水平的统一分类法，涵盖三种范式：智能体辅助推荐、智能体作为推荐者、智能体作为用户模拟器。系统分析各范式的架构、组件增强及评估方法，指出现有评估在推理质量和用户体验上的局限。该工作为发展更自主、可靠且符合人类偏好的推荐智能体奠定基础。",
+      "tags": "query:hai",
+      "abstract_en": "The rapid integration of large language model-based agents into recommender systems has driven a shift from static, ranking-based pipelines toward autonomous and interactive systems that can reason, plan, and act. This survey provides a comprehensive overview of this emerging landscape by introducing a unified taxonomy grounded in the level of autonomy and three core paradigms of agentic recommender systems: agent-assisted recommendation, agent-as-recommender, and agent-as-user-simulator. The autonomy framework organizes existing methods along increasing capabilities in proactivity, context awareness, interaction flexibility, and adaptivity. Building on this framework, the survey analyzes how each paradigm adopts different agentic architectures and how agents enhance key components such as profiles, memory, tool use, workflows, and optimization mechanisms. We further examine evaluation methodologies for agentic recommendation, covering automated metrics, LLM-based judging, and simulation-based assessment, and discuss their limitations in capturing reasoning quality, user experience, and system behavior. Beyond existing evaluation protocols, we further discuss unresolved issues in evaluating agentic recommender systems, including trajectory-level assessment, agent contribution analysis, and calibration of user simulation. Lastly, the survey outlines open challenges in lifelong user modeling, contextual abstraction, multimodal alignment, controllability, trustworthiness, privacy, scalability, and efficiency. Together, these analyses establish a unified foundation for understanding the current progress of agentic recommender systems and highlight promising opportunities for developing more autonomous, reliable, and human-aligned recommendation agents.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
