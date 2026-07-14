@@ -6,29 +6,41 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-13
-- 运行时间：2026-07-13 20:21:12 UTC
+- 最新运行日期：2026-07-14
+- 运行时间：2026-07-14 21:11:05 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：2
-- 速读区：1
+- 本次总论文数：7
+- 精读区：5
+- 速读区：2
 
 ### 今日简报（AI）
-今日精读两篇高分论文（9.0/10）：AI生成设计变体的人类选择存在中心趋同偏差，可配置编码助手需兼顾开发者控制欲；速读一篇自主信息检索路线图（6.0/10）。最值得关注的是设计选择中的认知偏差与开发者对工具控制权的需求。建议普通读者可重点思考AI辅助决策时如何避免自身偏好干扰，并留意可配置工具对效率的影响。
-- 详情：[/202607/13/README](/202607/13/README)
+今天精读5篇、速读2篇，聚焦人机交互中的自主性与监督设计原则。两篇9.0分精读论文分别探讨AI系统的可干预性设计和人机协同技术社会原则，是当前最值得关注的方向。建议优先从这两篇入手，理解如何通过设计平衡AI自主性与人类监督。
+- 详情：[/202607/14/README](/202607/14/README)
 
 ### 精读区论文标签
-1. [Central Tendency Bias in Human Selection of AI-Generated Design Variations](/202607/13/2607.09018v1-central-tendency-bias-in-human-selection-of-ai-generated-design-variations)  
+1. [Intervenability as a Design Requirement for Autonomy and Oversight within Human-Centered AI](/202607/14/2607.10322v1-intervenability-as-a-design-requirement-for-autonomy-and-oversight-within-human-centered-ai)  
    标签：评分：9.0/10、query:hai
-   evidence：人机共创中人类选择AI生成设计变体时的偏见
-2. [Configurable AI Coding Assistants: Designing For Developers Who Like to Be in Control](/202607/13/2607.09215v1-configurable-ai-coding-assistants-designing-for-developers-who-like-to-be-in-control)  
+   evidence：可干预性作为人类中心AI的设计要求
+2. [Comparing Socio-technical Design Principles with Guidelines for Human-centered AI](/202607/14/2607.10331v1-comparing-socio-technical-design-principles-with-guidelines-for-human-centered-ai)  
    标签：评分：9.0/10、query:hai
-   evidence：关于可配置AI编码助手的设计研究，聚焦开发者控制和以人为中心的设计
+   evidence：比较人类中心AI指南与社会技术设计原则
+3. [Introducing Human-Centeredness in AI-Assisted Lexicography](/202607/14/2607.11808v1-introducing-human-centeredness-in-ai-assisted-lexicography)  
+   标签：评分：9.0/10、query:hai
+   evidence：提出用于词典编纂的以人为中心AI框架，直接涉及HCAI原则和设计
+4. [Enjoy Your Talk: A Human-Centered Benchmark for Multi-Turn Dialogue with Decoupled User Simulation, Target Modeling, and Judging](/202607/14/2607.10428v1-enjoy-your-talk-a-human-centered-benchmark-for-multi-turn-dialogue-with-decoupled-user-simulation-target-modeling-and-judging)  
+   标签：评分：8.0/10、query:hai
+   evidence：基于人类中心原则的多轮对话基准，含解耦用户模拟
+5. [LOGOS: A Living Logic for AI Agent Teams That Evolve With Humans](/202607/14/2607.10878v1-logos-a-living-logic-for-ai-agent-teams-that-evolve-with-humans)  
+   标签：评分：8.0/10、query:hai
+   evidence：AI代理团队与人类共同演化的治理层，直接涉及人机协作
 
 ### 速读区论文标签
-1. [Autonomous Information Seeking: A Roadmap for Agentic Recommender Systems](/202607/13/2607.04433v1-autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems)  
+1. [Semantic Drift and the Stability of Operator Control in Reasoning-Class Decision Support Systems](/202607/14/2607.09790v1-semantic-drift-and-the-stability-of-operator-control-in-reasoning-class-decision-support-systems)  
+   标签：评分：7.0/10、query:hai
+   evidence：研究人机决策支持系统中的操作员控制稳定性
+2. [Personalized Emotional Intelligence in Generative AI through Symbolic Affective Reasoning](/202607/14/2607.10678v1-personalized-emotional-intelligence-in-generative-ai-through-symbolic-affective-reasoning)  
    标签：评分：6.0/10、query:hai
-   evidence：关于代理推荐系统的综述，讨论交互式和自主范式，与人机交互相关
+   evidence：引入个性化情感AI以增强人机交互
 
 
 <div class="dpr-home-promo-card">
