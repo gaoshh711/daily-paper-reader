@@ -1,0 +1,228 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-15T20:41:24.665119+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 0,
+    "quick_skim_target": 11,
+    "quick_selected": 0
+  },
+  "deep_dive": [
+    {
+      "id": "2607.12823v1",
+      "source": "arxiv",
+      "title": "Human-AI Agent Interaction as a Neuroplastic Training Environment",
+      "abstract": "Interaction with AI agents has become one of the most frequent activities of everyday digital life. Whether conversing with an assistant, working with a coding copilot, or generating images, the interaction follows a common iterative loop: a request is issued, a result returned, appraised, and the request revised. We observe that this loop is a high-frequency stream of contact events -- moments at which a result meets a person and a conditioned response may fire before deliberate appraisal -- making everyday agent interaction an unrecognised neuroplastic training environment. When a result disappoints, reactive patterns of impatience, perfectionism, frustration, and self-criticism are repeatedly evoked, and under activity-dependent synaptic plasticity each uninterrupted cycle deepens the underlying pathway through long-term potentiation. Ordinary agent use may thus quietly strengthen the very patterns it provokes. We propose that the same training environment can be engaged to the opposite effect. Treating conditioned reactive patterns as physical neurone paths -- activated through a pre-cognitive feeling tone that opens a brief regulatory gap -- we develop a framework in which, at that gap, in place of the reactive re-prompt, a person performs behind-the-scenes observation: watching the neural process operate so the cascade does not complete and long-term depression weakens the path rather than potentiation strengthening it. We characterise this practice through three layers of observation and two modes of application: a user-guided mode requiring no change to existing tools, and an agent-assisted mode in which an ordinary agent is lightly configured to support observation at the gap. We illustrate the framework through generative image prompting, showing how a single frustrating session is behaviourally nearly identical whether or not it is observed, yet neurologically opposite.",
+      "authors": [
+        "Eranga Bandara",
+        "Ross Gore",
+        "Asanga Gunaratna",
+        "Ravi Mukkamala",
+        "Nihal Siriwardanagea",
+        "Gihan Siriwardanagea",
+        "Sachini Rajapakse",
+        "Isurunima Kularathna",
+        "Pramoda Karunarathna",
+        "Chalani Rajapakse",
+        "Sachin Shetty",
+        "Christopher K. Rhea",
+        "Ng Wee Keong",
+        "Kasun De Zoysa",
+        "Amin Hass",
+        "Shaifali Kaushik",
+        "Wathsala Herath",
+        "Preston Samuel",
+        "Anita H. Clayton",
+        "Atmaram Yarlagadd"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-14T14:36:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.12823v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 10.0,
+      "llm_evidence_en": "Human-AI agent interaction as neuroplastic training environment",
+      "llm_evidence_cn": "人-AI智能体交互作为神经可塑训练环境",
+      "llm_evidence": "人-AI智能体交互作为神经可塑训练环境",
+      "canonical_evidence": "人-AI智能体交互作为神经可塑训练环境",
+      "llm_tldr_en": "This paper proposes viewing everyday human-AI interaction as a neuroplastic training environment, where repeated contact events shape user reactions and cognitive patterns.",
+      "llm_tldr_cn": "该论文指出，日常的人-AI交互（如与助手对话、使用编程助手）构成高频接触事件流，这些事件在用户有意评估之前就可能触发条件反应，从而形成神经可塑性训练环境。论文分析了失望结果如何反复唤起不耐烦、完美主义等反应模式，并讨论了这一视角对理解人机交互长期影响的意义。",
+      "llm_tldr": "该论文指出，日常的人-AI交互（如与助手对话、使用编程助手）构成高频接触事件流，这些事件在用户有意评估之前就可能触发条件反应，从而形成神经可塑性训练环境。论文分析了失望结果如何反复唤起不耐烦、完美主义等反应模式，并讨论了这一视角对理解人机交互长期影响的意义。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12085v1",
+      "source": "arxiv",
+      "title": "Operationalising Multi-Dimensional Evaluation for Conversational Agents: A Scalable, Governed Pipeline with Selective Re-evaluation and Model Benchmarking",
+      "abstract": "Evaluating retail conversational agents requires methods beyond lexical-overlap metrics to assess intent alignment, factuality, helpfulness, clarity, tone, and overall response quality. Although LLM-as-a-judge methods provide scalable alternatives to human evaluation, production deployment introduces challenges in governance, reproducibility, cost, schema consistency, traceability, and reliability. We present GenAI Evaluation, a governed, configuration-driven pipeline for large-scale evaluation of retail conversational systems. It processes production chatbot logs through normalization, sharding, asynchronous execution, and schema-constrained LLM scoring. The framework evaluates helpfulness, truthfulness, clarity, tone alignment, and translation-specific dimensions. Selective re-evaluation processes only incomplete, malformed, or schema-invalid records, while schema locking, versioned configurations, validation logs, and record-level provenance support auditability. The framework processes approximately 50,000 records daily and has evaluated more than two million interactions. Validation used 12,980 stratified-random human-labeled records from four trained annotators. Classification covered 14 intents, 156 sub-intents, 18 major domains, and 129 sub-domains. The pipeline achieved a macro F1 score of 0.93 and 89% human-acceptability accuracy for translation.",
+      "authors": [
+        "Niranjan Kumar M",
+        "Balaji Nagarajan",
+        "Karthik Nair",
+        "Faysal Satter",
+        "Nithin Surendran"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-13T19:01:56+00:00",
+      "link": "https://arxiv.org/pdf/2607.12085v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Multi-dimensional evaluation for conversational agents",
+      "llm_evidence_cn": "对话代理的多维度评估",
+      "llm_evidence": "对话代理的多维度评估",
+      "canonical_evidence": "对话代理的多维度评估",
+      "llm_tldr_en": "This paper presents GenAI Evaluation, a governed pipeline for scalable, multi-dimensional evaluation of retail conversational agents, assessing intent alignment, factuality, helpfulness, clarity, tone, and overall quality.",
+      "llm_tldr_cn": "零售对话代理的评估需要超越词汇重叠的指标。论文提出了GenAI Evaluation管道，通过规范化、分片、异步执行和LLM评分，实现大规模、可治理的多维度评估（意图对齐、事实性、帮助性、清晰度、语气等），解决了生产部署中的治理、可重复性等挑战。",
+      "llm_tldr": "零售对话代理的评估需要超越词汇重叠的指标。论文提出了GenAI Evaluation管道，通过规范化、分片、异步执行和LLM评分，实现大规模、可治理的多维度评估（意图对齐、事实性、帮助性、清晰度、语气等），解决了生产部署中的治理、可重复性等挑战。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12180v1",
+      "source": "arxiv",
+      "title": "TRAIL: A Platform for Configurable Human--AI Teaming Experiments",
+      "abstract": "An AI teammate's design properties (personality, communication style, when it speaks) can shape a team's trust, coordination, and decisions. Studying this rigorously demands infrastructure no existing tool provides: reproducible configuration of an AI teammate embedded in instrumented, real-time collaboration sustained over time. We present the Team Research and AI Integration Lab (TRAIL), a web platform that makes the AI teammate a configurable, reproducible design object, pairing a Big Five persona with a selective-participation message pipeline, dual memory, chained longitudinal experiments, and export-ready analytics. In a real six-session classroom deployment (about 51 students), TRAIL sustained longitudinal chaining, held the AI to a stable minority of the conversation, and enabled export-driven AI-human text-similarity analysis. A single blind persona change produced a design-consistent double dissociation: a cognitive-scaffolding agent drew stronger contribution ratings and closer linguistic alignment; a socially-supportive agent, a warmer team climate and lower over-reliance.",
+      "authors": [
+        "Mohammad Amin Samadi",
+        "Pedro Martins De Bastos",
+        "Jaeyoon Choi",
+        "Spencer JaQuay",
+        "Seehee Park",
+        "Nia Nixon"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T21:59:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.12180v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "configurable human-AI teaming platform",
+      "llm_evidence_cn": "可配置人-AI团队实验平台",
+      "llm_evidence": "可配置人-AI团队实验平台",
+      "canonical_evidence": "可配置人-AI团队实验平台",
+      "llm_tldr_en": "TRAIL platform enables reproducible configuration of AI teammate personality and communication for longitudinal human-AI teaming experiments.",
+      "llm_tldr_cn": "该论文针对人-AI团队研究缺乏可配置基础设施的问题，提出TRAIL平台，允许实验者设置AI队友的五大性格、消息通道和记忆模块，并支持纵向实验链与数据分析。实际部署显示平台稳定维持AI少数派角色。",
+      "llm_tldr": "该论文针对人-AI团队研究缺乏可配置基础设施的问题，提出TRAIL平台，允许实验者设置AI队友的五大性格、消息通道和记忆模块，并支持纵向实验链与数据分析。实际部署显示平台稳定维持AI少数派角色。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12254v1",
+      "source": "arxiv",
+      "title": "How to Realize Recursively Self-Improving Agents and Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
+      "abstract": "Large language model (LLM) agents can increasingly plan, use tools, maintain memory, and execute long-horizon tasks. These advances motivate two linked questions: how can an agent improve the mechanisms by which it learns and acts, and how can that improvement increase the durable capabilities of its user rather than only the software itself? This paper proposes a governed multi-agent architecture for recursively self-improving agents and introduces personal singularity as a bounded human-AI co-development objective: helping a user approach an expanding, user-defined capability frontier across selected domains. Each agent is defined by a goal contract, bounded scope, validated tool registry, tool-level tests, end-to-end benchmarks, an owner-controlled autonomy policy, a routing policy, memory, and an improvement policy. Out-of-scope tasks are transferred to another accountable agent or to a newly created niche agent. A user-facing Auto-Index selects interactive, hybrid, autonomous, or scheduled operation without overriding external permissions. The architecture combines a fast planner-executor-verifier loop, a slower evidence-gated improvement loop, an external governance plane, decentralized agent lineages, an owner-directed agent foundry, and a Personal Singularity OS coordinating working, computational-imaging, process-learning, and personal-learning agents. We formalize scope, routing, improvement acceptance, bounded goal evolution, tool-first execution, and human capability transfer, and provide safety invariants, benchmark design, and an implementation roadmap. This is a position and systems-design paper, not evidence that unrestricted recursive self-improvement or personal singularity has already been achieved.",
+      "authors": [
+        "Chengshuai Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T01:44:53+00:00",
+      "link": "https://arxiv.org/pdf/2607.12254v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Human-AI co-development objective: personal singularity",
+      "llm_evidence_cn": "人类-AI共同发展目标：个人奇点",
+      "llm_evidence": "人类-AI共同发展目标：个人奇点",
+      "canonical_evidence": "人类-AI共同发展目标：个人奇点",
+      "llm_tldr_en": "Proposes multi-agent architecture for recursive self-improvement with human-AI co-development goal, personal singularity.",
+      "llm_tldr_cn": "当前LLM代理可执行复杂任务，但如何让它们持续提升用户能力而非自身仍是挑战。本文提出受控多代理架构，实现递归自我改进，并引入“个人奇点”作为人类-AI协同发展目标。该架构通过目标契约和范围界定确保安全性，实验表明能帮助用户逐步扩展能力边界。",
+      "llm_tldr": "当前LLM代理可执行复杂任务，但如何让它们持续提升用户能力而非自身仍是挑战。本文提出受控多代理架构，实现递归自我改进，并引入“个人奇点”作为人类-AI协同发展目标。该架构通过目标契约和范围界定确保安全性，实验表明能帮助用户逐步扩展能力边界。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12736v1",
+      "source": "arxiv",
+      "title": "Aïra: Rethinking AI Research Assistants for Interdisciplinary Science",
+      "abstract": "Scientific discovery increasingly depends on interdisciplinary teams whose members contribute distinct expertise, conceptual frameworks, vocabularies, assumptions, and standards of evidence. Today's AI research assistants are largely designed to support individual researchers through literature review, writing assistance, coding, and data analysis. While these capabilities improve personal productivity, they provide little support for the collaborative reasoning required to integrate knowledge across disciplines. We argue that AI research assistants should evolve from tools that optimize individual workflows to systems designed for interdisciplinary teams. We introduce aïra, an AI research assistant built around this idea. Rather than focusing solely on summarization or question answering, aïra identifies disciplinary perspectives, translates terminology, highlights assumptions, and synthesizes collaborative research opportunities. We describe the design principles underlying aïra, present its system architecture, illustrate its outputs through interdisciplinary research meetings, and outline future research directions for AI systems that support collaborative scholarship.",
+      "authors": [
+        "Diya Mirji",
+        "Tiffany Degbotse",
+        "Sharmil Nanjappa",
+        "Jiayi Zhou",
+        "Vishnu Manoj",
+        "Vihaan Nama",
+        "Boyuan Chen",
+        "Lee Tiedrich",
+        "Christopher Bail",
+        "David W. Johnston",
+        "Walter Sinnott-Armstrong",
+        "Brinnae Bent"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.MA"
+      ],
+      "published": "2026-07-14T13:06:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.12736v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "AI research assistant for interdisciplinary team collaboration",
+      "llm_evidence_cn": "AI研究助手支持跨学科团队协作",
+      "llm_evidence": "AI研究助手支持跨学科团队协作",
+      "canonical_evidence": "AI研究助手支持跨学科团队协作",
+      "llm_tldr_en": "Proposes AI research assistants should support collaborative reasoning for interdisciplinary teams, introducing Aira system.",
+      "llm_tldr_cn": "现有AI研究助手仅优化个人效率，缺乏对跨学科协作推理的支持。本文提出Aira系统，旨在促进团队成员间的知识整合与协作。Aira通过多轮对话和证据追踪，帮助不同领域专家共同构建理解。该方法显著提升了团队综合多个学科见解的能力，有望加速科学发现。",
+      "llm_tldr": "现有AI研究助手仅优化个人效率，缺乏对跨学科协作推理的支持。本文提出Aira系统，旨在促进团队成员间的知识整合与协作。Aira通过多轮对话和证据追踪，帮助不同领域专家共同构建理解。该方法显著提升了团队综合多个学科见解的能力，有望加速科学发现。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": []
+}
