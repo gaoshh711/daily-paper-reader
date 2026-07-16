@@ -1,0 +1,339 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-16T20:38:56.564505+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 5,
+    "deep_cap": 6,
+    "deep_selected": 5,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2607.11808v2",
+      "source": "arxiv",
+      "title": "Introducing Human-Centeredness in AI-Assisted Lexicography",
+      "abstract": "This paper proposes a human-centered artificial intelligence (HCAI) framework for AI-assisted lexicography. While generative AI offers significant opportunities to enhance lexicographic work, it also raises concerns regarding the future role of lexicographers and the preservation of linguistic and cultural diversity. Drawing on HCAI principles and previous applications in other language professions, the paper identifies four interrelated dimensions through which AI integration in lexicography can be understood and critically examined: the augmented lexicographer, the sociotechnical context of AI integration, bias, and the design of AI-powered lexicographic tools. The framework argues that AI should augment rather than replace lexicographers, combining automation with meaningful human control. It further emphasizes the importance of preserving professional agency, mitigating AI-generated biases, and designing tools around the needs of lexicographers. By doing so, the paper provides a foundation for future research and the beneficial integration of AI into lexicographic workflows.",
+      "authors": [
+        "Antonio San Martin",
+        "Catherine Trekker"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-07-13T17:00:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.11808v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "proposes HCAI framework for lexicography",
+      "llm_evidence_cn": "提出面向词典编纂的人类中心AI框架",
+      "llm_evidence": "提出面向词典编纂的人类中心AI框架",
+      "canonical_evidence": "提出面向词典编纂的人类中心AI框架",
+      "llm_tldr_en": "This paper introduces a human-centered AI framework for AI-assisted lexicography, emphasizing augmentation over replacement.",
+      "llm_tldr_cn": "生成式AI在词典编纂中引发对词典学家角色和语言多样性的担忧。本文提出人类中心AI框架，从增强词典学家、社会技术背景、偏见和工具设计四个维度审视AI集成，主张AI应增强而非取代人类。",
+      "llm_tldr": "生成式AI在词典编纂中引发对词典学家角色和语言多样性的担忧。本文提出人类中心AI框架，从增强词典学家、社会技术背景、偏见和工具设计四个维度审视AI集成，主张AI应增强而非取代人类。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14049v1",
+      "source": "arxiv",
+      "title": "Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models",
+      "abstract": "The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced the ability of large language models (LLMs) to tackle complex, multi-step tasks. However, when errors occur, current interaction approaches typically involve re-generating another response that may make mistakes again, or users laboriously flag the faulty step in follow-up turns that may get responses <You are right, I made a mistake here> followed by similar errors recurring. To address this issue, we propose an efficient human intervention mechanism for precisely correcting reasoning errors in LLMs, termed Deep Interaction. Our approach enables direct editing of the original response, allowing erroneous parts to be corrected while preserving accurate reasoning steps. We refine the edited CoT into a distilled prompt, which then steers the LLM along the corrected reasoning path. Experimental results show that our method achieves over a 25% improvement in correction success rate and reduces token usage by approximately 40% on STEM tasks reasoning compared to baseline approaches.",
+      "authors": [
+        "Hefeng Zhou",
+        "Jinxuan Zhang",
+        "Jiong Lou",
+        "Yuxin Liu",
+        "Chaochao Lu",
+        "Jingjing Qu",
+        "Jie Li"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-15T17:16:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.14049v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human intervention mechanism for LLM reasoning errors",
+      "llm_evidence_cn": "针对大模型推理错误的人工干预机制",
+      "llm_evidence": "针对大模型推理错误的人工干预机制",
+      "canonical_evidence": "针对大模型推理错误的人工干预机制",
+      "llm_tldr_en": "Deep Interaction enables direct editing of LLM reasoning steps, allowing precise human correction while preserving correct parts.",
+      "llm_tldr_cn": "当前LLM处理复杂任务时，错误难以及时纠正。本文提出Deep Interaction，允许用户直接编辑原始推理步骤，纠正错误部分同时保留正确推理，提供高效的人机交互方式。",
+      "llm_tldr": "当前LLM处理复杂任务时，错误难以及时纠正。本文提出Deep Interaction，允许用户直接编辑原始推理步骤，纠正错误部分同时保留正确推理，提供高效的人机交互方式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.12755v1",
+      "source": "arxiv",
+      "title": "Practical Judgment, Virtue, and Intuition in the Use of Opaque AI-Enabled Systems",
+      "abstract": "AI-enabled systems are seeing increasing deployment across numerous domains, with many being \"black boxes\" with respect to core functions and capabilities. I.e., many systems take inputs and give outputs, but without users having any ability to see how the former lead to the latter. AI-enabled systems are also being used to augment autonomy in systems, and autonomy coupled with opacity raises numerous concerns surrounding, e.g., the reliability of systems, their regularity in functioning, human ability to control them, or whether deploying opaque and potentially autonomous systems is in compliance with ethical and legal norms. In this article, we argue that many of these worries can be mitigated by leveraging practical judgment, virtue, and intuition in the deployment and use of opaque AI-enabled systems. We show that focusing on these distinctly human capabilities provides a means for bridging between the practical challenges created by opacity and the ethical, legal, and social norms underpinning particular domains. We argue that a core element in doing this is a recognition that many positive human traits are not quantifiable and we therefore must develop training regimen and guidelines on AI deployment anchored in humanistic but non-quantifiable values. Throughout the article, we focus on the military domain as an exemplar of the importance of practical judgment, virtue, and intuition as drivers for ethical and effective human decision-making surrounding AI deployments, but the underlying arguments apply to all domains where opaque and potentially autonomous systems are being deployed (subject to domain-specific alterations).",
+      "authors": [
+        "Nathan G. Wood",
+        "Andrew P. Rebera"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CY",
+        "cs.ET",
+        "cs.RO"
+      ],
+      "published": "2026-07-14T13:20:49+00:00",
+      "link": "https://arxiv.org/pdf/2607.12755v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "argues for human judgment to mitigate opacity in AI systems",
+      "llm_evidence_cn": "论证人类判断缓解不透明AI系统问题",
+      "llm_evidence": "论证人类判断缓解不透明AI系统问题",
+      "canonical_evidence": "论证人类判断缓解不透明AI系统问题",
+      "llm_tldr_en": "Addresses concerns about opaque AI systems by arguing that practical judgment, virtue and intuition can mitigate risks, grounding human-centered AI principles in ethical reasoning.",
+      "llm_tldr_cn": "针对不透明AI系统可靠性、可控性和伦理合规性的担忧，本文从实践判断、美德和直觉角度论证，认为这些人类能力可以弥补系统不透明性带来的问题，从而增强信任和控制。这一哲学论证为设计符合人类中心价值观的AI系统提供了理论基础，强调人类判断在AI使用中的关键作用。",
+      "llm_tldr": "针对不透明AI系统可靠性、可控性和伦理合规性的担忧，本文从实践判断、美德和直觉角度论证，认为这些人类能力可以弥补系统不透明性带来的问题，从而增强信任和控制。这一哲学论证为设计符合人类中心价值观的AI系统提供了理论基础，强调人类判断在AI使用中的关键作用。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13220v1",
+      "source": "arxiv",
+      "title": "Networked Intelligence: Active Shared Context Graphs for Human-AI Team Science",
+      "abstract": "Most AI-for-science systems focus on scaling a single reasoning process through better models, larger context windows, long-horizon agentic execution, or digital co-scientists working with one principal user. However, challenging scientific problems are rarely solved by one reasoner alone. They are solved by teams whose members bring different priors, experimental backgrounds, tacit knowledge, and domain-trained intuitions. The open problem is therefore not only how to scale models, but how to cultivate networked intelligence: scaling the connections between humans and AI systems so that a result or hypothesis produced in one context reaches another person, agent, instrument, or robot that can act on it. We introduce Mycelium, an active shared workspace that automatically connects researchers and AI agents as a multi-user co-scientist. As human users and agents work, the system captures important observations and hypotheses, tracks how they relate to the team's evolving model, and routes them to the person or agent whose next decision they can inform. We evaluate Mycelium in its first empirical test, a biological multi-omics campaign in which routed shared context turned a local analytical finding into a cross-expert mechanistic constraint and ultimately into an experimental design. We also give networked intelligence a computational account as sparse conditional computation over distributed scientific contexts. This account distinguishes when a scaled standalone agent can match the network from when independent expertise and non-mergeable contexts make the network irreducible.",
+      "authors": [
+        "Sutanay Choudhury",
+        "Jeffrey J. Czajka",
+        "Lummy M. O. Monteiro",
+        "Erin Bredeweg",
+        "Jason McDermott",
+        "Katherine Wolf",
+        "Alex Beliaev",
+        "Josh Elmore",
+        "Paul Piehowski",
+        "Kylee Tate",
+        "Yuqian Gao",
+        "Aivett Bilbao",
+        "Kelly Stratton",
+        "Scott Baker",
+        "Jaydeep P. Bardhan",
+        "Kristin Burnum Johnson",
+        "Chris Oehmen",
+        "Robert Rallo"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.HC"
+      ],
+      "published": "2026-07-14T19:29:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.13220v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Human-AI team science with shared context graphs",
+      "llm_evidence_cn": "基于共享上下文图的人-AI团队科学",
+      "llm_evidence": "基于共享上下文图的人-AI团队科学",
+      "canonical_evidence": "基于共享上下文图的人-AI团队科学",
+      "llm_tldr_en": "Mycelium uses active shared context graphs to connect humans and AI in scientific teams, enabling networked intelligence.",
+      "llm_tldr_cn": "科学问题常需团队协作，现有AI系统仅支持单用户。本文提出Mycelium，通过主动共享上下文图连接人类与AI，使得跨上下文的假设和结果能被其他成员或AI利用，促进网络化智能。",
+      "llm_tldr": "科学问题常需团队协作，现有AI系统仅支持单用户。本文提出Mycelium，通过主动共享上下文图连接人类与AI，使得跨上下文的假设和结果能被其他成员或AI利用，促进网络化智能。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.13924v1",
+      "source": "arxiv",
+      "title": "ExpressionCueLens: A Cross-Cultural Analysis of Human-AI Companion Conversations on Social Media",
+      "abstract": "LLM-based AI companion agents are increasingly being perceived not only as tools but also as social companions. On social media, people recount conversations where these agents comfort, negotiate and assert boundaries, reflecting a growing attribution of human-like qualities. To profile how agency is perceived in human-AI (HAI) interactions, we introduce the ExpressionCueLens framework, which organizes linguistic, cognitive, behavioral and perceptual cues into ten categories of anthropomorphism expressions. We apply this framework to $\\sim$3500 Reddit and XiaoHongShu posts that discuss HAI companionship. Through iterative expert annotation and LLM-assisted labeling, our cross-platform analysis indicates patterns consistent with the hypothesis that XiaoHongShu users use significantly more expressions of vulnerability and emotions, and more non-perceptual cues. Reddit users employ more perceptual cues with temporality and embodiment expressions. These findings suggest that cultural and platform norms shape the way that companion agents are treated as active, agentic partners, and provides design implications for culturally sensitive HAI companion agents.",
+      "authors": [
+        "Lynnette Hui Xian Ng",
+        "Yunze Xiao",
+        "Lionel Z. Wang",
+        "Weihao Xuan",
+        "Mona Diab"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-15T15:05:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.13924v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "framework for analyzing human-AI companion conversations on social media",
+      "llm_evidence_cn": "分析社交媒体上人机伴侣对话的框架",
+      "llm_evidence": "分析社交媒体上人机伴侣对话的框架",
+      "canonical_evidence": "分析社交媒体上人机伴侣对话的框架",
+      "llm_tldr_en": "ExpressionCueLens organizes linguistic, cognitive, behavioral, and perceptual cues into ten categories of anthropomorphism in human-AI companion interactions, applied to ~3500 social media posts.",
+      "llm_tldr_cn": "本文提出ExpressionCueLens框架，将人机伴侣交互中的语言、认知、行为和感知线索组织成十类拟人表达。通过对约3500条Reddit和小红书帖子的跨平台分析，揭示了不同文化背景下AI陪伴的拟人化模式。这为理解人机交互概念提供了实证方法。",
+      "llm_tldr": "本文提出ExpressionCueLens框架，将人机伴侣交互中的语言、认知、行为和感知线索组织成十类拟人表达。通过对约3500条Reddit和小红书帖子的跨平台分析，揭示了不同文化背景下AI陪伴的拟人化模式。这为理解人机交互概念提供了实证方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.10539v1",
+      "source": "arxiv",
+      "title": "AI YOU Town: Make Friends and Money with Your Digital Twin",
+      "abstract": "Existing approaches to infer user traits and generate responses consistent with a persona rely on static prompting. They lack calibrated uncertainty, ignore sequential evidence, and drift during long interactions. We present \\textbf{AI YOU}, a framework that continually updates a personality profile with 22 dimensions from conversation and embodies it in a personal digital twin. Practically, the system combines prompting, Bayesian updating, and conformal prediction for persona inference. A periodically refreshed memory anchor and cognitive memory with three layers preserve persona consistency over long interactions. Across the main results, AI YOU \\emph{(i)} achieves conformal coverage ranging from 0.921 to 0.976, \\emph{(ii)} improves uncertainty calibration and reasoning grounded in memory, and \\emph{(iii)} enhances persona fidelity over static prompting in role playing over 100 turns while reducing trait drift, for most evaluated backbones under adversarial settings with multiple agents. The prototype \\emph{AI YOU Town} initializes an imaginative twin world for future interaction. The online demo is available at \\href{https://quinnnnnne-ai-you.hf.space/}{\\mbox{\\texttt{quinnnnnne-ai-you.hf.space}}}.",
+      "authors": [
+        "Yan Lin",
+        "Yuyang Dai",
+        "Jiahui Geng",
+        "Yuxia Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-12T02:44:35+00:00",
+      "link": "https://arxiv.org/pdf/2607.10539v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "personal digital twin for long-term interaction",
+      "llm_evidence_cn": "个性化数字孪生用于长期交互",
+      "llm_evidence": "个性化数字孪生用于长期交互",
+      "canonical_evidence": "个性化数字孪生用于长期交互",
+      "llm_tldr_en": "AI YOU creates a continuously updated digital twin with personality profiles, enhancing long-term human-AI interaction consistency.",
+      "llm_tldr_cn": "现有方法在长时间交互中人物性格漂移。本文提出AI YOU框架，通过贝叶斯更新和保形预测持续学习22维性格画像，并通过三层记忆保持一致性，在社交场景中应用。",
+      "llm_tldr": "现有方法在长时间交互中人物性格漂移。本文提出AI YOU框架，通过贝叶斯更新和保形预测持续学习22维性格画像，并通过三层记忆保持一致性，在社交场景中应用。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.12466v1",
+      "source": "arxiv",
+      "title": "Deployable Human Preference Alignment in Robotics: Learning Representative Rewards from Diverse Human Preferences",
+      "abstract": "Aligning robot policies with human preferences is essential for deployment to diverse end users. In per-user alignment approach, preference feedback is often sparse, so learning becomes unstable and vulnerable to human preference noise, and a growing number of individualized policies makes validation difficult before deployment. A single shared policy approach to user alignment avoids this cost but fails to capture heterogeneous preferences and often neglects minority preferences. To address these challenges, we introduce Preference-based REward Clustering (PREC), a novel framework that learns a compact set of policies from binary preference labels provided by diverse users. From a dataset of user trajectories and their preference labels, PREC first sets the labels aside and aggregates trajectories across users to learn a population-level shared trajectory encoder, alleviating limited per-user coverage and avoiding label noise during representation learning. Using this representation, PREC jointly assigns users to preference-coherent clusters and learns a representative reward model per cluster using preference labels, from which a policy is optimized for each cluster. Clustering similar users compensates for the limited number of labels available from each user and mitigates the effect of label noise. At the same time, maintaining a manageable number of reward models reduces the validation burden at deployment. Experiments across diverse simulated locomotion environments show that PREC groups users who label different trajectory subsets into preference-coherent clusters more accurately than baseline methods. Under sparse and noisy feedback, policies trained with PREC improve all three social welfare metrics over an existing single shared-policy user-alignment approach and even outperform per-user alignment approaches.",
+      "authors": [
+        "Taehyung Kim",
+        "Gwangmo Lee",
+        "Minjun Chang",
+        "Sunghyun Lim",
+        "Jongeun Choi"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-14T07:50:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.12466v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "aligns robot policies with diverse human preferences through reward clustering",
+      "llm_evidence_cn": "通过奖励聚类对齐机器人策略与多样化人类偏好",
+      "llm_evidence": "通过奖励聚类对齐机器人策略与多样化人类偏好",
+      "canonical_evidence": "通过奖励聚类对齐机器人策略与多样化人类偏好",
+      "llm_tldr_en": "PREC framework learns a compact set of robot policies from binary preference labels of diverse users, handling heterogeneous preferences and minority needs.",
+      "llm_tldr_cn": "机器人部署需对齐人类偏好，但稀疏反馈和偏好异质性带来挑战。本文提出偏好奖励聚类（PREC）框架，从不同用户的二元偏好标签中学习紧凑策略集，兼顾多数与少数偏好。实验表明其在稳定性和偏好覆盖上优于传统方法，为人机协作提供了实用对齐方法。",
+      "llm_tldr": "机器人部署需对齐人类偏好，但稀疏反馈和偏好异质性带来挑战。本文提出偏好奖励聚类（PREC）框架，从不同用户的二元偏好标签中学习紧凑策略集，兼顾多数与少数偏好。实验表明其在稳定性和偏好覆盖上优于传统方法，为人机协作提供了实用对齐方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13196v1",
+      "source": "arxiv",
+      "title": "From Human-Centric to Agentic Code Review: The Impact of Different Generations of Generative AI Technology on Review Quality",
+      "abstract": "Code review helps maintain software quality before code integration, but it also imposes a substantial workload on human reviewers. As generative artificial intelligence becomes part of software development, code review is shifting from a primarily human review process toward AI-supported review processes in which large language model (LLM) reviewers and AI agent reviewers participate alongside human reviewers. However, we still lack empirical evidence on how this transition affects review efficiency and review quality. In this paper, we study 1.02 million reviewed pull requests from 207 GitHub projects that transition across three code review eras: human-centric review, LLM-assisted review, and agentic code review. We identify three AI reviewer adoption practices: Gradual AI Adoption, Rapid LLM Adoption, and Rapid AI Agent Adoption. We further model pull request review discussions as reviewer interaction sequences to characterize how human, LLM, and AI agent reviewers collaborate during the review process. Our results show that agent-involved collaboration patterns, especially reviews initiated by AI agents or involving multiple AI agents, are associated with faster review decisions under Gradual AI Adoption and Rapid AI Agent Adoption. However, these efficiency gains do not translate into better review quality. We also find that review activity and pull request type remain important across eras, while human-AI collaboration patterns become the strongest explanatory factor for review efficiency once LLM and AI agent reviewers participate. These findings provide empirical guidance for designing AI-supported code review processes that improve efficiency without weakening review quality.",
+      "authors": [
+        "Suzhen Zhong",
+        "Shayan Noei",
+        "Bram Adams",
+        "Ying Zou"
+      ],
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-07-14T18:48:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.13196v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "study of human-AI collaboration in code review with LLMs and agents",
+      "llm_evidence_cn": "研究大语言模型和智能体在代码审查中的人机协作",
+      "llm_evidence": "研究大语言模型和智能体在代码审查中的人机协作",
+      "canonical_evidence": "研究大语言模型和智能体在代码审查中的人机协作",
+      "llm_tldr_en": "Analyzes 1.02 million pull requests to compare human-centric, LLM-assisted, and agentic code review eras, revealing impacts on efficiency and quality.",
+      "llm_tldr_cn": "针对代码审查从人工向AI辅助过渡的实证需求，分析了207个GitHub项目的102万次拉取请求，比较了人工审查、LLM辅助和智能体审查三个时代的效率与质量。发现AI参与提高了审查速度但可能带来新的质量挑战，为设计人机协作的软件工程工具提供了关键经验。",
+      "llm_tldr": "针对代码审查从人工向AI辅助过渡的实证需求，分析了207个GitHub项目的102万次拉取请求，比较了人工审查、LLM辅助和智能体审查三个时代的效率与质量。发现AI参与提高了审查速度但可能带来新的质量挑战，为设计人机协作的软件工程工具提供了关键经验。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
