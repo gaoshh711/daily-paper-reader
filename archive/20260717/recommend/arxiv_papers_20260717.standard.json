@@ -1,0 +1,435 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-17T20:57:40.873837+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.13220v2",
+      "source": "arxiv",
+      "title": "Networked Intelligence: Active Shared Context Graphs for Human-AI Team Science",
+      "abstract": "Most AI-for-science systems focus on scaling a single reasoning process by using better models, larger context windows, long-horizon agentic execution, or digital co-scientists working with one principal user. However, challenging scientific problems are rarely solved by one reasoner alone. They are solved by teams whose members carry different priors, experimental background, tacit knowledge, and domain-trained intuitions. The open problem is therefore not only how to scale models, but how to develop \"networked intelligence\", scaling the connections between humans and AI systems so that a result or hypothesis produced in one context reaches another person, agent, instrument or robot that can act on it. We introduce Mycelium, an active shared workspace that automatically connects researchers and AI agents. As human users and agents work, the system captures important observations and hypotheses, tracks how they relate to the team's evolving knowledge model, and routes them to the person or agent whose next decision they can inform. We evaluate Mycelium through a real-world scientific discovery use case: a biological multi-omics campaign where shared context turned a local analytical finding into a cross-expert mechanistic constraint and ultimately into an experimental design. Finally, we describe networked intelligence as sparse conditional computation over distributed scientific contexts. This framework establishes when a scaled standalone agent is sufficient, and when isolated data and specialized expertise make a networked approach essential.",
+      "authors": [
+        "Sutanay Choudhury",
+        "Jeffrey J. Czajka",
+        "Lummy M. O. Monteiro",
+        "Erin Bredeweg",
+        "Jason McDermott",
+        "Katherine Wolf",
+        "Alex Beliaev",
+        "Josh Elmore",
+        "Paul Piehowski",
+        "Kylee Tate",
+        "Yuqian Gao",
+        "Aivett Bilbao",
+        "Kelly Stratton",
+        "Scott Baker",
+        "Jaydeep P. Bardhan",
+        "Kristin Burnum Johnson",
+        "Chris Oehmen",
+        "Robert Rallo"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.HC"
+      ],
+      "published": "2026-07-14T19:29:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.13220v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Active shared context graphs for scaling human-AI team science and networked intelligence",
+      "llm_evidence_cn": "主动共享上下文图用于扩展人机团队科学和网络智能",
+      "llm_evidence": "主动共享上下文图用于扩展人机团队科学和网络智能",
+      "canonical_evidence": "主动共享上下文图用于扩展人机团队科学和网络智能",
+      "llm_tldr_en": "Mycelium introduces active shared context graphs that enable results and hypotheses to propagate across human and AI agents, scaling networked intelligence for team science.",
+      "llm_tldr_cn": "科学问题通常由多人团队解决，但现有AI系统聚焦于单一推理过程的扩展。本文提出Mycelium，通过主动共享上下文图连接人类和AI智能体，使得一个上下文中产生的结果或假设能够传递到另一个能执行的主体。该方法有望跨越不同领域知识和实验背景，实现真正的网络化科学智能。",
+      "llm_tldr": "科学问题通常由多人团队解决，但现有AI系统聚焦于单一推理过程的扩展。本文提出Mycelium，通过主动共享上下文图连接人类和AI智能体，使得一个上下文中产生的结果或假设能够传递到另一个能执行的主体。该方法有望跨越不同领域知识和实验背景，实现真正的网络化科学智能。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14582v1",
+      "source": "arxiv",
+      "title": "MathCoPilot: An Interactive System for Human-AI Symbiotic Paradigm of Mathematical Research",
+      "abstract": "Existing LLM-based theorem provers have achieved impressive results on formal mathematics benchmarks, yet they remain confined to acting as autonomous agents that prove a stated proposition. In this paper, we propose MathCoPilot, a human-in-the-loop system that embodies a new human--AI symbiotic paradigm for mathematical research, in which the mathematician steers the high-level mathematical direction while AI agents carry out the detailed formalization and proof work under continuous human guidance. MathCoPilot unifies three core capabilities: (1) an interactive workbench where the mathematician and AI agents collaborate through a living proof blueprint that decomposes a proof into navigable steps the human can directly inspect, direct, and refine; (2) automated proving skill orchestration with adaptive knowledge base search and Lean-integrated iterative verification; and (3) topic-driven paper retrieval and automated formalization into a verified Lean knowledge base. Using MathCoPilot, we systematically compare four state-of-the-art LLMs, including Gemini~3.1~Pro, GPT-5.4, and Claude~Opus~4.7, on a FormalMATH subset and on two real PDE theorems requiring deep domain expertise, evaluating their ability to produce verified Lean~4 proofs and to identify errors in deliberately incorrect proofs. Our results show that while current models can handle undergraduate-level problems with high success rates under favorable autoformalization conditions, substantial challenges remain for domain-specific theorems requiring genuine mathematical understanding.",
+      "authors": [
+        "Junjie Zhang",
+        "Jiayu Liu",
+        "Wenbin Liu",
+        "Zhenya Huang",
+        "Doudou Wang",
+        "Yan Jiang",
+        "Leiye Xu",
+        "Tao Xiong",
+        "Wen Huang",
+        "Qi Liu",
+        "Guoping Hu",
+        "Enhong Chen",
+        "Mengping Zhang",
+        "Xiangdong Ye"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-16T05:22:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.14582v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-in-the-loop system for human-AI symbiotic mathematical research",
+      "llm_evidence_cn": "提出人机共生数学研究的交互系统",
+      "llm_evidence": "提出人机共生数学研究的交互系统",
+      "canonical_evidence": "提出人机共生数学研究的交互系统",
+      "llm_tldr_en": "Introduces MathCoPilot, a human-in-the-loop system where mathematicians steer high-level direction while AI agents handle formalization and proof under continuous guidance.",
+      "llm_tldr_cn": "针对现有LLM定理证明器仅作为自主代理的局限，该论文提出MathCoPilot，一种人机共生系统。数学家通过实时证明蓝图引导高层次方向，AI代理在持续人类指导下完成具体形式化与证明工作。系统统一了交互工作台、可导航证明步骤等核心能力，实现了数学研究中人类与AI的深度协作。",
+      "llm_tldr": "针对现有LLM定理证明器仅作为自主代理的局限，该论文提出MathCoPilot，一种人机共生系统。数学家通过实时证明蓝图引导高层次方向，AI代理在持续人类指导下完成具体形式化与证明工作。系统统一了交互工作台、可导航证明步骤等核心能力，实现了数学研究中人类与AI的深度协作。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14593v1",
+      "source": "arxiv",
+      "title": "Memory-Driven Self-Disclosure and Relational Turning Points: A Longitudinal Multimodal Study of Human-AI Interaction",
+      "abstract": "As conversational AI systems are designed for repeated use, a central question is how a series of interactions becomes a relationship. We present a longitudinal multimodal study of a memory-augmented conversational agent (24 participants x 10 sessions), in which participants rated five relational constructs -- familiarity, self-disclosure, perceived memory, conversational quality, and enjoyment -- after each session. Two complementary dynamics emerge. First, conversational quality strongly shapes how enjoyable a session feels in the moment but does not carry forward across sessions, whereas perceived memory is relationally conditioned -- predicted by prior relational state rather than reflecting system capability alone -- and it shapes later enjoyment indirectly, via subsequent self-disclosure. Second, relationships are punctuated by discrete turning points -- crashes and surges -- that are partially traceable in multimodal behavior and open different intervention windows: surges are more behaviorally detectable in the moment, enjoyment surges persist more reliably than enjoyment crashes recover, and some crashes are better forecast from person-specific behavioral drift than detected after they have already occurred. Together, the findings suggest that longitudinal human-AI relationships are built through both slow accumulation and abrupt turning points.",
+      "authors": [
+        "Ryuichi Sumida",
+        "Mao Saeki",
+        "Masaki Eguchi",
+        "Sadahiro Yoshikawa",
+        "Koji Inoue",
+        "Tatsuya Kawahara",
+        "Yoichi Matsuyama"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-16T05:43:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.14593v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "longitudinal study of human-AI interaction with memory-augmented conversational agent",
+      "llm_evidence_cn": "记忆增强对话代理的纵向人类AI交互研究",
+      "llm_evidence": "记忆增强对话代理的纵向人类AI交互研究",
+      "canonical_evidence": "记忆增强对话代理的纵向人类AI交互研究",
+      "llm_tldr_en": "A longitudinal multimodal study reveals how conversational AI with memory shapes self-disclosure and relational dynamics across sessions, highlighting perceived memory as relationally conditioned.",
+      "llm_tldr_cn": "现有对话AI系统缺乏对长期交互中关系演变的深入理解。本文通过24名参与者各10轮交互的纵向多模态实验，研究记忆增强会话代理如何影响熟悉度、自我披露、感知记忆、对话质量和享受度等关系构念。结果显示对话质量在当下重要但跨会话不持续，而感知记忆则受先前关系状态预测。该工作揭示了人类AI关系形成的动态机制，为设计持久关系的AI系统提供实证基础。",
+      "llm_tldr": "现有对话AI系统缺乏对长期交互中关系演变的深入理解。本文通过24名参与者各10轮交互的纵向多模态实验，研究记忆增强会话代理如何影响熟悉度、自我披露、感知记忆、对话质量和享受度等关系构念。结果显示对话质量在当下重要但跨会话不持续，而感知记忆则受先前关系状态预测。该工作揭示了人类AI关系形成的动态机制，为设计持久关系的AI系统提供实证基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14240v1",
+      "source": "arxiv",
+      "title": "Align AI to Dynamic Human-AI Workflows",
+      "abstract": "Current alignment approaches typically focus on emulating human behavior using static representations of human preferences, failing to capture the dynamic, context-dependent nature of real-world human-AI interactions. In this paper, we argue for a shift from static and emulative to interactive and complementary alignment, where preferences emerge through interaction and alignment is defined not by satisfying preferences alone. We first formalize this gap by contrasting existing alignment with a trajectory-level view in which human and model behavior co-evolve over time. Because these interaction dynamics have not been adequately captured within existing ML formulations, we ground this perspective in insights from an interdisciplinary workshop. We draw on lessons from social-science accounts of human-human collaboration and then argue that human-AI systems amplify these dynamics, introducing new asymmetries that make reasoning about uncertainty harder and introduce new coordination challenges. Based on these lessons and new challenges, we conclude by outlining a research agenda for developing AI systems that align with humans in interaction, requiring an interdisciplinary synthesis of machine learning and the social and decision sciences.",
+      "authors": [
+        "Valerie Chen",
+        "Cleotilde Gonzalez",
+        "Anita Williams Woolley",
+        "Michael Lee",
+        "Tongshuang Wu",
+        "Vincent Conitzer",
+        "Aarti Singh"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-15T18:02:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.14240v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "proposes aligning AI to dynamic human-AI workflows for interactive and complementary alignment",
+      "llm_evidence_cn": "提出将AI对齐于动态人类-AI工作流，实现交互式互补对齐",
+      "llm_evidence": "提出将AI对齐于动态人类-AI工作流，实现交互式互补对齐",
+      "canonical_evidence": "提出将AI对齐于动态人类-AI工作流，实现交互式互补对齐",
+      "llm_tldr_en": "Argues for shifting from static alignment to dynamic, interactive alignment that captures co-evolving human-AI workflows, grounded in social science insights.",
+      "llm_tldr_cn": "当前AI对齐方法依赖静态偏好模拟，忽略真实世界中人类-AI交互的动态性和上下文依赖性。该论文提出从静态仿效转向交互互补对齐，其中偏好通过交互涌现。通过形式化轨迹级视角，并借鉴跨学科研讨会见解，论证了人类与模型行为随时间的协同演化，为实现更符合实际的人机对齐提供了新框架。",
+      "llm_tldr": "当前AI对齐方法依赖静态偏好模拟，忽略真实世界中人类-AI交互的动态性和上下文依赖性。该论文提出从静态仿效转向交互互补对齐，其中偏好通过交互涌现。通过形式化轨迹级视角，并借鉴跨学科研讨会见解，论证了人类与模型行为随时间的协同演化，为实现更符合实际的人机对齐提供了新框架。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14485v1",
+      "source": "arxiv",
+      "title": "Step-Level Preference Learning for Generative Agents in Social Simulations",
+      "abstract": "Large language model (LLM)-based generative agents simulate human behavior through long-horizon decision-making processes that comprise intermediate steps such as planning, memory retrieval, reflection, and action selection. However, fine-grained human annotations of these intermediate steps remain scarce, and existing agents are not grounded in human preferences over such intermediate decisions. To address this gap, we introduce \\method, an interactive simulation interface that enables us to collect step-level human preference supervision over agent decision trajectories, leading to a dataset of 57K fine-grained annotations. We conduct step-level preference learning on open-weight language models using supervised finetuning and direct preference optimization on this data, consistently improving simulation fidelity, coordination, and interaction quality, and inducing more socially effective agent behavior. Our results show that step-level human supervision is an effective training signal for improving both local decision quality and long-horizon agent behavior.",
+      "authors": [
+        "Wenchang Gao",
+        "Pingyue Sheng",
+        "Lanlan Qiu",
+        "Yunfei Ma",
+        "Jian Zhao",
+        "Baicheng Chen",
+        "Kangda Wang",
+        "Yuyang Tian",
+        "Shunqiang Mao",
+        "Tianxing He"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-16T01:58:53+00:00",
+      "link": "https://arxiv.org/pdf/2607.14485v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human preference learning for agent decision steps",
+      "llm_evidence_cn": "人类偏好学习用于智能体决策步骤",
+      "llm_evidence": "人类偏好学习用于智能体决策步骤",
+      "canonical_evidence": "人类偏好学习用于智能体决策步骤",
+      "llm_tldr_en": "Proposes interactive interface to collect step-level human preferences for generative agents, enabling preference learning on open-weight LLMs to align intermediate decisions.",
+      "llm_tldr_cn": "当前生成式智能体在模拟人类行为时缺乏对中间步骤的细粒度人类偏好标注。本文提出一种交互式模拟界面，用于收集智能体决策轨迹的步骤级人类偏好监督，构建了5.7万条细粒度标注数据集。基于该数据集对开源语言模型进行监督微调和直接偏好优化。该方法有效提升了智能体行为与人类偏好的对齐程度，为人机协作中的偏好学习提供了新范式。",
+      "llm_tldr": "当前生成式智能体在模拟人类行为时缺乏对中间步骤的细粒度人类偏好标注。本文提出一种交互式模拟界面，用于收集智能体决策轨迹的步骤级人类偏好监督，构建了5.7万条细粒度标注数据集。基于该数据集对开源语言模型进行监督微调和直接偏好优化。该方法有效提升了智能体行为与人类偏好的对齐程度，为人机协作中的偏好学习提供了新范式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14919v1",
+      "source": "arxiv",
+      "title": "Human-Robot Interaction in GenAI Architectures via the Agent-Client Protocol",
+      "abstract": "Recent advances in Generative Artificial Intelligence (GenAI), particularly Large Language Models (LLMs), are driving robotic architectures toward agent-based high-level orchestration, in which natural-language instructions can be translated into context-aware action sequences. While the integration of these agents and robotic capabilities is increasingly converging toward standardization through the Model Context Protocol (MCP), the upper Human-Robot Interaction (HRI) layer remains fragmented by proprietary, ad hoc interfaces that hinder real-time human-in-the-loop collaboration.   To address this fragmentation, this paper proposes the adoption of the Agent-Client Protocol (ACP) -- a communication standard originally introduced for coding agents in software engineering -- as a unified communication contract for the HRI layer in agent-based robotic systems. By combining ACP at the interface-agent link and MCP at the agent-execution link, we formulate a fully decoupled three-layer architecture that separates human interaction, deliberative orchestration, and physical execution. This topology removes rigid architectural dependencies, enabling heterogeneous user interfaces to connect to the same robotic system and allowing the underlying robotic platform to be replaced without requiring client-specific integration changes. Moreover, it provides native support for collaborative HRI capabilities such as real-time observability, explicit human authorization, and immediate task interruption. We experimentally evaluate the proposed architecture on a physical mobile robot, demonstrating interoperability across three heterogeneous user interfaces and validating real-time human-in-the-loop workflows with negligible latency overhead.",
+      "authors": [
+        "Jesus Moncada-Ramirez",
+        "Jose-Raul Ruiz-Sarmiento",
+        "Javier Gonzalez-Jimenez"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-16T12:38:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.14919v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-robot interaction standard for human-in-the-loop collaboration",
+      "llm_evidence_cn": "人机交互标准，支持人类在环协作",
+      "llm_evidence": "人机交互标准，支持人类在环协作",
+      "canonical_evidence": "人机交互标准，支持人类在环协作",
+      "llm_tldr_en": "Proposes Agent-Client Protocol (ACP) for standardizing human-robot interaction in GenAI architectures, enabling real-time human-in-the-loop collaboration.",
+      "llm_tldr_cn": "当前生成式AI机器人架构中，人机交互层因专有接口而碎片化，阻碍实时人类在环协作。本文提出采用代理-客户端协议（ACP）作为通信标准，该协议原用于编码代理，现扩展至机器人领域。ACP支持自然语言指令到上下文感知动作序列的转换，并标准化人类干预接口。该工作促进了人类与机器人代理的协同工作，提升交互流畅度和灵活性。",
+      "llm_tldr": "当前生成式AI机器人架构中，人机交互层因专有接口而碎片化，阻碍实时人类在环协作。本文提出采用代理-客户端协议（ACP）作为通信标准，该协议原用于编码代理，现扩展至机器人领域。ACP支持自然语言指令到上下文感知动作序列的转换，并标准化人类干预接口。该工作促进了人类与机器人代理的协同工作，提升交互流畅度和灵活性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.14141v1",
+      "source": "arxiv",
+      "title": "Human AI Construction of Bayesian Networks for Operational Decision Support -- A Virtual Survey Approach",
+      "abstract": "Bayesian Belief Networks (BBNs) are powerful tools for decision-making under uncertainty. However, building their structures and estimating parameters are difficult. Currently, researchers must choose between relying on expert judgement or using large datasets to learn the structure and parameters of the network. We propose a new methodology using Large Language Models to bridge the gap between expert opinion and data-driven learning. This approach uses a panel of AI agents to estimate probabilities based on specific personas and context. We then apply a trimmed-mean rule to remove noise from these responses. We develop a six step BBN framework and illustrate it to model customer intention to consult a doctor in an alternative healthcare system. The model reveals that while self efficacy appears to be a major factor, its actual causal impact is small. In contrast, subjective norms have a much stronger effect in modelling customers' intention. The most effective strategy is to improve both confidence and community norms simultaneously.",
+      "authors": [
+        "Kumar Rahul",
+        "Shovan Chowdhury"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-13T06:15:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.14141v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "uses AI agents to build Bayesian networks with human guidance",
+      "llm_evidence_cn": "使用AI代理在人类指导下构建贝叶斯网络",
+      "llm_evidence": "使用AI代理在人类指导下构建贝叶斯网络",
+      "canonical_evidence": "使用AI代理在人类指导下构建贝叶斯网络",
+      "llm_tldr_en": "Proposes a method using LLM-based AI agents to estimate Bayesian network probabilities, bridging expert opinion and data-driven learning for decision support.",
+      "llm_tldr_cn": "该方法针对贝叶斯网络构建中专家意见与数据驱动学习难以融合的问题，提出利用大语言模型驱动的AI代理面板，通过设定不同角色和上下文模拟多元专家意见，并采用修剪均值规则过滤噪音，最终形成六步构建框架。在客户就医意图建模的案例中，该方法有效生成了合理的概率估计，避免了纯依赖专家或数据的局限，为操作决策支持中的人类-AI协作提供了可复用的新范式。",
+      "llm_tldr": "该方法针对贝叶斯网络构建中专家意见与数据驱动学习难以融合的问题，提出利用大语言模型驱动的AI代理面板，通过设定不同角色和上下文模拟多元专家意见，并采用修剪均值规则过滤噪音，最终形成六步构建框架。在客户就医意图建模的案例中，该方法有效生成了合理的概率估计，避免了纯依赖专家或数据的局限，为操作决策支持中的人类-AI协作提供了可复用的新范式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.14553v1",
+      "source": "arxiv",
+      "title": "Towards an Intention Abstraction Layer for Autonomous Industrial Systems",
+      "abstract": "Modern industrial environments increasingly run many autonomous subsystems at once - schedulers, energy managers, vehicle fleets - each pursuing its own goals while sharing the same physical resources. Because high-level human intentions are translated into low-level control logic and then discarded, no running component can tell whether it is still doing what was actually intended, and goal conflicts surface only after they have caused a missed target or a shutdown. We propose the Intention Abstraction Layer (IAL), a domainagnostic middleware that represents intentions as first-class, persistent, and explainable runtime objects: a large language model grounded in a formal OWL ontology parses naturallanguage goals into structured intentions, a consistency monitor detects conflicts at registration time, before execution, and a transparency module explains them in natural language. We report a first proof of concept in which two autonomous agents register conflicting production and energy intentions, and the IAL flags and explains the conflict before it reaches the execution layer. The result is a mechanism that shifts behavioral assurance for cooperating autonomous systems from post-hoc failure analysis to pre-execution, intention-level checking.",
+      "authors": [
+        "Artan Markaj",
+        "Raphael Höfer",
+        "Felix Gehlhoff"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-07-16T04:31:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.14553v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "intention abstraction layer for human-AI interaction in industrial systems",
+      "llm_evidence_cn": "面向工业系统人机交互的意图抽象层",
+      "llm_evidence": "面向工业系统人机交互的意图抽象层",
+      "canonical_evidence": "面向工业系统人机交互的意图抽象层",
+      "llm_tldr_en": "Proposes Intention Abstraction Layer (IAL) that represents human intentions as persistent, explainable runtime objects using LLM and OWL ontology, improving goal consistency.",
+      "llm_tldr_cn": "现代工业环境多个自主子系统共享资源但缺乏意图一致性维护，目标冲突常在事后暴露。本文提出意图抽象层（IAL），一种领域无关的中间件，利用大语言模型和OWL本体将自然语言目标解析为结构化意图，作为一等运行时对象持久存在且可解释。IAL使得子系统能实时感知是否仍符合原意图，减少因目标漂移导致的故障。该工作提升了工业场景中人机交互的可靠性和可控性。",
+      "llm_tldr": "现代工业环境多个自主子系统共享资源但缺乏意图一致性维护，目标冲突常在事后暴露。本文提出意图抽象层（IAL），一种领域无关的中间件，利用大语言模型和OWL本体将自然语言目标解析为结构化意图，作为一等运行时对象持久存在且可解释。IAL使得子系统能实时感知是否仍符合原意图，减少因目标漂移导致的故障。该工作提升了工业场景中人机交互的可靠性和可控性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.14673v1",
+      "source": "arxiv",
+      "title": "Project Kaleidoscope: Contextual, Human-Aligned Evaluation for Real-World AI Applications",
+      "abstract": "Evaluations (Evals) are a deployment bottleneck for real-world AI applications: public benchmarks rarely match a team's users, context, or policies, and human review is often tedious to scale. Motivated by our work with AI applications in the public sector, this project addresses recurring evaluation challenges encountered when applications must satisfy local policy and governance requirements. We present Kaleidoscope, an integrated workflow for contextual functional evaluation that links persona-based test generation, contextualized rubrics, and human review for reliability-gated automated scoring. Generated test cases are scored against application-specific rubrics; human annotations provide reviewable labels; and LLM judges automate scoring only when their agreement with those labels meets a configured threshold. Kaleidoscope is therefore a practical, inspectable, iterative workflow for product teams. We report early evidence from a three-week pilot across four organizational use cases and custom-rubric judge experiments on 108 annotated Q\\&A pairs spanning four domains and 14 evaluation dimensions. The results highlight useful features for end-to-end reliable, automated scoring.",
+      "authors": [
+        "Leanne Tan",
+        "Rohan Jaggi",
+        "Shaun Khoo",
+        "Roy Ka-Wei Lee"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "published": "2026-07-16T07:38:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.14673v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Contextual human-aligned evaluation workflow linking persona-based testing and human review for reliable AI applications",
+      "llm_evidence_cn": "面向可靠AI应用的上下文人类对齐评估工作流，连接用户画像测试与人工审查",
+      "llm_evidence": "面向可靠AI应用的上下文人类对齐评估工作流，连接用户画像测试与人工审查",
+      "canonical_evidence": "面向可靠AI应用的上下文人类对齐评估工作流，连接用户画像测试与人工审查",
+      "llm_tldr_en": "Kaleidoscope provides an integrated workflow for contextual functional evaluation of real-world AI applications, using persona-based tests, contextualized rubrics, and human review for reliability-gated automated scoring.",
+      "llm_tldr_cn": "真实世界AI应用的评估面临公开基准不匹配和人工扩展困难的瓶颈。本文提出Kaleidoscope工作流，结合用户画像测试生成、上下文评分规则和人工审查，实现可靠性门控的自动评分。该方法已用于公共部门AI应用，使评估更贴近用户实际需求和政策要求。",
+      "llm_tldr": "真实世界AI应用的评估面临公开基准不匹配和人工扩展困难的瓶颈。本文提出Kaleidoscope工作流，结合用户画像测试生成、上下文评分规则和人工审查，实现可靠性门控的自动评分。该方法已用于公共部门AI应用，使评估更贴近用户实际需求和政策要求。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.15202v1",
+      "source": "arxiv",
+      "title": "Self-Evolving Human-Centered Framework for Explainable Depression Symptom Annotation",
+      "abstract": "Annotation quality is a major bottleneck in building reliable and explainable artificial intelligence (XAI) systems for mental health research. In depression-related datasets, labels are often assigned without structured evidence, symptom-level justification, or traceable alignment with the criteria of the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR), limiting both transparency and downstream model interpretability. We propose a self-evolving, expert-in-the-loop annotation framework for Major Depressive Disorder (MDD) that combines large language model (LLM)-assisted labeling with expert verification. The framework is intended to support the construction of explainable, DSM-5-TR-aligned datasets rather than to perform clinical diagnosis. It operates in three stages: candidate evidence selection from textual records, criterion-level DSM-5-TR analysis, and case-level synthesis that produces label-level diagnostic and severity annotations. A dual-memory architecture, composed of Example Memory and Reflection Memory, is designed to internalize expert feedback and iteratively improve future annotations without retraining. We describe this mechanism and leave its evaluation across multiple feedback cycles to future work. In addition to final labels, the framework exports clinical evidence, reasoning traces, and edit histories, enabling comprehensive auditability. In a pilot study using expert-reviewed samples, the proposed approach improves annotation consistency and explainability while reducing manual revision effort.",
+      "authors": [
+        "Hoang-Loc Cao",
+        "Van Pham",
+        "Truong Thanh Hung Nguyen",
+        "Phuc Truong Loc Nguyen",
+        "Phuc Ho",
+        "Veronica Whitford",
+        "Hung Cao"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.MA",
+        "cs.MM"
+      ],
+      "published": "2026-07-16T16:59:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.15202v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Self-evolving human-centered framework for explainable annotation with expert-in-the-loop",
+      "llm_evidence_cn": "自演进的以人为中心的可解释注释框架，包含专家在环",
+      "llm_evidence": "自演进的以人为中心的可解释注释框架，包含专家在环",
+      "canonical_evidence": "自演进的以人为中心的可解释注释框架，包含专家在环",
+      "llm_tldr_en": "The paper proposes a self-evolving expert-in-the-loop annotation framework combining LLMs and expert verification to construct explainable DSM-5-TR-aligned depression symptom datasets, improving transparency and interpretability.",
+      "llm_tldr_cn": "针对抑郁症数据集标注缺乏结构化证据和可解释性的问题，本文提出一种自演进的以人为中心的注释框架。该框架结合大语言模型辅助标注与专家验证，确保标签符合DSM-5-TR标准并附带症状级理由。该方法支持构建可解释、可追溯的数据集，有望提升下游抑郁症模型的透明度和临床可信度。",
+      "llm_tldr": "针对抑郁症数据集标注缺乏结构化证据和可解释性的问题，本文提出一种自演进的以人为中心的注释框架。该框架结合大语言模型辅助标注与专家验证，确保标签符合DSM-5-TR标准并附带症状级理由。该方法支持构建可解释、可追溯的数据集，有望提升下游抑郁症模型的透明度和临床可信度。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
