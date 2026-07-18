@@ -1,0 +1,167 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-18T21:03:07.548165+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2607.13655v1",
+      "source": "arxiv",
+      "title": "Explaining Reinforcement Learning Agents via Inductive Logic Programming",
+      "abstract": "Explainable Reinforcement Learning (XRL) seeks to make Reinforcement Learning (RL) policies more transparent and interpretable, a key requirement in safety-critical and human-centric scenarios. However, it is mostly based on user studies, thus targeting the needs of a specific audience and lacking shared evaluation metrics. On the other hand, logic-based approaches within eXplainable Artificial Intelligence (XAI) provide compact, human-readable abstractions of decision-making. However, the systematic quantification of the explainability degree of logical representations remains an open problem. This work aims to advance the state of the art in XRL by introducing objective and planning-oriented metrics for policy explainability in RL settings. At the same time, it contributes to the field of logic for XAI by providing a principled way to quantify the explainability of logical rules, moving beyond common-sense assessments and simple propositional fragments. We employ Inductive Logic Programming (ILP) to extract symbolic representations of RL policies and define a novel set of explainability metrics, including activation rate, feature coverage, syntactic distance and semantic distance. These metrics quantify alignment between symbolic rules and agent behavior, the role of features in decision-making, and the evolution of policies during training and across agents in single and multi-agent RL. Experiments across different RL domains show that the proposed metrics highlight action-specific learning dynamics beyond global return, provide fine-grained insights into domain features beyond classical approaches for global feature importance estimation, and uncover coordination, specialization, and adaptation patterns in MARL. Moreover, they provide crucial insights for the transfer and generalization of action-specific policies.",
+      "authors": [
+        "Celeste Veronese",
+        "Edoardo Zorzi",
+        "Daniele Meli",
+        "Alessandro Farinelli"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-15T10:02:55+00:00",
+      "link": "https://arxiv.org/pdf/2607.13655v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "introduces objective metrics for policy explainability in RL, advancing explainable AI for human-centric scenarios",
+      "llm_evidence_cn": "引入强化学习策略可解释性的客观度量，推进面向人类场景的可解释AI",
+      "llm_evidence": "引入强化学习策略可解释性的客观度量，推进面向人类场景的可解释AI",
+      "canonical_evidence": "引入强化学习策略可解释性的客观度量，推进面向人类场景的可解释AI",
+      "llm_tldr_en": "Introduces planning-oriented metrics for quantifying explainability of RL policies via inductive logic programming, advancing XRL with objective evaluation.",
+      "llm_tldr_cn": "本文针对强化学习可解释性（XRL）缺乏客观度量的问题，提出基于归纳逻辑编程的策略可解释性度量。该方法从逻辑表示中提取规划导向的指标，量化策略的可解释程度。实验表明这些指标能有效区分不同策略，为安全关键领域提供可解释RL的评估工具。",
+      "llm_tldr": "本文针对强化学习可解释性（XRL）缺乏客观度量的问题，提出基于归纳逻辑编程的策略可解释性度量。该方法从逻辑表示中提取规划导向的指标，量化策略的可解释程度。实验表明这些指标能有效区分不同策略，为安全关键领域提供可解释RL的评估工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.12125v1",
+      "source": "arxiv",
+      "title": "Faster AI, Uneven Frontier: Rapid Crossings, a Jagged Frontier, and the Repositioning of Human Judgment",
+      "abstract": "Between 2023 and 2026, frontier AI systems crossed documented human expert baselines on a growing set of bounded, well-specified, evaluable cognitive tasks, including graduate-level science questions, competition mathematics, software-engineering benchmarks, and structured diagnostic reasoning, while the length of tasks such systems can complete at 50% reliability doubled roughly every seven months. These crossings are rapid and broad, but the frontier is jagged: humans retain decisive advantages in long-horizon reliability, genuinely novel problems, calibrated self-knowledge, sample-efficient learning, and embodied action, and benchmark results overstate deployed capability for reasons that are themselves now documented, namely contamination, construct validity, vendor self-evaluation, and the gap between 50% reliability and the reliability that economic work requires. Concurrently, humans increasingly use these systems as cognitive extensions. The offloading literature predicts costs to unaided skill, and early field evidence is consistent with such costs, though the largest meta-analytic evidence on prior technologies points the other way, and the question of whether generative AI differs is open. Finally, the experimental record on human-AI collaboration shows that naive combination often underperforms the stronger partner, implying that the human contribution must be repositioned toward specification, verification, and oversight, a shift visible in experiments but, so far, barely visible in field labor-market data. This paper states the resulting position, rapid crossings on a jagged frontier with a human role that must be redesigned rather than defended, and draws out its theoretical and practical implications.",
+      "authors": [
+        "Ancuta Margondai",
+        "Julie Rader",
+        "Emma Rader",
+        "Sara Willox",
+        "Mustapha Mouloua"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-13T20:17:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.12125v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "discusses human advantages over AI in collaborative contexts",
+      "llm_evidence_cn": "讨论人类在与AI协作中的优势",
+      "llm_evidence": "讨论人类在与AI协作中的优势",
+      "canonical_evidence": "讨论人类在与AI协作中的优势",
+      "llm_tldr_en": "This paper documents rapid AI benchmark crossing but identifies persistent human advantages in reliability and novelty, informing human-AI collaboration design.",
+      "llm_tldr_cn": "该论文记录了2023-2026年间前沿AI在多种有界任务上超越人类基线的快速进展，但同时也揭示了人类在长时间可靠性、真正新颖问题等维度仍保有决定优势。这种\"锯齿形前沿\"表明人机协作并非简单替代，而是需要重新定位人类判断的角色。研究为设计有效的人机协作策略提供了实证基础，强调了在AI辅助中保留人类独特能力的重要性。",
+      "llm_tldr": "该论文记录了2023-2026年间前沿AI在多种有界任务上超越人类基线的快速进展，但同时也揭示了人类在长时间可靠性、真正新颖问题等维度仍保有决定优势。这种\"锯齿形前沿\"表明人机协作并非简单替代，而是需要重新定位人类判断的角色。研究为设计有效的人机协作策略提供了实证基础，强调了在AI辅助中保留人类独特能力的重要性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.10380v1",
+      "source": "arxiv",
+      "title": "CAFE: A Compound-AI Factorial Evaluation Framework",
+      "abstract": "We introduce CAFE (Compound-AI Factorial Evaluation), an open-source platform that brings design of experiments to the evaluation of compound AI systems (CAIS). Such systems expose many interchangeable choices - e.g. which retriever, model, or prompt - and practitioners rarely know which of them most affects answer quality. With CAFE, a practitioner registers each swappable component of a pipeline as a factor to build a factorial design over the chosen factors, run the resulting configurations, and score the answers on a shared rubric using a configurable LLM judge together with human raters. From these ratings it attributes answer-quality variance to the components and their interactions with mixed-effects models and reports effect sizes, significance, the best configuration, cost and latency trade-offs, and judge-human reliability. Whereas existing tools mostly either search for a good configuration or score outputs in isolation, CAFE also explains which component drives quality and whether an observed difference is significant. We validate CAFE on a retrieval-augmented question-answering (QA) pipeline over the HotpotQA benchmark dataset, where it recovers planted factor effects and stays calibrated under a permutation null. CAFE is released as a Python package and as a Web application.",
+      "authors": [
+        "Fabian Lukassen",
+        "Christoph Weisser",
+        "Thomas Kneib",
+        "Alexander Silbersdorff"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-11T16:17:46+00:00",
+      "link": "https://arxiv.org/pdf/2607.10380v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "provides evaluation framework for compound AI systems with human raters",
+      "llm_evidence_cn": "提供含有评分员的复合AI系统评估框架",
+      "llm_evidence": "提供含有评分员的复合AI系统评估框架",
+      "canonical_evidence": "提供含有评分员的复合AI系统评估框架",
+      "llm_tldr_en": "CAFE brings design of experiments to evaluate compound AI systems, attributing answer-quality variance to components using LLM and human raters.",
+      "llm_tldr_cn": "该论文针对复合AI系统评估中组件选择影响不明的问题，提出了CAFE平台。它将实验设计引入评估，允许用户将可互换组件注册为因子，通过因子设计运行配置，并结合LLM评判和人工评分。利用混合效应模型归因答案质量差异，报告效应大小和最优配置。该方法为设计人类中心AI系统提供了系统化的评估工具，帮助设计者做出数据驱动的组件决策。",
+      "llm_tldr": "该论文针对复合AI系统评估中组件选择影响不明的问题，提出了CAFE平台。它将实验设计引入评估，允许用户将可互换组件注册为因子，通过因子设计运行配置，并结合LLM评判和人工评分。利用混合效应模型归因答案质量差异，报告效应大小和最优配置。该方法为设计人类中心AI系统提供了系统化的评估工具，帮助设计者做出数据驱动的组件决策。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.12254v2",
+      "source": "arxiv",
+      "title": "Self-Aware Recursively Self-Improving Agents for Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
+      "abstract": "Large language model (LLM) agents can plan, use tools, maintain memory, and execute long-horizon tasks. This paper proposes Self-Aware Recursively Self-Improving (SARSI) agents: governed agents that maintain a persistent self-model of identity, goals, capabilities, limitations, uncertainty, relationships, history, and developmental change, and use that model to guide and evaluate recursive improvement. Self-awareness is defined functionally and does not imply subjective experience or phenomenal consciousness. We pair SARSI agents with personal singularity, a bounded human-AI co-development objective in which an agent ecosystem helps a user approach an expanding, user-defined feasible capability frontier. Each agent has a goal contract, bounded scope, validated tool registry, tool tests, end-to-end benchmarks, owner-controlled autonomy, routing, memory, self-model, and improvement policy. A scope router assigns every accepted task to one accountable primary agent and transfers out-of-scope work through structured handoffs. A user-facing Auto-Index selects interactive, hybrid, autonomous, or scheduled behavior without overriding external permissions. The architecture combines a planner-executor-verifier loop, an evidence-gated improvement loop, an external governance plane, decentralized lineages, an owner-directed agent foundry, and a Personal Singularity OS coordinating working, computational-imaging, work-process-learning, and personal-learning agents. We formalize functional self-awareness, scope, routing, improvement acceptance, bounded goal evolution, tool-first execution, and human capability transfer, and provide safety invariants, benchmark design, and a staged implementation roadmap. This is a position and systems-design paper, not evidence that consciousness, unrestricted recursive self-improvement, or personal singularity has been achieved.",
+      "authors": [
+        "Chengshuai Yang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-07-14T01:44:53+00:00",
+      "link": "https://arxiv.org/pdf/2607.12254v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "human-AI co-development objective",
+      "llm_evidence_cn": "人机协同发展目标",
+      "llm_evidence": "人机协同发展目标",
+      "canonical_evidence": "人机协同发展目标",
+      "llm_tldr_en": "Proposes self-aware recursively self-improving agents for personal singularity, a human-AI co-development objective where agents help users approach expanding goals.",
+      "llm_tldr_cn": "大型语言模型智能体具备规划和工具使用能力，但缺乏自我模型和递归改进。本文提出SARSI智能体，维护持久的自我模型（身份、目标、能力等），并以此指导递归改进。与个人奇点概念结合，实现受限的人机协同发展。该方法允许用户定义可行域，智能体生态系统帮助用户接近并扩展该域，形成持续的人机协作循环。",
+      "llm_tldr": "大型语言模型智能体具备规划和工具使用能力，但缺乏自我模型和递归改进。本文提出SARSI智能体，维护持久的自我模型（身份、目标、能力等），并以此指导递归改进。与个人奇点概念结合，实现受限的人机协同发展。该方法允许用户定义可行域，智能体生态系统帮助用户接近并扩展该域，形成持续的人机协作循环。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

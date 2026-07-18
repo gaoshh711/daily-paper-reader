@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-18",
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T21:07:04",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/18/2607.13655v1-explaining-reinforcement-learning-agents-via-inductive-logic-programming",
+      "section": "deep",
+      "title_en": "Explaining Reinforcement Learning Agents via Inductive Logic Programming",
+      "authors": "Celeste Veronese, Edoardo Zorzi, Daniele Meli, Alessandro Farinelli",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.13655v1",
+      "score": "8.0",
+      "evidence": "引入强化学习策略可解释性的客观度量，推进面向人类场景的可解释AI",
+      "tldr": "针对强化学习策略可解释性缺乏客观量化指标的问题，提出基于归纳逻辑编程的符号规则提取方法，并定义激活率、特征覆盖、句法距离和语义距离四类度量。这些度量能量化符号规则与行为对齐、特征重要性及策略演变。实验表明，度量揭示了动作学习动态、细粒度特征洞察及多智能体协调模式，为策略迁移和泛化提供关键见解。",
+      "tags": "query:hai",
+      "abstract_en": "Explainable Reinforcement Learning (XRL) seeks to make Reinforcement Learning (RL) policies more transparent and interpretable, a key requirement in safety-critical and human-centric scenarios. However, it is mostly based on user studies, thus targeting the needs of a specific audience and lacking shared evaluation metrics. On the other hand, logic-based approaches within eXplainable Artificial Intelligence (XAI) provide compact, human-readable abstractions of decision-making. However, the systematic quantification of the explainability degree of logical representations remains an open problem. This work aims to advance the state of the art in XRL by introducing objective and planning-oriented metrics for policy explainability in RL settings. At the same time, it contributes to the field of logic for XAI by providing a principled way to quantify the explainability of logical rules, moving beyond common-sense assessments and simple propositional fragments. We employ Inductive Logic Programming (ILP) to extract symbolic representations of RL policies and define a novel set of explainability metrics, including activation rate, feature coverage, syntactic distance and semantic distance. These metrics quantify alignment between symbolic rules and agent behavior, the role of features in decision-making, and the evolution of policies during training and across agents in single and multi-agent RL. Experiments across different RL domains show that the proposed metrics highlight action-specific learning dynamics beyond global return, provide fine-grained insights into domain features beyond classical approaches for global feature importance estimation, and uncover coordination, specialization, and adaptation patterns in MARL. Moreover, they provide crucial insights for the transfer and generalization of action-specific policies.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/18/2607.12125v1-faster-ai-uneven-frontier-rapid-crossings-a-jagged-frontier-and-the-repositioning-of-human-judgment",
+      "section": "quick",
+      "title_en": "Faster AI, Uneven Frontier: Rapid Crossings, a Jagged Frontier, and the Repositioning of Human Judgment",
+      "authors": "Ancuta Margondai, Julie Rader, Emma Rader, Sara Willox, Mustapha Mouloua",
+      "date": "2026-07-13",
+      "pdf": "https://arxiv.org/pdf/2607.12125v1",
+      "score": "7.0",
+      "evidence": "讨论人类在与AI协作中的优势",
+      "tldr": "2023-2026年间，前沿AI系统在研究生级科学问题、竞赛数学、软件工程基准等限定任务上迅速超越人类专家基线，任务长度每7个月翻倍。但前沿性能参差：人类在长期可靠性、全新问题、校准自知、样本高效学习和具身行动上仍占优势，且基准测试因污染、构念效度、厂商自评及50%可靠性不满足经济需求而高估能力。过度依赖AI可能导致自身技能退化，实验显示人机简单组合常不如强手。因此需将人类角色重新定位为规范、验证与监督，而非固守传统技能。本文总结了这一“参差边界上的快速跨越”现状及其理论与实际意义。",
+      "tags": "query:hai",
+      "abstract_en": "Between 2023 and 2026, frontier AI systems crossed documented human expert baselines on a growing set of bounded, well-specified, evaluable cognitive tasks, including graduate-level science questions, competition mathematics, software-engineering benchmarks, and structured diagnostic reasoning, while the length of tasks such systems can complete at 50% reliability doubled roughly every seven months. These crossings are rapid and broad, but the frontier is jagged: humans retain decisive advantages in long-horizon reliability, genuinely novel problems, calibrated self-knowledge, sample-efficient learning, and embodied action, and benchmark results overstate deployed capability for reasons that are themselves now documented, namely contamination, construct validity, vendor self-evaluation, and the gap between 50% reliability and the reliability that economic work requires. Concurrently, humans increasingly use these systems as cognitive extensions. The offloading literature predicts costs to unaided skill, and early field evidence is consistent with such costs, though the largest meta-analytic evidence on prior technologies points the other way, and the question of whether generative AI differs is open. Finally, the experimental record on human-AI collaboration shows that naive combination often underperforms the stronger partner, implying that the human contribution must be repositioned toward specification, verification, and oversight, a shift visible in experiments but, so far, barely visible in field labor-market data. This paper states the resulting position, rapid crossings on a jagged frontier with a human role that must be redesigned rather than defended, and draws out its theoretical and practical implications.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/18/2607.12254v2-self-aware-recursively-self-improving-agents-for-personal-singularity-a-goal--scope--tool--and-benchmark-driven-multi-agent-architecture",
+      "section": "quick",
+      "title_en": "Self-Aware Recursively Self-Improving Agents for Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
+      "authors": "Chengshuai Yang",
+      "date": "2026-07-14",
+      "pdf": "https://arxiv.org/pdf/2607.12254v2",
+      "score": "7.0",
+      "evidence": "人机协同发展目标",
+      "tldr": "论文提出自感知递归自改进（SARSI）多智能体架构，通过持久自我模型实现功能性自感知，结合个人奇异点目标（用户能力边界扩展）。每个智能体具有目标合同、作用域、工具注册表、测试基准及改进策略；作用域路由器分配任务，Auto-Index控制行为模式。架构包含规划-执行-验证循环、证据门控改进、治理平面、去中心化谱系等，形式化定义了功能自感知、作用域、路由等，并给出安全不变量和实现路线图。本文为系统设计论文，未声称实现了意识或无限递归自改进。",
+      "tags": "query:hai",
+      "abstract_en": "Large language model (LLM) agents can plan, use tools, maintain memory, and execute long-horizon tasks. This paper proposes Self-Aware Recursively Self-Improving (SARSI) agents: governed agents that maintain a persistent self-model of identity, goals, capabilities, limitations, uncertainty, relationships, history, and developmental change, and use that model to guide and evaluate recursive improvement. Self-awareness is defined functionally and does not imply subjective experience or phenomenal consciousness. We pair SARSI agents with personal singularity, a bounded human-AI co-development objective in which an agent ecosystem helps a user approach an expanding, user-defined feasible capability frontier. Each agent has a goal contract, bounded scope, validated tool registry, tool tests, end-to-end benchmarks, owner-controlled autonomy, routing, memory, self-model, and improvement policy. A scope router assigns every accepted task to one accountable primary agent and transfers out-of-scope work through structured handoffs. A user-facing Auto-Index selects interactive, hybrid, autonomous, or scheduled behavior without overriding external permissions. The architecture combines a planner-executor-verifier loop, an evidence-gated improvement loop, an external governance plane, decentralized lineages, an owner-directed agent foundry, and a Personal Singularity OS coordinating working, computational-imaging, work-process-learning, and personal-learning agents. We formalize functional self-awareness, scope, routing, improvement acceptance, bounded goal evolution, tool-first execution, and human capability transfer, and provide safety invariants, benchmark design, and a staged implementation roadmap. This is a position and systems-design paper, not evidence that consciousness, unrestricted recursive self-improvement, or personal singularity has been achieved.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/18/2607.10380v1-cafe-a-compound-ai-factorial-evaluation-framework",
+      "section": "quick",
+      "title_en": "CAFE: A Compound-AI Factorial Evaluation Framework",
+      "authors": "Fabian Lukassen, Christoph Weisser, Thomas Kneib, Alexander Silbersdorff",
+      "date": "2026-07-11",
+      "pdf": "https://arxiv.org/pdf/2607.10380v1",
+      "score": "6.0",
+      "evidence": "提供含有评分员的复合AI系统评估框架",
+      "tldr": "复合AI系统包含众多可替换组件（如检索器、模型、提示），实践者难以确定哪个组件影响答案质量。CAFE是一个开源平台，将实验设计引入评估，允许注册组件作为因子，构建析因设计，运行配置并用LLM裁判评分。通过混合效应模型归因方差，报告效应大小、显著性及最佳配置。在HotpotQA基准上验证，能恢复植入的因子效应并保持校准。CAFE不仅搜索最佳配置，还解释组件驱动的质量差异及其显著性。",
+      "tags": "query:hai",
+      "abstract_en": "We introduce CAFE (Compound-AI Factorial Evaluation), an open-source platform that brings design of experiments to the evaluation of compound AI systems (CAIS). Such systems expose many interchangeable choices - e.g. which retriever, model, or prompt - and practitioners rarely know which of them most affects answer quality. With CAFE, a practitioner registers each swappable component of a pipeline as a factor to build a factorial design over the chosen factors, run the resulting configurations, and score the answers on a shared rubric using a configurable LLM judge together with human raters. From these ratings it attributes answer-quality variance to the components and their interactions with mixed-effects models and reports effect sizes, significance, the best configuration, cost and latency trade-offs, and judge-human reliability. Whereas existing tools mostly either search for a good configuration or score outputs in isolation, CAFE also explains which component drives quality and whether an observed difference is significant. We validate CAFE on a retrieval-augmented question-answering (QA) pipeline over the HotpotQA benchmark dataset, where it recovers planted factor effects and stays calibrated under a permutation null. CAFE is released as a Python package and as a Web application.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
