@@ -1,0 +1,52 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-19T20:41:49.858080+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.14641v1",
+      "source": "arxiv",
+      "title": "Analytic Abduction: Causal Decomposition and Governed Commitment for Human--AI Coordination",
+      "abstract": "Abductive reasoning operates in two directions. The synthetic mode builds explanations from available hypotheses; the analytic mode, conversely, identifies the latent factors whose interaction accounts for a complex observed state. This paper develops the analytic mode as a non-greedy, risk-sensitive discipline of commitment, in which candidate factors coexist and interact, resolving into committed conclusions only when explicit governance conditions are met. The formal core is the $κ$-$τ$ apparatus: $κ$ encodes the epistemic interaction among hypotheses, and $τ$ sets a commitment threshold calibrated to the decision's stakes. The central contribution is the causal cluster, a structured object recording which latent factors participate in a decomposition, with what weights and interaction structure, together with a two-level architecture (intra-cluster $κ^*$, inter-cluster $κ^{**}$) that guards against causal misattribution. Demonstrated in epidemiological crisis decomposition and adversarial cyber threat analysis, the framework's contribution to human-AI reasoning is the legibility of suspended decomposition as a shared coordination object, providing structural resistance to premature convergence. In practice, the decision-maker is handed not a single imposed answer but the competing explanatory scenarios, weighted by plausibility and paired with the evidence that would resolve between them, so that sound action is possible even before the ambiguity is resolved.",
+      "authors": [
+        "Remo Pareschi"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-16T07:08:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.14641v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "causal decomposition and governed commitment for human-AI coordination",
+      "llm_evidence_cn": "用于人机协调的因果分解与受控承诺",
+      "llm_evidence": "用于人机协调的因果分解与受控承诺",
+      "canonical_evidence": "用于人机协调的因果分解与受控承诺",
+      "llm_tldr_en": "Analytic Abduction provides a formal framework for human-AI coordination using causal clusters and commitment thresholds calibrated to decision stakes.",
+      "llm_tldr_cn": "溯因推理可分为综合模式和分析模式，但分析模式缺乏风险管理。本文提出非贪婪、风险敏感的分析溯因框架，通过κ-τ机制编码假设之间的认知交互，并设置与决策风险挂钩的承诺阈值。核心贡献是因果簇，记录潜在因素的参与、因果关系和不确定性。该框架旨在支持人机协调中的结构化推理，确保在条件满足时才做出承诺，从而提高决策可靠性。",
+      "llm_tldr": "溯因推理可分为综合模式和分析模式，但分析模式缺乏风险管理。本文提出非贪婪、风险敏感的分析溯因框架，通过κ-τ机制编码假设之间的认知交互，并设置与决策风险挂钩的承诺阈值。核心贡献是因果簇，记录潜在因素的参与、因果关系和不确定性。该框架旨在支持人机协调中的结构化推理，确保在条件满足时才做出承诺，从而提高决策可靠性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

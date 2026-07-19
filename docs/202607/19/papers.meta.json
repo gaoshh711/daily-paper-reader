@@ -1,0 +1,24 @@
+{
+  "label": "2026-07-19",
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T20:43:21",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202607/19/2607.14641v1-analytic-abduction-causal-decomposition-and-governed-commitment-for-human--ai-coordination",
+      "section": "quick",
+      "title_en": "Analytic Abduction: Causal Decomposition and Governed Commitment for Human--AI Coordination",
+      "authors": "Remo Pareschi",
+      "date": "2026-07-16",
+      "pdf": "https://arxiv.org/pdf/2607.14641v1",
+      "score": "6.0",
+      "evidence": "用于人机协调的因果分解与受控承诺",
+      "tldr": "分析性溯因作为一种非贪婪、风险敏感的承诺机制，通过κ-τ形式体系编码假设间的认知交互并设置与决策风险匹配的承诺阈值。核心贡献是因果簇结构，记录参与分解的潜在因素及其权重与交互，并采用两层架构（内簇κ*、外簇κ**）防止因果误归因。在流行病危机分解和网络威胁分析中，该框架将暂停分解作为共享协调对象，提供对过早收敛的结构性抵抗。决策者获得的不再是单一答案，而是由可能性加权、附有解决证据的竞争性解释场景，即使在歧义未解时也能采取合理行动。",
+      "tags": "query:hai",
+      "abstract_en": "Abductive reasoning operates in two directions. The synthetic mode builds explanations from available hypotheses; the analytic mode, conversely, identifies the latent factors whose interaction accounts for a complex observed state. This paper develops the analytic mode as a non-greedy, risk-sensitive discipline of commitment, in which candidate factors coexist and interact, resolving into committed conclusions only when explicit governance conditions are met. The formal core is the $κ$-$τ$ apparatus: $κ$ encodes the epistemic interaction among hypotheses, and $τ$ sets a commitment threshold calibrated to the decision's stakes. The central contribution is the causal cluster, a structured object recording which latent factors participate in a decomposition, with what weights and interaction structure, together with a two-level architecture (intra-cluster $κ^*$, inter-cluster $κ^{**}$) that guards against causal misattribution. Demonstrated in epidemiological crisis decomposition and adversarial cyber threat analysis, the framework's contribution to human-AI reasoning is the legibility of suspended decomposition as a shared coordination object, providing structural resistance to premature convergence. In practice, the decision-maker is handed not a single imposed answer but the competing explanatory scenarios, weighted by plausibility and paired with the evidence that would resolve between them, so that sound action is possible even before the ambiguity is resolved.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

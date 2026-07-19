@@ -1,0 +1,903 @@
+Title: Analytic Abduction: Causal Decomposition and Governed Commitment for Human–AI Coordination
+
+URL Source: https://arxiv.org/pdf/2607.14641v1
+
+Published Time: Fri, 17 Jul 2026 01:04:06 GMT
+
+Number of Pages: 39
+
+Markdown Content:
+# Analytic Abduction: Causal Decomposition and Governed Commitment for Human–AI Coordination ⋆
+
+Remo Pareschi [0000 −0002 −4912 −582 X]
+
+Stake Lab, University of Molise, Italy 
+
+remo.pareschi@unimol.it 
+
+Abstract. Abductive reasoning operates in two directions. The synthetic mode builds explanations from available hypotheses; the analytic mode, conversely, identifies the latent factors whose interaction accounts for a complex observed state. This paper develops the analytic mode as a non-greedy, risk-sensitive discipline of commitment, in which candidate factors coexist and interact, resolving into committed conclusions only when explicit governance conditions are met. The formal core is the κ–τ
+
+apparatus: κ encodes the epistemic interaction among hypotheses, and 
+
+τ sets a commitment threshold calibrated to the decision’s stakes. The central contribution is the causal cluster — a structured object recording which latent factors participate in a decomposition, with what weights and interaction structure — together with a two-level architecture (intra-cluster κ∗, inter-cluster κ∗∗ ) that guards against causal misattribution. Demonstrated in epidemiological crisis decomposition and adversarial cyber threat analysis, the framework’s contribution to human–AI reason-ing is the legibility of suspended decomposition as a shared coordination object, providing structural resistance to premature convergence. In prac-tice, the decision-maker is handed not a single imposed answer but the competing explanatory scenarios — weighted by plausibility and paired with the evidence that would resolve between them — so that sound action is possible even before the ambiguity is resolved. 
+
+Keywords: Analytic abduction · causal decomposition · κ–τ appara-tus · risk-sensitive commitment · suspended decomposition · adversarial reasoning · human-AI coordination · explainability 
+
+# 1 Introduction 
+
+Abductive reasoning 1 operates in two directions. Synthetic abduction composes hypotheses into explanations: given evidence, identify or construct the hypothesis  
+
+> ⋆
+
+Accepted for presentation at the International Conference on Human and Artificial Rationalities (HAR 2026). The final authenticated version will be published in the conference proceedings in Springer’s Lecture Notes in Computer Science (LNCS) series.  
+
+> 1
+
+The notion originates with C. S. Peirce, who distinguished abduction — the generation of explanatory hypotheses — from deduction and induction. We use abduction arXiv:2607.14641v1 [cs.AI] 16 Jul 2026 2 R. Pareschi 
+
+whose interaction with the evidence best accounts for what has been observed. 
+
+Analytic abduction reverses this orientation: given a complex observed state of affairs, identify the latent factors whose interaction accounts for the observed complexity. The two modes share inferential substrate but differ in what they take as input, what they produce as output, and — crucially — in the risk profile of premature commitment. This paper develops the analytic mode of the framework introduced in [ 15 ], in which hypotheses — drawn from the context as latent factors — coexist, interact, and resolve into committed conclusions only when governance conditions are met. The analytic process is treated not merely as abstract inference but as group decision-making, in which the group may comprise both human and artificial agents, and in which the explanations reached and the decisions they license must satisfy previously agreed criteria of evidence and validity. Because explanatory elements are acquired concurrently, consolidated hypotheses interact dynamically rather than remaining statically isolated. This mechanism of dynamic interaction — articulated as semantic interfer-ence in the entangled-heuristics architecture of [ 9] for strategic reasoning — was generalised by [ 15 ] into the Quantum Abduction (QA) framework, 2 formalis-ing the κ-interaction and τ -commitment dynamics across forensic, clinical, and strategic domains; there, quantum superposition served as a conceptual scaf-fold for hypothesis coexistence and synthesis. The present paper retains these governance mechanics while developing them in the dual, analytic direction — decomposition rather than synthetic composition — and demonstrating their operation in two domains where premature commitment carries severe downside cost: crisis decomposition under epidemiological uncertainty, and adversarial strategy decomposition in cyber threat analysis. 
+
+Two Orthogonal Distinctions 
+
+We position the paper within two distinctions that structure the contribution. The first is the distinction between abduction as process and the κ–τ apparatus as logic . Abduction in complex settings — where hypotheses co-occur, are acquired concurrently, and interact rather than being evaluated in isolation, the sense in which [ 15 ] termed the process quantum — names, as developed there and extended here, the multi-agent socio-technical activity of reasoning under uncertainty across human decision-makers, large language models, and specialised AI components. The κ–τ apparatus — the pair of governance parameters comprising the epistemic interaction operator κ and the normative commitment threshold τ — is the formal      
+
+> throughout in this inference-to-explanation sense, without committing to the details of Peirce’s own taxonomy.
+> 2The qualifier “quantum” is used in the sense of quantum cognition : mathematical structures borrowed from quantum theory (superposition-like coexistence of alterna-tives, interference between them) are used to model graded, interacting plausibility. It carries no claim that cognition is physically quantum-mechanical. The present paper develops the analytic mode through the κ–τgovernance mechanics and does not depend on this metaphor. Analytic Abduction 3
+
+discipline that structures this process. The distinction matters because it locates the present paper’s contribution precisely: this is a paper about the analytic mode of QA in its agentic form, with the κ–τ apparatus serving as the inferential substrate that the agentic process inhabits. The second is the distinction between synthetic and analytic abduction introduced above. The synthetic mode composes upward from a library of atomic hypotheses toward emergent composite explanations. The analytic mode operates in the dual direction: given a structured explanandum Φ and a domain-specific library of latent factors F, the framework decomposes Φ into candidate causal clusters — structured objects recording which latent factors participate in a decomposition, with what weights, and in what interaction structure. The central formal contribution of the paper is the apparatus of causal clusters together with a two-level interaction architecture: intra-cluster interaction within a candidate decomposition, inter-cluster interaction between competing decompositions, and 
+
+τ governing commitment at either level. This contribution is conditioned on its inputs: the factor library F and the LLM-based candidate-generation stage bound what any decomposition can contain — a dependence we make explicit in §6 and return to in the Limitations. 
+
+The Distinctive Contribution to Human-AI Reasoning 
+
+The paper’s contribution to the structure of human-AI reasoning is not located in any single locus of the analytic-abduction pipeline. The LLM proposes candidate decompositions; domain experts calibrate interaction parameters; institutional decision-makers set the commitment threshold τ to encode the risk profile of the domain; specialized AI components contribute pattern recognition and projection at scale. These distributed contributions are individually unremarkable: any architecture for human-AI reasoning under uncertainty distributes labor across human and AI components in similar ways. What is distinctive is what the κ–τ apparatus makes representable across this distributed pipeline: the legibility of suspended decomposition as a shared coordination object . When the framework determines that multiple candidate decompositions are plausible but none is commit-worthy — that competing causal clusters cannot yet be disambiguated by the available evidence — the output is not a probabilistic distribution to be interpreted, nor a confidence-ranked list to be acted upon, nor a refusal to answer. The output is a structured account of the current inferential state : which decompositions are plausible, how they compete, why no commitment is warranted, and what evidence would resolve the ambiguity. This structured non-commitment is itself a coordination object that human and AI agents at different points in the multi-agent system can read, contribute to, and act on. Without such a shared object, multi-agent systems are vulnerable to premature convergence : whichever agent first reaches a confident conclusion drives collective commitment toward that conclusion regardless of whether the inferential state warrants it. The κ–τ apparatus provides structural resistance to this failure mode by making non-commitment as legible as commitment. 4 R. Pareschi 
+
+Adversarial Reasoning as a Sharpening Case 
+
+The two demonstrations of the paper exhibit a deliberate progression. The first — crisis decomposition in an epidemiological setting (§4) — exhibits all the structural features that motivate the analytic mode: complex explanandum, multiple plausible decompositions, severe misdecomposition cost, and the value of legible suspended decomposition for action guidance. In this setting, the pathogen does not anticipate the analyst; the framework operates on a generatively innocent phenomenon. The second demonstration (§5) introduces what the first does not: an adversary that anticipates the analyst’s decomposition and may craft observable behavior to mislead it. Under adversarial conditions, premature commitment is no longer merely costly — it becomes an attack surface , exploitable by an adversary sophisticated enough to model the analyst’s causal attribution. The cyber threat-analysis setting is the domain in which this sharpening becomes operationally severe. It also surfaces a phenomenon we call structural-versus-linguistic novelty :an adversary may use entirely familiar tools (high projection on known factors) while combining them in compositionally novel ways (anomalous intra-cluster interaction pattern). The κ-theoretic framing supplies the formalization of this distinction, which conventional similarity-based attribution conflates. 
+
+Plan of the Paper 
+
+§2 recapitulates the elements of [ 9, 15 ] load-bearing for the analytic extension and introduces the κ–τ apparatus as a named pair of governance parameters. §3 develops the formal core of the analytic mode: the causal cluster as the structured output of decomposition, the cluster-score semantics, the two-level interaction architecture, and the τ -governed separation condition that distinguishes commit-worthy decompositions from suspended ones. §4 demonstrates the apparatus in epidemiological crisis decomposition. §5 develops the adversarial demonstra-tion in cyber threat analysis, including the structural-versus-linguistic novelty phenomenon. §6 generalizes the human-AI coordination argument: the legibility of suspended decomposition as a coordination object and a structural defense against premature convergence. §7 situates the contribution within related work. §8 concludes with limitations and forward connections to companion work. 
+
+# 2 Background: The κ–τ Apparatus 
+
+The framework builds on the entangled-heuristics architecture of [ 9], generalised in [ 15 ] into the Quantum Abduction (QA) framework. This section gives only the technical background the analytic extension requires: the semantic substrate on which projection is computed (§2.1), the strategic-heuristics architecture that supplies the factor library and coordination pattern used later (§2.2), and the two governance parameters κ and τ (§2.3). The broader orientation — abduction as a multi-agent, socio-technical process rather than a head-internal inference — was set out in the Introduction and is not repeated here. Analytic Abduction 5
+
+2.1 The Semantic Substrate 
+
+Each hypothesis hi — in analytic mode, each factor fi — and each observation 
+
+oj is represented as a vector in a shared semantic space, and the activation of 
+
+hi by oj is a projection score derived from cos (hi, oj ). Hypotheses do not act in isolation: an interaction structure (§2.3) lets co-active hypotheses reinforce or attenuate one another, and a synthesis operator composes them into composite explanations when their interaction warrants it — the operator made precise, in the analytic direction, in §3.3. Commitment occurs only when a score exceeds the threshold τ (§2.3); below it, hypotheses remain active and open to revision. This is a vector-space realisation of graded, interacting plausibility, and presupposes no quantum-mechanical claim about cognition. 
+
+The embedding layer as modular substrate. The realisation in [ 9, 15 ]uses Sentence-BERT [ 18 ], but the framework treats the embedding layer as a substitutable component: any model mapping text to vectors in a shared space supplies the cosine projection the κ–τ apparatus consumes, and the layer can be swapped — for a contradiction-aware variant such as SimCSE [ 8], or a domain-adapted encoder — without altering the inferential pipeline. Better embeddings yield more discriminating projections and κ values, with no change to the apparatus. The worked examples of §§4–5 exploit exactly this modularity. 
+
+2.2 Entangled Heuristics for Strategic Reasoning 
+
+The entangled-heuristics architecture of [ 9] is the concrete realisation on which QA was originally based. Its elements are not hypotheses about a determinate reality but heuristics — conditional principles of action drawn from strategic traditions — embedded as vectors, with interaction computed through a matrix of coefficients κij and composition delegated to a large language model under structured prompting; conflicting heuristics are fused rather than eliminated. Two features carry over directly: the heuristics library, extended with operationally-grounded offensive-security heuristics [ 3 ], supplies the factor library F of §5; and the architectural pattern — LLM-mediated composition over a semantic substrate with inspectable interaction matrices — shapes the human–AI coordination patterns of §6. 
+
+2.3 The κ–τ Apparatus 
+
+Two quantities govern the dynamics of explanatory states. The interaction parame-ter κ(hi, h j ) ∈ [−1, 1] encodes the qualitative character of the interaction between two hypotheses (or, in analytic mode, two factors): positive values indicate rein-forcement, negative values attenuation, and values near zero independence. It is estimated from the semantic similarity of the embedded representations, refined by domain experts, and where available validated against cases. The commitment threshold τ separates having a plausible conclusion from being committed to it. A hypothesis or composite whose score exceeds τ is 
+
+commit-worthy — eligible for inferential closure and for licensing downstream 6 R. Pareschi 
+
+action; one whose score is positive but below τ is plausible but suspended —epistemically active and open to further interaction, but not yet a warranted basis for commitment. The threshold is calibrated to the stakes of the domain: high-stakes settings, where acting on a wrong conclusion costs far more than continued investigation, warrant a high τ and defer commitment until evidence is strong. The significance of the pair lies in what it makes representable. κ introduces compositional interaction among hypotheses, and τ structurally decouples deriva-tion from commitment — so that inference may legitimately continue past the point where a probabilistically-coherent system would have closed, because the information generated by sustained interaction among active hypotheses is itself inferentially valuable. §3 develops the analytic mode within this apparatus. 
+
+# 3 From Synthetic to Analytic Abduction 
+
+The synthetic mode, as developed in [ 15 ], reasons upward : a finite library of atomic hypotheses H = {h1, . . . , h n} is composed, under interaction, into emergent explanations whose plausibility exceeds that of any single component. Given observations O, the framework activates hypotheses through projection, holds several jointly active prior to commitment, and — when their interaction is sufficiently reinforcing — synthesizes hybrids that no single hypothesis could produce in isolation. This is the synthetic mode: hypotheses are the starting material, the composite explanation is the output. This section develops the dual orientation. In analytic abduction, the starting material is a complex observed state, and the output is a structured decomposition: a set of latent factors whose interaction accounts for the observed complexity. Where synthetic abduction asks which combination of known hypotheses best explains the evidence , analytic abduction asks what hidden decomposition — which interacting latent factors, with what compatibility structure — best accounts for the observed state . The formal substrate transfers: the κ–τ apparatus that governs synthesis in QA also governs decomposition in analytic mode. What changes is the interpretive orientation, the structure of the output, and — critically — the risk profile of premature commitment. 
+
+3.1 Inputs to Analytic Abduction 
+
+The synthetic mode of QA, as developed in [ 15 ], operates on two inputs: a set of observations O = {o1, . . . , o m} and a hypothesis library H = {h1, . . . , h n} from which composite explanations are constructed. The analytic mode reorients both inputs. In place of discrete observations, analytic abduction operates on a structured 
+
+explanandum : a single observed phenomenon presented as an integrated complex state, denoted Φ. The explanandum is the analytic counterpart of an integrated pattern: an outbreak trajectory rather than a set of individual case reports; an adversary campaign rather than a set of isolated alerts; a systemic correlation Analytic Abduction 7
+
+pattern rather than a set of independent indicator readings. The framework takes 
+
+Φ as primitive; how it was constituted from upstream data — whether by domain experts, by pattern-recognition systems, or by the multi-agent collective in which the framework is embedded — is outside the scope of the decomposition layer and is treated, in §6, as part of the surrounding agentic process. In place of a hypothesis library, analytic abduction operates on a factor library 
+
+F = {f1, f 2, . . . }: a domain-specific catalogue of latent causal elements that the system is willing to consider as candidates for decomposition. Epidemiology supplies transmission vectors; strategic theory supplies the heuristics catalogued in [ 9]; financial risk analysis supplies the channels through which contagion propagates. The factor library is structurally analogous to the hypothesis library of synthetic mode, but its elements play a different role: factors are not themselves explanations of Φ, but the components whose interaction, captured in a causal cluster, constitutes a candidate decomposition. The dual orientation is now precise. Synthetic abduction takes ⟨O, H ⟩ as input and produces a composite hypothesis whose plausibility is scored against 
+
+O. Analytic abduction takes ⟨Φ, F⟩ as input and produces a causal cluster 
+
+C = ⟨w, κ C ⟩ over F whose cluster score sc S (C | Φ) measures how well the synthesized factors account for the explanandum. The framework presupposes that F contains the operative factors, or com-positions thereof. Decomposition under incomplete factor libraries — where the operative factor is genuinely novel and not synthesizable from existing F — falls outside the present framework and is flagged as future work in §8. 
+
+3.2 The Explanandum as a Structured Object 
+
+The cluster score sc S (C | Φ) introduced in §3.3 below presupposes that factor pro-jections against Φ are well-defined. In the synthetic mode of QA [ 15 ], observations are individual textual or propositional items embedded as vectors in a semantic space, and the projection αi = cos (hi, oj ) is the standard cosine between two vectors. In analytic mode, the explanandum is not a single observation but an 
+
+integrated complex state . Treating Φ as a single mean vector would destroy the structural distinction that motivates the analytic mode in the first place — the whole point of decomposition is that the explanandum exhibits structure beyond what its constituent observations individually carry. We therefore encode Φ as a structured tuple 
+
+Φ = ⟨OΦ, R Φ, μ Φ⟩
+
+with three components: 
+
+– OΦ = {o1, . . . , o m} is the set of constituent observations : the individual items whose joint pattern constitutes the explanandum. Each oj is itself embeddable in the semantic space following [15], yielding a vector oj ∈ Rd.
+
+– RΦ is the relational structure over OΦ: a representation of how the obser-vations relate to one another. Relations may include temporal ordering, 8 R. Pareschi 
+
+spatial co-occurrence, causal precedence as inferred by upstream systems, or domain-specific relations such as actor-target pairing in adversarial settings or transmission-chain membership in epidemiological settings. Formally, RΦ
+
+is a labeled relation RΦ ⊆ OΦ × OΦ × L for some label set L encoding relation types; alternatively a hypergraph for higher-arity relations. 
+
+– μΦ : OΦ → [0 , 1] is a salience measure assigning each observation a weight reflecting its evidential prominence within the explanandum: how heavily oj
+
+figures in the pattern that constitutes Φ.
+
+Projection of factors against the explanandum. Given a factor fi ∈ F 
+
+with embedding fi and an explanandum Φ = ⟨OΦ, R Φ, μ Φ⟩, the projection of fi
+
+against Φ is defined through a relational aggregator Ψ :
+
+αi(Φ) := Ψ  {cos( fi, oj ) · μΦ(oj )}oj ∈OΦ , R Φ
+
+
+
+The aggregator Ψ takes two inputs: the individual cosine projections of fi against each constituent observation, weighted by salience; and the relational structure 
+
+RΦ. It returns a scalar in [0 , 1] representing the projection of fi against Φ as a structured whole. The framework does not prescribe the form of Ψ . Its simplest realization is the salience-weighted mean 
+
+Ψmin (X, R ) = 1
+
+|X|
+
+X
+
+> j
+
+xj
+
+which ignores RΦ and recovers a treatment of Φ as an unstructured set of weighted observations. Richer realizations exploit RΦ structurally — for example, by com-puting projections over relational substructures (temporal windows, co-occurrence cliques, causal chains) and aggregating with structure-sensitive weighting; or by employing graph-kernel-based aggregators that respect RΦ’s relational topology. As with κ in the synthetic mode of [ 15 ], the framework presupposes that Ψ is supplied by domain instantiation; specific realizations are developed in §§4 and 5. 
+
+Why the structured encoding matters. Two consequences of the encoding warrant explicit notice. First, the structural-versus-linguistic novelty phenomenon introduced in §5.3 acquires a precise formal anchor. Linguistic novelty is novelty in OΦ — obser-vations whose embeddings oj project weakly onto the factor library. Structural novelty is novelty in RΦ — relations among observations that do not match the relational patterns of any previously catalogued case. The two are mathematically independent: a campaign can exhibit familiar individual observations (high cosine 
+
+cos (fi, oj ) for many i, j ) combined under an unfamiliar relational structure RΦ,and the framework’s aggregator Ψ can in principle detect this dissociation while a treatment of Φ as a mean vector cannot. Second, the upstream constitution of Φ discussed in §3.1 and developed in §6.3 acquires formal content. The agents that contribute to explanandum formation — domain experts, pattern-recognition systems, the multi-agent collective — are not merely naming Φ but producing its components: identifying the constituent Analytic Abduction 9
+
+observations OΦ, inferring the relational structure RΦ, and calibrating the salience measure μΦ. Each component admits human, AI, or collaborative contribution. The legibility argument of §6 then has a concrete target: agents downstream of explanandum formation can inspect RΦ and μΦ as well as OΦ, and can contribute corrections or refinements to any of the three. The remainder of the formal development proceeds as before. Cluster scoring (§3.3) and the two-level interaction architecture (§3.5) operate over the structured explanandum: wherever cluster scoring and projection reference Φ, the projection is αi(Φ) as defined above, and the synthesis operator ⊗ acts on factor projections defined through Ψ .
+
+3.3 The Causal Cluster 
+
+In synthetic mode, the scoring semantics ultimately produces a scalar: the plausibility of a composite hypothesis t1 ⊗ t2. This scalar suffices when the inferential question is how plausible is this composite explanation . In analytic mode, the inferential question is structurally different: what is the decomposition .A scalar plausibility score cannot answer this question; the answer requires preserving the structure that the score reduces. We therefore introduce the causal cluster as the structured output object of analytic abduction. 
+
+Definition 1 (Causal cluster). Let F = {f1, . . . , f k} ⊆ F be a set of latent factors drawn from the factor library. A causal cluster over F is a pair 
+
+C = ⟨w, κ C ⟩
+
+where: 
+
+– w : F → [0 , 1] assigns each factor a weight reflecting its explanatory contribu-tion within the decomposition; 
+
+– κC : F × F → [−1, 1] specifies the internal interaction structure, encoding whether factors reinforce ( κC (fi, f j ) > 0), inhibit ( κC (fi, f j ) < 0), or operate independently ( κC (fi, f j ) ≈ 0) within the cluster. 
+
+The cluster C thus records not merely which factors are operative, but how 
+
+they combine. Two clusters may identify the same factors with the same weights yet differ in their internal κC — one representing a decomposition in which factors operate independently, another representing a decomposition in which the factors interact strongly. These are epistemically distinct decompositions with potentially divergent intervention implications, and the causal cluster preserves this distinction that scalar reduction would destroy. 
+
+Scoring a cluster against an explanandum. We do not introduce a new operator for decomposition. Instead, we reuse the compositional value semantics of [ 15 ] and reverse the inferential direction. The synthetic mode of [ 15 ] scores a composite by a value decomposition (its Eq. 2) that sums an 
+
+individual contribution of each constituent and a pairwise interaction contribution 10 R. Pareschi 
+
+modulated by the coupling between constituents. We read this decomposition in the analytic direction. Given a cluster C = ⟨w, κ C ⟩ over factors F = {f1, . . . , f k}
+
+and an explanandum Φ, write αi := αi(Φ) for the projection of fi against Φ
+
+(§3.2). Define the base fit and the internal coherence of the cluster, 
+
+base( C | Φ) = 
+
+> k
+
+X
+
+> i=1
+
+wi αi, coh( C) = 
+
+P 
+
+> i<j
+
+κC (fi, f j ) wiwj αiαj
+
+P 
+
+> i<j
+
+wiwj αiαj
+
+,
+
+where the weights are normalised within the cluster ( P 
+
+> i
+
+wi = 1 ). The base fit is the salience-weighted projection of the cluster’s factors onto Φ — the individual-contribution term — and lies in [0 , 1] . The coherence is the κC -weighted mean of the pairwise interactions actually exercised by the decomposition (each pair weighted by its joint explanatory mass wiwj αiαj ), and lies in [−1, 1] : positive when the cluster’s reinforcing factor pairs carry the explanatory load, negative when its inhibitory pairs do. The cluster score composes the two as a bounded modulation of fit by coherence, 
+
+sc S (C | Φ) = base( C | Φ) · 1 + η coh( C)1 + η , (1) with η ∈ [0 , 1] a stated coupling constant governing how strongly internal coher-ence is allowed to raise or lower the bare fit. Equation (1) is the operator written N 
+
+> i
+
+fi in the schematic presentation above: it is defined for any arity k, reduces to the salience-weighted projection base (C | Φ) when the cluster is interaction-free (κC ≡ 0), takes values in [0 , base (C | Φ)] ⊆ [0 , 1] without ad hoc clipping, and — crucially for the role of the causal cluster — separates two clusters that carry identical factors and weights but differ in κC , since they then differ in coh (C)
+
+and hence in score. The asymmetry between synthesis and decomposition is thus interpretive, not formal: both modes evaluate the same value decomposition of [15 ]; synthesis reads it as the plausibility of a composite, analytic abduction reads it as the adequacy of a decomposition. This formulation preserves the duality cleanly: synthesis composes upward, analytic decomposition reverses the arrow but uses the same compositional machinery. The asymmetry between the two modes is interpretive, not formal. 
+
+3.4 Multiple Clusters and Suspended Decomposition 
+
+In synthetic mode, suspended derivation captures the epistemic state in which multiple composite hypotheses remain plausible without any single composite having crossed the commitment threshold. The analytic-mode counterpart is 
+
+suspended decomposition : multiple candidate clusters {C1, C 2, . . . , C m} remain plausible as decompositions of Φ, and none has yet been committed to. Formally, we say a cluster C is plausible relative to Φ if sc S (C | Φ) ≥ ϵ, where 
+
+ϵ is the activation floor inherited from [15]; we write 
+
+⊢pS C | Φ. Analytic Abduction 11 
+
+We say C is commit-worthy if sc S (C | Φ) ≥ τ and, additionally, no competing plausible cluster C′ exhibits sufficient explanatory rivalry to block commitment — a condition we make precise in §3.5 below. We write 
+
+⊢cS C | Φ
+
+for the commit-worthy case. The structural property that motivated the analogous distinction in synthetic mode now does double duty in analytic mode. A plausible cluster is not yet a committed decomposition; multiple plausible decompositions may coexist; and commitment to any one of them is a normative act regulated by τ , not a logical consequence of having found a candidate that fits the explanandum. 
+
+3.5 Two Levels of Interaction 
+
+When multiple candidate clusters coexist under suspended decomposition, the interaction structure operates at two qualitatively different levels. Figure 1 illustrates the architecture schematically. 
+
+Intra-cluster interaction (κ∗). Within a single cluster C, the factors in-teract via κC . The lifted interaction κ∗ inherited from [ 15 ] applies directly: the interaction between two factor terms within C is the aggregate of the atomic 
+
+κC values across their constituents. This level governs how the factors inside acandidate decomposition combine — whether they reinforce one another (con-structive intra-cluster interaction, raising the cluster score) or attenuate one another (destructive, lowering it). 
+
+Inter-cluster interaction (κ∗∗ ). When two candidate clusters C1 and C2
+
+both achieve plausibility against the same explanandum Φ, a second-order question arises: are these compatible decompositions (they share factors, or they identify complementary aspects of the phenomenon), or are they competing decompositions (they propose mutually exclusive factor structures)? We introduce 
+
+κ∗∗ (C1, C 2) ∈ [−1, 1] 
+
+to encode this. Positive values indicate that C1 and C2 may be retained simul-taneously as partial views of a richer decomposition; negative values indicate that committing to one would foreclose the other. The neutral case κ∗∗ ≈ 0
+
+corresponds to clusters that address different aspects of Φ without bearing on one another. Computationally, κ∗∗ can be derived from the structural overlap of clusters: shared factors with aligned weights contribute positively; disjoint factor sets with similar projection profiles onto Φ suggest competition (each cluster claims to explain the same phenomenon through different decompositions). We leave the precise estimation procedure to specific instantiations — in §5 we develop a concrete realization for the cyber-adversarial setting. 
+
+Threshold governance at both levels. The commitment threshold τ
+
+governs derivation at either level. Cluster commitment requires sc S (C | Φ) ≥ τ for the candidate cluster, together with the absence of competing plausible clusters 12 R. Pareschi                     
+
+> f1
+> f2
+> f3
+> κ∗
+> C
+> Cluster C1
+> f4
+> f2
+> f5
+> Cluster C2
+> κ∗∗ (C1, C 2)
+> τgoverns commitment at either level; δ(τ)enforces separation
+> Fig. 1. The two-level interaction architecture of analytic abduction. Solid edges represent intra-cluster interaction κ∗
+> C(the dynamics within a candidate decomposition); the dashed red edge represents inter-cluster interaction κ∗∗ (C1, C 2)(the compatibility or competition between candidate decompositions). The threshold τregulates commitment at both levels, while the separation margin δ(τ)blocks commitment to C1when a structurally incompatible competitor C2has comparable cluster score.
+
+C′ for which κ∗∗ (C, C ′) < 0 and sc S (C′ | Φ) is comparable. Decomposition commitment — committing to a particular decomposition over a competing one — requires that κ∗∗ (C, C ′) < 0 has stabilized and that C’s lead over C′ exceeds a separation margin calibrated to τ . We make this explicit: 
+
+Definition 2 (Commit-worthy decomposition). A candidate cluster C is 
+
+commit-worthy relative to Φ and a set of competing clusters {C′
+
+> 1
+
+, . . . , C ′
+
+> m
+
+} if: 1. sc S (C | Φ) ≥ τ , and 2. for every C′ 
+
+> j
+
+with κ∗∗ (C, C ′ 
+
+> j
+
+) < 0 and sc S (C′ 
+
+> j
+
+| Φ) ≥ ϵ,
+
+sc S (C | Φ) − sc S (C′ 
+
+> j
+
+| Φ) ≥ δ(τ ),
+
+where δ(τ ) is a separation margin that grows with τ : higher-stakes decisions require larger margins of separation before commitment is warranted. 
+
+This two-level architecture is the paper’s central formal contribution. It captures a structural feature of analytic abduction that synthetic abduction does not encounter: in synthetic mode, hypothesis composites are constructed upward toward a single integrated explanation, and competition among composites is resolved by the same scalar dynamics. In analytic mode, two competing decompositions of the same explanandum may each be internally coherent — each may exhibit strong intra-cluster reinforcement, each may project well onto Φ
+
+— yet committing to one rather than the other determines which interventions the system will license. The threshold structure must therefore operate at both levels, and the inter-cluster term κ∗∗ provides the formal mechanism for representing decomposition rivalry as a first-class inferential object. 
+
+3.6 Risk Asymmetry and the Cost of Misdecomposition 
+
+The synthetic mode inherits its risk argument from [ 15 ]: premature commitment to a single composite hypothesis can foreclose the discovery of hybrid explanations Analytic Abduction 13 
+
+that constructive interaction would otherwise reveal. The analytic mode inherits an analogous but structurally distinct argument. In domains where action is licensed by the decomposition — public health response calibrated to the inferred transmission mechanism, financial intervention targeting the inferred risk channel, defensive countermeasures calibrated to the inferred adversary strategy — acting on an incorrect decomposition does not merely produce a false explanation. It directs resources toward the wrong targets, and in pathological cases it actively worsens outcomes by intervening on factors that are not in fact operative while leaving the actual causal structure undisturbed. A response to airborne transmission is ineffective if the mechanism is waterborne; a liquidity intervention is ineffective if the underlying risk is counterparty contagion; a perimeter hardening is ineffective if the adversary’s operative strategy is supply-chain compromise. This is causal misattribution risk , and its formal signature is precisely the configuration that the κ–τ apparatus is designed to detect: sc S (C | Φ) ≥ τ
+
+holds for some candidate C, yet a competing C′ with κ∗∗ (C, C ′) < 0 also achieves comparable plausibility. Under such conditions, the standard inferential imperative to select would force premature commitment. The two-level threshold structure, with its separation-margin condition δ(τ ), instead enjoins continued investigation: the system has identified a plausible decomposition, but the evidence has not yet distinguished it from a structurally incompatible competitor. The threshold τ thus encodes a domain-specific risk calibration : where the cost of acting on the wrong decomposition vastly exceeds the cost of continued investigation, τ is set high and δ(τ ) is large, deferring commitment until the evidence definitively disambiguates competing decompositions. Where decompo-sition errors are recoverable and the cost of delay dominates, τ and δ(τ ) are set low, enabling rapid commitment. The logic itself does not prescribe these values; what it provides is the formal apparatus within which such calibrations become representable and inspectable. 
+
+3.7 Summary of the Formal Apparatus 
+
+The analytic mode is structured by four elements: 
+
+– The causal cluster C = ⟨w, κ C ⟩ as the structured output of decomposition, preserving factor identity, weight, and internal interaction structure. 
+
+– The cluster score sc S (C | Φ), computed by reversing the synthetic operator 
+
+⊗ against the explanandum Φ.
+
+– The two-level interaction architecture , with κ∗ governing intra-cluster dynamics and κ∗∗ governing inter-cluster compatibility and competition. 
+
+– The τ -governed separation condition δ(τ ), calibrating commitment to the asymmetry between investigation cost and the cost of acting on a wrong decomposition. Sections 4 and 5 demonstrate this apparatus in two domains. The crisis-decomposition demonstration (§4) illustrates the framework’s operation in a non-adversarial 14 R. Pareschi 
+
+setting where the principal risk is intervention misdirection. The adversarial demonstration (§5) introduces a distinctive feature absent from non-adversarial cases: an adversary actively crafts the explanandum Φ to mislead the analyst’s causal decomposition. Under such conditions, premature commitment is not merely costly — it becomes itself an attack surface that a sophisticated adversary can exploit. The structural features just introduced — suspended decomposition, the two-level interaction architecture, separation margins — collectively enable a distinctive mode of human-AI engagement that §6 develops in detail: the legibility of suspended decomposition as a shared coordination object across multi-agent systems. 
+
+# 4 Crisis Decomposition: The Epidemiological Case 
+
+Crisis management is a paradigmatic domain for analytic abduction. The ex-planandum Φ — an unfolding outbreak, an infrastructure failure cascade, a financial-system stress event — presents itself as a complex pattern demanding decomposition. The factor library F comprises domain-specific causal mecha-nisms catalogued by expert knowledge. The risk profile is severely asymmetric: committing public-health resources to the wrong transmission model, hardening the wrong infrastructure node, or intervening on the wrong financial channel produces interventions that range from ineffective to actively harmful. And the temporal pressure is real: extended suspended decomposition is not free, because the phenomenon continues to evolve while commitment is deferred. We develop the framework in the epidemiological setting. The example here is not adversarial — the pathogen does not anticipate the epidemiologist’s analytic model — but it exhibits all the structural features that motivate the analytic mode: complex explanandum, heterogeneous factor library, multiple plausible decompositions, severe misdecomposition cost, and human-AI complementarity in cluster generation and threshold calibration. §5 then introduces what the adversarial case adds that this case does not yet require. 
+
+4.1 The Explanandum and the Factor Library 
+
+Public-health authorities observe an outbreak of respiratory illness over an eight-week window, with three structured features: (i) initial geographic concentration in two adjacent metropolitan areas with high commuter overlap; (ii) age-stratified incidence showing elevated attack rates in working-age adults (25–55) compared to historical respiratory-virus baselines; (iii) secondary spread patterns suggesting both household clustering and workplace-mediated transmission, with weak evidence of school-mediated chains despite open in-person schooling during the window. The explanandum Φ is the integrated pattern: not the case counts in isola-tion, not the age distribution in isolation, but the joint structure of geography, demographics, and secondary-spread patterns presented as a single phenomenon Analytic Abduction 15 
+
+requiring decomposition. As discussed in §3.1, Φ is constituted upstream of the decomposition layer — surveillance systems flag the anomalous pattern; public-health epidemiologists recognize it as decomposition-worthy. The analytic-abduction framework takes Φ as given and asks: which latent transmission factors, in which interaction structure, account for it? Formally, the explanandum is encoded as the structured tuple Φ = ⟨OΦ, R Φ, μ Φ⟩
+
+introduced in §3.2. The constituent observations OΦ include individual case records, geographic incidence counts, age-stratified attack rates, and secondary-spread indicators (household and workplace clustering events). The relational structure RΦ encodes temporal ordering (case onset sequences), spatial proximity (case geography), demographic co-classification (age and occupation strata), and inferred transmission-chain membership where available from contact tracing. The salience measure μΦ weights observations by epidemiological prominence: confirmed cases and well-characterized transmission chains receive high salience; weakly attributable cases receive lower salience. The relational aggregator Ψ for the epidemiological setting can be instantiated as a temporal-spatial kernel that weights observation pairs by relational proximity in RΦ, ensuring that factor projections respect the structured pattern of the outbreak rather than treating cases as independent samples. The framework’s projection αi(Φ) for each trans-mission factor fi then captures not merely the prevalence of features compatible with fi across the case set, but the structured fit between the factor’s expected transmission pattern and the relational topology of the observed outbreak. The factor library F for respiratory-pathogen transmission is well-developed in epidemiological practice. The relevant subset for this explanandum includes: 
+
+– f1: transport-hub transmission (high-throughput commuter infrastructure), 
+
+– f2: workplace transmission (sustained indoor co-presence among working-age adults), 
+
+– f3: school transmission (child-mediated household introduction), 
+
+– f4: household transmission (sustained close-contact among co-residents), 
+
+– f5: mass-event transmission (concentrated short-duration exposure), 
+
+– f6: healthcare-setting amplification (nosocomial spread), 
+
+– f7: airborne long-range transmission in shared ventilation, 
+
+– f8: behavioral-adherence heterogeneity (subpopulations with differential ad-herence to mitigation). The factor library here is curated by public-health expertise; the catalogue exists prior to any particular outbreak. The analytic-decomposition task is to identify, given Φ, which combination of these factors with what internal interaction structure best accounts for the observed pattern. 
+
+4.2 Candidate Decompositions 
+
+Following the workflow developed in §5 for the adversarial case (LLM-assisted candidate generation, expert κ-elicitation, κ–τ scoring), the system proposes three candidate clusters as decompositions of Φ:16 R. Pareschi 
+
+C1 = {f1, f 2, f 4}, a commuter-workplace coupling decomposition: transport-hub mixing seeds workplaces, which become the primary transmission setting; household clustering follows as secondary spread from infected working-age index cases. The intra-cluster κC1 reflects strong reinforcement between f1 and f2
+
+(commuter mixing feeds workplace exposure), moderate reinforcement between 
+
+f2 and f4 (working-age cases bring infection home), and weak direct interaction between f1 and f4 (households are downstream of workplaces, not directly of transport). 
+
+C2 = {f2, f 4, f 7}, a ventilation-mediated workplace decomposition: poor indoor ventilation in workplace settings drives sustained transmission, with household clustering as secondary effect; geographic concentration is explained by industry-specific occupancy patterns rather than commuter geography. The intra-cluster κC2 reflects strong reinforcement between f2 and f7 (the ventilation factor amplifies the workplace factor) and between f2 and f4 as before. 
+
+C3 = {f2, f 4, f 8}, a behavioral-heterogeneity workplace decomposition: the operative mechanism is workplace transmission concentrated within subpopula-tions with lower mitigation adherence ; geographic clustering reflects occupational concentration of these subpopulations rather than transport infrastructure or ventilation. The intra-cluster κC3 reflects strong reinforcement between f2 and 
+
+f8 (heterogeneous adherence within workplace settings) and the standard f2–f4
+
+coupling. All three decompositions share f2 (workplace) and f4 (household) — both are unambiguously supported by the observed pattern — but they differ in 
+
+which additional factor is invoked to explain the geographic structure and the absence of strong school-mediated chains. This is the analytic-mode signature: the decompositions agree on what is present and disagree on what is operative .
+
+4.3 Cluster Scoring and Inter-Cluster Compatibility 
+
+As in the adversarial case (§5.4), the quantities below are computed from the stated inputs by the same pipeline; only the domain inputs differ. The implementation and the exact numeric trace are provided as supplementary material. 
+
+Computational realisation. The explanandum’s constituents are rendered as the observation set OΦ = {o1, . . . , o 5}: o1, initial geographic concentration in two adjacent metropolitan areas with high commuter overlap; o2, elevated attack rates among working-age adults relative to historical respiratory base-lines; o3, secondary spread showing household clustering; o4, secondary spread showing workplace-mediated transmission among working-age adults; o5, weak school-mediated transmission chains despite open in-person schooling. The re-lational structure RΦ is the outbreak’s transmission-dependency graph, the edge set {(o1, o 4), (o4, o 2), (o4, o 3), (o2, o 3), (o3, o 5)}; the salience μΦ weights well-characterised features above weakly attributable ones ( μ(o5) lowest). Each fi and 
+
+oj is embedded, common-component-removed, and turned into a per-observation activation by the logistic link of §5.4 ( β = 4 ); projection uses the RΦ-blind aggregator Ψmin and the RΦ-aware aggregator Ψrel (γ = 0 .5, β′ = 6 ); cluster scores use Eq. (1) (η = 0 .3) with the elicited κC matrices of §4.2. Commitment Analytic Abduction 17 
+
+Table 1. Epidemiological case: per-observation activation aij (logistic link, β = 4 , after common-component removal). Each factor’s strongest observation is in bold. 
+
+o1 o2 o3 o4 o5
+
+f1 0.78 0.11 0.24 0.12 0.32 
+
+f2 0.19 0.71 0.46 0.88 0.64 
+
+f3 0.43 0.37 0.38 0.50 0.79 
+
+f4 0.64 0.56 0.72 0.28 0.74 
+
+f5 0.55 0.43 0.21 0.27 0.47 
+
+f6 0.16 0.38 0.60 0.60 0.32 
+
+f7 0.59 0.17 0.13 0.12 0.41 
+
+f8 0.31 0.44 0.40 0.66 0.28 
+
+Table 2. Epidemiological case: projection αi(Φ) under the two aggregators. factor Ψmin (R Φ-blind) Ψrel (R Φ-aware) 
+
+f1 0.31 0.74 
+
+f2 0.58 0.98 
+
+f3 0.48 0.96 
+
+f4 0.57 0.99 
+
+f5 0.38 0.74 
+
+f6 0.42 0.97 
+
+f7 0.27 0.55 
+
+f8 0.43 0.97 
+
+uses τ = 0 .70 — calibrated for public-health interventions where misdirection is costly but not catastrophic, and lower than the τ = 0 .75 of the attribution setting because public-health countermeasures can often be deployed in parallel — with separation margin δ(τ ) = ρτ (ρ = 0 .133 , so δ(0 .70) = 0 .093 ) and floor 
+
+ϵ = 0 .05 .
+
+Projection. The activation matrix aij (Table 1) is legible: the transport factor f1 peaks on the commuter-geography observation o1, the workplace factor 
+
+f2 on the workplace observation o4, the school factor f3 on the weak-school observation o5, and the household factor f4 on the household observation o3. The ventilation factor f7 projects weakly throughout — the observations describe demographics and settings but nothing about the built environment — which is what later places the ventilation decomposition lowest. As in the adversarial case, 
+
+Ψmin collapses the factors toward the mean while Ψrel recovers a discriminating projection (Table 2); all downstream quantities use αi(Φ) from Ψrel .
+
+Cluster scores. Applying Eq. (1) with weights wi ∝ αi(Φ) and the elicited 
+
+κC matrices: 18 R. Pareschi base (C | Φ) coh (C) sc S (C | Φ)            
+
+> C1(commuter–workplace) 0.916 +0 .372 0.783
+> C2(ventilation–workplace) 0.887 +0 .399 0.764
+> C3(adherence–workplace) 0.977 +0 .366 0.834
+
+All three clear τ = 0 .70 . The adherence-heterogeneity reading C3 scores highest and the ventilation reading C2 lowest, but the spread is narrow and — as in the adversarial case — the embedding channel does not by itself resolve which amplifier of workplace transmission is operative. 
+
+Inter-cluster compatibility. The computed structural prior is mildly posi-tive for all pairs ( κ∗∗ 
+
+> struct
+
+(C1, C 2) = +0 .24 , κ∗∗ 
+
+> struct
+
+(C1, C 3) = +0 .20 , κ∗∗ 
+
+> struct
+
+(C2, C 3) = +0 .22 ): the three decompositions share the workplace–household core and overlap heavily. The operational rivalry — that committing to one amplifier deprioritises interventions targeting the others — is supplied by elicitation: κ∗∗ (C1, C 2) = −0.2
+
+(weakly competing; workplace-targeted measures address both), κ∗∗ (C1, C 3) = 
+
+−0.4 (commuter-infrastructure measures versus adherence campaigns are sub-stantially different interventions), κ∗∗ (C2, C 3) = −0.3. The milder operational incompatibility of the public-health setting, relative to the attribution case, is carried by these smaller |κ∗∗ | magnitudes rather than by a smaller separation margin. 
+
+Separation analysis and suspended decomposition. With τ = 0 .70 and 
+
+δ(τ ) = 0 .093 , the leading reading C3 leads its nearest operationally incompatible competitor C1 by 0.834 − 0.783 = 0 .051 , and C1 leads C2 by 0.019 ; both gaps lie below δ(τ ). By Definition 2 no decomposition is commit-worthy, and the framework returns: 
+
+Three plausible decompositions identified, distinguished primarily by the inferred amplifier of workplace transmission: adherence heterogeneity ( C3,
+
+0.834 ), commuter mixing ( C1, 0.783 ), and ventilation ( C2, 0.764 ). All clear τ and all share workplace and household factors as central, but separation among them is below δ(τ ) = 0 .093 and they are operationally incompatible ( κ∗∗ < 0). Commitment suspended. Disambiguating evidence required: occupational-sector stratification of incidence (distinguishes C3); built-environment ventilation assessment of high-incidence workplaces (distinguishes C2); origin–destination commuter-flow analysis correlated with case onset (distinguishes C1). Provisional intervention guidance: measures consistent with all three decompositions (workplace ventilation improvement, sick-leave policy) can be deployed without commitment; measures specific to a single decomposition (commuter-infrastructure modification, targeted-adherence campaigns) await disambiguation. 
+
+4.4 The Distinctive Output: Suspended Decomposition as Action Guidance 
+
+Conventional analytic practice in public-health crisis response, faced with three competing candidate decompositions and insufficient evidence to choose among Analytic Abduction 19 
+
+them, has two unsatisfactory options. The first is premature commitment : select the highest-scoring decomposition and deploy interventions accordingly. This is the failure mode the framework is designed to prevent — the operative mechanism may be C3 while the response targets C1, and the misdirection of resources is the harm. The second is paralysis : defer all action until disambiguation, accepting continued spread as the cost of inferential caution. Analytic abduction under κ–τ governance offers a third option that neither alternative supports: commitment-stratified intervention . The framework’s output identifies which interventions are warranted under every plausible decomposition (and can therefore be deployed without commitment to any of them), and which interventions are specific to a single decomposition (and should be deferred until disambiguation). The suspended-decomposition state is not a non-decision; it is a 
+
+structured decision that selects interventions robust to the unresolved ambiguity while flagging the evidence that would license further commitment. This is the distinctive contribution of analytic abduction to crisis decision-making: not a faster answer, but a more decision-relevant characterization of the current inferential state. The state of partial knowledge becomes itself actionable, in a way that scalar-confidence outputs and probability distributions do not support. 
+
+4.5 What the Adversarial Case Will Add 
+
+The epidemiological setting exhibits all the features that motivate analytic abduc-tion in its general form: complex explanandum, multiple plausible decompositions, severe misdecomposition cost, and the value of legible suspended decomposi-tion for action guidance. But it does not yet exhibit one feature that becomes structurally central in adversarial settings: the explanandum itself is not strategi-cally generated. The pathogen does not anticipate epidemiological reasoning; the transmission pattern is causally generated by underlying mechanisms that do not respond to being analyzed. In adversarial settings, this generative innocence is lost. The next section develops the analytic mode in which the explanandum is itself the product of an adversary’s strategic choice — including the choice of what should be analytically observable. Under such conditions, premature commitment is not merely costly: it becomes an attack surface, and the legibility of suspended decomposition becomes both a defense against exploitation and a guide to action. 
+
+# 5 Adversarial Strategy Decomposition 
+
+The crisis-decomposition demonstration of §4 illustrated analytic abduction in a setting where the principal risk is intervention misdirection : acting on the wrong decomposition wastes resources and may worsen outcomes, but the phenomenon being decomposed does not itself respond to the analyst’s reasoning. In adversarial settings, this assumption breaks. The phenomenon under decomposition is the observable behavior of an opponent whose reasoning anticipates the analyst’s 20 R. Pareschi 
+
+decomposition. Premature commitment is not merely costly — it becomes an 
+
+attack surface , exploitable by an adversary sophisticated enough to model the analyst’s causal attribution and craft observable behavior to mislead it. This section develops the analytic mode of QA in adversarial reasoning, with cyber threat analysis as the concrete domain. The setting brings into sharp focus three structural features of the framework that the non-adversarial case underuses: the cost-asymmetry of misdecomposition is operationally severe; the factor library F is shared by analyst and adversary, since the adversary reasons over the same vocabulary of strategic principles; and a phenomenon we will call structural-versus-linguistic novelty — the dissociation between novelty in the surface vocabulary and novelty in the compositional structure — emerges naturally as a κ-theoretic configuration with operational significance. 
+
+5.1 Setting: Decomposing Observed Adversary Behavior 
+
+A defender observes a sequence of indicators attributable to a single adversary campaign: tactics, techniques, and procedures (TTPs) drawn from a shared catalogue such as MITRE ATT&CK [21], together with their timing, targeting, and operational signatures. The integrated explanandum Φ is the campaign-as-observed: not the individual TTPs in isolation, but the structured pattern they jointly exhibit — sequencing, escalation, evasion choices, target selection. The defender’s task is to decompose Φ: to identify the latent strategic principles whose interaction accounts for the observed campaign, and to do so under the constraint that committing to a wrong decomposition will misdirect defensive countermeasures. Formally, the explanandum is encoded as the structured tuple Φ = ⟨OΦ, R Φ, μ Φ⟩
+
+introduced in §3.2. The constituent observations OΦ are the individual indicators observed across the campaign: TTPs drawn from MITRE ATT&CK, host and network artifacts, targeting events, and operational-signature observations. The relational structure RΦ encodes temporal sequencing (which TTPs precede or follow which others), operational dependency (which observations are technically required for which subsequent ones), and target-victim coupling (which observa-tions are directed at which assets). The salience measure μΦ weights observations by analytic prominence: high-confidence indicators tied to ground-truth teleme-try receive high salience; speculative attributions or low-confidence indicators receive lower salience. The relational aggregator Ψ for the cyber setting can be instantiated as a sequence-aware kernel that weights observation pairs by their position in the inferred operational chain — observations that participate in the same operational dependency cluster contribute more strongly to factor projections than observations spread across uncoupled phases of the campaign. The framework’s projection αi(Φ) for each strategic heuristic fi then captures whether the heuristic’s expected operational signature is present in Φ with the relational topology characteristic of that heuristic’s actual deployment , not merely whether elements compatible with fi appear scattered across the campaign. The factor library F for this setting is the catalogue of strategic heuristics developed in [ 9], extended with operationally-grounded heuristics extracted from Analytic Abduction 21 
+
+offensive practice in forthcoming work on entangled-heuristic offensive synthesis [3]. Each heuristic fi ∈ F is rendered as a conditional principle: 
+
+– f1: If perimeter defenses are mature, then prioritize indirect approach through supply chain or trusted relationships. 
+
+– f2: If attribution would invite retaliation, then craft observable behavior to mimic a different threat actor. 
+
+– f3: If detection latency is high, then favor time-delayed activation to decouple intrusion from impact. 
+
+– f4: If defender’s analytic model is known or inferable, then exploit it through deceptive composition. 
+
+The library is heterogeneous: some heuristics descend from classical military theory (Sun Tzu, Clausewitz, Liddell Hart) and are tactically agnostic; others are domain-specific operational principles extracted from offensive cybersecurity practice. The system embeds each fi as a vector in the shared semantic space (following [ 9 ,15 ]; the choice of embedding model is a substitutable component, as discussed in §2.1), enabling projection against Φ.The intra-cluster interaction κC is initialized from semantic similarity follow-ing [ 9,15 ], with sign-and-magnitude adjustments elicited from offensive-security experts who understand how heuristics operationally reinforce or conflict in execu-tion. Inter-cluster interaction κ∗∗ between candidate decompositions is computed as developed in §3.5, with the cyber-specific addition that competing attributions to distinct threat actors typically yield κ∗∗ < 0 — committing to one attribution forecloses the other and licenses incompatible countermeasures. 
+
+5.2 The Deception Problem 
+
+In non-adversarial analytic settings, the explanandum Φ is causally generated by the underlying factor structure: an outbreak pattern is produced by transmission dynamics; a financial correlation pattern is produced by risk-channel coupling. The decomposition task is to invert this generative relation. The factors may be hard to discern, but they do not actively resist being discerned. In adversarial settings, this generative innocence is lost. The adversary’s observable behavior Φ is itself the product of strategic choice, including the strategic choice of what should be observable . A sophisticated adversary antici-pates the defender’s analytic process and may deliberately craft Φ to misdirect decomposition. Three deception patterns are operationally significant: 
+
+Mimicry. The adversary crafts Φ to project strongly onto factors asso-ciated with a different threat actor’s known strategic profile. The defender’s decomposition surfaces a cluster Cmimicked with high score sc S (Cmimicked | Φ),and commitment to this attribution directs countermeasures appropriate to the impersonated actor rather than the actual one. 
+
+Obfuscation. The adversary crafts Φ to project weakly onto every coher-ent cluster, sustaining high inter-cluster κ∗∗ conflict that defers commitment indefinitely. The defender is forced into prolonged suspended decomposition not 22 R. Pareschi 
+
+because the evidence is genuinely ambiguous but because the adversary has engineered the ambiguity. 
+
+Misdirection by overcommitment. The adversary identifies a plausible-but-incorrect decomposition that the defender is likely to commit to, and crafts 
+
+Φ to strengthen this decomposition’s projection while the actual operative factors remain latent. The defender commits with confidence — clears τ and the separa-tion margin δ(τ ) — and acts on a decomposition the adversary has constructed precisely to be acted upon. The third pattern is the most consequential because it weaponizes the analyst’s own commitment dynamics. The κ–τ apparatus does not eliminate this risk — no inferential framework can fully neutralize an adversary modeling the framework itself — but it provides structural defenses that probabilistic and eliminative frameworks lack. We develop these in §5.3. 
+
+5.3 Structural-versus-Linguistic Novelty 
+
+A distinctive phenomenon emerges in the κ-theoretic analysis of adversarial decomposition, with implications beyond the cyber domain. Consider an adversary campaign whose individual TTPs are entirely familiar — every technique is documented in MITRE ATT&CK, every operational principle has a parallel in the strategic heuristics literature. By the surface vocabulary alone, the campaign exhibits low linguistic novelty : the defender’s projection scores 
+
+αi = cos (fi, Φ ) are individually high across multiple known factors. Conventional analytic systems — which select the highest-projecting factors and synthesize them into an attribution — produce a confident decomposition with strong activation across familiar elements. Yet the combination of these familiar factors may be structurally novel: the inferred intra-cluster interaction κC exhibits a pattern that does not match any previously catalogued threat actor’s compositional profile. The factors are not novel; their interaction structure is. Formally, this corresponds to a configuration in which: 1. sc S (C | Φ) ≥ τ is achievable for a candidate cluster C,2. the constituent factors all have high projection scores against Φ,3. yet the κC implied by the joint observation pattern is anomalous with respect to the historical distribution of κC patterns associated with known attribution candidates. The structured encoding of Φ introduced in §3.2 supplies the formal anchor for this distinction. Linguistic novelty is novelty at the level of OΦ: individual observations whose embeddings project weakly onto the factor library, cos (fi, oj ) small for many fi and oj . Structural novelty is novelty at the level of RΦ: a relational topology among observations that does not match the relational patterns of any catalogued case, even when the observations themselves are individually familiar. The relational aggregator Ψ propagates these two sources of novelty into the projection αi(Φ) in mathematically distinct ways. Linguistic novelty Analytic Abduction 23 
+
+reduces Ψ ’s individual inputs cos (fi, oj ); structural novelty leaves these inputs intact but alters the way Ψ combines them. A campaign exhibiting low linguistic but high structural novelty therefore produces high individual projection values that nonetheless yield an anomalous joint projection profile under Ψ — and an inferred intra-cluster κC pattern that, when constructed to reproduce this profile, does not match any known attribution baseline. This is the κ-theoretic signature: the input projections are familiar but their relational aggregation is not, and the cluster’s interaction structure is therefore forced into an anomalous configuration. We term this structural novelty without linguistic novelty : an adversary using familiar tools in a novel compositional regime. The κ–τ apparatus detects this configuration as a specific signature — high individual factor projection accom-panied by anomalous κC — that warrants suspended decomposition even when scalar cluster scores would license commitment. This is the analytic-mode counterpart of an intuition long present in expert threat analysis: the techniques look familiar, but something about how they fit together is wrong . Senior analysts often resist confident attribution under precisely these conditions, and their resistance has historically been difficult to formalize. The κ-theoretic framing supplies the formalization: their intuition is reading the 
+
+κC pattern, not the individual projection scores, and the framework can make this reading explicit. The operational consequence is that the system can issue an inspectable signal: 
+
+“Plausible decomposition identified, but its internal interaction structure κC is anomalous relative to known attribution patterns; suspending commitment pending investigation of compositional novelty.” This signal is the structural-novelty-without-linguistic-novelty configuration made legible — the system reports not just what it has not yet committed to, but why , and what kind of further evidence would resolve the ambiguity. A symmetric configuration also exists: linguistic novelty without structural novelty . Here the individual factors have low projection scores (the surface TTPs do not match any familiar technique catalogue) but the inferred κC matches a known compositional profile. This typically indicates a known adversary using new tools — operationally less alarming than the inverse, because countermea-sures calibrated to the strategic composition remain effective even when the surface vocabulary shifts. The framework distinguishes these two cases, which conventional similarity-based attribution conflates. 
+
+5.4 Worked Example 
+
+We illustrate the apparatus on a stylized yet representative scenario drawn from public threat-intelligence reporting on multi-stage intrusions. In contrast to a purely schematic illustration, every quantity below is computed from the stated inputs by the procedure of this subsection; the implementation and the exact numeric trace are provided as supplementary material, 3 and the embedding layer is the only model-dependent component (it is substitutable, in the sense of §2.1).    
+
+> 3An implementation reproducing every quantity, table, and figure in §§4–5 is available at https://github.com/Aribertus/analytic-abduction .24 R. Pareschi
+
+The explanandum. Over a six-month window, a defender observes a coordi-nated campaign with the following structured pattern: o1, initial access through a compromised third-party software update; o2, extended dormancy of approxi-mately ninety days before any second-stage activity; o3, credential harvesting targeting a narrow set of identity-management infrastructure components; o4,lateral movement using legitimate administrative tooling, avoiding novel binaries; 
+
+o5, data staging in cloud storage services owned by the target organisation itself; 
+
+o6, exfiltration coinciding with routine high-volume backup operations to provide cover. The campaign is internally consistent, technically competent, and exhibits no obvious operational errors. 
+
+The factor library. The defender’s library F includes heuristics from of-fensive practice. Among the factors with non-trivial projection against Φ are: 
+
+f1, supply-chain compromise as initial access vector; f2, time-delayed activation to decouple intrusion from impact; f3, living-off-the-land (legitimate tooling) to avoid detection; f4, identity infrastructure as primary target; f5, exfiltration cover through legitimate data flows; f6, deception-of-attribution through tech-nique mimicry; f7, economically motivated cybercrime profile; f8, nation-state intelligence collection profile. 
+
+Candidate decompositions. The LLM, prompted with Φ and given access to 
+
+F, proposes three candidate clusters: C1 = {f1, f 2, f 3, f 4, f 5, f 8}, a patient nation-state intelligence operation ; C2 = {f1, f 3, f 4, f 5, f 7}, a sophisticated cybercrime operation reading dormancy as detection-evasion rather than strategic patience; 
+
+C3 = {f1, f 2, f 4, f 6, f 8}, a nation-state actor mimicking cybercrime (f6 active) to deflect attribution. Each is supplied with an internal interaction matrix κC
+
+recording the reinforcement structure its reading posits; the matrices are given in the supplement. 
+
+Computational realisation. The schematic operators of §3 are instan-tiated as follows. Each fi and each oj is rendered as a short text and em-bedded (the reported run uses GloVe-6B-50d mean-pooled embeddings; any sentence encoder, e.g. Sentence-BERT all-MiniLM-L6-v2 , plugs in through the same interface). Because mean-pooled embeddings of short, same-domain phrases are strongly anisotropic — every pair cosine sits near 0.9, so raw co-sine cannot dis confirm — we remove the common component (the mean di-rection of the scenario vocabulary) and renormalise, following standard post-processing of distributional embeddings [ 14 ]. The per-observation activation is a logistic link aij = σ β cos (fi, oj ) with temperature β = 4 . The rela-tional structure RΦ is the campaign’s operational-dependency chain, the edge set {(o1, o 2), (o2, o 3), (o3, o 4), (o4, o 5), (o5, o 6), (o3, o 5)}. Cluster scores use Eq. (1) with coupling η = 0 .3; commitment uses τ = 0 .75 , separation margin δ(τ ) = ρτ 
+
+with ρ = 0 .133 (so δ(0 .75) = 0 .10 ), and plausibility floor ϵ = 0 .05 .
+
+Projection and the role of RΦ. Table 3 reports the activation matrix aij .The structure is legible and not hand-set: f1 peaks on o1 (supply chain ↔ vendor update, 0.93 ), f2 on o2 (dormancy, 0.95 ), f4 on o3 (identity targeting, 0.82 ), f5
+
+on o6 (exfiltration cover, 0.87 ), while the cybercrime factor f7 projects weakly Analytic Abduction 25 
+
+Table 3. Per-observation activation aij = σ(β cos (fi, oj )) after common-component removal ( β = 4 ). Each factor’s strongest observation is shown in bold; the matrix exhibits the expected factor-to-stage correspondence and the uniformly weak cybercrime row f7.
+
+o1 o2 o3 o4 o5 o6
+
+f1 0.93 0.32 0.62 0.35 0.78 0.37 
+
+f2 0.27 0.95 0.10 0.34 0.32 0.73 
+
+f3 0.34 0.45 0.45 0.78 0.31 0.32 
+
+f4 0.54 0.20 0.82 0.36 0.79 0.20 
+
+f5 0.26 0.40 0.51 0.56 0.54 0.87 
+
+f6 0.27 0.46 0.36 0.70 0.24 0.24 
+
+f7 0.27 0.28 0.58 0.38 0.40 0.19 
+
+f8 0.40 0.28 0.43 0.27 0.44 0.37 
+
+throughout. This is the per-observation evidence; the aggregator Ψ turns it into a per-factor projection αi(Φ).The two realisations of Ψ behave very differently, and the difference is exactly the role of RΦ. The RΦ-blind aggregator 
+
+Ψmin : αi(Φ) = 
+
+P 
+
+> j
+
+μΦ(oj ) aij 
+
+P 
+
+> j
+
+μΦ(oj )
+
+averages each factor over all observations, including those it is silent on, and collapses every factor toward the mean (Table 4, middle column): under Ψmin 
+
+the factors are nearly indistinguishable and no decomposition can be told from another. The RΦ-aware aggregator Ψrel instead (i) reinforces a factor’s activation on oj when it also explains oj ’s RΦ-neighbours — crediting coherent runs in the dependency chain rather than scattered isolated hits — 
+
+˜aij = min 
+
+
+
+1, a ij + γ X  
+
+> (oj,o k)∈RΦ
+
+μΦ(ok) aik 
+
+
+
+,
+
+and (ii) pools over observations by salience-weighted soft-max attention, αi(Φ) = P 
+
+> j
+
+sij ˜aij with sij ∝ μΦ(oj ) exp (β′˜aij ), so a strategic factor is scored on the stage it actually explains rather than diluted to the mean ( γ = 0 .5, β′ = 6 ). The result (Table 4, right column) sharpens the projections and is what makes the structural/linguistic novelty distinction of §5.3 computable: Ψmin discards RΦ by construction, Ψrel exploits it. All downstream quantities use αi(Φ) from Ψrel .
+
+Cluster scores. Applying Eq. (1) with the within-cluster weights wi ∝ αi(Φ)
+
+and the elicited κC matrices yields 
+
+base (C | Φ) coh (C) sc S (C | Φ)
+
+C1 (patient nation-state) 0.938 +0 .416 0.812 
+
+C2 (sophisticated cybercrime) 0.967 +0 .396 0.832 
+
+C3 (nation-state mimicking crime) 0.917 +0 .442 0.799 26 R. Pareschi 
+
+Table 4. Projection αi(Φ) under the two aggregators. Ψmin (which ignores RΦ) collapses the factors toward the mean and cannot separate them; Ψrel (which exploits RΦ) recovers a discriminating projection. factor Ψmin (R Φ-blind) Ψrel (R Φ-aware) 
+
+f1 0.58 0.99 
+
+f2 0.43 0.88 
+
+f3 0.44 0.97 
+
+f4 0.50 0.97 
+
+f5 0.51 0.98 
+
+f6 0.38 0.91 
+
+f7 0.36 0.93 
+
+f8 0.37 0.82 
+
+All three clear the threshold τ = 0 .75 . Note that the cybercrime reading C2
+
+in fact attains the highest score: at the resolution of the embedding channel the three decompositions are nearly tied, and the channel does not by itself separate the operationally critical nation-state/cybercrime distinction. A system that committed to its top-scoring decomposition would therefore commit, wrongly, to 
+
+C2. This is precisely the failure the governance layer exists to prevent. 
+
+Inter-cluster compatibility. The structural prior κ∗∗ 
+
+> struct
+
+(Ca, C b) = agreement −
+
+rivalry , with agreement = P  
+
+> f∈Fa∩Fb
+
+min (wa(f ), w b(f )) and rivalry = (1 −J) (1 −|base a − base b|) for Jaccard overlap J, is computed as κ∗∗ 
+
+> struct
+
+(C1, C 2) = +0 .28 ,
+
+κ∗∗ 
+
+> struct
+
+(C1, C 3) = +0 .23 , κ∗∗ 
+
+> struct
+
+(C2, C 3) = −0.31 . The structural prior sees C1
+
+and C3 as compatible (both nation-state, high factor overlap) — which is exactly why it is insufficient. The operationally decisive incompatibility is supplied by elicitation (§5.5): nation-state and cybercrime attributions license disjoint counter-measures, and C3 brands C2’s very profile as fabricated. The elicited values used in commitment are κ∗∗ (C1, C 2) = −0.6, κ∗∗ (C1, C 3) = −0.4, κ∗∗ (C2, C 3) = −0.7
+
+(Figure 2). 
+
+Separation analysis and suspended decomposition. With τ = 0 .75 
+
+and δ(τ ) = 0 .10 , the leading decomposition C2 leads its nearest operationally incompatible competitor C1 by 0.832 − 0.812 = 0 .020 , and C1 leads C3 by 0.013 ;both gaps lie far below δ(τ ). By Definition 2 no candidate is commit-worthy, and the framework returns: 
+
+Plausible decompositions identified: C2 (sophisticated cybercrime, 0.832 ), 
+
+C1 (patient nation-state, 0.812 ), C3 (nation-state mimicking cybercrime, 
+
+0.799 ). All clear τ , but the top three are separated by less than δ(τ ) = 0 .10 
+
+and are pairwise operationally incompatible ( κ∗∗ < 0). Commitment suspended. Disambiguation requires evidence bearing on (i) monetisation versus collection — access maintenance without exploitation would favour the nation-state readings over C2; and (ii) independent corroboration of the mimicry hypothesis f6 — communications-pattern or targeting evidence beyond identity systems would separate C3 from C1.Analytic Abduction 27 
+
+Φ (observed campaign) 
+
+C1:patient nation-state 
+
+sc S = 0 .812 
+
+C3:NS mimicking cybercrime 
+
+sc S = 0 .799 
+
+C2:sophisticated cybercrime 
+
+sc S = 0 .832 
+
+κ∗∗ = −0.4 κ∗∗ = −0.7
+
+κ∗∗ (C1, C 2) = −0.6
+
+Fig. 2. Computed worked example. Three candidate decompositions project against the observed campaign Φ with the cluster scores shown; all three clear τ = 0 .75 . Dashed red edges are the elicited inter-cluster compatibilities κ∗∗ : all three pairs are operationally incompatible. The top-scoring decomposition is the cybercrime reading C2, but its lead over the incompatible C1 is only 0.020 , far below the separation margin δ(τ ) = 0 .10 ; no decomposition is commit-worthy and the framework reports suspended decomposition. 
+
+This output is the deliverable of the framework in this case. It is not an answer but a structured account of an ongoing inquiry, naming the live decompositions, the reason no commitment is yet warranted, and the specific evidence that would resolve it. 
+
+Provenance of the quantities. The example mixes four kinds of input, and the framework keeps them distinct (Table 5); this separation is itself part of what makes the output legible. 
+
+Linguistic versus structural novelty in the computed example. The run instantiates the dissociation of §5.3. Under Ψrel every factor projects strongly (αi ≥ 0.82 ): the campaign exhibits low linguistic novelty , being assembled from individually familiar factors. What the framework cannot resolve is which inter-action structure generated it — whether f6 (mimicry) is operative, i.e. whether 
+
+C3 rather than C1 holds. That distinction lives in κC , not in the projections, and separating it would require comparing the cluster’s interaction structure against a corpus of catalogued actor κC -baselines, which the present framework does not assume. The honest output is therefore suspension: the framework reports that the decompositions are individually plausible, mutually incompatible, and not separable by the evidence channel available to it — and names the structural 28 R. Pareschi                       
+
+> Table 5. Provenance of the quantities in the worked example. The framework’s legibility depends on keeping the computed, elicited, assumed, and institutional inputs distinct and separately inspectable. quantity provenance embeddings, aij ,αi(Φ), base, coh, sc Scomputed (embedding model + Eqs.)
+> κ∗∗
+> struct computed (structural-overlap formula) factor library F, candidate clusters, κCelicited (LLM proposal + analyst) salience μΦ, relational structure RΦelicited (analyst / upstream systems)
+> κ∗∗ operational incompatibility elicited (analyst calibration)
+> β, γ, β ′, η assumed (stated modelling constants)
+> τ,δ(τ),ϵinstitutional (stakes calibration)
+
+evidence that would separate them. Full RΦ-sensitive structural-novelty detection is left to future work (§8). 
+
+5.5 Human-AI Coordination Within the Demonstration 
+
+The worked example exhibits the loci of human-AI interaction identified in §3 and previewed for §6: 
+
+Cluster generation. The LLM proposes the candidate clusters C1, C 2, C 3,drawing on its training over strategic and operational literature to articulate decompositions in natural language that a human analyst can immediately under-stand and critique. Critically, the LLM is not selecting the correct decomposition; it is generating a candidate set whose adequacy is then evaluated by the κ–τ
+
+machinery. Because the apparatus scores only the candidates it is given, the framework’s adequacy depends on the recall of this generation stage: a decompo-sition absent from the candidate set cannot be scored, and a suspended verdict certifies only that no supplied candidate separated, not that the operative decom-position was necessarily among them. In practice the candidate set is enlarged until coverage stabilises, spurious factors are filtered by their low projection αi(Φ)
+
+against the explanandum, and the human analyst can introduce candidates the LLM omits; treating generation recall as a measurable quantity, and bounding the risk of a missing decomposition, is left to future work. 
+
+κ∗∗ elicitation. The inter-cluster compatibility values κ∗∗ (Ci, C j ) require expert judgment about operational incompatibility between attribution hypothe-ses. An LLM can propose initial estimates from semantic structure (nation-state and cybercrime profiles project onto different operational vocabularies and yield 
+
+κ∗∗ < 0 by default), but the magnitude of incompatibility and its calibration to countermeasure-divergence is supplied by human analysts familiar with the response infrastructure. 
+
+τ -calibration. The threshold τ = 0 .75 and separation margin δ(τ ) = 0 .10 are not technical parameters. They encode a judgment about the cost of acting on a wrong attribution — a judgment that belongs to the institutional decision-making layer (incident-response leadership, threat-intelligence governance), not to the Analytic Abduction 29 
+
+technical layer. The framework makes the threshold inspectable: an analyst can see what τ is , ask why it is set there , and reason about what would justify lowering or raising it. 
+
+Suspended-decomposition inspection. The framework’s output is itself a coordination object. The analyst does not receive “the answer is C1”; the analyst receives a structured account of the current inferential state — which decompositions are plausible, why no commitment is yet warranted, and what specific evidence would change the situation. This makes the system’s non-commitment legible in a way that conventional analytic systems do not support. The analyst can act on this output by directing further investigation toward the disambiguating evidence the framework has identified. 
+
+Commitment authorization. When sufficient disambiguating evidence accumulates and the framework reports a commit-worthy decomposition, the analyst still decides whether to act on it. The framework reports that commitment is now warranted ; the analyst decides whether commitment is strategically appro-priate given factors outside the framework’s scope (diplomatic considerations, ongoing intelligence operations, response capacity). The role-separation is clean: the framework governs inferential commitment; the human governs practical 
+
+commitment. The next section generalizes these observations: the legibility of suspended decomposition is not merely a useful feature of analytic abduction in a single domain — it constitutes a distinctive contribution to the structure of human-AI coordination, with implications that extend beyond cyber adversarial reasoning to any multi-agent decision setting under sustained uncertainty. 
+
+# 6 Legible Suspended Decomposition as a Human-AI Coordination Mechanism 
+
+The demonstrations of §4 and §5 illustrated analytic abduction in two domains. In each case, the framework’s output was not a decomposition but a structured account of an ongoing inquiry : which decompositions are plausible, which compe-titions are unresolved, what evidence would resolve them, and which provisional actions are warranted under the unresolved ambiguity. This section generalizes the observation. The legibility of suspended decomposition is not merely a use-ful feature of the framework in particular domains. It constitutes a distinctive contribution to the structure of human-AI coordination, with implications that extend to any multi-agent decision setting under sustained uncertainty. 
+
+6.1 Premature Convergence as a Multi-Agent Failure Mode 
+
+Multi-agent decision systems integrating human decision-makers, large language models, and specialized AI components face a coordination failure that single-agent systems do not exhibit. Each agent in such a system has its own character-istic processing speed, confidence profile, and risk calibration. Large language models, in particular, are predisposed by training to produce confident, fluent 30 R. Pareschi 
+
+outputs even under conditions where uncertainty is the more accurate response. Specialized AI components — classifiers, anomaly detectors, attribution systems — typically report scalar confidences that compress hypothesis interaction into a single number. Human participants reason on slower timescales but bring contextual judgment and institutional knowledge that the AI components lack. In the absence of structural mechanisms to govern collective commitment, whichever agent first reaches a confident conclusion drives the collective toward that conclusion. The LLM proposes an attribution; the specialized AI returns a high-confidence classification; the analyst, presented with two converging confident signals, treats the matter as settled. The collective commits not because the inferential state warrants commitment but because the fastest confident agent 
+
+has effectively voted for closure. We term this premature convergence , and it is structurally distinct from the premature-commitment failure of single-agent reasoning: in the multi-agent case, the failure is driven not by an individual agent’s overconfidence but by the absence of coordination mechanisms that distinguish 
+
+individual confidence from collective warrant for commitment .Premature convergence is particularly costly in the analytic-decomposition setting. A confident attribution by any single agent — the LLM, a threat-intelligence classifier, an institutional expert — can drive collective commitment to a decomposition that the κ–τ analysis would have flagged as suspended. The fastest confident voice closes the inquiry before the structurally legitimate non-commitment has been registered as such. 
+
+6.2 Legibility as Structural Resistance 
+
+The κ–τ apparatus offers a structural defense against premature convergence: the 
+
+non-commitment state itself becomes a coordination object . When the framework reports suspended decomposition with the structure exhibited in §4.4 and §5.4 — plausible clusters identified, separation margins not met, disambiguating evidence specified — this output is not merely informational. It is a shared representation of the current inferential state that every agent in the collective can read, contribute to, and reason about. Three properties make this representation effective as a coordination mecha-nism. 
+
+Explicit non-commitment. The framework does not present a probabil-ity distribution or a confidence-ranked list; it presents the structural reasons 
+
+commitment has been deferred. An LLM that would otherwise produce a confi-dent attribution can be conditioned on the suspended-decomposition state and produce, instead, a confident analysis of the ambiguity . The agent’s fluency is redirected from premature closure toward characterizing the inquiry’s current shape. 
+
+Inspectable parameters. The threshold τ , the separation margin δ(τ ),the intra-cluster κC patterns, and the inter-cluster κ∗∗ values are all visible to every agent. A human analyst can ask why commitment is suspended and receive a structural answer: not “the model is 78% confident” but “two competing decompositions have comparable cluster scores, their inter-cluster compatibility Analytic Abduction 31                        
+
+> Table 6. Role differentiation across the analytic-abduction pipeline.
+> Locus Primary contributor Role
+> Explanandum formation (Φ)Human + specialized AI Recognize pattern complexity war-ranting decomposition Factor library curation (F)Human + LLM Mine and validate the catalogue of latent factors Candidate cluster gener-ation LLM Propose plausible decompositions in natural language Intra-cluster κCelicita-tion Human expert Calibrate operational interaction structure Inter-cluster κ∗∗ elicita-tion Human + LLM Estimate decomposition compatibil-ity
+> τand δ(τ)calibration Human (institutional) Encode risk profile of the domain Suspended-decomposition in-spection Human + all AI agents Read and contribute to the current inferential state Disambiguation direc-tion All agents Prioritize evidence acquisition Commitment authoriza-tion Human Act on commit-worthy decomposi-tion
+
+is −0.4, and the separation margin calibrated to this domain’s risk profile is not met”. The reasons for non-commitment are themselves objects of inquiry. 
+
+Actionable disambiguation. The framework identifies, alongside the sus-pended decomposition, the evidence that would resolve it . This converts non-commitment from a static state into a directed investigation: agents can prioritize their effort toward acquiring the disambiguating evidence the framework has flagged, rather than continuing to refine confident outputs over a fixed evidence base. Each of these properties is structurally distinct from what scalar-confidence frameworks offer. A 78%-confident classifier output gives no purchase for agents to contribute, dispute, or redirect; the only available response is to accept or reject the output. A suspended-decomposition output, by contrast, is a structured argument in which agents at different points in the multi-agent system have well-defined roles: cluster proposal, κ-elicitation, τ -calibration, evidence direction, and ultimate commitment authorization. 
+
+6.3 Role Differentiation Across the Pipeline 
+
+The demonstrations of §4 and §5 distributed human-AI contributions across the analytic-abduction pipeline. We make the distribution explicit here — as a flow in Figure 3, and stage by stage in Table 6. This role distribution reflects two principles. First, AI contributes where its capabilities are distinctive : LLMs excel at proposing candidate decompositions in natural language drawing on broad strategic and operational knowledge; specialized AI excels at detecting patterns and computing projections at scale. 32 R. Pareschi Explanandum formation Φ = ⟨OΦ, R Φ, μ Φ⟩ (human + AI) Factor-library curation F (human + LLM) Embedding + projection αi(Φ) (computational) Interaction estimation κ (computational + expert) Candidate-cluster generation (LLM) Cluster scoring sc S (C | Φ) (computational) Inter-cluster rivalry κ∗∗ (human + LLM) Commit-worthiness / suspension (Def. 2) (human, institutional) 
+
+Fig. 3. The analytic-abduction pipeline, annotated by primary contributor. Computa-tional stages (blue) compute projections and scores; the LLM (green) proposes candidate decompositions; human experts (orange) calibrate interaction structure and assess ri-valry; institutional judgement (red) sets the commitment threshold and authorises commitment; explanandum and factor-library formation are collaborative (grey). The 
+
+κ–τ apparatus evaluates the candidates the generation stage supplies; it does not itself generate them. 
+
+Second, humans retain authority where judgment is normatively required : the calibration of τ encodes a risk judgment that belongs to institutional decision-making; commitment authorization is an act with consequences that humans must own. Critically, the framework does not segregate “AI tasks” from “human tasks”. The middle rows of the table — κ∗∗ elicitation, suspended-decomposition inspec-tion, disambiguation direction — are explicitly collaborative . The legibility of the framework’s intermediate state is what makes this collaboration possible: agents at different points in the pipeline can read each other’s contributions to the shared inferential state and respond to them. 
+
+6.4 What Legibility Cannot Do 
+
+The structural defenses described above are real but incomplete. Three limits warrant explicit acknowledgment. The framework provides legibility , not understanding . The κ–τ apparatus exposes the structural features of the current inferential state in a form that Analytic Abduction 33 
+
+domain experts can read. It does not guarantee that any particular human participant has the expertise to interpret what is exposed. A senior threat analyst can read a suspended-decomposition output and act on it; a less experienced participant may need supporting interface and explanation infrastructure. The framework enables expert engagement; it does not substitute for expertise. The framework provides structural resistance to premature convergence, not 
+
+behavioral resistance. An institutional culture that pressures rapid closure can override the framework’s signals: a manager may demand a commitment that the framework reports as not commit-worthy, and the framework cannot prevent this. What it can do is make the override visible : the decision to commit de-spite suspended decomposition becomes traceable, attributable, and accountable. Whether organizations make use of this traceability is outside the framework’s scope. The framework provides coordination , not coordination guarantees . Multi-ple agents reading the same suspended-decomposition output may still reach incompatible conclusions about what to do next. The framework structures the coordination space; it does not collapse it to a single answer. This is by design — collapsing to a single answer would itself be a form of premature convergence — but it means that multi-agent disagreement remains possible and must be managed through other mechanisms. 
+
+6.5 Toward Architectural Realization 
+
+The argument of this section has been principled rather than architectural: we have characterized what kind of human-AI coordination the legibility of suspended decomposition enables, without specifying the system architecture within which it would be realized. Architectural realization requires a substrate in which agents of heterogeneous kind — human decision-makers, LLMs, specialized AI components — can read and contribute to a shared inferential state with well-defined interaction protocols. Multi-agent architectures developed for governed agentic systems [ 1, 2]provide candidate substrates, with their token-based coordination mechanisms naturally accommodating the structured outputs of analytic abduction. The development of an architectural realization — translating the κ–τ apparatus into agent-level protocols, message types, and coordination primitives within such a substrate — falls outside the scope of this paper and is the subject of forthcoming joint work. What this paper has established is the target for such an architecture: a multi-agent system in which suspended decomposition is a first-class shared object, in which the legibility of non-commitment is preserved across agent boundaries, and in which the structural resistance to premature convergence operates at the collective level rather than depending on the discipline of any single agent. 
+
+# 7 Related Work 
+
+The contribution of this paper is positioned at the intersection of several research traditions. We situate it briefly within each. 34 R. Pareschi 
+
+Abductive reasoning in AI. Classical abductive frameworks — abduc-tive logic programming [ 12 ], statistical abduction, set-covering theory [ 17 ], and explanation-based reasoning — can in principle return several competing expla-nations, and probabilistic approaches maintain distributions over hypotheses; the contrast we draw is therefore not that these frameworks necessarily select a single winner, but that none treats interaction among competing decompositions 
+
+and governed suspension of commitment as first-class inferential objects. The most directly comparable methodology is the Analysis of Competing Hypotheses (ACH) [ 11 ], the established intelligence-analysis discipline for holding rival hy-potheses open and scoring them against evidence; analytic abduction can be read as giving ACH a compositional substrate — the interaction operator κ — and an explicit commitment calculus — the threshold τ and the separation condition of Definition 2 — where ACH leaves both to unaided analyst judgement. The synthetic mode of [ 15 ] departs from the eliminative orientation by sustaining mul-tiple hypotheses jointly and allowing them to reinforce one another, rather than eliminating all but one. The present paper extends this departure to the analytic direction: the structured object that survives suspended derivation is not a single hypothesis but a causal cluster recording the decomposition’s internal structure. Explanatory coherence frameworks in cognitive science [ 20 ] share the present framework’s emphasis on interaction structure among hypotheses, but operate on a network of explanatory relations rather than on an explicit compositional logic with governance thresholds. 
+
+Causal reasoning under uncertainty. Structural causal models [ 16 ] pro-vide the dominant formalism for causal inference, with directed acyclic graphs, interventionist semantics, and the do-calculus supplying a powerful apparatus for reasoning about interventions on a known causal structure. The present frame-work addresses a different inferential question: not “given this causal structure, what is the effect of intervention?” but “given this complex observed pattern, what causal structure accounts for it?”. Pearl’s framework operates given a causal graph; analytic abduction operates toward one. In domains characterized by Knightian uncertainty [ 13 ] — where the causal structure itself is contested and probabilistic priors over candidate structures are unreliable — the analytic mode provides a complementary inferential regime. The two approaches are most nat-urally combined sequentially: analytic abduction generates and disambiguates candidate causal structures; once a structure is commit-worthy, Pearl’s framework licenses interventions over it. 
+
+Adversarial reasoning and threat intelligence. Cyber threat analysis has developed sophisticated taxonomies of adversary behavior, most notably the MITRE ATT&CK framework [ 21 ], and a body of work on attribution that combines technical indicators with strategic and geopolitical analysis. Existing attribution practice typically operates by similarity matching against known actor profiles, supplemented by analyst judgment about strategic intent. Game-theoretic treatments of attribution additionally model the strategic interaction between an attacker who may craft deceptive indicators and a defender who anticipates such deception [ 7]; analytic abduction is complementary, supplying the Analytic Abduction 35 
+
+inferential object — the suspended decomposition — over which such reasoning about evidence acquisition can proceed. The analytic-mode framework developed in §5 contributes a structural extension: the inferred interaction pattern among observed elements — formalized as the intra-cluster κC — becomes itself an attribution signal, distinguishing structurally novel campaigns from linguistically novel ones in ways that vocabulary-level similarity matching cannot. Recent work on entangled-heuristic offensive synthesis [ 3] applies the synthetic mode of QA to the generation of operational cyber strategies; the present paper’s analytic mode is the dual contribution — decomposing observed offensive behavior into the latent strategic principles whose interaction generated it. 
+
+Multi-agent reasoning and human-AI coordination. Research on multi-agent decision systems has explored a range of coordination mechanisms, from auction-based and market-based approaches to consensus protocols and argu-mentation frameworks. Token-based coordination architectures developed for human-LLM-AI integration [ 1,2] provide substrates within which heterogeneous agents can interact under structured protocols. The argument of §6 is that the legibility of suspended decomposition contributes a distinctive coordination object to such architectures: a shared inferential state that is neither a commitment nor a confidence distribution but a structured representation of an ongoing inquiry. Within human-AI decision support specifically, the alternatives to a single committed answer are not limited to scalar confidence: calibrated uncer-tainty communication, ensemble disagreement, and explainable-AI interfaces for analysts all convey more than a point estimate [ 10 ]. Suspended decomposition differs from these in kind rather than degree — it reports not how uncertain a conclusion is, but which structured alternatives remain live, why commitment is withheld, and what would resolve it. The separation condition that withholds commitment in the presence of active, incompatible rivals has a suggestive par-allel in conflict-monitoring accounts of human reasoning [ 4], where competing intuitions of comparable strength signal that deliberation should continue. This contribution is principled rather than architectural; the architectural realization within token-based coordination substrates is the subject of forthcoming joint work. 
+
+Belief functions, possibility theory, and graded plausibility. Frame-works for reasoning under uncertainty that depart from strict probabilistic norms — Dempster-Shafer theory [ 19 ] and its successors, possibilistic logic [ 5], ranking-theoretic approaches — share with the present framework a recognition that probability is not the only or always the appropriate model of uncertainty. The 
+
+κ–τ apparatus differs from these in two respects: the interaction operator κ intro-duces compositional context-sensitivity among hypotheses that these frameworks do not represent, and the normative threshold τ structurally decouples inferential derivation from commitment in a way that these frameworks treat as external to the inferential apparatus. The present framework is thus closer in spirit to recent work on dialectical proof procedures [ 6], where non-termination is a first-class phenomenon — though where dialectical frameworks treat non-termination as 36 R. Pareschi 
+
+an obstacle to be managed, analytic abduction treats suspended decomposition as an epistemically legitimate and operationally productive state. 
+
+# 8 Conclusion and Future Directions 
+
+This paper has developed analytic abduction within the κ–τ apparatus: the dual orientation in which a complex observed state is decomposed into the latent factors whose interaction accounts for the observed complexity. The central formal contribution is the causal cluster as the structured output of decomposition, together with the two-level interaction architecture — intra-cluster κ∗ and inter-cluster κ∗∗ — and the τ -governed separation condition that distinguishes commit-worthy decompositions from those that remain suspended. The framework was demonstrated in epidemiological crisis decomposition and in cyber adversarial reasoning, with the latter introducing the phenomenon of structural-versus-linguistic novelty as a κ-theoretic configuration of operational significance. The paper’s contribution to human-AI reasoning is the argument of §6: that the legibility of suspended decomposition constitutes a distinctive coordination object across multi-agent systems integrating human decision-makers, large lan-guage models, and specialized AI components. This legibility provides structural resistance to premature convergence — the failure mode in which the fastest confident agent drives collective commitment regardless of whether the inferential state warrants it — by making non-commitment as inspectable, contestable, and actionable as commitment. 
+
+Limitations 
+
+Four limitations qualify the contribution. First, the framework presupposes that the factor library F contains the operative factors or compositions thereof; decom-position under incomplete factor libraries, where the operative factor is genuinely novel and not synthesizable from existing F, falls outside the present framework. Second, the legibility argument of §6 establishes what the framework enables 
+
+but not what it guarantees : institutional cultures that pressure rapid closure can override the framework’s signals, and the framework’s contribution is to make such overrides visible rather than to prevent them. Third, the demonstrations of §§4–5 are stylized: the scenarios, the factor libraries, and the elicited inputs (the interaction matrices κC and κ∗∗ and the salience μΦ) are illustrative rather than drawn from operational data. What is not illustrative is the computation over them — the projections, cluster scores, and suspension decisions are produced by the reproducible pipeline of §5.4 rather than asserted — so the demonstrations establish the framework’s structural operation without empirically validating its calibration to specific domains. Fourth, the projections inherit the limitations of the embedding model that computes them. Off-the-shelf sentence encoders such as Sentence-BERT, especially untuned, handle some semantic phenomena poorly — negation and contradiction most notably, where lexically similar but logically opposed statements can receive Analytic Abduction 37 
+
+high cosine similarity — and they resolve fine distinctions only coarsely (in the cyber example, the channel does not separate espionage from monetisation). Two things bound the consequences. The embedding layer is a substitutable, tunable component (§2.1): a contradiction-aware or domain-adapted encoder can replace the default without any change to the κ–τ apparatus, and the common-component removal used in §§4–5 restores the channel’s capacity to disconfirm. More fundamentally, the governance layer is designed so that an imperfect projection channel does not drive commitment: where the channel cannot cleanly separate competing decompositions, the framework suspends rather than forcing a choice, as both worked examples show. Embedding error thus degrades the sharpness of the projections, not the soundness of the suspension — though a systematically biased encoder could still mislead the analyst about which 
+
+disambiguating evidence to seek, and domain adaptation of the embedding layer remains the principal lever for improving performance in any given setting. 
+
+Future Directions 
+
+The framework opens several lines of development that fall naturally to distinct venues. 
+
+Architectural realization. The legibility of suspended decomposition char-acterized in §6 requires a multi-agent substrate within which heterogeneous agents can read and contribute to a shared inferential state with well-defined interaction protocols. Forthcoming joint work develops this realization within token-based coordination architectures [ 1, 2], translating the κ–τ apparatus into agent-level protocols, message types, and the institutional governance structures that calibrate τ to domain risk profiles. 
+
+Domain instantiation in offensive and defensive cybersecurity. The cyber demonstration of §5 introduces the analytic mode’s central concepts but does not develop them at the operational depth that cybersecurity practice requires. Forthcoming work, building on the offensive-strategic-synthesis pipeline developed in recent applied research, will deepen the structural-versus-linguistic novelty analysis as a defensive attribution signal and as a normative target for offensive operations seeking to evade premature defender commitment. The two directions are complementary: the offensive perspective clarifies which compositional config-urations are achievable; the defensive perspective clarifies which configurations warrant suspended decomposition. 
+
+Logical foundations. The κ–τ apparatus developed in §2.3 and used throughout the paper admits a fuller proof-theoretic and semantic development. A dedicated treatment of the apparatus as a logical system — with explicit language, scoring semantics, inference principles, and meta-theoretic results — is the subject of separate work in preparation. 
+
+Completeness of the factor library. The presupposition that F contains the operative factors is most fragile in genuinely novel crises — emerging diseases, unprecedented adversary capabilities, novel financial instruments. Extending the analytic-mode framework to handle factor-library extension during an investi-gation — where a candidate decomposition’s failure to reach commit-worthy 38 R. Pareschi 
+
+status signals not merely insufficient evidence but the absence of a needed factor — is a substantive direction that intersects with research on creative hypothesis generation and conceptual blending. 
+
+Causal-graph integration. The complementarity with Pearl’s framework noted in §7 admits formal development: a sequential pipeline in which analytic abduc-tion produces a commit-worthy causal cluster C, which then licenses construction of a structural causal model over the factors in C, which then licenses interven-tionist reasoning. The integration would unite the inferential strengths of both frameworks — analytic abduction’s discipline under deep uncertainty, structural causal models’ precision under known structure — while preserving the role separation between them. The framework presented here is, in the spirit of [ 15 ], a substrate rather than a closed system. Its value lies in what it makes representable: the structured, ongoing state of reasoning under uncertainty, made legible to the multi-agent collectives in which such reasoning increasingly occurs. 
+
+Disclosure of Interests and Tools 
+
+The author declares no competing interests relevant to this work. Large language models were used as assistive tools for drafting, editing, and implementing the reproducible computational pipeline of §§4–5; all claims, formal definitions, and analyses were authored and verified by the author, who takes full responsibility for the content. This assistive use is methodologically distinct from the framework’s own use of an LLM as a candidate-generation component, described in §§5–6. 
+
+# References              
+
+> 1. Borghoff, U.M., Bottoni, P., Pareschi, R.: Human-artificial interaction in the age of agentic AI. Frontiers in Human Dynamics 7, 1579166 (2025) 2. Borghoff, U.M., Bottoni, P., Pareschi, R.: An organizational theory for multi-agent interactions. Discover Computing 28 (1), 138 (2025) 3. Carapella, Marco: Offensive Strategic Synthesis (2026), Master’s Thesis, University of Molise 4. De Neys, W.: Bias and conflict: A case for logical intuitions. Perspectives on Psychological Science 7(1), 28–38 (2012) 5. Dubois, D., Prade, H.: Possibility Theory: An Approach to Computerized Processing of Uncertainty. Plenum Press (1988) 6. Dung, P.M.: On the acceptability of arguments and its fundamental role in non-monotonic reasoning, logic programming and N-person games. Artificial Intelligence
+> 77 (2), 321–357 (1995) 7. Edwards, B., Furnas, A., Forrest, S., Axelrod, R.: Strategic aspects of cyberattack, attribution, and blame. Proceedings of the National Academy of Sciences 114 (11), 2825–2830 (2017) 8. Gao, T., Yao, X., Chen, D.: SimCSE: Simple contrastive learning of sentence em-beddings. In: Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP). pp. 6894–6910. Association for Computational Linguistics (2021)
+
+Analytic Abduction 39 9. Ghisellini, R., Pareschi, R., Pedroni, M., Raggi, G.B.: From extraction to synthesis: Entangled heuristics for agent-augmented strategic reasoning. In: HAR 2025. Lecture Notes in Computer Science, Springer (2025), arXiv:2507.13768 10. Guidotti, R., Monreale, A., Ruggieri, S., Turini, F., Giannotti, F., Pedreschi, D.: A survey of methods for explaining black box models. ACM Computing Surveys 
+
+51 (5), 1–42 (2018) 11. Heuer, R.J.: Psychology of Intelligence Analysis. Center for the Study of Intelligence, Central Intelligence Agency (1999) 12. Kakas, A.C., Kowalski, R.A., Toni, F.: Abductive logic programming. Journal of Logic and Computation 2(6), 719–770 (1992) 13. Knight, F.H.: Risk, Uncertainty and Profit. Houghton Mifflin (1921) 14. Mu, J., Viswanath, P.: All-but-the-top: Simple and effective postprocessing for word representations. In: International Conference on Learning Representations (ICLR) (2018) 15. Pareschi, R.: Quantum abduction: A new paradigm for reasoning under uncertainty. Sci 7(4), 182 (2025). https://doi.org/10.3390/sci7040182 
+
+16. Pearl, J.: Causality: Models, Reasoning, and Inference. Cambridge University Press, 2nd edn. (2009) 17. Reggia, J.A., Nau, D.S., Wang, P.Y.: Diagnostic expert systems based on a set-covering model. International Journal of Man-Machine Studies 19 (5), 437–460 (1983) 18. Reimers, N., Gurevych, I.: Sentence-BERT: Sentence embeddings using Siamese BERT-networks. In: Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). pp. 3980–3990. Association for Computational Linguistics (2019) 19. Shafer, G.: A Mathematical Theory of Evidence. Princeton University Press (1976) 20. Thagard, P.: Coherence in Thought and Action. MIT Press, Cambridge, MA (2000) 21. The MITRE Corporation: MITRE ATT&CK. https://attack.mitre.org/ (2024), knowledge base of adversary tactics and techniques

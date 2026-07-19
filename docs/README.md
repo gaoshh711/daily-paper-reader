@@ -6,32 +6,24 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-18
-- 运行时间：2026-07-18 21:06:59 UTC
+- 最新运行日期：2026-07-19
+- 运行时间：2026-07-19 20:43:15 UTC
 - 运行状态：成功
-- 本次总论文数：4
-- 精读区：1
-- 速读区：3
+- 本次总论文数：1
+- 精读区：0
+- 速读区：1
 
 ### 今日简报（AI）
-今日处理4篇论文，包括1篇精读和3篇速读，涵盖可解释强化学习与AI前沿评估。最值得关注的是基于归纳逻辑编程解释RL智能体（8.0分）以及AI提速中人类判断重新定位（7.0分）。建议优先阅读精读论文深入理解RL可解释性，再结合速读中AI能力不均衡的讨论拓展视角。
-- 详情：[/202607/18/README](/202607/18/README)
+今日速读1篇关于人机协同中因果分解与约束承诺的研究。论文提出分析溯因法，通过因果分解与受控承诺提升AI与人类协调效率，值得关注其协作框架设计。建议对人机交互或AI对齐感兴趣的读者可进一步阅读原文，借鉴其因果推理思路。
+- 详情：[/202607/19/README](/202607/19/README)
 
 ### 精读区论文标签
-1. [Explaining Reinforcement Learning Agents via Inductive Logic Programming](/202607/18/2607.13655v1-explaining-reinforcement-learning-agents-via-inductive-logic-programming)  
-   标签：评分：8.0/10、query:hai
-   evidence：引入强化学习策略可解释性的客观度量，推进面向人类场景的可解释AI
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Faster AI, Uneven Frontier: Rapid Crossings, a Jagged Frontier, and the Repositioning of Human Judgment](/202607/18/2607.12125v1-faster-ai-uneven-frontier-rapid-crossings-a-jagged-frontier-and-the-repositioning-of-human-judgment)  
-   标签：评分：7.0/10、query:hai
-   evidence：讨论人类在与AI协作中的优势
-2. [Self-Aware Recursively Self-Improving Agents for Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture](/202607/18/2607.12254v2-self-aware-recursively-self-improving-agents-for-personal-singularity-a-goal--scope--tool--and-benchmark-driven-multi-agent-architecture)  
-   标签：评分：7.0/10、query:hai
-   evidence：人机协同发展目标
-3. [CAFE: A Compound-AI Factorial Evaluation Framework](/202607/18/2607.10380v1-cafe-a-compound-ai-factorial-evaluation-framework)  
+1. [Analytic Abduction: Causal Decomposition and Governed Commitment for Human--AI Coordination](/202607/19/2607.14641v1-analytic-abduction-causal-decomposition-and-governed-commitment-for-human--ai-coordination)  
    标签：评分：6.0/10、query:hai
-   evidence：提供含有评分员的复合AI系统评估框架
+   evidence：用于人机协调的因果分解与受控承诺
 
 
 <div class="dpr-home-promo-card">

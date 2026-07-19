@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-07-19 <!--dpr-date:20260719-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/19/2607.14641v1-analytic-abduction-causal-decomposition-and-governed-commitment-for-human--ai-coordination" data-sidebar-item="{&quot;title&quot;: &quot;Analytic Abduction: Causal Decomposition and Governed Commitment for Human--AI Coordination&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.14641v1-analytic-abduction-causal-decomposition-and-governed-commitment-for-human--ai-coordination&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;hai&quot;}], &quot;evidence&quot;: &quot;用于人机协调的因果分解与受控承诺&quot;}">Analytic Abduction: Causal Decomposition and Governed Commitment for Human--AI Coordination</a>
   * 2026-07-18 <!--dpr-date:20260718-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202607/18/2607.13655v1-explaining-reinforcement-learning-agents-via-inductive-logic-programming" data-sidebar-item="{&quot;title&quot;: &quot;Explaining Reinforcement Learning Agents via Inductive Logic Programming&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.13655v1-explaining-reinforcement-learning-agents-via-inductive-logic-programming&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;hai&quot;}], &quot;evidence&quot;: &quot;引入强化学习策略可解释性的客观度量，推进面向人类场景的可解释AI&quot;}">Explaining Reinforcement Learning Agents via Inductive Logic Programming</a>
