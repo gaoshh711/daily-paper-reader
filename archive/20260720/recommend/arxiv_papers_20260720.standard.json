@@ -1,0 +1,211 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-20T21:21:45.365182+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.14593v2",
+      "source": "arxiv",
+      "title": "Memory-Driven Self-Disclosure and Relational Turning Points: A Longitudinal Multimodal Study of Human-AI Interaction",
+      "abstract": "As conversational AI systems are designed for repeated use, a central question is how a series of interactions becomes a relationship. We present a longitudinal multimodal study of a memory-augmented conversational agent (24 participants x 10 sessions), in which participants rated five relational constructs -- familiarity, self-disclosure, perceived memory, conversational quality, and enjoyment -- after each session. Two complementary dynamics emerge. First, conversational quality strongly shapes how enjoyable a session feels in the moment but does not carry forward across sessions, whereas perceived memory is relationally conditioned -- predicted by prior relational state rather than reflecting system capability alone -- and it shapes later enjoyment indirectly, via subsequent self-disclosure. Second, relationships are punctuated by discrete turning points -- crashes and surges -- that are partially traceable in multimodal behavior and open different intervention windows: surges are more behaviorally detectable in the moment, enjoyment surges persist more reliably than enjoyment crashes recover, and some crashes are better forecast from person-specific behavioral drift than detected after they have already occurred. Together, the findings suggest that longitudinal human-AI relationships are built through both slow accumulation and abrupt turning points.",
+      "authors": [
+        "Ryuichi Sumida",
+        "Mao Saeki",
+        "Masaki Eguchi",
+        "Sadahiro Yoshikawa",
+        "Koji Inoue",
+        "Tatsuya Kawahara",
+        "Yoichi Matsuyama"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-16T05:43:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.14593v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "longitudinal multimodal study of human-AI interaction focusing on relational dynamics",
+      "llm_evidence_cn": "纵向多模态人机交互研究，聚焦关系动态",
+      "llm_evidence": "纵向多模态人机交互研究，聚焦关系动态",
+      "canonical_evidence": "纵向多模态人机交互研究，聚焦关系动态",
+      "llm_tldr_en": "Longitudinal study of memory-augmented conversational agent reveals how series of interactions builds relationships through self-disclosure and perceived memory.",
+      "llm_tldr_cn": "人们如何与AI建立关系尚不明确。本文进行24名参与者×10次会话的纵向多模态研究，使用记忆增强对话代理，测量熟悉度、自我表露、感知记忆、对话质量和享受度。发现对话质量影响即时感受但不延续，而感知记忆由先前关系状态预测。这揭示了人机关系构建的关键机制，为设计长期交互AI提供指导。",
+      "llm_tldr": "人们如何与AI建立关系尚不明确。本文进行24名参与者×10次会话的纵向多模态研究，使用记忆增强对话代理，测量熟悉度、自我表露、感知记忆、对话质量和享受度。发现对话质量影响即时感受但不延续，而感知记忆由先前关系状态预测。这揭示了人机关系构建的关键机制，为设计长期交互AI提供指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15866v1",
+      "source": "arxiv",
+      "title": "Breakdowns for Human-Machine Creative Reflexivity",
+      "abstract": "Generative AI (GenAI) works via goal-directed computation, which differs fundamentally from human creative processes. This poses challenges for the intelligent support of creative experiences. We propose ``breakdowns'' as opportunities for the exchange of perspectives between human and machine. Breakdowns disrupt a flow and force us to consciously evaluate our ``being-in-the-world''. Between human and machine, breakdowns can function as openings for collaborative creative reflection. We are currently studying human-human creative interactions, to identify the markers of these inter-subjective openings, and to understand how they are used in a co-creative process. We present preliminary findings on breakdowns as a design principle for creativity support, prioritising human creative agency and meaningful reflection over automated content generation.",
+      "authors": [
+        "Marianne Bossema",
+        "Somaya Ben Allouch",
+        "Rob Saunders"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-17T11:25:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.15866v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-machine creative collaboration breakdowns",
+      "llm_evidence_cn": "人机创意协作中的“断裂”设计",
+      "llm_evidence": "人机创意协作中的“断裂”设计",
+      "canonical_evidence": "人机创意协作中的“断裂”设计",
+      "llm_tldr_en": "Proposes breakdowns as openings for human-machine creative reflection, studying human-human interactions to inform co-creative AI design.",
+      "llm_tldr_cn": "本文指出生成式AI的目标导向计算与人类创意过程存在根本差异，因此提出将“断裂”作为人机交换视角的机会。通过研究人类之间的创意互动，识别主体间开口的标记，初步发现表明“断裂”可作为协作创意反思的设计原则，优先考虑人机之间的对话而非单向生成。该工作为人机协作AI系统提供了新的交互设计思路。",
+      "llm_tldr": "本文指出生成式AI的目标导向计算与人类创意过程存在根本差异，因此提出将“断裂”作为人机交换视角的机会。通过研究人类之间的创意互动，识别主体间开口的标记，初步发现表明“断裂”可作为协作创意反思的设计原则，优先考虑人机之间的对话而非单向生成。该工作为人机协作AI系统提供了新的交互设计思路。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15487v1",
+      "source": "arxiv",
+      "title": "Environment Design for Reliable Shared Autonomy with Probabilistic Guarantees",
+      "abstract": "Shared autonomy enables humans and robots to collaboratively perform tasks by combining human input with autonomous assistance. Most prior work focuses on improving intent inference under a fixed environment, overlooking how workspace design itself affects inference difficulty. We observe that the physical arrangement of objects directly influences the separability of candidate goals under noisy user inputs. We formulate workspace design as an optimization problem and derive a probabilistic correctness guarantee under a bounded noise model. Through simulation experiments across multiple tabletop scenarios, we show that optimized layouts improve goal inference reliability and reduce ambiguity compared to baseline arrangements. We further demonstrate a real-world shared autonomy system that integrates the proposed inference framework. This highlights the role of environment design as a complementary axis for improving shared autonomy systems.",
+      "authors": [
+        "Yi-Shiuan Tung",
+        "Himanshu Gupta",
+        "Gyanig Kumar",
+        "Heyang Huang",
+        "Bradley Hayes",
+        "Alessandro Roncone"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-16T22:23:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.15487v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "shared autonomy human-robot collaboration workspace design",
+      "llm_evidence_cn": "共享自主人机协作工作空间设计",
+      "llm_evidence": "共享自主人机协作工作空间设计",
+      "canonical_evidence": "共享自主人机协作工作空间设计",
+      "llm_tldr_en": "Proposes environment design optimization for shared autonomy to improve goal inference reliability under noisy human input, with probabilistic guarantees. Simulation shows reduced ambiguity.",
+      "llm_tldr_cn": "现有共享自主系统大多在固定环境下优化意图推断，忽略了工作空间物理布局对推断难度的影响。本文提出将工作空间设计形式化为优化问题，并在有界噪声模型下导出概率正确性保证。仿真实验表明，优化布局能显著提高目标推断可靠性并减少歧义。该方法为设计更可靠的人机协作系统提供了实用工具。",
+      "llm_tldr": "现有共享自主系统大多在固定环境下优化意图推断，忽略了工作空间物理布局对推断难度的影响。本文提出将工作空间设计形式化为优化问题，并在有界噪声模型下导出概率正确性保证。仿真实验表明，优化布局能显著提高目标推断可靠性并减少歧义。该方法为设计更可靠的人机协作系统提供了实用工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.13998v1",
+      "source": "arxiv",
+      "title": "The Dynamic Verifiable Multi-Agent Human Agentic Loyalty Loop (DVM-HALL) Model and the Net Human-Agent Score (NHAS) in Autonomous Commerce",
+      "abstract": "The rapid proliferation of Agentic Artificial Intelligence fundamentally disrupts traditional customer loyalty paradigms. As AI evolves from passive recommendation algorithms to autonomous, goal-directed agents capable of executing purchasing decisions, the conventional understanding of consumer-brand relationships requires a structural reevaluation. By synthesizing extant literature across human-machine teaming, consumer decision-making, and algorithmic trust dynamics, we demonstrate that traditional loyalty models fail to account for algorithmic bounded rationality and constructed autonomy. To address this, we introduce the Dynamic Verifiable Multi-Agent Human Agentic Loyalty Loop (DVM-HALL) model. We formalize brand choice via a softmax probability formulation where human emotional equity, agentic machine-experience utility, calibrated trust, delegated authority, and verifiable execution jointly determine selection. The model features recursive updating mechanisms to dynamically calibrate trust and delegation after each interaction. Crucially, the framework integrates a verifiable execution layer for Decentralized Finance (DeFi) and tokenized loyalty settings, incorporating execution risks -- such as gas costs, slippage, MEV exposure, and smart-contract vulnerabilities -- as core predictors of agentic brand preference. Furthermore, we introduce the Net Human-Agent Score (NHAS), an auditable, risk-weighted metric designed to measure human-agent alignment using human feedback, execution logs, benchmark comparisons, and verifiable receipts. Finally, we propose a comprehensive three-stage empirical validation plan spanning controlled shopping experiments, multi-agent market simulations, and DeFi testbeds. This framework provides the foundational theory required for brands to navigate the impending transition toward machine customers.",
+      "authors": [
+        "Sai Srikanth Madugula",
+        "Peplluis Esteva de la Rosa",
+        "Daya Shankar"
+      ],
+      "primary_category": "cs.SI",
+      "categories": [
+        "cs.SI",
+        "cs.AI",
+        "cs.GT",
+        "cs.MA"
+      ],
+      "published": "2026-07-15T16:27:48+00:00",
+      "link": "https://arxiv.org/pdf/2607.13998v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "human-machine teaming and algorithmic trust in autonomous commerce",
+      "llm_evidence_cn": "自主商务中的人机协作与算法信任",
+      "llm_evidence": "自主商务中的人机协作与算法信任",
+      "canonical_evidence": "自主商务中的人机协作与算法信任",
+      "llm_tldr_en": "Introduces DVM-HALL model and NHAS for measuring human-agent loyalty in autonomous commerce, synthesizing human-machine teaming and trust dynamics.",
+      "llm_tldr_cn": "针对自主商务中传统忠诚度模型失效的问题，提出动态可验证多智能体人机忠诚循环（DVM-HALL）模型和净人机分数（NHAS）。该方法综合人机协作、消费者决策和算法信任动态，为衡量人机关系提供了新理论框架。实验表明该模型能捕捉算法有限理性与构造自主性对忠诚度的影响，对设计人机协作系统有启示。",
+      "llm_tldr": "针对自主商务中传统忠诚度模型失效的问题，提出动态可验证多智能体人机忠诚循环（DVM-HALL）模型和净人机分数（NHAS）。该方法综合人机协作、消费者决策和算法信任动态，为衡量人机关系提供了新理论框架。实验表明该模型能捕捉算法有限理性与构造自主性对忠诚度的影响，对设计人机协作系统有启示。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.14275v1",
+      "source": "arxiv",
+      "title": "AI Agents Do Not Fail Alone:The Context Fails First",
+      "abstract": "Context engineering has become central to building reliable AI agents, yet it remains largely unmeasured. Agents do not fail in isolation: their behavior is shaped by the instructions, tools, memory, retrieved knowledge, guardrails, and untrusted inputs accumulated in their context. When this context is weak, agents drift, hallucinate, misuse tools, ignore constraints, become vulnerable to injection, and waste tokens. This paper validates context-engineering quality as an independent leading indicator of agent reliability. We implement the measurement in ProofAgent-Harness, an open-source infrastructure for AI agent evaluation that uses multi-juror, consensus-based scoring. The harness assesses context across seven criteria: role clarity, guardrail coverage, instruction consistency, tool schema quality, grounding sufficiency, injection hardening, and token efficiency. Crucially, the context score is isolated from behavioral metrics and release decisions, enabling a non-circular validation. Through a controlled context-quality study across regulated agent domains, holding frontier LLM agents fixed and varying only their operating context, we show that context-quality criteria consistently predict their corresponding behavioral outcomes. Grounding sufficiency predicts hallucination resistance, guardrail coverage predicts manipulation resistance, instruction consistency predicts instruction following, and tool-schema quality predicts tool use. These findings establish context measurement as a validated preflight signal for agent reliability and position context engineering as an auditable layer of agent evaluation and governance.",
+      "authors": [
+        "Fouad Bousetouane"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "published": "2026-07-15T18:33:02+00:00",
+      "link": "https://arxiv.org/pdf/2607.14275v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "measures context engineering quality for AI agents, relevant to designing reliable human-centered AI",
+      "llm_evidence_cn": "衡量AI代理的上下文工程质量，与设计可靠的人类中心AI相关",
+      "llm_evidence": "衡量AI代理的上下文工程质量，与设计可靠的人类中心AI相关",
+      "canonical_evidence": "衡量AI代理的上下文工程质量，与设计可靠的人类中心AI相关",
+      "llm_tldr_en": "Validates context-engineering quality as a leading indicator of AI agent reliability, providing an open-source measurement harness.",
+      "llm_tldr_cn": "本文验证了上下文工程质量可作为AI代理可靠性的领先指标。提出了ProofAgent-Harness开源基础设施，通过多裁判共识评分评估七个维度（角色清晰度、护栏覆盖等），为构建稳定、可信赖的AI系统提供了关键度量工具。",
+      "llm_tldr": "本文验证了上下文工程质量可作为AI代理可靠性的领先指标。提出了ProofAgent-Harness开源基础设施，通过多裁判共识评分评估七个维度（角色清晰度、护栏覆盖等），为构建稳定、可信赖的AI系统提供了关键度量工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
