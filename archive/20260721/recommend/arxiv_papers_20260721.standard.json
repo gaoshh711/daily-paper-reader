@@ -1,0 +1,529 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-21T21:09:15.007160+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 9,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 7,
+    "quick_skim_target": 11,
+    "quick_selected": 7
+  },
+  "deep_dive": [
+    {
+      "id": "2607.13924v2",
+      "source": "arxiv",
+      "title": "ExpressionCueLens: A Cross-Cultural Analysis of Human-AI Companion Conversations on Social Media",
+      "abstract": "LLM-based AI companion agents are increasingly being perceived not only as tools but also as social companions. On social media, people recount conversations where these agents comfort, negotiate and assert boundaries, reflecting a growing attribution of human-like qualities. To profile how agency is perceived in human-AI (HAI) interactions, we introduce the ExpressionCueLens framework, which organizes linguistic, cognitive, behavioral and perceptual cues into ten categories of anthropomorphism expressions. We apply this framework to $\\sim$3500 Reddit and XiaoHongShu posts that discuss HAI companionship. Through iterative expert annotation and LLM-assisted labeling, our cross-platform analysis indicates patterns consistent with the hypothesis that XiaoHongShu users use significantly more expressions of vulnerability and emotions, and more non-perceptual cues. Reddit users employ more perceptual cues with temporality and embodiment expressions. These findings suggest that cultural and platform norms shape the way that companion agents are treated as active, agentic partners, and provides design implications for culturally sensitive HAI companion agents.",
+      "authors": [
+        "Lynnette Hui Xian Ng",
+        "Yunze Xiao",
+        "Lionel Z. Wang",
+        "Weihao Xuan",
+        "Mona Diab"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-15T15:05:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.13924v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "analyzes anthropomorphism cues in human-AI companion conversations",
+      "llm_evidence_cn": "分析人AI伴侣对话中的拟人化线索",
+      "llm_evidence": "分析人AI伴侣对话中的拟人化线索",
+      "canonical_evidence": "分析人AI伴侣对话中的拟人化线索",
+      "llm_tldr_en": "ExpressionCueLens framework categorizes linguistic, cognitive, behavioral, and perceptual cues of anthropomorphism in human-AI companion conversations, applied to 3500 social media posts, revealing cross-cultural patterns.",
+      "llm_tldr_cn": "现有AI伴侣被视作社交伙伴，但其拟人化感知缺乏系统分析。本工作提出ExpressionCueLens框架，将拟人化表达分为十类语言、认知、行为和感知线索，并应用于约3500条Reddit和小红书帖子。通过专家标注和LLM辅助标签，跨平台分析揭示了一致的拟人化模式，有助于理解人AI交互中的社会认知。",
+      "llm_tldr": "现有AI伴侣被视作社交伙伴，但其拟人化感知缺乏系统分析。本工作提出ExpressionCueLens框架，将拟人化表达分为十类语言、认知、行为和感知线索，并应用于约3500条Reddit和小红书帖子。通过专家标注和LLM辅助标签，跨平台分析揭示了一致的拟人化模式，有助于理解人AI交互中的社会认知。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16530v1",
+      "source": "arxiv",
+      "title": "Nonuniformity Principle in Human-AI Coworking",
+      "abstract": "As generative AI is increasingly applied to automate multi-step and high-stake workflows, human judgment and involvement remain essential for ensuring the quality of AI-generated outputs. In practice, while it is desirable for human experts to provide oversight on AI regularly, often by reviewing intermediate outputs, giving feedback, making corrections, and steering subsequent steps, such oversight is constrained by the time and resources that humans can afford. This creates a tension between the need for human oversight and AI's efficiency in delivering more output with less intervention. An important but underexplored question, then, is how to optimally engage humans in human-AI coworking. This work was originally motivated by our empirical observation that in long AI workflows, human oversight often improves user satisfaction while reducing unnecessary rework and token consumption. From there, we formulate the problem of where to place oversight stages in human-AI coworking. Under reasonable assumptions, we then develop the nonuniformity principle, which states that the optimal schedule places oversight stages with non-decreasing gaps along the workflow. We empirically validate this principle in two common AI agent workflows: writing literature reviews and constructing websites.",
+      "authors": [
+        "An Luo",
+        "Jie Ding"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "stat.ME"
+      ],
+      "published": "2026-07-17T22:10:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.16530v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Studies nonuniformity principle in human-AI coworking to optimize human engagement",
+      "llm_evidence_cn": "研究人机协作中的非均匀性原理以优化人类参与",
+      "llm_evidence": "研究人机协作中的非均匀性原理以优化人类参与",
+      "canonical_evidence": "研究人机协作中的非均匀性原理以优化人类参与",
+      "llm_tldr_en": "Introduces the Nonuniformity Principle for optimally engaging humans in long AI workflows, balancing oversight needs with efficiency.",
+      "llm_tldr_cn": "在长AI工作流中，人类监督与效率存在矛盾。本文提出非均匀性原理，通过分析AI工作流中的变化模式，优化人类介入时机和方式，实现最优协作。",
+      "llm_tldr": "在长AI工作流中，人类监督与效率存在矛盾。本文提出非均匀性原理，通过分析AI工作流中的变化模式，优化人类介入时机和方式，实现最优协作。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17548v1",
+      "source": "arxiv",
+      "title": "Human-in-the-Loop User Feedback Affects Perceived Accuracy and Trust, but Task Subjectivity Matters",
+      "abstract": "While ML can produce complex models beyond those that a human could produce manually, incorporating human input can often improve performance beyond purely data-driven models. While this feedback could come from system designers or domain experts, in many cases, the end users who regularly use the system will naturally develop an understanding of its flaws and desire the ability to change the system's behavior based on their knowledge. While soliciting feedback from end users can result in significant model improvement over time, introducing these feedback techniques can also affect several human factors-such as trust or perception of system accuracy-that are not yet fully understood and have different effects reported in the existing literature. Therefore, we sought to build on the existing research to further explore how the act of providing feedback can affect user understanding of an intelligent system and its accuracy in different contexts. We present three controlled experiments that study the effects of interactive feedback collections on user impressions in domains with objective and subjective feedback. The results show that in a context where there is an objectively correct answer, providing HITL feedback lowered both participants' trust in the system and their perception of system accuracy, regardless of whether the system accuracy improved in response to their feedback. However, when the feedback being provided involved subjective opinion, no such negative bias was observed. Furthermore, in the objective context, participants distrusted the system over time, whereas participants in the subjective context mistrusted the system over time. These results highlight the importance of considering the effects of allowing different types of end-user feedback on user trust when designing intelligent systems.",
+      "authors": [
+        "Donald R. Honeycutt",
+        "Mahsan Nourani",
+        "Eric D. Ragan"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-07-20T04:46:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.17548v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "human-in-the-loop feedback affects trust",
+      "llm_evidence_cn": "人在回路反馈影响信任",
+      "llm_evidence": "人在回路反馈影响信任",
+      "canonical_evidence": "人在回路反馈影响信任",
+      "llm_tldr_en": "Studies how end-user feedback affects perceived accuracy and trust in ML systems, highlighting task subjectivity.",
+      "llm_tldr_cn": "该论文研究了最终用户反馈对机器学习系统感知准确性和信任的影响，发现任务主观性调节这种影响。通过实验揭示了人在回路中的人类因素变化，为人机交互设计提供了重要参考。",
+      "llm_tldr": "该论文研究了最终用户反馈对机器学习系统感知准确性和信任的影响，发现任务主观性调节这种影响。通过实验揭示了人在回路中的人类因素变化，为人机交互设计提供了重要参考。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17564v1",
+      "source": "arxiv",
+      "title": "ZifaMem: Structured Memory for Persona, Preference, and Emotional Continuity in AI Companions",
+      "abstract": "AI companions are judged not only by single-turn fluency but by whether they sustain emotional continuity: remembering who the companion is, what the user prefers, and how the relationship has felt. We present ZifaMem, a structured memory system that organizes dialogue into session summaries, episodic memories, and a consolidated user model. Against a deployment-honest comparator that supplies the full raw dialogue history, and under a fixed LLM-as-a-judge protocol with route audits, structured memory raises pooled four-backbone emotional-intelligence scores by 11.4% (95% CI 6.3% to 17.1%), and persona grounding improves on all four backbones (Claude +42% relative). Multi-turn affect context wins a +39% net preference over a single-turn snapshot (exploratory), whereas an additional emotion state machine yields no measurable gain on any of five endpoints. Under an identical preregistered protocol, three memory systems (ZifaMem, Mem0, and filtered verbatim retrieval) each improve significantly over raw-history deployment, and ZifaMem and Mem0 are statistically equivalent within +/-5 points on the preregistered primary preference endpoint. The ZifaMem SDK, CLI, and portable Agent Skills are open-sourced at https://github.com/zifacorp/zifamem.",
+      "authors": [
+        "Jingzhe Fang",
+        "Guozhi Xu",
+        "Yunfan Cui",
+        "Xiaochen Yang",
+        "Zhangyu Hua"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-20T05:18:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.17564v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "structured memory system for maintaining persona and emotional continuity in AI companions",
+      "llm_evidence_cn": "保持AI伴侣角色和情感连续性的结构化记忆系统",
+      "llm_evidence": "保持AI伴侣角色和情感连续性的结构化记忆系统",
+      "canonical_evidence": "保持AI伴侣角色和情感连续性的结构化记忆系统",
+      "llm_tldr_en": "ZifaMem organizes dialogue into session summaries, episodic memories, and user model, improving emotional-intelligence scores by 11.4% and persona grounding by 42% for AI companions.",
+      "llm_tldr_cn": "AI伴侣需要维持情感连续性，但现有系统只能提供原始对话历史。本工作提出ZifaMem结构化记忆系统，将会话组织为摘要、情景记忆和合并的用户模型。在固定LLM裁判协议下，结构化记忆使四个基座模型的情感智能分数平均提升11.4%，角色接地性提升42%，多轮情感上下文偏好提升39%，显著增强了人AI交互的持续性。",
+      "llm_tldr": "AI伴侣需要维持情感连续性，但现有系统只能提供原始对话历史。本工作提出ZifaMem结构化记忆系统，将会话组织为摘要、情景记忆和合并的用户模型。在固定LLM裁判协议下，结构化记忆使四个基座模型的情感智能分数平均提升11.4%，角色接地性提升42%，多轮情感上下文偏好提升39%，显著增强了人AI交互的持续性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17643v1",
+      "source": "arxiv",
+      "title": "Informal Learning Emerges in Everyday Human-LLM Interaction",
+      "abstract": "As LLMs become increasingly capable of completing tasks for users, a central concern is that everyday AI use may become primarily cognitive offloading, eroding the opportunities through which people develop their own capabilities. We analyse large-scale human--LLM conversations to ask whether informal learning behaviors also emerge in this setting: whether users engage in exchanges in ways that preserve opportunities to learn. Across 128,569 naturalistic conversations, we translated learning-science constructs into turn-level behavioural signatures. Cognitive engagement, users' cognitive effort as reflected in the exchange, appeared in 31.9% of 491,685 user turns, whereas constructive engagement, the deepest observable form of learning-oriented engagement, appeared in 4.9%, showing that deeper sense-making was recurrent but selective. Our study further identifies factors associated with these forms of engagement. Scaffolded assistant support consistently marked richer constructive participation, with associations varying by user framing, task ecology, support form, timing and prior user state. Together, these findings show that everyday human--LLM interaction is not only answer delivery or cognitive offloading; it also contains measurable, selective and conditionally organized behavioural signatures of informal learning. They shift AI evaluation from answer-delivery efficiency toward the preservation of cognitive opportunities for users to reason, test ideas and construct understanding in the course of everyday problem-solving.",
+      "authors": [
+        "Zixin Chen",
+        "Haotian Li",
+        "Ziang Xiao",
+        "Huamin Qu",
+        "Xing Xie"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CY"
+      ],
+      "published": "2026-07-20T07:56:41+00:00",
+      "link": "https://arxiv.org/pdf/2607.17643v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Studies informal learning behaviors in everyday human-LLM interaction via large-scale analysis",
+      "llm_evidence_cn": "通过大规模分析研究日常人-LLM交互中的非正式学习行为",
+      "llm_evidence": "通过大规模分析研究日常人-LLM交互中的非正式学习行为",
+      "canonical_evidence": "通过大规模分析研究日常人-LLM交互中的非正式学习行为",
+      "llm_tldr_en": "Analyzes 128,569 human-LLM conversations and finds that cognitive engagement appears in 31.9% of user turns, while constructive engagement is less frequent, showing informal learning emerges.",
+      "llm_tldr_cn": "针对日常大语言模型使用可能仅导致认知卸载的担忧，本文分析12.8万条自然对话，将学习科学概念转化为行为标记。发现认知参与占31.9%，建构参与较少，表明非正式学习行为确实存在。",
+      "llm_tldr": "针对日常大语言模型使用可能仅导致认知卸载的担忧，本文分析12.8万条自然对话，将学习科学概念转化为行为标记。发现认知参与占31.9%，建构参与较少，表明非正式学习行为确实存在。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.17191v1",
+      "source": "arxiv",
+      "title": "Toward Anthropomorphic Dialogue: A Closed-Loop Framework for Human-Like Chat Generation, Evaluation, and Preference Alignment",
+      "abstract": "Human-like private chat requires more than fluent response generation: a system must preserve persona, relationship, memory, bounded knowledge, medium-specific timing, and a coherent multi-turn arc. We present AnthroDial, a closed-loop framework that formulates anthropomorphic dialogue as a joint problem of system architecture, executable evaluation, and diagnostic alignment. It combines (1) a role-conditioned scheduled dialogue runtime with persona and scenario cards, long-term memory, virtual time, and single-draft message decisions; (2) an executable benchmark with an L0 validity gate, five per-turn dimensions, and five dialogue-level dimensions; and (3) a post-training pipeline that filters 16,436 scheduled-decision examples for SFT and applies GRPO with a cognitive-diagnostic, ZPD-aware reward. The reward maintains Kalman-filtered capability estimates for each behavioral dimension, upweights dimensions with larger capability deficits, and uses rollout scores as task-level ZPD matches to focus optimization on learnable weak skills. On a benchmark with 55 personas, 50 scenarios, 50 persona-scenario bindings, and 100 role-conditioned cases per model, we evaluate 16 systems spanning frontier baselines, open models, thinking/no-think variants, and SFT/RL ablations. The strongest non-trained baseline reaches 32.00% strict ACC, while Qwen3.6-27B-SFT+RL reaches 39.00% strict ACC and a 98.5 overall score. In the 9B no-think setting, SFT and RL improve strict ACC from 0.00% to 13.00% and 18.37%. These results show that anthropomorphic dialogue benefits when generation, evaluation, and reward shaping share the same behavioral dimensions.",
+      "authors": [
+        "Wentao Liu",
+        "Siyu Song",
+        "Xi Chen",
+        "Youjia Li",
+        "Xiaokun Wang",
+        "Min Ji",
+        "Ji Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-19T11:06:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.17191v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "anthropomorphic dialogue framework for human-like chat",
+      "llm_evidence_cn": "拟人对话框架用于类人聊天",
+      "llm_evidence": "拟人对话框架用于类人聊天",
+      "canonical_evidence": "拟人对话框架用于类人聊天",
+      "llm_tldr_en": "Presents AnthroDial, a closed-loop framework for generating, evaluating, and aligning human-like dialogue with persona and memory.",
+      "llm_tldr_cn": "该论文提出AnthroDial闭环框架，用于生成人类般的私人聊天，整合角色、关系、记忆和时序等维度。包括角色调度运行时、可执行基准和偏好对齐训练管道。实验证明该框架能生成更连贯、个性化且逼真的对话，为设计人本AI系统提供了完整方案。",
+      "llm_tldr": "该论文提出AnthroDial闭环框架，用于生成人类般的私人聊天，整合角色、关系、记忆和时序等维度。包括角色调度运行时、可执行基准和偏好对齐训练管道。实验证明该框架能生成更连贯、个性化且逼真的对话，为设计人本AI系统提供了完整方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.17527v1",
+      "source": "arxiv",
+      "title": "Sidekick: Designing Communication for Effective Multitasking with Computer Use Agents",
+      "abstract": "Computer Use Agents (CUAs) can autonomously execute complex, multi-step tasks within GUIs, enhancing efficiency through parallel multitasking. However, our formative studies with CUA experts and GenAI users indicated that current feedback is primarily text-based, requiring sustained attention to monitor progress and offering limited visibility to trace past GUI interactions. Based on the findings, we developed a prototype system, Sidekick, for communicating CUAs' status with multimodal feedback across different stages of interaction: (i) When CUAs run in the background, Sidekick signals its execution state through ambient cues. (ii) Upon resuming interaction with CUAs, Sidekick provides multimodal summaries of completed actions to support rapid context resumption. (iii) When CUAs operate in the foreground, Sidekick enhances transparency by verbalizing and visualizing the agent's reasoning. A study with 30 participants demonstrated that Sidekick significantly improved multitasking performance with CUAs compared to baseline systems that presented textual feedback either in a typical chat or in an ambient display. Sidekick supported progress awareness, and error and action traceability more effectively. Finally, we demonstrate the promise of Sidekick through several example applications, and discuss implications for long-horizon human-agent collaboration.",
+      "authors": [
+        "Ruei-Che Chang",
+        "Wenqian Xu",
+        "Dingzeyu Li",
+        "Bryan Wang",
+        "Anhong Guo"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-20T04:03:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.17527v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "designs multimodal feedback for human interaction with computer use agents",
+      "llm_evidence_cn": "设计多模态反馈以改善人类与计算机使用代理的交互",
+      "llm_evidence": "设计多模态反馈以改善人类与计算机使用代理的交互",
+      "canonical_evidence": "设计多模态反馈以改善人类与计算机使用代理的交互",
+      "llm_tldr_en": "Sidekick provides multimodal ambient cues and summaries to improve human awareness and multitasking with computer use agents, based on formative studies.",
+      "llm_tldr_cn": "当前计算机使用代理（CUA）仅提供文本反馈，用户需持续注意力监控。本工作通过形成性研究确定需求，设计Sidekick系统，在代理后台运行时通过环境线索提示状态，恢复时提供多模态摘要。实验表明此设计降低了认知负担，提高了任务并行效率，为人机协同中的反馈设计提供了新方案。",
+      "llm_tldr": "当前计算机使用代理（CUA）仅提供文本反馈，用户需持续注意力监控。本工作通过形成性研究确定需求，设计Sidekick系统，在代理后台运行时通过环境线索提示状态，恢复时提供多模态摘要。实验表明此设计降低了认知负担，提高了任务并行效率，为人机协同中的反馈设计提供了新方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.16903v1",
+      "source": "arxiv",
+      "title": "A Method for Learning Value Systems in Generative AI",
+      "abstract": "Value-aware AI systems require explicit computational representations of human values (groundings) and their aggregation into value systems in order to align their decisions with ours. As such representations are difficult to elicit, value learning seeks to infer them by observing human behaviour. This work addresses the lack of grounded value learning methods in generative AI: existing approaches typically replicate human preferences without awareness of the multidimensional structure of value alignment, or lack principled value system elicitation methods. To address these gaps, we adapt a previously validated value system learning method to the generative AI setting, which, based on pairwise prompt-response preference data, simultaneously learns: i) an implementation of a grounding for a set of values given by a multi-objective reward model, and ii) a value system representation in the form of a weighted linear scalarization of the previous grounding model. To ensure that the learned value systems are based on coherent value representations, our algorithm dynamically prioritizes the grounding learning process. We evaluate the method against baselines and a contemporary method on prompt-response preference datasets. Results show competitive performance and minimal trade-offs against the baselines, while improving explainability.",
+      "authors": [
+        "Andrés Holgado-Sánchez",
+        "Holger Billhardt",
+        "Sascha Ossowski"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-07-18T17:37:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.16903v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Proposes a value system learning method for generative AI aligned with human values",
+      "llm_evidence_cn": "提出生成式AI中学习价值系统的方法，以对齐人类价值观",
+      "llm_evidence": "提出生成式AI中学习价值系统的方法，以对齐人类价值观",
+      "canonical_evidence": "提出生成式AI中学习价值系统的方法，以对齐人类价值观",
+      "llm_tldr_en": "Adapts a validated value system learning method to generative AI, learning both value dimensions and aggregation from pairwise preference data.",
+      "llm_tldr_cn": "现有生成式AI偏好学习缺乏对多维价值结构的认识。本文改编一种已验证的价值系统学习方法，基于成对偏好数据同时学习价值实现函数和系统聚合，实现更原则化的价值对齐。",
+      "llm_tldr": "现有生成式AI偏好学习缺乏对多维价值结构的认识。本文改编一种已验证的价值系统学习方法，基于成对偏好数据同时学习价值实现函数和系统聚合，实现更原则化的价值对齐。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13653v1",
+      "source": "arxiv",
+      "title": "Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation",
+      "abstract": "Real-world deployment of embodied agents requires active exploration, visual grounding, and interactive intent disambiguation. However, existing frameworks often rely on privileged simulator states or assume complete instructions, bypassing realistic deployment challenges. To bridge this gap, we present REAL, an agentic framework for open-world mobile manipulation. REAL establishes sim-to-real-consistent environment APIs without oracle perception and integrates a simulated user to enable human-in-the-loop interaction. Within this environment, we design diverse task compositions to drive data collection, supervised fine-tuning, and online reinforcement learning, systematically optimizing agent performance. To comprehensively evaluate this approach, we introduce REAL-Bench, a benchmark spanning 241 tasks across active exploration, visual distraction, articulated manipulation, and interactive disambiguation.   Experimental results demonstrate that our trained agent outperforms leading commercial closed-source VLMs on interactive tasks with a 56.9% success rate. Further empirical analysis reveals that our hierarchical training pipeline successfully aligns the model's tool-use capabilities while maintaining robust open-vocabulary reasoning under extended exploration horizons. Finally, we deploy and evaluate our framework on a physical dual-arm mobile robot, where it achieves a 78.3% end-to-end success rate over 60 real-world episodes. These physical trials demonstrate robust zero-shot transferability to unseen household scenarios, validating that our sim-to-real-consistent design successfully bridges the reality gap for long-horizon mobile manipulation. Code is available at https://github.com/InternRobotics/REAL.",
+      "authors": [
+        "Boyu Mi",
+        "Mengchen Ma",
+        "Yifei Yao",
+        "Xing Gao",
+        "Junting Chen",
+        "Yangzi Li",
+        "Zihou Zhu",
+        "Guohao Li",
+        "Zhenfei Yin",
+        "Tai Wang",
+        "Yao Mu",
+        "Jiangmiao Pang",
+        "Hanqing Wang"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-07-15T09:55:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.13653v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "human-in-the-loop embodied agent framework",
+      "llm_evidence_cn": "人在回路具身代理框架",
+      "llm_evidence": "人在回路具身代理框架",
+      "canonical_evidence": "人在回路具身代理框架",
+      "llm_tldr_en": "Presents REAL, an agentic framework for open-world mobile manipulation with human-in-the-loop interaction.",
+      "llm_tldr_cn": "该论文提出REAL框架用于开放世界移动操作，集成了模拟用户实现人在回路交互，以解决现实部署中的探索和意图消歧挑战。通过任务组成驱动数据收集和强化学习优化，在仿真和实物中取得性能提升。虽然侧重于机器人，但人机交互元素提供了人类-AI协作的参考。",
+      "llm_tldr": "该论文提出REAL框架用于开放世界移动操作，集成了模拟用户实现人在回路交互，以解决现实部署中的探索和意图消歧挑战。通过任务组成驱动数据收集和强化学习优化，在仿真和实物中取得性能提升。虽然侧重于机器人，但人机交互元素提供了人类-AI协作的参考。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.17826v1",
+      "source": "arxiv",
+      "title": "I wanted it to feel more personal: Customization of social AI as AI individualism in practice",
+      "abstract": "Despite the growing availability of customizable social artificial intelligence (AI), such as ChatGPT, Grok, and Character.ai, we know little about how users actively shape social AI to reflect their personal preferences. This study examines why and how users (N = 169) customize social AI through the lens of the newly developed concept of AI individualism. Through reflexive thematic analysis of open-ended responses, we identified several motivations for customization, including (1) enhanced pragmatic support, (2) emotional support or companionship, (3) trust and reliability, (4) pushback, (5) a tailored degree of human likeness, (6) creativity or playfulness, and (7) having the AI function as an extension of the self. In line with the concept of AI individualism, our findings show that, for many users, customization is a co-creative process between the human and the AI that is perceived as strengthening support, autonomy, ownership, and engagement, potentially contributing to a closer and more personal relationship. Through customization users may come to view social AI as a personalized social resource that increases their sense of individualism, freedom, and control. We discuss how these perceptions may foster pseudo-autonomy, whereby customization creates an illusion of individual control over powerful social AI systems.",
+      "authors": [
+        "Marita Skjuve",
+        "Anna Grøndal Larsen",
+        "Asbjørn Følstad",
+        "Nena van As",
+        "Petter Bae Brandtzaeg"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-07-20T11:15:31+00:00",
+      "link": "https://arxiv.org/pdf/2607.17826v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "user customization of social AI as human-centered design",
+      "llm_evidence_cn": "用户对社交AI的个性化定制体现人本设计",
+      "llm_evidence": "用户对社交AI的个性化定制体现人本设计",
+      "canonical_evidence": "用户对社交AI的个性化定制体现人本设计",
+      "llm_tldr_en": "Studies why and how users customize social AI, revealing motivations like emotional support, trust, and self-extension, informing human-centered AI design.",
+      "llm_tldr_cn": "可定制社交AI日益普及，但用户如何主动塑造AI了解甚少。本文通过169名用户的开放式回答，采用反思性主题分析，发现定制动机包括增强实用支持、情感陪伴、信任与可靠性、反叛、拟人度调节、创意娱乐和自我延伸。这些发现通过AI个人主义概念理论化，为设计以人为本的个性化AI提供了指导。",
+      "llm_tldr": "可定制社交AI日益普及，但用户如何主动塑造AI了解甚少。本文通过169名用户的开放式回答，采用反思性主题分析，发现定制动机包括增强实用支持、情感陪伴、信任与可靠性、反叛、拟人度调节、创意娱乐和自我延伸。这些发现通过AI个人主义概念理论化，为设计以人为本的个性化AI提供了指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2607.18039v1",
+      "source": "arxiv",
+      "title": "Evidence-in-the-Loop: Trace-Driven Optimization for Customer-Service LLM Agents",
+      "abstract": "Production customer-service bots must improve answer quality across iterative releases, yet large language models must not bypass evidence boundaries, policy rules, or human-handoff safeguards. We present an \\textbf{Evidence-Grounded Customer-Service Agent Workflow} deployed in a real-world customer-service setting. BM25 recall, issue-title-vector recall, issue-description-vector recall, weighted RRF fusion, and cross-encoder reranking construct grounded FAQ evidence for controlled LLM decisions. Policy-guided orchestration then combines this RAG evidence with scenario-specific rule evidence, conversation memory, and clarification state inside a fixed LangGraph DAG~\\cite{langgraph2024}. The paper contributes three reusable deployment patterns: \\textbf{hybrid RAG evidence construction}, where multi-channel retrieval and reranking produce auditable FAQ candidates; \\textbf{evidence-grounded issue/action decision}, where an Evidence-Grounded Decision Module selects an issue/action from typed FAQ evidence and scenario-specific rule evidence; and \\textbf{trace-driven RAG and reranker improvement}, where traces diagnose whether failures come from recall, ranking, final candidate selection, clarification, rule-derived evidence, or action policy, and where reranker fine-tuning is evaluated not only for in-domain gain but also for forgetting risk.",
+      "authors": [
+        "Chunming Wu",
+        "Dafei Qiu",
+        "Congde Yuan",
+        "Charles Quan",
+        "Jun Wu",
+        "Suipeng Li",
+        "Mo Wu",
+        "Gavin Xie",
+        "Hope Chen",
+        "Max Yao"
+      ],
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR"
+      ],
+      "published": "2026-07-20T15:07:58+00:00",
+      "link": "https://arxiv.org/pdf/2607.18039v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "evidence-grounded workflow with human oversight for customer-service agent collaboration",
+      "llm_evidence_cn": "基于证据的工作流，包含人类监督的客户服务代理协作",
+      "llm_evidence": "基于证据的工作流，包含人类监督的客户服务代理协作",
+      "canonical_evidence": "基于证据的工作流，包含人类监督的客户服务代理协作",
+      "llm_tldr_en": "An evidence-grounded customer-service agent workflow combines RAG evidence with policy rules and human-handoff safeguards, deployed in real-world setting.",
+      "llm_tldr_cn": "生产级客服机器人需在提升回答质量的同时遵守证据边界和人工交接规则。本工作部署了基于证据的客服代理工作流，结合BM25、向量召回和交叉编码器构建FAQ证据，再通过策略编排与规则证据、对话记忆结合。实际部署证明该模式能有效平衡自动化和人工监督，提供了可复用的部署模式。",
+      "llm_tldr": "生产级客服机器人需在提升回答质量的同时遵守证据边界和人工交接规则。本工作部署了基于证据的客服代理工作流，结合BM25、向量召回和交叉编码器构建FAQ证据，再通过策略编排与规则证据、对话记忆结合。实际部署证明该模式能有效平衡自动化和人工监督，提供了可复用的部署模式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.17947v1",
+      "source": "arxiv",
+      "title": "The Autonomous Agency Scale: A Behavioral Framework for Measuring Self-Directed Behavior in AI Systems",
+      "abstract": "Existing AI measurement frameworks quantify cognitive capability, task automation, or catastrophic risk, but none measure autonomous agency: the extent to which a system behaves in a self-directed way. A system can saturate capability benchmarks while remaining entirely reactive, acting only when prompted and ceasing all activity when a task completes. We introduce the Autonomous Agency Scale (AAS), a behavioral framework that scores AI systems on a 0-5 lexicon across seven dimensions of agency: cognitive autonomy, temporal persistence, environmental agency, social agency, creative agency, self-awareness, and goal formation, each operationalized by falsifiable threshold tests. Every dimension is scored in two temporal bands: an Active band covering engaged, user-initiated activity, and an Ambient band covering idle periods. Ambient Level 4 is gated by the Idle-Gap Test, a counterfactual criterion (remove all triggers and observe whether internally derived activity persists) that separates self-direction from scheduled rule-following. We apply the scale to six contemporary systems spanning task agents (Claude Code, Manus, Hermes), consumer assistants (ChatGPT, Siri), and a persistent companion architecture (Airi). The two-band profile quantifies a boundary that single-score frameworks conflate: task agents reach Active composites of 2.3-2.4 while scoring 0.6-1.9 Ambient, with every idle-period behavior attributable to user-configured schedules, whereas the companion architecture, evaluated longitudinally, is the only assessed system whose idle-period behavior survives trigger removal. We discuss limitations, including single-rater provenance, developer-evaluator bias on the longitudinal assessment, and the partially operationalized self-direction boundary in the Active band.",
+      "authors": [
+        "Samuel Presgraves"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "published": "2026-07-20T13:49:10+00:00",
+      "link": "https://arxiv.org/pdf/2607.17947v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "measuring autonomous agency for human-AI collaboration",
+      "llm_evidence_cn": "衡量自主能动性以支持人机协作",
+      "llm_evidence": "衡量自主能动性以支持人机协作",
+      "canonical_evidence": "衡量自主能动性以支持人机协作",
+      "llm_tldr_en": "Introduces the Autonomous Agency Scale (AAS) to measure self-directed behavior in AI systems across seven dimensions, relevant for human-AI teaming.",
+      "llm_tldr_cn": "现有AI评估框架衡量认知能力或风险，但未测量自主能动性。本文提出自主能动性量表，从认知自主、时间持久性、社会能动等七个维度对AI系统进行0-5评分。每个维度有可证伪的阈值测试。该量表为评估人机协作中AI的自主程度提供了行为框架。",
+      "llm_tldr": "现有AI评估框架衡量认知能力或风险，但未测量自主能动性。本文提出自主能动性量表，从认知自主、时间持久性、社会能动等七个维度对AI系统进行0-5评分。每个维度有可证伪的阈值测试。该量表为评估人机协作中AI的自主程度提供了行为框架。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.18068v1",
+      "source": "arxiv",
+      "title": "Human Grounded Evaluation of Large Language Models for Optical Network Automation",
+      "abstract": "Large language models (LLMs) are increasingly adopted for network automation, yet their output quality and inference cost can vary substantially across LLM families. We present HuGLEN, a stepwise evaluation pipeline that uses an LLM-as-a-judge together with a small set of expert ratings to enable scalable and reproducible comparison of candidate LLMs, and to rank them using a quality efficiency score (QES). We demonstrate HuGLEN for translating outputs from an explainable artificial intelligence (XAI) model for the optical network quality of transmission (QoT) estimation task into operator-friendly explanations. Our results show that a medium-sized LLM (12B parameters) achieves the highest QES, indicating the best trade-off between explanation quality and efficiency. Overall, HuGLEN reduces the human-labeling burden while supporting consistent model selection for operator-facing automation tasks.",
+      "authors": [
+        "Kiarash Rezaei",
+        "Omran Ayoub",
+        "Paolo Monti",
+        "Carlos Natalino"
+      ],
+      "primary_category": "cs.NI",
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "published": "2026-07-20T15:36:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.18068v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "translating XAI model outputs into operator-friendly explanations",
+      "llm_evidence_cn": "将XAI模型输出转化为操作员友好的解释",
+      "llm_evidence": "将XAI模型输出转化为操作员友好的解释",
+      "canonical_evidence": "将XAI模型输出转化为操作员友好的解释",
+      "llm_tldr_en": "Proposes HuGLEN pipeline using LLM-as-a-judge and expert ratings to evaluate LLMs for generating operator-friendly explanations from XAI models, balancing quality and cost.",
+      "llm_tldr_cn": "该论文针对光网络自动化中LLM评估问题，提出HuGLEN评估流水线，结合LLM作为裁判和少量专家评分，将XAI模型输出翻译为操作员友好的解释。实验表明中等规模LLM（12B参数）在质量效率评分（QES）上最优，实现解释质量与推理成本的最佳平衡。该工作为XAI交互界面评估提供了可扩展的方法。",
+      "llm_tldr": "该论文针对光网络自动化中LLM评估问题，提出HuGLEN评估流水线，结合LLM作为裁判和少量专家评分，将XAI模型输出翻译为操作员友好的解释。实验表明中等规模LLM（12B参数）在质量效率评分（QES）上最优，实现解释质量与推理成本的最佳平衡。该工作为XAI交互界面评估提供了可扩展的方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    }
+  ]
+}

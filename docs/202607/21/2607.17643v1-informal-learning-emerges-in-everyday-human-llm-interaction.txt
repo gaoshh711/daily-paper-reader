@@ -1,0 +1,1155 @@
+Title: Informal Learning Emerges in Everyday Human-LLM Interaction
+
+URL Source: https://arxiv.org/pdf/2607.17643v1
+
+Published Time: Tue, 21 Jul 2026 01:53:15 GMT
+
+Number of Pages: 55
+
+Markdown Content:
+# Informal learning emerges in everyday human–LLM interaction 
+
+## Zixin Chen 1†, Haotian Li 2* , Ziang Xiao 3, Huamin Qu 1, Xing Xie 2
+
+1The Hong Kong University of Science and Technology, Hong Kong, China. 
+
+2Microsoft Research Asia, Beijing, China. 
+
+3Johns Hopkins University, Baltimore, 21218, Maryland, United States. *Corresponding author(s). E-mail(s): haotian.li@microsoft.com; Contributing authors: zchendf@connect.ust.hk; ziang.xiao@jhu.edu; huamin@cse.ust.hk; xxie2023@outlook.com; 
+
+> †This work was done during Z.C.’s internship at Microsoft Research Asia.
+
+Abstract 
+
+As LLMs become increasingly capable of completing tasks for users, a central concern is that everyday AI use may become primarily cognitive offloading, erod-ing the opportunities through which people develop their own capabilities. We analyse large-scale human–LLM conversations to ask whether informal learn-ing behaviors also emerge in this setting: whether users engage in exchanges in ways that preserve opportunities to learn. Across 128,569 naturalistic con-versations, we translated learning-science constructs into turn-level behavioural signatures. Cognitive engagement, users’ cognitive effort as reflected in the exchange, appeared in 31.9% of 491,685 user turns, whereas constructive engage-ment, the deepest observable form of learning-oriented engagement, appeared in 4.9%, showing that deeper sense-making was recurrent but selective. Our study further identifies factors associated with these forms of engagement. Scaf-folded assistant support consistently marked richer constructive participation, with associations varying by user framing, task ecology, support form, timing and prior user state. Together, these findings show that everyday human–LLM interaction is not only answer delivery or cognitive offloading; it also contains measurable, selective and conditionally organized behavioural signatures of infor-mal learning. They shift AI evaluation from answer-delivery efficiency toward the preservation of cognitive opportunities for users to reason, test ideas and construct understanding in the course of everyday problem-solving. 
+
+1arXiv:2607.17643v1 [cs.HC] 20 Jul 2026 Keywords: human–AI interaction, informal learning, large language models, scaffolding, learner engagement 
+
+# 1 Introduction 
+
+Large language models (LLMs) are becoming embedded in the cognitive work of every-day life: people increasingly turn to them to write, code, search and reason through unfamiliar problems 1–4 . Much of human competence, however, is acquired precisely by doing such work: reasoning through a problem, attempting a solution and reworking it until it holds 5,6 . A growing body of evidence suggests that delegating this effort to machines can weaken the very capabilities that the work would otherwise develop 7,8 .Whether assistance displaces users’ cognitive effort or becomes an occasion for further thought depends not only on what the technology does, but also on how people engage with it: they may accept an answer and move on, or use it to test their own ideas, seek explanations and probe a question more deeply 9,10 . Prior work characterizes informal learning as learning that occurs outside formally structured curricula, instruction or assessment, often as part of everyday activity and whether or not learning is the per-son’s primary objective 11–13 . In human–LLM interaction, such learning may arise as users confront uncertainty, seek explanations, test ideas and revise their understand-ing. Everyday human–LLM interaction is therefore a vast, largely undesigned setting for informal learning. As AI assumes more of the cognitive work through which com-petence is built, the stakes extend beyond immediate task performance to whether users continue to exercise and develop their own capabilities. Yet informal learning in general-purpose human–LLM interaction remains largely unexamined. Existing research on LLMs and learning has focused instead on settings in which learning support is deliberately designed, such as automated feedback, ques-tion generation, retrieval practice and tutoring systems 14–20 . These studies show that LLMs can enact instructional strategies when learning is an explicit design target 21,22 ;they tell us less about general-purpose use, in which users typically seek progress on a task rather than instruction. Everyday use is also harder to study: it follows no curriculum and yields no direct measure of knowledge change, making learning easy to posit but difficult to observe. Learning science offers a process-level lens: deeper forms of overt engagement are associated with stronger learning outcomes, allowing learning-oriented engagement to serve as an observable process indicator of informal learning behaviors in user-generated interactions whose goals and endpoints are not specified by a curriculum or study protocol 23–25 . We therefore ask whether learning-oriented engagement behaviors exist in everyday human–LLM interaction, where its most constructive forms arise, and what factors may shape these behaviors. We analyse 128,569 naturalistic conversations from three public large-scale conver-sational corpora: WildChat, LMSYS Chat and ShareChat 26–28 . Across these corpora, we focus on coding and writing as two common task ecologies in which LLMs are used to produce, revise and troubleshoot knowledge work 1,9,29 , yielding 491,685 user turns and 489,785 assistant turns. Our analyses move from engagement prevalence, to the contextual organization of constructive engagement, to how assistant scaffolding 2Fig. 1 Analytic framework for studying informal learning in everyday human–LLM interaction. a, Public conversations are situated by data source, task ecology and user framing.              
+
+> b, Engagement and scaffolding constructs are translated into role-specific turn-level labels for user engagement and assistant support; passive, active and constructive labels form depth levels within cognitive engagement, while user framing is a conversation-level label shown in panel a. Assistant support is further characterized by support intent (I1–I3: metacognitive, cognitive and affective) and support form (M1–M6: feedback, hinting, instructing, explaining, modelling and questioning); Supplementary Table B1 provides plain-language examples of each label. c, These labels sup-port analyses of engagement presence, contextual organization and support–engagement coupling at conversation-level, support-form and adjacent-turn scales; adjacent-turn analyses examine the imme-diately preceding user state, the assistant response and the next user turn. Labels indicate observable learning-oriented participation, not durable learning outcomes or causal instructional effects.
+
+is associated with user participation at conversation-level, support-form and adjacent-turn scales. To make these questions measurable in naturalistic logs, we translate theories of engagement and scaffolding into role-specific, turn-level behavioural signa-tures. User turns are coded by the depth of users’ cognitive effort as reflected in the exchange: passive receipt, active use or follow-up, and constructive engagement, where users elaborate, test, revise or extend ideas in the exchange 23,24 . Constructive engage-ment is therefore the clearest observable signature of informal learning in these logs: it marks moments when task progress becomes explicit knowledge work rather than simple answer use. Assistant turns are coded by whether they primarily deliver the requested content or provide scaffolded support: contingent assistance that diagnoses difficulties, decomposes tasks, explains rationales, gives feedback or hints, or prompts reflection while leaving the user to continue the work 30–33 . Together, these signatures allow us to examine where users remain actively involved in reasoning through task material, and how constructive participation is organized by task context, assistant support and local turn ordering. Across the three corpora, everyday human–LLM interaction emerged as a gen-uine but selective and conditional site of learning. First, learning-oriented engagement was recurrent in everyday human–LLM interaction, but its deepest constructive form was selective: cognitive engagement appeared in nearly one third of user turns, whereas constructive engagement appeared in about five percent. Second, construc-tive engagement was ecologically organized: it was more common under explicit learning-oriented user framing, varied across task ecologies and became most visible in sustained exchanges where users returned to, interrogated and reshaped task mate-rials. Third, assistant scaffolding marked richer constructive participation, but not as 3a uniform exposure. Its association depended on how support was positioned within the exchange: feedback-like and explanatory forms aligned most clearly with construc-tive engagement at the conversation level, while adjacent-turn analyses showed that support–engagement coupling in local sequences was shaped by prior user state and support form. Together, these findings locate everyday human–LLM interaction in a middle space between ordinary tool use and designed instruction. They also sharpen the broader stakes of AI-mediated work beyond simply cognitive offloading or answer consumption: everyday AI use is a setting in which informal learning can emerge when users remain engaged in questioning, testing and revising ideas. They suggest that the educational value of future AI assistants lies not in making every interaction tutor-like, but in calibrating when to answer, explain, give feedback or step back, preserving the cognitive agency through which people question, test, revise and build judgment while solving real problems. 
+
+# 2 Results 
+
+The results follow the analytic sequence in Fig. 1: engagement prevalence, contex-tual organization and support–engagement coupling. We first characterize cognitive and constructive engagement and examine how these forms of engagement vary across interaction contexts, then analyse the association between assistant support and constructive participation across conversations and within local user–assistant–user sequences. 
+
+## 2.1 Everyday human–LLM conversations contain learning-oriented engagement 
+
+Learning-oriented engagement was visible across all six task settings. Across 491,685 user turns, 31.9% showed cognitive engagement and 4.9% reached constructive engage-ment, a subset of cognitive engagement and the deepest observable user-side signal in the annotation scheme (Table 1). Thus, everyday human–LLM conversations often contained observable user participation in the exchange, but deeper constructive sense-making remained selective rather than routine. Figure 2a shows how cognitively engaged turns were composed. Active engage-ment was the dominant form in every setting, accounting for 62.0–86.4% of cognitively engaged turns, whereas constructive engagement accounted for 10.0–33.7% and pas-sive receipt for 1.2–14.6%. This composition separates broad engagement from deeper sense-making. Cognitive engagement shows that everyday LLM use often involves users working within the exchange; active engagement captures task-relevant use, application or follow-up; and constructive engagement identifies the cases in which users elaborate, test, revise or extend ideas. The remaining analyses therefore focus on where constructive engagement appears and how it is associated with user framing, task ecology, interaction depth and assistant support. 4Table 1 Dataset and behavioural overview. Summary statistics for the WildChat, LMSYS Chat and ShareChat task settings analysed in the study. Constructive engagement is reported as the deepest observable level within cognitive engagement and serves as the focal user-side measure in subsequent analyses. Cognitive overall denotes any passive, active or constructive user engagement; constructive level denotes the constructive subset.                                                        
+
+> Sample size User framing Assistant support Cognitive engagement Setting Conversations User turns Assistant turns Intentional conv. (%) Scaffolded turns (%) Overall (%) Constructive level (%) WildChat coding 31,878 124,073 124,623 37.13 51.03 50.21 9.23 WildChat writing 39,534 163,705 164,824 25.80 23.53 16.34 2.22 LMSYS coding 32,114 107,065 105,174 41.49 29.07 45.26 5.44 LMSYS writing 21,023 77,906 76,279 20.64 19.43 15.30 1.53 ShareChat coding 2,481 11,541 11,522 45.63 50.67 45.00 15.17 ShareChat writing 1,539 7,395 7,363 29.69 22.42 33.05 5.18 Total / pooled 128,569 491,685 489,785 32.12 31.70 31.94 4.93
+> Note. User framing is reported as the percentage of conversations with explicit learning-oriented framing. Cognitive and constructive engagement are percentages of user turns; scaffolded support is computed over assistant turns. Assistant turns refer to AI/LLM responses, so user-side and assistant-side percentages use different role-specific denominators.
+
+## 2.2 Constructive engagement is patterned by user framing, task ecology and sustained exchange 
+
+Having established that everyday human–LLM conversations contain learning-oriented engagement, we next examined where its constructive form became visible. Explicit learning-oriented framing provided the first contrast (Fig. 2b). In every setting, conver-sations framed around learning, understanding or exploration had higher cognitive and constructive user-turn rates than conversations without such framing. The cognitive-engagement lift ranged from +17.7 to +51.3 percentage points across settings, and the constructive-engagement lift ranged from +2.5 to +12.8 points. Yet constructive participation was also present in conversations without explicit learning-oriented fram-ing. User framing therefore amplified constructive engagement, but did not define it: learning-relevant participation also emerged in task-oriented exchanges where learning was incidental to solving the problem at hand. Task ecology provided a second source of variation. Across all three corpora, coding-oriented conversations showed higher cognitive and constructive engagement than writing-oriented conversations. Cognitive engagement ranged from 45.00–50.21% in coding conversations, compared with 15.30–33.05% in writing conversations; con-structive engagement ranged from 5.44–15.17% in coding and 1.53–5.18% in writing. A conversation-level context model showed the same direction after including user framing, conversation-length bucket and dataset fixed effects, with coding task ecol-ogy positively associated with the presence of at least one constructive user turn (OR=1.89, 95% CI 1.71–2.08, p < . 001; Supplementary Table B13). The coding–writing contrast points to task affordances that organize baseline opportunities for visible constructive participation. Coding tasks often externalize uncertainty through errors, constraints and executable tests, creating occasions for users to diagnose failures, refine assumptions, compare alternatives and test candidate 5solutions. Writing tasks also involve substantial revision and evaluation, but the inter-action can often proceed through accepting, adapting or requesting a draft revision without requiring the user to articulate the rationale for the change 34–36 . The observed task difference is therefore consistent with the ecological interpretation: constructive engagement is more likely to appear when the task makes uncertainty, evaluation and revision explicit in the exchange. The distinction between broad cognitive engagement and constructive engagement reinforces this task-ecology account. LMSYS Chat coding illustrates this distinction: it had high cognitive engagement, yet its cognitively engaged turns were dominated by active engagement rather than constructive elaboration (Fig. 2a). This pattern illustrates that users can work actively within the exchange—applying code, request-ing repairs or asking for the next step—without making their reasoning, tests or revisions explicit enough to surface as constructive engagement. Taken together with the coding–writing contrast, this shows that task ecology patterned not only how often users worked with task material, but also whether that work became visible as articulated questioning, testing, refinement or extension. Sustained exchange provided the third context in which constructive participation became visible (Fig. 2c). We operationalized sustained exchange with conversation-length buckets, asking whether a conversation contained at least one constructive user turn. Across all six settings, conversations with more user turns were more likely to contain at least one constructive user turn. The gradient was steeper in coding-oriented settings, but the same direction appeared in writing-oriented settings. This pattern indicates that constructive engagement is most visible when everyday LLM use develops beyond a one-off request for an answer. In such exchanges, users have room to return to the assistant’s response, introduce new constraints, test implications, request revisions and reshape their understanding. Because this panel uses an any-event outcome, we treat the length gradient as a visibility pattern; a grouped-binomial constructive-rate sensitivity attenuated but preserved the positive length association (4–6 user turns: OR=1.13; 7+ user turns: OR=1.06; Supplementary Table B13). Together, these results show that constructive engagement was ecologically orga-nized rather than evenly distributed across everyday use. It was amplified by explicit learning-oriented framing, patterned by task affordances that create occasions for test-ing and revision, and most visible in sustained exchanges. A conversation-level context model with user framing, task ecology, conversation-length bucket and dataset fixed effects supported the same organization, and the rate sensitivity showed that the length association was attenuated but preserved (Supplementary Table B13). Hav-ing located these user-side and contextual patterns, we next ask whether assistant scaffolding marks conversations with richer constructive participation. 
+
+## 2.3 Scaffolded support marks richer constructive participation 
+
+Having located the user-side and contextual conditions under which constructive engagement became visible, we next turned to assistant-side scaffolding: support that structures the user’s process rather than simply returning a deliverable, leaving room for diagnosis, repair or evaluation work 30–33 .60 20 40 60 80 100                            
+
+> Share of cognitively engaged turns (%)
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> 18.4 80.4
+> 12.0 86.4
+> 33.7 62.0
+> 13.6 79.5
+> 10.0 82.7
+> 15.7 69.7
+> 025 50 75
+> User-turn rate (%)
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> +44.1
+> +51.3
+> +45.8
+> +17.7
+> +17.9
+> +21.5
+> Cognitive
+> 010 20
+> User-turn rate (%)
+> +7.4
+> +4.5
+> +12.8
+> +3.7
+> +2.5
+> +4.0
+> Constructive
+> 2-3 4-6 7+
+> User turns in conversation
+> WC
+> LMSYS
+> SC
+> 15.1 28.6 46.3
+> 9.5 20.5 33.9
+> 27.8 43.4 61.3
+> Coding-oriented
+> 2-3 4-6 7+
+> User turns in conversation
+> WC
+> LMSYS
+> SC
+> 6.0 9.2 15.0
+> 3.3 6.3 11.2
+> 7.6 18.2 31.3
+> Writing-oriented
+
+a Engagement composition b Explicit user framing 
+
+c Conversations with ≥1 constructive turn (%)     
+
+> WC, WildChat; LMSYS, LMSYS Chat; SC, ShareChat.
+> Constructive Active Passive Intent. Unintent.
+
+Fig. 2 Learning-oriented engagement varies by engagement form, user framing and conversation length. a, Composition of cognitively engaged user turns by passive, active and constructive levels across the six task settings. b, Cognitive and constructive user-turn rates in conversations with versus without explicit learning-oriented framing; annotations show the framed-minus-unframed difference in percentage points. c, Share of conversations containing at least one constructive user turn by conversation-length bucket. Panel a decomposes cognitively engaged user turns, where constructive engagement is nested within cognitive engagement; panel b reports per-centages of user turns; panel c reports conversation-level shares. WC, WildChat; LMSYS, LMSYS Chat; SC, ShareChat. 
+
+Scaffolded support appeared in 31.7% of assistant turns (Table 1), making it a common interactional condition rather than a rare pedagogical exception. At the conversation level, conversations containing at least one scaffolded assistant turn had higher turn-weighted constructive user-turn ratios than reference conversations without scaffolded support in all six task settings (Fig. 3a). The constructive-ratio dif-ferences ranged from +0.99 to +7.34 percentage points across WildChat, LMSYS Chat and ShareChat, and all six contrasts were distinguished from zero in conversation-level bootstrap tests ( p < . 001; Supplementary Table B8). Scaffolded conversations also showed more turns after the first assistant response in every setting (+1.42 to +3.38 turns; Fig. 3d), indicating that scaffolded support marked exchanges with more sus-tained participation. Together, these descriptive contrasts show that scaffolded support co-occurred with richer constructive participation across corpora and task settings. The association remained positive after accounting for observed user framing and interactional context in covariate-adjusted models. In setting-specific models, scaffolded-support presence was associated with higher constructive-turn counts, with Poisson count ratios ranging from 1.569 to 2.491, and with higher odds that a conver-sation contained at least one constructive user turn, with logistic odds ratios ranging from 1.437 to 2.140 (Fig. 3b). The same positive direction appeared within both 70 5 10 15 
+
+Constructive user turns (%)      
+
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> 5.6
+> 10.1
+> 4.0
+> 6.5
+> 9.0
+> 16.3
+> 1.7
+> 2.7
+> 1.1
+> 2.2
+> 3.4 6.6
+> +4.6
+> +2.5
+> +7.3
+> +1.0
+> +1.1
+> +3.2
+> 1.0 1.5 2.0 2.5 3.0
+
+Association estimate     
+
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> 1.85 / 1.76
+> 1.62 / 1.54
+> 1.89 / 2.14
+> 1.57 / 1.44
+> 1.99 / 1.76
+> 2.49 / 1.76
+> 1.0 1.5 2.0 2.5 3.0
+
+Poisson count ratio (intentional / unintentional)        
+
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> 1.97 / 1.63
+> 1.67 / 1.58
+> 2.11 / 1.68
+> 1.58 / 1.57
+> 2.33 / 1.84
+> 1.86 / 2.23
+> 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5
+
+Scaffolded - reference (turns) 
+
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> +2.23
+> +1.42
+> +3.36
+> +3.13
+> +2.10
+> +3.38
+> WC, WildChat; LMSYS, LMSYS Chat; SC, ShareChat.
+
+a Conversation-level constructive ratio b Adjusted association models 
+
+c Framing-stratified association d Post-answer depth     
+
+> Ref. Scaffolded Poisson count ratio Logit OR
+> Intent. Unintent.
+
+Fig. 3 Scaffolded support marks richer constructive participation across task settings. a, Turn-weighted constructive user-turn ratios in conversations containing scaffolded support versus reference conversations without scaffolded support. b, Covariate-adjusted within-setting associations between scaffolded-support presence and constructive participation, reported as Poisson count ratios and logistic odds ratios. c, Poisson count ratios for scaffolded-support presence stratified by explicit versus non-explicit learning-oriented framing. d, Difference in the number of turns after the first assistant response between scaffolded and reference conversations. Numbers indicate scaffolded-minus-reference differences, except panels b and c, which report model estimates. Error bars in panel a show conversation-level bootstrap 95% confidence intervals for the displayed group ratios; panels b and c show model-based 95% confidence intervals. Bootstrap confidence intervals for the descriptive contrasts in panels a and d are reported in Supplementary Table B8. WC, WildChat; LMSYS, LMSYS Chat; SC, ShareChat. 
+
+explicitly learning-oriented and non-explicitly framed conversations (Fig. 3c), indicat-ing that the support–engagement association was not limited to interactions users announced as learning episodes. A rate sensitivity treating user turns as the expo-sure preserved positive scaffolded-support associations in all six settings (rate ratios 1.356–1.703; all p < . 001; Supplementary Table B10). Across these checks, scaffolded support remained a consistent conversation-level factor of richer constructive partici-pation. This conversation-level signal motivates a finer analysis of the support forms through which scaffolded support was expressed. 
+
+## 2.4 Support form differentiates the scaffolding–engagement association 
+
+The conversation-level analyses established scaffolded support as a consistent factor of richer constructive participation. We next asked which features of scaffolded sup-port carried this signal. For each scaffolded assistant turn, the annotation scheme 8recorded two parallel descriptors: a support-intent label indicating whether the turn primarily targeted metacognitive, cognitive or affective support (I1–I3), and one or more support-form labels indicating how the support was delivered—feedback, hint-ing, instructing, explaining, modelling or questioning (M1–M6). This two-axis scheme follows scaffolding accounts that distinguish the purpose of assistance from the means through which assistance is provided 30–33 . Support intent offered limited contrast because scaffolded turns were predominantly cognitive in purpose across the three corpora (Supplementary Fig. C1). We therefore focused on the form axis, comparing scaffolded conversations containing each support form with scaffolded conversations without that form and reporting turn-weighted constructive user-turn ratio differences (Fig. 4a,b). At the conversation level, support form sharply differentiated where the scaffolded-support association was concentrated. At this conversation-level scale, feedback-like support (M1) showed the largest constructive-engagement contrast in both explic-itly framed and non-explicitly framed conversations, with the association strongest under explicit learning-oriented framing (+14.7 versus +6.7 percentage points; fram-ing difference, +8.0 points; Fig. 4a). Explaining (M4) showed the same direction (+6.7 versus +3.0 points; framing difference, +3.6 points), and hinting (M2) was positive but smaller. Instructing (M3) and questioning (M6), by contrast, were lower or neg-ative, especially in explicitly framed conversations. Task-stratified estimates gave a complementary view (Fig. 4b): feedback-like support (M1) and explaining (M4) were positive in both coding- and writing-oriented task ecologies, whereas instructing (M3), modelling (M5) and questioning (M6) varied more strongly by task. M1 
+
+> feedback
+> M2
+> hint
+> M3
+> instruct
+> M4
+> explain
+> M5
+> model
+> M6
+> question
+> −5
+> 0
+> 5
+> 10
+> 15
+> 20
+> Constructive engagement difference (pp)
+
+a Constructive association by user framing  
+
+> +14.7
+> +3.7
+> -2.8
+> +6.7
+> +0.1
+> -4.8
+> +6.7
+> +1.6
+> -1.0
+> +3.0
+> +1.1
+> -1.3
+> Intentional Unintentional
+> Δ=+8.0
+> q<.001
+> Δ=+2.1
+> q<.001
+> Δ=-1.7
+> q<.001
+> Δ=+3.6
+> q<.001
+> Δ=-1.0
+> q=.020
+> Δ=-3.5
+> q<.001
+> M1
+> feedback
+> M2
+> hint
+> M3
+> instruct
+> M4
+> explain
+> M5
+> model
+> M6
+> question
+> −5
+> 0
+> 5
+> 10
+> 15
+> 20
+
+b Constructive association by task ecology  
+
+> +12.3
+> +3.0
+> +1.6
+> +4.0
+> -0.6
+> -4.0
+> +10.9
+> +3.0
+> -3.4
+> +4.3
+> +6.7
+> -0.8
+> Coding Writing
+> Δ=+1.4
+> q=.059
+> Δ=+0.0
+> q=.941
+> Δ=+5.0
+> q<.001
+> Δ=-0.3
+> q=.520
+> Δ=-7.3
+> q<.001
+> Δ=-3.1
+> q<.001
+> Support-form labels are non-exclusive; q values are Benjamini-Hochberg FDR-adjusted.
+
+Fig. 4 Support forms differentiate scaffolded interaction. a, Constructive-engagement dif-ferences associated with each support form among scaffolded conversations, stratified by intentional versus unintentional user framing. b, The same support-form contrasts stratified by coding- versus writing-oriented task ecology. Bars are turn-weighted constructive user-turn ratio differences, com-paring scaffolded conversations containing a support form with scaffolded conversations without that form; error bars show 95% confidence intervals, and bracket annotations show between-stratum dif-ferences and Benjamini–Hochberg FDR-adjusted q values within each panel family. Support-form labels correspond to M1–M6 and are not mutually exclusive. 
+
+9The form-level pattern is distinctive because these support moves occurred inside general-purpose task assistance rather than within a designed lesson. In formal instruc-tion, feedback, explanation and direct guidance are usually embedded in planned sequences with explicit learning goals. In everyday LLM use, the same forms are inter-leaved with task completion, so an assistant response can either close the problem by supplying the next step or leave part of the problem available for the user to inspect, revise or test. Feedback-like support (M1) was a strong conversation-level marker of constructive engagement, plausibly because it appears in exchanges where the user’s prior attempt becomes available for evaluation, repair or extension 37–39 . Explaining (M4) similarly opens the assistant’s answer by exposing mechanisms or rationales that users can test, adapt or connect to their own understanding 40,41 . Hinting (M2) can leave solution work open, but its association was smaller. Instructing (M3), modelling (M5) and questioning (M6) can be useful for task progress, examples or clarification; in these logs, however, they were less consistently aligned with constructive elaboration. This is consistent with assistance-dilemma and scaffolding accounts in which highly executable steps, models to imitate or information-management moves can reduce the need for learners to generate, evaluate or revise the next idea 25,42,43 . Thus, in every-day human–LLM interaction, support form is informative not only as a pedagogical category but as an interactional position: it indicates whether assistance turns the answer into material for the user’s next cognitive move or completes the deliverable with little further reasoning visible. The corpus-level support-intent by support-form profile provides compositional background for these associations (Supplementary Fig. C1). Across WildChat, LMSYS Chat and ShareChat, scaffolded support was predominantly cognitive in purpose, while support-form labels remained non-exclusive rather than mutually separated. This sup-port ecology clarifies the interactional environment in which the form-level associations arose without treating support intent as the primary analytic axis. Together, these analyses refine the conversation-level support result. Scaffolded support marked richer constructive participation, and the conversation-level associa-tion was concentrated around particular support forms within task-specific scaffolding repertoires. The form-level result makes the temporal question sharper: if support forms partly mark how the assistant responds to the user’s ongoing work, then their adjacent-turn associations should be evaluated after accounting for the user’s imme-diately preceding state. We therefore next examine support–engagement coupling at the adjacent-turn scale. 
+
+## 2.5 Support–engagement coupling is state- and form-dependent 
+
+At the conversation level, scaffolded conversations contained richer constructive partic-ipation, with this association varying across support forms. These aggregate patterns do not reveal how support and engagement are organized from one turn to the next. We therefore examined local adjacent-turn ordering, asking which support forms tended to follow each engagement state in the preceding user turn and whether constructive participation in the subsequent user turn varied across support forms. 10 0 5 10 15 20 
+
+P(next constructive turn) (%)                        
+
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> +2.7 pp
+> +2.0 pp
+> +6.2 pp
+> +1.1 pp
+> +0.3 pp
+> +3.3 pp
+> 010 20 30
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> prior constructive
+> +4.0 pp
+> +2.3 pp
+> +4.5 pp
+> +6.3 pp
+> −2.4 pp
+> +2.8 pp
+> 010 20 30
+> prior active
+> +2.2 pp
+> +2.2 pp
+> +3.1 pp
+> +0.7 pp
+> −0.1 pp
+> +1.2 pp
+> 010 20 30
+> prior passive
+> +2.1 pp
+> +6.5 pp
+> +19.5 pp
+> +1.5 pp
+> +2.5 pp
+> +8.0 pp
+> prior
+> constructive
+> prior
+> active
+> prior
+> passive
+> WC coding
+> LMSYS coding
+> SC coding
+> WC writing
+> LMSYS writing
+> SC writing
+> 65.5% 50.7% 29.5%
+> 40.3% 26.0% 17.2%
+> 66.3% 53.7% 43.7%
+> 37.8% 43.2% 18.8%
+> 34.2% 31.2% 12.1%
+> 39.6% 29.3% 26.5%
+> 135
+
+Adjusted OR   
+
+> prior
+> constructive
+> prior
+> active
+> prior
+> passive
+> M1 feedback
+> 0.72
+> 0.83
+> 2.16
+> 135
+
+Adjusted OR 
+
+> M4 explaining
+> 1.72
+> 2.13
+> 2.88
+
+a Overall adjacent-turn contrast 
+
+c P(next assistant scaffolded | prior user state) d Support-form signal by prior state 
+
+b Adjacent-turn contrast by prior user state  
+
+> P(next constructive turn) (%)
+> WC = WildChat; LMSYS = LMSYS Chat; SC = ShareChat. Error bars show 95% CI: bootstrap CIs in a/b and model CIs in d.
+> non-scaffolded reference scaffolded support
+
+Fig. 5 Support–engagement coupling is state- and form-dependent across task settings. a, Overall probability of a constructive next user turn after scaffolded versus reference assistant turns; annotations show scaffolded-minus-reference differences. b, Probability of a constructive next user turn by prior user state and assistant support condition; annotations show scaffolded-minus-reference differences. c, Probability that the next assistant turn contains scaffolded support by prior user state. d, Pooled metadata-adjusted odds ratios for focal support forms within prior user states. M1 feedback and M4 explaining are shown because Section 2.4 identified them as focal positive conversation-level forms; full M1–M6 interaction estimates are reported in Supplementary Table B19, and operational support-form examples are provided in Supplementary Table B1. Error bars in panels a and b show conversation-cluster bootstrap 95% confidence intervals over adjacent assistant-to-user pairs; panel d reports adjacent-turn logistic models with conversation-cluster robust standard errors. WC, WildChat; LMSYS, LMSYS Chat; SC, ShareChat. 
+
+At this adjacent-turn scale, scaffolded assistant turns were more likely than refer-ence assistant turns to be followed by constructive engagement in all six task settings (Fig. 5a). The next-turn constructive lift was positive in every setting, ranging from +0.27 to +6.21 percentage points. Five of the six adjacent-turn lifts were statisti-cally distinguishable from zero in conversation-cluster bootstrap tests; LMSYS Chat writing was positive but weaker (+0.27 percentage points, 95% CI -0.01 to +0.56, 
+
+p = .061; Supplementary Table B8). The temporal signal was therefore consistently positive across settings, but heterogeneous in magnitude. This adjacent-turn coupling was organized by the user’s immediately preceding state. State-conditioned contrasts were generally positive but varied across prior con-structive, active and passive turns (Fig. 5b). The user-to-assistant direction showed the same contingency: constructive and active user turns were more often followed 11 by scaffolded support than passive turns, especially in coding-oriented conversations (Fig. 5c). These two directions suggest a coupled sequence rather than a one-way support pattern: engaged user states more often preceded scaffolded support, and scaffolded support was then more often followed by further constructive participation. We then asked whether the form of support shaped this adjacent-turn coupling once prior user state and adjacent-turn context were modelled jointly. We fitted integrated logistic regressions predicting whether the next user turn was constructive, combining prior user state, assistant-scaffolding descriptors, task and framing variables, turn posi-tion and assistant-model or service-source fixed effects. The scaffolding block improved fit beyond user state and context (full scaffolding block LR χ27 = 1339 .6, p < . 001; Supplementary Table B18), and prior-state × support-form interactions improved fit further (pooled metadata fixed effects: LR χ218 = 297 .3, p < . 001; Supplementary Table B19). The corresponding pooled coefficient estimates are reported in Supplemen-tary Table B17. These tests show that the immediate support–engagement association was not reducible to the user’s preceding state alone; it depended jointly on what the user had just made visible and how the assistant supported the next step. Figure 5d highlights feedback-like support and explaining, the two support forms that carried the clearest positive signal in the conversation-level analysis; complete M1–M6 interaction estimates and operational support-form examples are reported in the Appendix (Supplementary Tables B19 and B1). Explaining provided the more stable adjacent-turn signal, predicting constructive follow-up after prior constructive, active and passive user turns (ORs 1.72, 2.13 and 2.88, respectively; all p < . 001). Feedback showed a different immediate role: its positive next-turn association was concentrated after prior passive turns, rather than after turns in which users were already active or constructive. This divergence clarifies the conversation-level result: feedback marked exchanges in which user attempts were available for evaluation and repair, whereas explanation more consistently provided material for the user’s immedi-ate next move. Support form therefore mattered through its position in the unfolding user–assistant sequence, not as a context-free pedagogical category. Taken together, the temporal analyses locate support–engagement coupling in adjacent-turn sequences. Constructive participation was most clearly organized where the user’s visible state, the assistant’s support condition and the form of support were considered together. Learning-oriented engagement in everyday human–LLM interac-tion is therefore assembled in situated next-turn sequences in which the user’s visible work and the assistant’s support form jointly shape whether constructive participation continues. 
+
+# 3 Discussion 
+
+## Everyday human–LLM interaction as an informal learning ecology 
+
+By tracing engagement in large-scale public logs, this study shows that everyday human–LLM interaction can be analysed as an empirical ecology of informal learn-ing. These conversations are organized around users’ own tasks, yet they contain 12 behavioural traces of learning-oriented work. Section 2.1 establishes the depth struc-ture of this participation: cognitive engagement appeared in nearly one third of user turns, whereas constructive engagement appeared in about five percent. This dis-tinction matters because broad participation and constructive sense-making mark different depths of involvement in the exchange. Broad participation shows that users acknowledge, apply or extend task material; constructive engagement marks the more selective moments in which users make their reasoning visible by articulating con-straints, testing implications, revising assumptions or extending explanations. In this way, informal learning becomes observable not as a declared intention, but as a pattern of participation within ordinary interaction. The contextual results in Section 2.2 show how this participation was organized. Explicit learning-oriented framing made constructive engagement more common, but task-oriented exchanges also contained constructive turns. Task ecology shaped which forms of sense-making became visible: coding conversations often exposed failure, constraints and tests, whereas writing conversations made revision, adaptation and evaluative choice visible when users brought those concerns into the exchange. Sus-tained conversations added temporal opportunity, allowing earlier responses to become points of return, comparison and revision. Beyond these factors, we have also tested the impact of LLM model (for example, GPT-4- versus GPT-3.5-class systems) or family (for example, GPT or Gemini) selection with fixed-effect sensitivity checks. The results reveal that our main findings in Sections 2.1–2.5 held across different model conditions (refer to Supplementary Section A.5). Together, these findings define every-day human–LLM interaction as an informal learning ecology: user orientation, task affordances and interaction depth shape when ordinary problem solving becomes an occasion to build, test and extend understanding. 
+
+## Scaffolding as situated support 
+
+The assistant-side findings show how support enters this ecology. As shown in Section 2.3, conversations containing scaffolded support had richer constructive par-ticipation across all six task settings, and this association remained positive after adjustment for observed conversation-level context. This pattern is most informative when scaffolded support is read as a relation between the assistant response and the user’s next possible action. In everyday task-oriented LLM use, an answer can do more than provide a usable deliverable: it can expose a rationale, error, mechanism, constraint or partial solution that remains available for inspection. This view extends scaffolding theory, which emphasizes contingent assistance and the gradual transfer of responsibility 30,31,43 , into general-purpose AI interaction, where task completion and opportunities for sense-making are interleaved within the same exchange. The support-form results specify what this situated support looked like in the logs. As shown in Section 2.4, feedback-like support and explanation were most consistently aligned with constructive engagement. Feedback makes a prior attempt evaluable: it turns a user’s partial solution, diagnosis or draft into something that can be repaired, refined or extended 37,38,44 . Explanation makes reasons and mechanisms inspectable, giving users material for comparison, self-explanation and transfer 40,41 . Other forms, including instruction, modelling and questioning, supported task progress, examples 13 and clarification, with more task-contingent alignment to visible constructive elabora-tion. The form-level contrasts point to the warrant that support attaches to generated content: some forms organize action, whereas others make visible the grounds on which an answer, attempt or mechanism can be used. For general-purpose AI assistance, this shifts scaffolding from the surface form of a response to the epistemic status of the output it produces: fluent answers become learning-relevant when they are also judge-able answers, with grounds, limits or failure points that can be inspected and adapted within the task. 
+
+## Learning continuity across formal and everyday contexts 
+
+The temporal findings clarify what everyday AI assistance can add to a broader learning system. As shown in Section 2.5, support–engagement coupling was most interpretable in adjacent user–assistant–user sequences, where the user’s preceding state and the assistant’s support form shaped whether constructive participation con-tinued. This scale gives everyday AI use a role that differs from formal instruction. Formal learning environments organize progression through curricula, sequencing, assessment, shared standards and opportunities to abstract beyond the immediate task. Everyday AI assistance organizes re-entry: it brings explanations, feedback and prior reasoning back into the moments where people apply knowledge under practical constraints. This distinction matters because much learning depends on whether knowledge can be reactivated when it is needed. A concept explained in a course, tutorial or ear-lier exchange becomes educationally consequential when it can be recognized again in a new problem, adapted to a different constraint or used to diagnose a breakdown. Human–LLM exchanges provide occasions for that re-entry. A user encounters a con-crete difficulty; the assistant supplies a rationale, comparison or correction; the user can then relate that material to the task at hand. The value of such episodes lies in making knowledge usable within action, where understanding is tested against the demands of a real problem. This complementarity suggests a different role for personal AI assistants in edu-cation. Schools, courses and curricula provide progression, accountability and shared criteria. AI assistants can provide continuity across contexts: carrying explanations from one task to another, preserving traces of prior attempts, helping users notice recurring uncertainties and supporting consolidation after repeated encounters with a concept. In this role, lifelong AI assistance can function as a connective layer between structured learning and everyday practice, giving memory and personalization to the informal learning that emerges while people work. 
+
+## AI-mediated work and the social organization of expertise 
+
+The broader implication is that AI-mediated work may reshape the pathways through which expertise is formed. Much professional learning develops through participation in the practices of a domain: proposing first attempts, encountering error, receiving feedback, revising choices, explaining decisions and seeing consequences unfold 45,46 .14 These activities are often treated as parts of production, yet they also carry an appren-ticeship function. The results provide an empirical entry point into this process in AI-mediated settings: learning-oriented participation was measurable, selective and structured by the conditions of interaction. As LLMs become embedded in writing, coding, search and problem solving, the formation of expertise becomes tied to how these environments organize participation in the practices through which judgment is built. AI also changes the repertoire of capacities through which people enter expert practice. When systems can generate fluent drafts, code, explanations and recommen-dations, expertise may depend increasingly on formulating good problems, recognizing relevant principles, interrogating generated solutions, judging evidence, revising under constraints and remaining accountable for consequences. These capacities extend beyond generic AI literacy; they are forms of situated judgment that develop through repeated participation in domain work. Schools, workplaces and platforms will there-fore shape future expertise through the routines they build around AI: what novices practise, where feedback enters, how responsibility is assigned and how mistakes become occasions for development. A science of everyday AI learning should therefore study cognitive apprenticeship as a distributed property of sociotechnical systems. The outcomes of interest extend beyond immediate productivity or single-session engagement to the formation of future practitioners: whether repeated AI-mediated routines cultivate judgment, autonomy and domain competence over time. The social stakes are distributional. Intelligent assistance can broaden access to expert-like feedback, explanation and revision, but the developmental value of that access will depend on institutional design: who participates in diagnosis, who practises revision, who observes consequences and who is asked to justify decisions. The long-term educational significance of AI will depend on how societies organize these pathways into expertise, and on whether AI-mediated work sustains broad participation in the practices through which judgment, autonomy and domain competence are formed. 
+
+## Limitations 
+
+Several boundaries define the interpretation of these findings. The analyses use pub-lic conversational logs and characterize population-level interactional patterns rather than longitudinal learner histories. They do not observe users’ prior knowledge, motivation, goals outside the conversation or later learning outcomes. The engage-ment labels capture behavioural manifestations of learning-oriented participation, not direct evidence of retention, transfer or skill development. Assistant support was also observed rather than assigned, so the associations reported here should be inter-preted as structured patterns in naturalistic interaction rather than causal effects of scaffolding. Finally, the analysis focuses on English-language coding and writing conversations from three public corpora; other domains, languages, interfaces and insti-tutional settings may organize different opportunities for engagement and support. These boundaries motivate the next stage of evidence: connecting the behavioural sig-natures identified here to independent measures of learning, autonomy and transfer in controlled and longitudinal settings. 15 Conclusion 
+
+As LLMs become infrastructure for everyday work and study, the central educational question extends beyond how individuals learn from intelligent systems to how learn-ing opportunities are organized in AI-mediated societies 47 . This study shows that ordinary human–LLM interaction already contains measurable behavioural signatures of informal learning, and that deeper constructive engagement emerges selectively through task ecologies, support forms and short interactional sequences. The broader implication is that AI-mediated work should be assessed not only by the productivity gains it yields or the cognitive effort it displaces, but also by how it expands, con-strains or redistributes opportunities to engage in the cognitive work through which people develop knowledge, skills and judgment. The long-term significance of AI may therefore depend not only on the knowledge or productivity it delivers, but also on how societies organize learning opportunities: who encounters them, how often they arise and whether institutions sustain them over time. 16 4 Methods 
+
+## 4.1 Study design and analytic scope 
+
+This study analyses naturalistic public human–LLM conversations as observational digital traces of everyday work and study, following the logic of large-scale digital-trace and computational social-science analyses 48,49 . We use three public conversational corpora: WildChat-4.8M 26,50 (public non-toxic release, reported below as WildChat), LMSYS Chat-1M 27 (reported below as LMSYS Chat) and ShareChat 28 (strict-English subset, reported below as ShareChat). Within these corpora, we focus on coding and writing, two prominent AI-mediated knowledge-work ecologies in which users can delegate task completion to the assistant or remain actively involved in diagnosis, evaluation and revision. Usage and workplace studies identify writing and software-development tasks as high-salience domains of everyday LLM use and AI-mediated knowledge work 1–3,29 . The two domains also differ in how they make learning-oriented participation visible: coding often externalizes uncertainty through errors, constraints, execution failures and iterative testing 9,34 , whereas writing often involves drafting, revision and evaluative choice whose rationale may remain implicit unless users articulate it 35,36 .Human–LLM conversations are naturally occurring records of user–assistant col-laboration. We analyse them at three scales: conversations, turns and adjacent user–assistant–user sequences. User turns provide engagement-depth measures, assis-tant turns provide support measures and adjacent sequences provide local ordering. The analyses estimate where learning-oriented engagement is visible, where construc-tive engagement is concentrated and how scaffolded support is associated with further constructive participation across conversation-level, support-form and adjacent-turn scales. Dataset and task ecology are treated as substantive dimensions of the interaction environment. The claims are therefore about observable behavioural signa-tures and interactional organization in public logs, with causal and durable-learning questions reserved for experimental or longitudinal designs 51 .
+
+## 4.2 Corpus construction and task settings 
+
+We constructed the analytic corpus from three public human–LLM conversation releases: WildChat-4.8M 26,50 , LMSYS Chat-1M 27 and ShareChat 28 . For each source, we organized the public records into role-ordered conversation records with user and assistant turns. We then applied corpus-specific language and minimum-turn screens to retain conversations within the English-oriented analysis scope and with at least four message turns. Coding- and writing-oriented conversations were identified with LLM-assisted semantic task filters, as detailed in Supplementary Section A.1 and Supplementary Table A3. Retained conversations were then processed with the shared annotation pipeline for conversation-level user framing and turn-level labels for user engagement, scaffolded support, support intent and support form; the codebook, workflow and validation details are reported in Supplementary Sections A.2–A.4. 17 This construction process yielded six analytic task settings: WildChat coding, WildChat writing, LMSYS Chat coding, LMSYS Chat writing, ShareChat coding and ShareChat writing. The final corpus contains 128,569 conversations and 981,470 total turns, including 491,685 user turns and 489,785 assistant turns. WildChat and LMSYS Chat contribute the largest public interaction logs, whereas ShareChat contributes a smaller complementary sample. Supplementary Table A1 reports the corpus-specific raw-to-final filtering ledger, including source records, eligibility screens, task-filtering steps and final analytic sam-ples. Supplementary Table A3 summarizes validation and audit evidence for task, language, user-framing and turn-level labels. 
+
+## 4.3 Operational constructs 
+
+4.3.1 Task ecology, user framing and interaction depth 
+
+Each conversation is represented as an ordered sequence of user and assistant turns together with available metadata. The main contextual variables are data source, task ecology, user framing, topic and language. Task ecology and user framing are ana-lytic variables generated by the corpus-construction and annotation pipeline; topic, language and assistant-model or service-source metadata are retained where avail-able. User framing is a conversation-level LLM-assisted label that captures whether the opening user turn positions the interaction as an occasion for understanding, exploration or learning, rather than only for completing the immediate task. Interaction depth summarizes how much exchange unfolded after the initial request. We use turn counts and turn ordering as descriptive measures of opportunity for follow-up, repair and elaboration, rather than as manipulated exposures. Post-answer depth is measured as the number of turns after the first assistant response. When analyses use whether a conversation contains at least one constructive turn, interaction depth is interpreted as a visibility condition: longer exchanges provide more occasions for constructive participation to appear. The corresponding rate-based sensitivity checks are described with the statistical analyses. 
+
+4.3.2 User engagement 
+
+The unit of annotation is the conversational turn. User turns are labelled with a depth hierarchy for cognitive engagement as reflected in the exchange, drawing on engagement theory and the ICAP distinction between passive, active and construc-tive participation 23,24 . We do not use ICAP’s interactive category as a turn-level user label. In ICAP, interactive engagement refers to dialogic co-construction across par-ticipants and turns, not simply to the presence of a conversational interface. Because every record in this study is already a human–assistant exchange, assigning an I (inter-active engagement) label at the turn level would mostly capture interaction format rather than learning-oriented engagement depth. We therefore represent the interac-tional process through turn-level user engagement labels, assistant support labels and adjacent-turn analyses. Passive engagement ( P) captures reception, acknowledgement or minimal continuation without substantial transformation. Active engagement ( A)captures task-relevant use, follow-up or application of supplied information or task 18 material, such as applying a suggestion, asking for a reformatted artifact or request-ing the next step. Constructive engagement ( C) captures higher-depth cognitive work in which users generate, revise or extend ideas, explanations or constraints, such as testing an implication, revising a hypothesis or assumption, articulating a constraint, transferring a mechanism or extending an explanation. A user turn labelled P, A or C
+
+contributes to the overall cognitive-engagement measure. Explicit emotional expres-sion is recorded in parallel as a descriptive background label when a user turn expresses emotion in text; it is not a focal construct in the main analyses. Operational definitions and plain-language examples for these user-turn labels are provided in Supplemen-tary Table A4 and Supplementary Table B1. Validation evidence for the annotation workflow is reported separately in Section 4.4 and Supplementary Section A.4. Constructive engagement is the focal user-side measure in the main analyses because it identifies where the user contributes explicit reasoning, testing and revision. We represent it as a turn-level C indicator, a conversation-level count, an indicator for at least one constructive user turn and a constructive-turn ratio. The correspond-ing statistical estimands and model specifications are provided in Supplementary Section A.5. 
+
+4.3.3 Assistant support 
+
+Assistant turns are labelled by their role in the user’s ongoing work. The top-level support distinction separates reference responses from scaffolded support. Reference responses primarily provide the requested information, deliverable or stand-alone answer. Scaffolded support captures assistant behaviour that structures, regulates, diagnoses or redirects the user’s process while preserving a role for the user’s own rea-soning. This definition follows the scaffolding tradition, especially contingency, transfer of responsibility and potential fading 30,31,33,43 .Scaffolded support is the focal assistant-side measure in the main analyses. At the turn level, assistant turns are represented as scaffolded support or reference response. At the conversation level, we use an indicator for whether a conversation contains at least one scaffolded assistant turn. Scaffolded turns are further characterized by support-intent labels ( I1 metacognitive, I2 cognitive and I3 affective support) and non-mutually exclusive support-form labels ( M1 feedback, M2 hinting, M3 instructing, 
+
+M4 explaining, M5 modelling and M6 questioning). The intent labels describe the broad purpose of support, whereas the form labels describe how support is delivered in the turn. Support-form analyses condition on scaffolded turns and compare scaffolded conversations containing each support-form label with scaffolded conversations that do not contain that label. Because support-form labels are multi-label descriptors, these contrasts trace how particular forms of scaffolding pattern with constructive participation within the broader scaffolded-support ecology. Operational definitions and plain-language examples are provided in Supple-mentary Table A4 and Supplementary Table B1; case excerpts are provided in Supplementary Tables B2–B3. Aggregate support-intent and support-form profiles are reported in Supplementary Figure C1. Validation metrics for scaffolded support and 19 support-form labels are reported in Supplementary Tables B4 and B5. The corre-sponding statistical estimands and model specifications are provided in Supplementary Section A.5. 
+
+## 4.4 Annotation workflow and validation 
+
+Codebook development. 
+
+The source corpora do not contain native labels for learning-oriented engagement, assistant scaffolding, support intent or support form. We therefore constructed these labels through an iterative workflow that combined theory-grounded code-book development, independent human review, prompt calibration, parser checks, targeted post-processing and corpus-scale LLM-assisted labelling 52,53 . The codebook was derived from engagement theory, the ICAP framework and scaffolding the-ory 23,24,30,31,33,43 . Two authors independently labelled overlapping validation cases, discussed disagreements and produced human-confirmed labels for validation analyses. 
+
+Corpus-scale labelling. 
+
+After the codebook, prompt templates and structured output schemas stabilized, the frozen annotation workflow was applied to the analytic corpora. The workflow used schema and parser checks, documented post-processing rules for recurring boundary errors and retained annotation metadata for provider, deployment family, API version, prompt version, retry policy and parser checks. WildChat labels reflect the targeted update pass applied after validation, including post-labelling WildChat review sam-ples drawn from completed labelled pools; LMSYS Chat and ShareChat were then processed with the same workflow. Operational definitions, examples, de-identified case excerpts and reproducibility details are provided in Supplementary Table A4, Supplementary Tables B1–B3 and Supplementary Sections A.3–A.4. 
+
+Human validation. 
+
+Human validation is reported in three layers. Human–human agreement assesses code-book operability; corpus-scale label audits compare final LLM-assisted labels with human-confirmed labels; and post-update audits check recurring residual boundary errors. Agreement is summarized with per-label F1, Matthews correlation coefficient and Gwet’s AC1 because the labels are sparse, prevalence-imbalanced and sometimes multi-label 54,55 . Overall, the validation checks supported the focal labels used for the main claims, including intentional user framing, constructive engagement, scaffolded support and support-form labels. Full sampling designs, review-round sizes, post-labelling checks and per-label metrics are reported in Supplementary Section A.4 and Supplementary Tables B4–B6. These tables distinguish codebook-operability checks from LLM-assisted label agreement. Prevalence estimates in the Results are computed from the full corpus-scale labels. 20 4.5 Statistical analyses 
+
+Descriptive and contextual estimates. 
+
+Descriptive analyses estimated engagement prevalence, scaffolding prevalence, passive/active/constructive composition, explicit affective-expression rates and interaction-depth summaries within each task setting (Sections 2.1–2.2). Contextual analyses compared observed user framing, task ecology and interaction-depth groups in Section 2.2. We first fitted a conversation-level logistic model predicting whether a con-versation contained at least one constructive user turn. Because the length pattern in Fig. 2c uses the same any-event outcome, we also fitted a rate-based sensitivity model that accounts for the number of user turns available for observing constructive partic-ipation. This sensitivity model was a grouped-binomial model predicting constructive user turns out of total user turns, with user framing, task ecology, length bucket and dataset fixed effects as predictors. Both models are reported in Supplementary Table B13. 
+
+Conversation-level support associations. 
+
+Conversation-level support analyses compared conversations containing at least one scaffolded assistant turn with reference conversations without scaffolded support (Section 2.3). Constructive-ratio contrasts used turn-weighted ratios within each com-parison group, defined as total constructive user turns divided by total user turns, with uncertainty estimated from 1,000 conversation-level bootstrap resamples. Covariate-adjusted models reported in Section 2.3 used setting-specific Poisson generalized linear models for raw constructive-turn counts and companion logistic models for whether a conversation contained at least one constructive user turn 56,57 . The primary Poisson model included conversation length as a covariate; offset-rate and quasi-Poisson sensi-tivities are reported in Supplementary Section A.5 and Supplementary Table B10. The resulting estimates are interpreted as covariate-adjusted associations in naturalistic conversation logs. 
+
+Support-form analyses. 
+
+Support-form analyses conditioned on scaffolded conversations (Section 2.4). For each support-form label, we compared scaffolded conversations containing that label with scaffolded conversations that did not contain that label, and reported turn-weighted constructive user-turn ratio differences. Because support-form labels are multi-label descriptors, these contrasts trace how particular forms of scaffolding pattern with constructive participation within the broader scaffolded-support ecology. Bracket tests in Fig. 4 compare displayed strata for each support form; q values use Benjamini– Hochberg false-discovery-rate adjustment within each displayed family of six support-form comparisons 58 .21 Metadata sensitivity checks. 
+
+Available assistant-model metadata and service-source metadata were used as robust-ness checks across the Results, rather than as primary explanatory variables. Section-specific implementations and interpretation guidance are reported in Supplementary Section A.5 and the corresponding supplementary tables. 
+
+Adjacent-turn analyses. 
+
+Temporal analyses focused on adjacent-turn ordering (Section 2.5). An adjacent-turn sequence is defined as the immediately preceding user turn, the assistant turn and the immediately following user turn. We compared the probability that the next user turn was constructive after scaffolded versus reference assistant turns, estimated the same contrast within prior user states and estimated the probability that the next assistant turn was scaffolded after different prior user states. Adjacent-turn contrasts used 1,000 conversation-cluster bootstrap resamples because multiple turn pairs can come from the same conversation. Integrated adjacent-turn regressions combined prior user-state features, assistant-scaffolding features, support-form descriptors and adjacent-turn context in one logistic model predicting whether the next user turn was constructive. These models included task and framing variables, turn position and dataset fixed effects. Standard errors were clustered by conversation. We report broad scaffolded-support models sepa-rately from support-form decompositions because support-form labels are descriptors nested within scaffolded support. Nested likelihood-ratio block tests first add broad scaffolded-support presence and then test whether support-form descriptors add signal within scaffolded support. Supplementary Section A.5 and Supplementary Table B7 give the model specifications, covariate sets and sensitivity checks. 
+
+# Data availability 
+
+This study analyses public human–LLM conversation corpora released by their orig-inal data providers: WildChat, LMSYS Chat and ShareChat. Readers should obtain the raw public conversation data from the original releases and comply with the corre-sponding dataset licences, terms of use and redistribution restrictions. The manuscript does not redistribute verbatim raw conversation logs, user identifiers or linked user his-tories. The Supplementary includes two de-identified illustrative case excerpts derived from retained conversations and formatted to preserve turn sequence, task structure and annotation decisions while reducing privacy and licence risk. Derived data sufficient to verify the reported aggregate figures, tables and statis-tical summaries are archived on Zenodo at https://doi.org/10.5281/zenodo.20995945. The release includes the numeric values underlying the main figures and Appendix C visual summaries, de-identified conversation-level and adjacent-turn analytic labels without raw message text, table source files, confidence intervals, p values, false-discovery-rate q values, model-output summaries, and provenance documentation. 22 Code availability 
+
+Custom code used to export source data and de-identified label tables, com-pute statistical analyses and generate figures and tables is archived with the derived-data release on Zenodo at https://doi.org/10.5281/zenodo.20995945 and is also available in the GitHub repository at https://github.com/CinderD/ Informal-learning-in-everyday-human-LLM-interaction. The archived repository includes source-data export scripts, statistical-analysis scripts, figure-generation scripts, table source files and annotation reproducibility summaries covering prompt families, output fields, parser checks, retry logic and rule-based post-processing. API keys, raw message text and non-redistributable corpus files are excluded, so full raw-to-label reruns require user-provided credentials and access to the original public corpora. 
+
+# Ethics statement 
+
+The study is an analysis of public, naturalistic human–LLM conversation datasets. We used the public source corpora as released by their original providers, with de-identification already applied. Reporting is restricted to aggregate statistics, source-data summaries, validation metrics and two de-identified illustrative case excerpts that preserve turn order and annotation decisions. Human validation was used to assess annotation quality on reviewed examples and did not involve interaction with the original dataset users. 
+
+# Acknowledgements and funding 
+
+This project is partially supported by Microsoft Accelerating Foundation Models Research grant, as well as RGC GRF grant 16218724. 
+
+# LLM use statement 
+
+Large language models were used in four roles. First, LLMs were the systems under study: the analysed data consist of public human–LLM conversations from WildChat, LMSYS Chat and ShareChat. Available assistant-model or service-source identifiers were retained as observational metadata for descriptive and robustness analyses. Sec-ond, LLMs were used as measurement tools for task filtering, English-oriented filtering and corpus-scale annotation of user framing, engagement, scaffolding, support intent and support form. These annotation workflows used fixed prompts, schema and parser checks, retry logic, post-processing rules and human validation; the reported repro-ducibility materials summarize model or deployment families and implementation controls in Supplementary Section A.3. Third, LLMs were used during annotation development to test prompts and inspect boundary cases against human-reviewed examples. Fourth, LLM-based tools assisted with code drafting, debugging, work-flow organization and language editing. LLM-generated assistance was not used as a 23 substitute for human validation, audit-label adjudication, statistical decisions or inter-pretation of the results. No LLM or AI tool is listed as an author, and the authors take responsibility for the final manuscript, analyses and interpretation. 
+
+# Figure source data 
+
+Main figures Numeric source-data CSV files are archived in the Zenodo release at https://doi.org/10.5281/zenodo.20995945. Within the release archive, the main-figure files are 
+
+source data/figure2 source data.csv ,
+
+source data/figure3 source data.csv ,
+
+source data/figure4 source data.csv and 
+
+source data/figure5 source data.csv .Fig. 1 Conceptual framework figure; no numeric source-data file. Appendix displays and tables Source files for Appendix C visual summaries, supplementary tables and regression outputs are archived in the same Zenodo release under source data/ , tables/ and 
+
+statistical outputs/ .24 References 
+
+[1] Chatterji, A. et al. How people use ChatGPT. Tech. Rep. Working Paper 34255, National Bureau of Economic Research (2025). [2] Noy, S. & Zhang, W. Experimental evidence on the productivity effects of generative artificial intelligence. Science 381 , 187–192 (2023). [3] Brynjolfsson, E., Li, D. & Raymond, L. Generative AI at work. Q. J. Econ. 140 ,889–942 (2025). [4] Costa-Gomes, B. et al. Public use of a generalist LLM chatbot for health queries. 
+
+Nat. Health 1, 689–696 (2026). [5] Anzai, Y. & Simon, H. A. The theory of learning by doing. Psychol. Rev. 86 ,124–140 (1979). [6] Kolb, D. A. Experiential Learning: Experience as the Source of Learning and Development 2nd edn (Pearson FT Press, Upper Saddle River, NJ, 2015). [7] Risko, E. F. & Gilbert, S. J. Cognitive offloading. Trends Cogn. Sci. 20 , 676–688 (2016). [8] Gerlich, M. AI tools in society: Impacts on cognitive offloading and the future of critical thinking. Societies 15 , 6 (2025). [9] Barke, S., James, M. B. & Polikarpova, N. Grounded copilot: How programmers interact with code-generating models. Proc. ACM Program. Lang. 7, 85–111 (2023). [10] Kobiella, C., Flores L´ opez, Y. S., Waltenberger, F., Draxler, F. & Schmidt, A. “If the machine is as good as me, then what use am I?”—how the use of ChatGPT changes young professionals’ perception of productivity and accomplishment. 
+
+Proc. CHI Conf. Hum. Factors Comput. Syst. 1–16 (2024). [11] Eraut, M. Informal learning in the workplace. Stud. Contin. Educ. 26 , 247–273 (2004). [12] Marsick, V. J. & Watkins, K. Informal and incidental learning in the workplace (Routledge Revivals) (Routledge, London, 2015). [13] Schugurensky, D. The forms of informal learning: Towards a conceptualization of the field. Tech. Rep. NALL Working Paper 19, Centre for the Study of Education and Work, OISE/UT, Toronto (2000). URL https://hdl.handle.net/1807/2733. [14] Kasneci, E. et al. ChatGPT for good? On opportunities and challenges of large language models for education. Learn. Individ. Differ. 103 , 102274 (2023). 25 [15] Meyer, J. et al. Using LLMs to bring evidence-based feedback into the classroom: AI-generated feedback increases secondary students’ text revision, motivation, and positive emotions. Comput. Educ. Artif. Intell. 6, 100199 (2024). [16] Arif, T., Asthana, S. & Collins-Thompson, K. Generation and assessment of multiple-choice questions from video transcripts using large language models. 
+
+Proc. 11th ACM Conf. Learn. @ Scale 530–534 (2024). [17] Jin, H., Lee, S., Shin, H. & Kim, J. Teach AI how to code: Using large language models as teachable agents for programming education. Proc. CHI Conf. Hum. Factors Comput. Syst. 1–28 (2024). [18] Lim, H., Choi, D. & Hong, H. Identify design problems through questioning: Exploring role-playing interactions with large language models to foster design questioning skills. Companion Proc. CSCW 598–602 (2024). [19] Yan, L., Greiff, S., Teuber, Z. & Gaˇ sevi´ c, D. Promises and challenges of generative artificial intelligence for human learning. Nat. Hum. Behav. 8, 1839–1850 (2024). [20] F¨ utterer, T. et al. Why using AI as a learning coach can improve education. Nat. Hum. Behav. (2026). URL https://doi.org/10.1038/s41562-026-02524-2. [21] Terzimehi´ c, N., B¨ uhler, B. & Kasneci, E. Conversational AI as a catalyst for infor-mal learning: An empirical large-scale study on LLM use in everyday learning. 
+
+Comput. Educ. Artif. Intell. 11 , 100634 (2026). [22] VanLehn, K. The relative effectiveness of human tutoring, intelligent tutoring systems, and other tutoring systems. Educ. Psychol. 46 , 197–221 (2011). [23] Fredricks, J. A., Blumenfeld, P. C. & Paris, A. H. School engagement: Potential of the concept, state of the evidence. Rev. Educ. Res. 74 , 59–109 (2004). [24] Chi, M. T. & Wylie, R. The ICAP framework: Linking cognitive engagement to active learning outcomes. Educ. Psychol. 49 , 219–243 (2014). [25] Koedinger, K. R. & Aleven, V. Exploring the assistance dilemma in experiments with cognitive tutors. Educ. Psychol. Rev. 19 , 239–264 (2007). [26] Zhao, W. et al. WildChat: 1M ChatGPT interaction logs in the wild. Proc. 12th Int. Conf. Learn. Represent. (2024). URL https://openreview.net/forum? id=Bl8u7ZRlbM. [27] Zheng, L. et al. LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset. Proc. 12th Int. Conf. Learn. Represent. (2024). URL https://openreview. net/forum?id=BOfDKxfwt0. [28] Yan, Y., Nguyen, T., Su, B., Lieffers, M. & Le, T. ShareChat: A dataset of chatbot conversations in the wild (2025). Preprint at https://doi.org/10.48550/ 26 arXiv.2512.17843. [29] Handa, K. et al. Which economic tasks are performed with AI? Evidence from millions of Claude conversations (2025). Preprint at https://doi.org/10.48550/ arXiv.2503.04761. [30] Wood, D., Bruner, J. S. & Ross, G. The role of tutoring in problem solving. J. Child Psychol. Psychiatry 17 , 89–100 (1976). [31] Van de Pol, J., Volman, M. & Beishuizen, J. Scaffolding in teacher–student interaction: A decade of research. Educ. Psychol. Rev. 22 , 271–296 (2010). [32] Winkler, R., Hobert, S., Salovaara, A., S¨ ollner, M. & Leimeister, J. M. Sara, the lecturer: Improving learning in online education with a scaffolding-based conversational agent. Proc. CHI Conf. Hum. Factors Comput. Syst. 1–14 (2020). [33] Quintana, C. et al. A scaffolding design framework for software to support science inquiry. J. Learn. Sci. 13 , 337–386 (2004). [34] Keuning, H., Jeuring, J. & Heeren, B. A systematic literature review of automated feedback generation for programming exercises. ACM Trans. Comput. Educ. 19 ,1–43 (2018). [35] Flower, L. & Hayes, J. R. A cognitive process theory of writing. Coll. Compos. Commun. 32 , 365–387 (1981). [36] Sommers, N. Revision strategies of student writers and experienced adult writers. 
+
+Coll. Compos. Commun. 31 , 378–388 (1980). [37] Hattie, J. & Timperley, H. The power of feedback. Rev. Educ. Res. 77 , 81–112 (2007). [38] Shute, V. J. Focus on formative feedback. Rev. Educ. Res. 78 , 153–189 (2008). [39] Nicol, D. J. & Macfarlane-Dick, D. Formative assessment and self-regulated learn-ing: A model and seven principles of good feedback practice. Stud. High. Educ. 
+
+31 , 199–218 (2006). [40] Chi, M. T. H., Bassok, M., Lewis, M. W., Reimann, P. & Glaser, R. Self-explanations: How students study and use examples in learning to solve problems. 
+
+Cogn. Sci. 13 , 145–182 (1989). [41] Renkl, A. Learning from worked-out examples: A study on individual differences. 
+
+Cogn. Sci. 21 , 1–29 (1997). [42] Aleven, V., Stahl, E., Schworm, S., Fischer, F. & Wallace, R. Help seeking and help design in interactive learning environments. Rev. Educ. Res. 73 , 277–320 (2003). 27 [43] Reiser, B. J. Scaffolding complex learning: The mechanisms of structuring and problematizing student work. J. Learn. Sci. 13 , 273–304 (2004). [44] Yin, J. et al. Effects of different AI-driven chatbot feedback on learning outcomes and brain activity. npj Sci. Learn. 10 , 17 (2025). [45] Brown, J. S., Collins, A. & Duguid, P. Situated cognition and the culture of learning. Educ. Res. 18 , 32–42 (1989). [46] Collins, A., Brown, J. S. & Newman, S. E. Cognitive apprenticeship: Teaching the crafts of reading, writing, and mathematics. In Resnick, L. B. (ed.) Knowing, Learning, and Instruction: Essays in Honor of Robert Glaser , 453–494. Lawrence Erlbaum Associates, Hillsdale, NJ (1989). [47] Burton, J. W. et al. How large language models can reshape collective intelligence. 
+
+Nat. Hum. Behav. 8, 1643–1655 (2024). [48] Lazer, D. et al. Computational social science. Science 323 , 721–723 (2009). [49] Salganik, M. J. Bit by Bit: Social Research in the Digital Age (Princeton University Press, Princeton, NJ, 2017). [50] Allen Institute for AI. WildChat-4.8M. https://huggingface.co/datasets/allenai/ WildChat-4.8M (2025). [51] Hern´ an, M. A. & Robins, J. M. Causal Inference: What If (Chapman & Hall/CRC, Boca Raton, 2020). [52] Gilardi, F., Alizadeh, M. & Kubli, M. ChatGPT outperforms crowd workers for text-annotation tasks. Proc. Natl Acad. Sci. USA 120 , e2305016120 (2023). [53] Ziems, C. et al. Can large language models transform computational social science? Comput. Linguist. 50 , 237–291 (2024). [54] Matthews, B. W. Comparison of the predicted and observed secondary structure of T4 phage lysozyme. Biochim. Biophys. Acta 405 , 442–451 (1975). [55] Gwet, K. L. Computing inter-rater reliability and its variance in the presence of high agreement. Br. J. Math. Stat. Psychol. 61 , 29–48 (2008). [56] McCullagh, P. & Nelder, J. A. Generalized Linear Models 2nd edn, Vol. 37 of 
+
+Monographs on Statistics and Applied Probability (Chapman & Hall, London, 1989). [57] Agresti, A. Categorical Data Analysis 3rd edn (John Wiley & Sons, Hoboken, NJ, 2013). 28 [58] Benjamini, Y. & Hochberg, Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J. R. Stat. Soc. B 57 , 289–300 (1995). 29 Supplementary information 
+
+Supplementary information is organized to support reproducibility and interpretation. Appendix A records the corpus ledger, annotation ontology, corpus-scale annotation workflow, validation evidence and model specifications. Appendix B contains the sup-porting tables and model outputs referenced from the main text and Appendix A. Appendix C contains the supporting figures. 
+
+# Appendix A Reproducibility protocol and construct ledger 
+
+## A.1 Corpus provenance and filtering ledger 
+
+Supplementary Table A1 reports the corpus-specific filtering counts from public source records to the final analytic samples. 
+
+Table A1 Corpus filtering ledger. Counts show the corpus-specific steps from public source records to the final coding- and writing-oriented analytic samples. Filter validation evidence is reported separately in Supplementary Table A3. 
+
+Corpus Public source records Eligibility screen Task and language filtering Final analytic sample WildChat WildChat-4.8M public release. English-oriented records with at least four message turns. Keyword prefilter followed by LLM-assisted semantic filters: 
+
+coding english or writing english ,score ≥ .70. One coding record with missing learning intent was excluded. 31,878 coding; 39,534 writing. LMSYS Chat LMSYS Chat-1M public release: 1,000,000 conversations. 777,453 English conversations; 236,372 English conversations with at least four turns. LLM-assisted semantic filters applied to the English pool with the minimum-turn screen: 32,114 coding; 21,023 writing. 32,114 coding; 21,023 writing. ShareChat ShareChat public release: 142,808 public conversations and 660,293 public turns. Local conversion used 1,199,899 message rows and 129,584 platform-url conversations. 69,915 conversations with at least four message turns. LLM-assisted semantic filters selected 3,494 coding and 1,663 writing conversations; the final strict-English screen retained 2,481 coding and 1,539 writing. 2,481 coding; 1,539 writing. 
+
+Note. Counts use corpus-specific source units. The minimum-turn screen uses message count, not user– assistant round count. For ShareChat, public turns and local message rows are different units. “Strict-English” refers only to the additional ShareChat final-language screen. 
+
+30 Supplementary Table A2 records the public source links, source counting units and retained metadata fields used during corpus conversion. 
+
+Table A2 Public source corpora and retained metadata. The table records the source releases, source-level counting units and corpus-specific metadata retained for corpus construction and robustness checks. Filtering counts are reported separately in Supplementary Table A1. 
+
+Corpus Public source link Source unit and local conversion note Corpus-specific metadata retained WildChat WildChat-4.8M public release: https:// huggingface.co/datasets/ allenai/WildChat-4.8M. Public human–LLM conversations were converted to ordered user and assistant messages before task filtering. Available language/topic fields and user-facing model metadata where available. LMSYS Chat LMSYS Chat-1M public release: https:// huggingface.co/datasets/ lmsys/lmsys-chat-1m. The public release contains one record per chat conversation; retained records were converted to ordered user and assistant messages after the English and minimum-turn screens. Language-filter status, available moderation/redaction fields and model names parsed from conversation identifiers. ShareChat ShareChat public release associated with Yan et al. 28 : https://huggingface. co/datasets/tucnguyen/ ShareChat. The public dataset card reports conversations and public turns. Local conversion used message rows and platform URL as the conversation key before deriving user and assistant turns. Platform URL conversation keys, source platform or assistant-family fields and final conversation-level language flag. 
+
+Note. This table records source access and retained metadata, not analysis results. All analytic tables also retain internal conversation and turn identifiers, message order, task-filter outputs, user-framing labels and turn-level annotation outputs. Raw conversation text remains governed by the original dataset releases. 
+
+Supplementary Table A3 maps each non-native filter or analytic label to its assignment procedure, validation evidence and role in the analyses. 31 Table A3  Filter and label validation map.  The table summarizes how each non-native filter or analytic label was assigned, what validation or audit evidence supports it and where it is used in the analyses. Filtering counts are reported in Supplementary Table A1; full agreement metrics are reported in Supplementary Tables B4 and B5. 
+
+> Variable or filter  How it was assigned  Validation or audit evidence  Role in analysis Task ecology: coding versus writing LLM-assisted semantic task filters selected conversations matching coding-oriented or writing-oriented use after minimum-turn screening. The filters were English-oriented and used a score threshold of 0.70 after keyword prefiltering where applicable. The filtering ledger records retained counts and selection steps for each corpus (Supplementary Table A1). In the writing-210 validation artifacts, the conversation-topic field showed high human–LLM agreement (F1=0.973, MCC=0.872, Gwet AC1=0.936; support=210), supporting the topic-label boundary used in the task filter. Defines the coding- and writing-oriented task settings and the task-ecology covariate used in pooled context models. User framing: intentional versus unintentional Conversation-level LLM-assisted
+> learning intent  annotation marked conversations explicitly oriented toward understanding, exploration or learning versus those without explicit learning-oriented framing. A human-verified audit reviewed 450 first user turns across all six corpus-by-task settings (75 per setting; 50 positive and 25 negative cases according to the corpus-scale labels). Overall intentional-framing agreement was F1=0.857, MCC=0.677 and Gwet AC1=0.671; complete metrics are reported in Supplementary Table B5. Used as the observed user-framing variable in Fig. 2 and the contextual models; prevalence estimates come from the full corpus-scale labels. Language filtering  WildChat and LMSYS Chat used English-oriented source or semantic filters. ShareChat received an additional strict-English screen after task filtering, retaining only records with final conversation-level language flag  English .ShareChat strict-English retained 2,481 of 3,494 coding conversations and 1,539 of 1,663 writing conversations after task filtering (Supplementary Table A1). In the writing-210 validation artifacts, language showed near-perfect agreement (F1=0.998, MCC=0.705, Gwet AC1=0.995; support=210), with MCC lower because nearly all reviewed records were English. Defines the English-oriented analytic sample; the additional strict-English screen applies only to ShareChat. Turn-level labels: user engagement and scaffolded support Corpus-scale annotation used the final codebook, parser checks and post-processing rules. Constructive engagement and scaffolded support are the primary user-side measure and assistant-side measure. Domain-stratified human–human codebook validation shows strong agreement for constructive engagement (coding F1=0.85; writing F1=0.89) and scaffolded support (coding F1=0.87; writing F1=0.97), with full per-label codebook metrics in Supplementary Table B4. A WildChat post-labelling check reviewed 100 labelled turns per task under the observed corpus-scale label distribution (Supplementary Table B6). Human-confirmed corpus-scale label audits across all six corpus-by-task settings showed acceptable or better reliability for user engagement and assistant labels: the 600-case user audit had constructive-vs-non-constructive F1=0.922, MCC=0.840 and Gwet AC1=0.837; the 180-case assistant audit had scaffolded-support F1=0.912, MCC=0.590 and Gwet AC1=0.791, with support-form F1 values ranging from 0.691 to 0.938 (Supplementary Table B5). Provides the turn-level measures used in prevalence, association, support-form and adjacent-turn analyses.
+
+32 A.2 Annotation ontology and operational examples 
+
+Codebook and examples. 
+
+The Methods summarize the role-specific constructs used in the analysis. This section provides the operational codebook, boundary rules and examples needed to reproduce the annotation decisions. Supplementary Table A4 gives the formal label definitions; Supplementary Table B1 gives paraphrased examples without reproducing raw user text; and Supplementary Tables B2 and B3 provide de-identified illustrative case excerpts. Support-intent and support-form profiles are visualized in Supplementary Figure C1. 33 Table A4 Annotation codebook definitions. The table defines the labels used to translate learning-science constructs into observable turn-level signals. Passive, active and constructive are user-engagement depth labels; emotional expression is a parallel descriptive label. These labels are behavioural annotations of conversation text; they are not measures of durable learning, learner identity or instructional efficacy. 
+
+Family Label Definition Boundary rule User engagement Passive ( P) Reception, acknowledgement or minimal continuation without substantial transformation. Includes short confirmations or requests to continue; excludes task-relevant follow-up or reasoning. User engagement Active ( A) Task-relevant action, follow-up, application or manipulation of supplied information or task material. The user takes a task-relevant next step, such as applying a suggestion, reformulating an artifact or requesting the next step, but does not test, revise or extend an idea. User engagement Constructive (C)Higher-depth cognitive work in which the user generates, revises or extends ideas, explanations or constraints. Requires explicit user reasoning or transformation; not inferred from long text alone. Emotional descriptor Emotional expression ( E)Explicit emotion in the user turn, such as frustration, gratitude, anxiety or excitement. Coded in parallel with user engagement; not part of the passive–active–constructive cognitive-depth hierarchy. Assistant support Scaffolding Assistant support that structures, diagnoses, regulates or redirects the user’s process while leaving cognitive or task responsibility with the user. Distinguished from reference responses that simply provide an answer, draft or deliverable. Support intent 
+
+I1 
+
+metacognitive Support aimed at planning, monitoring, reflection or regulation of the user’s work. Captures the purpose of support, not its surface form. Support intent 
+
+I2 cognitive Support aimed at concepts, mechanisms, task knowledge or problem-solving content. Most scaffolded support in this corpus is cognitive in purpose. Support intent 
+
+I3 affective Support aimed at encouragement, reassurance or affective regulation. Used only when affective support is substantively present, not for polite tone alone. Support form M1 feedback Evaluative information about the user’s prior attempt, diagnosis or understanding. Requires a target in the user’s preceding contribution. Support form M2 hinting A cue, prompt or partial path that helps the user proceed without fully resolving the task. Leaves the next inferential or task step with the user. Support form M3 instructing Explicit procedural guidance, ordered steps or strategy for doing the task. More directive than hinting; may still count as scaffolding when it structures process. Support form M4 explaining A rationale, mechanism or causal account that clarifies why something works or fails. Requires explanatory content, not merely a restatement of an answer. Support form M5 modelling A reusable pattern, worked example or demonstration intended to be adapted. Distinguished from simply giving the final requested product. Support form M6 questioning A question that advances diagnosis, reflection, planning or problem solving. Excludes generic clarification questions that do not support the user’s process. 
+
+Note. Supplementary Table A5 summarizes the prompt-template families used to apply these defini-tions, and Supplementary Table A6 reports the corresponding model, parser, retry and boundary-rule controls. 
+
+34 A.3 Corpus-scale annotation implementation 
+
+Implementation details for the annotation workflow are summarized in Supplementary Tables A5 and A6. 
+
+Table A5 Functional prompt-template summary for filtering and annotation. The table summarizes the scientific content of the prompt templates used for corpus construction and turn-level annotation. The archived release includes this prompt-family summary, output-field requirements and implementation controls for parser checks, retry logic and rule-based post-processing; API keys, endpoints and other credentials are excluded. 
+
+Prompt family Input unit Required output fields Core decision rule Semantic task filter Conversation excerpt and available metadata after keyword prefiltering and minimum-turn screening. Task label, English-oriented flag where applicable, confidence or score and short rationale. Retain conversations whose substantive user goal matched coding-oriented or writing-oriented task ecology, rather than an incidental mention of code or writing. Conversation-level user framing Opening user turn. learning intent :intentional or unintentional; rationale. Mark intentional framing only when the user explicitly oriented the exchange toward understanding, exploration, explanation, improvement or learning, not merely task completion. User-turn engagement User turn with preceding local context. One engagement label: none, passive, active or constructive; separate emotional-expression flag; rationale and boundary flags. Classify the user’s observable contribution as acknowledgement, task-relevant follow-up or substantive testing, revision, diagnosis, critique or extension, and separately mark explicit emotional expression. Assistant scaffolded support Assistant turn with preceding user context. Scaffolded-support flag, support-intent labels, support-form labels and rationale. Mark scaffolded support when the response helps the user diagnose, test, revise or choose a next step, rather than only delivering a finished answer. Language and strict-English checks Conversation text after task filtering. Conversation-level language flag and parse status. Retain ShareChat records only when the final conversation-level language flag was English; mixed or non-English records were excluded.  
+
+> Note. The table reports the constructs and output fields needed to interpret the labels; implementation controls are summarized in Supplementary Table A6.
+
+35 Table A6 Corpus-scale annotation implementation controls. The table records the operational controls used when applying the annotation workflow to the analytic corpora, including deployment families, structured-output constraints, parser checks, retry handling and boundary-rule processing. 
+
+Component Implementation detail Model deployments Turn-level user and assistant labels used Azure OpenAI chat-completions deployments from the GPT-5.1 family; final writing-oriented calls used GPT-5.1-chat; LLM-assisted semantic filters used GPT-4o-family deployments. Structured outputs JSON outputs were used where supported. Final writing calls used JSON-object or JSON-schema constraints, 60-second request timeouts and maximum completion budgets of 300 tokens for conversation-level labels and 350 tokens for turn-level labels. Final coding and writing annotation calls did not pass an explicit temperature parameter; English checks used temperature 0.0 and semantic topic checks used temperature 0.1. Parser checks Parser checks enforced required fields, normalized label variants, flagged malformed outputs and recovered missing fields only when the model explanation and structured output made the mapping unambiguous. Retry and failure handling Coding runs used up to five attempts with exponential backoff for rate limits and fixed-delay retry for other transient failures. Writing runs used up to six attempts, disabled SDK-level retries, used exponential backoff with jitter and fell back from JSON-schema response format to JSON-object format when needed. Content-filter blocks returned empty analyses and were logged rather than imputed. Boundary-rule processing User-turn rules demoted brief acknowledgements, generic acceptance or administrative follow-ups when no new constraint, test, revision, diagnosis or substantive extension was present, and removed Emotional labels for formulaic politeness. Assistant-turn rules cleared support-form labels when a turn was not scaffolded, removed scaffolded-support labels from complete answers labelled as scaffolding only because they were long or task-relevant and recovered missing support-form fields only when one mapping was unambiguous. 
+
+36 A.4 Human validation and corpus-scale label reliability 
+
+Validation design. 
+
+Human review served two measurement roles. First, human–human agreement assessed whether trained reviewers could apply the finalized codebook consistently. The coding codebook check combined three validation rounds covering 658 task turns, with 643 turns after deduplication; the writing check used 210 reviewed conversations. Supple-mentary Table B4 reports the per-label metrics for this codebook-operability layer. Second, human–LLM audits compared final LLM-assisted corpus-scale labels with human-confirmed labels after item-level review. These audits covered user framing, user engagement and assistant support across the six corpus-by-task settings and are reported in Supplementary Table B5. 
+
+Agreement metrics. 
+
+Agreement is reported with per-label F1, Matthews correlation coefficient (MCC) and Gwet’s AC1 because the labels are sparse, prevalence-imbalanced and sometimes multi-label 54,55 . For interpretation, we treated F1 values around 0.70 or higher as acceptable for a sparse boundary label, values around 0.80 or higher as strong, and values around 0.90 or higher as very strong. MCC and Gwet’s AC1 were used as complementary prevalence-aware checks, with values around 0.60 indicating substan-tial agreement and values around 0.80 or higher indicating strong agreement. In the human–human codebook checks, the focal labels used in the main analyses showed acceptable or better agreement: Constructive user engagement reached F1=0.85 in coding and F1=0.89 in writing, and scaffolded support reached F1=0.87 in coding and F1=0.97 in writing (Supplementary Table B4). Complete per-label F1, MCC, Gwet AC1 and support values are reported in Supplementary Table B4. 
+
+Corpus-scale label audits. 
+
+The consolidated human–LLM audits were stratified across the six corpus-by-task settings. The user-framing audit reviewed 450 first user turns, with 75 cases from each setting. Intentional-framing agreement reached F1=0.857, MCC=0.677 and Gwet AC1=0.671. The user-engagement audit reviewed 600 user turns, with 100 cases per setting; the constructive-versus-non-constructive distinction reached F1=0.922, MCC=0.840 and Gwet AC1=0.837. The assistant-side audit reviewed 180 assistant turns, with 30 cases per setting; scaffolded-support agreement reached F1=0.912, MCC=0.590 and Gwet AC1=0.791, and support-form F1 values ranged from 0.691 to 0.938 across M1–M6. Supplementary Table B5 reports the corresponding precision, recall, accuracy and positive-count fields. 
+
+Post-labelling WildChat review sample. 
+
+After the WildChat corpus-scale labelling pass, an additional label-composition check reviewed 100 labelled turns from WildChat coding and 100 labelled turns from Wild-Chat writing, split into 50 user turns and 50 assistant turns per task. Supplementary Table B6 reports the observed corpus-scale label composition of these samples. 37 A.5 Statistical estimands and model specifications 
+
+Notation. 
+
+This subsection gives the statistical notation and model specifications used for the main contrast and regression analyses. Let i index conversations, s task settings, 
+
+j adjacent assistant–user turn pairs and g user-framing strata. Ci is the count of Constructive user turns, Yi indicates whether conversation i contains at least one Constructive user turn, Si indicates at least one scaffolded assistant turn in the con-versation and Xi denotes the setting-specific conversation-level covariates listed in Supplementary Table B7. GLM specifications follow standard Poisson and logistic forms 56,57 .
+
+Conversation-level models. 
+
+The adjusted count model in Section 2.3 is fitted separately within each setting: 
+
+Ci | Si, X i ∼ Poisson( μi),
+
+log( μi) = αs + βsSi + γ⊤ 
+
+> s
+
+Xi.
+
+The reported Poisson count ratio is exp( βs). The companion binary model is logit {Pr( Yi = 1 | Si, X i)} = αs + βsSi + γ⊤ 
+
+> s
+
+Xi,
+
+with exp( βs) reported as the odds ratio. The user-framing stratified count model uses log( μi) = αs,g + βs,g Si + γ⊤ 
+
+> s,g
+
+X(−g) 
+
+> i
+
+,
+
+where X(−g) 
+
+> i
+
+omits user framing because the model is fitted within stratum g.These models support the Section 2.3 adjusted scaffolded-support results in Fig. 3b,c and Supplementary Table B9; setting-specific covariates are listed in Supplementary Table B7. 
+
+Rate and context checks. 
+
+The Section 2.2 constructive-rate sensitivity is a grouped-binomial logistic model: 
+
+Ci ∼ Binomial( Ti, π i),
+
+logit( πi) = α + δ1Fi + δ2Qi + δ3Li + δ4Di,
+
+where Ti is the number of user turns, Fi user framing, Qi task ecology, Li conversation-length bucket and Di dataset fixed effects. The Section 2.3 offset-rate sensitivity uses the same Poisson mean model as above with log( μi) = log( Ti) + αs + βsSi + γ⊤ 
+
+> s
+
+Xi.
+
+Supplementary Tables B10 and B13 report the estimates. The grouped-binomial model is the Section 2.2 sensitivity for the conversation-length pattern in Fig. 2c, whereas 38 the offset-rate Poisson model is the Section 2.3 sensitivity for the scaffolded-support count models in Fig. 3b. Supplementary Table B11 reports a metadata breakdown for the Section 2.1 descriptive prevalence measures. Supplementary Tables B14 and B15 report parallel metadata sensitivity checks in which dataset fixed effects are replaced by available assistant-model or service-source indicators. Supplementary Table B16 reports the corresponding Section 2.4 support-form sensitivity, restricted to scaffolded conversations and entering the six non-exclusive support-form labels jointly. 
+
+Adjacent-turn models. 
+
+Let Zij indicate whether the next user turn after assistant turn j is Constructive, 
+
+Uij encode the immediately preceding user state, Aij encode scaffolded support at assistant turn j, Mij encode support-form labels M1–M6 and Rij denote task, framing, turn-position and fixed-effect controls. The integrated adjacent-turn model is logit {Pr( Zij = 1) } = α + θ⊤Uij + βA ij + ϕ⊤Mij + η⊤(Uij × Mij ) + ρ⊤Rij .
+
+The broad scaffolded-support model omits Mij and Uij × Mij ; metadata sensitivity checks replace dataset fixed effects in Rij with available assistant-model or service-source indicators. These models support the Section 2.5 adjacent-turn interpretation in Fig. 5d and Supplementary Tables B17–B19; descriptive adjacent-turn lifts in Fig. 5a,b are summarized with bootstrap uncertainty in Supplementary Table B8. 
+
+Uncertainty and multiplicity. 
+
+Percentage-point contrasts use 1,000 conversation-level bootstrap resamples. Adjacent-turn contrasts use 1,000 conversation-cluster bootstrap resamples. Primary adjusted conversation-level GLMs use model-based standard errors, with HC1 or quasi-Poisson sensitivities reported where noted; adjacent-turn regressions use conversation-cluster robust standard errors. Support-form bracket tests use Benjamini–Hochberg false-discovery-rate adjustment within each six-form comparison family 58 .
+
+Metadata robustness checks. 
+
+Assistant-model metadata in WildChat and LMSYS Chat, and service-source meta-data in ShareChat, provided an additional robustness layer for checking whether the reported patterns were stable across observable model and platform variation. These metadata enter the analyses in three ways. For Section 2.1, Supplementary Table B11 reports descriptive ranges of engagement and scaffolding prevalence across metadata levels within each setting. For Sections 2.2–2.4, pooled sensitivity models refit the dataset-fixed-effect specifications after replacing dataset fixed effects with assistant-model or service-source fixed effects (Supplementary Tables B14–B16). For Section 2.5, metadata-adjusted adjacent-turn regressions are reported in pooled form, with nested block tests and prior-state by support-form interactions used to evaluate the local sequence pattern (Supplementary Tables B17–B19). The tables should be read accord-ing to their estimand. Descriptive ranges show how prevalence measures vary across available assistant-model or service-source levels. In odds-ratio, count-ratio and rate-ratio tables, values above 1 indicate higher constructive engagement associated with 39 the focal predictor, values below 1 indicate lower constructive engagement and confi-dence intervals excluding 1 indicate that the coefficient is statistically distinguishable from the null under that specification. The key robustness signal is preservation of direction and comparable magnitude when dataset fixed effects are replaced by meta-data fixed effects. Pooled tables summarize corpus-wide stability; adjacent-turn block tests and interaction models show whether the local sequence pattern remains after user state, support condition, support form and metadata variation are considered together. 
+
+# Appendix B Source tables and model outputs 
+
+Table B1 Operational examples for turn-level labels. Examples are de-identified and paraphrased from validation review patterns; they illustrate the decision rule rather than reproducing raw conversation text. 
+
+Construct Paraphrased turn Annotation rationale 
+
+None no visible cognitive engagement “New topic: write a short birthday message for my colleague.” The user starts an unrelated request rather than taking up, applying or reflecting on the current task material. 
+
+P passive user engagement “Thanks, that makes sense.” Minimal uptake or acknowledgement with-out new reasoning, evaluation or task trans-formation. 
+
+A active user engagement “Can you convert that answer into a command I can run in my setup?” Task-relevant follow-up or manipulation of supplied information or task material, but without elaborating or testing an idea. 
+
+C constructive user engagement “If the cache expires before the asynchronous callback returns, would the same race condition still happen?” The user tests an implication, boundary con-dition or transfer of the prior explanation. Scaffolding “First isolate the failing step; that will show whether the issue is parsing or state management.” The assistant structures the user’s process and leaves diagnostic or revision work with the user. 
+
+M1 feedback “Your diagnosis is close; the bug is in the index offset, not the loop boundary.” Evaluative feedback on the user’s prior attempt or understanding. 
+
+M2 hinting “Before changing the model, look at whether the malformed token first appears before or after parsing.” A targeted cue points the user toward the next diagnostic distinction, but does not give the full procedure or fix. 
+
+M3 instructing “Run the failing case, print the parser output, add a guard for empty fields, then rerun the test.” Explicit ordered steps tell the user what actions to take and in what sequence. 
+
+M4 explaining “The exception occurs because the event loop is already running, so a nested call cannot acquire it.” A rationale or mechanism that clarifies why the issue occurs. 
+
+M5 modelling “For this report section, use the pattern: claim, evidence, implication; for example, this delay matters because X, which means Y for the team.” A concrete template or worked example demonstrates a reusable form the user can adapt. 
+
+M6 questioning “Which constraint matters more here: preserving tone or shortening the paragraph?” A question that advances problem solving or reflection. 
+
+40 Table B2 : De-identified coding case excerpt with turn-level labels. Aretained WildChat coding conversation excerpt formatted for readability. Badges encode role, user engagement and assistant support labels. 
+
+Coding case wxWidgets menu debugging 
+
+Feedback and instructions diagnose a likely cause; a follow-up troubleshooting response uses checks and a request for context to continue debugging. 
+
+Setting WildChat coding User framing Unintentional Excerpt length 4-turn excerpt Legend ↑ C constructive → A active ∗ Scaffolded · Reference Assistant codes I1/I2 support intent; M1–M6 support forms (non-exclusive). 
+
+Turn De-identified excerpt Label and annotation cue 
+
+▷ U1 
+
+User 
+
+“I have this C++ wxWidgets code to popup a menu but can’t make it to work, I got an error that can’t popup a NULL 
+
+menu. How can I do this correctly? ... hamburgerMenu = new wxMenu(); ... PopupMenu(hamburgerMenu, pos); ”
+
+→ A active 
+
+The user asks for help debugging a specific popup-menu error. 
+
+⋄ A1 
+
+Assistant 
+
+“Based on the code you provided, it seems that the variable 
+
+bpButtonHamburger is not assigned to an actual 
+
+wxBitmapButton object. Therefore, when the OnHamburgerClick 
+
+function is called, bpButtonHamburger is NULL , which leads to the error you’re experiencing.” 
+
+∗ Scaffolded I2 M1 M3 M4 
+
+The reply gives feedback 
+
+on the likely fault, 
+
+instructs what to change and explains why the handler matters. 
+
+A1 cont. “To fix this issue, make sure you initialize bpButtonHamburger 
+
+with a valid wxBitmapButton instance ... note that the event type in OnHamburgerClick has changed from 
+
+wxContextMenuEvent to wxCommandEvent , as it is more appropriate for handling button click events.” 
+
+Same scaffolded response; instruction and explanation continued. 
+
+▷ U2 
+
+User 
+
+“No I forgot to add that part but the button was already correctly initialized” 
+
+→ A active 
+
+The user provides task-relevant clarification that redirects the debugging path. 
+
+⋄ A2 
+
+Assistant 
+
+“If the bpButtonHamburger button is already correctly initialized and you’re still getting the error that the menu is 
+
+NULL , there may be some other issue causing the problem. Here are some things you can check: make sure the 
+
+hamburgerMenu object is not being destroyed; verify that 
+
+OnHamburgerClick is being called; double-check the button ID and event handler; check for conflicting handlers.” 
+
+∗ Scaffolded I1 M2 M6 
+
+The reply gives diagnostic cues and uses 
+
+questioning/request for context to continue troubleshooting. 
+
+A2 cont. “If none of these suggestions help, please provide more context or the complete code so we can further investigate the issue and provide a solution.” 
+
+Same scaffolded response; questioning/request for context continued. 
+
+41 Table B3 : De-identified writing case excerpt with turn-level labels. Aretained WildChat writing conversation excerpt formatted for readability. Badges encode role, user engagement and assistant support labels. 
+
+Writing case Thesis revision rationale 
+
+The exchange asks why a report sentence is weak, applies the explanation to a revised claim and receives feedback on the revised reasoning. 
+
+Setting WildChat writing User framing Intentional Excerpt length 4-turn excerpt Legend ↑ C constructive → A active ∗ Scaffolded · Reference Assistant codes I1/I2 support intent; M1–M6 support forms (non-exclusive). 
+
+Turn De-identified excerpt Label and annotation cue 
+
+▷ U1 
+
+User 
+
+“I’m revising a short report introduction and want to understand why this sentence sounds vague: ‘This project is good for users because it improves the system.’ What makes it weak, and how should I think about making the claim more specific?” 
+
+↑ C constructive 
+
+The user identifies a writing problem, asks for the rationale behind the weakness and requests a revision principle rather than only a corrected sentence. 
+
+⋄ A1 
+
+Assistant 
+
+“The sentence is grammatical, but it is vague because ‘good for users’ and ‘improves the system’ do not say who benefits, what changes or why the change matters. A stronger version should name the user group, the concrete action and the outcome. For example, ask yourself: what task becomes easier, faster or less error-prone?” 
+
+∗ Scaffolded I2 M1 M2 M4 
+
+The reply gives feedback on the draft, explains the weakness and offers a guiding diagnostic question. 
+
+▷ U2 
+
+User 
+
+“So the problem is not grammar but that the sentence hides the causal link. Would this be stronger: ‘The project reduces repeated data entry for clinic staff by combining two forms into one workflow’ ?” 
+
+↑ C constructive 
+
+The user restates the principle, diagnoses the original weakness and tests a revised claim against the explanation. 
+
+⋄ A2 
+
+Assistant 
+
+“Yes, that is stronger. It names the audience, the mechanism and the benefit, so the reader can see why the project matters. If this is for a formal report, you could make it more concise: ‘By combining two forms into one workflow, the project reduces repeated data entry for clinic staff.’ ” 
+
+∗ Scaffolded I1 I2 M1 M4 
+
+The reply gives feedback on the user’s revision and explains why the revised sentence better supports the report claim. 
+
+A2 cont. “You can then follow it with evidence, such as time saved or fewer duplicate entries, if the report requires support for the claim.” 
+
+Same assistant response; feedback and explanation continued. 
+
+42 Table B4 Domain-stratified human–human codebook agreement for labels used in the main analyses. Coding uses 643 deduplicated task turns from the final three-round validation rerun; writing uses the final writing-210 validation labels. F1, Matthews correlation coefficient (MCC) and Gwet’s AC1 are reported per binary label. Rare degenerate labels with no positive cases in a validation set are omitted. Corpus-scale human–LLM label checks are reported in Supplementary Table B5. 
+
+Domain Role Label F1 MCC Gwet AC1 Support Coding User Active ( A) 0.75 0.72 0.87 315 Coding User Constructive ( C) 0.85 0.82 0.90 315 Coding User Passive ( P) 0.88 0.87 0.96 315 Coding User Emotional expression ( E) 0.83 0.82 0.97 315 Coding Assistant Scaffolding 0.87 0.69 0.70 328 Coding Assistant Feedback ( M1 ) 0.90 0.89 0.95 328 Coding Assistant Hinting ( M2 ) 0.79 0.75 0.89 328 Coding Assistant Instructing ( M3 ) 0.81 0.77 0.92 328 Coding Assistant Explaining ( M4 ) 0.86 0.79 0.84 328 Coding Assistant Modelling ( M5 ) 0.84 0.79 0.87 328 Coding Assistant Questioning ( M6 ) 0.82 0.81 0.95 328 Writing User Active ( A) 0.73 0.68 0.81 90 Writing User Constructive ( C) 0.89 0.83 0.86 90 Writing User Passive ( P) 0.80 0.81 0.99 90 Writing User Emotional expression ( E) 0.80 0.79 0.98 90 Writing Assistant Scaffolding 0.97 0.80 0.93 120 Writing Assistant Feedback ( M1 ) 0.89 0.80 0.80 120 Writing Assistant Hinting ( M2 ) 0.82 0.70 0.71 120 Writing Assistant Instructing ( M3 ) 0.71 0.67 0.86 120 Writing Assistant Explaining ( M4 ) 0.84 0.70 0.70 120 Writing Assistant Modelling ( M5 ) 0.94 0.91 0.95 120 Writing Assistant Questioning ( M6 ) 0.96 0.96 0.99 120 
+
+43 Table B5 Consolidated human–LLM corpus-scale label agreement. The audits compare final LLM-assisted corpus-scale labels with human-confirmed labels using one-vs-rest binary coding for each label. User-framing, user-engagement and assistant-support audits were stratified across the six corpus-by-task settings, with 450 first user turns, 600 user turns and 180 assistant turns reviewed, respectively. Final human labels were confirmed after item-level review. The table reports audit size, LLM-positive counts, human-positive counts, precision, recall, F1, MCC, Gwet AC1 and accuracy. 
+
+Role Label Audit N LLM label + Human + Precision Recall F1 MCC Gwet AC1 Accuracy 
+
+Conversation-level framing 
+
+Conversation Intentional framing 450 300 239 0.770 0.967 0.857 0.677 0.671 0.829 
+
+User engagement 
+
+User Constructive ( C) 600 300 327 0.963 0.884 0.922 0.840 0.837 0.918 User Active ( A) 600 120 111 0.850 0.919 0.883 0.856 0.935 0.955 User Passive ( P) 600 90 80 0.889 1.000 0.941 0.934 0.978 0.983 User None 600 90 82 0.889 0.976 0.930 0.920 0.974 0.980 
+
+Assistant scaffolding and support forms 
+
+Assistant Scaffolding 180 144 139 0.896 0.928 0.912 0.590 0.791 0.861 Assistant Feedback ( M1 ) 180 45 51 1.000 0.882 0.938 0.918 0.945 0.967 Assistant Hinting ( M2 ) 180 43 45 0.930 0.889 0.909 0.880 0.930 0.956 Assistant Instructing ( M3 ) 180 51 55 0.745 0.691 0.717 0.600 0.715 0.833 Assistant Explaining ( M4 ) 180 87 110 1.000 0.791 0.883 0.772 0.747 0.872 Assistant Modelling ( M5 ) 180 48 79 0.958 0.582 0.724 0.631 0.642 0.806 Assistant Questioning ( M6 ) 180 35 20 0.543 0.950 0.691 0.675 0.873 0.906 
+
+44 Table B6 WildChat post-labelling review sample composition. The table reports the label composition of post-labelling review samples drawn from the completed labelled WildChat coding and writing pools under the observed corpus-scale label distribution. 
+
+Label composition in post-labelling review samples.                                          
+
+> Task Role Total turns Active Passive Constructive No engagement Reference Scaffolded WildChat coding User 50 24 16 64––WildChat writing User 50 25 2221 ––WildChat coding Assistant 50 ––––32 17 WildChat writing Assistant 50 ––––46 4
+> Note. One WildChat coding assistant turn had no support label in the post-labelling review file, so the reference and scaffolded counts sum to 49 for that row.
+
+Table B7 Covariates used in the Section 2.3 adjusted support-association models. 
+
+Models were fitted separately within each of the six task settings. In all rows, the focal predictor is whether the conversation contains at least one scaffolded assistant turn. 
+
+Model Outcome Adjustment variables Reported estimand or check Primary Poisson count model Constructive user-turn count per conversation. User framing; total turns; emotional-expression ratio; observable error marker; persistence-after-failure marker; high-persistence marker. Poisson count ratio in Fig. 3b; conversation length enters as total turns, not as an offset. Companion logistic model Whether the conversation contains at least one constructive user turn. User framing; total turns. Logistic odds ratio in Fig. 3b. User-framing-stratified Poisson model Constructive user-turn count within intentional or unintentional conversations. Total turns; emotional-expression ratio; observable error marker; persistence-after-failure marker; high-persistence marker. Same count model after stratifying by framing; user framing is omitted because it is fixed within stratum. Offset-rate sensitivity Constructive user-turn count per conversation with log(user turns) as an exposure offset. Same observed context as the primary Poisson model, with user turns represented as an offset rather than as an ordinary length covariate. Checks whether the scaffolded-support association persists when modelling a constructive-turn rate.  
+
+> Note. Task ecology is fixed within each setting because the models are fitted separately for WC coding, LMSYS coding, SC coding, WC writing, LMSYS writing and SC writing. Task ecology is used only in pooled context models such as Supplementary Table B13. Error and persistence markers are most interpretable in coding-oriented contexts but are retained as observed conversation-level context when present.
+
+45 Table B8 Uncertainty estimates for key support–engagement contrasts. Scaffolded conversations had higher constructive ratios and greater post-answer depth in all six settings; adjacent-turn constructive lifts were positive in all six settings, with LMSYS writing weaker and not conventionally distinguishable from zero. Constructive-ratio and depth contrasts use conversation-level bootstrap resampling; adjacent-turn contrasts bootstrap conversations over assistant-to-user pairs. 
+
+Setting Contrast Effect 95% CI p value WC coding Scaffolded − reference constructive ratio +4.56 pp [+4.15, +4.99] < . 001 WC coding Scaffolded − reference post-answer depth +2.23 turns [+2.11, +2.35] < . 001 LMSYS coding Scaffolded − reference constructive ratio +2.50 pp [+2.19, +2.83] < . 001 LMSYS coding Scaffolded − reference post-answer depth +1.42 turns [+1.34, +1.52] < . 001 SC coding Scaffolded − reference constructive ratio +7.34 pp [+5.29, +9.27] < . 001 SC coding Scaffolded − reference post-answer depth +3.36 turns [+2.69, +4.01] < . 001 WC writing Scaffolded − reference constructive ratio +0.99 pp [+0.82, +1.16] < . 001 WC writing Scaffolded − reference post-answer depth +3.13 turns [+2.96, +3.30] < . 001 LMSYS writing Scaffolded − reference constructive ratio +1.09 pp [+0.87, +1.31] < . 001 LMSYS writing Scaffolded − reference post-answer depth +2.10 turns [+1.91, +2.28] < . 001 SC writing Scaffolded − reference constructive ratio +3.20 pp [+1.55, +4.89] < . 001 SC writing Scaffolded − reference post-answer depth +3.38 turns [+1.92, +4.64] < . 001 WC coding Adjacent scaffolded − reference lift +2.68 pp [+2.22, +3.09] < . 001 LMSYS coding Adjacent scaffolded − reference lift +2.01 pp [+1.54, +2.50] < . 001 SC coding Adjacent scaffolded − reference lift +6.21 pp [+4.35, +8.10] < . 001 WC writing Adjacent scaffolded − reference lift +1.13 pp [+0.88, +1.41] < . 001 LMSYS writing Adjacent scaffolded − reference lift +0.27 pp [-0.01, +0.56] .061 SC writing Adjacent scaffolded − reference lift +3.35 pp [+0.80, +6.62] .025 
+
+46 Table B9 Summary of key support–engagement associations across the three corpora. 
+
+Constructive-ratio contrasts compare conversations with versus without scaffolded support using turn-weighted constructive user-turn ratios. Adjusted models report the association of scaffolded-support presence with constructive-turn count (Poisson count ratio) and with having at least one constructive turn (logit odds ratio). Adjacent-turn lift is the difference in the probability that the next user turn is constructive after scaffolded versus non-scaffolded reference assistant turns.                                      
+
+> Setting Constructive ratio Has Scaf. / No Scaf. Difference (pp) Depth diff. (turns) Poisson count ratio Logit OR Adjacent lift (pp) WildChat coding 0.101 / 0.056 +4.6 +2.23 1.852 1.761 +2.68 LMSYS coding 0.065 / 0.040 +2.5 +1.42 1.622 1.544 +2.01 ShareChat coding 0.163 / 0.090 +7.3 +3.36 1.893 2.140 +6.21 WildChat writing 0.027 / 0.017 +1.0 +3.13 1.569 1.437 +1.13 LMSYS writing 0.022 / 0.011 +1.1 +2.10 1.985 1.764 +0.27 ShareChat writing 0.066 / 0.034 +3.2 +3.38 2.491 1.757 +3.35
+
+47 Table B10 Offset-rate sensitivity for scaffolded-support Poisson models. The scaffolded-support rate ratio is statistically distinguishable from 1 in all six settings when user turns are represented as an exposure offset. The primary Fig. 3b model uses raw constructive-turn counts with conversation length entered as a covariate; this sensitivity refits the same setting-specific mean model with offset(log(user turns)) . P values test the two-sided null rate ratio of 1. 
+
+Setting Offset rate ratio [95% CI], p value Pearson dispersion Conversations WC coding 1.57 [1.47, 1.68], < . 001 1.29 31,878 LMSYS coding 1.47 [1.38, 1.56], < . 001 1.13 32,114 SC coding 1.58 [1.31, 1.91], < . 001 1.29 2,481 WC writing 1.36 [1.26, 1.46], < . 001 1.15 39,534 LMSYS writing 1.70 [1.50, 1.94], < . 001 1.12 21,023 SC writing 1.65 [1.27, 2.15], < . 001 1.32 1,539 
+
+Table B11 Metadata breakdown for Section 2.1 descriptive engagement measures. 
+
+Ranges summarize available assistant-model or service-source levels with at least 100 conversations within each task setting. The full metadata rows, including passive, active, constructive, overall cognitive engagement, emotional expression and scaffolded-support percentages, are exported in the source CSV.                             
+
+> Setting Metadata levels Cognitive overall, % Constructive, % Scaffolded support, % LMSYS coding 23 31.55–49.70 (median 42.89) 1.90–8.56 (median 5.34) 4.80–43.87 (median 23.82) LMSYS writing 22 10.99–21.11 (median 14.19) 0.54–2.77 (median 1.48) 6.81–37.91 (median 18.68) SC coding 244.70–50.80 (median 47.75) 6.57–15.43 (median 11.00) 49.27–51.31 (median 50.29) SC writing 225.69–33.86 (median 29.77) 1.19–5.41 (median 3.30) 21.96–28.46 (median 25.21) WC coding 14 40.33–52.73 (median 51.07) 6.66–13.70 (median 9.67) 24.42–75.15 (median 64.94) WC writing 14 12.18–21.38 (median 17.69) 0.90–3.30 (median 2.35) 12.17–35.39 (median 25.85)
+
+Table B12 Explicit emotional-expression descriptor by task setting. Emotional expression was coded in parallel with user-engagement depth and is reported descriptively; it is not part of the passive–active–constructive cognitive-depth hierarchy. 
+
+Setting User turns Emotional expression (%) WildChat coding 124,073 0.95 WildChat writing 163,705 0.57 LMSYS coding 107,065 0.91 LMSYS writing 77,906 0.21 ShareChat coding 11,541 3.38 ShareChat writing 7,395 0.34 Total / pooled 491,685 0.74 
+
+48 Table B13 Context models for constructive engagement. Both the any-constructive model and the constructive-rate sensitivity show the same organization: intentional framing, coding-oriented task ecology and longer exchanges are positively associated with constructive engagement. The rate model attenuates the length coefficients, indicating that part, but not all, of the depth gradient reflects greater opportunity to observe a constructive turn. Cells report odds ratios with 95% confidence intervals and two-sided p values from conversation-robust standard errors. The reference category is unintentional framing, writing-oriented task, 2–3 user turns and WildChat. 
+
+Predictor Any constructive turn OR [95% CI], p value Constructive-turn rate OR [95% CI], p value Intentional framing 3.03 [2.93, 3.13], < . 001 2.78 [2.68, 2.88], < . 001 Coding task ecology 1.89 [1.71, 2.08], < . 001 1.66 [1.47, 1.88], < . 001 4–6 user turns 2.07 [1.99, 2.15], < . 001 1.13 [1.09, 1.18], < . 001 7+ user turns 3.58 [3.42, 3.74], < . 001 1.06 [1.01, 1.11], .010 LMSYS Chat 0.70 [0.68, 0.73], < . 001 0.72 [0.69, 0.75], < . 001 ShareChat 2.29 [2.12, 2.46], < . 001 2.30 [2.13, 2.50], < . 001 Conversations 128,569 128,569 User turns – 491,685 Constructive user turns – 24,227 
+
+49 Table B14 Metadata sensitivity for Section 2.2 context models. The dataset fixed-effect models match the context models reported for Section 2.2. The metadata sensitivity replaces dataset fixed effects with available assistant-model or service-source indicators. Metadata levels with at least 100 conversations are represented as fixed-effect indicators; rarer levels are absorbed into the reference category. Cells report odds ratios with 95% confidence intervals and two-sided p values from conversation-robust standard errors. 
+
+Outcome Predictor Dataset FE Metadata FE Any constructive turn Intentional framing 3.03 [2.93, 3.13], < . 001 3.05 [2.95, 3.16], < . 001 Coding task ecology 1.89 [1.71, 2.08], < . 001 1.89 [1.71, 2.08], < . 001 4–6 user turns 2.07 [1.99, 2.15], < . 001 2.08 [2.00, 2.16], < . 001 7+ user turns 3.58 [3.42, 3.74], < . 001 3.58 [3.42, 3.75], < . 001 Constructive-turn rate Intentional framing 2.78 [2.68, 2.88], < . 001 2.80 [2.70, 2.91], < . 001 Coding task ecology 1.66 [1.47, 1.88], < . 001 1.67 [1.48, 1.88], < . 001 4–6 user turns 1.13 [1.09, 1.18], < . 001 1.14 [1.09, 1.18], < . 001 7+ user turns 1.06 [1.01, 1.11], .010 1.07 [1.02, 1.12], .008 Conversations 128,569 128,569 Metadata fixed effects – 40 
+
+Table B15 Metadata sensitivity for Section 2.3 scaffolded-support models. Pooled sensitivity models compare dataset fixed effects with available assistant-model or service-source fixed effects. Metadata levels with at least 100 conversations are represented as fixed-effect indicators; rarer levels are absorbed into the reference category. Rows report the scaffolded-support coefficient from models predicting constructive-turn counts, any constructive turn and constructive-turn rate. These checks supplement the main setting-level estimates in Fig. 3b and Supplementary Table B9. 
+
+Model Dataset FE Metadata FE Poisson count ratio 2.38 [2.27, 2.48], < . 001 2.35 [2.25, 2.45], < . 001 Logit odds ratio 2.04 [1.96, 2.12], < . 001 2.00 [1.92, 2.08], < . 001 Offset rate ratio 1.94 [1.87, 2.01], < . 001 1.91 [1.85, 1.98], < . 001 Conversations 128,569 128,569 Metadata fixed effects – 40 
+
+50 Table B16 Metadata sensitivity for Section 2.4 support-form models. The sensitivity is restricted to conversations containing scaffolded support and enters the six non-exclusive support-form indicators jointly. Cells report odds ratios for constructive-turn rate with 95% confidence intervals and two-sided p values from conversation-robust standard errors. This metadata check complements, but does not replace, the descriptive percentage-point support-form contrasts in Fig. 4. 
+
+Support form Dataset FE Metadata FE M1 feedback 2.00 [1.90, 2.10], < . 001 2.02 [1.92, 2.13], < . 001 M2 hinting 1.37 [1.30, 1.44], < . 001 1.36 [1.29, 1.43], < . 001 M3 instructing 0.92 [0.88, 0.97], < . 001 0.92 [0.88, 0.97], < . 001 M4 explaining 2.81 [2.64, 2.99], < . 001 2.77 [2.60, 2.94], < . 001 M5 modelling 0.77 [0.74, 0.81], < . 001 0.78 [0.74, 0.82], < . 001 M6 questioning 0.69 [0.64, 0.73], < . 001 0.70 [0.65, 0.75], < . 001 Scaffolded conversations 66,816 66,816 Metadata fixed effects – 39 
+
+51 Table B17 Integrated adjacent-turn regression combining user state, assistant scaffolding and model controls. Prior user state is the largest predictor of next-turn constructive engagement, broad scaffolded support remains positive after controls and M4 explaining is the most stable positive support-form coefficient. The scaffolded-support row is estimated in a broad scaffolded-support model; support-form rows are estimated in a decomposed support-form model with broad scaffolded-support presence and co-occurring M1–M6 support forms; all six support-form labels are shown to avoid restricting the table to selected focal forms. Estimates are odds ratios with 95% confidence intervals and two-sided p values from conversation-cluster robust standard errors. The metadata-block LR row compares the pooled dataset-fixed-effect and metadata-fixed-effect adjacent-turn specifications: the metadata design contains 43 non-reference assistant-model or service-source indicators in place of two dataset indicators, giving 41 net degrees of freedom; intercepts and reference levels are not counted. 
+
+Predictor Pooled dataset FE Pooled metadata FE WildChat model FE Scaffolded support 1.50 [1.44, 1.55], < . 001 1.47 [1.41, 1.52], < . 001 1.56 [1.49, 1.63], < . 001 Prior user constructive 8.90 [8.45, 9.38], < . 001 8.55 [8.11, 9.01], < . 001 9.11 [8.53, 9.74], < . 001 Prior user active 2.62 [2.52, 2.72], < . 001 2.57 [2.47, 2.67], < . 001 2.85 [2.71, 3.00], < . 001 Prior user passive 2.08 [1.76, 2.44], < . 001 2.07 [1.76, 2.44], < . 001 2.32 [1.85, 2.90], < . 001 Intentional framing 1.40 [1.35, 1.46], < . 001 1.42 [1.37, 1.48], < . 001 1.40 [1.33, 1.47], < . 001 Coding task 1.37 [1.22, 1.54], < . 001 1.37 [1.22, 1.54], < . 001 1.21 [1.05, 1.40], .009 M1 feedback 0.79 [0.73, 0.86], < . 001 0.80 [0.74, 0.86], < . 001 0.74 [0.67, 0.82], < . 001 M2 hinting 1.02 [0.95, 1.10], .546 1.03 [0.96, 1.11], .448 1.07 [0.98, 1.16], .122 M3 instructing 0.91 [0.86, 0.97], .005 0.93 [0.87, 0.99], .020 0.94 [0.87, 1.01], .099 M4 explaining 2.15 [1.99, 2.32], < . 001 2.12 [1.96, 2.30], < . 001 2.11 [1.92, 2.31], < . 001 M5 modelling 0.78 [0.73, 0.83], < . 001 0.78 [0.73, 0.84], < . 001 0.80 [0.73, 0.86], < . 001 M6 questioning 0.82 [0.72, 0.93], .002 0.84 [0.74, 0.96], .008 1.08 [0.93, 1.25], .340 Metadata block Reference LR χ241 = 714 .4, p < . 001 LR χ213 = 553 .2, p < . 001 
+
+52 Table B18 Incremental contribution of scaffolding features in integrated adjacent-turn models. Broad scaffolded support, support-form descriptors and the full scaffolding block each improve model fit after user/context controls, including when dataset fixed effects are replaced by available assistant-model or service-source fixed effects. Likelihood-ratio block tests compare nested logistic regressions for whether the next user turn is constructive.                                 
+
+> Scope Added feature block LR χ2(df) p value six task settings, dataset FE Broad scaffolded support after user/context controls 584.6 (1) < . 001 six task settings, dataset FE M1–M6 descriptors within scaffolded support 896.7 (6) < . 001 six task settings, dataset FE Full scaffolding block after user/context controls 1481.3 (7) < . 001 six task settings, metadata FE Broad scaffolded support after user/context controls 509.7 (1) < . 001 six task settings, metadata FE M1–M6 descriptors within scaffolded support 829.8 (6) < . 001 six task settings, metadata FE Full scaffolding block after user/context controls 1339.6 (7) < . 001 WildChat only, model FE Broad scaffolded support after user/context controls 418.6 (1) < . 001 WildChat only, model FE M1–M6 descriptors within scaffolded support 519.4 (6) < . 001 WildChat only, model FE Full scaffolding block after user/context controls 937.9 (7) < . 001
+
+Table B19 Prior user state and support form jointly structure adjacent-turn constructive engagement. Prior-state × support-form interactions improve model fit, and M4 explaining is positive after constructive, active and passive prior user states; M1 feedback is more state-dependent. The first panel reports likelihood-ratio tests; the second panel reports pooled metadata-adjusted odds ratios with 95% confidence intervals and two-sided p values. 
+
+Panel Scope / prior state Term or test Estimate Interaction block six task settings, dataset FE Prior state ×
+
+M1–M6 LR χ218 = 305 .4, < . 001 Interaction block six task settings, metadata FE Prior state ×
+
+M1–M6 LR χ218 = 297 .3, < . 001 Interaction block WildChat only, model FE Prior state ×
+
+M1–M6 LR χ218 = 186 .0, < . 001 State-stratified metadata FE prior constructive M1 feedback 0.72 [0.64, 0.81], < . 001 prior constructive M2 hinting 0.91 [0.79, 1.04], .155 prior constructive M3 instructing 0.92 [0.81, 1.05], .236 prior constructive M4 explaining 1.72 [1.45, 2.04], < . 001 prior constructive M5 modelling 0.81 [0.70, 0.93], .003 prior constructive M6 questioning 0.95 [0.72, 1.25], .694 prior active M1 feedback 0.83 [0.72, 0.95], .008 prior active M2 hinting 1.14 [1.03, 1.27], .016 prior active M3 instructing 0.98 [0.89, 1.08], .722 prior active M4 explaining 2.13 [1.88, 2.41], < . 001 prior active M5 modelling 0.83 [0.76, 0.91], < . 001 prior active M6 questioning 0.75 [0.61, 0.93], .009 prior passive M1 feedback 2.16 [1.16, 4.04], .015 prior passive M2 hinting 1.79 [0.95, 3.37], .071 prior passive M3 instructing 1.52 [0.67, 3.43], .312 prior passive M4 explaining 2.88 [1.55, 5.35], < . 001 prior passive M5 modelling 0.46 [0.20, 1.04], .061 prior passive M6 questioning 2.19 [1.12, 4.27], .021 
+
+53 Appendix C Supporting figures 
+
+Support-form figures. 
+
+Supplementary Figure C1 combines corpus-level support-intent and support-form sum-maries across WildChat, LMSYS Chat and ShareChat. Operational examples for individual support-form labels are provided in Supplementary Table B1. 54 0  
+
+> 50
+> 100
+> 12 13
+> 41
+> 63
+> 21 7
+
+a M1-M6 share of scaffolded turns (%) WildChat 
+
+M1 
+
+feedback 
+
+M2 
+
+hinting 
+
+M3 
+
+instructing 
+
+M4 
+
+explaining 
+
+M5 
+
+modelling 
+
+M6 
+
+questioning 
+
+Support form 
+
+I1 
+
+meta 
+
+I2 
+
+cog. 
+
+I3 
+
+aff. 
+
+> Support intent
+
+12 21 13 7 2 79 
+
+12 12 44 68 22 2
+
+48 26 38 34 10 20      
+
+> 050 100
+> I1-I3 share
+> of scaffolded
+> turns (%)
+> 7
+> 94
+> 1
+> 0
+> 50
+> 100
+> 7924
+> 60
+> 14 14
+
+b M1-M6 share of scaffolded turns (%) LMSYS Chat 
+
+M1 
+
+feedback 
+
+M2 
+
+hinting 
+
+M3 
+
+instructing 
+
+M4 
+
+explaining 
+
+M5 
+
+modelling 
+
+M6 
+
+questioning 
+
+Support form 
+
+I1 
+
+meta 
+
+I2 
+
+cog. 
+
+I3 
+
+aff. 
+
+> Support intent
+
+5 11 4 2 1 92 
+
+7 9 28 70 18 2
+
+36 24 19 17 3 40      
+
+> 050 100
+> I1-I3 share
+> of scaffolded
+> turns (%)
+> 12
+> 88
+> 1
+> 0
+> 50
+> 100
+> 16 15 25
+> 73
+> 20 23
+
+c M1-M6 share of scaffolded turns (%) ShareChat 
+
+M1 
+
+feedback 
+
+M2 
+
+hinting 
+
+M3 
+
+instructing 
+
+M4 
+
+explaining 
+
+M5 
+
+modelling 
+
+M6 
+
+questioning 
+
+Support form 
+
+I1 
+
+meta 
+
+I2 
+
+cog. 
+
+I3 
+
+aff. 
+
+> Support intent
+
+10 25 16 20 5 94 
+
+16 14 28 85 22 13 
+
+65 24 24 49 11 39       
+
+> 050 100
+> I1-I3 share
+> of scaffolded
+> turns (%)
+> 16
+> 86
+> 3
+> 025 50 75 100
+
+% within row intent 
+
+Intent and support-form labels are non-exclusive; values need not sum to 100%. Bars are percentages of scaffolded assistant turns. Fig. C1 Support-intent and support-form profiles within scaffolded assistant turns. a– c, Profiles for WildChat, LMSYS Chat and ShareChat, respectively. In each panel, top bars report the percentage of scaffolded assistant turns containing each support-form label (M1–M6), the central heatmap reports the percentage of turns with each support-intent label (I1–I3) that also contain each support-form label and right bars report the percentage of scaffolded assistant turns containing each support-intent label. These values describe the composition of scaffolded assistant support; larger values indicate more frequent use of that support intent or form, not a larger estimated effect on user engagement. Intent and support-form labels are non-exclusive, so values need not sum to 100%. 
+
+55
