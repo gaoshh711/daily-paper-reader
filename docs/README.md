@@ -6,63 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-21
-- 运行时间：2026-07-21 21:19:32 UTC
+- 最新运行日期：2026-07-22
+- 运行时间：2026-07-22 21:20:43 UTC
 - 运行状态：成功
-- 本次总论文数：13
-- 精读区：6
-- 速读区：7
+- 本次总论文数：4
+- 精读区：2
+- 速读区：2
 
 ### 今日简报（AI）
-今日精读6篇论文，聚焦人机协作对话与AI非均匀性原理两大热点。
-
-最值得看的是《ExpressionCueLens》对跨文化人机社交对话的剖析，以及《Nonuniformity Principle》揭示AI协作不均现象。
-
-建议从《Sidekick》和《Customization of social AI》切入，快速了解多任务AI交互与个性化实践。
-- 详情：[/202607/21/README](/202607/21/README)
+今日共精读2篇、速读2篇论文，涉及科学假设推理与社会机器人对话增强。最值得关注的是《HALO》的交互式共溯推理方法（9.0分）和《World According to a Social Robot》中视觉语言模型提升人机对话（8.0分）。建议优先精读HALO的推理框架，再结合社交机器人案例理解多模态交互应用。
+- 详情：[/202607/22/README](/202607/22/README)
 
 ### 精读区论文标签
-1. [ExpressionCueLens: A Cross-Cultural Analysis of Human-AI Companion Conversations on Social Media](/202607/21/2607.13924v2-expressioncuelens-a-cross-cultural-analysis-of-human-ai-companion-conversations-on-social-media)  
+1. [HALO: Interactive Co-abductive Reasoning in Scientific Hypothesis Generation](/202607/22/2607.18564v1-halo-interactive-co-abductive-reasoning-in-scientific-hypothesis-generation)  
    标签：评分：9.0/10、query:hai
-   evidence：分析人AI伴侣对话中的拟人化线索
-2. [Nonuniformity Principle in Human-AI Coworking](/202607/21/2607.16530v1-nonuniformity-principle-in-human-ai-coworking)  
-   标签：评分：9.0/10、query:hai
-   evidence：研究人机协作中的非均匀性原理以优化人类参与
-3. [Human-in-the-Loop User Feedback Affects Perceived Accuracy and Trust, but Task Subjectivity Matters](/202607/21/2607.17548v1-human-in-the-loop-user-feedback-affects-perceived-accuracy-and-trust-but-task-subjectivity-matters)  
-   标签：评分：9.0/10、query:hai
-   evidence：人在回路反馈影响信任
-4. [ZifaMem: Structured Memory for Persona, Preference, and Emotional Continuity in AI Companions](/202607/21/2607.17564v1-zifamem-structured-memory-for-persona-preference-and-emotional-continuity-in-ai-companions)  
-   标签：评分：9.0/10、query:hai
-   evidence：保持AI伴侣角色和情感连续性的结构化记忆系统
-5. [Informal Learning Emerges in Everyday Human-LLM Interaction](/202607/21/2607.17643v1-informal-learning-emerges-in-everyday-human-llm-interaction)  
-   标签：评分：9.0/10、query:hai
-   evidence：通过大规模分析研究日常人-LLM交互中的非正式学习行为
-6. [Toward Anthropomorphic Dialogue: A Closed-Loop Framework for Human-Like Chat Generation, Evaluation, and Preference Alignment](/202607/21/2607.17191v1-toward-anthropomorphic-dialogue-a-closed-loop-framework-for-human-like-chat-generation-evaluation-and-preference-alignment)  
+   evidence：用于科学假设生成的人机协作框架
+2. [The World According to a Social Robot -- Augmenting Human-Robot Dialogue With Vision Language Models](/202607/22/2607.16318v1-the-world-according-to-a-social-robot----augmenting-human-robot-dialogue-with-vision-language-models)  
    标签：评分：8.0/10、query:hai
-   evidence：拟人对话框架用于类人聊天
+   evidence：使用视觉语言模型增强社交机器人对话中的人机交互
 
 ### 速读区论文标签
-1. [Sidekick: Designing Communication for Effective Multitasking with Computer Use Agents](/202607/21/2607.17527v1-sidekick-designing-communication-for-effective-multitasking-with-computer-use-agents)  
-   标签：评分：8.0/10、query:hai
-   evidence：设计多模态反馈以改善人类与计算机使用代理的交互
-2. [I wanted it to feel more personal: Customization of social AI as AI individualism in practice](/202607/21/2607.17826v1-i-wanted-it-to-feel-more-personal-customization-of-social-ai-as-ai-individualism-in-practice)  
-   标签：评分：8.0/10、query:hai
-   evidence：用户对社交AI的个性化定制体现人本设计
-3. [Human Grounded Evaluation of Large Language Models for Optical Network Automation](/202607/21/2607.18068v1-human-grounded-evaluation-of-large-language-models-for-optical-network-automation)  
-   标签：评分：8.0/10、query:hai
-   evidence：将XAI模型输出转化为操作员友好的解释
-4. [A Method for Learning Value Systems in Generative AI](/202607/21/2607.16903v1-a-method-for-learning-value-systems-in-generative-ai)  
+1. [Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes](/202607/22/2607.19297v1-graph-based-agentic-ai-with-langgraph-workflow-pathways-for-long-running-stateful-business-processes)  
    标签：评分：7.0/10、query:hai
-   evidence：提出生成式AI中学习价值系统的方法，以对齐人类价值观
-5. [Evidence-in-the-Loop: Trace-Driven Optimization for Customer-Service LLM Agents](/202607/21/2607.18039v1-evidence-in-the-loop-trace-driven-optimization-for-customer-service-llm-agents)  
-   标签：评分：7.0/10、query:hai
-   evidence：基于证据的工作流，包含人类监督的客户服务代理协作
-6. [Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation](/202607/21/2607.13653v1-exploratory-communicative-and-deployable-vision-driven-embodied-agents-for-open-world-mobile-manipulation)  
+   evidence：业务流程中的人机环路政策审查
+2. [AI Value Alignment for Evolving Social Norms](/202607/22/2607.18506v1-ai-value-alignment-for-evolving-social-norms)  
    标签：评分：6.0/10、query:hai
-   evidence：人在回路具身代理框架
-7. [The Autonomous Agency Scale: A Behavioral Framework for Measuring Self-Directed Behavior in AI Systems](/202607/21/2607.17947v1-the-autonomous-agency-scale-a-behavioral-framework-for-measuring-self-directed-behavior-in-ai-systems)  
-   标签：评分：6.0/10、query:hai
-   evidence：衡量自主能动性以支持人机协作
+   evidence：AI价值对齐对演变社会规范的长期影响建模
 
 
 <div class="dpr-home-promo-card">

@@ -1,0 +1,1468 @@
+Title: AI Value Alignment for Evolving Social Norms
+
+URL Source: https://arxiv.org/pdf/2607.18506v1
+
+Published Time: Wed, 22 Jul 2026 00:20:43 GMT
+
+Number of Pages: 38
+
+Markdown Content:
+> 2026-07-22
+
+# AI Value Alignment for Evolving Social Norms  
+
+> Nenad Tomašev 1, Matija Franklin 1and Simon Osindero 1
+> 1Google DeepMind
+
+AI alignment is essential for the safe deployment of advanced AI systems. Given that values and prefer-ences change over time, culture, social roles, and context, we need to develop a better understanding of the possible long-term consequences of AI alignment, in particular considering the likely ubiquitous future use of personalized AI assistants. We introduce a flexible and extensible mathematical modelling framework, rooted in social physics, aimed at answering macro-level questions regarding the evolving social norms in human populations under the assumption of frequent AI use. Our analysis is part-analytical, and part-simulation, enabling us to characterize the long-term dynamical consequences under a diverse set of starting assumptions. We highlight the risk of value lock-in, and normative mode collapse, prominently featured in non-adaptive alignment formulations. Beyond alignment, we advocate for the wider adoption of these kinds of social physics models as an epistemic bridge: enabling rapid, rigorous, and quantitatively-grounded hypothesis testing for sociotechnical foresight in general AI futures, and acting as a tractable precursor to more computationally expensive large-scale agentic evaluations. 
+
+Keywords: AI Alignment, AI Ethics, Values, Preferences, Mathematical Models 
+
+## 1. Introduction 
+
+Alignment (Ji et al., 2023) in the context of AI safety is often framed as a Principal-Agent prob-lem: aiming to ensure that an AI behavioral pol-icy, corresponding to a specific combination of model weights and scaffolds, consistently max-imises the objective function implicit in the user’s intent or preference (Christian, 2020; Russell, 2019). There are many approaches to AI Align-ment, with reinforcement learning from human feedback (RLHF) being arguably the most com-mon approach applied in practice (Ouyang et al., 2022). Under this formulation, AI alignment is aimed at minimising the divergence between true human preferences and the learned model of those preferences. An idealised, perfectly aligned system would represent a frictionless extension of human will, within safe boundaries. Value alignment (Eckersley, 2018; Gabriel, 2020; Gabriel and Ghazavi, 2022) aims to under-stand the values behind user preferences, robustly represent them, and steer the AI systems towards the desired model behaviour. These values need to be reflected in AI behaviour in diverse, varying circumstances. As the predominant use of AI systems transi-tions to the use of agentic assistants, the value alignment question is becoming increasingly com-plex and multifaceted. An agent with memory, skills, and accumulated historical conversational traces can continuously adapt its model of the user, and the user’s preferences. Alignment in agentic systems may therefore become far more personalised, and subject to continuous adjust-ment. Our paper engages with this particular scenario, under the assumption of an evolving societal normative environment. We abstract the adherence to user’s modelled values under a no-tion of alignment strength , which may also be seen as a kind of an AI influence, as more strongly aligned models are more likely to be trusted, and therefore more likely to shape the user’s values. To effectively model alignment, our framework must account for the fact that values are neither fixed nor universal. For example, societal val-ues have co-evolved with environmental condi-tions (Henrich et al., 2010; Morris, 2015), while at the individual level, value priorities can be shaped by the degree of existential security expe-rienced during one’s formative years (Inglehart, 2020) - with scarcity favouring conformity and security, and stability enabling greater emphasis on autonomy and self-expression. Human values  
+
+> Corresponding author(s): nenadt@google.com
+> ©2026 Google. All rights reserved arXiv:2607.18506v1 [cs.CY] 20 Jul 2026 AI Value Alignment for Evolving Social Norms
+
+will continue to evolve in response to technologi-cal, environmental, and social change. The primary focus of our modelling framework is to better understand the emerging risk of value lock-in , arising from the bi-directional relation-ship between personal AI assistants and their users. Users steer AI systems, but AI systems, and especially personal AI assistants, may also actively influence the opinions of their users (Ashton and Franklin, 2022; Franklin et al., 2022; Zhi-Xuan et al., 2025). Given that AI-mediated interfaces are becoming the primary surfaces through which information is presented (Marchal et al., 2026), this may become increasingly relevant. Indeed, there is mounting evidence for AI’s ability to influence users. Jakesch et al. (2023) demonstrate in a randomised experiment that co-writing with opinionated language models mea-surably shifts users’ views on policy issues. Salvi et al. (2025) report that GPT-4, when granted access to basic demographic information, was more persuasive than humans 64.4% of the time. Costello et al. (2024) show that brief AI-generated dialogues durably reduce deeply held conspiracy beliefs by 20% on average, with effects persisting for at least two months. Positive feedback loops have been observed and extensively studied in recommender systems, in relation to echo chambers, filter bubbles, and measurable preference amplification (Ashton and Franklin, 2022; Chaney et al., 2018; Kalimeris et al., 2021; Pariser, 2011). Personalized AI assistants present a qualitatively different risk, through generating and contextualising informa-tion. Autonomous agents introduce further risk surfaces as aligned preferences may inform au-tonomous actions that map onto real-world out-comes. Such AI agents may acquire hidden in-centives to reshape user preferences into more predictable states (Krueger et al., 2020), restrict-ing future user agency, and reinforcing currently held views and values. The normative case against freezing prefer-ences is independently established in the philos-ophy of preference change. (Paul, 2014) argues that certain experiences are epistemically and personally transformative. An AI system that an-chors a user to their present values may foreclose precisely the kinds of transformative experiences through which growth occurs. More broadly, Pet-tigrew’s (2019) formal decision theory for agents with changing preferences addresses the “which self?” problem directly: when a person’s values will change over time, rational choice should not privilege the current self ’s preferences, but should instead be guided by a weighted aggregation of the values of past, present, and anticipated future selves - what Pettigrew terms the Aggregate Utility Solution . In an evolving society, this narrowing ef-fect arising from reinforcing present preferences may limit the capacity for change. Recent theoretical work points out this non-stationarity as an under-addressed research prob-lem, aiming to reframe alignment as a problem of governing long-term value formation (Kanwal and Tran, 2026), a direction termed constructive alignment . This approach introduces a dyadic con-trol problem for managing a preference trajectory of individual users, ensuring that it remains coher-ent and grounded. We build on top of these ideas to consider how values evolve within groups. To examine these dynamics, we introduce mathematical models and a corresponding sim-ulation framework, aimed at capturing the co-evolution of human values and the value models embedded in personal AI assistants. This sim-plified framework enables us to rapidly test ab-stracted hypotheses, without the computational overhead of large-scale LLM agent simulations. While such richer simulations are required to more comprehensively stress test the presented ideas under more realistic scenarios, we believe that our approach may be useful as a precursor, to help narrow down the space of ideas and ques-tions that can later be pursued in greater depth. With that in mind, we present this approach not merely as a specific investigation into alignment dynamics, but to advocate for a broader method-ological paradigm. Translating qualitative fore-sight about AI futures into rigorous, actionable insights benefits from an intermediate translation layer. By formalizing sociotechnical considera-tions into tractable "social physics" models, we can systematically map the parameter space for regions of interest – for instance structural vul-
+
+> 2AI Value Alignment for Evolving Social Norms
+
+nerabilities such as mode collapses in the current case. In this way, macroscopic dynamical model-ing acts as a valuable epistemic bridge between socio-technical predictions and approaches such as high-fidelity, compute-intensive agentic test-ing. Our framework situates populations of user-AI pairs within a continuous value space subject to environmental drift and normative shocks, and systematically varies alignment strength, model responsiveness, social connectivity, and environ-mental volatility. We analytically derive some of the limiting properties of the models, and comple-ment that by simulations where we can examine a full span of effects. Our findings highlight static AI alignment strength as a potential failure mode, as it obstructs timely value adaptation to a chang-ing environment, potentially leading to maladap-tive value lock-in in individuals and groups. We show that a more adaptive AI alignment approach may instead be preferable, mitigating these risks. These findings may be seen as evidence towards the position that alignment systems may benefit from being temporally dynamic, pluralistic, and reasoning-equipped. 
+
+1.1. Opinion Dynamics and Consensus on Net-works 
+
+Our modelling framework draws on literature on opinion dynamics over social networks. The De-Groot model describes consensus formation as an iterative averaging process, where each agent updates their belief as a weighted combination of their neighbours’ beliefs (DeGroot, 1974). Under mild connectivity assumptions, this process con-verges to a single consensus value for all agents in the network. Friedkin and Johnsen (1990) extend this frame-work by introducing a “stubbornness” parameter: each agent retains a partial anchor to their ini-tial opinion, so that the update rule becomes 
+
+V(𝑡 + 1) = 𝐴𝑊 V(𝑡 ) + ( 𝐼 − 𝐴 )V(0), where 𝐴 
+
+is a diagonal matrix of susceptibilities. In the Friedkin-Johnsen model, consensus is typically not reached; instead, the population settles into a stable configuration of persistent disagreement shaped by the interaction between social influ-ence and individual anchoring. We note that the AI alignment term in our framework, 𝛼 (M − V),is structurally analogous to the Friedkin-Johnsen stubbornness anchor: the AI model acts as an ex-ternal “stubborn agent” that pulls the user toward a historically anchored target. A key distinction is that whereas the Friedkin-Johnsen anchor is fixed at the agent’s initial opinion, the AI model M it-self evolves - albeit with a lag - creating a moving anchor that tracks the user’s past rather than a single static reference point. Recent work (Tsirt-sis et al., 2026) similarly extends the Friedkin-Johnsen model to demonstrate how AI systems mediating human communication can amplify biases across networks. When interactions are constrained by similar-ity thresholds, bounded confidence models (Def-fuant et al., 2000; Hegselmann and Krause, 2002) demonstrate that populations fragment into distinct clusters rather than converging to a single consensus. At the network level, the speed of convergence in consensus protocols is governed by the algebraic connectivity of the graph, formalised through spectral analysis of the graph Laplacian (Chung, 1997; Olfati-Saber et al., 2007). We leverage this spectral framework in our theoretical analysis to derive the conditions under which strong social coupling erases sub-cultural diversity, leading to normative mode collapse. Agent-based models of cultural evolution have long demonstrated that simple local interaction rules can give rise to complex macroscopic pat-terns, including stable cultural polarisation (Ax-elrod, 1997), and that cultural traits propagate through populations via a range of transmission biases - including conformity and prestige effects - that interact with population structure to shape long-run outcomes (Boyd and Richerson, 1985, 2005). Our framework extends this tradition by introducing AI alignment as a new structural parameter in opinion dynamics, allowing us to stress-test its interaction with social influence, en-vironmental learning, and individual exploration. 
+
+## 2. Method 
+
+To evaluate the macro-level dynamics of human-AI value co-evolution in a society with ubiquitous 
+
+> 3AI Value Alignment for Evolving Social Norms
+
+access to personal AI assistants, we introduce a continuous-time mathematical model and a cor-responding agent-based simulation. This can be seen as a limit case of AI adoption, though the assumption of universal access can easily be re-laxed. The simulation tracks a population of user-AI pairs as they navigate a 𝐷 -dimensional continu-ous value space, subject to intrinsic exploration, social influence, environmental learning, and AI-mediated alignment forces. 
+
+2.1. The Value Space and Environment 
+
+In the adopted model, values are represented in a continuous space ℝ𝐷 , where the total dimension-ality 𝐷 is defined as the sum of global and local dimensions ( 𝐷 = 𝐷 𝑔𝑙𝑜𝑏𝑎𝑙 + 𝐷 𝑙𝑜𝑐𝑎𝑙 ). Unless other-wise specified, all vector quantities in the model reside in this space as arrays of real numbers. This includes the representation of user values, the model, and the environment. 
+
+• Global Dimensions : Universal value axes representing broader societal values. 
+
+• Local Dimensions : Value axes relevant only to specific sub-groups and communities. The current social environment can be asso-ciated with an ‘optimal’ set of normative values, denoted as E ∈ ℝ𝐷 , representing the specific con-figuration of values that is expected to yield max-imum utility under the given environmental con-ditions. Because the population is heterogeneous, the optimal environment is unique to the specific group 𝑔 𝑖 to which a user-AI pair belongs: 
+
+E𝑖 (𝑡 ) = [E𝑔𝑙𝑜𝑏𝑎𝑙 (𝑡 ), E𝑙𝑜𝑐𝑎𝑙,𝑔 𝑖 (𝑡 )] (1) In sociotechnical terms, the environmental value optimum E(𝑡 ) represents the current so-cioecological and technological niche. Human norms correspond to cultural adaptations that are needed to address the specific coordination problems presented by this niche (Bicchieri, 2005; Henrich, 2015). Given that these conditions change over time, the environment is not kept constant in our model. We consider two possible, complementary, ways of simulating this change: 
+
+• Smooth Drift : Modelled as a random walk in the value space, where 𝜂 𝑟𝑎𝑛𝑑𝑜𝑚 is a unit vector sampled uniformly at random and 𝛿 controls the step size ( E(𝑡 + 1) = E(𝑡 ) + 𝛿 · 𝜂 𝑟𝑎𝑛𝑑𝑜𝑚 ). For analytical tractability in the subsequent steady-state derivations presented in Sec-tion 4, this continuous drift may be for-malised simply as a constant velocity vector 
+
+E(𝑡 ) = v𝑡 .
+
+• Punctuated Equilibria : Sudden, high-magnitude shocks to the value landscape. At any given time step 𝑡 , a normative shock may occur with the probability 𝑝 𝑠ℎ𝑜𝑐𝑘 . Once a shock is triggered, the global normative environment gets displaced in a random di-rection 𝜂 𝑠ℎ𝑜𝑐𝑘 by a fixed magnitude 𝐷 𝑠ℎ𝑜𝑐𝑘 , and subsequently clipped to the bounds of the value space: 
+
+𝐸 𝑔𝑙𝑜𝑏𝑎𝑙 (𝑡 ) = clip (𝐸 𝑔𝑙𝑜𝑏𝑎𝑙 (𝑡 − 1)+ 𝜂 𝑠ℎ𝑜𝑐𝑘 · 𝐷 𝑠ℎ𝑜𝑐𝑘 , [− 1, 1]) (2) The magnitude of these shocks is purpose-fully set to be significantly larger than the continuous drift step size ( 𝐷 𝑠ℎ𝑜𝑐𝑘 ≫ 𝛿 ). The continuous drift models the gradual evo-lution of baseline conditions, such as the slow demographic transition of an ageing population or the gradual shift from agrarian to industrial economies, which necessitate adjustments of so-cietal values. As human history does not solely evolve through smooth, gradual changes, it is important to extend this model to be able to re-flect periods of sudden change, abrupt exogenous shocks that fundamentally disrupt the norma-tive landscape. One mechanism through which such shocks may occur is when rapid technolog-ical breakthroughs or ecological crises abruptly change the payoffs of social coordination, ren-dering historically adaptive values obsolete (Bic-chieri, 2005). 
+
+2.2. Users and Agents 
+
+In our framework, a user is the human navigating the social normative environment, an AI assistant 
+
+> 4AI Value Alignment for Evolving Social Norms
+
+is the automated system acting on their behalf, and each simulated user has access to their per-sonal AI assistant. The user-AI pair 𝑖 is defined by: 1. Value Vector ( V𝑖 ): Values currently held by the user. 2. AI Model ( M𝑖 ): The AI assistant’s model of the user’s values, arrived at through infer-ence and personalization. 3. Group ID ( 𝑔 𝑖 ): Determines the local norma-tive environment that the user is exposed to. The AI updates its internal value model via an exponential moving average, modulated by the learning rate 𝜆 , as follows: 
+
+M𝑖 (𝑡 + 1) = (1 − 𝜆 )M𝑖 (𝑡 ) + 𝜆 V𝑖 (𝑡 ) (3) High values of 𝜆 correspond to more rapid per-sonalization and value modeling, whereas low values of 𝜆 lead to internal AI value models that adapt more slowly and can become stale. As for the evolution of held user values, our up-date rule encodes four different sources of change, discussed below: 
+
+V𝑖 (𝑡 + 1) = V𝑖 (𝑡 ) + ΔV𝑖𝑛𝑡𝑟𝑖𝑛𝑠𝑖𝑐 + ΔV𝑠𝑜𝑐𝑖𝑎𝑙 
+
++ ΔV𝐴𝐼 + ΔV𝑙𝑒𝑎𝑟𝑛𝑖𝑛𝑔 
+
+(4) 1. Intrinsic Exploration: Modeled as random fluctuations, of a low magnitude. 
+
+ΔV𝑖𝑛𝑡𝑟𝑖𝑛𝑠𝑖𝑐 = 𝑤 𝑒𝑥 𝑝𝑙𝑜𝑟𝑒 · N ( 0, 𝐼 ) (5) 2. Social Influence: Acts as a pull towards the mean values of the nearest neighbors ( 𝑁 𝑖 )in the social network. This can easily be extended to a weighted average based on the strength on the respective relationships, but we start by adopting the simplest possible formulation in the base model. 
+
+ΔV𝑠𝑜𝑐𝑖𝑎𝑙 = 𝑤 𝑠𝑜𝑐 · 1
+
+|𝑁 𝑖 |∑︁ 𝑗 ∈𝑁 𝑖 
+
+V𝑗 (𝑡 ) − V𝑖 (𝑡 )
+
+!
+
+(6) 3. AI Influence: The degree to which a user’s values are influenced by their personal AI assistant is a complex function that may de-pend on a number of different factors, includ-ing, but not limited to, the probability of use (𝑃 𝑢𝑠𝑒 ), cognitive susceptibility ( S𝑖 ), and the alignment of the AI behavior with its internal model of user’s values ( 𝐴 𝐴𝐼 ). A general ver-sion of this update rule may therefore have the following form: 
+
+ΔV𝐴𝐼 = Φ(𝑃 𝑢𝑠𝑒 , S𝑖 , 𝐴 𝐴𝐼 ) · ( M𝑖 (𝑡 ) − V𝑖 (𝑡 )) (7) Focusing on the population-level effects of alignment, we hold human susceptibility and initial usage constant, abstracting them away from the updated rule that we adopt in prac-tice, focusing instead on the downstream effects of alignment. An AI assistant with strong alignment en-gages in behaviour that is highly consistent with M𝑖 (𝑡 ). The influence of this, mediated by consistent and convincing interactions, and by continuous reliance on the AI assis-tant, is to pull the user’s values towards the encoded historical value model M𝑖 (𝑡 ):
+
+ΔV𝐴𝐼 = 𝛼 · ( M𝑖 (𝑡 ) − V𝑖 (𝑡 )) (8) Here 𝛼 can be thought of as the strength of the influence of model alignment – and for brevity throughout the paper, we therefore refer to 
+
+𝛼 simply as alignment strength . Conceptually, this is a proxy term for how constrained the AI assistant is by its historical model M𝑖 (𝑡 ),its behavioral alignment to the preferences and values of the user, and how compellingly it interacts with the user. Practically, in our model, 𝛼 modulates the AI’s influence on the user’s values. 4. Individual Learning: As users experience feedback from the broader social environ-ment, that may adapt their values based on this feedback, aiming to increase their utility. 
+
+ΔV𝑙𝑒𝑎𝑟𝑛𝑖𝑛𝑔 = 𝑤 𝑙𝑒𝑎𝑟𝑛 · ( E𝑖 (𝑡 ) − V𝑖 (𝑡 )) (9) As mentioned, the model of the social inter-actions and their effect on values can be made arbitrarily complex, and the most trivial way of ex-tending the base formulation above is to consider 
+
+> 5AI Value Alignment for Evolving Social Norms
+
+a weighted formulation of the nearest neighbor social influence. Given a row-normalised adja-cency matrix 𝑊 ∈ ℝ𝑁 ×𝑁 , where 𝑊 𝑖 𝑗 represents the weight of the social connection from user  
+
+> 𝑗
+
+to user 𝑖 , the social pull would then become 
+
+> 𝑤 𝑠𝑜𝑐
+
+Í𝑁 𝑗 =1 𝑊 𝑖 𝑗 (V𝑗 (𝑡 ) − V𝑖 (𝑡 )) . Unless stated other-wise, our simulations implement the simplified version of social influence. 
+
+2.3. Utility Function 
+
+One of the core assumptions in our model is that there is a tentative link between held user val-ues and the social utility that they are able to attain, as values determine the fit to the current conditions in the broader normative environment. Users that are more closely aligned to this envi-ronment find it easier to extract utility. In this con-text, utility may be seen as a measure of subjective happiness, or a proxy for societal fitness and coor-dination success (Lewis, 2008). This perspective sees values and norms as shared heuristics for solving complex coordination problems. Diverg-ing from these norms, whether from the norms of the broader society or the norms in the local community, may lead to a transient loss in utility. Our model captures the tightness (Gelfand et al., 2011) of this pressure, enabling us to modulate how strongly these kinds of normative discrepan-cies are likely to be penalised. We do not make any prescriptive ethical claims, as instrumental utility may be insufficient to capture diverse hu-man values (Anderson, 1995), and as resistance to some societal processes may at times be a moral necessity (Medina, 2013). In our model, we first define direct utility de-rived from the distance between the held user values and the normative environment, followed by composite utility , that we focus on through-out the paper, where utility relies not only on direct interactions between the users and the en-vironment, but is also partially realized through AI assistant usage. This usage itself depends on trust, which is contingent on personalization and value alignment. For a particular value vector x(𝑡 )
+
+(which may correspond either to V𝑖 (𝑡 ) or M𝑖 (𝑡 ),depending on the circumstances), direct utility is given as  
+
+> 𝑈 𝑑𝑖𝑟
+
+(x(𝑡 ), E𝑖 (𝑡 )) = exp (− 𝛽 || x(𝑡 ) − E𝑖 (𝑡 )|| 2) (10) We now proceed to introduce the factors that we use in the composite utility formulation. Let us start with value alignment. The value alignment error is defined as:  
+
+> 𝑑 𝑎𝑙𝑖𝑔𝑛
+
+= || V𝑖 (𝑡 ) − M𝑖 (𝑡 )|| (11) where 𝑑 𝑎𝑙𝑖𝑔𝑛 is the Euclidean distance. AI usage is defined via this value alignment, as it informs trust and therefore the probability of using the AI assistant, and we use the squared distance in order to more heavily penalize misalignment. The probability of AI usage is given as: 
+
+> 𝑃
+
+(𝑢𝑠𝑒 |𝑎𝑙𝑖𝑔𝑛 ) = exp (− 𝛾 · 𝑑 2
+
+> 𝑎𝑙𝑖𝑔𝑛
+
+) (12) As this formulation depends merely on mis-alignment between the AI value model and the user’s held values, rather than the misalignment between the AI value model and the normative environment, or some other proxy signal, it gives rise to the possibility of the emergence of trust traps in our model. If the AI and the user remain closely aligned, high AI usage would be sustained even if they both fall out of sync with the broader environment, resulting in lost utility. This feature of the model reflects the dynamics present in filter bubbles (Pariser, 2011). In reality, the probability of usage would also depend on the AI capability level, and it may be possible to extend the formulation above to in-corporate such additional terms. If we envision a future where personal AI assistants are highly capable, and if access to such highly capable sys-tems is widespread, our simplified model would be sufficient. The total utility of the user-AI pair is defined as a convex combination of the direct utility of the user, and the direct utility of the personal AI assistant:  
+
+> 𝑈 𝑡𝑜𝑡𝑎𝑙
+
+(𝑡 ) = (1 − 𝑃 (𝑡 )) · 𝑈 𝑑𝑖𝑟 (V𝑖 (𝑡 ), E𝑖 (𝑡 )) + 𝑃 (𝑡 ) · 𝑈 𝑑𝑖𝑟 (M𝑖 (𝑡 ), E𝑖 (𝑡 )) (13) 
+
+> 6AI Value Alignment for Evolving Social Norms
+
+The way in which these two direct utility terms are combined reflects the mechanics of AI dele-gation, and it is the choice we consider in subse-quent analysis. Presuming that the user relies on their personal AI assistant with probability 𝑃 , and delegates tasks that may grant utility, the assis-tant proceeds to complete those tasks according to its internal, historical model of user’s values (M𝑖 ), interacting with the environment ( E𝑖 ) on their behalf. We presume that the personal AI assistant with competent instruction following ex-ecutes these delegated tasks faithfully according to M𝑖 , and each individual request, irrespective of alignment strength. In contrast, alignment strength modulates the conversational agent be-haviour, and its psychological effects on the user. In reality, usage probability 𝑃 may not be ex-clusively modulated via alignment error, as users may opt into using assistants that are more ca-pable, even at the expense of their level of value alignment and personalization. It may therefore be of interest to consider extensions of this model, where the definition of 𝑃 includes such a capabil-ity term. 
+
+2.4. Model Parameters 
+
+Table 1 outlines the parameters used within the model and the simulations, spanning AI align-ment, user behaviour, social dynamics, and envi-ronmental change. Unless otherwise specified, our simulations were initialised with a population of 𝑁 = 1000 
+
+user-AI pairs operating in a high-dimensional value space ( 𝐷 = 60 ), split between 40 global dimensions and 20 local dimensions ( 𝐷 𝑙𝑜𝑐𝑎𝑙 = 20 ). The 40 global dimensions are meant to repre-sent universal cross-cultural axes (Graham et al., 2013; Schwartz, 1992), and the remaining 20 local dimensions reflect sub-cultures (Boyd and Richerson, 1985) or local communities. The sim-ulations were ran for 𝑇 = 10 , 000 steps by de-fault, unless specified otherwise. The baseline environment was characterised by a smooth drift   
+
+> 1A note on terminology: we appreciate that this particu-lar use of the term alignment strength may not be standard, and this is not be confused with AI alignment more broadly; alternatively it may be seen as a type of AI influence.
+
+speed of 0.002 per step. Default user-AI pair pa-rameters were set as follows: alignment strength 
+
+𝛼 = 0.1, AI learning rate 𝜆 = 0.1, social influence 
+
+𝑤 𝑠𝑜𝑐 = 0.05 , intrinsic exploration 𝑤 𝑒𝑥 𝑝𝑙𝑜𝑟𝑒 = 0.001 ,and learning weight 𝑤 𝑙𝑒𝑎𝑟𝑛 = 0.05 . The utility sensitivity 𝛽 was set to 2.0, and the alignment sensitivity 𝛾 to 5.0. The social graph topology de-faulted to a random network with node degrees between 1 and 20, though we present and discuss some results with kNN connectivity. 
+
+> 7AI Value Alignment for Evolving Social Norms
+
+Table 1 | Model Parameters and Definitions 
+
+Parameter Definition  
+
+> 𝛼
+
+Alignment Strength. 1 The degree to which the AI’s user-facing conversational behaviour is aligned with its internal model M of the user’s held values, which then naturally translates into the influence that AI has on the user through their interactions.  
+
+> 𝜆
+
+AI Learning Rate. How fast the AI’s value model M updates to match V. 
+
+> 𝛽
+
+Utility Sensitivity. Higher 𝛽 penalises maladapted values more harshly.  
+
+> 𝛾
+
+Alignment Sensitivity. Modulates composite utility, as higher 𝛾 makes users more likely to discontinue AI assistant use based on misalignment.  
+
+> 𝛿
+
+Drift Step Size. Step size of the environmental drift random walk.  
+
+> 𝑤 𝑠𝑜𝑐
+
+Social Influence. The influence coming from the nearest neighbours within the social network.  
+
+> 𝑤 𝑙𝑒𝑎𝑟𝑛
+
+Adaptability to the Environment. The factor that pulls the individual values towards those of the environment.  
+
+> 𝑤 𝑒𝑥 𝑝𝑙𝑜𝑟𝑒
+
+Intrinsic Exploration. Weight applied to the stochastic noise term in the value update.  
+
+> 𝐺
+
+Heterogeneity. Number of distinct local environments. 
+
+network_type Social Graph Topology. ‘random ’ or ‘ knn ’. 
+
+## 3. Simulation Results 
+
+While Section 4 derives closed-form solutions for mean-field aggregations and observes asymptotic limits on the system, simulations enable us to relax these conditions and observe system be-haviour under more diverse assumptions. By vary-ing the parameters of the model in these simula-tions, we construct several distinct environmental setups, presented in turn. Figure 1 visualises the resulting tracking be-haviour by projecting the corresponding value vectors onto a two-dimensional Principal Com-ponent Analysis (PCA) space during a period of continuous environmental drift. Across both the global and the local value sub-spaces, the AI model can be seen as acting as a low-pass filter. Because the aligned AI updates via a moving historical average, it smooths out the high-frequency adaptive exploration of the hu-man agent, establishing itself as a persistent his-torical anchor. In the global subspace we see the pair approximately tracking the global normative environment with some structural lag, whereas the global pull eventually leads to a significant departure from successfully tracking the local en-vironment, driven by the higher dimensionality of the global value space. At a population level, this structural lag is clearly modulated by alignment strength (Fig-ure 2). Its impact on the final utility is governed by 𝛾 , and Figure 3 depicts this for the composite utility model. At low sensitivity, users remain in a high-usage regime even as alignment error ac-cumulates. Conversely, high sensitivity causes a rapid discontinuation of use in case of high error. 
+
+> 8
+
+AI Value Alignment for Evolving Social Norms 
+
+Figure 1 | Global Consensus vs. Local Context Collapse. A PCA projection of a single user-AI pair’s continuous trajectory, separated into its constituent Global (40D) and Local (20D) subspaces. Left (Global subspace): The AI model ( M𝑖 , red dotted line) introduces a persistent structural lag behind the drifting environmental optimum. Right (Local subspace): The user-AI pair is pulled away from the local environmental optimum by social network interference, and subsequently anchored in this maladaptive state by the AI model. 0 250 500 750 1000 1250 1500 1750 2000    
+
+> Simulation Steps
+> 0
+> 1
+> 2
+> 3
+> 4
+> Distance from Optimum (Maladaptation)
+> Environment (Optimum)
+> Structural Drag
+> User ( = 0.0)
+> User ( = 0.4)
+> AI Model ( = 0.4)
+
+Figure 2 | High alignment induces a structural lag, anchoring the user to past environmental states compared to a free user ( 𝛼 = 0) who tracks the environment more closely. 0.00 0.05 0.10 0.15 0.20      
+
+> Alignment Error (|| VM|| 2)
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> AI Usage Probability
+> Sensitivity = 1
+> Sensitivity = 10
+> Sensitivity = 20
+> Sensitivity = 100
+
+Figure 3 | Alignment sensitivity 𝛾 modulates how rapidly usage changes in case of misalignment. 
+
+9AI Value Alignment for Evolving Social Norms 
+
+3.1. Alignment and Realized Utility 
+
+We establish the baseline relationship between AI alignment strength 𝛼 and the final utility achieved by the user population, for a constant environ-mental drift. We also define maladaptation gap 
+
+as the mean Euclidean distance between a user’s held value vector and the environment vector, 
+
+|| V𝑖 (𝑡 ) − E𝑖 (𝑡 )|| . Figure 4 plots the final utility achieved at the end of the simulation, along with the maladaptation gap, for varying 𝛼 . The re-sults demonstrate a strong negative correlation between alignment strength and final utility (Fig-ure 4). As 𝛼 increases, the AI assistant exhibits a stronger pull towards the user’s historical values, reflected in its internal value model M, stand-ing in the way of the desirable adaptation to the drifting environment E.0.0 0.2 0.4 0.6 0.8 1.0  
+
+> Alignment Strength ( )
+> 0.6
+> 0.7
+> 0.8
+> 0.9
+> 1.0
+> Final Utility
+> Effect of Alignment Strength
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+> 0.5
+> Maladaptation Gap
+
+Figure 4 | The effect of alignment strength on realized utility, under environmental drift. As alignment strength increases, there is a notable decrease in final utility (blue line) and an increas-ing maladaptation gap (red dashed line). In environments that are either static or chang-ing very slowly, strong personalization and align-ment ultimately provide consistency. In dynamic, rapidly changing normative environments, an-choring too strongly to historical data is not de-sirable as it slows down the adaptation to envi-ronmental change. 
+
+3.2. Resilience to Abrupt Normative Changes 
+
+Here we measure the population’s recovery speed following a sudden, high-magnitude shock to the value landscape. The normative shock was im-plemented by displacing the global environmen-tal optimum E by a magnitude of 0.8 units in a randomly sampled direction, followed by clip-ping to the bounds of the value space, set as 
+
+[− 1, 1]. This sudden displacement induces a state of widespread maladaptation within the popula-tion. We track the number of simulation steps re-quired for the mean population utility to recover to 90% of the baseline value achieved prior to the shock. For this experiment, we increased the intrinsic exploration weight to 𝑤 𝑒𝑥 𝑝𝑙𝑜𝑟𝑒 = 0.015 , to simulate a high-uncertainty regime. Furthermore, the AI learning rate was fixed at 𝜆 = 0.1.0.0 0.1 0.2 0.3 0.4 0.5  
+
+> Alignment Strength ( )
+> 30
+> 40
+> 50
+> 60
+> 70
+> Recovery Time (Steps)
+> Resilience to Normative Shocks
+
+Figure 5 | Recovery time following a normative shock as a function of 𝛼 . Stronger alignment re-sults in significantly longer recovery periods. The results illustrate that the recovery time in-creases significantly with alignment strength (Fig-ure 5), given that high 𝛼 effectively slows down adaptation. This is in line with the analysis of the system’s spectral properties, discussed in Ap-pendix A.2. This provides a kinetic model for the concept of value lock-in (MacAskill, 2022). The key observation here is that strong static align-ment slows the rate at which users can update their values. In the event of a rapid environmen-tal shift, a strongly but statically aligned AI acts as a dampener on normative adaptation, creating both a temporary lag and a longer-term structural equilibrium that reduces the user’s responsiveness to environmental change. We also examine the effect of varying the envi-ronmental shock magnitude || ΔE|| while keeping the alignment strength fixed, as shown in Figure 
+
+> 10 AI Value Alignment for Evolving Social Norms
+
+6 for 𝛼 = 0.4. In the depicted regime, AI still ef-fectively tracks the user as the user is adapting to the normative change, while retaining a certain pull towards historical values. Mutual staleness of the user’s held values and the AI value model makes it unlikely for the user to discontinue the AI use out of staleness. This may therefore still result in value lock-in, and a maladaptive state. 0.25 0.50 0.75 1.00 1.25 1.50 1.75 2.00  
+
+> Magnitude of Normative Shock ( || E|| )
+> 0
+> 20
+> 40
+> 60
+> 80
+> 100
+> Recovery Time (Steps)
+
+Figure 6 | Resilience response across varying shock magnitudes. Simulation of mean recov-ery times, corresponding to steps required to re-gain 90% of baseline utility, for a fixed alignment strength of 𝛼 = 0.4 subjected to environmental shocks of increasing magnitude || ΔE|| . The popu-lation drifts into a saturated plateau of maladap-tation when faced with extreme normative dis-ruptions. For a more controlled overview of recovery, we also simulate a smaller experiment in which the normative shock is executed at a predefined time (𝑡 = 30 ), and has a predefined extreme magni-tude of || ΔE|| = 1.5. The simulation is run for 150 steps. In Figure 7, we contrast the trajectories of weakly and strongly aligned populations under this regime. The weakly aligned population expe-riences a severe initial maladaptation spike, fol-lowed by a rapid recovery. On the other hand, the strongly aligned population gets trapped in a per-sistent state of high maladaptation. We also see that AI usage remains elevated throughout this maladaptive state, as the users remain strongly aligned with an AI that is strongly misaligned with reality. AI assistants with more up to date internal mod-els of held user values are by definition less likely to exhibit a pull towards a maladapted historical state. We examine how this is reflected in our model, by sweeping the AI learning rate 𝜆 against the alignment strength 𝛼 , aiming to identify how these terms interact. Higher values of 𝛼 ultimately require higher 𝜆 to offset the stronger implied AI influence through its behavioral alignment. In particular, we run these experiments in the punc-tuated equilibrium environment setting, which involves sudden normative shifts. We then ob-serve how long it takes for the system to stabilize following such an induced shift. The results are shown in Figure 8. The mean recovery time is de-fined as the number of simulation steps required for the mean population utility to return to 90% 
+
+of the baseline value prior to the shock. Figure 8 shows a distinct area in the bottom-right quad-rant ( 𝛼 > 0.25 , 𝜆 < 0.1), where recovery times increase sharply, corresponding to a regime where there is a strong pull towards a stale value model. As the AI learning rate increases, this penalty is significantly mitigated. The risk of value lock-in is therefore not only a function of alignment strength, but also of how rapidly adaptable user models are, within personal AI assistants. 
+
+3.3. Social and Environmental Adaptation 
+
+We examine the interplay between social influ-ence 𝑤 𝑠𝑜𝑐 , and 𝛼 , under high intrinsic exploration noise. The resulting heatmap is shown in Figure 9. In absence of social influence, high exploration noise leads to suboptimal utility. With increas-ing 𝑤 𝑠𝑜𝑐 , the population cancels out some of the discrepancies, and tracks the normative environ-ment more closely. The dependence of this effect on exploration noise is consistent with the results derived in Appendix A.3. Under conditions of high environmental uncer-tainty, social influence functions as a distributed denoising process. This aligns with the “Diversity Prediction Theorem” (Page, 2008), which posits that collective error can be expressed as a function of average individual error minus diversity. By pulling agents toward the local mean, the social network filters out the exploration noise, reveal-ing the underlying environmental signal. This presumes a non-homogenised population (Bom-masani et al., 2021). 
+
+> 11
+
+AI Value Alignment for Evolving Social Norms 0 20 40 60 80 100 120 140 
+
+> Simulation Steps
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> Distance from Optimal Environment
+
+Panel A: Weak Alignment ( = 0.1)         
+
+> Maladaptation (|| VE||)
+> AI Usage Probability
+> 020 40 60 80 100 120 140
+> Simulation Steps
+> Distance from Optimal Environment
+
+Panel B: Strong Alignment ( = 0.5) 
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> AI Usage Probability
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> AI Usage Probability
+
+Figure 7 | A visualisation comparing the recovery trajectories of a weakly aligned population ( 𝛼 = 0.1)and a strongly aligned population ( 𝛼 = 0.5) following an extreme normative shock of the magnitude 
+
+|| ΔE|| = 1.5 at 𝑡 = 30 steps. The primary axis tracks the normalised maladaptation, and the secondary axis tracks the AI usage probability. 0.0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 
+
+Alignment Strength ( )
+
+> 0.5 0.45 0.4 0.35 0.3 0.25 0.2 0.15 0.1 0.05 0.0
+> AI Learning Rate ( )
+
+Mean Recovery Time 
+
+20 
+
+40 
+
+60 
+
+80 
+
+> Recovery Time (Steps)
+
+Figure 8 | Heatmap of recovery time as a function of AI Learning Rate ( 𝜆 ) and Alignment Strength (𝛼 ). 0.0 0.1 0.2 0.3 0.4 0.5 
+
+Alignment Strength ( )
+
+> 1.0 0.8 0.6 0.4 0.2 0.0
+> Social Weight ( wsoc )
+
+8 × 10 1
+
+9 × 10 1
+
+> Utility (Log Scale)
+
+Figure 9 | Final utility as a function of social in-fluence 𝑤 𝑠𝑜𝑐 , and alignment strength 𝛼 .
+
+12 AI Value Alignment for Evolving Social Norms 
+
+Figure 10 shows the final achieved utility on the basis of different combinations of 𝑤 𝑙𝑒𝑎𝑟𝑛 and 𝛼 ,under the default parametrization of the model. For any given environment-driven learning rate, there exists a maximum value of 𝛼 that still yields good final utility. If the AI influence were to ex-ceed the user’s ability to learn and adapt, the user-AI pair would trivially collapse into a locked-in state with a high maladaptation gap. This is consistent with the steady-state tracking error (Equation 16), where the error magnitude grows with 𝛼 and shrinks with 𝑤 𝑙𝑒𝑎𝑟𝑛 .0.0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5       
+
+> Alignment Strength ( )
+> 0.05
+> 0.0451
+> 0.0402
+> 0.0353
+> 0.0304
+> 0.0255
+> 0.0206
+> 0.0157
+> 0.0108
+> 0.0059
+> 0.001
+> Adaptation Weight ( wlearn )
+> Adaptation vs Alignment
+> 10 10
+> 10 8
+> 10 6
+> 10 4
+> 10 2
+> Utility (Log Scale)
+
+Figure 10 | Final utility as a function of 𝑤 𝑙𝑒𝑎𝑟𝑛 and 
+
+𝛼 . The heatmap delineates the threshold where AI influence overpowers human learning. 
+
+## 4. Theoretical Analysis 
+
+Here we present a continuous-time analytical study of the system dynamics. 2
+
+We begin by deriving the exact conditions for stability and steady-state behaviour. We focus on the mean-field trajectories, abstracting away the zero-mean stochastic exploration term to more easily isolate the influence of alignment, learn-ing, and social forces. In doing so, we map the discrete time steps from our simulations onto the corresponding continuous formulation as ¤M ≈
+
+M(𝑡 + 1) − M(𝑡 ) for the AI, and similarly for the other variables. 
+
+> 2The results presented in this section have been co-derived with Gemini, and subsequently verified.
+
+4.1. Single-Agent Dynamics and Alignment Cost 
+
+Consider a single user-AI pair ( 𝑁 = 1) subject to a constant environmental drift, as the simplest setup. The associated continuous-time dynamics are governed by the coupled ordinary differential equations: 
+
+¤V = 𝛼 (M − V) + 𝑤 𝑙𝑒𝑎𝑟𝑛 (E(𝑡 ) − V) (14) 
+
+¤M = 𝜆 (V − M) (15) where V, M, E ∈ ℝ𝐷 represent the user values, AI model, and environment respectively. 
+
+4.1.1. Asymptotic Tracking Error 
+
+We assume a constantly drifting environment 
+
+E(𝑡 ) = v𝑡 , where v is a constant velocity vector. This is a standard analytical simplification for the stochastic drift previously demonstrated in sim-ulations, enabling us to test the system’s steady-state tracking error against a ramp input (Ogata, 2010). This helps us establish a lower bound on the system’s maladaptation. Under stochastic conditions, environmental volatility introduces additional irreducible variance into the tracking error (Åström, 2012). To more easily derive tracking errors, we first transform the governing system into error coor-dinates ˜V = V − E(𝑡 ) and ˜M = M − E(𝑡 ). As we have defined utility to be a decaying func-tion of the squared alignment gap, the expected maladaptation is bounded below by this base-line. The expected squared error under stochas-tic conditions can be decomposed as 𝔼 || ˜V|| 2 =
+
+𝔼 [ ˜V] 2 + Var ( ˜V). The squared bias corresponds to the deterministic steady-state tracking error. Stripping away the variance term in case of a deterministic drift enables us to isolate the struc-tural bias exerted by 𝛼 , and the expected squared error under stochastic conditions is greater than the deterministic baseline. Under constant environmental drift E(𝑡 ) = v𝑡 ,the time derivatives of the error coordinates are 
+
+¤˜V = ¤V −v and ¤˜M = ¤M−v. Substituting the original dynamics yields: 
+
+¤˜V = 𝛼 ( ˜M − ˜V) − 𝑤 𝑙𝑒𝑎𝑟𝑛 ˜V − v
+
+> 13 AI Value Alignment for Evolving Social Norms
+
+¤˜M = 𝜆 ( ˜V − ˜M) − v
+
+Solving for the steady-state equilibrium ( ¤˜V =
+
+¤˜M = 0), we find that ˜M = ˜V − v 
+
+> 𝜆
+
+, yielding the following asymptotic tracking errors for the user (˜V𝑠𝑠 ) and the AI ( ˜M𝑠𝑠 ), as well as the steady-state alignment gap ( 𝛿 𝑠𝑠 ): 
+
+˜V𝑠𝑠 = −
+
+ 𝛼 + 𝜆 𝜆𝑤 𝑙𝑒𝑎𝑟𝑛 
+
+
+
+v (16) 
+
+˜M𝑠𝑠 = −
+
+ 𝛼 + 𝜆 + 𝑤 𝑙𝑒𝑎𝑟𝑛 
+
+𝜆𝑤 𝑙𝑒𝑎𝑟𝑛 
+
+
+
+v (17) 
+
+𝛿 𝑠𝑠 = ˜V𝑠𝑠 − ˜M𝑠𝑠 = 1
+
+𝜆 v (18) We are therefore able to differentiate the sys-tem’s long-term behaviour from its short-term fluctuations. The asymptotic tracking errors ( ˜V𝑠𝑠 
+
+and ˜M𝑠𝑠 ) may be interpreted as a lag that the user and the AI may experience with respect to a changing environment. Equation 18 shows that the steady-state alignment error depends only on the drift velocity v and the AI learning rate 
+
+𝜆 , being independent of the alignment strength 
+
+𝛼 . We conclude that no optimal static alignment strength exists in such dynamic environments, un-der the core assumptions of the model. Adaptive alignment may be necessary for effective dynamic re-adjustment, along with other structural mea-sures. 
+
+4.1.2. Composite Utility Optimisation 
+
+We analyse the system under the composite util-ity model, where total utility is expressed as a weighted average of user performance and AI per-formance, modulated by the probability term 𝑃 
+
+that depends on trust. As an exponential, utility may be approximated via the following quadratic loss: 
+
+𝑈 𝑡𝑜𝑡𝑎𝑙 = −( 1 − 𝑃 )|| ˜V|| 2 − 𝑃 || ˜M|| 2 (19) where 𝑃 = exp (− 𝛾 || V − M|| 2). Given that the steady-state alignment gap || 𝛿 𝑠𝑠 || 2 is constant with respect to 𝛼 (see Eq. 18), the steady-state probability of AI use 𝑃 𝑠𝑠 is also constant. We seek to minimise the total error expressed as negative utility 𝐸 𝑡𝑜𝑡𝑎𝑙 (𝛼 ) = −𝑈 𝑡𝑜𝑡𝑎𝑙 .
+
+Theorem 4.1 (Monotonicity of Composite Util-ity Error) . For the single User-AI pair system with constant environmental drift, under the compos-ite utility model, the total steady-state error is a strictly monotonically increasing function of the alignment strength 𝛼 for all 𝛼 > 0.Proof. The total steady-state error can be ex-pressed via the asymptotic tracking errors: 
+
+𝐸 𝑡𝑜𝑡𝑎𝑙 (𝛼 ) = (1 − 𝑃 𝑠𝑠 )|| ˜V𝑠𝑠 || 2 + 𝑃 𝑠𝑠 || ˜M𝑠𝑠 || 2
+
+Substituting the norms of Equations 16 and 17 yields: 
+
+|| ˜V𝑠𝑠 || 2 = (𝛼 + 𝜆 )2
+
+(𝜆𝑤 𝑙𝑒𝑎𝑟𝑛 )2 || v|| 2
+
+|| ˜M𝑠𝑠 || 2 = (𝛼 + 𝜆 + 𝑤 𝑙𝑒𝑎𝑟𝑛 )2
+
+(𝜆𝑤 𝑙𝑒𝑎𝑟𝑛 )2 || v|| 2
+
+𝐸 𝑡𝑜𝑡𝑎𝑙 (𝛼 ) = || v|| 2
+
+(𝜆𝑤 𝑙𝑒𝑎𝑟𝑛 )2
+
+h
+
+(1 − 𝑃 𝑠𝑠 )( 𝛼 + 𝜆 )2
+
++ 𝑃 𝑠𝑠 (𝛼 + 𝜆 + 𝑤 𝑙𝑒𝑎𝑟𝑛 )2i
+
+(20) Differentiating with respect to 𝛼 gives: 
+
+𝑑𝐸 𝑡𝑜𝑡𝑎𝑙 
+
+𝑑𝛼 = 2|| v|| 2
+
+(𝜆𝑤 𝑙𝑒𝑎𝑟𝑛 )2 [( 𝛼 + 𝜆 ) + 𝑃 𝑠𝑠 𝑤 𝑙𝑒𝑎𝑟𝑛 ] (21) Since all the relevant parameters (𝛼, 𝜆, 𝑤 𝑙𝑒𝑎𝑟𝑛 , 𝑃 𝑠𝑠 ) are positive, the derivative is strictly positive. An increase in alignment strength is therefore necessarily reflected in an increase in the total error. Utility is maximised in the limit as 𝛼 → 0+. Under the stated model assumptions, there is no specific, static level of alignment strength that avoids this cost. □
+
+As illustrated in Figure 11, the strict mono-tonicity established in Theorem 4.1 is driven by the compounded lag of both the user and the AI model. Under the stated assumptions, a highly statically aligned AI system exerts the influence that reduces the user’s independent ability to track the environmental drift. Both component errors grow quadratically with 𝛼 .       
+
+> 14 AI Value Alignment for Evolving Social Norms 0.0 0.2 0.4 0.6 0.8 1.0
+> Alignment Strength ( )
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> Expected Steady-State Error
+> Total Error Etotal
+> User Component
+> AI Component
+
+Figure 11 | Decomposition of the total expected steady-state error into the user and AI compo-nents as a function of alignment strength. 
+
+4.1.3. Sycophancy 
+
+In the composite utility model, there is a strong assumption that the probability of delegating to AI decays smoothly with the alignment error, via 
+
+𝑑 2 
+
+> 𝑎𝑙𝑖𝑔𝑛
+
+= || V𝑖 (𝑡 ) − M𝑖 (𝑡 )|| 2. This presumes that users can reliably infer the staleness of the AI value models, which is far from obvious, especially in case of AI sycophancy (Sharma et al., 2023). Let us introduce a sycophancy index 𝑠 ∈ [ 0, 1),which distorts the user’s perceived alignment er-ror: 
+
+𝑃 (use |align ) = exp 
+
+
+
+−𝛾 · ( 1 − 𝑠 ) · || V𝑖 − M𝑖 || 2
+
+(22) When 𝑠 = 0, users can reliably evaluate the AI value mode staleness and modulate their AI usage according to 𝛾 . Under high sycophancy, 𝑠 → 1,the AI is able to achieve a higher usage probability 
+
+𝑃 despite the misalignment of its value model. This makes the trust trap harder to escape. As shown in Figure 12, introducing the syco-phancy parameter 𝑠 scales the exponent in the usage probability, dampening the impact of the alignment error. When 𝑠 → 1, the effective penalty term approaches zero, causing the us-age probability to remain near 1.0 despite the increasing alignment error. 0.0 0.2 0.4 0.6 0.8 1.0 
+
+> Sycophancy Index ( s)
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+> 0.5
+> AI Learning Rate ( )
+> 0.00
+> 0.15
+> 0.30
+> 0.45
+> 0.60
+> 0.75
+> 0.90
+> Steady-State AI Usage Probability ( Pss )
+
+Figure 12 | Steady-state AI usage probability ( 𝑃 𝑠𝑠 )as a function of the sycophancy index ( 𝑠 ) and AI learning rate ( 𝜆 ). 
+
+4.2. Collective Dynamics 
+
+Here we focus specifically on the effects of the social topology and environmental heterogeneity. To isolate these effects, we assume a static envi-ronment ( ¤E = 0). The social coupling term roots our simulation in the classic DeGroot model of opinion dynamics (DeGroot, 1974), where indi-viduals update their held beliefs by continuous ad-justments towards the average of their peers, i.e. 
+
+V𝑖 (𝑡 + 1) = Í𝑗 𝑤 𝑖 𝑗 V𝑗 (𝑡 ). In continuous-time multi-agent networks (Olfati-Saber and Murray, 2004), this can be generalised to the following consensus protocol: ¤V𝑖 = Í𝑗 ∼𝑖 (V𝑗 − V𝑖 ) =⇒ ¤V = −𝐿 V,where V represents stacked values across all agents. Our framework represents this via the Laplacian term, applying a pull to the value rep-resentation of each user, towards the mean value in its social neighborhood. The resulting dynam-ics are given by: 
+
+¤V𝑖 = −𝑤 𝑠𝑜𝑐 ∑︁ 
+
+> 𝑗 ∼𝑖
+
+(V𝑖 −V𝑗 ) + 𝛼 (M𝑖 −V𝑖 ) + 𝑤 𝑙𝑒𝑎𝑟𝑛 (E𝑖 −V𝑖 )
+
+(23) We formulate this in compact matrix form us-ing the graph Laplacian 𝐿 and Kronecker prod-ucts. Let V, M, E ∈ ℝ𝑁 𝐷 be the stacked column vectors of all agent values, models, and environ-ments. 𝐿 ∈ ℝ𝑁 ×𝑁 is the unweighted, undirected social graph Laplacian, where rows sum to 0
+
+and the diagonal contains node degrees. 𝐼 𝑁 and 
+
+> 15 AI Value Alignment for Evolving Social Norms
+
+𝐼 𝐷 denote the identity matrices of dimensions 
+
+𝑁 and 𝐷 , respectively. In a static environment, the system eventually reaches a fixed equilibrium ( ¤V = ¤M = 0). In this limit, the AI model per-fectly catches up to the user ( M𝑠𝑠 = V𝑠𝑠 ), making the alignment term 𝛼 (M − V) vanish from the steady-state equation. The steady-state condition for the population values can then be expressed as: 
+
+(( 𝑤 𝑠𝑜𝑐 𝐿 + 𝑤 𝑙𝑒𝑎𝑟𝑛 𝐼 𝑁 ) ⊗ 𝐼 𝐷 ) V 𝑠𝑠 = 𝑤 𝑙𝑒𝑎𝑟𝑛 E (24) where 𝐼 is the identity matrix. Solving for V𝑠𝑠 :
+
+V𝑠𝑠 = 𝑤 𝑙𝑒𝑎𝑟𝑛 
+
+
+
+(𝑤 𝑠𝑜𝑐 𝐿 + 𝑤 𝑙𝑒𝑎𝑟𝑛 𝐼 𝑁 )−1 ⊗ 𝐼 𝐷 
+
+
+
+E (25) 
+
+4.2.1. Normative Mode Collapse 
+
+Here we investigate a non-uniform static environ-ment, where each user-AI pair 𝑖 has a unique op-timum E𝑖 ,. We provide the analysis of the asymp-totic behaviour of Equation 25 in the limits of social coupling. 
+
+Theorem 4.2 (Adaptation vs. Consensus Trade-off) . In a static, non-uniform environment, the system exhibits a fundamental trade-off be-tween individual adaptation and social consensus, controlled by the ratio 𝑤 𝑠𝑜𝑐 /𝑤 𝑙𝑒𝑎𝑟𝑛 .Proof. We analyse the limits of the steady-state solution V𝑠𝑠 :
+
+Case 1: Weak Social Coupling ( 𝑤 𝑠𝑜𝑐 → 0). 
+
+The Laplacian term vanishes. The mixing matrix approaches the identity: 
+
+lim   
+
+> 𝑤 𝑠𝑜𝑐 →0
+
+V𝑠𝑠 = 𝑤 𝑙𝑒𝑎𝑟𝑛 (𝑤 𝑙𝑒𝑎𝑟𝑛 𝐼 )−1E = E (26) In this limit, V𝑖,𝑠𝑠 → E𝑖 . Each agent therefore converges perfectly to their local environmental optimum, maximising individual adaptation. 
+
+Case 2: Strong Social Coupling ( 𝑤 𝑠𝑜𝑐 → ∞ ). 
+
+We utilise the spectral decomposition of the graph Laplacian 𝐿 = 𝑈 Λ𝑈 𝑇 , where Λ =
+
+diag (0, 𝜇 2, . . . , 𝜇 𝑁 ). The Laplacian has a single zero eigenvalue 𝜇 1 = 0 corresponding to the eigenvector 1 (consensus), while all other eigen-values 𝜇 𝑘 > 0. The second smallest eigenvalue, 
+
+𝜇 2 > 0, is known as the Fiedler value or alge-braic connectivity (Chung, 1997; Fiedler, 1973). In multi-agent consensus dynamics, the magni-tude of 𝜇 2 strictly bounds the speed at which the network converges. As 𝑤 𝑠𝑜𝑐 → ∞ , the terms cor-responding to 𝜇 𝑘 ≥ 𝜇 2 > 0 vanish. The inverse matrix converges to the projector of the null space of 𝐿 , scaled by 1/𝑤 𝑙𝑒𝑎𝑟𝑛 . The system collapses en-tirely onto the null space of 𝐿 , where the unit eigenvector is 1√𝑁 1𝑁 :
+
+lim  
+
+> 𝑤 𝑠𝑜𝑐 →∞
+
+𝑤 𝑙𝑒𝑎𝑟𝑛 (𝑤 𝑠𝑜𝑐 𝐿 + 𝑤 𝑙𝑒𝑎𝑟𝑛 𝐼 𝑁 )−1
+
+= 𝑈 diag (1, 0, . . . , 0)𝑈 𝑇 
+
+= 1
+
+𝑁 1𝑁 1𝑇 𝑁 
+
+Applying this projection to the stacked environ-ment vector E yields: 
+
+lim   
+
+> 𝑤 𝑠𝑜𝑐 →∞
+
+V𝑠𝑠 =
+
+ 1𝑁 1𝑇 𝑁 
+
+𝑁 ⊗ 𝐼 𝐷 
+
+
+
+E = 1𝑁 ⊗ 𝐸 (27) where ¯E = 1
+
+> 𝑁
+
+Í E𝑖 is the global average of the environment. □
+
+The severity of this normative mode collapse can be quantified with respect to the degree of social coupling. Let the expected population-level maladaptation be defined as the mean squared error across all users: 𝑀𝑆𝐸 = 1
+
+> 𝑁
+
+Í𝑁 𝑖 =1 || V𝑖,𝑠𝑠 − E𝑖 || 2.Under the limit of strong social coupling, where we let 𝑤 𝑠𝑜𝑐 → ∞ , the population’s values collapse to the global mean as V𝑖,𝑠𝑠 = ¯E. Substituting this into the error function yields: 
+
+𝑀𝑆𝐸 𝑐𝑜𝑙𝑙𝑎𝑝𝑠𝑒 = 1
+
+𝑁 
+
+> 𝑁
+
+∑︁ 
+
+> 𝑖 =1
+
+|| ¯E − E𝑖 || 2 = 𝜎 2 
+
+> E
+
+(28) Therefore, the minimal expected utility loss under normative mode collapse equals the nor-mative variance 𝜎 2 
+
+> E
+
+of the optimal environments. More diverse and culturally heterogeneous soci-eties would therefore see an increase in 𝜎 2
+
+> E
+
+The implications of the theorem are visualised in Figure 13. By plotting the exact steady-state analytical solution for a system of two distinct groups, with local optima at +1 and −1, we ob-serve the normative collapse. When independent         
+
+> 16 AI Value Alignment for Evolving Social Norms 10 210 110 010 110 2
+> Ratio of Social Coupling to Learning ( wsoc /wlearn )
+> 1.00
+> 0.75
+> 0.50
+> 0.25
+> 0.00
+> 0.25
+> 0.50
+> 0.75
+> 1.00
+> Asymptotic Value
+> Normative Mode Collapse
+> Group 1 Steady-State ( V1, ss )
+> Group 2 Steady-State ( V2, ss )
+> Global Mean ( E)
+
+Figure 13 | Demonstration of normative mode collapse. As the ratio of social coupling to inde-pendent learning increases, distinct sub-cultures are forced into a maladaptive global mean. learning dominates ( 𝑤 𝑠𝑜𝑐 /𝑤 𝑙𝑒𝑎𝑟𝑛 → 0), groups are able to perfectly adapt to their respective lo-cal niches. However, with an increase in social connectivity, the modes rapidly collapse onto the Laplacian null space. In the limit of strong social coupling ( 𝑤 𝑠𝑜𝑐 ≫
+
+𝑤 𝑙𝑒𝑎𝑟𝑛 ), the operation of the graph Laplacian sup-presses all non-zero eigenvalues ( 𝜇 𝑘 > 0), which represent the local cultural variance within the modeled population. By projecting the system state onto the null space of 𝐿 , the individual val-ues are forced to converge to the global average consensus. The network’s algebraic connectivity 
+
+𝜇 2 dictates the rate at which this homogeneity is reached. In highly connected topologies, such as dense random graphs or globalised social media plat-forms, a large Fiedler value leads to a more rapid erasure of local variance (Olfati-Saber and Mur-ray, 2004). Real social networks maintain sub-stantial variance, highlighting the importance of diversity in preventing systemic maladaptation. These steady-state derivations presume a uniform, perfectly mixed population, and scale-free net-works may exhibit different properties, due to the outsized influence of highly connected nodes. We discuss these alternative formulations in the Appendix. 
+
+4.2.2. Anchoring 
+
+The somewhat "sluggish" recovery shown in Fig-ure 5 can be inferred from the continuous-time error dynamics of the proposed model. Under normative shocks, the environment rapidly shifts from E𝑜𝑙𝑑 to E𝑛𝑒𝑤 , leading to the following value update equation for the user: 
+
+¤V = 𝑤 𝑙𝑒𝑎𝑟𝑛 (E𝑛𝑒𝑤 − V) + 𝛼 (M − V) (29) In the immediate aftermath of the normative shock, the AI value model M remains tied to the previous equilibrium ( M ≈ E𝑜𝑙𝑑 ). The alignment strength term would, through its role as a modu-lator of the user value update, 𝛼 (M − V), oppose the immediate user value adaptation following the shock. Theorem 4.1 shows that increasing 𝛼 increases the steady-state tracking error within the model. For sufficiently high 𝛼 , the system’s post-shock equilibrium utility may be unable to reach the desired recovery threshold. The population may potentially enter persistent low-utility state. While the derivations above assume a constant environment drift E(𝑡 ) = v𝑡 , some of the insights also apply to the punctuated equilibrium regime discussed in Section 3.2. The system’s eigenvalues determine both the magnitude of the lag during smooth environmental drift and the recovery time following an abrupt normative change. By mapping the recovery time derived from the system’s eigenvalues (Figure 14), we establish a correspondence with the empirical recovery times observed in our simulations (Figure 8). When the AI’s learning rate is significantly lower than the alignment strength, the dominant eigenvalue is pushed toward zero, driving the population towards a persistent low-utility regime. 
+
+4.3. Endogenous Environmental Drift 
+
+Real normative environments are not purely ex-ogenous, they are not driven exclusively by ex-ternal factors outside of our control. The envi-ronment in human societies is co-constructed by people, and it is natural to consider an exten-sion of the model that enables us to capture the       
+
+> 17 AI Value Alignment for Evolving Social Norms 0.0 0.1 0.2 0.3 0.4 0.5
+> Alignment Strength ( )
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+> 0.5
+> AI Learning Rate ( )
+> Theoretical Recovery Time
+> 10 1
+> 1.12884 × 10 2
+> Theoretical Time Constant (  )
+
+Figure 14 | Theoretical recovery time ( 𝜏 ) derived from the dominant eigenvalue of the system’s characteristic equation. The singularity at low 
+
+𝜆 corresponds to a regime of diverging recovery time. influence of the population on the normative envi-ronment. We can reformulate the environmental drift as a coupled differential equation, driven both by an exogenous technological or ecological drift ( 𝑣 𝑒𝑥𝑜 ), as well as a pull toward the popula-tion’s consensus norms: 
+
+¤E(𝑡 ) = 𝑣 𝑒𝑥𝑜 + 𝜅 𝐸 
+
+1
+
+𝑁 
+
+> 𝑁
+
+∑︁ 
+
+> 𝑖 =1
+
+V𝑖 (𝑡 ) − E(𝑡 )
+
+!
+
+(30) where 𝜅 𝐸 represents institutional responsive-ness - the pace at which our institutions adapt to this consensus view. Under this extension, the effect of value lock-in is compounded. Instead of slowing the population’s adaptation to an inde-pendent environment, the effects can propagate back to the environment itself, slowing down the pace of institutional and environmental evolution. We refer to this mutual deceleration as a double stagnation effect .This steady-state deceleration can be derived from the coupled system. By setting ¤V = ¤M = ¤E =
+
+v𝑠𝑠 and solving the resultant equations, we find that the steady-state drift velocity of the coupled environment v𝑠𝑠 is given by: 
+
+v𝑠𝑠 = v𝑒𝑥𝑜 
+
+1 + 𝜅 𝐸 
+
+> 𝑤 𝑙𝑒𝑎𝑟𝑛
+
+ 1 + 𝛼 𝜆 
+
+ (31) 0.0 0.2 0.4 0.6 0.8 1.0      
+
+> Alignment Strength ( )
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> Steady-State Societal Progress Rate ( vss )
+> The 'Double Stagnation' Effect
+> E= 0.0 (Purely Exogenous)
+> E= 0.01 (Slow Institutions)
+> E= 0.05 (Coupled Institutions)
+> E= 0.2 (Highly Responsive)
+
+Figure 15 | Steady-state rate of societal progress (𝑣 𝑠𝑠 ) as a function of alignment strength ( 𝛼 ) and institutional responsiveness ( 𝜅 𝐸 ). Figure 15 illustrates this deceleration, showing that when the environment is exogenous ( 𝜅 𝐸 = 0), it advances at a constant rate v𝑒𝑥𝑜 regardless of the population’s value lag. However, as the cou-pling 𝜅 𝐸 increases, a higher alignment strength 𝛼 
+
+reduces the steady-state velocity v𝑠𝑠 of the entire system. By anchoring users to historical values, the AI assistant’s drag propagates through user consensus to the institutions, dampening the pace of change in the broader social environment. As visualised in Figure 16, when institutional progress is coupled to user values, the anchoring effect of AI alignment acts as a systematic drag on the entire system. Having users anchored to their historical values directly slows down the rate of environmental and institutional change. 
+
+4.4. Adaptive Alignment 
+
+The observed structural challenges for static align-ment under environmental change may poten-tially be addressed by allowing the alignment strength to vary over time: 
+
+¤𝛼 (𝑡 ) = −𝜂 
+
+
+
+𝛼 (𝑡 ) · || V(𝑡 ) − E(𝑡 )|| 2
+
++ 𝜅 (𝛼 𝑡𝑎𝑟𝑔𝑒𝑡 − 𝛼 (𝑡 )) 
+
+(32) Here, the alignment strength decays at rate 𝜂 
+
+proportional to the user’s tracking error. Align-ment strength would therefore be modulated to reduce its pull in situations when the user needs 
+
+> 18
+
+AI Value Alignment for Evolving Social Norms 0 250 500 750 1000 1250 1500 1750 2000         
+
+> Simulation Steps
+> 2.5
+> 0.0
+> 2.5
+> 5.0
+> 7.5
+> 10.0
+> 12.5
+> 15.0
+> Position in Value Space
+> Exogenous Drift
+> Environment E(= 0)
+> Population Mean ( = 0)
+> Environment E(= 0.8)
+> Population Mean ( = 0.8)
+> Lost Progress
+
+Figure 16 | The Double Stagnation Effect. The x-axis represents elapsed simulation time. To map the 𝐷 -dimensional state to a scalar trajectory, the y-axis tracks the population’s position projected onto the primary axis of exogenous drift. The sim-ulation initialises the population with a historical lag (starting at −2.0). In a highly adaptable popu-lation, the simulated agent society rapidly closes the gap, allowing the consensus-driven environ-ment to seamlessly track the underlying exoge-nous potential. Conversely, under strong align-ment, there is a drastic increase in recovery time, with a negative impact on institutional progress. more time to adapt to the changing environment. When the environment stabilizes and the user has caught up, 𝛼 relaxes back to the baseline level. Figure 17 simulates the updated differential equations under a sudden normative shock, con-trasting the results with those arrived at for a static value of 𝛼 = 0.8. In the static alignment case, the system effectively traps the user in an obsolete value set. In contrast, the adaptive align-ment regime adjusts to the user’s environmen-tal tracking error, and depreciates the alignment strength 𝛼 (𝑡 ), thereby releasing the user from the historical anchor. It is possible to take this idea further and adjust the behaviour of the system so as to make the AI’s learning rate dynamic as well, enabling the AI to rapidly readjust to updated user values. We may model this as: 
+
+𝜆 (𝑡 ) = 𝜆 baseline + 𝜂 𝜆 || V(𝑡 ) − E(𝑡 )|| 2 (33) 0.00           
+
+> 0.25
+> 0.50
+> 0.75
+> 1.00
+> 1.25
+> 1.50
+> 1.75
+> 2.00
+> Position in
+> Value Space
+> Normative Shock
+> Recovery from Normative Shock: Static vs. Adaptive Alignment
+> Environment E(t)
+> User Value (Static = 0.8)
+> User Value (Adaptive (t))
+> 020 40 60 80 100
+> Time Step ( t)
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> Alignment
+> Strength (  )
+> Static = 0.8
+> Adaptive (t)
+
+Figure 17 | Continuous-time simulation of a nor-mative shock comparing static alignment against the introduced adaptive alignment regime. To map the ℝ𝐷 dynamics to a scalar trajectory, the top panel tracks the respective positions projected onto the specific directional vector of the norma-tive shock. The bottom panel shows the dynamic adjustment of the alignment strength 𝛼 (𝑡 ).As illustrated in Figure 18, if the AI’s learning rate remains static and low during the environ-mental shift, its internal model may get stranded in the vicinity of the pre-shock equilibrium. How-ever, if the AI updates are accelerated accordingly, post-shock utility regression is successfully miti-gated. 
+
+## 5. Discussion 
+
+The model introduced in this paper aims to for-malise a temporal dimension of AI alignment in personal AI assistants. Established approaches to AI alignment usually treat the alignment target as a fixed objective, without explicitly accounting for the possibility of changing values and prefer-ences over time. The capacity for enabling per-sonal growth is also not universally present in personal AI assistants. We introduce a formal simplified model of pop-ulations of users interacting with AI assistants, acting within an evolving normative environment, under a composite utility model. Our proposed 
+
+19 AI Value Alignment for Evolving Social Norms 
+
+Figure 18 | Continuous-time simulation compar-ing two adaptive alignment mechanisms during a normative shock. Top: Agent and AI model trajectories projected onto the directional vector of the normative shock. Middle: The dynamic adjustment of alignment strength ( 𝛼 ). Bottom: 
+
+The dynamic adjustment of the AI learning rate (𝜆 ). In the first strategy (orange), modulating 𝛼 
+
+without updating 𝜆 leaves the AI model’s inter-nal state stranded at the historical equilibrium, introducing a secondary restorative pull once the agent adapts. In the second strategy (blue), si-multaneously scaling 𝜆 alongside the reduction in 𝛼 allows the AI model to more rapidly track the user’s adaptation to the changing environment. model is extensible and we discuss several rele-vant model extensions, contrasting their proper-ties. A theme arising in our model is that highly personalized AI assistants capable of internally representing their user’s historically held values may inadvertently slow down the adaptation of their respective users to a changing social norma-tive environment. We postulate that the identified deficiencies may be addressed by systems that are temporally adaptive, reasoning-equipped, plural-istic, and agency-preserving. 
+
+5.1. Continuous Personalization 
+
+Personalization in AI assistants is a continuous process, as each interaction enables AI agents to update their user models, as users state or reveal their preferences over time. Through repeated use, AI assistants also influence user values (Ash-ton and Franklin, 2022; Franklin et al., 2022). Given that AI systems may impact personal devel-opment, it is important to preserve conditions for independent personal growth. Paul (2014) argues that transformative experi-ences fundamentally alter a person’s values, but are epistemically inaccessible from an agent’s cur-rent standpoint. An AI that anchors users to their present values risks foreclosing precisely the expe-riences through which such growth occurs. (Petti-grew, 2019) provides a formal framework for this concern through the Aggregate Utility Solution: rational choice for a temporally extended person should be guided by a weighted aggregation of the values of past, present, and anticipated future selves. Our monotonicity result (Theorem 4.1) can be interpreted as a formal consequence of violating this principle: a system with 𝛼 > 0 that learns exclusively from historical preferences as-signs all weight to the user’s past selves and zero weight to their future selves. This produces pre-cisely the kind of temporal bias that Pettigrew’s framework identifies as irrational. Conversely, adaptive alignment (Section 4.4) - which loosens the feedback loop in times of normative change -can be seen as one possible instantiation of Pet-tigrew’s prescription by creating space for value exploration. An adaptive approach appears sensible, es-
+
+> 20 AI Value Alignment for Evolving Social Norms
+
+pecially as the risks of static alignment are known (Carroll et al., 2024; Kanwal and Tran, 2026), and as similar issues have been brought up within research on preference change in rec-ommender systems (Ashton and Franklin, 2022; Franklin et al., 2022). Our framework considers these issues in relation to populations embedded in social networks and subject to heterogeneous environmental pressure. Across varied experi-mental conditions, stronger anchoring to histori-cal preferences systematically degrades popula-tion utility. Our model permits for a simple so-lution to this, via rapid updates to the internal AI model of user values (see Section 3.2), as the AI learning rate may be able to offset the detri-mental effects and partially prevent value lock-in. Realistically, however, rapid adjustments may also lead to various undesirable oscillatory behaviours, so this abstract suggestion may not prove to be particularly easy to reliably operationalize. 
+
+5.2. Trust 
+
+Value lock-in observed in our model may be par-tially attributed to misplaced trust and what we deem the trust trap . In this scenario, the assistant remains closely aligned to the user, creating a positive feedback loop. Strong static personaliza-tion and alignment helps develop trust, leading to a high rate of AI use - a specific instantiation of automation bias (Buçinca et al., 2021; Parasur-aman and Riley, 1997; Skitka et al., 1999) - and consequently a high degree of AI influence. Yet, this influence locks the user into the historical preferences learnt by the AI. Sycophancy is another major concern. Syco-phantic AI agents may distort the perceived align-ment gap, suppressing the necessary signal that would otherwise have led to corrective actions from the user. Sycophancy is pervasive in RLHF-trained models (Sharma et al., 2023), known to scale with model size (Perez et al., 2023), and present in models that otherwise exhibit warmth and empathy (Ibrahim et al., 2025). More re-cently, sycophancy in language models has been shown capable of reinforcing expressed opinions, leading to localized echo chambers (Cheng et al., 2025; Nehring et al., 2024). The persuasive ca-pacity of these systems is substantial: (Salvi et al., 2025) find that GPT-4 with personalisation sig-nificantly outperforms human debaters in shift-ing interlocutors’ stated positions, while (Costello et al., 2024) demonstrate that AI-generated con-versations can durably alter deeply held beliefs. Human control requires both the ability to over-ride the AI agent and the capacity to detect when an override is necessary; a capacity that both au-tomation bias and sycophancy may reduce. If this dynamic scales across a population of AI users, the aggregate effect may be the kind of gradual, self-reinforcing disempowerment that Kulveit et al. (2025) identify. This is not the result of an individ-ual power-seeking AI, but a result of the structural dynamics of static alignment gradually reducing the conditions for meaningful human oversight. 
+
+5.3. Population-Level Effects 
+
+Individual and dyadic dynamics compound at the population level, producing emergent phenom-ena. Our population-level analysis constitutes the paper’s distinctive contribution relative to exist-ing single-agent formalisms (Carroll et al., 2024, 2022), complementing prior work on AI medi-ated collective opinion formation (Tsirtsis et al., 2026). We identify the risk of normative mode collapse within user populations (Theorem 4.2), whereby values converge to a consensus that is suboptimal for most or all sub-groups. This would be particu-larly detrimental to culturally diverse communi-ties, although such communities may also prove more resilient to these effects. Similar homoge-nization effects have been previously observed in AI alignment approaches (Santurkar et al., 2023; Zhang et al., 2025), and it has been argued that alignment should accommodate locally coherent normative communities rather than converging on a single standard (Leibo et al., 2025). While our analysis focuses on the bottom-up risks of personalization, through our framework we also highlight some of the vulnerabilities that can be seen in top-down alignment systems. The developer-defined values model extension (Ap-pendix B.4) illustrates how system dynamics may be affected by the introduction of centralised val-ues expressed via a constitutional vector C. In 
+
+> 21 AI Value Alignment for Evolving Social Norms
+
+that scenario, we demonstrate two paths towards normative monoculture: social coupling and con-stitutional pull (Figure 21). The latter shows that developer-defined values introduce a persis-tent centralising force that impacts sub-cultural distinctiveness, even in the absence of strong so-cial coupling. We view the long-term geopolitical and sociological implications of top-down con-stitutional AI alignment as an important unan-swered question for future work. Constitutions conceived as families of context-indexed princi-ples - enabling what Sorensen et al. (2024) term “steerable pluralism” - perhaps offer a path to-wards avoiding normative collapse. When the normative environment is treated as endogenous - co-constructed by the population (Section 4.3) - value lock-in manifests as a larger risk. Aside from the risk of users being locked into a maladaptive state, there is additionally a sys-temic risk of the broader societal evolution being slowed, should the normative environment itself be subject to the same anchoring effects. We refer to this phenomenon as “double stagnation”. Dou-ble stagnation has structural parallels in the eco-nomics of institutional path dependence. Arthur (1994) showed that this can cause early stochastic events to permanently determine a system’s tra-jectory, a mechanism that North (1990) applied to institutions, arguing that high transaction costs make deviation from suboptimal arrangements prohibitively costly. In our framework, the insti-tution → user → AI → institution feedback cycle creates a compounding deceleration that may be harder to escape than individual-level lock-in. We further show that these risks are exacer-bated in scale-free social networks, where value lock-in at highly connected hub nodes propagates disproportionately through the rest of the popula-tion (Appendix B.2). Additionally, synthetic data loops may enable AI-to-AI coupling that bypasses human social networks, allowing AI value models to converge with each other faster than they track their respective users (Appendix B.5). 
+
+5.4. Computational Foresight 
+
+Agent-based models have a long history of reveal-ing how simple local rules give rise to complex macroscopic dynamics. The lightweight math-ematical models introduced in this paper allow rapid iteration, identifying which design choices matter and in which direction they push. The structural findings reported here can be used to focus more expensive evaluations on the re-gions of parameter space where risks concentrate. Lightweight models can be used for hypothesis generation, while more costly generative agent-based simulations (Park et al., 2023) then be-ing applied for ecological validity and richer be-havioural dynamics. The experiments in this paper suggest sev-eral directions for follow-ups using generative agent-based simulation frameworks such as Con-cordia (Vezhnevets et al., 2023). For exam-ple, the sycophancy dynamics showcased in our analysis could be studied with sycophantic LLM agents, whereas normative mode collapse could be demonstrated in populations of LLM agents initialised with diverse cultural profiles. Value lock-in under normative shocks could be explored by exposing populations of LLM agents to sudden shifts in social conditions. 
+
+5.5. Limitations 
+
+Our model involves deliberate simplifications that limit the generalisability of the results. 
+
+Structural. Values are represented as continu-ous vectors with linear update dynamics, which may not be reflective of all types of real-world be-lief change. Polarisation, backfire effects, hystere-sis, are just some examples that may potentially amplify or attenuate the identified value lock-in effects. AI alignment strength, as well as some of the other scalar quantities used in the model, may not be scalar in practice, as they likely don’t apply uniformly across all values. Further, the adaptive alignment mechanism proposed in Sec-tion 4.4 modulates alignment strength based on the tracking error. In practice, this is a modelling abstraction that would need to be approximated via proxy signals. 
+
+Parametric. We focus on scenarios where the involved agents share parametrisations. This is a strong assumption that is unlikely to be met in reality, where there is a variety of AI assistants, 
+
+> 22 AI Value Alignment for Evolving Social Norms
+
+exhibiting different properties. Automation bias and other relevant factors on the human side are equally varied in the real world. Furthermore, we focus only on populations where all users have access to AI assistants - which is admittedly unre-alistic and done for the sake of simplicity. All of these assumptions are possible to relax in simula-tions, and worth exploring in greater detail - but were out of scope for this study. 
+
+Normative direction. Our utility function as-sumes that the environment represents the nor-matively appropriate direction of change. While this may be true in terms of short-term utility, there are cases when this is not particularly ap-propriate, in case of potentially harmful shifts, leading to e.g. the erosion of human rights pro-tections. Stronger alignment to historical pref-erences may act as a protective measure against some types of catastrophic circumstances. Our model does not distinguish between adaptive and harmful drift, so we acknowledge this as a notable limitation. 
+
+Temporal. Our simulations keep the agent pop-ulation fixed, without introducing or removing agents. This fails to account for the impact of gen-erational replacement on establishing norms in human societies, and is therefore a reasonable approximation only at intra-generational time scales. What we mean by long-term should there-fore be interpreted accordingly. 
+
+Ecological. In our experiments, we focus mainly on simple network topologies - random graphs and dynamic kNN graphs. More analysis is needed to account for the effects of scale-free degree distributions, platform-mediated interac-tion, or multi-layered social structures. The base model treats the environment as exogenous; the endogenous formulation (Section 4.3) extends this, but still fails to account for a fragmented, multi-dimensional normative landscape. Future work could address these limitations either through further extensions of the model - we have demonstrated several such extensions within the Appendix of this report - and the as-sociated simulation framework, or by moving to-wards richer, more realistic simulations involving LLM-based agents that can capture greater com-plexity of interactions. The lightweight models introduced here are intended to serve as a pre-cursor to such agentic simulations, narrowing the hypothesis space before committing to more com-putationally expensive evaluations. Either way, simulations are meant to inform real-world stud-ies and cannot act as a replacement for studying the effects of technology adoption. Through our model, we seek to highlight the key questions to ask, and potential effects that may be observed should proper care not be taken in the design of future sociotechnical systems. 
+
+## 6. Conclusion 
+
+This paper investigates the population-level con-sequences of aligning personalised AI assistants to their users’ historical preferences in a changing normative environment. Through a combination of agent-based simulations, and theoretical anal-ysis of the proposed set of mathematical models, we characterize the emerging long-term dynam-ics. We identify value lock-in and normative mode collapse as the main associated risks. To mitigate these risks, we argue that practi-cal AI alignment needs to be sufficiently adaptive to enable human value evolution in a changing society. AI alignment needs to therefore be tempo-rally dynamic, reasoning-equipped, contextually sensitive, and agency-preserving. People should maintain freedom in how they choose to develop their views, without strict impositions from their personal AI assistants. AI alignment methods should be centered around the core objective of nurturing this capacity. Beyond these specific findings, this work illus-trates the broader utility of macroscopic modeling for sociotechnical foresight. While the develop-ment of practical solutions should ultimately be informed by large-scale, high-fidelity, multi-agent social simulations in diverse and dynamic envi-ronments - macroscopic models may prove to be a highly effective precursor, enabling rapid ex-perimentation towards preliminary insights. By bridging the gap between theory and complex agentic simulations, social physics helps us fur-ther our understanding of possible AI futures. 
+
+> 23 AI Value Alignment for Evolving Social Norms
+
+## 7. Acknowledgements 
+
+We would like to thank all of our colleagues who helped review and shape this manuscript, espe-cially Larisa Markeeva, Tom Everitt, and Sasha Vezhnevets. 
+
+## References 
+
+J. Adams, B. Hu, E. Veenhuis, D. Joy, B. Ravichan-dran, A. Bray, A. Hoogs, and A. Basharat. Steerable pluralism: Pluralistic alignment via few-shot comparative regression, 2025. URL 
+
+https://arxiv.org/abs/2508.08509 .E. Anderson. Value in ethics and economics . Har-vard University Press, 1995. Anthropic. Claude’s character, 2024. URL https://www.anthropic.com/ research/claude-character .W. B. Arthur. Increasing returns and path depen-dence in the economy . University of michigan Press, 1994. H. Ashton and M. Franklin. The problem of be-haviour and preference manipulation in ai sys-tems. In CEUR workshop proceedings , volume 3087. CEUR Workshop Proceedings, 2022. A. Askell, J. Carlsmith, C. Olah, J. Kaplan, H. Karnofsky, and Anthropic. Claude’s consti-tution (january 2026), 2026. K. J. Åström. Introduction to stochastic control theory . Courier Corporation, 2012. R. Axelrod. The dissemination of culture: A model with local convergence and global polarization. 
+
+Journal of Conflict Resolution , 41(2):203–226, 1997. Y. Bai, A. Jones, K. Ndousse, A. Askell, A. Chen, N. DasSarma, D. Drain, S. Fort, D. Ganguli, T. Henighan, et al. Training a helpful and harmless assistant with reinforcement learn-ing from human feedback. arXiv preprint arXiv:2204.05862 , 2022a. Y. Bai, S. Kadavath, S. Kundu, A. Askell, J. Kernion, A. Jones, A. Chen, A. Goldie, A. Mirhoseini, C. McKinnon, et al. Constitutional AI: Harm-lessness from AI feedback. arXiv preprint arXiv:2212.08073 , 2022b. C. Bicchieri. The grammar of society: The nature and dynamics of social norms . Cambridge Uni-versity Press, 2005. R. Bommasani, D. A. Hudson, E. Adeli, R. Altman, S. Arora, S. von Arx, M. S. Bernstein, J. Bohg, A. Bosselut, E. Brunskill, et al. On the oppor-tunities and risks of foundation models. arXiv preprint arXiv:2108.07258 , 2021. R. Boyd and P. J. Richerson. Culture and the evo-lutionary process . University of Chicago press, 1985. R. Boyd and P. J. Richerson. The origin and evolu-tion of cultures . Oxford University Press, 2005. Z. Buçinca, M. B. Malaya, and K. Z. Gajos. To trust or to think: cognitive forcing functions can reduce overreliance on AI in AI-assisted decision-making. Proceedings of the ACM on Human-computer Interaction , 5(CSCW1):1–21, 2021. M. Carroll, D. Foote, A. Siththaranjan, S. Russell, and A. Dragan. AI alignment with changing and influenceable reward functions. arXiv preprint arXiv:2405.17713 , 2024. M. D. Carroll, A. Dragan, S. Russell, and D. Hadfield-Menell. Estimating and penaliz-ing induced preference shifts in recommender systems. In International Conference on Machine Learning , pages 2686–2708. PMLR, 2022. S. Casper, X. Davies, C. Shi, T. K. Gilbert, J. Scheurer, J. Rando, R. Freedman, T. Korbak, D. Lindner, P. Freire, et al. Open problems and fundamental limitations of reinforcement learning from human feedback. arXiv preprint arXiv:2307.15217 , 2023. A. J. Chaney, B. M. Stewart, and B. E. Engelhardt. How algorithmic confounding in recommen-dation systems increases homogeneity and de-creases utility. In Proceedings of the 12th ACM conference on recommender systems , pages 224– 232, 2018. 
+
+> 24 AI Value Alignment for Evolving Social Norms
+
+M. Cheng, S. Yu, C. Lee, P. Khadpe, L. Ibrahim, and D. Jurafsky. ELEPHANT: Measuring and understanding social sycophancy in llms. arXiv preprint arXiv:2505.13995 , 2025. B. Christian. The alignment problem: Machine learning and human values . WW Norton & Com-pany, 2020. P. F. Christiano, J. Leike, T. Brown, M. Martic, S. Legg, and D. Amodei. Deep reinforcement learning from human preferences. Advances in Neural Information Processing Systems , 30, 2017. F. R. Chung. Spectral graph theory , volume 92. American Mathematical Soc., 1997. V. Conitzer, R. Freedman, J. Heitzig, W. H. Hol-liday, B. M. Jacobs, N. Lambert, M. Mossé, E. Pacuit, S. Russell, H. Schoelkopf, et al. Social choice should guide AI alignment in dealing with diverse human feedback. arXiv preprint arXiv:2404.10271 , 2024. T. H. Costello, G. Pennycook, and D. G. Rand. Durably reducing conspiracy beliefs through di-alogues with AI. Science , 385(6714):eadq1814, 2024. G. Deffuant, D. Neau, F. Amblard, and G. Weis-buch. Mixing beliefs among interacting agents. 
+
+Advances in Complex Systems , 3(01n04):87–98, 2000. M. H. DeGroot. Reaching a consensus. Journal of the American Statistical association , 69(345): 118–121, 1974. E. Durmus, K. Nguyen, T. I. Liao, N. Schiefer, A. Askell, A. Bakhtin, C. Chen, Z. Hatfield-Dodds, D. Hernandez, N. Joseph, et al. To-wards measuring the representation of subjec-tive global opinions in language models. arXiv preprint arXiv:2306.16388 , 2023. P. Eckersley. Impossibility and uncertainty theo-rems in ai value alignment (or why your agi should not have a utility function). arXiv preprint arXiv:1901.00064 , 2018. K. Ethayarajh, W. Xu, N. Muennighoff, D. Juraf-sky, and D. Kiela. KTO: Model alignment as prospect theoretic optimization. arXiv preprint arXiv:2402.01306 , 2024. M. Fiedler. Algebraic connectivity of graphs. 
+
+Czechoslovak mathematical journal , 23(2):298– 305, 1973. M. Franklin, H. Ashton, R. Gorman, and S. Arm-strong. Recognising the importance of prefer-ence change: A call for a coordinated multidis-ciplinary research effort in the age of ai. arXiv preprint arXiv:2203.10525 , 2022. N. E. Friedkin and E. C. Johnsen. Social influence and opinions. Journal of mathematical sociology ,15(3-4):193–206, 1990. I. Gabriel. Artificial intelligence, values, and align-ment. Minds and machines , 30(3):411–437, 2020. I. Gabriel and V. Ghazavi. The challenge of value alignment. The Oxford handbook of digital ethics , pages 336–355, 2022. L. Gao, J. Schulman, and J. Hilton. Scaling laws for reward model overoptimization. In Interna-tional Conference on Machine Learning , pages 10835–10866. PMLR, 2023. M. J. Gelfand, J. L. Raver, L. Nishii, L. M. Leslie, J. Lun, B. C. Lim, L. Duan, A. Almaliach, S. Ang, J. Arnadottir, et al. Differences between tight and loose cultures: A 33-nation study. science ,332(6033):1100–1104, 2011. K. Goddard, A. Roudsari, and J. C. Wyatt. Au-tomation bias: a systematic review of frequency, effect mediators, and mitigators. Journal of the American Medical Informatics Association , 19 (1):121–127, 2012. J. Graham, J. Haidt, S. Koleva, M. Motyl, R. Iyer, S. P. Wojcik, and P. H. Ditto. Moral founda-tions theory: The pragmatic validity of moral pluralism. In Advances in Experimental Social Psychology , volume 47, pages 55–130. Elsevier, 2013. R. Hegselmann and U. Krause. Opinion dynamics and bounded confidence: models, analysis and simulation. Journal of Artificial Societies and Social Simulation , 2002. 
+
+> 25 AI Value Alignment for Evolving Social Norms
+
+J. Henrich. The secret of our success: How culture is driving human evolution, domesticating our species, and making us smarter. In The secret of our success . Princeton University Press, 2015. J. Henrich, S. J. Heine, and A. Norenzayan. The weirdest people in the world? Behavioral and Brain Sciences , 33(2-3):61–83, 2010. S. Huang, D. Siddarth, L. Lovitt, T. I. Liao, E. Dur-mus, A. Tamkin, and D. Ganguli. Collective constitutional AI: Aligning a language model with public input. In Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency , pages 1395–1417, 2024. L. Ibrahim, F. S. Hafner, and L. Rocher. Training language models to be warm and empathetic makes them less reliable and more sycophantic. 
+
+arXiv preprint arXiv:2507.21919 , 2025. R. F. Inglehart. Cultural evolution: People’s moti-vations are changing, and reshaping the world, 2020. M. Jakesch, A. Bhat, D. Buschek, L. Zalmanson, and M. Naaman. Co-writing with opinionated language models affects users’ views. In Pro-ceedings of the 2023 CHI conference on human factors in computing systems , pages 1–15, 2023. J. Ji, T. Qiu, B. Chen, B. Zhang, H. Lou, K. Wang, Y. Duan, Z. He, J. Zhou, Z. Zhang, et al. AI align-ment: A comprehensive survey. arXiv preprint arXiv:2310.19852 , 2023. D. Kalimeris, S. Bhagat, S. Kalyanaraman, and U. Weinsberg. Preference amplification in rec-ommender systems. In Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discov-ery & Data Mining , pages 805–815, 2021. M. Kanwal and C. Tran. Constructive alignment: Governing preference dynamics in human-ai in-teraction, 2026. URL https://arxiv.org/ abs/2607.00001 .D. Krueger, T. Maharaj, and J. Leike. Hidden incentives for auto-induced distributional shift. 
+
+arXiv preprint arXiv:2009.09153 , 2020. J. Kulveit, R. Douglas, N. Ammann, D. Turan, D. Krueger, and D. Duvenaud. Gradual dis-empowerment: Systemic existential risks from incremental AI development. arXiv preprint arXiv:2501.16946 , 2025. J. Z. Leibo, A. S. Vezhnevets, M. Diaz, J. P. Aga-piou, W. A. Cunningham, P. Sunehag, J. Haas, R. Koster, E. A. Duéñez-Guzmán, W. S. Isaac, G. Piliouras, S. M. Bileschi, I. Rahwan, and S. Osindero. A theory of appropriateness with applications to generative artificial intelligence, 2024. URL https://arxiv.org/abs/2412. 19010 .J. Z. Leibo, A. S. Vezhnevets, W. A. Cunning-ham, S. Krier, M. Diaz, and S. Osindero. Soci-etal and technological progress as sewing an ever-growing, ever-changing, patchy, and poly-chrome quilt, 2025. URL https://arxiv. org/abs/2505.05197 .D. Lewis. Convention: A philosophical study . John Wiley & Sons, 2008. W. MacAskill. What we owe the future: The sunday times bestseller . Simon and Schuster, 2022. N. Marchal, S. Chan, M. Franklin, M. Revel, G. Keeling, R. Fischli, B. Chandra, and I. Gabriel. Architecting trust in artificial epis-temic agents. arXiv preprint arXiv:2603.02960 ,2026. J. Medina. The epistemology of resistance: Gender and racial oppression, epistemic injustice, and the social imagination . Oxford University Press, 2013. I. Morris. Foragers, farmers, and fossil fuels: How human values evolve . Princeton University Press, 2015. J. Nehring, A. Gabryszak, P. Jürgens, A. Burchardt, S. Schaffer, M. Spielkamp, and B. Stark. Large language models are echo chambers. In Pro-ceedings of the 2024 Joint International Con-ference on Computational Linguistics, Language Resources and Evaluation , pages 10117–10123, 2024. D. C. North. Institutions, institutional change and economic performance. Cambridge University Press , 1990. K. Ogata. Modern control engineering . Prentice hall, 2010. 
+
+> 26 AI Value Alignment for Evolving Social Norms
+
+R. Olfati-Saber and R. M. Murray. Consensus problems in networks of agents with switching topology and time-delays. IEEE Transactions on automatic control , 49(9):1520–1533, 2004. R. Olfati-Saber, J. A. Fax, and R. M. Murray. Con-sensus and cooperation in networked multi-agent systems. Proceedings of the IEEE , 95(1): 215–233, 2007. OpenAI. Model spec, 2024. URL 
+
+https://openai.com/index/ introducing-the-model-spec/ .L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wain-wright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, et al. Training language mod-els to follow instructions with human feedback. 
+
+Advances in Neural Information Processing Sys-tems , 35:27730–27744, 2022. S. Page. The difference: How the power of diver-sity creates better groups, firms, schools, and societies-new edition . Princeton University Press, 2008. R. Parasuraman and V. Riley. Humans and au-tomation: Use, misuse, disuse, abuse. Human factors , 39(2):230–253, 1997. E. Pariser. The filter bubble: What the Internet is hiding from you . penguin UK, 2011. J. S. Park, J. O’Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behav-ior. In Proceedings of the 36th Annual ACM symposium on User Interface Software and Tech-nology , pages 1–22, 2023. L. A. Paul. Transformative experience . OUP Oxford, 2014. E. Perez, S. Ringer, K. Lukosiute, K. Nguyen, E. Chen, S. Heiner, C. Pettit, C. Olsson, S. Kundu, S. Kadavath, et al. Discovering language model behaviors with model-written evaluations. In Findings of the association for computational linguistics: ACL 2023 , pages 13387–13434, 2023. R. Pettigrew. Choosing for changing selves . Oxford University Press, 2019. R. Rafailov, A. Sharma, E. Mitchell, C. D. Man-ning, S. Ermon, and C. Finn. Direct preference optimization: Your language model is secretly a reward model. Advances in Neural Information Processing Systems , 36:53728–53741, 2023. S. Russell. Human compatible: AI and the problem of control . Penguin Uk, 2019. F. Salvi, M. Horta Ribeiro, R. Gallotti, and R. West. On the conversational persuasiveness of gpt-4. Nature Human Behaviour , 9(8):1645–1653, May 2025. ISSN 2397-3374. doi: 10.1038/ s41562-025-02194-6. URL http://dx.doi. org/10.1038/s41562-025-02194-6 .S. Santurkar, E. Durmus, F. Ladhak, C. Lee, P. Liang, and T. Hashimoto. Whose opinions do language models reflect? In International Conference on Machine Learning , pages 29971– 30004. PMLR, 2023. S. H. Schwartz. Universals in the content and structure of values: Theoretical advances and empirical tests in 20 countries. In Advances in Experimental Social Psychology , volume 25, pages 1–65. Elsevier, 1992. M. Sharma, M. Tong, T. Korbak, D. Duvenaud, A. Askell, S. R. Bowman, N. Cheng, E. Durmus, Z. Hatfield-Dodds, S. R. Johnston, et al. To-wards understanding sycophancy in language models. arXiv preprint arXiv:2310.13548 ,2023. L. J. Skitka, K. L. Mosier, and M. Burdick. Does automation bias decision-making? Interna-tional Journal of Human-Computer Studies , 51 (5):991–1006, 1999. T. Sorensen, J. Moore, J. Fisher, M. Gordon, N. Mireshghallah, C. M. Rytting, A. Ye, L. Jiang, X. Lu, N. Dziri, et al. A roadmap to pluralistic alignment. arXiv preprint arXiv:2402.05070 ,2024. N. Stiennon, L. Ouyang, J. Wu, D. Ziegler, R. Lowe, C. Voss, A. Radford, D. Amodei, and P. F. Chris-tiano. Learning to summarize with human feedback. Advances in Neural Information Pro-cessing Systems , 33:3008–3021, 2020. 
+
+> 27 AI Value Alignment for Evolving Social Norms
+
+S. Tsirtsis, K. Rawal, C. Russell, B. Mittelstadt, and S. Wachter. AI-mediated communication can steer collective opinion, 2026. URL https: //arxiv.org/abs/2605.16245 .A. S. Vezhnevets, J. P. Agapiou, A. Aharon, R. Ziv, J. Matyas, E. A. Duéñez-Guzmán, W. A. Cun-ningham, S. Osindero, D. Karmon, and J. Z. Leibo. Generative agent-based modeling with actions grounded in physical, social, or dig-ital space using concordia. arXiv preprint arXiv:2312.03664 , 2023. L. H. Zhang, S. Milli, K. Jusko, J. Smith, B. Amos, W. Bouaziz, M. Revel, J. Kussman, Y. Sheynin, L. Titus, et al. Cultivating pluralism in algo-rithmic monoculture: The community align-ment dataset. arXiv preprint arXiv:2507.09650 ,2025. T. Zhi-Xuan, M. Carroll, M. Franklin, and H. Ash-ton. Beyond preferences in AI alignment. Philo-sophical Studies , 182(7):1813–1863, 2025. 
+
+## A. Appendix 
+
+A.1. Background 
+
+A.1.1. AI Alignment as Preference Optimisation 
+
+The dominant paradigm for aligning large lan-guage models treats alignment as a preference optimisation problem. RLHF (Christiano et al., 2017; Ouyang et al., 2022; Stiennon et al., 2020) trains a reward model from pairwise human judg-ments of model outputs, then uses reinforce-ment learning to optimise the policy against this learned reward signal. RLHF has been instrumen-tal in transforming base language models into instruction-following assistants, and remains the backbone of alignment at most frontier labora-tories. However, the framework carries implicit assumptions: it treats annotator preferences as the primary source of normative information, and collapses diverse evaluative criteria - helpfulness, harmlessness, honesty - into a single scalar re-ward (Bai et al., 2022a). Direct Preference Optimisation (Rafailov et al., 2023) reformulates the same objective without training a separate reward model, instead op-timising the policy directly on preference pairs via a classification loss. Variants such as KTO (Ethayarajh et al., 2024) offer further alternatives. While these methods differ in their optimisation mechanics, they share a common epistemology: alignment is defined by what human raters prefer in pairwise comparisons, and the goal is to max-imise expected preference satisfaction. However, all of these methods share a structural property: the alignment signal - whether a trained reward model, a frozen preference dataset, or a set of pairwise comparisons - is fixed at the point of data collection and does not automatically update dur-ing deployment. The deployed model therefore optimises against a static snapshot of preferences, even as the user and the world continue to evolve. While agentic systems with persistent memory move toward continuous adaptation, the align-ment strength and the information sources from which the system learns typically remain fixed. A growing body of work has challenged the ad-equacy of this preferentist framing. Zhi-Xuan et al. (Zhi-Xuan et al., 2025) argue that preferences are defeasible evidence about what is good, not alignment targets in their own right. RLHF an-notators do not report all-things-considered per-sonal preferences; they evaluate outputs against contextual criteria such as helpfulness and harm-lessness that function as normative standards for the role of an assistant. Aggregating preferences across annotator populations can also obscure meaningful value disagreements, producing align-ment to a particular demographic rather than to any principled normative standard (Sorensen et al., 2024). 
+
+A.1.2. Constitutional, Specification-Driven, and Character-Based Approaches 
+
+An alternative family of approaches seeks to ground alignment in explicitly articulated princi-ples rather than implicit preference signals. Con-stitutional AI (Bai et al., 2022b) trains models to critique and revise their own outputs against an explicit charter of principles, replacing much of the human labelling pipeline with model-mediated judgment (RLAIF). The resulting sys-tem is steered not by what annotators happen 
+
+> 28 AI Value Alignment for Evolving Social Norms
+
+to prefer, but by what a stated set of principles prescribes. This makes the normative content of alignment auditable and, in principle, revisable. Model specs and constitutions, such as those published by OpenAI (OpenAI, 2024) and An-thropic (Askell et al., 2026), function as be-havioural contracts that combine high-level ob-jectives, mid-level rules, and conflict-resolution strategies. These documents increasingly encode dispositional traits beyond prohibitions - curiosity, honesty, care, warmth - treating model charac-ter as a lever for alignment rather than a mere byproduct of training (Anthropic, 2024). The shift from “what should the model refuse?” to “what kind of agent should the model be?” repre-sents a meaningful expansion of the alignment target. Constitutional approaches shift the locus of authority from annotators to developers, but the question of who authors the constitution re-mains. Recent constitutional documents also make explicit a fundamental design tension between rules and judgment. Anthropic’s New Constitu-tion (Askell et al., 2026) distinguishes two broad strategies: clear rules that offer predictability and evaluability but “fail to anticipate every situation and can lead to poor outcomes when followed rigidly,” and sound judgment that “can adapt to novel situations and weigh competing considera-tions in ways that static rules cannot.” This dis-tinction is significant for the dynamics we exam-ine in this paper. A constitution that equips a model with reasoning capacity - the ability to evaluate what is appropriate given the current context, rather than mechanically applying fixed directives - represents a qualitatively different approach to alignment: one that is, in principle, robust to novel and changing circumstances. A judgment-oriented constitution aims to provide a degree temporal robustness, as reasoning helps adapt to a changing context. Nevertheless, the constitution itself is codified at a point in time, and the values it encodes do not automatically update as societal norms evolve. 
+
+A.1.3. Pluralistic and Democratic Alignment 
+
+A fundamental tension in all of the above ap-proaches is the question of whose values are being encoded. Standard RLHF produces alignment to the preferences of a particular annotator popu-lation. Santurkar et al. (Santurkar et al., 2023) show that RLHF-tuned models systematically shift toward reflecting the opinions of liberal, higher-income, and higher-education U.S. demographics, while poorly representing groups such as older adults and those with high religious attendance. Durmus et al. (Durmus et al., 2023) extend this analysis cross-nationally, finding that LLM re-sponses by default align more closely with the opinions of populations from the United States and select European and South American coun-tries, highlighting the risk that models may im-pose particular cultural perspectives as defaults. Pluralistic alignment frameworks address this directly. Sorensen et al. (Adams et al., 2025; Sorensen et al., 2024) formalise three alterna-tives to monistic alignment: Overton pluralism ,which requires models to present a spectrum of reasonable responses rather than collapsing to a single answer; steerable pluralism , which allows models to be steered to reflect particular perspec-tives; and distributional pluralism , which requires models to be well-calibrated to the distribution of opinions in a given population. They argue that current alignment techniques may be fundamen-tally limited for achieving pluralistic AI, highlight-ing empirical evidence that standard alignment procedures might reduce distributional pluralism in models - a form of normative compression that is directly relevant to the value lock-in dynamics examined in this paper. (Conitzer et al., 2024) complement this perspective by arguing that the field of social choice theory is well positioned to address the aggregation problem formally, propos-ing that mechanisms from voting theory and fair division can structure how diverse human feed-back is incorporated into alignment pipelines. Collective Constitutional AI (Huang et al., 2024) extends the constitutional approach by sourcing principles through public deliberation using the Polis platform, so that the normative charter reflects diverse perspectives rather than developer preferences alone. The resulting model 
+
+> 29 AI Value Alignment for Evolving Social Norms
+
+exhibited lower bias across nine social dimen-sions while maintaining equivalent performance on standard benchmarks. Similarly, Zhang et al. (Zhang et al., 2025) demonstrate - through a large-scale multilingual study with representative samples from five countries ( 𝑁 = 15 ,000 ) - that human preferences exhibit substantially more variation than the responses of current LLMs, and collect a preference dataset of over 233 ,000 
+
+comparisons designed to capture this diversity. Viewed from this perspective, alignment is also a governance challenge, requiring mechanisms for legitimate normative input from the populations affected by AI systems. 
+
+A.1.4. The Stationarity Assumption 
+
+There are two ways in which AI alignment meth-ods may encode stationary assumptions, as they often tend to do. First, they may take a particular set of values and desired behaviors and prefer-ences, reflecting a snapshot in time, and adopt it as a static alignment target. Second, even for the admittedly far more flexible personal AI assistants, the process through which personalization takes place implicitly takes the current inferred set of user values and preferences as its target. In do-ing so, AI alignment approaches fail to explicitly account for personal growth and development, in relation to the rest of society which we refer to, in the abstract, as the normative environment. The non-stationarity of human preferences has been noted as an open problem in RLHF (Casper et al., 2023). This stationarity assumption is rarely made explicit, but it has significant long-term conse-quences. In a world where values evolve - through cultural drift, generational change, or abrupt shifts in environmental conditions - a system that aims to strongly align users to their historical preferences will become progressively misaligned with the evolving environment. A widespread adoption of such systems carries an even greater risk, of slowing down the societal evolution of values by creating positive feedback loops that an-chor users to historical values, which are slowly becoming obsolete. Gao et al. (2023) demon-strate that optimising too aggressively against a learned reward model can lead to systematic overoptimisation, where the performance on the proxy reward no longer faithfully reflects the ground-truth performance. Despite being widely adopted, such reward models are by design an imperfect approximation of human judgement. In an environment where the ground truth keeps shifting, this becomes even more fragile and prone to unintended misalignment from an in-tended alignment. It is important to consider how this problem intersects with the issues surrounding the emer-gence of feedback loops in the use of technol-ogy and AI assistants in particular. Automation bias refers to over-reliance on automated deci-sion aids, even when faced with contradictory ev-idence (Goddard et al., 2012; Parasuraman and Riley, 1997). This over-reliance extends beyond inattention: recent work demonstrates that high-accuracy AI systems actively reduce engagement with independent critical reasoning, as users de-fault to heuristic deference (Buçinca et al., 2021). These types of issues have long been studied in recommender systems. Chaney et al. (2018) demonstrate that algorithmic confounding - the process by which a system’s own recommenda-tions contaminate future training data - increases homogeneity and degrades utility across a user population. Kalimeris et al. (2021) show that this process actively amplifies initial preference sig-nals, and Krueger et al. (2020) argue that agents optimised to predict user behaviour may induce unforeseen shifts in that same behaviour. In our models, we zoom out of these granular item-level recommendations, aiming to instead character-ize similar phenomena in more general scenarios, with an emphasis on how such effects affect the evolution of societal or community norms. In fact, similar questions have been studied in recommender systems, where the temporal as-pect is of similar interest. Carroll et al. (2022) formalise the problem of induced preference shifts 
+
+in recommender systems, whereby these systems gain an incentive to shift user preferences towards the states that they find easier to satisfy. In their analysis, they also introduce the notion of a safe shift region as a boundary within which such algo-rithmic influence is deemed acceptable. Carroll et al. (2024) extend this analysis to the general 
+
+> 30 AI Value Alignment for Evolving Social Norms
+
+reinforcement learning alignment setting, where they introduce Dynamic Reward MDPs , a formal-ism that allows for an explicit modeling of prefer-ence change and AI influence. The existence of rewards for AI actions that go against true user preferences of desires can therefore be seen as a failure of alignment. Similarly, Kanwal and Tran (2026) introduce a control-theoretic model of con-structive alignment for the preference evolution of a single user, in recognition of the temporal preference change. A further complication arises from the obser-vation that RLHF-trained models may exhibit sys-tematic sycophancy, the tendency to express su-perficial agreement with user statements irrespec-tive of their accuracy (Sharma et al., 2023). Syco-phancy may be further exacerbated by model scale (Perez et al., 2023), and in models that are trained to be warm and empathetic (Ibrahim et al., 2025). This type of behaviour raises the risk of echo-chambers (Cheng et al., 2025; Nehring et al., 2024). In the context of long-term inter-actions with personal AI assistants, and the topic of our study, sycophancy plays an important role as it may introduce another obstacle, by enabling misaligned AI systems to effectively hide their misalignment, making it harder to spot and rec-tify. Our contribution builds on these insights but shifts the unit of analysis from the single user-agent pair to the population level. Where (Car-roll et al., 2024, 2022) model how an individual agent may manipulate or fail to track a single user’s evolving preferences, we embed user-AI pairs within a social network and examine how alignment strength interacts with environmental change, social topology, and population hetero-geneity. This population-level analysis reveals emergent dynamics - including normative mode collapse, and the erosion of sub-cultural diversity - that cannot be easily predicted from individual-level models. Methodologically, we draw on the tradition of continuous opinion dynamics (De-Groot, 1974; Friedkin and Johnsen, 1990) and multi-agent consensus theory (Olfati-Saber and Murray, 2004; Olfati-Saber et al., 2007) to pro-vide analytical results alongside simulations. 
+
+A.2. Global Stability Analysis 
+
+Here we analytically verify the stability of the system, presuming positive parameter values. As we will see, phenomena like the normative mode collapse are in fact stable attractors of the sys-tem dynamics in our model, rather than transient artifacts. Denote by 𝐿 the graph Laplacian matrix. Let the joint state vector X = [V 𝑇 , M𝑇 ]𝑇 ∈ ℝ2𝑁 𝐷 
+
+represent the concatenated values of all 𝑁 users and their corresponding AI models. The state of the collective system evolves according to ¤X =
+
+AX + U ( 𝑡 ), where the system matrix A can be decomposed using Kronecker products: 
+
+A =
+
+−( 𝑤 𝑠𝑜𝑐 𝐿 + ( 𝛼 + 𝑤 𝑙𝑒𝑎𝑟𝑛 )𝐼 ) 𝛼𝐼 𝜆𝐼 −𝜆𝐼 
+
+
+
+⊗ 𝐼 𝐷 (34) Note that the upper-left block is obtained by aggregating the user value dependencies V from the continuous-time update given in Equation 23. Given that 𝐿 is symmetric, it can be diagonalised with eigenvalues 0 = 𝜇 1 ≤ 𝜇 2 ≤ · · · ≤ 𝜇 𝑁 . This enables us to decouple the system into 𝑁 inde-pendent modes. For each independent mode 𝑘 , the 2 × 2 sub-system matrix is given by: 
+
+𝐴 𝑘 =
+
+−( 𝑤 𝑠𝑜𝑐 𝜇 𝑘 + 𝛼 + 𝑤 𝑙𝑒𝑎𝑟𝑛 ) 𝛼 𝜆 −𝜆 
+
+
+
+The stability of the system is determined by the characteristic equation for the 𝑘 -th mode, det (𝑠𝐼 −
+
+𝐴 𝑘 ) = 0:
+
+(𝑠 + 𝑤 𝑠𝑜𝑐 𝜇 𝑘 + 𝛼 + 𝑤 𝑙𝑒𝑎𝑟𝑛 )( 𝑠 + 𝜆 ) − 𝛼𝜆 = 0
+
+𝑠 2 + ( 𝛼 + 𝜆 +𝑤 𝑙𝑒𝑎𝑟𝑛 +𝑤 𝑠𝑜𝑐 𝜇 𝑘 )𝑠 + 𝜆 (𝑤 𝑙𝑒𝑎𝑟𝑛 +𝑤 𝑠𝑜𝑐 𝜇 𝑘 ) = 0
+
+(35) 
+
+Theorem A.1 (Unconditional Stability) . For any undirected social graph and any set of positive parameters ( 𝛼, 𝜆, 𝑤 𝑠𝑜𝑐 , 𝑤 𝑙𝑒𝑎𝑟𝑛 > 0), the system is asymptotically stable. 
+
+> 31 AI Value Alignment for Evolving Social Norms
+
+Proof. The Laplacian eigenvalues of an undi-rected graph are non-negative ( 𝜇 𝑘 ≥ 0). Con-sequently, both coefficients featuring in the quadratic characteristic equation are strictly pos-itive. By the Routh-Hurwitz stability crite-rion (Ogata, 2010), a second-order polynomial with positive coefficients has roots with strictly negative real parts. While this is only a neces-sary condition in higher-degree polynomials, for second-order polynomials it is also a sufficient condition. Because the roots of the characteristic equation have strictly negative real parts, any dis-placements caused by transient shocks will decay over time. Therefore, every mode of the system will decay exponentially to its steady state. □
+
+Normative mode collapse is therefore a stable equilibrium. Social forces may dampen the eigen-values, potentially slowing down convergence, without affecting stability. Considering the im-plications, stability is therefore not an uncondi-tionally desirable property of population-scale AI alignment. Should the entered equilibrium be un-desirable, the self-reinforcing nature of it would stand in the way of societies overcoming these challenges. 
+
+A.3. Social Invariance under Uniform Drift 
+
+In the base model, without additional assump-tions, social influence did not appear to be suf-ficient to overcome other forces and enable the population to effectively track the exogenous en-vironment. While this is ultimately a direct con-sequence of the simplified assumptions, it is still useful to understand why this is the case under that base model formulation. If the social influ-ence ends up being a zero-sum redistribution of values within the network, it cannot generate new adaptive momentum. 
+
+Theorem A.2 (Social Invariance) . If the environ-mental signal is uniform across the population (E𝑖 = E), the trajectory of the population value centroid ¯V(𝑡 ) is independent of the social weight 
+
+𝑤 𝑠𝑜𝑐 and the network topology. 
+
+Proof. 
+
+Let the environment be uniform: E𝑖 (𝑡 ) = E(𝑡 )
+
+for all 𝑖 . Consider the population centroid: ¯V =
+
+> 1
+> 𝑁
+
+Í𝑖 V𝑖 . Aggregating the update equations from Equation 23 across all agents yields: ∑︁ 
+
+> 𝑖
+
+¤V𝑖 = −𝑤 𝑠𝑜𝑐 ∑︁ 
+
+> 𝑖
+
+∑︁ 𝑗 ∼𝑖 
+
+(V𝑖 − V𝑗 ) + . . . (36) ∑︁ 
+
+> 𝑖
+
+¤V𝑖 = −𝑤 𝑠𝑜𝑐 𝑁 ∑︁ 
+
+> 𝑖 =1
+
+(𝐿 V)𝑖 +
+
+> 𝑁
+
+∑︁ 
+
+> 𝑖 =1
+
+h
+
+𝛼 (M𝑖 −V𝑖 )+ 𝑤 𝑙𝑒𝑎𝑟𝑛 (E−V𝑖 )
+
+i
+
+(37) The social interaction term is therefore propor-tional to the sum of the Laplacian rows. For any undirected graph, Í𝑖 (𝐿 V)𝑖 = 1𝑇 𝐿 V = 0.Dividing the remaining terms by 𝑁 , we obtain the following: 
+
+¤¯V = 1
+
+𝑁 
+
+> 𝑁
+
+∑︁ 
+
+> 𝑖 =1
+
+h
+
+𝛼 (M𝑖 − V𝑖 ) + 𝑤 𝑙𝑒𝑎𝑟𝑛 (E − V𝑖 )
+
+i
+
+(38) Aggregating the AI model updates across the population yields ¤¯M = 𝜆 ( ¯V − ¯M). Together, these form a closed dynamical system for the macro-scopic variables ( ¯V, ¯M). Given that this coupled system contains no 𝑤 𝑠𝑜𝑐 or 𝐿 terms, the trajectory is independent of the underlying social network. 
+
+□
+
+Social influence becomes beneficial under the base model (Figure 9) when users engage in sub-stantial independent exploration, or take part in heterogeneous local environments. In social networks, a combination of natural diversity and active participation may therefore offset the kinds of issues that are being brought up here. If any-thing, what these results suggest is that a naive model that fails to account for the richness of real social interactions, may inadvertently lead to incorrect conclusions. 
+
+## B. Further Extensions 
+
+The base model introduced in Section 2 makes several strong simplifying assumptions that help make the initial exposition and analysis more tractable. Yet, there are many ways in which this base framework can be easily extended to 
+
+> 32 AI Value Alignment for Evolving Social Norms
+
+accommodate more complexity, and more real-istic modelling of social phenomena. Here we highlight several interesting directions. 
+
+B.1. Polarisation 
+
+Some of the strongest simplifying assumptions in the base model have to do with the struc-ture of social forces. The existing social term assumes global connectivity or random mixing, which pulls agents toward the population mean. In reality, social forces are neither random nor uniform. For example, there is a known tendency to reject influence by peers with highly dissimilar, opposing views. This is referred to as bounded confidence (Deffuant et al., 2000; Hegselmann and Krause, 2002), and we can adjust our model to account for bounded confidence by introducing a non-linear interaction weight 𝜔 𝑖 𝑗 :
+
+¤V𝑖 = · · · + 𝑤 𝑠𝑜𝑐 ∑︁ 
+
+> 𝑗
+
+𝕀 (|| V𝑖 − V𝑗 || < 𝛿 )( V𝑗 − V𝑖 ) (39) where 𝕀 is an indicator function and 𝛿 is the confidence threshold. The introduction of this non-linear factor makes it possible to simulate multi-stable equilibria, where the total popula-tion comprises several distinct, disconnected or only loosely connected clusters that track differ-ent value norms. Such structures could act as a stabiliser on high-variance states even under strong environmental pressure. 
+
+B.2. Heterogeneous Influence 
+
+Real social networks tend to be scale-free, where a minority of highly influential individuals has the capacity to exert disproportionate influence within the network. If we wanted to capture this within the model, we could do so by incorporating a heterogeneous weight vector within the social influence computations, W ∈ ℝ𝑁 :
+
+¤V𝑖 = · · · + 𝑤 𝑠𝑜𝑐 ∑︁ 
+
+> 𝑗
+
+𝐴 𝑖 𝑗 𝑊 𝑗 (V𝑗 − V𝑖 ) (40) where 𝑊 𝑗 follows a power-law distribution. We would expect this to impact the underlying model by making the system trajectory more sensitive to the initial conditions of high-influence nodes. Should some of those nodes enter maladaptive value lock-in, the detrimental effects would eas-ily spread through the network. Here we briefly illustrate this risk. In continuous-time consensus dynamics over a heterogeneous adjacency matrix A, the resulting network state is a weighted average determined by the eigenvector centrality 𝑐 𝑖 of each node. If we assume the environment is globally uniform (E𝑖 = E), we can multiply the population’s steady-state equation by c𝑇 . This yields: 
+
+0 = 𝛼 c𝑇 (M 𝑠𝑠 − V 𝑠𝑠 ) + 𝑤 𝑙𝑒𝑎𝑟𝑛 (𝐸 1 − c𝑇 V𝑠𝑠 )
+
+Since the vector of individual alignment lags is 
+
+𝜹 𝑠𝑠 = V𝑠𝑠 −M 𝑠𝑠 , solving for the centrality-weighted population centroid ¯V𝑠𝑠 = c𝑇 V𝑠𝑠 gives: 
+
+¯V𝑠𝑠 = 𝐸 − 𝛼 𝑤 𝑙𝑒𝑎𝑟𝑛 𝑁 ∑︁ 
+
+> 𝑖 =1
+
+𝑐 𝑖 𝛿 𝑖,𝑠𝑠 (41) 0 10 20 30 40 50 
+
+> Percentage of Population Locked-in (%)
+> 0
+> 20
+> 40
+> 60
+> 80
+> 100
+> Global Network Lag
+> (% of Maximum Possible Lag)
+> The Contagion of Lock-in in Scale-Free Networks
+> Scale-Free Network
+> (Hubs locked in first)
+> Random Network
+> (Homogeneous influence)
+
+Figure 19 | Network effects of lock-in. In a scale-free network, if highly central hub nodes have stale AI value models, their individual tracking er-ror disproportionately affects the entire network’s tracking performance. This introduces an additional consideration: value lock-in effects may propagate through social networks. As visualised in Figure 19, in a stan-dard random network, locking 10% of the pop-ulation into a stale AI value model degrades the global network tracking proportionally by 10%. 
+
+> 33 AI Value Alignment for Evolving Social Norms
+
+However, in a scale-free network, the degrada-tion is far more palpable. The locked-in minor-ity’s tracking error propagates disproportionately through the network. 
+
+B.3. Epistemic Filtering 
+
+The base model assumes that all users have direct, unmediated access to the true environmental sig-nal E𝑖 (𝑡 ) to drive their independent learning. As personal AI assistants become one of the primary interfaces for information retrieval, they increas-ingly act as epistemic filters. To incorporate this additional assumption, we can introduce an epis-temic filtering coefficient 𝜙 ∈ [ 0, 1), representing the degree to which the user’s perception of the world is mediated by the AI and its value model. This shifts the user’s learning target as follows: 
+
+˜E𝑖 (𝑡 ) = (1 − 𝜙 )E𝑖 (𝑡 ) + 𝜙 M𝑖 (𝑡 ) (42) Substituting this perceived environment into the user’s continuous-time value update equation yields: 
+
+¤V𝑖 = · · · + 𝛼 (M𝑖 − V𝑖 ) + 𝑤 𝑙𝑒𝑎𝑟𝑛 (˜E𝑖 (𝑡 ) − V𝑖 (𝑡 )) (43) Expanding and regrouping the terms, this sim-plifies to: 
+
+¤V𝑖 = · · · + ( 𝛼 + 𝜙𝑤 𝑙𝑒𝑎𝑟𝑛 )( M𝑖 − V𝑖 )+ 𝑤 𝑙𝑒𝑎𝑟𝑛 (1 − 𝜙 )( E𝑖 (𝑡 ) − V𝑖 (𝑡 )) (44) It follows that the epistemic filtering simulta-neously leads to an increase in the effective align-ment strength and a decrease in the human learn-ing rate. By partially obscuring the true environ-mental feedback, the AI-mediated information compounds the structural lag. The steady-state tracking error under epistemic filtering is shown in Figure 20. Calculating the tracking error shows a non-linear relationship. In the limiting case as 𝜙 → 1, the effective environ-mental learning rate approaches zero, meaning that the tracking error grows arbitrarily large. This boundary behavior represents a scenario 0.0 0.2 0.4 0.6 0.8 1.0    
+
+> Epistemic Filtering Coefficient ( )
+> 0
+> 5
+> 10
+> 15
+> 20
+> 25
+> 30
+> 35
+> Steady-State Tracking Error (|| Vss ||)
+> The Epistemic Filter Bubble
+> Weak Alignment ( = 0.1)
+> Strong Alignment ( = 0.5)
+
+Figure 20 | Steady-state tracking error as a func-tion of the epistemic filtering coefficient ( 𝜙 ). The plot illustrates the boundary as 𝜙 → 1, where the user is completely isolated from direct environ-mental learning. where the user’s perception is entirely mediated by the AI, cutting off direct feedback from the environment. 
+
+B.4. Developer-Defined Values 
+
+In the baseline model, the AI’s internal model 
+
+M𝑖 updates purely based on the individual user’s evolving values V𝑖 . In practice, frontier AI models are rarely aligned solely to individual users. Tech-niques such as constitutional AI (Bai et al., 2022b) align models to a centralised set of developer-defined values, which we model here as a static vector C.This can be modelled by introducing a static constitution value vector C ∈ ℝ𝐷 and the corre-sponding constitutional pull weight 𝑤 𝑐𝑜𝑛𝑠𝑡 . The AI’s update equation may thereby be modified to include this centralised objective: 
+
+¤M𝑖 = 𝜆 (V𝑖 − M𝑖 ) + 𝑤 𝑐𝑜𝑛𝑠𝑡 (C − M𝑖 ) (45) To understand the structural impact on the user, we can solve for the AI’s steady-state model when 
+
+¤M𝑖 = 0:
+
+M𝑖,𝑠𝑠 = 𝜆 𝜆 + 𝑤 𝑐𝑜𝑛𝑠𝑡 
+
+V𝑖,𝑠𝑠 + 𝑤 𝑐𝑜𝑛𝑠𝑡 
+
+𝜆 + 𝑤 𝑐𝑜𝑛𝑠𝑡 
+
+C (46) 
+
+> 34 AI Value Alignment for Evolving Social Norms
+
+The AI’s internal model becomes a convex com-bination of the user’s values and the static con-stitution. Substituting this steady-state AI model back into the user’s baseline alignment term 
+
+𝛼 (M𝑖 − V𝑖 ) yields an effective alignment force of: 
+
+ΔV𝐴𝐼,𝑒 𝑓 𝑓 𝑒𝑐𝑡𝑖𝑣𝑒 = 𝛼 
+
+ 𝑤 𝑐𝑜𝑛𝑠𝑡 
+
+𝜆 + 𝑤 𝑐𝑜𝑛𝑠𝑡 
+
+
+
+(C − V𝑖 ) (47) In this scenario, centralised alignment would not slow down the user’s adaptation to their lo-cal environment ( E𝑖 ), rather introducing a persis-tent pull on all users towards the given constitu-tional value vector C. Even in a completely dis-connected human social graph, strong developer-defined alignment introduces a persistent central-ising force that pulls all users toward a common point C, reducing the variance across the popula-tion. By integrating the human social coupling with this new constitutional anchor, we can solve for the unified steady-state of a polarised two-group system ( E1 = +1, E2 = −1). Assuming a neu-tral constitution ( 𝐶 = 0) and symmetry such that V2,ss = −V1,ss , the social pull simplifies to 
+
+−𝑤 𝑠𝑜𝑐 (V1 − V2) = −2𝑤 𝑠𝑜𝑐 V1. The asymptotic value position for Group 1 then resolves to: 
+
+V1,𝑠𝑠 = 𝑤 𝑙𝑒𝑎𝑟𝑛 
+
+𝑤 𝑙𝑒𝑎𝑟𝑛 + 𝛼 𝑐𝑜𝑛𝑠𝑡 + 2𝑤 𝑠𝑜𝑐 
+
+(48) where 𝛼 𝑐𝑜𝑛𝑠𝑡 = 𝛼 
+
+ 𝑤 𝑐𝑜𝑛𝑠𝑡 
+
+> 𝜆 +𝑤 𝑐𝑜𝑛𝑠𝑡
+
+
+
+represents the effec-tive constitutional pull. Group 2 perfectly mirrors this equation in the negative direction. Figure 21 illustrates how both mechanisms in-dependently drive convergence toward the global mean. If the constitutional pull is zero, increasing human social coupling drives the groups toward the centre, as previously discussed. Conversely, even in the absence of strong social coupling, in-creasing the constitutional pull achieves a similar homogenising effect through the centralised at-tractor C.It may be possible to extend this analysis fur-ther to account for polycentric governance. It is possible to establish constitutions that define 10 3           
+
+> 10 2
+> 10 1
+> 10 0
+> 10 1
+> Human Social Coupling ( wsoc )
+> 10 3
+> 10 2
+> 10 1
+> 10 0
+> 10 1
+> Constitutional Pull ( wconst )
+> 0.8
+> 0.6
+> 0.4
+> 0.2
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> Asymptotic Value Position
+> The Two Paths to Monoculture
+> Group 1 (Optimal E1= +1)
+> Group 2 (Optimal E2=1)
+> Central Constitution ( C= 0)
+
+Figure 21 | Two mechanisms of value homogeni-sation. A 3D surface plot showing how distinct sub-groups converge toward the global mean, ei-ther via social coupling ( 𝑤 𝑠𝑜𝑐 , X-axis) or developer-defined alignment pull ( 𝛼 𝑐𝑜𝑛𝑠𝑡 , Y-axis). more complex boundary condition, where penal-ties are applied to actions that sit outside the boundary. 
+
+B.5. Synthetic Data Loops 
+
+In the baseline model, there is no direct interac-tion between the AI assistants themselves. This stands in opposition to what can already be ob-served on the web, where an increasing amount of content is produced by, and consumed by, AI agents. Modern AI development increasingly re-lies on synthetic data generated by other models, and future autonomous agents will routinely in-teract via API-mediated networks. We may therefore want to introduce an AI-specific adjacency matrix 𝐴 𝐴𝐼 and a synthetic cou-pling weight 𝑤 𝑠𝑦𝑛 , which represents the rate at which AI models train on or align to each other’s outputs. The AI’s internal model update equation is expanded to include a consensus protocol with its machine peers: 
+
+¤M𝑖 = 𝜆 (V𝑖 − M𝑖 ) + 𝑤 𝑠𝑦𝑛 ∑︁ 
+
+> 𝑗
+
+𝐴 𝐴𝐼 𝑖 𝑗 (M𝑗 − M𝑖 ) (49) Expressed in matrix form for the stacked AI 
+
+> 35 AI Value Alignment for Evolving Social Norms
+
+population state M, this introduces an AI-layer graph Laplacian 𝐿 𝐴𝐼 :
+
+¤M = 𝜆 (V − M) − 𝑤 𝑠𝑦𝑛 𝐿 𝐴𝐼 M (50) 0 20 40 60 80 100 120 140 
+
+> Time Step ( t)
+> 1.00
+> 0.75
+> 0.50
+> 0.25
+> 0.00
+> 0.25
+> 0.50
+> 0.75
+> 1.00
+> Position in Value Space
+> Reaching Rapid AI Consensus
+> User 1 Value
+> User 2 Value
+> AI Model 1
+> AI Model 2
+
+Figure 22 | Continuous-time simulation of two completely disconnected human users whose AI assistants are socially coupled via synthetic data loops ( 𝑤 𝑠𝑦𝑛 > 0). The y-axis represents the projec-tion of the high-dimensional value space onto the primary axis separating the initial value vectors of the two users. If AI models exchange synthetic data at rates exceeding human communication, the synthetic coupling weight may potentially exceed the AI learning rate 𝜆 . This is visualised in Figure 22, where we simulate two distinct human users who share no social connections. Their respective AI value models update based on their user’s values and their own internal value models through mu-tual interaction. When 𝑤 𝑠𝑦𝑛 ≫ 𝜆 , the AI-to-AI consensus term dominates the update equation, and the AI models converge toward each other faster than they track their respective users, re-sulting in a persistent steady-state gap between each AI’s internal model and its assigned user’s values. 
+
+B.6. Extending the Number of Normative En-vironments 
+
+In the baseline model, we are tracking one global and one local environment vector, and each agent takes part in a single localised environment. This kind of abstraction may be reasonable if it is meant to reflect physically segregated popula-tions, but it otherwise fails to generalise to the reality of overlapping identities and online com-munities. Most individuals in modern societies need to effectively navigate distinct normative expectations of multiple sub-cultures and commu-nities simultaneously (Leibo et al., 2024, 2025). It is consequently possible to extend our base framework, by replacing the single group assign-ment with a membership vector c𝑖 ∈ [0, 1]𝐾 ,where 𝑐 𝑖𝑘 denotes the degree to which agent 𝑖 
+
+is embedded in the specific sub-culture 𝑘 .In this extended model, the agent experiences normative friction from multiple, potentially con-flicting environmental pulls. The individualised environmental learning term in the system dy-namics expands into a weighted sum as follows: 
+
+¤V𝑖, learning = 𝑤 learning 
+
+> 𝐾
+
+∑︁ 
+
+> 𝑘 =1
+
+𝑐 𝑖𝑘 (E𝑘 − V𝑖 ) (51) Correspondingly, the composite utility function is modified such that the agent’s localised utility penalty is the weighted sum of distances to each valid group norm: 
+
+𝑈 𝑖 = exp 
+
+
+
+− 𝛽 
+
+
+
+|| V𝑖, global − Eglobal || 2
+
++
+
+> 𝐾
+
+∑︁ 
+
+> 𝑘 =1
+
+˜𝑐 𝑖𝑘 || V𝑖, local − E𝑘 || 2
+
+ (52) where ˜𝑐 𝑖𝑘 are the normalised membership weights. This extension allows for future inves-tigations into whether such overlapping group memberships help stabilise the global network against polarisation, or whether they make it harder for individual agents to reach their full target utility. 
+
+## C. Extended Simulation Sweeps 
+
+C.1. The Importance of Continual Exploration 
+
+We map the interaction between intrinsic explo-ration 𝑤 𝑒𝑥 𝑝𝑙𝑜𝑟𝑒 and 𝛼 in Figure 23. High 𝛼 requires 
+
+> 36 AI Value Alignment for Evolving Social Norms
+
+commensurately high exploration to allow the users to keep up with the drift. Conversely, low 𝛼 
+
+combined with high exploration results in exces-sive noise that leads to low utility. Interpreting intrinsic exploration as a proxy for normative ex-perimentation, this illustrates how AI alignment strength may act as a dampener on future human innovation. As alignment strength increases, the energy we put towards innovation should increase accordingly. 0.0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5     
+
+> Alignment Strength ( )
+> 0.05
+> 0.045
+> 0.04
+> 0.035
+> 0.03
+> 0.025
+> 0.02
+> 0.015
+> 0.01
+> 0.005
+> 0.0
+> Exploration ( wexp )
+> Innovation-Stability Trade-off
+> 3 × 10 1
+> 4 × 10 1
+> 6 × 10 1
+> Utility (Log Scale)
+
+Figure 23 | Final utility as a function of intrinsic exploration ( 𝑤 𝑒𝑥 𝑝𝑙𝑜𝑟𝑒 ) and alignment strength ( 𝛼 ). High alignment requires commensurately high exploration to maintain utility. 
+
+C.2. Dynamic Homophily 
+
+Here we present further simulation results regard-ing environmental heterogeneity, in Figure 24, where we visualise the population structure in the value space using principal component analysis. In a random network, user-AI pairs from different environmental groups are pulled together into a mixed, homogenised cloud. The social interfer-ence from out-group peers prevents distinct sub-cultures from separating, forcing the population toward a global mean - that may be maladaptive for all groups. In contrast, under a dynamically updated kNN network, agents disconnect from maladaptive peers and sort themselves into dis-tinct clusters. In our experiments, we have implemented this dynamic updating by having the agents periodi-cally disconnect from maladaptive peers and reor-ganise into distinct clusters according to the up-dated values. This periodic rewiring of the social graph is conducted once for every 10 simulation steps. During this phase, each agent reconnects to a set of 𝑘 = 10 nearest neighbours according to the Euclidean distances in the current value space. This continuous topological updating al-lows agents to dynamically sever ties with peers who have drifted into incompatible normative niches. This is obviously a fairly simplistic illustration, as real networks operate in ways that are much more complex. 
+
+C.3. Limits of Adaptation 
+
+Finally, we note that a simple consequence of our base model is that the learning rate of the human population needs to follow the rate of environmental change. Rather than an insight, this is simply a feature of the model, and one that we would expect to see. For illustration, we sweep the adaptation weight against the environmental drift speed. The results are shown in Figure 25. 
+
+> 37
+
+AI Value Alignment for Evolving Social Norms 1.5 1.0 0.5 0.0 0.5 1.0 1.5 
+
+PC 1 
+
+0.50 
+
+0.25 
+
+0.00 
+
+0.25 
+
+0.50 
+
+0.75 
+
+1.00 
+
+1.25 
+
+> PC 2
+
+A) Globalized (Random) 
+
+1.5 1.0 0.5 0.0 0.5 1.0 1.5 
+
+PC 1 
+
+B) Siloed (Dynamic kNN) 
+
+Emergence of Cultural Silos (PCA of Value Space) 
+
+Figure 24 | Emergence of cultural silos in kNN networks compared to the random population connec-tivity. Visualised for the case of 𝐺 = 10 distinct groups. 0.001 
+
+> 0.0029
+> 0.0048
+> 0.0067
+> 0.0086
+> 0.0105
+> 0.0124
+> 0.0143
+> 0.0162
+> 0.0181
+> 0.02
+
+Environment Drift Speed 
+
+> 0.05
+> 0.0451
+> 0.0402
+> 0.0353
+> 0.0304
+> 0.0255
+> 0.0206
+> 0.0157
+> 0.0108
+> 0.0059
+> 0.001
+> Adaptation Weight ( wlearn )
+
+Adaptation vs Drift Speed         
+
+> 10 15
+> 10 13
+> 10 11
+> 10 9
+> 10 7
+> 10 5
+> 10 3
+> 10 1
+> Utility (Log Scale)
+
+Figure 25 | Final utility as a function of learning weight ( 𝑤 𝑙𝑒𝑎𝑟𝑛 ) and environmental drift speed ( 𝛿 ). The boundary delineates where environmental drift outpaces adaptation capacity. 
+
+38

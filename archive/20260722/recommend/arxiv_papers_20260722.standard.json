@@ -1,0 +1,164 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-22T21:16:58.025340+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2607.18564v1",
+      "source": "arxiv",
+      "title": "HALO: Interactive Co-abductive Reasoning in Scientific Hypothesis Generation",
+      "abstract": "Scientific discovery is essential yet inefficient, primarily because generating hypotheses within a vast search space hinders breakthroughs. While current AI systems assist in generating new hypothesis candidates, they lack interactive support for the reasoning process by which users develop these outputs into promising hypotheses, resulting in surface-level hypotheses. To address this issue, we present co-abduction, a human-AI collaborative framework for abductive reasoning in scientific hypothesis generation. To operationalize co-abduction, we build HALO, a human-AI collaborative system for molecular hypothesis generation in drug discovery, enabling improved candidate clustering, strategy identification, and multi-strategy synthesis. In expert studies involving 10 medicinal chemists, HALO significantly facilitated abductive reasoning for hypothesis generation -- efficient candidate observation, systematic strategy identification, and coherent multi-strategy composition -- and enabled participants to produce higher-quality, more diverse candidate molecules.",
+      "authors": [
+        "Youngseung Jeon",
+        "Kat Limqueco",
+        "JiaSyuan Chang",
+        "Xiang 'Anthony' Chen"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-20T22:54:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.18564v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Human-AI collaborative framework for scientific hypothesis generation",
+      "llm_evidence_cn": "用于科学假设生成的人机协作框架",
+      "llm_evidence": "用于科学假设生成的人机协作框架",
+      "canonical_evidence": "用于科学假设生成的人机协作框架",
+      "llm_tldr_en": "HALO implements co-abduction, a human-AI collaborative reasoning framework for scientific hypothesis generation, improving candidate clustering and multi-strategy synthesis.",
+      "llm_tldr_cn": "科学发现中假设生成效率低下，现有AI系统缺乏对用户推理过程的交互支持。本文提出共溯因（co-abduction），一种人类-AI协同的溯因推理框架，用于科学假设生成。基于该框架构建的HALO系统，在药物发现分子假设生成中实现改进的候选聚类、策略识别与多策略合成。专家评估表明，HALO显著提升假设生成深度与协作效率，体现了人机协作方法在科学领域的价值。",
+      "llm_tldr": "科学发现中假设生成效率低下，现有AI系统缺乏对用户推理过程的交互支持。本文提出共溯因（co-abduction），一种人类-AI协同的溯因推理框架，用于科学假设生成。基于该框架构建的HALO系统，在药物发现分子假设生成中实现改进的候选聚类、策略识别与多策略合成。专家评估表明，HALO显著提升假设生成深度与协作效率，体现了人机协作方法在科学领域的价值。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16318v1",
+      "source": "arxiv",
+      "title": "The World According to a Social Robot -- Augmenting Human-Robot Dialogue With Vision Language Models",
+      "abstract": "Vision Language Models (VLMs) enable robots to visually perceive their environment as well as the actions and characteristics of their conversation partner or humans in collaboration. Especially for social robots deployed in everyday settings and for uncomplicated, natural use, it is essential that the robot has an understanding of situations that is appropriate to human customs. This paper presents initial experiences with the application of a Mistral AI language model with a Pepper robot for Human-Robot Interaction (HRI) in dialogue, as well as an investigation of the effects of additional visual information on response time in different models. The results show that incorporating visual information adds context to the dialogue with only a moderate increase in response time, enabling both the robot and the human to take into account unspoken elements of the situation. Furthermore, using an LLM hosted in Europe offers a solution that complies with European data protection regulations and can therefore facilitate real-life applications more easily.",
+      "authors": [
+        "Thomas Sievers"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.RO"
+      ],
+      "published": "2026-07-15T06:55:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.16318v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "human-robot dialogue with vision language models for social interaction",
+      "llm_evidence_cn": "使用视觉语言模型增强社交机器人对话中的人机交互",
+      "llm_evidence": "使用视觉语言模型增强社交机器人对话中的人机交互",
+      "canonical_evidence": "使用视觉语言模型增强社交机器人对话中的人机交互",
+      "llm_tldr_en": "Applies Mistral AI language model with Pepper robot for dialogue, integrating visual context via VLM to improve response appropriateness in social HRI.",
+      "llm_tldr_cn": "该论文将视觉语言模型（VLM）与Pepper机器人结合，在社交人机对话中引入视觉上下文。实验比较了不同模型下添加视觉信息对响应时间的影响，结果显示视觉信息增加了对话的情境感知，使响应更符合人类习惯。研究为社交机器人在日常环境中自然交互提供了实践验证。",
+      "llm_tldr": "该论文将视觉语言模型（VLM）与Pepper机器人结合，在社交人机对话中引入视觉上下文。实验比较了不同模型下添加视觉信息对响应时间的影响，结果显示视觉信息增加了对话的情境感知，使响应更符合人类习惯。研究为社交机器人在日常环境中自然交互提供了实践验证。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.19297v1",
+      "source": "arxiv",
+      "title": "Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes",
+      "abstract": "This paper is a practitioner guide to graph-based workflow pathways for long-running, stateful, multi-step generative AI systems in business processes. Rather than treating LangGraph, a low-level orchestration framework for stateful agents, as a model-quality benchmark target, we present three executable recipes -- SQL analytics with repair loops, agentic retrieval-augmented generation with evidence gating, and human-in-the-loop policy review with interrupt and checkpoint recovery -- to show how typed state, conditional routing, deterministic tools, retries, interrupts, checkpoints, and traces fit together. LangGraph is positioned by workflow-complexity fit, not as a universal default: simpler ReAct-style or plain SDK loops may be better for basic tool use, schema-first tools for structured extraction and validation, and DSPy when prompt or program optimization is the main goal. Each recipe explains when LangGraph is worth the extra structure and which implementation patterns make routes, pauses, and audit trails explicit product behavior rather than hidden prompt logic.",
+      "authors": [
+        "Daniel Pearson",
+        "Sidney Shapiro",
+        "Emiliano Sebastian Gonzalez Venegas",
+        "Sanad Al-Khatib",
+        "Aurora Pinzón Arzola"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2026-07-21T17:07:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.19297v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Human-in-the-loop policy review in business workflows",
+      "llm_evidence_cn": "业务流程中的人机环路政策审查",
+      "llm_evidence": "业务流程中的人机环路政策审查",
+      "canonical_evidence": "业务流程中的人机环路政策审查",
+      "llm_tldr_en": "Provides recipes for long-running stateful agents with human-in-the-loop, demonstrating how to integrate human oversight in AI workflows.",
+      "llm_tldr_cn": "针对长期运行的状态化业务过程，提出了基于LangGraph的图工作流方法。包含三种可执行方案，其中人机环路政策审查展示了中断、检查点恢复等机制。该方法指导如何在AI系统中嵌入人类监督，提升可靠性。",
+      "llm_tldr": "针对长期运行的状态化业务过程，提出了基于LangGraph的图工作流方法。包含三种可执行方案，其中人机环路政策审查展示了中断、检查点恢复等机制。该方法指导如何在AI系统中嵌入人类监督，提升可靠性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.18506v1",
+      "source": "arxiv",
+      "title": "AI Value Alignment for Evolving Social Norms",
+      "abstract": "AI alignment is essential for the safe deployment of advanced AI systems. Given that values and preferences change over time, culture, social roles, and context, we need to develop a better understanding of the possible long-term consequences of AI alignment, in particular considering the likely ubiquitous future use of personalized AI assistants. We introduce a flexible and extensible mathematical modelling framework, rooted in social physics, aimed at answering macro-level questions regarding the evolving social norms in human populations under the assumption of frequent AI use. Our analysis is part-analytical, and part-simulation, enabling us to characterize the long-term dynamical consequences under a diverse set of starting assumptions. We highlight the risk of value lock-in, and normative mode collapse, prominently featured in non-adaptive alignment formulations. Beyond alignment, we advocate for the wider adoption of these kinds of social physics models as an epistemic bridge: enabling rapid, rigorous, and quantitatively-grounded hypothesis testing for sociotechnical foresight in general AI futures, and acting as a tractable precursor to more computationally expensive large-scale agentic evaluations.",
+      "authors": [
+        "Nenad Tomašev",
+        "Matija Franklin",
+        "Simon Osindero"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-07-20T21:02:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.18506v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "modeling long-term effects of AI value alignment on evolving social norms",
+      "llm_evidence_cn": "AI价值对齐对演变社会规范的长期影响建模",
+      "llm_evidence": "AI价值对齐对演变社会规范的长期影响建模",
+      "canonical_evidence": "AI价值对齐对演变社会规范的长期影响建模",
+      "llm_tldr_en": "Introduces a mathematical framework based on social physics to analyze the long-term dynamics of social norms under frequent AI use, highlighting value lock-in risks.",
+      "llm_tldr_cn": "该论文引入一个基于社会物理学的数学建模框架，用于分析频繁使用AI后社会规范的长期演变。框架结合解析和仿真，考虑价值随时间、文化等变化，揭示了价值锁定（value lock-in）的风险。研究为人类中心AI系统中的价值对齐设计提供了宏观理论指导。",
+      "llm_tldr": "该论文引入一个基于社会物理学的数学建模框架，用于分析频繁使用AI后社会规范的长期演变。框架结合解析和仿真，考虑价值随时间、文化等变化，揭示了价值锁定（value lock-in）的风险。研究为人类中心AI系统中的价值对齐设计提供了宏观理论指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
