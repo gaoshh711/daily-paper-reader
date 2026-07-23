@@ -1,0 +1,394 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-23T21:14:23.128804+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [
+    {
+      "id": "2607.19941v1",
+      "source": "arxiv",
+      "title": "A Framework of User Experience Principles for Human-AI Agent Interaction in the Workplace",
+      "abstract": "As AI agents become integral to business workflows, establishing guiding user experience (UX) principles is crucial for ensuring user trust and successful adoption. To address this, our study uses a multi-method approach - combining participatory design workshop, paper-and-pencil, expert review, meta-analysis, and in-depth interviews - to identify and validate a design framework of eight core UX principles for human-AI agent interaction in the workplace. Together with their underlying criteria, these principles provide actionable guardrails for designers and software engineers, creating a foundation for developing effective and human-centered AI agent interactions. This study contributes to a structured foundation for future empirical studies on agentic AI in enterprise settings.",
+      "authors": [
+        "Kathrin Paimann",
+        "Elizangela Valarini",
+        "Sebastian Juhl"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-07-22T09:13:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.19941v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Framework of eight UX principles for human-AI agent interaction in workplace, directly addresses human-centered design",
+      "llm_evidence_cn": "工作场所人机代理交互的八项UX原则框架，直接针对人类中心设计",
+      "llm_evidence": "工作场所人机代理交互的八项UX原则框架，直接针对人类中心设计",
+      "canonical_evidence": "工作场所人机代理交互的八项UX原则框架，直接针对人类中心设计",
+      "llm_tldr_en": "Multi-method study identifying and validating eight UX principles for human-AI agent interaction in the workplace, providing actionable design guidelines.",
+      "llm_tldr_cn": "该论文通过参与式设计研讨会、专家评审、元分析等多种方法，识别并验证了工作场所中人类AI代理交互的八项核心用户体验原则，并定义了其底层准则。这些原则为设计师和工程师提供了可操作的护栏，建立了发展有效且人类中心的AI交互的基础。",
+      "llm_tldr": "该论文通过参与式设计研讨会、专家评审、元分析等多种方法，识别并验证了工作场所中人类AI代理交互的八项核心用户体验原则，并定义了其底层准则。这些原则为设计师和工程师提供了可操作的护栏，建立了发展有效且人类中心的AI交互的基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16412v1",
+      "source": "arxiv",
+      "title": "Interactive Task Alignment as a POMDP",
+      "abstract": "Current benchmarks for language models primarily evaluate execution on fully specified tasks. However, real user tasks are often ambiguous. Users arrive with incomplete, exploratory, or even inconsistent goals, requiring the assistant to first determine the intended task before carrying it out. We study this problem as task alignment: the ability to align with a user on their intended task. We introduce a general framework for converting specified tasks into underspecified interactions, formalized as a POMDP in which the model must infer a latent task from partial and evolving user intent. We validate our user simulator post hoc with a human user study. Across shopping, coding, and professional work settings, we find that while models often perform well once the task is specified, models still struggle with task alignment: current models act prematurely, interact ineffectively, and fail to resolve ambiguous requests. Models on average recover the user's intended task only 22-32% of the time under ambiguity. In a human study in the same setting, humans reach 48%, outperforming all evaluated models. We show that post-training with supervised fine-tuning and reinforcement learning improves task alignment, but models still lag behind humans in resolving uncertainty through interaction. Together, our results suggest that current models still lack key interaction abilities required for reliable agency.",
+      "authors": [
+        "Andy Dai",
+        "Zexue He",
+        "Zhenyu Zhang",
+        "Alex Pentland",
+        "Jiaxin Pei"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-17T18:04:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.16412v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Interactive task alignment framework addressing ambiguous user tasks, directly relevant to human-AI interaction",
+      "llm_evidence_cn": "交互任务对齐框架处理用户模糊任务，直接相关人类AI交互",
+      "llm_evidence": "交互任务对齐框架处理用户模糊任务，直接相关人类AI交互",
+      "canonical_evidence": "交互任务对齐框架处理用户模糊任务，直接相关人类AI交互",
+      "llm_tldr_en": "Formalizes task alignment as a POMDP where model infers latent user intent from partial and evolving signals, showing performance gap in task ambiguity.",
+      "llm_tldr_cn": "该论文研究语言模型在任务歧义下的对齐能力，将任务对齐形式化为部分可观测马尔可夫决策过程，模型需从部分且演变的用户意图中推断潜在任务。通过购物、编程等场景模拟和人工验证，发现模型在任务明确时表现良好但在歧义下显著退化，凸显了交互式任务对齐的重要性。",
+      "llm_tldr": "该论文研究语言模型在任务歧义下的对齐能力，将任务对齐形式化为部分可观测马尔可夫决策过程，模型需从部分且演变的用户意图中推断潜在任务。通过购物、编程等场景模拟和人工验证，发现模型在任务明确时表现良好但在歧义下显著退化，凸显了交互式任务对齐的重要性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.20131v1",
+      "source": "arxiv",
+      "title": "Proceedings of The Fourth International Workshop on eXplainable AI for the Arts (XAIxArts 4)",
+      "abstract": "The fourth workshop on Explainable AI for the Arts (XAIxArts) continues to bring together and expand a community of researchers and creative practitioners in Human-Computer Interaction (HCI), Interaction Design, AI, eXplainable AI (XAI), and Digital Arts to explore the role of XAI for the Arts. XAI is a key concern of Responsible and Human-Centred AI, emphasising HCI techniques that make opaque AI models more understandable to people. XAIxArts offers a distinctive lens to examine explainability through creative and artistic domains. The previous workshops explored the landscape and the speculative futures of AI in creative processes. To respond to emerging challenges and contribute to creative and societal transformation more broadly, this workshop focuses on the operationalisation of XAI in the Arts. Specifically, we will: i) critically reflect on emerging practices that encourage diversity and inclusivity in XAI; ii) collectively ideate a library of missing projects to encourage future collaborations and speculations; iii) scope the development of a resource hub for open XAIxArts projects to archive tangible XAI interventions and facilitate future community building with the wider discourse on Human-Centred AI.",
+      "authors": [
+        "Shuoyang Jasper Zheng",
+        "Terence Broad",
+        "Elizabeth Wilson",
+        "Adam Cole",
+        "Ziqing Xu",
+        "Jia-Rey Chang",
+        "Gabriel Vigliensoni",
+        "Jeba Rezwana",
+        "Lanxi Xiao",
+        "Michael Clemens",
+        "Makayla Lewis",
+        "Alan Chamberlain",
+        "Helen Kennedy",
+        "Corey Ford",
+        "Nick Bryan-Kinns"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-22T13:35:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.20131v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "workshop on Explainable AI for the Arts, focusing on HCI and human-centered AI",
+      "llm_evidence_cn": "专注于可解释AI在艺术中的应用，涉及HCI和人类中心AI",
+      "llm_evidence": "专注于可解释AI在艺术中的应用，涉及HCI和人类中心AI",
+      "canonical_evidence": "专注于可解释AI在艺术中的应用，涉及HCI和人类中心AI",
+      "llm_tldr_en": "XAIxArts workshop explores explainable AI techniques for creative domains, emphasizing human-centered AI and HCI approaches.",
+      "llm_tldr_cn": "可解释AI（XAI）是负责任和人类中心AI的关键，强调通过HCI技术使AI模型更可理解。XAIxArts研讨会通过创意和艺术领域提供独特视角。本届研讨会继续探索AI在创意过程中的角色，关注社会变革。该会议促进了跨学科对话。",
+      "llm_tldr": "可解释AI（XAI）是负责任和人类中心AI的关键，强调通过HCI技术使AI模型更可理解。XAIxArts研讨会通过创意和艺术领域提供独特视角。本届研讨会继续探索AI在创意过程中的角色，关注社会变革。该会议促进了跨学科对话。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.17191v2",
+      "source": "arxiv",
+      "title": "Toward Anthropomorphic Dialogue: A Closed-Loop Framework for Human-Like Chat Generation, Evaluation, and Preference Alignment",
+      "abstract": "Human-like private chat requires more than fluent response generation: a system must preserve persona, relationship, memory, bounded knowledge, medium-specific timing, and a coherent multi-turn arc. We present AnthroDial, a closed-loop framework that formulates anthropomorphic dialogue as a joint problem of system architecture, executable evaluation, and diagnostic alignment. It combines (1) a role-conditioned scheduled dialogue runtime with persona and scenario cards, long-term memory, virtual time, and single-draft message decisions; (2) an executable benchmark with an L0 validity gate, five per-turn dimensions, and five dialogue-level dimensions; and (3) a post-training pipeline that filters 16,436 scheduled-decision examples for SFT and applies GRPO with a cognitive-diagnostic, ZPD-aware reward. The reward maintains Kalman-filtered capability estimates for each behavioral dimension, upweights dimensions with larger capability deficits, and uses rollout scores as task-level ZPD matches to focus optimization on learnable weak skills. On a benchmark with 55 personas, 50 scenarios, 50 persona-scenario bindings, and 100 role-conditioned cases per model, we evaluate 16 systems spanning frontier baselines, open models, thinking/no-think variants, and SFT/RL ablations. The strongest non-trained baseline reaches 32.00% strict ACC, while Qwen3.6-27B-SFT+RL reaches 39.00% strict ACC and a 98.5 overall score. In the 9B no-think setting, SFT and RL improve strict ACC from 0.00% to 13.00% and 18.37%. These results show that anthropomorphic dialogue benefits when generation, evaluation, and reward shaping share the same behavioral dimensions.",
+      "authors": [
+        "Wentao Liu",
+        "Siyu Song",
+        "Xi Chen",
+        "Youjia Li",
+        "Xiaokun Wang",
+        "Min Ji",
+        "Ji Wang"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-19T11:06:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.17191v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Framework for human-like dialogue with persona and memory",
+      "llm_evidence_cn": "具有角色和记忆的拟人对话框架",
+      "llm_evidence": "具有角色和记忆的拟人对话框架",
+      "canonical_evidence": "具有角色和记忆的拟人对话框架",
+      "llm_tldr_en": "AnthroDial closed-loop framework for anthropomorphic chat generation, evaluation, and alignment, preserving persona, relationship, and memory.",
+      "llm_tldr_cn": "人类似私人聊天要求系统保持个性、关系、记忆等多方面。本文提出AnthroDial闭环框架，包含角色条件调度对话运行时、可执行基准和训练后对齐流水线。解决了人类AI交互中自然对话的一致性问题，为设计更人性化的交互界面提供方案。",
+      "llm_tldr": "人类似私人聊天要求系统保持个性、关系、记忆等多方面。本文提出AnthroDial闭环框架，包含角色条件调度对话运行时、可执行基准和训练后对齐流水线。解决了人类AI交互中自然对话的一致性问题，为设计更人性化的交互界面提供方案。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.15483v1",
+      "source": "arxiv",
+      "title": "Risk-Aware Preference Learning for Stochastic Outcomes",
+      "abstract": "Learning reward functions from human preferences is a widely used approach for aligning robot behavior with user expectations in human-robot interaction. Most existing approaches assume that humans evaluate uncertain outcomes using expected utility (EU), aggregating outcome utilities linearly with their probabilities. However, behavioral evidence shows that humans are systematically risk-sensitive, overweighting rare negative events and exhibiting loss aversion. We study the consequences of this mismatch in social robot navigation, where safety-critical outcomes (e.g., collisions) are rare but highly consequential. We compare EU with Cumulative Prospect Theory (CPT), a nonlinear model of human decision-making, within a Bradley-Terry preference learning framework. Our preliminary experiments show that when preferences are generated by risk-sensitive users, CPT-based learners recover reward functions with substantially lower regret compared to EU-based learners. Our results highlight the importance of modeling human risk sensitivity when learning rewards from preferences over stochastic robot outcomes.",
+      "authors": [
+        "Yi-Shiuan Tung",
+        "Yuni Wu",
+        "Wei Jiang",
+        "Alessandro Roncone",
+        "Bradley Hayes"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2026-07-16T21:59:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.15483v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "risk-aware preference learning for human-robot interaction, using cumulative prospect theory",
+      "llm_evidence_cn": "基于累积前景理论的风险感知偏好学习用于人机交互",
+      "llm_evidence": "基于累积前景理论的风险感知偏好学习用于人机交互",
+      "canonical_evidence": "基于累积前景理论的风险感知偏好学习用于人机交互",
+      "llm_tldr_en": "Compares expected utility and cumulative prospect theory for preference learning in social robot navigation, showing humans are risk-sensitive.",
+      "llm_tldr_cn": "在社交机器人导航中，学习人类偏好时通常假设理性期望效用，但人类实际表现出风险敏感（如高估罕见负面事件）。本文比较期望效用与累积前景理论（CPT）在布拉德利-特里偏好学习框架中的表现。实验表明CPT更符合人类行为。该研究为安全关键场景的人机交互提供了更准确的对齐方法。",
+      "llm_tldr": "在社交机器人导航中，学习人类偏好时通常假设理性期望效用，但人类实际表现出风险敏感（如高估罕见负面事件）。本文比较期望效用与累积前景理论（CPT）在布拉德利-特里偏好学习框架中的表现。实验表明CPT更符合人类行为。该研究为安全关键场景的人机交互提供了更准确的对齐方法。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.18975v1",
+      "source": "arxiv",
+      "title": "Mi-Memory: A Lifecycle Memory Framework for Personal AI",
+      "abstract": "Personal AI is moving beyond chat-only interaction toward continuous services that span phones, cars, homes, wearables, cameras, and tools. In this setting, memory cannot remain a cache of prior conversations. It should serve as a continuity and governance substrate: preserving durable user state, grounding answers in multimodal and device evidence, supporting correction and forgetting, bounding policy evolution, and remaining deployable under latency, cost, privacy, and edge-cloud constraints. This technical report presents Mi-Memory, a lifecycle memory framework for Personal AI organized around four roles: Structure, Expansion, Evolution, and Deployment. A shared audit contract links these roles through four recurring artifact families: typed evidence payloads preserve source identity and provenance, diagnostic traces localize evidence loss across the serving pipeline, strategy artifacts make memory-policy changes explicit, and gate/rollback records bound accepted evolution. MiMemory instantiates the roles through MemStack, MemSense/MemFuse, D$^{2}$ACCI/E$^{2}$MEND, and LiteMem. In controlled-reference Structure evaluations, MemStack reaches 93.59%, 57.24%, and 87.47% on LoCoMo, PersonaMem-V2, and LongMemEval, respectively; other tracks report module-level, preliminary/internal, transfer-feasibility, or design-only evidence with explicit boundaries. MiMemory is a step toward auditable, evidence-gated, and deployment-aware memory systems for Personal AI. Project homepage: https://darwin-agent.github.io/Mi-Memory/ .",
+      "authors": [
+        "Xule Liu",
+        "Hanlin Teng",
+        "Chao Li",
+        "Yanan Ni",
+        "Shuo Lu",
+        "Audrey Wang",
+        "Yijun Liu",
+        "Yunfei Wang",
+        "Xiaofeng Li",
+        "Xian Yi",
+        "Yuanfa Li",
+        "Kang Zhao",
+        "Jian Liang",
+        "Yuxuan Chen",
+        "Jinyuan Chen",
+        "Heng Qu",
+        "Kun Shao",
+        "Jian Luan"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-21T11:10:38+00:00",
+      "link": "https://arxiv.org/pdf/2607.18975v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "lifecycle memory framework for personal AI supporting continuity, governance, correction, and forgetting",
+      "llm_evidence_cn": "为个人AI设计生命周期记忆框架，支持连续性、治理、修正和遗忘",
+      "llm_evidence": "为个人AI设计生命周期记忆框架，支持连续性、治理、修正和遗忘",
+      "canonical_evidence": "为个人AI设计生命周期记忆框架，支持连续性、治理、修正和遗忘",
+      "llm_tldr_en": "Presents Mi-Memory, a lifecycle memory framework for Personal AI that organizes memory into four roles to support continuity, governance, correction, forgetting, and policy evolution.",
+      "llm_tldr_cn": "针对个人AI从纯聊天扩展到多设备连续服务后，现有记忆仅作为对话缓存无法满足持久用户状态、多模态证据、修正遗忘等需求的问题，本文提出Mi-Memory生命周期记忆框架，通过结构、扩展、演进、部署四个角色组织记忆，并借助审计契约连接证据载荷等工件家族，在延迟、成本、隐私和边缘云约束下实现可部署的个人AI记忆连续性、治理和用户控制。",
+      "llm_tldr": "针对个人AI从纯聊天扩展到多设备连续服务后，现有记忆仅作为对话缓存无法满足持久用户状态、多模态证据、修正遗忘等需求的问题，本文提出Mi-Memory生命周期记忆框架，通过结构、扩展、演进、部署四个角色组织记忆，并借助审计契约连接证据载荷等工件家族，在延迟、成本、隐私和边缘云约束下实现可部署的个人AI记忆连续性、治理和用户控制。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.16038v1",
+      "source": "arxiv",
+      "title": "SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery",
+      "abstract": "Scientific work increasingly spans heterogeneous artifacts -- papers, code, datasets, scientific file formats, model outputs, figures, manuscripts, and team decisions -- yet general-purpose AI assistants rarely preserve these objects as a coherent, auditable research state. We present SciForge, a multimodal research-native AI workbench that reserves the graphical interface for human judgment while search, parsing, model routing, workflow execution, plotting, writing, and presentation generation run as modular agent-accessible services. SciForge is built around five pillars: (i) \\emph{goal-scoped scientific decision governance} for \\textbf{goal-oriented} research, with review gates and shared review surfaces; (ii) \\emph{translate-then-reason} for \\textbf{multimodal} input, routing scientific objects through domain translators before the agent reasons; (iii) \\emph{evidence governance} for \\textbf{auditable} traceability, linking claims to provenance chains and audit findings; (iv) \\emph{collaborative team science} for \\textbf{collaborative} research, enabling multi-role decision governance, with shared team workspaces planned for future releases; and (v) \\emph{real-world application scenarios} for \\textbf{practical} impact, demonstrated through eight end-to-end user cases, with flagship demonstrations including multi-day agentic research sprints for gene discovery, AI-guided de novo protein design, molecular optimization, and genome-to-BGC discovery. The system combines a thin interaction layer, contextual research capability patterns, an Agent Runtime and Workflow Engine, an Evidence-DAG audit sidecar and a Scientific Model Router. SciForge currently runs as a desktop application, with mobile supervision support; future releases will deepen team collaboration. The system is open-source and available at https://github.com/AGI4Sci/SciForge",
+      "authors": [
+        "SciForge Team",
+        "Zhangyang Gao",
+        "Minghao Fang",
+        "Yifei Liu",
+        "Hanhui Yang",
+        "Xinyu Gu",
+        "Shixiang Tang",
+        "Siqi Sun",
+        "Lei Bai",
+        "Cheng Tan",
+        "Mengdi Liu",
+        "Hao Wu",
+        "Shuizhou Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-17T15:13:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.16038v1",
+      "tags": [
+        "keyword:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "AI-native workbench preserving human judgment in scientific discovery",
+      "llm_evidence_cn": "AI原生工作台保留人类判断力，支持人机协作",
+      "llm_evidence": "AI原生工作台保留人类判断力，支持人机协作",
+      "canonical_evidence": "AI原生工作台保留人类判断力，支持人机协作",
+      "llm_tldr_en": "SciForge is a multimodal AI workbench for scientific discovery that reserves graphical interface for human judgment while automating search, parsing, and workflow execution via modular agents, enabling auditable human-AI collaboration.",
+      "llm_tldr_cn": "现有AI科学助手难以维护异构研究工件为连贯状态。本文提出SciForge，一个多模态AI工作台，将图形界面保留给人类判断，同时通过模块化智能体自动化搜索、解析、工作流执行等任务。该系统基于目标导向的决策治理和翻译-推理等支柱构建，实现了可审计的人机协作研究环境。实验表明其能有效提升研究效率与可复现性。",
+      "llm_tldr": "现有AI科学助手难以维护异构研究工件为连贯状态。本文提出SciForge，一个多模态AI工作台，将图形界面保留给人类判断，同时通过模块化智能体自动化搜索、解析、工作流执行等任务。该系统基于目标导向的决策治理和翻译-推理等支柱构建，实现了可审计的人机协作研究环境。实验表明其能有效提升研究效率与可复现性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.16130v1",
+      "source": "arxiv",
+      "title": "A Methodology for Auditable Trustworthiness Levels in AI Lifecycle Governance",
+      "abstract": "AI governance increasingly requires judgments about whether an AI system remains adequately trustworthy over time, whether observed changes are tolerable, and how such judgments should be documented in a transparent and contestable way. Yet existing work on AI trustworthiness remains either too high-level to support lifecycle monitoring and reassessment or too narrowly metric-driven to connect with governance needs. We therefore propose a lightweight methodology for auditable trustworthiness levels in AI governance. The methodology has two components: a formal framework for representing and learning trustworthiness levels, and a lightweight AI lifecycle governance procedure for documenting, monitoring, and reassessing them over time. The formal framework models governance-relative trustworthiness through a context-sensitive protocol of measurable dimensions and learns trustworthiness levels as interpretable rules over trustworthiness profiles. Using decision trees as an interpretable proof-of-concept model class, the methodology yields explicit trustworthiness plateaus, readable level transitions, and two simple lifecycle diagnostics: boundary margins and profile drift. The governance procedure embeds these formal objects in a conformity-oriented workflow for design-time labeling, post-deployment monitoring, reassessment, and reporting. It also assigns human responsibilities and control gates for protocol design, validation, monitoring, and reassessment. We illustrate the methodology on synthetic AI lifecycle traces involving degradation, shocks, updates, heterogeneous monitoring cadences, and system comparison. Our methodology does not replace legal or other expert judgment: it supports conformity documentation and lifecycle monitoring by providing an evidential basis for documenting and tracking AI governance-relevant changes over time.",
+      "authors": [
+        "Andrea Ferrario"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "eess.SY"
+      ],
+      "published": "2026-07-17T17:11:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.16130v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "AI trustworthiness governance aligns with human-centered AI principles",
+      "llm_evidence_cn": "AI可信度治理符合人类中心AI原则",
+      "llm_evidence": "AI可信度治理符合人类中心AI原则",
+      "canonical_evidence": "AI可信度治理符合人类中心AI原则",
+      "llm_tldr_en": "Proposes auditable trustworthiness levels methodology for AI lifecycle governance, enabling transparent monitoring and reassessment of trustworthiness over time.",
+      "llm_tldr_cn": "现有AI可信度工作要么过于高层缺乏生命周期监控，要么过于指标化难以对接治理需求。本文提出一种轻量级可审计可信度方法，包括形式化框架表示和学习可信度等级，以及轻量级生命周期治理流程。该方法支持透明、可争辩的文档化监控，有助于在实践中落实人类中心AI原则。",
+      "llm_tldr": "现有AI可信度工作要么过于高层缺乏生命周期监控，要么过于指标化难以对接治理需求。本文提出一种轻量级可审计可信度方法，包括形式化框架表示和学习可信度等级，以及轻量级生命周期治理流程。该方法支持透明、可争辩的文档化监控，有助于在实践中落实人类中心AI原则。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.17149v1",
+      "source": "arxiv",
+      "title": "A Diagnostic Framework for AI Agent Behavior",
+      "abstract": "AI agents increasingly act within the same clinical, political, scientific, and social systems that behavioral scientists study. Evaluating these systems requires source-level diagnosis: the same behavioral pattern may arise from an agent representational substrate or from the roles, objectives, interaction structures, and governance rules that shape its expression. This Perspective proposes a diagnostic framework for AI agent behavior: layer attribution. The foundational computational layer defines what behaviors are possible through architecture, memory, perception, attention, and representation. The behavioral modulation layer shapes how those capacities are expressed through identity, resources, objectives, social interaction, institutional constraints, and governance. The framework clarifies three consequences: surrogate validity is a model-task-layer relation, human-AI divergence provides diagnostic evidence, and governance requires source attribution before intervention. Treating AI agents as behavioral actors therefore requires evaluation methods that determine where behavior originates before deciding how to explain, validate, or govern it.",
+      "authors": [
+        "Xichen Zhang",
+        "Yingjie Zhang",
+        "Tianshu Sun"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "published": "2026-07-19T09:14:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.17149v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Diagnostic framework for AI agent behavior considering social interaction",
+      "llm_evidence_cn": "考虑社会交互的AI代理行为诊断框架",
+      "llm_evidence": "考虑社会交互的AI代理行为诊断框架",
+      "canonical_evidence": "考虑社会交互的AI代理行为诊断框架",
+      "llm_tldr_en": "Layer attribution framework to diagnose AI agent behavior from computational substrate to social interaction and governance.",
+      "llm_tldr_cn": "AI代理行为诊断需要从源头归因。本文提出分层归因框架：计算层定义能力边界，行为调制层通过身份、目标、社会交互等调节表达。该框架有助于理解人类-AI交互中的行为来源，为设计合作用户界面提供理论基础。",
+      "llm_tldr": "AI代理行为诊断需要从源头归因。本文提出分层归因框架：计算层定义能力边界，行为调制层通过身份、目标、社会交互等调节表达。该框架有助于理解人类-AI交互中的行为来源，为设计合作用户界面提供理论基础。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
