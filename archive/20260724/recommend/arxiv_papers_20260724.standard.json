@@ -1,0 +1,298 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-24T21:09:51.184304+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 6,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.15545v1",
+      "source": "arxiv",
+      "title": "CoWeaver: A Bi-directional, Learnable and Explainable Matching Engine for Mixed Human-Agent Science Collaboration",
+      "abstract": "LLM-based agents excel at writing articles, coding and information retrieval. However, they fail to form strong collaborations within the scientific community due to the bidirectional, dynamic nature of the problem and a high demand of decision interpretability. We proposed COWEAVER, a bidirectional, learnable and explainable algorithm to match scientists and form strong collaborations within a human-agent network. COWEAVER matches candidates and requesters through filling capability gaps and filters candidates through a two-stage ranking step. Finally, the model explores newcomers by maintaining uncertainty-aware capability estimates and updating them through requester's feedback. We show that the selection mechanism of combining both exploration (UCB) and greedy of COWEAVER exceeds the greedy-only mechanism - the analytical best solution - on 6 out of the 20 tasks and performed on par with the greedy-only mechanism in terms of selecting the best candidate. We compared COWEAVER baselines in terms of matching quality and efficiency. COWEAVER outperforms baselines on all metrics.",
+      "authors": [
+        "Jiayao Gu",
+        "Kexin Chu",
+        "Peidong Liu",
+        "Yue Yang",
+        "Lynn Ai",
+        "Qi Zhang",
+        "Ling Yang",
+        "Tianyu Shi"
+      ],
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-07-17T01:35:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.15545v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "bidirectional learnable matching engine for human-agent science collaboration",
+      "llm_evidence_cn": "面向人-代理科学协作的双向可学习匹配引擎",
+      "llm_evidence": "面向人-代理科学协作的双向可学习匹配引擎",
+      "canonical_evidence": "面向人-代理科学协作的双向可学习匹配引擎",
+      "llm_tldr_en": "Introduces CoWeaver, a bidirectional matching algorithm for human-agent collaboration in science, with explainable two-stage ranking and uncertainty-aware capability estimation.",
+      "llm_tldr_cn": "大型语言模型代理在科学协作中面临双向动态匹配和决策可解释性挑战。本文提出CoWeaver算法，通过双向匹配填补能力缺口，两阶段排序过滤候选者，并利用不确定性感知的能力估计探索新成员。实验表明该模型能有效构建强协作网络，提升混合人-代理科学团队的合作效率。",
+      "llm_tldr": "大型语言模型代理在科学协作中面临双向动态匹配和决策可解释性挑战。本文提出CoWeaver算法，通过双向匹配填补能力缺口，两阶段排序过滤候选者，并利用不确定性感知的能力估计探索新成员。实验表明该模型能有效构建强协作网络，提升混合人-代理科学团队的合作效率。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.15579v2",
+      "source": "arxiv",
+      "title": "PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction",
+      "abstract": "Equipping humanoid robots with coherent and adaptable personas is crucial for fostering natural, engaging, and trustworthy human-robot interaction (HRI). However, existing approaches often rely on static, hard-coded identities that lack the flexibility to adapt to individual user contexts. In this paper, we present PACE (Persona Adaptation through Conversational Elicitation), a novel framework for the interactive generation and deployment of structured personas on the Ameca humanoid robot. Our system introduces an Interactive Persona Elicitation Pipeline, enabling the robot to dynamically synthesize a tailored, psychologically grounded identity through user Q&A. This elicitation process feeds into a persona prompt compilation phase, generating a structured persona prompt built upon multi-perspective dimensions. We detail the Embodied System Integration required to translate this structured specification into expressive, multimodal humanoid behaviors. Through a comprehensive empirical HRI evaluation, we assess the impact of dynamically generated personas on user trust, perceived anthropomorphism, persona consistency, personal relevance, and interaction quality compared to a generic baseline. These contributions establish a scalable pathway for deploying personalized, interactive, and reliable identities in embodied humanoid assistants. Video demo is available at: https://lipzh5.github.io/PACE/",
+      "authors": [
+        "Peizhen Li",
+        "Longbing Cao",
+        "Megani Rajendran",
+        "Timothy Liu",
+        "Aik Beng Ng",
+        "Simon See"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "published": "2026-07-17T02:45:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.15579v2",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "persona adaptation in human-robot interaction via conversation",
+      "llm_evidence_cn": "通过对话实现人机交互中的角色适应",
+      "llm_evidence": "通过对话实现人机交互中的角色适应",
+      "canonical_evidence": "通过对话实现人机交互中的角色适应",
+      "llm_tldr_en": "This paper presents a framework for interactive persona elicitation and deployment on a humanoid robot, directly advancing human-robot interaction.",
+      "llm_tldr_cn": "本文提出PACE框架，通过对话询问用户生成并部署适合个人的人机人机器人角色。在Ameca机器人上实现交互式角色提取管道，动态合成基于心理学的角色身份。该框架促进了更自然、可信的人机交互体验，直接推动了人类-AI交互中个性化设计。",
+      "llm_tldr": "本文提出PACE框架，通过对话询问用户生成并部署适合个人的人机人机器人角色。在Ameca机器人上实现交互式角色提取管道，动态合成基于心理学的角色身份。该框架促进了更自然、可信的人机交互体验，直接推动了人类-AI交互中个性化设计。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.20773v1",
+      "source": "arxiv",
+      "title": "HARP: The Human--AI Research Platform",
+      "abstract": "Large language models (LLMs) have shifted human--computer interaction from `traditional'' interface journeys toward more conversational exchanges. Researchers studying HCI and UI use moderated usability sessions, interviews, surveys, transcript analysis, and static prototypes. However, static prototypes provide limited opportunities to study interaction with live AI systems or systematically control how an LLM behaves across participants and scenarios. Conversation transcripts reveal little about how users formulate, revise, and hesitate over prompts before submission. We designed the Human--AI Research Platform (HARP) for researchers, designers, and anyone who has ever wondered, `What if AI did this?' HARP places participants in controlled mock scenarios with live, configurable AI agents. Researchers can control agent prompts, model parameters, response characteristics, and experimental conditions; trigger surveys at predefined moments; and record prompt composition time, response latency, deletions, and keystroke pauses. Planned capabilities include voice, facial expression, gesture, and, where legally and ethically appropriate, emotion analysis. We illustrate HARP through a study examining how technical specificity and response length affect retention of LLM output. By pairing controllable live agents with behavioral and self-report measures, HARP enables systematic testing of how AI design choices affect users.",
+      "authors": [
+        "Zeshu Zhu",
+        "Natalie Friedman",
+        "Kevin Weatherwax",
+        "Emily Eiben"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "published": "2026-07-22T22:38:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.20773v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Human-AI research platform for controlled interaction studies",
+      "llm_evidence_cn": "用于受控交互研究的人机交互研究平台",
+      "llm_evidence": "用于受控交互研究的人机交互研究平台",
+      "canonical_evidence": "用于受控交互研究的人机交互研究平台",
+      "llm_tldr_en": "Introduces HARP, a platform for researchers to study human-AI interaction with live, configurable LLMs in controlled mock scenarios, capturing prompt formulation and user behavior.",
+      "llm_tldr_cn": "当前人机交互研究者依赖静态原型或对话记录，难以研究用户与实时AI系统的交互细节，例如用户如何构思、修改和犹豫提示词。本文设计了人机交互研究平台（HARP），让参与者在受控场景中与可配置的实时AI智能体交互，捕捉交互全过程数据。该平台为研究人类-AI交互提供了实验工具。",
+      "llm_tldr": "当前人机交互研究者依赖静态原型或对话记录，难以研究用户与实时AI系统的交互细节，例如用户如何构思、修改和犹豫提示词。本文设计了人机交互研究平台（HARP），让参与者在受控场景中与可配置的实时AI智能体交互，捕捉交互全过程数据。该平台为研究人类-AI交互提供了实验工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.16610v1",
+      "source": "arxiv",
+      "title": "Just A Rather Very Intelligent Spoken Agent",
+      "abstract": "Long-horizon AI agents are becoming increasingly capable, yet their interaction with users remains surprisingly thin. In most workflows, users give an initial instruction, receive only selective textual updates, and lose a clear sense of what the agent is doing or when to step in. This leaves a missing part in the current agent ecosystem: an always-on Jarvis-style mediator that keeps the agent continuously reachable to the user. Such a mediator should support real-time spoken interaction with the user, answer questions without interrupting the worker, proactively report progress or confusion, and inject user guidance back into the agent's execution when useful. In this work, we introduce JarvisBench, a benchmark for measuring the dual value of mediation in long-horizon agent workflows. JarvisBench contains two complementary tracks: an agent-collaboration track that measures whether mediation improves downstream task completion, and a user-interaction track that measures whether mediation makes ongoing execution more understandable, responsive, and accessible to users. We instantiate the benchmark with a modular reference Jarvis prototype and evaluate it on 34 text-only WildClaw tasks executed in OpenClaw. Preliminary results with GPT-5.5, Claude Opus 4.7, Gemini-based, and GPT-based worker agents suggest that Jarvis-style mediation can provide trace-grounded responses to user questions and improve task performance when sparse user guidance is injected at appropriate moments. The results also show that effectiveness depends strongly on the mediator's LLM brain, highlighting both the promise of this missing middle layer and the need for broader community effort. Demo page https://cchen1436.github.io/jarvis",
+      "authors": [
+        "Chen Chen",
+        "Zhehuai Chen"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-07-18T03:10:19+00:00",
+      "link": "https://arxiv.org/pdf/2607.16610v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "always-on spoken mediator for human-agent collaboration",
+      "llm_evidence_cn": "始终在线的语音中介支持人机实时协作",
+      "llm_evidence": "始终在线的语音中介支持人机实时协作",
+      "canonical_evidence": "始终在线的语音中介支持人机实时协作",
+      "llm_tldr_en": "Proposes JarvisBench, a benchmark for evaluating always-on spoken mediators that enable continuous user-agent interaction and guidance.",
+      "llm_tldr_cn": "长程AI代理与用户交互薄弱，缺乏持续可达的中介。本文提出JarvisBench基准，评估始终在线的语音中介，支持用户实时语音提问、代理主动报告进度和困惑，并将用户指导注入代理执行。实验表明该中介显著提升人机协作效率。贡献在于定义了代理生态中中介角色的价值。",
+      "llm_tldr": "长程AI代理与用户交互薄弱，缺乏持续可达的中介。本文提出JarvisBench基准，评估始终在线的语音中介，支持用户实时语音提问、代理主动报告进度和困惑，并将用户指导注入代理执行。实验表明该中介显著提升人机协作效率。贡献在于定义了代理生态中中介角色的价值。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.21394v1",
+      "source": "arxiv",
+      "title": "CRAFT: Exploring Wearable Creative AI on Smart Glasses for Fiction Writing in Real-World Contexts",
+      "abstract": "Creative writing increasingly integrates AI assistance, yet current tools miss in-situ moments when writers draw inspiration from real-world experiences. We envision Context-aware Reality-Fiction Transformation (CRAFT), an approach for AI glasses that translates daily experiences into fiction narratives. We explored its desirability, feasibility, and potential viability through three studies. Interviews with nine writers yielded desires and three design goals: 1) augmenting in-situ perception to bridge reality-fiction gaps, 2) promoting authenticity grounded in real-world experiences while maintaining fictionalization, and 3) preserving creative agency, enjoyment, and life-art boundaries. Co-design workshops with 16 writers and researchers operationalized these goals into concrete interaction mechanisms using a technology probe. We then conducted supported field trials with eight writers across 24 sessions using a refined probe, revealing writer-perceived benefits (e.g., enriched fictional ideas from serendipitous encounters), emergent practices (e.g., micro-creation), and design considerations for future sustained use. We contribute design explorations for the CRAFT approach, offering design implications and empirical insights on ubiquitous human-AI creative collaboration in everyday life.",
+      "authors": [
+        "Runze Cai",
+        "Yuxuan Huang",
+        "Lin-Ping Yuan",
+        "Kexin Xiang",
+        "David Hsu",
+        "Collier Nogues",
+        "Jussi Holopainen",
+        "Shengdong Zhao"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2026-07-23T14:56:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.21394v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Wearable creative AI for fiction writing interaction",
+      "llm_evidence_cn": "可穿戴创意AI辅助小说写作交互",
+      "llm_evidence": "可穿戴创意AI辅助小说写作交互",
+      "canonical_evidence": "可穿戴创意AI辅助小说写作交互",
+      "llm_tldr_en": "Explores AI smart glasses that translate real-world experiences into fiction narratives, preserving creative agency.",
+      "llm_tldr_cn": "现有创意写作AI工具缺乏对现实情境的利用。本研究提出情境感知现实-小说转换（CRAFT）方法，通过AI眼镜将日常体验转化为小说叙事。通过9位作家的访谈和16位作家的协同设计工作坊，得出三项设计目标：增强现场感知、保持真实性同时虚构化、维护创造力和生活边界。该工作探索了可穿戴AI在创意写作中人机交互的新形式。",
+      "llm_tldr": "现有创意写作AI工具缺乏对现实情境的利用。本研究提出情境感知现实-小说转换（CRAFT）方法，通过AI眼镜将日常体验转化为小说叙事。通过9位作家的访谈和16位作家的协同设计工作坊，得出三项设计目标：增强现场感知、保持真实性同时虚构化、维护创造力和生活边界。该工作探索了可穿戴AI在创意写作中人机交互的新形式。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.21547v1",
+      "source": "arxiv",
+      "title": "The Boundaries of Automation: A Theory of Persistent Human Participation",
+      "abstract": "The rapid progress of AI has intensified the long-standing pursuit of automation: replacing human participation with algorithms wherever possible. Implicit in this pursuit is the assumption that humans remain in the loop only because current AI systems are not yet sufficiently capable. This paper challenges that assumption. Rather than asking how far automation can extend, we ask where its conceptual limits lie and argue that human participation may persist even with highly capable AI systems for three distinct reasons. Technical or complementarity grounds arise when humans contribute capabilities or perspectives unavailable to AI. Normative or developmental grounds arise when participation itself is valuable for human agency or learning. Most importantly, emergence grounds arise from target emergence: in some activities, the target is not fully specified in advance but instead emerges through the interaction itself. In these cases, human participation is not merely a means of improving execution but is constitutive of the target being produced. Human--AI co-construction, understood as the joint production of outcomes by humans and AI systems, is therefore not simply a temporary response to imperfect AI, but a persistent feature of activities whose objectives emerge through participation. This perspective has important implications for the limits of automation and for the design, evaluation, and ethics of future AI systems.",
+      "authors": [
+        "Fares Fourati",
+        "Hinrich Schütze",
+        "Eyke Hüllermeier",
+        "Iryna Gurevych"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.ET",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "published": "2026-07-23T17:33:43+00:00",
+      "link": "https://arxiv.org/pdf/2607.21547v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "theory of persistent human participation despite advanced AI",
+      "llm_evidence_cn": "即使AI先进人类仍持续参与的理论",
+      "llm_evidence": "即使AI先进人类仍持续参与的理论",
+      "canonical_evidence": "即使AI先进人类仍持续参与的理论",
+      "llm_tldr_en": "Argues human participation persists even with highly capable AI for technical, normative, and developmental reasons, challenging full automation assumptions.",
+      "llm_tldr_cn": "自动化追求隐含假设：人类仅在AI不足时参与。本文挑战该假设，提出人类参与持续存在的三类理由：技术互补性、规范发展价值以及根本性边界。该理论为以人为中心的AI设计提供了哲学基础，强调人类角色的不可替代性。",
+      "llm_tldr": "自动化追求隐含假设：人类仅在AI不足时参与。本文挑战该假设，提出人类参与持续存在的三类理由：技术互补性、规范发展价值以及根本性边界。该理论为以人为中心的AI设计提供了哲学基础，强调人类角色的不可替代性。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.20767v1",
+      "source": "arxiv",
+      "title": "Rushes: A Human Preference Dataset for Pluralistic Alignment",
+      "abstract": "We introduce Rushes, a dataset and benchmark for studying revealed human engagement preferences in interactive narrative environments. Rushes is collected through a game interface where users interact with AI-generated branching narratives and select one choice from a small, explicit candidate set at each decision point. Each interaction logs the full candidate set, the user's choice, and the evolving narrative context, yielding time-ordered trajectories with persistent user-level identifiers. Rushes contains 44,226 decision events from 8,167 unique users across six games, capturing sequential, personalized engagement behavior rather than static judgments. We show that user choices exhibit structured, non-random patterns, quantified by a low choice entropy relative to a uniform baseline. We position Rushes as a diagnostic benchmark for pluralistic alignment and demonstrate a robust Engagement Gap: state-of-the-art LLMs, including GPT-5, fail to outperform simple baselines. While classical Matrix Factorization (SVD) captures measurable personalized signal (37.7%), frontier LLMs (34.23%) struggle to even match the Popularity Baseline (36.4%) on event-level choice prediction. This gap suggests that single, population-level objectives, like those used in modern RLHF, appear insufficient to capture heterogeneous, context-dependent engagement signals. As a result, even highly capable models default to majority preferences rather than adapting to individual trajectories. We release Rushes to support research into pluralistic alignment and sequential decision-making in generative systems. The full code for the platform and dataset will be available here: https://github.com/microsoft/rushes",
+      "authors": [
+        "Michael Xu",
+        "Jorge Leandro",
+        "Sudha Rao",
+        "Weijia Xu",
+        "Nebojsa Jojic",
+        "Gabriel DesGarennes",
+        "Chris Quirk",
+        "Bill Dolan"
+      ],
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2026-07-22T22:32:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.20767v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "human preference dataset for interactive narratives, interaction data",
+      "llm_evidence_cn": "交互叙事中的人类偏好数据集，交互数据",
+      "llm_evidence": "交互叙事中的人类偏好数据集，交互数据",
+      "canonical_evidence": "交互叙事中的人类偏好数据集，交互数据",
+      "llm_tldr_en": "This dataset captures user choices in interactive narratives, providing a resource for studying human-AI interaction preferences.",
+      "llm_tldr_cn": "本文介绍Rushes数据集，通过游戏界面收集用户在AI生成分支叙事中的选择偏好，包含44,226个决策事件和8,167名用户。数据展示了有序非随机偏好模式，可用于研究人机交互中的个性化行为，为多元对齐和人机互动研究提供基准。",
+      "llm_tldr": "本文介绍Rushes数据集，通过游戏界面收集用户在AI生成分支叙事中的选择偏好，包含44,226个决策事件和8,167名用户。数据展示了有序非随机偏好模式，可用于研究人机交互中的个性化行为，为多元对齐和人机互动研究提供基准。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
