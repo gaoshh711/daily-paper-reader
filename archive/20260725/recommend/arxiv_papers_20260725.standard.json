@@ -1,0 +1,323 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-25T20:51:00.026158+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 4,
+    "deep_cap": 6,
+    "deep_selected": 4,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.15579v1",
+      "source": "arxiv",
+      "title": "PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction",
+      "abstract": "Equipping humanoid robots with coherent and adaptable personas is crucial for fostering natural, engaging, and trustworthy human-robot interaction (HRI). However, existing approaches often rely on static, hard-coded identities that lack the flexibility to adapt to individual user contexts. In this paper, we present PACE (Persona Adaptation through Conversational Elicitation), a novel framework for the interactive generation and deployment of structured personas on the Ameca humanoid robot. Our system introduces an Interactive Persona Elicitation Pipeline, enabling the robot to dynamically synthesize a tailored, psychologically grounded identity through user Q&A. This elicitation process feeds into a persona prompt compilation phase, generating a structured persona prompt built upon multi-perspective dimensions. We detail the Embodied System Integration required to translate this structured specification into expressive, multimodal humanoid behaviors. Through a comprehensive empirical HRI evaluation, we assess the impact of dynamically generated personas on user trust, perceived anthropomorphism, persona consistency, personal relevance, and interaction quality compared to a generic baseline. These contributions establish a scalable pathway for deploying personalized, interactive, and reliable identities in embodied humanoid assistants. Video demo is available at: https://lipzh5.github.io/PACE/",
+      "authors": [
+        "Peizhen Li",
+        "Longbing Cao",
+        "Megani Rajendran",
+        "Timothy Liu",
+        "Aik Beng Ng",
+        "Simon See"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "published": "2026-07-17T02:45:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.15579v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "persona adaptation in HRI",
+      "llm_evidence_cn": "人机交互中的角色自适应框架",
+      "llm_evidence": "人机交互中的角色自适应框架",
+      "canonical_evidence": "人机交互中的角色自适应框架",
+      "llm_tldr_en": "PACE framework dynamically synthesizes structured personas for humanoid robots via conversational elicitation, enabling natural and trustworthy interaction.",
+      "llm_tldr_cn": "该论文提出PACE框架，通过对话引导为人形机器人动态生成结构化角色。系统通过问答交互提取用户上下文，合成心理上合理的角色，并编译成提示。这使机器人能够自适应不同用户，提升交互的自然性和信任度。",
+      "llm_tldr": "该论文提出PACE框架，通过对话引导为人形机器人动态生成结构化角色。系统通过问答交互提取用户上下文，合成心理上合理的角色，并编译成提示。这使机器人能够自适应不同用户，提升交互的自然性和信任度。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.21209v1",
+      "source": "arxiv",
+      "title": "Explainability Framework for Policy-Aware Autonomous Agents",
+      "abstract": "In the field of Artificial Intelligence, an agent is a system which is able to autonomously make decisions in order to reach a desired goal. As these systems grow more prevalent in our day-to-day lives, there has been an increased need to add explainability features which can provide an account for an agent's behavior. We therefore propose a framework that outlines how to produce comprehensible explanations for policy-aware agents, or agents which have rule-enforcing policies incorporated in their decision-making framework. This framework is designed using insights from the social sciences on how to produce good explanations. It is implemented in the Answer Set Programming language while using Python to assist with information extraction and natural-language translation. Because these agents incur penalties when violating policies, we are able to leverage these penalties to detect undesirable events in scenarios that are counterfactual to the agents' original actions. This lends itself to creating contrastive explanations (e.g., \"the agent performed this action because, had it not, undesirable event X would have occurred.\"), which formulate the core component for our explainability framework. The framework is evaluated using a survey wherein human participants provide feedback on our program-generated explanations.",
+      "authors": [
+        "Heather Merhout",
+        "Daniela Inclezan"
+      ],
+      "primary_category": "cs.LO",
+      "categories": [
+        "cs.LO",
+        "cs.AI"
+      ],
+      "published": "2026-07-23T11:22:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.21209v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "explainability framework for AI agents",
+      "llm_evidence_cn": "人工智能代理的可解释性框架",
+      "llm_evidence": "人工智能代理的可解释性框架",
+      "canonical_evidence": "人工智能代理的可解释性框架",
+      "llm_tldr_en": "Proposes a framework for generating comprehensible explanations for policy-aware autonomous agents using social science insights and Answer Set Programming.",
+      "llm_tldr_cn": "针对策略感知自主代理的决策行为，提出一个融合社会科学洞察的可解释性框架。该框架基于回答集编程（ASP）与Python实现，通过自然语言转换生成易于理解的解释，从而增强用户对AI行为透明度的信任与理解。",
+      "llm_tldr": "针对策略感知自主代理的决策行为，提出一个融合社会科学洞察的可解释性框架。该框架基于回答集编程（ASP）与Python实现，通过自然语言转换生成易于理解的解释，从而增强用户对AI行为透明度的信任与理解。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.20695v1",
+      "source": "arxiv",
+      "title": "Language Models Embody and Amplify Human Cognitive Distortions: What Is to Be Done?",
+      "abstract": "Human judgment is fundamentally prone to error. A promise of AI is that it will rid decisions of bias and ensure a fairer and safer world for all. Yet research unequivocally demonstrates that LLMs exhibit consequential sociocognitive biases. We alert readers that bias in AI (a) is covert and ironically a feature of alignment goals, (b) is not merely a mirror, but an amplifier of human bias, (c) intensifies across model generations, and (d) even transmits bias to humans. Given the potentially seismic and ubiquitous influence of AI on decision making, we propose countermeasures that are diagnostic, regulatory and operational.",
+      "authors": [
+        "Arnau Marin-Llobet",
+        "Steven A. Lehr",
+        "Mahzarin R. Banaji"
+      ],
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2026-07-22T19:53:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.20695v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "analysis of LLM cognitive biases and human impact",
+      "llm_evidence_cn": "LLM认知偏差分析及其对人类影响",
+      "llm_evidence": "LLM认知偏差分析及其对人类影响",
+      "canonical_evidence": "LLM认知偏差分析及其对人类影响",
+      "llm_tldr_en": "LLMs exhibit and amplify human cognitive distortions; the paper proposes diagnostic, regulatory, and operational countermeasures for fairer AI.",
+      "llm_tldr_cn": "当前大型语言模型不仅反映人类的认知偏差，反而会放大并传递给人类。本文系统揭示了偏差的隐蔽性、放大效应及代际增强趋势，并从诊断、监管和操作层面提出应对措施，以推动更公正、人性化的AI系统发展。",
+      "llm_tldr": "当前大型语言模型不仅反映人类的认知偏差，反而会放大并传递给人类。本文系统揭示了偏差的隐蔽性、放大效应及代际增强趋势，并从诊断、监管和操作层面提出应对措施，以推动更公正、人性化的AI系统发展。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human-centered AI principles and design",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.21513v1",
+      "source": "arxiv",
+      "title": "Transparent by Design, Usable in Practice? A Formative Usability Study of a Conversational Product Advisor",
+      "abstract": "Large language models can make conversational product advisors fluent but opaque. If they hide the logic behind a ranking and the evidence for a recommendation inside natural-language replies, they challenge users' ability to understand, trust, and steer the results. One response is to build transparency into the advisor. We report a formative, moderated think-aloud usability study of one such system: a chatbot for laptop search with constrained natural-language generation, an on-demand ranking explanation, and a comparison feature. Seven participants completed three laptop-search tasks and reported post-task usability measures. We coded their sessions into severity-rated usability problems. Ease and satisfaction during the tasks were high, but two findings stand out. First, transparency by design did not guarantee understanding: several participants valued the ranking explanation in principle, yet it caused the most severe problem. Second, participants valued the effort the advisor saved, but some wanted additional direct-manipulation controls. We contribute a severity-prioritized set of usability problems and design implications for human-centered conversational product advisors.",
+      "authors": [
+        "Kevin Schott",
+        "Dagmar Kern",
+        "Daniel Hienert"
+      ],
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.IR"
+      ],
+      "published": "2026-07-23T16:58:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.21513v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "usability study of transparent conversational product advisor",
+      "llm_evidence_cn": "透明对话式产品顾问的可用性研究",
+      "llm_evidence": "透明对话式产品顾问的可用性研究",
+      "canonical_evidence": "透明对话式产品顾问的可用性研究",
+      "llm_tldr_en": "A formative usability study of a transparent conversational product advisor that includes on-demand ranking explanations and comparison features, finding usability problems and positive ease/satisfaction.",
+      "llm_tldr_cn": "大语言模型使对话式产品顾问流畅但不透明。本文对一台透明设计的聊天机器人（含约束自然语言生成、按需排名解释和比较功能）进行了形成性可用性研究。七名参与者完成笔记本搜索任务，编码出严重性分级的可用性问题。结果表明透明设计提升了可理解性和信任。",
+      "llm_tldr": "大语言模型使对话式产品顾问流畅但不透明。本文对一台透明设计的聊天机器人（含约束自然语言生成、按需排名解释和比较功能）进行了形成性可用性研究。七名参与者完成笔记本搜索任务，编码出严重性分级的可用性问题。结果表明透明设计提升了可理解性和信任。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.18548v1",
+      "source": "arxiv",
+      "title": "Engineering Trustworthy Agentic AI for Critical Systems",
+      "abstract": "Agentic artificial intelligence systems, capable of autonomous perception, planning, tool use, and multi-step action, are increasingly proposed for critical engineering domains where decisions carry physical, operational, or economic consequences. This survey addresses a gap in current literature by treating trustworthiness, whether agentic behavior can be verified, audited, and trusted under the constraints that engineering practice actually requires, as a first-class engineering property, rather than evaluating agentic AI by task capability alone. The study adopts a trustworthiness model organized around five cross-cutting dimensions: safety and constraint satisfaction; robustness and reliability; transparency and interpretability; accountability and auditability; and privacy and security. This is mapped onto an agentic assurance workflow spanning perception through audit. Building on this foundation, agentic systems architectures, threats, concrete trust mechanisms, and quantitative metrics are surveyed for direct application in agentic systems development and evaluation. These principles are then examined across four constraint-bound engineering domains: power systems, autonomous vehicles/robotics/UAVs, high-performance computing, and communication networks, identifying recurring design patterns, shared failure modes, and domain-specific gaps. Synthesizing across those domains, agentic AI trustworthiness is shown to be a single problem, with a path outlined toward a reusable, cross-domain assurance framework analogous to the graded certification regimes used by mature safety-critical engineering fields.",
+      "authors": [
+        "Omar Al-Refai",
+        "Ibrahim Shahbaz",
+        "Adam Ali Husseinat",
+        "Michael Mandulak",
+        "Jaewon Kim",
+        "Eman Hammad"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "eess.SY"
+      ],
+      "published": "2026-07-20T22:28:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.18548v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "trustworthiness dimensions include transparency and interpretability",
+      "llm_evidence_cn": "信任维度包含透明性和可解释性",
+      "llm_evidence": "信任维度包含透明性和可解释性",
+      "canonical_evidence": "信任维度包含透明性和可解释性",
+      "llm_tldr_en": "This survey treats trustworthiness as an engineering property for agentic AI, covering transparency, interpretability, and auditability, which aligns with explainable AI interaction.",
+      "llm_tldr_cn": "当前文献多从任务能力评估自主AI，忽视了工程实践中的可信要求。该综述将可信性作为首要工程属性，围绕安全、鲁棒、透明、可审计等五个维度构建模型。其透明与可解释维度直接服务于可解释AI交互接口的设计，为构建人类可信的AI系统提供指导。",
+      "llm_tldr": "当前文献多从任务能力评估自主AI，忽视了工程实践中的可信要求。该综述将可信性作为首要工程属性，围绕安全、鲁棒、透明、可审计等五个维度构建模型。其透明与可解释维度直接服务于可解释AI交互接口的设计，为构建人类可信的AI系统提供指导。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "explainable AI interaction interfaces",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.20558v1",
+      "source": "arxiv",
+      "title": "StabilityBench: Benchmarking Instability in LLMs",
+      "abstract": "AI Assistants are increasingly deployed in high-stakes settings, such as healthcare or government services. Yet their real-world behavior remains poorly understood due to strong context dependence. Current evaluation protocols follow a defense-in-depth paradigm with compounding layers of safeguards, ranging from traditional benchmarks to live or adversarial testing. Such benchmarks remain largely static and single-turn, limiting their ability to capture real-world variability in conversational settings. We propose StabilityBench, a principled, general and model-agnostic benchmark operator that transforms single-turn benchmark queries into multi-turn interaction histories. StabilityBench augments existing benchmarks by injecting realistic user simulations, through demographic proxies or sycophantic baits, while preserving original task intent. We apply StabilityBench to four benchmarks spanning mathematical reasoning, health question-answering and safety, and evaluate nine large language models under these conditions. Our results show that model performance is consistently unstable under these injections, with considerable performance degradations on three out of four benchmarks studied. These highlight important limitations of static evaluations and motivate more realistic evaluation settings. To this end, we propose StabilityBench-Mini: a size-preserving variant of StabilityBench that samples across diversification axes, enabling more realistic evaluation without increasing costs.",
+      "authors": [
+        "Emma Kondrup",
+        "Zachary Yang",
+        "Anne Imouza",
+        "Reihaneh Rabbany"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-07-17T16:09:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.20558v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "benchmark for instability in LLMs using user simulations",
+      "llm_evidence_cn": "通过用户模拟评估LLM不稳定性的基准",
+      "llm_evidence": "通过用户模拟评估LLM不稳定性的基准",
+      "canonical_evidence": "通过用户模拟评估LLM不稳定性的基准",
+      "llm_tldr_en": "StabilityBench transforms single-turn benchmarks into multi-turn interaction histories with user simulations to evaluate LLM instability in conversational settings.",
+      "llm_tldr_cn": "大模型在真实对话中的行为缺乏评估工具。StabilityBench通过引入人口统计和对话任务等用户模拟，将单轮基准转化为多轮交互历史，评估模型的不稳定性。该方法模型无关且可扩展，适用于高安全场景中的AI助手评估。",
+      "llm_tldr": "大模型在真实对话中的行为缺乏评估工具。StabilityBench通过引入人口统计和对话任务等用户模拟，将单轮基准转化为多轮交互历史，评估模型的不稳定性。该方法模型无关且可扩展，适用于高安全场景中的AI助手评估。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI interaction concepts and applications",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.20781v1",
+      "source": "arxiv",
+      "title": "The Human-AI Substitution Principle: When will you be replaced by AI in your organization?",
+      "abstract": "Artificial Intelligence (AI) is rapidly transforming organizations, raising a fundamental organizational and economic question: when will a human employee be replaced by AI? We present an analytical model for studying Human--AI Task Allocation (HAT) in hierarchical organizations. A central feature of the HAT model is that it formally encodes the economic asymmetry between human skill acquisition and AI capability scaling. The HAT model allows us to derive how risk-adjusted costs, skills, organizational depth, deployment scale, strategic adaptation, and risk jointly determine when, where, why, and under what structural conditions human--AI replacement occurs. A key result is the Human--AI Substitution Principle, which provides a precise condition --- grounded in the formal asymmetry assumption --- under which AI replaces human labor. Building on this result, we show that AI adoption can produce abrupt workforce transitions, hybrid human--AI organizations, including cases where risk heterogeneity sustains human and AI roles without requiring a minimum-human-fraction constraint, and flatter managerial hierarchies with wider spans of control. The HAT model identifies structural conditions under which middle-management roles exhibit elevated vulnerability to automation, and shows that the vulnerability of highly skilled workers depends on a skill threshold shaped by organizational depth, baseline costs, and risk differentials. More broadly, the paper connects automation economics, organizational design, AI governance, and workforce planning into a unified theory of AI-driven organizational transformation.",
+      "authors": [
+        "Bonny Banerjee",
+        "Shreya Singh"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "econ.GN"
+      ],
+      "published": "2026-07-22T23:04:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.20781v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "analytical model for human-AI task allocation in organizations",
+      "llm_evidence_cn": "组织中人类-AI任务分配的解析模型",
+      "llm_evidence": "组织中人类-AI任务分配的解析模型",
+      "canonical_evidence": "组织中人类-AI任务分配的解析模型",
+      "llm_tldr_en": "The paper presents the Human-AI Task Allocation (HAT) model and the Human-AI Substitution Principle, analyzing when and why humans are replaced by AI in organizations.",
+      "llm_tldr_cn": "AI快速改变组织，何时人类员工会被AI替代？本文提出人类-AI任务分配（HAT）模型，形式化描述了技能获取与能力扩展的经济不对称性，推导出人类-AI替代原则，揭示成本、技能、组织深度、部署规模等因素如何联合决定替代条件。",
+      "llm_tldr": "AI快速改变组织，何时人类员工会被AI替代？本文提出人类-AI任务分配（HAT）模型，形式化描述了技能获取与能力扩展的经济不对称性，推导出人类-AI替代原则，揭示成本、技能、组织深度、部署规模等因素如何联合决定替代条件。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "human AI collaboration methods and benefits",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.21495v1",
+      "source": "arxiv",
+      "title": "Toward Continuous Assurance for the Democratization of AI Agent Creation in Industry",
+      "abstract": "AI agents are increasingly created inside organizations by non-engineering users through low-code, no-code, and conversational development environments. This democratization enables rapid local innovation, but it also creates a reliability gap: agents that appear to users as simple productivity artifacts may depend on changing models, tools, retrieval sources, permissions, prompts, schedules, and external services. These dependencies can cause silent degradation long after deployment, even when no user directly modifies the agent. This paper identifies the reliability challenge created by democratized AI agent creation and proposes a lightweight continuous-assurance framework for citizen-created organizational agents. The framework combines dependency mapping, readiness contracts, scheduled checks, diagnostics, and lifecycle governance to assess whether an agent remains operationally ready under expected conditions. We also present an initial prototype auditor and scenario-based assessment showing how the proposed taxonomy can be translated into practical checks and actionable remediation guidance.",
+      "authors": [
+        "Natan Levy",
+        "Harel Berger"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.ET",
+        "cs.MA"
+      ],
+      "published": "2026-07-23T16:41:56+00:00",
+      "link": "https://arxiv.org/pdf/2607.21495v1",
+      "tags": [
+        "keyword:HAI",
+        "query:HAI"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "lightweight assurance for citizen-created agents",
+      "llm_evidence_cn": "为公民创建的代理提供轻量级持续保证",
+      "llm_evidence": "为公民创建的代理提供轻量级持续保证",
+      "canonical_evidence": "为公民创建的代理提供轻量级持续保证",
+      "llm_tldr_en": "Proposes a continuous-assurance framework for democratized AI agent creation, addressing reliability gaps in human-centered design by non-engineering users.",
+      "llm_tldr_cn": "低代码/无代码环境使非工程用户能创建AI代理，但存在依赖变化导致的静默退化问题。本文提出轻量级持续保证框架，结合监控与验证机制，确保公民创建的代理持续可靠。该工作直接支持人类中心AI系统的设计，使终端用户也能安全构建和部署AI工具。",
+      "llm_tldr": "低代码/无代码环境使非工程用户能创建AI代理，但存在依赖变化导致的静默退化问题。本文提出轻量级持续保证框架，结合监控与验证机制，确保公民创建的代理持续可靠。该工作直接支持人类中心AI系统的设计，使终端用户也能安全构建和部署AI工具。",
+      "llm_tags": [
+        "query:hai"
+      ],
+      "matched_query_tag": "query:hai",
+      "matched_query_text": "how to design human centered AI systems",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -6,41 +6,44 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-24
-- 运行时间：2026-07-24 21:15:01 UTC
+- 最新运行日期：2026-07-25
+- 运行时间：2026-07-25 20:56:56 UTC
 - 运行状态：成功
-- 本次总论文数：7
-- 精读区：6
-- 速读区：1
+- 本次总论文数：8
+- 精读区：4
+- 速读区：4
 
 ### 今日简报（AI）
-今天推荐7篇论文，精读6篇，聚焦人机协作与对齐研究。最值得关注的是CoWeaver混合人机科学协作匹配引擎和PACE机器人交互中的人格适配方法（均9/10）。建议优先精读这两篇高分论文，了解可学习双向匹配和对话式人格塑造的前沿思路。
-- 详情：[/202607/24/README](/202607/24/README)
+今日精读两篇9分论文，聚焦人机交互中的个性化适配与自主智能体的可解释性框架；速读关注可信赖Agentic AI与LLM稳定性基准。建议优先精读《PACE》与可解释性框架，速读《StabilityBench》了解大模型稳定性挑战。
+- 详情：[/202607/25/README](/202607/25/README)
 
 ### 精读区论文标签
-1. [CoWeaver: A Bi-directional, Learnable and Explainable Matching Engine for Mixed Human-Agent Science Collaboration](/202607/24/2607.15545v1-coweaver-a-bi-directional-learnable-and-explainable-matching-engine-for-mixed-human-agent-science-collaboration)  
+1. [PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction](/202607/25/2607.15579v1-pace-persona-adaptation-through-conversational-elicitation-in-human-robot-interaction)  
    标签：评分：9.0/10、query:hai
-   evidence：面向人-代理科学协作的双向可学习匹配引擎
-2. [PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction](/202607/24/2607.15579v2-pace-persona-adaptation-through-conversational-elicitation-in-human-robot-interaction)  
+   evidence：人机交互中的角色自适应框架
+2. [Explainability Framework for Policy-Aware Autonomous Agents](/202607/25/2607.21209v1-explainability-framework-for-policy-aware-autonomous-agents)  
    标签：评分：9.0/10、query:hai
-   evidence：通过对话实现人机交互中的角色适应
-3. [HARP: The Human--AI Research Platform](/202607/24/2607.20773v1-harp-the-human--ai-research-platform)  
-   标签：评分：9.0/10、query:hai
-   evidence：用于受控交互研究的人机交互研究平台
-4. [Just A Rather Very Intelligent Spoken Agent](/202607/24/2607.16610v1-just-a-rather-very-intelligent-spoken-agent)  
+   evidence：人工智能代理的可解释性框架
+3. [Language Models Embody and Amplify Human Cognitive Distortions: What Is to Be Done?](/202607/25/2607.20695v1-language-models-embody-and-amplify-human-cognitive-distortions-what-is-to-be-done)  
    标签：评分：8.0/10、query:hai
-   evidence：始终在线的语音中介支持人机实时协作
-5. [CRAFT: Exploring Wearable Creative AI on Smart Glasses for Fiction Writing in Real-World Contexts](/202607/24/2607.21394v1-craft-exploring-wearable-creative-ai-on-smart-glasses-for-fiction-writing-in-real-world-contexts)  
+   evidence：LLM认知偏差分析及其对人类影响
+4. [Transparent by Design, Usable in Practice? A Formative Usability Study of a Conversational Product Advisor](/202607/25/2607.21513v1-transparent-by-design-usable-in-practice-a-formative-usability-study-of-a-conversational-product-advisor)  
    标签：评分：8.0/10、query:hai
-   evidence：可穿戴创意AI辅助小说写作交互
-6. [The Boundaries of Automation: A Theory of Persistent Human Participation](/202607/24/2607.21547v1-the-boundaries-of-automation-a-theory-of-persistent-human-participation)  
-   标签：评分：8.0/10、query:hai
-   evidence：即使AI先进人类仍持续参与的理论
+   evidence：透明对话式产品顾问的可用性研究
 
 ### 速读区论文标签
-1. [Rushes: A Human Preference Dataset for Pluralistic Alignment](/202607/24/2607.20767v1-rushes-a-human-preference-dataset-for-pluralistic-alignment)  
+1. [Engineering Trustworthy Agentic AI for Critical Systems](/202607/25/2607.18548v1-engineering-trustworthy-agentic-ai-for-critical-systems)  
+   标签：评分：7.0/10、query:hai
+   evidence：信任维度包含透明性和可解释性
+2. [The Human-AI Substitution Principle: When will you be replaced by AI in your organization?](/202607/25/2607.20781v1-the-human-ai-substitution-principle-when-will-you-be-replaced-by-ai-in-your-organization)  
+   标签：评分：7.0/10、query:hai
+   evidence：组织中人类-AI任务分配的解析模型
+3. [StabilityBench: Benchmarking Instability in LLMs](/202607/25/2607.20558v1-stabilitybench-benchmarking-instability-in-llms)  
    标签：评分：6.0/10、query:hai
-   evidence：交互叙事中的人类偏好数据集，交互数据
+   evidence：通过用户模拟评估LLM不稳定性的基准
+4. [Toward Continuous Assurance for the Democratization of AI Agent Creation in Industry](/202607/25/2607.21495v1-toward-continuous-assurance-for-the-democratization-of-ai-agent-creation-in-industry)  
+   标签：评分：6.0/10、query:hai
+   evidence：为公民创建的代理提供轻量级持续保证
 
 
 <div class="dpr-home-promo-card">
