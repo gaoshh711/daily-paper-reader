@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-26",
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T20:02:54",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/26/2607.17225v1-specifying-the-delegated-autonomy-boundary-requirements-engineering-for-agentic-ai",
+      "section": "deep",
+      "title_en": "Specifying the Delegated-Autonomy Boundary: Requirements Engineering for Agentic AI",
+      "authors": "Chetan Arora, Andreas Vogelsang, Abbi Sharma",
+      "date": "2026-07-19",
+      "pdf": "https://arxiv.org/pdf/2607.17225v1",
+      "score": "9.0",
+      "evidence": "面向人类中心AI的委托-自主边界设计方法",
+      "tldr": "Agentic AI系统因自主规划与行动带来委托自治边界新问题。现有实践将边界决策埋于提示与策略中，缺乏需求级规范。本文提出Agency Justification Record (AJR)辅助决策何时使用代理，以及Agentic Delegation Policy (ADP)定义目的、权限等维度，其中权限为渐进式结构。通过医院出院协调与代码审查两案例验证，为安全开发自治系统提供需求工程方法。",
+      "tags": "query:hai",
+      "abstract_en": "Agentic AI systems do not just predict or recommend; they plan, maintain state, and act in external environments with varying degrees of autonomy. This changes the requirements engineering problem in a specific and under-addressed way: it introduces what we call the delegated-autonomy boundary -- the set of decisions about what may be delegated to the system, under what graduated authority, with what oversight, and how control is returned. Current practices bury these decisions inside prompts, tool schemas, and runtime policies, even though they are requirements-level commitments. This paper proposes two complementary artifacts. First, an Agency Justification Record (AJR) helps teams decide when an agent is warranted over simpler alternatives. Second, an Agentic Delegation Policy (ADP) captures what must be specified for safe and effective development: purpose, authority, information, coordination, assurance, and evolution. Crucially, authority in the ADP is modelled as graduated, i.e., a tiered structure. We illustrate the framework with two contrasting examples: a safety-critical hospital discharge coordination agent and an automated code review agent.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/26/2607.18556v1-chatmuse-supporting-in-person-small-group-conversation-experience-with-a-proactive-assistive-ai-agent-in-mixed-reality",
+      "section": "deep",
+      "title_en": "ChatMuse: Supporting In-Person Small-Group Conversation Experience with a Proactive Assistive AI Agent in Mixed Reality",
+      "authors": "Shaoze Zhou, Joaquin Frangi, Diana Nelly Rivera Rodriguez, Rawan Alghofaili, Janet G. Johnson, Lingyao Li, Renkai Ma, Christine Lisetti, Chen Chen",
+      "date": "2026-07-20",
+      "pdf": "https://arxiv.org/pdf/2607.18556v1",
+      "score": "9.0",
+      "evidence": "基于混合现实的主动辅助系统，用于面对面小组对话",
+      "tldr": "面对面小组对话认知负担大，现有混合现实支持系统缺乏实时信息生成方案。提出ChatMuse，通过分析多模态线索主动提供言语与非言语行为指引，并利用用户反馈持续优化。用户研究验证其能有效提升参与度和贡献度。该工作探索了MR中主动AI辅助面对面对话的新交互空间。",
+      "tags": "query:hai",
+      "abstract_en": "In-person small-group conversations occur across nearly every aspect of daily life and play a crucial role in social interaction. However, achieving effective in-person group conversations can be challenging and cognitively demanding. While recent Mixed Reality (MR) headsets show promise as a conversational support system by presenting relevant information through overlays, it remains unclear how such supporting information should be designed and generated for in-person group conversations. We propose ChatMuse, a novel MR-based proactive assistive system for in-person small-group conversation experience. ChatMuse analyzes verbal and non-verbal cues from all conversation participants and proactively provides real-time guidance on the user's verbal and non-verbal behaviors. The behavioral responses of the supported users are then used to improve ChatMuse's support capabilities in subsequent interactions. We conducted a within-subject study to evaluate and demonstrate the feasibility and effectiveness of ChatMuse in assisting users to engage in and contribute to in-person small-group conversations. Our research around ChatMuse represents a design exploration of a new interaction space that investigates the feasibility of supporting in-person small-group conversations through a proactive assistive AI agent in MR.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/26/2607.18556v2-chatmuse-supporting-in-person-small-group-conversation-experience-with-a-proactive-assistive-ai-agent-in-mixed-reality",
+      "section": "deep",
+      "title_en": "ChatMuse: Supporting In-Person Small-Group Conversation Experience with a Proactive Assistive AI Agent in Mixed Reality",
+      "authors": "Shaoze Zhou, Joaquin Frangi, Diana Nelly Rivera Rodriguez, Rawan Alghofaili, Janet G. Johnson, Lingyao Li, Renkai Ma, Christine Lisetti, Chen Chen",
+      "date": "2026-07-20",
+      "pdf": "https://arxiv.org/pdf/2607.18556v2",
+      "score": "8.0",
+      "evidence": "主动式AI代理辅助面对面小组对话",
+      "tldr": "面对面小组对话认知负担高，现有支持系统缺乏实时多模态线索利用。提出ChatMuse，通过MR头显分析言语和非言语线索，主动提供实时行为指导。实验证明能有效辅助用户参与和贡献对话。探索了MR中主动AI辅助支持面对面对话的新交互空间。",
+      "tags": "query:hai",
+      "abstract_en": "In-person small-group conversations occur across nearly every aspect of daily life and play a crucial role in social interaction. However, achieving effective in-person group conversations can be challenging and cognitively demanding. While recent Mixed Reality (MR) headsets show promise as a conversational support system by presenting relevant information through overlays, it remains unclear how such supporting information should be designed and generated for in-person group conversations. We propose ChatMuse, a novel MR-based proactive assistive system for in-person small-group conversation experience. ChatMuse analyzes verbal and non-verbal cues from all conversation participants and proactively provides real-time guidance on the user's verbal and non-verbal behaviors. The behavioral responses of the supported users are then used to improve ChatMuse's support capabilities in subsequent interactions. We conducted a within-subject study to evaluate and demonstrate the feasibility and effectiveness of ChatMuse in assisting users to engage in and contribute to in-person small-group conversations. Our research around ChatMuse represents a design exploration of a new interaction space that investigates the feasibility of supporting in-person small-group conversations through a proactive assistive AI agent in MR.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/26/2607.16845v1-from-overload-to-insights-how-ai-agents-can-support-scientists-in-analyzing-complex-data",
+      "section": "quick",
+      "title_en": "From Overload to Insights: How AI Agents Can Support Scientists in Analyzing Complex Data",
+      "authors": "Tim Fuchs, Luca Gelisio, Steffen Hauf, Walid Maalej",
+      "date": "2026-07-18",
+      "pdf": "https://arxiv.org/pdf/2607.16845v1",
+      "score": "7.0",
+      "evidence": "AI代理协助科学家进行数据分析协作",
+      "tldr": "科学家在欧洲XFEL实验中面临海量复杂数据分析挑战，需整合领域知识与分散的工具文档。本研究采用设计科学方法，通过文献综述、16种AI工具评估、多轮访谈、焦点小组和用户研究，设计并评估了两个AI Agent原型系统。该系统集成于高性能计算环境，支持知识检索和源码生成，有效降低了分析门槛。最终提出了面向高度专业化科学环境的可维护AI系统设计建议。",
+      "tags": "query:hai",
+      "abstract_en": "Scientists at European XFEL conduct experiments that generate very large and complex datasets. The subsequent data analysis is challenging as scientists must combine their domain expertise with facility- and software-specific knowledge scattered across documentation, tools, and support channels. To address this problem, we designed and evaluated an agentic AI system tailored to the scientists' needs and integrated with the high-performance computing environment of European XFEL. Using a design science research approach, we conducted a rapid literature review, a systematic evaluation of 16 AI tools, multiple interviews, a focus group, and a user study with experts at European XFEL to develop and evaluate two prototypes. Our study identifies key knowledge challenges in scientific data analysis, derives requirements for an AI agent that supports knowledge retrieval and source code generation, and proposes design recommendations for a specialized system adaptable to the evolving AI tool landscape. These findings provide guidance for developing maintainable AI support in highly specialized scientific environments.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

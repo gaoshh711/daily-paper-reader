@@ -6,44 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-25
-- 运行时间：2026-07-25 20:56:56 UTC
+- 最新运行日期：2026-07-26
+- 运行时间：2026-07-26 20:02:46 UTC
 - 运行状态：成功
-- 本次总论文数：8
-- 精读区：4
-- 速读区：4
+- 本次总论文数：4
+- 精读区：3
+- 速读区：1
 
 ### 今日简报（AI）
-今日精读两篇9分论文，聚焦人机交互中的个性化适配与自主智能体的可解释性框架；速读关注可信赖Agentic AI与LLM稳定性基准。建议优先精读《PACE》与可解释性框架，速读《StabilityBench》了解大模型稳定性挑战。
-- 详情：[/202607/25/README](/202607/25/README)
+今日精读聚焦于Agentic AI的委托自治边界需求工程与混合现实中AI代理辅助小组对话，速读探讨AI代理助力科学家分析复杂数据。最值得关注的方向是自主AI系统的安全边界规范以及混合现实中AI的主动交互设计。建议优先精读这两篇9分论文，深入理解AI代理在实际应用中的可控性与协作潜力。
+- 详情：[/202607/26/README](/202607/26/README)
 
 ### 精读区论文标签
-1. [PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction](/202607/25/2607.15579v1-pace-persona-adaptation-through-conversational-elicitation-in-human-robot-interaction)  
+1. [Specifying the Delegated-Autonomy Boundary: Requirements Engineering for Agentic AI](/202607/26/2607.17225v1-specifying-the-delegated-autonomy-boundary-requirements-engineering-for-agentic-ai)  
    标签：评分：9.0/10、query:hai
-   evidence：人机交互中的角色自适应框架
-2. [Explainability Framework for Policy-Aware Autonomous Agents](/202607/25/2607.21209v1-explainability-framework-for-policy-aware-autonomous-agents)  
+   evidence：面向人类中心AI的委托-自主边界设计方法
+2. [ChatMuse: Supporting In-Person Small-Group Conversation Experience with a Proactive Assistive AI Agent in Mixed Reality](/202607/26/2607.18556v1-chatmuse-supporting-in-person-small-group-conversation-experience-with-a-proactive-assistive-ai-agent-in-mixed-reality)  
    标签：评分：9.0/10、query:hai
-   evidence：人工智能代理的可解释性框架
-3. [Language Models Embody and Amplify Human Cognitive Distortions: What Is to Be Done?](/202607/25/2607.20695v1-language-models-embody-and-amplify-human-cognitive-distortions-what-is-to-be-done)  
+   evidence：基于混合现实的主动辅助系统，用于面对面小组对话
+3. [ChatMuse: Supporting In-Person Small-Group Conversation Experience with a Proactive Assistive AI Agent in Mixed Reality](/202607/26/2607.18556v2-chatmuse-supporting-in-person-small-group-conversation-experience-with-a-proactive-assistive-ai-agent-in-mixed-reality)  
    标签：评分：8.0/10、query:hai
-   evidence：LLM认知偏差分析及其对人类影响
-4. [Transparent by Design, Usable in Practice? A Formative Usability Study of a Conversational Product Advisor](/202607/25/2607.21513v1-transparent-by-design-usable-in-practice-a-formative-usability-study-of-a-conversational-product-advisor)  
-   标签：评分：8.0/10、query:hai
-   evidence：透明对话式产品顾问的可用性研究
+   evidence：主动式AI代理辅助面对面小组对话
 
 ### 速读区论文标签
-1. [Engineering Trustworthy Agentic AI for Critical Systems](/202607/25/2607.18548v1-engineering-trustworthy-agentic-ai-for-critical-systems)  
+1. [From Overload to Insights: How AI Agents Can Support Scientists in Analyzing Complex Data](/202607/26/2607.16845v1-from-overload-to-insights-how-ai-agents-can-support-scientists-in-analyzing-complex-data)  
    标签：评分：7.0/10、query:hai
-   evidence：信任维度包含透明性和可解释性
-2. [The Human-AI Substitution Principle: When will you be replaced by AI in your organization?](/202607/25/2607.20781v1-the-human-ai-substitution-principle-when-will-you-be-replaced-by-ai-in-your-organization)  
-   标签：评分：7.0/10、query:hai
-   evidence：组织中人类-AI任务分配的解析模型
-3. [StabilityBench: Benchmarking Instability in LLMs](/202607/25/2607.20558v1-stabilitybench-benchmarking-instability-in-llms)  
-   标签：评分：6.0/10、query:hai
-   evidence：通过用户模拟评估LLM不稳定性的基准
-4. [Toward Continuous Assurance for the Democratization of AI Agent Creation in Industry](/202607/25/2607.21495v1-toward-continuous-assurance-for-the-democratization-of-ai-agent-creation-in-industry)  
-   标签：评分：6.0/10、query:hai
-   evidence：为公民创建的代理提供轻量级持续保证
+   evidence：AI代理协助科学家进行数据分析协作
 
 
 <div class="dpr-home-promo-card">
